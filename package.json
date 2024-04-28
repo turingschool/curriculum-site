@@ -1,7 +1,7 @@
 {
-  "name": "front-end-curriculum",
+  "name": "turing-curriculum",
   "version": "1.0.0",
-  "description": "Open source curriculum for Turing School's back-end engineering program.",
+  "description": "Open source curriculum for Turing School's software engineering program.",
   "main": "index.html",
   "dependencies": {
     "eslint": "^6.7.2",
