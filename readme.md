@@ -9,6 +9,8 @@
 
 This site is built with Jekyll. Find the docs [here](https://jekyllrb.com/docs/usage/)
 
+The live site can be found at [https://curriculum.turing.edu/](https://curriculum.turing.edu/)
+
 ### Contributing
 
 * Clone the repo `git clone git@github.com:turingschool/curriculum-site.git`
