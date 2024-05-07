@@ -18,8 +18,6 @@ The live site can be found at [https://curriculum.turing.edu/](https://curriculu
 * You can now begin to edit the website.
 * To start the server run `jekyll serve --incremental`.
 * Navigate to `localhost:4000` to see the site
-
-* Make changes on the `main` branch.
 * You can push changes to production by pushing the `main` branch to github. `git push origin main`.
 * The changes may take a minute or two to be recognized on production. Please make sure you review your changes on production.
 
