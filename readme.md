@@ -19,8 +19,8 @@ The live site can be found at [https://curriculum.turing.edu/](https://curriculu
 * To start the server run `jekyll serve --incremental`.
 * Navigate to `localhost:4000` to see the site
 
-* make changes on the `gh-pages` branch.
-* you can push changes to production by pushing the `gh-pages` branch to github. `git push origin gh-pages`.
+* Make changes on the `main` branch.
+* You can push changes to production by pushing the `main` branch to github. `git push origin main`.
 * The changes may take a minute or two to be recognized on production. Please make sure you review your changes on production.
 
 ## Structure of the site and where to find the most important things:
