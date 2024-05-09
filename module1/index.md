@@ -6,14 +6,9 @@ subheading: Fundamentals of Programming
 
 ## Overview
 
-
-
-## Instructors
-
 ## Curriculum
+- [Technical Lessons](./lessons/index.md)
+- [Technical Projects](./projects/index.md)
+- [Professional Development](./pd/index.md)
 
-## Resources
-
-## Requirements
-
-## Calendar (Mountain Time)
+## Other Resources

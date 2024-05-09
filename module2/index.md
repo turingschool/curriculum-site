@@ -6,14 +6,10 @@ subheading: Web Applications with Ruby
 
 ## Overview
 
-
-
-## Instructors
-
 ## Curriculum
+- [Intermission Pre-Work](./intermission_work/index.md)
+- [Technical Lessons](./lessons/index.md)
+- [Technical Projects](./projects/index.md)
+- [Professional Development](./pd/index.md)
 
-## Resources
-
-## Requirements
-
-## Calendar (Mountain Time)
+## Other Resources

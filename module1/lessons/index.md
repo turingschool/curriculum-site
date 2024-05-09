@@ -1,4 +1,4 @@
 ---
 layout: page
-title: Module 1 Lessons
+title: Module 1 - Lessons
 ---

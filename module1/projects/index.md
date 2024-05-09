@@ -1,4 +1,4 @@
 ---
 layout: page
-title: Module 1 Projects
+title: Module 1 - Projects
 ---

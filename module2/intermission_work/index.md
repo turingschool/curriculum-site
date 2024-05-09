@@ -1,4 +1,5 @@
 ---
-title: Mod 2 Intermission Work
 layout: page
+title: Module 2 - Intermission Pre-Work
 ---
+
