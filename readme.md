@@ -31,6 +31,23 @@ The `today.html` file is where you will find the basic html page for today, and 
 
 ## Some handy tips for editing/creating content
 
+### Creating Dropdowns
+
+To create a dropdown like this:
+
+![screenshot of dropdown format](./assets/images/dropdown-example.png)
+
+Use the following structure:
+
+```
+<section class="dropdown">
+
+### Test Dropdown - this must be a <h3>
+test content
+
+</section>
+```
+
 ### Headers in your markdown files
 
 Put something like this at the top of all your markdown files:

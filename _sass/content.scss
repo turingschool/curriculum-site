@@ -56,13 +56,26 @@
   border: none;
 }
 
-.answer {
+.dropdown {
   @extend %call-to-action-shared;
   border-left: 8px solid #CCC;
 
   h3 {
     cursor: pointer;
   }
+}
+
+.expander-arrow {
+  cursor: pointer;
+  transform: rotate(0deg);
+  transition: transform 0.2s ease;
+  height: 15px;
+  width: 15px;
+}
+
+.expander-arrow.expanded {
+  transform: rotate(90deg);
+  transition: transform 0.2s ease;
 }
 
 .expander-arrow {
