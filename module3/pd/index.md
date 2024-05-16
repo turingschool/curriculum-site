@@ -3,7 +3,7 @@ layout: page
 title: Module 3 - Professional Development
 ---
 
-General resources:
+## General resources:
 [Mod 3 PD Overview](./lessons/pd_overview.md)
 
 ### Intermission Work: 
@@ -27,7 +27,5 @@ General resources:
   * [Behavioral Interview Preparation](./lessons/behavioral_interview_preparation.md) - paired with Front-end cohort
  
 ### Week 5:
-  * [Terminal Portfolio](./lessons/terminal_portfolio.md)
-    * Use [this form](https://docs.google.com/forms/d/e/1FAIpQLSfKXVnpYdlwE4FpsAcG2tKfxTu4K4m7cpsgldbpIC03ZLCL6A/viewform) to submit your draft.
   * Review Roundtable of Career Materials 
     * Students can expect to receive feedback on their career materials (both resume & cover letter) from Turing staff by the end of week 5. 
