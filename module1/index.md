@@ -7,8 +7,8 @@ subheading: Fundamentals of Programming
 ## Overview
 
 ## Curriculum
-- [Technical Lessons](./lessons)
-- [Technical Projects](./projects)
-- [Professional Development](./pd)
+- [Lessons](./lessons)
+- [Projects](./projects)
+
 
 ## Other Resources

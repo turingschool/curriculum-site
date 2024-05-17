@@ -8,8 +8,8 @@ subheading: Finding Your Specialty
 
 ## Curriculum
 - [Intermission Pre-Work](./intermission_work)
-- [Technical Lessons](./lessons)
-- [Technical Projects](./projects)
-- [Professional Development](./pd)
+- [Lessons](./lessons)
+- [Projects](./projects)
+
 
 ## Other Resources
