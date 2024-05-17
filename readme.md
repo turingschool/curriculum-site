@@ -14,7 +14,8 @@ The live site can be found at [https://curriculum.turing.edu/](https://curriculu
 ### Contributing
 
 * Clone the repo `git clone git@github.com:turingschool/curriculum-site.git`
-* run `bundle install`
+* Note: You will need Ruby 3.2.2 installed ([setup instructions if needed](https://mod0.turing.edu/computer-setup#install-rbenv))
+* Run `bundle install`
 * You can now begin to edit the website.
 * To start the server run `jekyll serve --incremental`.
 * Navigate to `localhost:4000` to see the site
