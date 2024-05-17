@@ -7,7 +7,7 @@ subheading: Fundamentals of Programming
 ## Overview
 
 ## Curriculum
-- [Lessons](./lessons/index.md)
-- [Projects](./projects/index.md)
+- [Lessons](./lessons)
+- [Projects](./projects)
 
 ## Other Resources

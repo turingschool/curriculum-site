@@ -52,7 +52,7 @@ Schedule some career coaching time with [Tracey Monteiro](https://go.oncehub.com
 You can grab time with an alum to prepare for FE/BE technical and behavioral interviews and live coding challenges. You can grab a slot via OnceHub [here](https://go.oncehub.com/turingmockinterviews).
 
 ### Receive an offer? 
-The Turing Staff happy to help you navigate the offer and negotiations process - reach out to whoever you feel comfortable to. You can also check out [these resources on negotiations](./resources/negotiations.md).
+The Turing Staff happy to help you navigate the offer and negotiations process - reach out to whoever you feel comfortable to. You can also check out [these resources on negotiations](./resources/negotiations).
 
 ## Signed an offer?
 Please submit the two surveys below - we want to celebrate your accomplishment, and continue improving our processes!
@@ -63,21 +63,21 @@ Please submit the two surveys below - we want to celebrate your accomplishment, 
 [Check out these Applicant Tracking System Tips!](https://www.jobscan.co/applicant-tracking-systems) and get insights on your resume by scanning it through [Jobscan.co](https://www.jobscan.co)
 
 ### Terminal
-Turing provides a space for professional portfolios on our website. These portfolios can be used during your job hunt - you can send out links to your profile, and Turing staff may share your profile to employers who come to us asking for candidates.  See the [Terminal Directions Page](./resources/terminal_directions.md) for more information!
+Turing provides a space for professional portfolios on our website. These portfolios can be used during your job hunt - you can send out links to your profile, and Turing staff may share your profile to employers who come to us asking for candidates.  See the [Terminal Directions Page](./resources/terminal_directions) for more information!
 
 ## Resources
 
 ### Networking 
-* [Outreach & Networking Resources](./resources/outreach_networking_resources.md)
+* [Outreach & Networking Resources](./resources/outreach_networking_resources)
 
 ### Interviewing
-* [Compilation of Lots of Interview Prep Resources](./resources/interview_prep_resources.md)
+* [Compilation of Lots of Interview Prep Resources](./resources/interview_prep_resources)
 * Recommended Reading:
    * [Cracking the Coding Interview](https://bookshop.org/books/cracking-the-coding-interview-189-programming-questions-and-solutions/9780984782857)
 
 ### Materials
-* [Branding Resources for LinkedIn, GitHub, and Twitter](./resources/branding_resources.md)
-* [Resume Resources](./resources/resume_resources.md)
+* [Branding Resources for LinkedIn, GitHub, and Twitter](./resources/branding_resources)
+* [Resume Resources](./resources/resume_resources)
 * [Cover Letter Resources](./resources/cover_letter_resources)
 * [Terminal Portfolio Directions](./resources/terminal_directions)
 * [Resources for Writing READMEs](./resources/readme_resources)

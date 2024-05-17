@@ -132,7 +132,7 @@ Make sure that all of your projects have a ReadMe. Think about the ReadMe as enc
 * It's an advertisement of your work. How can you highlight important accomplishments and challenges?
 * It's documentation. If someone else were going to use your project, what do they need to know?
 
-[Here are resources for writing excellent ReadMes](/resources/readme_resources)
+[Here are resources for writing excellent ReadMes](readme_resources)
 
 ### Twitter Overview <a name="twitter"></a>
 You don't *have* to have a Twitter account. But a lot of software developers (aka the people you want to connect with) are using Twitter, so we would highly recommend that you create a profile if you don't have one already!
