@@ -1,7 +1,7 @@
 # Curriculum PR Template
 
 ### Does this PR close any issues?
-*This PR closes #x*
+*This PR closes...*
 
 ### Description
 *Provide a brief summary of the change(s) included in this pull request*
