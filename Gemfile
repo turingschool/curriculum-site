@@ -10,3 +10,5 @@ gem 'kramdown-parser-gfm'
 group :jekyll_plugins do
   gem 'jekyll-algolia', '1.4.7'
 end
+
+gem "webrick", "~> 1.8"
