@@ -7,9 +7,9 @@ subheading: Building and Consuming APIs
 ## Overview
 
 ## Curriculum
-- [Intermission Pre-Work](./intermission_work/index.md)
-- [Technical Lessons](./lessons/index.md)
-- [Technical Projects](./projects/index.md)
-- [Professional Development](./pd/index.md)
+- [Intermission Pre-Work](./intermission_work)
+- [Technical Lessons](./lessons)
+- [Technical Projects](./projects)
+- [Professional Development](./pd)
 
 ## Other Resources
