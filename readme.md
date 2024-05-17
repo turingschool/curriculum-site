@@ -17,7 +17,7 @@ The live site can be found at [https://curriculum.turing.edu/](https://curriculu
 * Note: You will need Ruby 3.2.2 installed ([setup instructions if needed](https://mod0.turing.edu/computer-setup#install-rbenv))
 * Run `bundle install`
 * You can now begin to edit the website.
-* To start the server run `jekyll serve --incremental`.
+* To start the server run `bundle exec jekyll serve --incremental`.
 * Navigate to `localhost:4000` to see the site
 * You can push changes to production by pushing the `main` branch to github. `git push origin main`.
 * The changes may take a minute or two to be recognized on production. Please make sure you review your changes on production.
