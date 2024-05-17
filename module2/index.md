@@ -11,4 +11,5 @@ subheading: Web Applications with Ruby
 - [Lessons](./lessons)
 - [Projects](./projects)
 
+
 ## Other Resources

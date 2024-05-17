@@ -11,4 +11,5 @@ subheading: Finding Your Specialty
 - [Lessons](./lessons)
 - [Projects](./projects)
 
+
 ## Other Resources
