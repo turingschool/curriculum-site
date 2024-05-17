@@ -4,7 +4,7 @@ title: Cover Letter Resources
 ---
 
 ## Overview
-If we were to sum up the cover letter and how it compares to your resume in one sentence, the resume is about you while the cover letter is about *them (the company.* 
+If we were to sum up the cover letter and how it compares to your resume in one sentence, the resume is about you while the cover letter is about *them (the company).* 
 
 ### Templates to Get You Started
 Below are Cover letter templates to help get you started, but make sure to *customize* your cover letter each time you write one:

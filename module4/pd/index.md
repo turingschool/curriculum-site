@@ -5,7 +5,7 @@ title: Module 4 - Professional Development
 
 ### Deliverable 1: Complete Terminal or Personal portfolio
   * Students may choose to build a personal portfolio OR build a portfolio using Terminal
-    * Follow [these directions](../../job_seekers/resources/terminal_directions.md) to update and submit your portfolio.
+    * Follow [these directions](../../job_seekers/resources/terminal_directions) to update and submit your portfolio.
         * If you build your own portfolio, you should start with the "About Me Section" in the link above to guide the content you put on your portfolio.
     * Add at least 2 projects and use [these guidelines](https://docs.google.com/document/d/1zKePxhD-xQdLRPeLI21E71ET_U88ZZ-SKTQjRVzs8tM/edit) to help you create the descriptions
     * Upload your polished and targeted resume

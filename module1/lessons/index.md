@@ -6,41 +6,41 @@ title: Module 1 - Lessons
 <!-- Comment the following lessons in as they are updated and deemed ready to go! -->
 
 ## Ruby Mechanics
-<!-- * [Methods & Return Values](./methods_and_return_values.md) -->
-<!-- * [Objects, Classes, & Instances](./objects_classes_instances.md) -->
-<!-- * [Arrays](./arrays.md) -->
-<!-- * [Scope](./scope.md) -->
-<!-- * [Flow Control](./flow_control.md) -->
-<!-- * [Beginner Enumerables](./beginner_enumerables.md) -->
-<!-- * [Hashes](./hashes.md) -->
-<!-- * [Boolean Logic](./boolean_logic.md) -->
-<!-- * [Nested Collections](./nested_collections.md) -->
+<!-- * [Methods & Return Values](./methods_and_return_values) -->
+<!-- * [Objects, Classes, & Instances](./objects_classes_instances) -->
+<!-- * [Arrays](./arrays) -->
+<!-- * [Scope](./scope) -->
+<!-- * [Flow Control](./flow_control) -->
+<!-- * [Beginner Enumerables](./beginner_enumerables) -->
+<!-- * [Hashes](./hashes) -->
+<!-- * [Boolean Logic](./boolean_logic) -->
+<!-- * [Nested Collections](./nested_collections) -->
 <!-- * [Reaching Through Objects](!needs lesson plan!) -->
-<!-- * [Intermediate Enumerables](./intermediate_enumerables.md) -->
-<!-- * [Nested Iteration Workshop](./nested_iteration_workshop.md) -->
-<!-- * [Class Methods](./class_methods.md) -->
-<!-- * [Modules](./modules.md) -->
-<!-- * [Inheritance](./inheritance.md) -->
-<!-- * [CSV Workshop](./csv_walkthrough.md) -->
-<!-- * [Ruby Object Model](./ruby_object_model.md) -->
+<!-- * [Intermediate Enumerables](./intermediate_enumerables) -->
+<!-- * [Nested Iteration Workshop](./nested_iteration_workshop) -->
+<!-- * [Class Methods](./class_methods) -->
+<!-- * [Modules](./modules) -->
+<!-- * [Inheritance](./inheritance) -->
+<!-- * [CSV Workshop](./csv_walkthrough) -->
+<!-- * [Ruby Object Model](./ruby_object_model) -->
 
 ## Design
-<!-- * [Design Principles](./design_principles.md) -->
-<!-- * [How the Web Works](./intro_to_how_the_web_works.md) -->
+<!-- * [Design Principles](./design_principles) -->
+<!-- * [How the Web Works](./intro_to_how_the_web_works) -->
 
 ## Testing
-<!-- * [Intro to Testing](./intro_to_testing.md) -->
-<!-- * [Mocks & Stubs](./mocks_stubs.md) -->
-<!-- * [Test Driven Development](./test_driven_development.md) -->
+<!-- * [Intro to Testing](./intro_to_testing) -->
+<!-- * [Mocks & Stubs](./mocks_stubs) -->
+<!-- * [Test Driven Development](./test_driven_development) -->
 
 ## Debugging
 <!-- * [Debugging Exercises](!needs lesson plan!) -->
-<!-- * [Debugging Techniques](./debugging_techniques.md) -->
+<!-- * [Debugging Techniques](./debugging_techniques) -->
 
 ## Version Control
-<!-- * [Git Workflow](./git-collaboration.md) -->
-<!-- * [Git for Pairs](./git_for_pairs.md) -->
-<!-- * [Git Cheat Sheet](./git_cheatsheet.md) -->
+<!-- * [Git Workflow](./git-collaboration) -->
+<!-- * [Git for Pairs](./git_for_pairs) -->
+<!-- * [Git Cheat Sheet](./git_cheatsheet) -->
 
 ## Professional Development
 * [Overview](./pd_overview)
