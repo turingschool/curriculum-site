@@ -1,9 +1,13 @@
 ---
 layout: page
-title: Team Statistics
+title: Process Change
 ---
 
 _[Back to Futbol Home](../index)_
+
+Now that you've completed your first retro, make some changes to your group's process that resulted from retro, and continue working on some more statistics. Document these changes in your README.  Consider how the changes are working. Keep some notes for a future retro of what's going well and what isn't going so well this second time around.
+
+## Team Statistics
 
 Each of the methods below take a team id as an argument. Using that team id, your instance of StatTracker will provide statistics for a specific team.
 
@@ -14,7 +18,7 @@ Each of the methods below take a team id as an argument. Using that team id, you
 | `worst_season` | Season with the lowest win percentage for a team. | String |
 | `average_win_percentage` | Average win percentage of all games for a team. | Float |
 | `most_goals_scored` | Highest number of goals a particular team has scored in a single game. | Integer |
-| `fewest_goals_scored` | Lowest numer of goals a particular team has scored in a single game. | Integer |
+| `fewest_goals_scored` | Lowest number of goals a particular team has scored in a single game. | Integer |
 | `favorite_opponent` | Name of the opponent that has the lowest win percentage against the given team. | String |
 | `rival` | Name of the opponent that has the highest win percentage against the given team. | String |
 | `biggest_team_blowout` | Biggest difference between team goals and opponent goals for a win for the given team. | Integer |
