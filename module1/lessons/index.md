@@ -13,7 +13,7 @@ title: Module 1 - Lessons
 <!-- * [Flow Control](./flow_control) -->
 <!-- * [Beginner Enumerables](./beginner_enumerables) -->
 <!-- * [Hashes](./hashes) -->
-<!-- * [Boolean Logic](./boolean_logic) -->
+* [Boolean Logic](./boolean_logic)
 <!-- * [Nested Collections](./nested_collections) -->
 <!-- * [Reaching Through Objects](!needs lesson plan!) -->
 <!-- * [Intermediate Enumerables](./intermediate_enumerables) -->
