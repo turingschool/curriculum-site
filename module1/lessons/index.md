@@ -38,9 +38,10 @@ title: Module 1 - Lessons
 <!-- * [Debugging Techniques](./debugging_techniques) -->
 
 ## Version Control
-<!-- * [Git Workflow](./git-collaboration) -->
-<!-- * [Git for Pairs](./git_for_pairs) -->
-<!-- * [Git Cheat Sheet](./git_cheatsheet) -->
+* [Git Workflow](./git_collaboration)
+* [Git for Pairs](./git_for_pairs)
+* [Git Cheat Sheet](./git_sample_flow)
+* [Git Merge Conflicts](./git_merge_conflicts)
 
 ## Professional Development
 * [Overview](./pd_overview)
