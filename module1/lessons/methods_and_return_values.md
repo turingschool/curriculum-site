@@ -216,6 +216,25 @@ pry(main)> greeting == "Hello World".downcase
 => false
 ```
 
+<section class="dropdown">
+### Lets see it in JavaScript
+
+Feel free to copy paste these lines of code into the dev console in your browser or into a repl on replit.com
+```js
+var greeting = "Hello World";
+
+var shoutGreeting = greeting.toUpperCase()
+
+console.log(shoutGreeting)
+// expected result >>> "HELLO WORLD"
+
+greeting = "Good day!" //reassigned the value of our initial greeting variable
+
+console.log(greeting)
+// expected result >>> "Good day!"
+```
+</section>
+
 
 ## <a name='define-method'></a>Defining our own Methods
 
