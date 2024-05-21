@@ -1,6 +1,5 @@
 ---
 title: Hashes
-subheading: lesson is Hashes 
 layout: page
 ---
 
