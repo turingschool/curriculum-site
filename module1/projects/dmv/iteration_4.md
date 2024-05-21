@@ -9,11 +9,14 @@ _[Back to Requirements](./requirements)_
 
 ## Extensions
 ### Option 1
+Use [this repository](https://github.com/turingschool-examples/the_dmv_extension_js) to practice making these DMV objects using JavaScript instead of Ruby! Follow instructions in the README to make the `registrant_test.js` file tests pass. 
+
+### Option 2
 Find your own data set to work with and do something interesting with it. If you choose this option, check in with an instructor before starting.
   * Here's a good place to start your data hunt: [Data.gov](https://catalog.data.gov/dataset)
 
 
-### Option 2
+### Option 3
 Calculate some analytics about your existing data sets:
   * EV Registrations:
     * Find the most popular make/model registered
