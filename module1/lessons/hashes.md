@@ -26,7 +26,7 @@ Answer these questions with your group:
 
 ## Part 1: Student Exploration
 
-With our groups, we will be working through [this repository](https://github.com/turingschool-examples/mod-1-be-exercises/blob/main/ruby_exercises/data-types/collections/spec/hashes_spec.rb)
+With our groups, we will be working through [this repository](https://github.com/turingschool-examples/se-mod1-exercises/blob/main/ruby_exercises/data-types/collections/spec/hashes_spec.rb)
 
 If you have already completed these exercises, delete your work and let's do it again! Repetition is key to learning. 
 
