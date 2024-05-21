@@ -114,7 +114,7 @@ var pets = {
 ### What data type can a key be?
   
 Keys of a hash can be any data type. 
-Often, we see them as symbols (in Ruby) or strings (in Javascript).However, they can be integers as well.
+Often, we see them as symbols (in Ruby) or strings (in Javascript). However, they can be integers as well.
 ```ruby
 my_hash = { symbol_key: "value", "string_key" => "value", 1 => "value" }
 ```
