@@ -44,7 +44,7 @@ Resources to use while working through the exercises:
   - Your breakout room mates!
   - Google (ex: `Ruby how to make a new hash with a default value`)
   - [Ruby Docs](https://ruby-doc.org/core-2.7.0/Hash.html)
-  - [Intro To Hashes](introducing_hashes.md)
+ 
  
 
 ## Part 2: Discussion
