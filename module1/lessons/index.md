@@ -12,7 +12,7 @@ title: Module 1 - Lessons
 <!-- * [Scope](./scope) -->
 <!-- * [Flow Control](./flow_control) -->
 <!-- * [Beginner Enumerables](./beginner_enumerables) -->
-<!-- * [Hashes](./hashes) -->
+* [Hashes](./hashes)
 <!-- * [Boolean Logic](./boolean_logic) -->
 <!-- * [Nested Collections](./nested_collections) -->
 <!-- * [Reaching Through Objects](!needs lesson plan!) -->
