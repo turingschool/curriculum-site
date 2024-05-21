@@ -6,7 +6,7 @@ tags: ruby, computer science, logic
 
 ## Learning Goals
 
-* explain falsy vs truthy in Ruby
+* explain "falsy" vs "truthy"
 * apply the key logic operators AND, OR, and NOT
 * combine operations into a logic expression
 * utilize a truth table to illustrate a logical expression
@@ -22,16 +22,17 @@ tags: ruby, computer science, logic
 * Truth Table
 * Flow Control
 
-## Slides
-
-Available [here](../slides/boolean_logic)
-
 ## WarmUp
 
 First, start by doing some research.
 You may choose independent or paired.
 
-#### Truthy and falsey values
+#### Truthy and falsy
+
+* What do you think it means to describe something as 'truthy'?
+* What about 'falsy'?
+
+#### Truthy and falsy values in Ruby
 
 * How many falsey values are there in Ruby?
 * What is truthy in Ruby?
@@ -53,6 +54,14 @@ Values to Check:
 * false
 * true
 * "false"
+
+<section class="dropdown">
+
+### What about Truthy and Falsy in JS?
+In JavaScript, all values are truthy except 
+`false`, `0`, `-0`, `null`, `undefined`, `NaN`, and `document.all`.
+
+</section>
 
 ## Why?
 
@@ -140,6 +149,32 @@ Let's revisit that last expressions in `pry`, but let's add some parentheses.
 false && false || true
 false && (false || true)
 ```
+
+<section class="dropdown">
+
+### Expressions in JavaScript
+
+These expressions will also work in JavaScript:
+
+```javascript
+function determineTruthyness(expression) {
+  if (expression) {
+    return `The expression ${expression} is true!`
+  } else {
+    return `The expression ${expression} is false!`
+  }
+}
+
+var exp_1 = false && false || true
+var exp_2 =  false && (false || true)
+
+determineTruthyness(exp_1);
+determineTruthyness(exp_2);
+```
+
+</section>
+
+
 **Turn & Talk**
 Turn to your neighbor and discuss what order you believe Ruby is evaluating each boolean expression in. What will the result be?
 
@@ -263,6 +298,6 @@ Convert the nested if/else statements to flatter boolean expressions.
 
 ## Wrapup
 
-* What objects are truthy? What objects are falsey?
-* What are the rules of precedence in Boolean expressions?
+* What objects are truthy in Ruby? What objects are falsey?
+* What are the rules of precedence for Boolean expressions in Ruby?
 * Why might you use complex Boolean expressions?
