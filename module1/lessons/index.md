@@ -36,6 +36,7 @@ title: Module 1 - Lessons
 ## Debugging
 <!-- * [Debugging Exercises](!needs lesson plan!) -->
 <!-- * [Debugging Techniques](./debugging_techniques) -->
+* [Using ChatGPT Effectively](./chatgpt)
 
 ## Version Control
 * [Git Workflow](./git_collaboration)
