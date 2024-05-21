@@ -9,7 +9,7 @@ tags: ruby, methods, return, argument
 
 * Define the terms Variable, Method, Argument, and Return Value
 * Explain why we use methods
-* Define methods in Ruby
+* Define methods
 * Explain where Ruby looks for methods
 * Understand how abstraction helps us program
 
@@ -77,13 +77,9 @@ You are calling the `upcase` method. It's job is to create a version of the Stri
 <br>
 
 
-One of the most important reasons we need methods is to **reuse code**. Instead of rewriting all those lines of code for creating an upcased string, we simply call the `upcase` method.
+One of the most important reasons we need methods is to **reuse code**. Instead of rewriting all those lines of code for creating an upcased string, we simply **invoke** the `upcase` method.
 
 The example illustrates another key point: **methods run on objects**. In the example above, the `upcase` method is running on `"Hello World"`, which is a **String object**. You can think of methods like they are messages to an object. The above code is saying, "Hey string, give me an upcased version of yourself."
-
-To recap the Key Points from this section:
-- We use methods so we can reuse code
-- Methods run on objects
 
 
 ## Return Values
@@ -101,8 +97,32 @@ pry(main)> "Hello World".upcase
 => "HELLO WORLD"
 ```
 
-You are calling the `upcase` **Method** on the string`"Hello World"`. The **Return Value**, denoted by the `=>`, is `"HELLO WORLD"`.
+You are invoking the `upcase` **Method** on the string`"Hello World"`. The **Return Value**, denoted by the `=>`, is `"HELLO WORLD"`.
 
+<section class="dropdown">
+### Lets see it in JavaScript
+
+Feel free to copy paste these lines of code into the dev console in your browser or into a repl on replit.com
+```js
+var greeting = "Hello World";
+
+greeting.toUpperCase()
+
+// expected return value >>>  "HELLO WORLD"
+```
+</section>
+
+Fun Fact: In Ruby, the terms **function** and **method** mean the same thing - because everything in Ruby is an object.  In JavaScript, *technically* **method** is specific term for a **function** that is defined *on an object*.  However the two terms are often used interchangeably.  
+
+<section class="call-to-action">
+
+### Key Points
+
+To recap the Key Points from this section:
+- We use methods so we can reuse code
+- Methods run on objects
+- A method can only return **one** value
+</section>
 
 ## Arguments
 
@@ -137,6 +157,21 @@ This is the same as:
 pry(main)> "Hello World".gsub "World", "Turing"
 => "Hello Turing"
 ```
+
+<section class="dropdown">
+### Lets see it in JavaScript
+
+Note: Parenthesis are *not* optional when passing arguments to a method in JavaScript
+
+Feel free to copy paste these lines of code into the dev console in your browser or into a repl on replit.com
+```js
+var greeting = "Hello World";
+
+greeting.includes("Hello")
+
+// expected return value >>> true
+```
+</section>
 
 <br>
 <br>
