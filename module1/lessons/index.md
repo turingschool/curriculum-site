@@ -13,7 +13,7 @@ title: Module 1 - Lessons
 <!-- * [Flow Control](./flow_control) -->
 <!-- * [Beginner Enumerables](./beginner_enumerables) -->
 * [Hashes](./hashes)
-<!-- * [Boolean Logic](./boolean_logic) -->
+* [Boolean Logic](./boolean_logic)
 <!-- * [Nested Collections](./nested_collections) -->
 <!-- * [Reaching Through Objects](!needs lesson plan!) -->
 <!-- * [Intermediate Enumerables](./intermediate_enumerables) -->
@@ -36,6 +36,7 @@ title: Module 1 - Lessons
 ## Debugging
 <!-- * [Debugging Exercises](!needs lesson plan!) -->
 <!-- * [Debugging Techniques](./debugging_techniques) -->
+* [Using ChatGPT Effectively](./chatgpt)
 
 ## Version Control
 * [Git Workflow](./git_collaboration)
