@@ -72,10 +72,6 @@ pry(main)> "Hello World".upcase
 You are calling the `upcase` method. It's job is to create a version of the String with all capital letters.
 
 <br>
-<br>
-<br>
-<br>
-
 
 One of the most important reasons we need methods is to **reuse code**. Instead of rewriting all those lines of code for creating an upcased string, we simply **invoke** the `upcase` method.
 
@@ -104,7 +100,7 @@ You are invoking the `upcase` **Method** on the string`"Hello World"`. The **Ret
 
 Feel free to copy paste these lines of code into the dev console in your browser or into a repl on replit.com
 ```js
-var greeting = "Hello World";
+var greeting = "Hello World"
 
 greeting.toUpperCase()
 
@@ -165,17 +161,13 @@ Note: Parenthesis are *not* optional when passing arguments to a method in JavaS
 
 Feel free to copy paste these lines of code into the dev console in your browser or into a repl on replit.com
 ```js
-var greeting = "Hello World";
+var greeting = "Hello World"
 
 greeting.includes("Hello")
-
 // expected return value >>> true
 ```
 </section>
 
-<br>
-<br>
-<br>
 <br>
 
 ## Variables
@@ -221,26 +213,31 @@ pry(main)> greeting == "Hello World".downcase
 
 Feel free to copy paste these lines of code into the dev console in your browser or into a repl on replit.com
 ```js
-var greeting = "Hello World";
+var greeting = "Hello World".toLowerCase()
 
-var shoutGreeting = greeting.toUpperCase()
+console.log(greeting) 
+//expected result >>> "hello world"
 
-console.log(shoutGreeting)
-// expected result >>> "HELLO WORLD"
+console.log(greeting == "Hello World".toLowerCase())  
+//expected result >>> true
 
-greeting = "Good day!" //reassigned the value of our initial greeting variable
+greeting = "Hello Universe" //reassigned the value of our initial greeting variable
 
 console.log(greeting)
-// expected result >>> "Good day!"
+// expected result >>> "Hello Universe"
+
+console.log(greeting == "Hello World".toLowerCase())  
+//expected result >>> false
 ```
 </section>
 
 
 ## <a name='define-method'></a>Defining our own Methods
 
-`.upcase`, `.include?`, and `.gsub` are all **Methods** built to work on string objects. But, what if we want to create our own methods? Recall that methods must be called on **objects** like a string (`"hello world"`) or integer (`13`); so, in order to create our own methods, we need to create our own objects.  We do this with **classes**.  We will go into more detail on **classes** in a later lesson; if you want a sneak peak, take a look at [this quick class exploration](./strings_as_class).
+`.upcase`, `.include?`, and `.gsub` are all **Methods** built to work on string objects. But, what if we want to create our own methods? Recall that in Ruby, methods must be called on **objects** like a string (`"hello world"`) or integer (`13`); so, in order to create our own methods, we need to create our own objects.  We do this with **classes**.  We will go into more detail on **classes** in a later lesson. 
+<!-- If you want a sneak peak, take a look at [this quick class exploration](./strings_as_class). -->
 
-Let's make a class that calculators values. In a new file called `calculator.rb`, we'll add the following lines of code and run this file from the command line using `ruby calculator.rb`.
+Let's make a class that calculates values. In a new file called `calculator.rb`, we'll add the following lines of code and run this file from the command line using `ruby calculator.rb`.
 
 ```ruby
 class Calculator
@@ -253,11 +250,8 @@ end
 **Breakout Chat**: What will happen when this code runs? What will the return value be?
 
 <br>
-<br>
-<br>
-<br>
 
-We didn't we see `Welcome` printed to the screen because the `class` and `def` keywords *define* the class and method, but our code does not *call* the method. Remember, methods run on objects, so the first thing we need to do is create an object using our class. Then we can call the method on it:
+We didn't we see `Welcome` printed to the screen because the `class` and `def` keywords *define* the class and method, but our code does not *call* the method. Remember, methods run on objects, so the first thing we need to do is create an object using our class. Then we can invoke the method on it:
 
 
 ```ruby
@@ -287,7 +281,7 @@ class Calculator
 end
 ```
 
-We need to give this method numbers to add as an input. Therefore, we define an **Argument** called `num1` and another called `num2`. Let's also call this method at the bottom of the file:
+We need to give this method numbers to add as an input. Therefore, we define a **Parameter** called `num1` and another called `num2`. Let's also call this method at the bottom of the file:
 
 ```ruby
 class Calculator
@@ -348,7 +342,7 @@ calculator = Calculator.new
 calculator.add(1,3)
 ```
 
-You can think of an argument as a variable that is created right at the start of the method. You can use that variable anywhere INSIDE of the method.
+You can think of a parameter as a variable that is created right at the start of the method. You can use that variable anywhere INSIDE of the method.  For each parameter you create in the method definition, you must pass a corresponding argument in the method invocation.
 
 
 ## Defining Return Values
