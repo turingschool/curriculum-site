@@ -21,7 +21,7 @@ tags: ruby, hashes, data structures
 
 ## WarmUp
 
-Using [mod-1-be-exercises](https://github.com/turingschool-examples/mod-1-be-exercises/tree/main/lessons/nested_collections/Examples), find answers to the following: 
+Using [Mod 1 Exercises](https://github.com/turingschool-examples/se-mod1-exercises), find answers to the following: 
 
 First, try to answer without using pry, then use pry to verify.
 
@@ -110,7 +110,7 @@ Take a look at [this documentation from ifixit.com](https://www.ifixit.com/api/2
 
 
 <section class="call-to-action">
-### Turn and Talk
+### Discuss
 
 * How could I describe the data in this section of the documentation?
 * How can I return the 'id' value for an image?
@@ -126,7 +126,7 @@ var meals = {
 }
 ```
 
-We can use bracket notation like we do in Ruby, or we can use dot notation to <strong>chain</strong> multiple properties, to dig into the values we want.
+We can use bracket notation on this object like we would for a Ruby hash, or we can use dot notation to <strong>chain</strong> multiple properties, to dig into the values we want.
 
 ```javascript
 meals.breakfast.time
@@ -149,7 +149,7 @@ meals = {
 }
 ```
 
-We could return the same values from the JavaScript example above like so:
+We could return the same values from the example above like so:
 
 ```ruby
 meals[:breakfast][:time]
