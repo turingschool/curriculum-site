@@ -38,9 +38,10 @@ First, try to answer without using pry, then use pry to verify.
    * access which name is last in the list
    * remove "Fela" from the list
 
+<section class="call-to-action">
 ### A Note on Data Structures
 
-We're working in Ruby, so throughout this lesson we'll refer to `arrays` and `hashes`. These data structures might be called something else in other languages, though-- for example, this dictionary-like data structure is called an `Object` in JavaScript:
+We're working in Ruby, so throughout this lesson we'll refer to `arrays` and `hashes`. These data structures might be called something else in other languages, though-- for example, you may recall from our [Hashes](hashes) lesson that this dictionary-like data structure is called an `Object` in JavaScript:
 
 ```javascript
 const animals = {
@@ -49,6 +50,7 @@ const animals = {
   "iguanas": 2
 };
 ```
+</section>
 
 ### Hash and Array Nesting
 
@@ -106,7 +108,7 @@ pizza_toppings = {veggies: ["green peppers", "jalapeño", "mushrooms"],
 
 What about on the job? How often will you need to work with nested collections _really_? 
 
-Take a look at [this documentation from ifixit.com](https://www.ifixit.com/api/2.0/doc/Stories#get-a-list-of-stories) (these docs are for working with an external API, which you'll learn about in a future module at Turing). We're specifically interested in the 'Response' section from the `GET /stories` dropdown.
+Take a look at this [ifixit.com documentation](https://www.ifixit.com/api/2.0/doc/Stories#get-a-list-of-stories) (these docs are for working with an external API, which you'll learn about in a future module at Turing). We're specifically interested in the 'Response' section from the `GET /stories` dropdown.
 
 
 <section class="call-to-action">
@@ -126,7 +128,7 @@ var meals = {
 }
 ```
 
-We can use bracket notation on this object like we would for a Ruby hash, or we can use dot notation to <strong>chain</strong> multiple properties, to dig into the values we want.
+In JavaScript we can use bracket notation on this object like we would for a Ruby hash, or we can use dot notation to <strong>chain</strong> multiple properties, to dig into the values we want.
 
 ```javascript
 meals.breakfast.time
