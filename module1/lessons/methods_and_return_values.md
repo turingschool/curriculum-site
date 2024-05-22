@@ -235,7 +235,6 @@ console.log(greeting == "Hello World".toLowerCase())
 ## <a name='define-method'></a>Defining our own Methods
 
 `.upcase`, `.include?`, and `.gsub` are all **Methods** built to work on string objects. But, what if we want to create our own methods? Recall that in Ruby, methods must be called on **objects** like a string (`"hello world"`) or integer (`13`); so, in order to create our own methods, we need to create our own objects.  We do this with **classes**.  We will go into more detail on **classes** in a later lesson. 
-<!-- If you want a sneak peak, take a look at [this quick class exploration](./strings_as_class). -->
 
 Let's make a class that calculates values. In a new file called `calculator.rb`, we'll add the following lines of code and run this file from the command line using `ruby calculator.rb`.
 
@@ -302,8 +301,6 @@ calculator.add
 
 <br>
 <br>
-<br>
-<br>
 
 The error we get is `ArgumentError: wrong number of arguments (given 0, expected 1)`. We defined our method to take 1 argument, but when we called it we didn't provide an argument. This is what it means by "given 0, expected 1".
 
@@ -344,6 +341,20 @@ calculator.add(1,3)
 
 You can think of a parameter as a variable that is created right at the start of the method. You can use that variable anywhere INSIDE of the method.  For each parameter you create in the method definition, you must pass a corresponding argument in the method invocation.
 
+<section class="dropdown">
+### What about JavaScript?
+
+Javascript as a language isn't strictly object oriented like Ruby.   This means that in JavaScript, you *can* create a class and define methods in it. Then you can invoke those methods on an object instance of that class, just like in Ruby.  *But* you also have the option to just define a function on its own without it being in a class and invoke it without having to do so on an object.  You may see some JS classes later in the program but its not likely that you'll have to write one. 
+
+```js
+function add(num1, num2) {
+  return num1 + num2
+}
+
+add(1,3)
+//expected result >>> 4
+```
+</section>
 
 ## Defining Return Values
 
@@ -425,6 +436,27 @@ end
 calculator = Calculator.new
 puts calculator.add(1,3)
 ```
+
+<section class="dropdown">
+### What about JavaScript?
+
+In Javascript you can use the return keyword to return the desired value from your function.  Just like in Ruby, returning and printing are not the same.  In order to print the value returned from our JS function below, we need to log it to the console - either in a variable, or directly.
+
+```js
+function add(num1, num2) {
+  return num1 + num2
+}
+
+add(1,3)  
+
+console.log(add(1,3)) //logging the return value by logging the invocation of the function
+//expected result >>> 4
+
+let sum = add(1,3)
+console.log(sum)  //logging the return value by storing it in a variable then logging the variable
+//expected result >>> 4
+```
+</section>
 
 ## Practice
 
