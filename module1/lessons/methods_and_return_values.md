@@ -7,7 +7,7 @@ tags: ruby, methods, return, argument
 
 ## Learning Goals
 
-* Define the terms Variable, Method, Argument, and Return Value
+* Define the terms Variable, Method, Argument, Parameter and Return Value
 * Explain why we use methods
 * Define methods
 * Explain where Ruby looks for methods
@@ -18,7 +18,7 @@ tags: ruby, methods, return, argument
 * Variable
 * Method
 * Return
-* Argument (Parameter)
+* Argument/Parameter
 * Parse
 * Execute
 * Abstraction
@@ -57,6 +57,7 @@ pry(main)> greeting
 => "hello world"
 ```
 
+<br>
 
 ## Define and Identify
 
@@ -77,6 +78,7 @@ One of the most important reasons we need methods is to **reuse code**. Instead 
 
 The example illustrates another key point: **methods run on objects**. In the example above, the `upcase` method is running on `"Hello World"`, which is a **String object**. You can think of methods like they are messages to an object. The above code is saying, "Hey string, give me an upcased version of yourself."
 
+<br>
 
 ## Return Values
 
@@ -120,7 +122,9 @@ To recap the Key Points from this section:
 - A method can only return **one** value
 </section>
 
-## Arguments
+<br>
+
+## Arguments and Parameters
 
 **Arguments** are the input(s) to a method. When you define a method, they are known as **Parameters**. (In other words, a parameter is a generic placeholder for a specific argument).
 
@@ -231,6 +235,7 @@ console.log(greeting == "Hello World".toLowerCase())
 ```
 </section>
 
+<br>
 
 ## <a name='define-method'></a>Defining our own Methods
 
@@ -263,6 +268,8 @@ end
 calculator = Calculator.new
 calculator.print_welcome
 ```
+
+<br>
 
 ## Defining methods that take Arguments
 
@@ -299,7 +306,6 @@ calculator.add
 
 **Breakout Chat**: What will happen when we run this code?
 
-<br>
 <br>
 
 The error we get is `ArgumentError: wrong number of arguments (given 0, expected 1)`. We defined our method to take 1 argument, but when we called it we didn't provide an argument. This is what it means by "given 0, expected 1".
@@ -346,15 +352,9 @@ You can think of a parameter as a variable that is created right at the start of
 
 Javascript as a language isn't strictly object oriented like Ruby.   This means that in JavaScript, you *can* create a class and define methods in it. Then you can invoke those methods on an object instance of that class, just like in Ruby.  *But* you also have the option to just define a function on its own without it being in a class and invoke it without having to do so on an object.  You may see some JS classes later in the program but its not likely that you'll have to write one. 
 
-```js
-function add(num1, num2) {
-  return num1 + num2
-}
-
-add(1,3)
-//expected result >>> 4
-```
 </section>
+
+<br>
 
 ## Defining Return Values
 
@@ -458,11 +458,15 @@ console.log(sum)  //logging the return value by storing it in a variable then lo
 ```
 </section>
 
+<br>
+
 ## Practice
 
 Following the directions in [this gist](https://gist.github.com/ameseee/c311860e9f6bc023036351f298907ccb), work with your partner through the activities.
 
 You focus should be exploring to build a deep understanding of these concepts, NOT to race through the activity for the sake of finishing it. Whether you know this stuff or not, there should be plenty for you and your partner to talk about/dig into during this time.
+
+<br>
 
 ## Method Lookup
 
@@ -492,6 +496,8 @@ nums = [1, 2, 3, 4]
 nums.slice(1, 1)
 ```
 
+<br>
+
 ## Calling Methods from Other Methods
 
 We can also call methods from within other methods that are in the same class. Let's add a function that takes a number and then prints a more robust message.
@@ -517,6 +523,8 @@ calculator = Calculator.new
 calculator.print_sum(1,2)
 ```
 
+<br>
+
 ## Layers of Abstraction
 
 
@@ -536,10 +544,11 @@ A note on order: The way you define the order of your _methods_ does not matter.
 
 Add an abstract method to your calculator (a method that calls at least one other method).
 
+<br>
 
 ## Check for Understanding
 
-1. What is a method? An argument? A return value?
+1. What is a method? An argument? A parameter? A return value?
 2. What keywords do we use to create methods?
 3. How does Ruby know what to return from a method?
 4. How do you call one method from within another method?
