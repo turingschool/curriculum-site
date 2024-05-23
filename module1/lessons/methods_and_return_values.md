@@ -98,7 +98,7 @@ pry(main)> "Hello World".upcase
 You are invoking the `upcase` **Method** on the string`"Hello World"`. The **Return Value**, denoted by the `=>`, is `"HELLO WORLD"`.
 
 <section class="dropdown">
-### Lets see it in JavaScript
+### Let's see it in JavaScript
 
 Feel free to copy paste these lines of code into the dev console in your browser or into a repl on replit.com
 ```js
@@ -159,7 +159,7 @@ pry(main)> "Hello World".gsub "World", "Turing"
 ```
 
 <section class="dropdown">
-### Lets see it in JavaScript
+### Let's see it in JavaScript
 
 Note: Parenthesis are *not* optional when passing arguments to a method in JavaScript
 
@@ -213,7 +213,7 @@ pry(main)> greeting == "Hello World".downcase
 ```
 
 <section class="dropdown">
-### Lets see it in JavaScript
+### Let's see it in JavaScript
 
 Feel free to copy paste these lines of code into the dev console in your browser or into a repl on replit.com
 ```js
