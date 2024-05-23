@@ -5,8 +5,8 @@ title: Module 1 - Lessons
 
 <!-- Comment the following lessons in as they are updated and deemed ready to go! -->
 
-## Ruby Mechanics
-<!-- * [Methods & Return Values](./methods_and_return_values) -->
+## Programming Fundamentals
+* [Methods & Return Values](./methods_and_return_values)
 <!-- * [Objects, Classes, & Instances](./objects_classes_instances) -->
 <!-- * [Arrays](./arrays) -->
 <!-- * [Scope](./scope) -->
