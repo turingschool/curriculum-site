@@ -21,7 +21,7 @@ tags: ruby, hashes, data structures
 
 ## WarmUp
 
-Using [Mod 1 Exercises](https://github.com/turingschool-examples/se-mod1-exercises), find answers to the following: 
+Using [Mod 1 Exercises](https://github.com/turingschool-examples/se-mod1-exercises/tree/main/lessons/nested_collections/Examples), find answers to the following: 
 
 First, try to answer without using pry, then use pry to verify.
 
@@ -175,7 +175,7 @@ There’s no limit to how nested this data can get! Gnarly!
 
 ## Challenge
 
-Using the [mod-1-be-exercises](https://github.com/turingschool-examples/mod-1-be-exercises/tree/main/lessons/nested_collections) repo, navigate to the `challenges` directory. Follow the instructions and work through the Denver Biscuit Company API response.
+Using the [se-mod-1-exercises](https://github.com/turingschool-examples/se-mod1-exercises/tree/main/lessons/nested_collections) repo, navigate to the `challenges` directory. Follow the instructions and work through the Denver Biscuit Company API response.
 
 
 ## Extra Practice
@@ -240,4 +240,4 @@ e.g. `{24 => ['Juan', 'Steve', 'Jill']...}`
 
 ## More Practice
 
-You can also work through the `data-types/collections` exercises in [ruby-exercises](https://github.com/turingschool/ruby-exercises)
+You can also work through the `data-types/collections` exercises in [ruby-exercises](https://github.com/turingschool-examples/se-mod1-exercises/tree/main/ruby_exercises)
