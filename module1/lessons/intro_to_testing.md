@@ -297,3 +297,58 @@ end
   * What goes in the initial describe block?
   * What is the syntax for a RSpec spec?
   * Name 3 `.to` methods you learned about today & describe their syntax.
+
+<br>
+
+<section class="call-to-action">
+### Note
+
+We are using Rspec to test our Ruby code.  However, the testing approach outlined above applies to programming in general.  There are many libraries and frameworks to choose from in order to test code written in various langages.  The syntax may vary but the overall approach is very similar regardless.  
+
+For example, here's what the testing might look like in Javascript, using Mocha testing framework and Chai assertion library.   
+
+```js
+// student-test.js
+var assert = require('chai').assert;
+var expect = require('chai').expect;
+var Student = require('./Student.js');
+
+describe('Student', function () {
+  describe('initialize', function () {
+    it('should be an instance of Student', function () {
+      // setup for test (if necessary)
+
+      // execute function
+      let newStudent = new Student('Penelope')
+
+      // assert what the result SHOULD be
+      expect(newStudent).to.be.an.instanceOf(Student)
+    })
+
+    it('should have a name', function () {
+      let newStudent = new Student('Penelope')
+
+      expect(newStudent.name).to.equal('Penelope')
+    })
+
+    it('should have cookies by default', function () {
+      let newStudent = new Student('Penelope')
+
+      expect(newStudent.cookies).to.deep.equal([])
+    })
+  })
+
+  describe('addCookie', function () {
+    it('should add cookie to cookies array', function () {
+      let newStudent = new Student('Penelope')
+
+      newStudent.addCookie('Chocolate Chip')
+      newStudent.addCookie('Snickerdoodle')
+
+      expect(newStudent.cookies).to.deep.equal(['Chocolate Chip', 'Snickerdoodle'])
+    })
+  })
+})
+```
+</section>
+
