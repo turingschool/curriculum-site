@@ -58,7 +58,7 @@ gem install rspec
 - At the top of every spec file: `describe NameOfClass`
 - describe '#name_of_method'
   - It is good practice to have another describe block for the name of method. That way we can group all assertions dealing with this method in this describe block.
-- We need to have an assertion at the end of every test
+- We need to have an **assertion** at the end of every test
   - A lot of times we are going to compare if two values are equal to each other
   - We do that by writing `expect(actual).to eq(expected)` where actual is the result of the method call or object querying, and expected is the value we expect it to be.
 - [RSpec Expectations Documentation](https://www.rubydoc.info/github/rspec/rspec-expectations/RSpec/Expectations)
@@ -165,7 +165,7 @@ end
 
 ## S.E.A.T
 
-Each test that we create needs 4 components to be a properly built test.
+Each test that we create needs 4 components to be a properly built test.  
 
 * Setup - The setup of a test is all of the lines of code that need to be executed in order to verify some behavior. Because each test is run individually, we often see the same setup being created multiple times.
 * Execution - The execution is the actual running of the method we are testing.  This sometimes happens on the same line as the assertion, and sometimes happens prior to the assertion.
