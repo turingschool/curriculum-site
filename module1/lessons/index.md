@@ -29,7 +29,7 @@ title: Module 1 - Lessons
 <!-- * [How the Web Works](./intro_to_how_the_web_works) -->
 
 ## Testing
-<!-- * [Intro to Testing](./intro_to_testing) -->
+* [Intro to Testing](./intro_to_testing)
 <!-- * [Mocks & Stubs](./mocks_stubs) -->
 <!-- * [Test Driven Development](./test_driven_development) -->
 
