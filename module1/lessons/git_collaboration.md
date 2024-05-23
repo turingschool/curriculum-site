@@ -31,7 +31,7 @@ Pick one person to create the repo. The other person should be watching and advi
 - Invite your partner to collaborate (find this on the repo page under settings, manage access, invite a collaborator)
 </section>
 
-<section class="answer">
+<section class="dropdown">
 ### Git Commands
 - **Make a new directory**
   - `mkdir [name-of-directory]`
@@ -79,7 +79,7 @@ Then you have to tell git what the default branch should be. You can run this co
 
 </section>
 
-<section class="answer">
+<section class="dropdown">
 ### Git Commands
 - **Clone a repo**
   - `git clone git@github.com:username/repo-name.git`
@@ -131,7 +131,7 @@ Examples of good commit messages:
 - Why do you think developers shouldn't merge their own pull requests?
 </section>
 
-<section class="answer">
+<section class="dropdown">
 ### Git Commands
 - **Fetch all remote branches**
   - `git fetch`
@@ -172,14 +172,14 @@ Yes! As long as a branch is pushed up to GitHub, _anyone_ can pull it down and w
 - When you've created a new, fully functional feature
 - When you have successfully solved a bug or fixed something broken
 
-<section class="answer">
+<section class="dropdown">
 ### Merge Conflict? Read here!
 
 - [This video](https://www.youtube.com/watch?v=j0MW7jSc25I) walks you through a merge conflict
 - You can also reference [this lesson](https://frontend.turing.edu/lessons/module-1/git-merge-conflicts.html)
 </section>
 
-<section class="answer">
+<section class="dropdown">
 ### Other Git Tips & Infos 
  
 - `git branch`  
