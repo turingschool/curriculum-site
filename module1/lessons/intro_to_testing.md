@@ -32,7 +32,7 @@ tags: ruby, testing
 - Spec files should reflect the class they're testing with `_spec` appended to the file name, e.g. `spec/name_of_class_spec.rb`
 - In your test, you'll now `require "./lib/name_of_class.rb"`
 - Run your spec files from the root of the project directory, e.g. `rspec spec`
-- If you want to run a specfic spec file you can append the location of that file to the `rspec spec` command. So `rspec spec spec/name_of_file_spec.rb`
+- If you want to run a specific spec file you can append the location of that file to the `rspec spec` command. So `rspec spec spec/name_of_file_spec.rb`
 
 ```
 .
@@ -65,6 +65,8 @@ gem install rspec
 
 
 ## Code-Along
+
+Files for our code along can be found in the [se-mod1-exercises repo](https://github.com/turingschool-examples/se-mod1-exercises)
 
 ### Scenario Specifications
 
