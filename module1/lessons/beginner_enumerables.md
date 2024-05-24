@@ -132,6 +132,8 @@ function double(numbers) {
 var numbers = [1, 2, 3, 4, 5]
 console.log(double(numbers));
 
+//output: [2, 4, 6, 8, 10]
+
 ```
 </section>
 
@@ -229,6 +231,8 @@ function double(numbers) {
 var numbers = [1, 2, 3, 4, 5]
 console.log(double(numbers));
 
+//output: [2, 4, 6, 8, 10]
+
 ```
 </section>
 
@@ -313,6 +317,8 @@ function findFirstEven() {
 
 console.log(findFirstEven());
 
+//output: 2
+
 ```
 </section>
 
@@ -384,6 +390,8 @@ function allTheOdds() {
 }
 
 console.log(allTheOdds());
+
+//output: [1, 3, 5]
 
 ```
 </section>
