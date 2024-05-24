@@ -31,7 +31,7 @@ Using this `warmup` directory in our Big Repo (under the `reaching_through_objec
 
 We will work on the `Candy` class together. Unskipping one test at a time, let's make the tests pass.
 
-<PEEK>
+<section class="dropdown">
 If your `candy_spec` tests are passing, your code probably looks something like this:
 
 ```ruby
@@ -42,6 +42,7 @@ class Candy
   end
 end
 ```
+</section>
 
 In breakout rooms, work through all the remaining files. Remember to make *incremental progress* by doing the simplest thing to make the tests pass first. You can always return back to your implementation and refactor it to be more dynamic and handle other test cases. 
 
@@ -53,7 +54,7 @@ In your groups, create a list of the attributes and responsibilities of each of 
 * Are there any areas where you see responsibilities "leak" into other classes? (This is called scope creep!)
 * If you were to refactor this design, would you change any of these responsibilities?
 
-<PEEK>
+<section class="dropdown">
 You might have noticed some scope creep between the `TrickOrTreater` class and the `Bag` class! Depending on the context, there might not need to be a `candy_count` method in the `TrickOrTreater` class as long as you can call `trick_or_treater.bag.count`. 
 
 If we assume there *is* a need to have this method on the `trick_or_treater` object, we can at the very least make sure we are delegating the count logic to the existing bag method in our `TrickOrTreater` method instead of duplicating this logic. 
@@ -63,6 +64,7 @@ If we assume there *is* a need to have this method on the `trick_or_treater` obj
     # we should NOT create a @count attribute in TrickOrTreater, but delegate to the existing Bag method
   end
 ```
+</section>
 
 ## Adlington Road Exercise
 
