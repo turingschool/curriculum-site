@@ -21,17 +21,19 @@ tags: ruby, OOP, CS, design
 ## Warm Up
 
 - What are some benefits to using classes? What would the code look like if we ___didn't___ separate functionality and responsibilities into classes?
-- Based on what you've seen so far, do you have any ideas about what some possible pitfalls could be within Object-Oriented design?
+- Based on what you've seen so far, do you have any ideas about what some possible pitfalls could be within object-oriented design?
 
 # Workshop
 
 ## Warm Up Exercise
 
-Using this `warmup` directory in our Big Repo (under the `reaching_through_objects` directory), we are going to work through all four classes involved in this Trick or Treating exercise: `Candy`, `Bag`, `Costume` and `TrickOrTreater`. Tests have been written for you, so your job is to make the tests pass. 
+Using this `warmup` directory in our [Big Repo](https://github.com/turingschool-examples/se-mod1-exercises) (under the `reaching_through_objects` directory), we are going to work through all four classes involved in this Trick or Treating exercise: `Candy`, `Bag`, `Costume` and `TrickOrTreater`. Tests have been written for you, so your job is to make the tests pass. 
 
 We will work on the `Candy` class together. Unskipping one test at a time, let's make the tests pass.
 
 <section class="dropdown">
+
+### Making Tests Pass for Candy
 If your `candy_spec` tests are passing, your code probably looks something like this:
 
 ```ruby
@@ -55,6 +57,9 @@ In your groups, create a list of the attributes and responsibilities of each of 
 * If you were to refactor this design, would you change any of these responsibilities?
 
 <section class="dropdown">
+
+### Scope Creep 
+
 You might have noticed some scope creep between the `TrickOrTreater` class and the `Bag` class! Depending on the context, there might not need to be a `candy_count` method in the `TrickOrTreater` class as long as you can call `trick_or_treater.bag.count`. 
 
 If we assume there *is* a need to have this method on the `trick_or_treater` object, we can at the very least make sure we are delegating the count logic to the existing bag method in our `TrickOrTreater` method instead of duplicating this logic. 

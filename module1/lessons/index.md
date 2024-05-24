@@ -15,7 +15,7 @@ title: Module 1 - Lessons
 * [Hashes](./hashes)
 * [Boolean Logic](./boolean_logic)
 * [Nested Collections](./nested_collections)
-<!-- * [Reaching Through Objects](!needs lesson plan!) -->
+* [Reaching Through Objects](./reaching_through_objects)
 <!-- * [Intermediate Enumerables](./intermediate_enumerables) -->
 <!-- * [Nested Iteration Workshop](./nested_iteration_workshop) -->
 <!-- * [Class Methods](./class_methods) -->
