@@ -1,13 +1,57 @@
 ---
 layout: page
-title: Statistics
+title: Setup, File I/O, and Statistics
 ---
 
 _[Back to Futbol Home](../index)_
 
-**These Statistics should be done the Monday before the project is due!**
+## Setup
 
-Each of the methods described below should be implemented as instance methods on `StatTracker`.
+We have provided a starting repository for this project. That repository has the usual `lib` and `spec` directories that you have seen in the past, but also includes a `data` directory that includes three `.csv` files. These files are text files that include tables represented as comma-separated values (hence `.csv`). The first row includes headers, while every other row includes entries in the table.
+
+Begin by picking one team member to fork the project repository [here](https://github.com/turingschool-examples/futbol).
+Once one of you has forked the repository, each of the other team members should clone that repository.
+
+In order to complete your setup:
+
+* One team member forks the repository [here](https://github.com/turingschool-examples/futbol) and adds the other(s) as collaborators.
+* Each of the other team members accepts the invitation to collaborate and then clones the repository.
+* Setup [SimpleCov](https://github.com/colszowka/simplecov) to monitor test coverage along the way.
+
+Note: we have linked the GitHub repository for SimpleCov, but you should not expect that those are the only resources you will use to set up these tools in your project. Use your research skills to find other resources to help you determine how to use these tools. You may want to consider using [Rubys CSV class](https://ruby-doc.org/stdlib-2.0.0/libdoc/csv/rdoc/CSV.html).
+
+## File I/O
+
+In order to get data into the system we're going to create, we're going to read information from CSV files. At this point, we don't expect that you have determined exactly what you will be doing with the information that you collect, so for now you may just want to print some information to the terminal about each record you read in.
+
+At a high level, if you create a runner file including the code below, you should drop into a pry session with an instance of `StatTracker` held in the `stat_tracker` variable.
+
+Note that `::from_csv` is a method you have defined called directly on the `StatTracker` class, and not an instance of `StatTracker`.
+
+`::from_csv` returns an instance of StatTracker. That instance of `StatTracker` will hold all of the information you need for the methods included in the remainder of the project description.
+
+```ruby
+# runner.rb
+require './lib/stat_tracker'
+
+game_path = './data/games.csv'
+team_path = './data/teams.csv'
+game_teams_path = './data/game_teams.csv'
+
+locations = {
+  games: game_path,
+  teams: team_path,
+  game_teams: game_teams_path
+}
+
+stat_tracker = StatTracker.from_csv(locations)
+
+require 'pry'; binding.pry
+```
+
+## Statistics
+
+Each of the methods described below should be implemented as instance methods on `StatTracker` in order for the spec harness to work properly.
 
 ### Game Statistics
 
@@ -47,19 +91,3 @@ These methods each take a season id as an argument and return the values describ
 | `least_accurate_team` | Name of the Team with the worst ratio of shots to goals for the season | String |
 | `most_tackles` | Name of the Team with the most tackles in the season | String |
 | `fewest_tackles` | Name of the Team with the fewest tackles in the season | String |
-
-
-### Team Statistics
-
-Each of the methods below take a team id as an argument. Using that team id, your instance of StatTracker will provide statistics for a specific team.
-
-| Method | Description | Return Value |
-| ------ | ----------- | ------------ |
-| `team_info` | A hash with key/value pairs for the following attributes: team_id, franchise_id, team_name, abbreviation, and link | Hash |
-| `best_season` | Season with the highest win percentage for a team. | String |
-| `worst_season` | Season with the lowest win percentage for a team. | String |
-| `average_win_percentage` | Average win percentage of all games for a team. | Float |
-| `most_goals_scored` | Highest number of goals a particular team has scored in a single game. | Integer |
-| `fewest_goals_scored` | Lowest numer of goals a particular team has scored in a single game. | Integer |
-| `favorite_opponent` | Name of the opponent that has the lowest win percentage against the given team. | String |
-| `rival` | Name of the opponent that has the highest win percentage against the given team. | String |

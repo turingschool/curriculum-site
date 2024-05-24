@@ -12,3 +12,4 @@ subheading: Fundamentals of Programming
 
 
 ## Other Resources
+- [Mod 1 Exercises](https://github.com/turingschool-examples/se-mod1-exercises)

@@ -5,16 +5,16 @@ title: Module 1 - Lessons
 
 <!-- Comment the following lessons in as they are updated and deemed ready to go! -->
 
-## Ruby Mechanics
-<!-- * [Methods & Return Values](./methods_and_return_values) -->
+## Programming Fundamentals
+* [Methods & Return Values](./methods_and_return_values)
 <!-- * [Objects, Classes, & Instances](./objects_classes_instances) -->
 <!-- * [Arrays](./arrays) -->
 <!-- * [Scope](./scope) -->
 <!-- * [Flow Control](./flow_control) -->
 <!-- * [Beginner Enumerables](./beginner_enumerables) -->
-<!-- * [Hashes](./hashes) -->
-<!-- * [Boolean Logic](./boolean_logic) -->
-<!-- * [Nested Collections](./nested_collections) -->
+* [Hashes](./hashes)
+* [Boolean Logic](./boolean_logic)
+* [Nested Collections](./nested_collections)
 <!-- * [Reaching Through Objects](!needs lesson plan!) -->
 <!-- * [Intermediate Enumerables](./intermediate_enumerables) -->
 <!-- * [Nested Iteration Workshop](./nested_iteration_workshop) -->
@@ -29,18 +29,20 @@ title: Module 1 - Lessons
 <!-- * [How the Web Works](./intro_to_how_the_web_works) -->
 
 ## Testing
-<!-- * [Intro to Testing](./intro_to_testing) -->
+* [Intro to Testing](./intro_to_testing)
 <!-- * [Mocks & Stubs](./mocks_stubs) -->
 <!-- * [Test Driven Development](./test_driven_development) -->
 
 ## Debugging
 <!-- * [Debugging Exercises](!needs lesson plan!) -->
 <!-- * [Debugging Techniques](./debugging_techniques) -->
+* [Using ChatGPT Effectively](./chatgpt)
 
 ## Version Control
-<!-- * [Git Workflow](./git-collaboration) -->
-<!-- * [Git for Pairs](./git_for_pairs) -->
-<!-- * [Git Cheat Sheet](./git_cheatsheet) -->
+* [Git Workflow](./git_collaboration)
+* [Git for Pairs](./git_for_pairs)
+* [Git Cheat Sheet](./git_sample_flow)
+* [Git Merge Conflicts](./git_merge_conflicts)
 
 ## Professional Development
 * [Overview](./pd_overview)

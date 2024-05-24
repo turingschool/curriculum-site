@@ -7,9 +7,9 @@ tags: ruby, methods, return, argument
 
 ## Learning Goals
 
-* Define the terms Variable, Method, Argument, and Return Value
+* Define the terms Variable, Method, Argument, Parameter and Return Value
 * Explain why we use methods
-* Define methods in Ruby
+* Define methods
 * Explain where Ruby looks for methods
 * Understand how abstraction helps us program
 
@@ -18,7 +18,7 @@ tags: ruby, methods, return, argument
 * Variable
 * Method
 * Return
-* Argument (Parameter)
+* Argument/Parameter
 * Parse
 * Execute
 * Abstraction
@@ -57,6 +57,7 @@ pry(main)> greeting
 => "hello world"
 ```
 
+<br>
 
 ## Define and Identify
 
@@ -72,19 +73,12 @@ pry(main)> "Hello World".upcase
 You are calling the `upcase` method. It's job is to create a version of the String with all capital letters.
 
 <br>
-<br>
-<br>
-<br>
 
-
-One of the most important reasons we need methods is to **reuse code**. Instead of rewriting all those lines of code for creating an upcased string, we simply call the `upcase` method.
+One of the most important reasons we need methods is to **reuse code**. Instead of rewriting all those lines of code for creating an upcased string, we simply **invoke** the `upcase` method.
 
 The example illustrates another key point: **methods run on objects**. In the example above, the `upcase` method is running on `"Hello World"`, which is a **String object**. You can think of methods like they are messages to an object. The above code is saying, "Hey string, give me an upcased version of yourself."
 
-To recap the Key Points from this section:
-- We use methods so we can reuse code
-- Methods run on objects
-
+<br>
 
 ## Return Values
 
@@ -101,10 +95,36 @@ pry(main)> "Hello World".upcase
 => "HELLO WORLD"
 ```
 
-You are calling the `upcase` **Method** on the string`"Hello World"`. The **Return Value**, denoted by the `=>`, is `"HELLO WORLD"`.
+You are invoking the `upcase` **Method** on the string`"Hello World"`. The **Return Value**, denoted by the `=>`, is `"HELLO WORLD"`.
 
+<section class="dropdown">
+### Let's see it in JavaScript
 
-## Arguments
+Feel free to copy paste these lines of code into the dev console in your browser or into a repl on replit.com
+```js
+var greeting = "Hello World"
+
+greeting.toUpperCase()
+
+// expected return value >>>  "HELLO WORLD"
+```
+</section>
+
+Fun Fact: In Ruby, the terms **function** and **method** mean the same thing - because everything in Ruby is an object.  In JavaScript, *technically* **method** is specific term for a **function** that is defined *on an object*.  However the two terms are often used interchangeably.  
+
+<section class="call-to-action">
+
+### Key Points
+
+To recap the Key Points from this section:
+- We use methods so we can reuse code
+- Methods run on objects
+- A method can only return **one** value
+</section>
+
+<br>
+
+## Arguments and Parameters
 
 **Arguments** are the input(s) to a method. When you define a method, they are known as **Parameters**. (In other words, a parameter is a generic placeholder for a specific argument).
 
@@ -138,9 +158,20 @@ pry(main)> "Hello World".gsub "World", "Turing"
 => "Hello Turing"
 ```
 
-<br>
-<br>
-<br>
+<section class="dropdown">
+### Let's see it in JavaScript
+
+Note: Parenthesis are *not* optional when passing arguments to a method in JavaScript
+
+Feel free to copy paste these lines of code into the dev console in your browser or into a repl on replit.com
+```js
+var greeting = "Hello World"
+
+greeting.includes("Hello")
+// expected return value >>> true
+```
+</section>
+
 <br>
 
 ## Variables
@@ -181,12 +212,36 @@ pry(main)> greeting == "Hello World".downcase
 => false
 ```
 
+<section class="dropdown">
+### Let's see it in JavaScript
+
+Feel free to copy paste these lines of code into the dev console in your browser or into a repl on replit.com
+```js
+var greeting = "Hello World".toLowerCase()
+
+console.log(greeting) 
+//expected result >>> "hello world"
+
+console.log(greeting == "Hello World".toLowerCase())  
+//expected result >>> true
+
+greeting = "Hello Universe" //reassigned the value of our initial greeting variable
+
+console.log(greeting)
+// expected result >>> "Hello Universe"
+
+console.log(greeting == "Hello World".toLowerCase())  
+//expected result >>> false
+```
+</section>
+
+<br>
 
 ## <a name='define-method'></a>Defining our own Methods
 
-`.upcase`, `.include?`, and `.gsub` are all **Methods** built to work on string objects. But, what if we want to create our own methods? Recall that methods must be called on **objects** like a string (`"hello world"`) or integer (`13`); so, in order to create our own methods, we need to create our own objects.  We do this with **classes**.  We will go into more detail on **classes** in a later lesson; if you want a sneak peak, take a look at [this quick class exploration](./strings_as_class).
+`.upcase`, `.include?`, and `.gsub` are all **Methods** built to work on string objects. But, what if we want to create our own methods? Recall that in Ruby, methods must be called on **objects** like a string (`"hello world"`) or integer (`13`); so, in order to create our own methods, we need to create our own objects.  We do this with **classes**.  We will go into more detail on **classes** in a later lesson. 
 
-Let's make a class that calculators values. In a new file called `calculator.rb`, we'll add the following lines of code and run this file from the command line using `ruby calculator.rb`.
+Let's make a class that calculates values. In a new file called `calculator.rb`, we'll add the following lines of code and run this file from the command line using `ruby calculator.rb`.
 
 ```ruby
 class Calculator
@@ -199,11 +254,8 @@ end
 **Breakout Chat**: What will happen when this code runs? What will the return value be?
 
 <br>
-<br>
-<br>
-<br>
 
-We didn't we see `Welcome` printed to the screen because the `class` and `def` keywords *define* the class and method, but our code does not *call* the method. Remember, methods run on objects, so the first thing we need to do is create an object using our class. Then we can call the method on it:
+We didn't we see `Welcome` printed to the screen because the `class` and `def` keywords *define* the class and method, but our code does not *call* the method. Remember, methods run on objects, so the first thing we need to do is create an object using our class. Then we can invoke the method on it:
 
 
 ```ruby
@@ -216,6 +268,8 @@ end
 calculator = Calculator.new
 calculator.print_welcome
 ```
+
+<br>
 
 ## Defining methods that take Arguments
 
@@ -233,7 +287,7 @@ class Calculator
 end
 ```
 
-We need to give this method numbers to add as an input. Therefore, we define an **Argument** called `num1` and another called `num2`. Let's also call this method at the bottom of the file:
+We need to give this method numbers to add as an input. Therefore, we define a **Parameter** called `num1` and another called `num2`. Let's also call this method at the bottom of the file:
 
 ```ruby
 class Calculator
@@ -252,9 +306,6 @@ calculator.add
 
 **Breakout Chat**: What will happen when we run this code?
 
-<br>
-<br>
-<br>
 <br>
 
 The error we get is `ArgumentError: wrong number of arguments (given 0, expected 1)`. We defined our method to take 1 argument, but when we called it we didn't provide an argument. This is what it means by "given 0, expected 1".
@@ -294,8 +345,16 @@ calculator = Calculator.new
 calculator.add(1,3)
 ```
 
-You can think of an argument as a variable that is created right at the start of the method. You can use that variable anywhere INSIDE of the method.
+You can think of a parameter as a variable that is created right at the start of the method. You can use that variable anywhere INSIDE of the method.  For each parameter you create in the method definition, you must pass a corresponding argument in the method invocation.
 
+<section class="dropdown">
+### What about JavaScript?
+
+Javascript as a language isn't strictly object oriented like Ruby.   This means that in JavaScript, you *can* create a class and define methods in it. Then you can invoke those methods on an object instance of that class, just like in Ruby.  *But* you also have the option to just define a function on its own without it being in a class and invoke it without having to do so on an object.  You may see some JS classes later in the program but its not likely that you'll have to write one. 
+
+</section>
+
+<br>
 
 ## Defining Return Values
 
@@ -378,11 +437,36 @@ calculator = Calculator.new
 puts calculator.add(1,3)
 ```
 
+<section class="dropdown">
+### What about JavaScript?
+
+In Javascript you can use the return keyword to return the desired value from your function.  Just like in Ruby, returning and printing are not the same.  In order to print the value returned from our JS function below, we need to log it to the console - either in a variable, or directly.
+
+```js
+function add(num1, num2) {
+  return num1 + num2
+}
+
+add(1,3)  
+
+console.log(add(1,3)) //logging the return value by logging the invocation of the function
+//expected result >>> 4
+
+let sum = add(1,3)
+console.log(sum)  //logging the return value by storing it in a variable then logging the variable
+//expected result >>> 4
+```
+</section>
+
+<br>
+
 ## Practice
 
 Following the directions in [this gist](https://gist.github.com/ameseee/c311860e9f6bc023036351f298907ccb), work with your partner through the activities.
 
 You focus should be exploring to build a deep understanding of these concepts, NOT to race through the activity for the sake of finishing it. Whether you know this stuff or not, there should be plenty for you and your partner to talk about/dig into during this time.
+
+<br>
 
 ## Method Lookup
 
@@ -412,6 +496,8 @@ nums = [1, 2, 3, 4]
 nums.slice(1, 1)
 ```
 
+<br>
+
 ## Calling Methods from Other Methods
 
 We can also call methods from within other methods that are in the same class. Let's add a function that takes a number and then prints a more robust message.
@@ -437,6 +523,8 @@ calculator = Calculator.new
 calculator.print_sum(1,2)
 ```
 
+<br>
+
 ## Layers of Abstraction
 
 
@@ -456,10 +544,11 @@ A note on order: The way you define the order of your _methods_ does not matter.
 
 Add an abstract method to your calculator (a method that calls at least one other method).
 
+<br>
 
 ## Check for Understanding
 
-1. What is a method? An argument? A return value?
+1. What is a method? An argument? A parameter? A return value?
 2. What keywords do we use to create methods?
 3. How does Ruby know what to return from a method?
 4. How do you call one method from within another method?

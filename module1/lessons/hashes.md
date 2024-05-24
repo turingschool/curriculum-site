@@ -6,6 +6,11 @@ layout: page
 ### Learning Goals
 - Identify the differences between Hashes and Arrays. 
 - Practice building, accessing, and updating Hashes.
+<section class="dropdown">
+
+### Javascript <h3>
+In JavaScript, the equivalent data structure is called an "object." While the syntax and some behaviors may differ, both are used to store and manage data in a similar way.
+</section>
 
 ### Vocabulary
 - Hash
@@ -18,6 +23,14 @@ Say we have an array named `grocery_list` that looks like this:
 ```ruby
 grocery_list = ["milk", "eggs", "eggs", "eggs", "eggs", "eggs", "eggs", "avocado", "avocado", "tortilla", "tortilla", "tortilla", "tortilla", "tortilla", "tortilla", "tortilla", "tortilla", "tortilla"]
 ```
+<section class="dropdown">
+
+### Javascript <h3>
+```js
+var groceryList = ["milk", "eggs", "eggs", "eggs", "eggs", "eggs", "eggs", "avocado", "avocado", "tortilla", "tortilla", "tortilla", "tortilla", "tortilla", "tortilla", "tortilla", "tortilla", "tortilla"]
+```
+
+</section>
 
 Answer these questions with your group:
 1. What is problematic about this data being in this array?
@@ -26,7 +39,7 @@ Answer these questions with your group:
 
 ## Part 1: Student Exploration
 
-With our groups, we will be working through [this repository](https://github.com/turingschool-examples/mod-1-be-exercises/blob/main/ruby_exercises/data-types/collections/spec/hashes_spec.rb)
+With our groups, we will be working through [this repository](https://github.com/turingschool-examples/se-mod1-exercises/blob/main/ruby_exercises/data-types/collections/spec/hashes_spec.rb)
 
 If you have already completed these exercises, delete your work and let's do it again! Repetition is key to learning. 
 
@@ -35,16 +48,18 @@ Take note of:
   - What was challenging? 
   - What patterns did you observe?
   - What rules did you discover about how hashes work?
-  - What syntax did you learn for hashes?
+  - What syntax did you learn for hashes ?
   - What questions came up while you were working and how did you get those answered?
   - What questions do you still have?
   - Anything else that seems important.
 
 Resources to use while working through the exercises:
   - Your breakout room mates!
-  - Google (ex: `Ruby how to make a new hash with a default value`)
-  - [Ruby Docs](https://ruby-doc.org/core-2.7.0/Hash.html)
-  - [Intro To Hashes](introducing_hashes.md)
+  - Google (ex: Ruby how to make a new hash with a default value, JavaScript how to make a new object with a default value)
+  - [Ruby Docs](https://ruby-doc.org/core-3.0.0/Hash.html)
+  - [Javascript-MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)
+
+ 
  
 
 ## Part 2: Discussion
@@ -57,7 +72,7 @@ Take a minute to look through the questions you still have about Hashes. Add the
 
 ### When does it make sense to use a Hash? (As opposed to an array?)
   
-Hashes (also called Dictionaries in some languages) are great at keeping track of quantities. 
+Hashes (or Objects, also called Dictionaries in some languages) are great at keeping track of quantities. 
 They are great when your data can be grouped into key/value pairs.  
 
 ### How should we name our Hashes?
@@ -77,14 +92,39 @@ Ex:
       dogs: 9
  }
 ```  
+<section class="dropdown">
+
+### Javascript <h3>
+```js
+var toppings = {
+    pepperoni: 5,
+    sausage: 3,
+    pineapple: 500
+};
+
+var pets = {
+    cats: 6,
+    dogs: 9
+};
+```
+
+</section>
 
 
 ### What data type can a key be?
   
 Keys of a hash can be any data type. 
-Often, we see them as symbols.
-A symbol is an immutable data-type in Ruby. They will start with a `:` (colon).
-Keys can also be seen commonly as strings, however they can be integers as well.
+Often, we see them as symbols (in Ruby) or strings (in Javascript). However, they can be integers as well.
+```ruby
+my_hash = { symbol_key: "value", "string_key" => "value", 1 => "value" }
+```
+<section class="dropdown">
+
+### Javascript <h3>
+```js
+var myObject = { "stringKey": "value", 1: "value" };
+```
+</section>
 
 ------------------
 
@@ -100,15 +140,35 @@ For the following questions, let's refer to this code snippet:
   }
 ```
 
+<section class="dropdown">
+
+### Javascript <h3>
+```js
+var groceryItems = { 
+  eggs: 4,
+  bread: 2,
+  milk: 3,
+  cookies: 4  
+};
+```
+
+</section>
+
 
 ### How would we find out how many cookies we have?
   
 ```ruby
   grocery_items[:cookies]
 ```
-  
-We call the name of the hash (the variable we stored the hash in), and then use bracket notation to query the key we want.
-The _return value_ of the above expression will be the value of the key, so in this case: `4`.
+<section class="dropdown">
+
+### Javascript <h3>
+```js
+groceryItems["cookies"];
+```
+
+</section>
+We call the name of the hash and then use bracket notation to query the key we want. The return value of the above expression will be the value of the key, so in this case: `4`.
 
 
 
@@ -117,7 +177,14 @@ The _return value_ of the above expression will be the value of the key, so in t
 ```ruby
     grocery_items[:apples] = 9
 ```
-  
+<section class="dropdown">
+
+### Javascript <h3>
+```js
+groceryItems["apples"] = 9;
+```
+
+</section>
 We call the name of the hash, then use bracket notation to denote the key, then use the assignment operator `=` to set the value of our key to 9. 
 
 
@@ -140,8 +207,8 @@ Work with your group to write code to complete the following:
 ## Check Your Understanding
 How would you answer these questions if you were asked about this in an interview? 
 
-1. What is a hash?
-1. What situations would you use a hash for? 
+1. What is a hash ?
+1. What situations would you use a hash  for?
 1. What are the similarities and differences between Arrays and Hashes? 
 1. What are a few methods you could call on a hash and what do they do?
 
