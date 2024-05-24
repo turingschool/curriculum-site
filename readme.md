@@ -11,6 +11,8 @@ This site is built with Jekyll. Find the docs [here](https://jekyllrb.com/docs/u
 
 The live site can be found at [https://curriculum.turing.edu/](https://curriculum.turing.edu/)
 
+This curriculum is used in conjunction with a repo of practice exercises and examples found at [https://github.com/turingschool-examples/se-mod1-exercises](https://github.com/turingschool-examples/se-mod1-exercises)
+
 ### Contributing
 
 * Clone the repo `git clone git@github.com:turingschool/curriculum-site.git`
