@@ -1,21 +1,22 @@
 ---
-layout: lesson
+layout: page
 title: Arrays
 ---
 
 ## Learning Goals
 
-- Use Ruby syntax to declare variables that store Arrays in Ruby
+- Understand how to declare variables that store Arrays
+- Understand how to access elements within an Array
 - Use basic Array methods to manipulate data in Arrays
 
 ## Vocabulary
 
-- <span class="vocab">Array</span>
-- <span class="vocab">bracket notation</span>
-- <span class="vocab">element</span>
-- <span class="vocab">index position</span>
-- <span class="vocab">method</span>
-- <span class="vocab">square brackets `[]`</span>
+- <span class="vocab">**Array:** a Data Type that allows us to store multiple pieces of data in _one_ variable</span>
+- <span class="vocab">**bracket notation:** the syntax for accessing elements in an Array</span>
+- <span class="vocab">**element:** a piece of data in an Array</span>
+- <span class="vocab">**index position:** the location of an element in an Array</span>
+- <span class="vocab">**method:** a piece of functionality that is built into the Ruby language</span>
+- <span class="vocab">**square brackets `[]`:** the syntax for accessing elements in an Array</span>
 
 ## Arrays
 
@@ -31,7 +32,7 @@ student4 = "Jhun"
 
 As the list of students inevitably changes and grows, this is difficult to maintain programmatically. If we wanted to send an email to every student or perform any other task for every student, we would have to write code for each, individual student, which defeats the purpose of having a computer program automate tasks.
 
-An <span class="vocab">Array</span> is a Ruby Data Type that allows us to store multiple pieces of data in _one_ variable. They can be compared to lists. The Array is an incredibly powerful and necessary Data Type for building web applications.
+An <span class="vocab">Array</span> is a Data Type that allows us to store multiple pieces of data in _one_ variable. They can be compared to lists. The Array is an incredibly powerful and necessary Data Type for building web applications.
 
 Thinking back to the Populi platform that helped you enroll at Turing, many Arrays are used to power its functionality:
 
@@ -53,26 +54,37 @@ students = ["Cindy", "Josiah", "Rigo"]
 
 >To describe what the previous line of code does, one might say, "The `students` variable stores an Array of Strings representing student names. This array has 3 elements."
 
-<br>
-<div class="s-card">
-  <h3>Talking and Writing about Code</h3>
-  <p>In your notebook, write down the code that follows, then write a sentence that describes what that line of code does:</p>
-  <p><code>ticket_prices = [87, 67, 99, 90, 87]</code></p>
-</div>
+<section class="dropdown">
+### Looking at Arrays in JavaScript
 
-<br>
-<div class="s-card s-border-yellow-500">
-  <h3>Best Practices for Arrays</h3>
-  <ul>
-    <li>The name of a variable that stores an Array should usually be plural to indicate that it has the potential to hold <em>many</em> elements of that type.</li>
-    <li>While Ruby technically allows an Array to hold multiple Data Types, it is not best practice and in any real-world application, will usually be unhelpful anyways.</li>
-  </ul>
-</div>
-<br>
+Here's an example of that same `students` array in JavaScript:
+```js
+var students = ["Cindy", "Josiah", "Rigo"]
+```
 
-### Accessing Elements
+Note the similarities between JavaScript and Ruby. Both languages have Arrays and are declared very similarly. The main difference is that JavaScript uses `var` to declare a variable.
+</section>
 
-To access one element from an array we use bracket notation and a number that corresponds with that element. That number is referred to as an <span class="vocab">index position</span>. As weird as it may seem, <a href="https://skillcrush.com/blog/why-programmers-start-counting-at-zero/" target="_blank">counting starts with 0 in most programming languages</a>. 
+
+<section class="call-to-action">
+### Talking and Writing about Code
+
+In your notebook, write down the code that follows, then write a sentence that describes what that line of code does:
+
+```ruby
+  ticket_prices = [87, 67, 99, 90, 87]
+```
+</section>
+
+### Best Practices for Arrays
+Here are some best practices for Arrays in software development:
+
+1. The name of a variable that stores an Array should usually be plural to indicate that it has the potential to hold <em>many</em> elements of that type.
+2. While Ruby technically allows an Array to hold multiple Data Types, it is not best practice and in any real-world application, will usually be unhelpful anyways.
+
+### Accessing Elements within an Array
+
+To access one element from an array we use bracket notation and a number that corresponds with that element. That number is referred to as an <span class="vocab">index position</span>. As weird as it may seem, [counting starts with 0 in most programming languages](https://skillcrush.com/blog/why-programmers-start-counting-at-zero/){:target="_blank"}. 
 
 Through reading the code snippets below, one can infer that the first element is in index position 0, and counting increments by 1.
 
@@ -98,72 +110,91 @@ puts students[2]
 # --> "Rigo"
 ```
 
-<div class="s-card">
-  <h3>Storing Arrays, Accessing Elements: Part 1</h3>
-  <p>Given the following array, answer each question. Notice the way technical vocabulary is used to describe these things, and use this as a guide to practice articulating your responses, and how you talk about Arrays in the future.</p>
-  <p><code>ticket_prices = [87, 67, 99, 90, 87]</code></p>
-  <ul>
-    <li>How many elements are in this Array?</li>
-    <li>What is the index position of the Integer <code>99</code>?</li>
-    <li>What is the value of the element in index position 3?</li>
-    <li>What is the value of the element in index position 0?</li>
-    <li>What is the index position of the last element in this Array?</li>
-  </ul>
-</div>
-<br>
+<section class="dropdown">
+### Indexing in JavaScript
 
-<div class="s-card">
-  <h3>Storing Arrays, Accessing Elements: Part 2</h3> 
-  <p>Complete the following work in an <code>irb</code> session:</p>
-  <ul>
-    <li>Declare a variable named <code>friends</code> that stores an Array of 5 Strings, each a friend's name.</li>
-    <li>Access the third element.</li>
-    <li>Access the last element.</li>
-    <li>Access the first element.</li>
-  </ul>
-</div>
-<br>
+In JavaScript, the syntax for accessing elements is the same because it follows the same rules of indexing as Ruby, starting at 0.  You would access the same students in JavaScript like this:
 
-## Practice
+```js
+var students = ["Cindy", "Josiah", "Rigo"]
 
+console.log(students[0])
+// --> "Cindy"
+
+console.log(students[2])
+// --> "Rigo"
+```
+</section>
+
+
+### Storing Arrays, Accessing Elements
+
+<section class="call-to-action">
+### Part 1: 
+
+Given the following array, answer each question. Notice the way technical vocabulary is used to describe these things, and use this as a guide to practice articulating your responses, and how you talk about Arrays in the future.
+
+```ruby
+ticket_prices = [87, 67, 99, 90, 87]
+```
+* How many elements are in this Array?
+* What is the index position of the Integer <code>99</code>?
+* What is the value of the element in index position 3?
+* What is the value of the element in index position 0?
+* What is the index position of the last element in this Array?
+
+### Part 2
+
+After you have completed the first part, complete the following work in an `irb` session:
+
+* Declare a variable named `friends` that stores an Array of 5 Strings, each a friend's name.
+* Access the third element.
+* Access the last element.
+* Access the first element.
+</section>
+
+## Additional Practice
+
+<section class="call-to-action">
 Create a new project (aka directory). Make 1 file - `arrays.rb`. In that file:
-- Declare a variable that stores an Array of at least 4 Strings.
-- Declare a variable that stores an Array of at least 4 Integers.
-- Declare a variable that stores an Array of at least 4 Floats.
-- Declare a variable that stores an Array of at least 4 Booleans.
-- [_Intentionally open-ended_] Demonstrate your understanding of index positions in this file. You can write an explanation, provide some examples with the Arrays you've created, or anything else.
 
-<div class="s-card">
-  <h3>Running A File in the Terminal</h3> 
-  <p>In order to run a file in the terminal, follow these steps:</p>
-  <ul>
-    <li>Open the terminal using your shortcut command.</li>
-    <li>Make sure you are in the directory where you made your file, or <code>cd</code> into it.</li>
-    <li>Run the command <code>ruby file_name.rb</code>.</li>
-    <li>For example, to run the code in our <code>arrays.rb</code> file, we would run <code>ruby arrays.rb</code> in the terminal.</li>
-  </ul>
-</div>
-<br>
+* Declare a variable that stores an Array of at least 4 Strings.
+* Declare a variable that stores an Array of at least 4 Integers.
+* Declare a variable that stores an Array of at least 4 Floats.
+* Declare a variable that stores an Array of at least 4 Booleans.
+* [_Intentionally open-ended_] Demonstrate your understanding of index positions in this file. You can write an explanation, provide some examples with the Arrays you've created, or anything else.
+</section>
 
-## Check For Understanding
+<section class="note">
+### Note: How to run a File in the Terminal
 
-Please create a section in your Mod 0 Gist for **Arrays** and record your answers to these questions. (Including the question is very helpful!)
-- How confident do you feel with the content on Arrays so far?
-- Is there any additional learning you need or want to do before moving to the next lesson?
-- What questions do you have about Arrays?
+In order to run a file in the terminal, follow these steps:
+* Open the terminal using your shortcut command.
+* Make sure you are in the directory where you made your file, or `cd` into it.
+* Run the command `ruby file_name.rb`.
+* For example, to run the code in our `arrays.rb` file, we would run `ruby arrays.rb` in the terminal.
+</section>
+
+<section class="checks-for-understanding">
+### Check For Understanding
+
+In your notebook, answer the following questions:
+
+* How confident do you feel with the content on Arrays so far?
+* Is there any additional learning you need or want to do before moving to the next lesson?
+* What questions do you have about Arrays?
+</section>
 
 ## Extension
-The work below is meant as optional work to be completed and explored outside of the live Mod 0 sessions. This work is encouraged, but not required.
+It is highly recommended that you complete the work below later this evening.  Although there are no deliverables, please reach out if you do have any questions about Array methods.
 
 ### Array Methods
 
-At one point or another, a developer will need to modify data in an Array. Today, we will learn a number of ways to do that. They will probably not satisfy your every question of "How does X app do Y?" but this will lay an important foundation for the concept of Array methods and some strategies to get that information you are craving!
-
-An Array <span class="vocab">method</span> is a piece of functionality that is built into the Ruby language, intended to be used on Arrays specifically. Each method has a specific job to perform; we can use it if we want, but we can't modify a built-in method. There are many Array methods - like anything else in programming, you will memorize a handful that you regularly use, then look to documentation for those you don't use as regularly.
+Developers often need to modify data in an Array. Today, we'll explore several Array <span class="vocab">methods</span> in Ruby. These methods are built-in functionalities designed for Arrays, each performing a specific task. While you will memorize some commonly used methods, others can be referenced in documentation as needed.
 
 ### Array Methods Syntax
 
-To use an Array method in Ruby, we first must tell Ruby which Array we want to perform the method on. After that, a dot or period (called dot syntax), followed by the name of the method.
+To use an Array method in Ruby, we first must tell Ruby which Array we want to perform the method on. After that, a dot or period (called *dot syntax*), followed by the name of the method.
 
 ```ruby
 students = ["Cindy", "Josiah", "Rigo"]
@@ -174,8 +205,19 @@ p students
 
 >To describe what the previous line of code does, one might say, "This line of code calls the `pop` method on the `students` Array."
 
+<section class="dropdown">
+### Note The Similarities in JavaScript
 
-<br>
+In JavaScript, there are many similar methods for working with Arrays. JavaScript also has a `pop` method that performs a similar task. Here's how the above code would look in JavaScript:
+
+```js
+var students = ["Cindy", "Josiah", "Rigo"]
+
+students.pop()
+
+console.log(students)
+```
+</section>
 
 ### Learning From Reading Code You Don't Know
 
@@ -183,21 +225,26 @@ As a developer, an important skillset is researching and reading documentation (
 
 Since researching and reading documentation can sometimes be time-consuming, another skill is to be able to make the decision about when it's time to go to Google. In this activity, you will be provided with some structure to teach yourself a few technical concepts. The main goal is **not** to learn the technical concepts, it's to practice and explore _strategies to learn_ in an environment such as this, and how to make the decision about what to do when you need to learn something.
 
-<div class="s-card">
-  <h3>Array Methods & Learning Strategies:</h3> 
-  <p>You've seen the syntax for the <code>pop</code> method but its utility was not explained. Before going down a potential rabbit hole in Google, open up <code>irb</code>. Declare an Array with 3 elements. Use the <code>pop</code> method with the syntax you learned earlier. Call the Array and observe the change that has been made since you initially declared it. Go through this process again, with the same Array. What can you infer the <code>pop</code> method does? Check Google (remember, <code>ruby-docs</code> has the most reliable documentation) to confirm your inference. Write this down!</p>
-  <p>Your next task is to learn what the <code>push</code>, <code>shift</code> and <code>unshift</code> Array methods do. Consider - how easy or hard did the work you did for <code>pop</code> feel? Do you want to follow the same steps to learn about the other methods, or go straight to ruby documentation to learn about the other 3? Act on whatever you decide, and be sure to write down your learnings about these methods.</p>
-</div>
-<br>
+<section class="call-to-action">
+### Array Methods & Learning Strategies:
 
-<div class="s-card">
-  <h3>Talking and Writing about Code</h3> 
-  <p>In your notebook, write down the code that follows, then write a sentence that describes what that line of code does:</p>
-  <p><code>ticket_prices = [87, 67, 99, 90, 87]</code></p>
-  <p><code>ticket_prices.length</code></p>
-</div>
+You've seen the syntax for the `pop` method but its utility was not explained. Follow these steps to understand it:
 
+1. Open `irb`.
+2. Declare an Array with 3 elements.
+3. Use the `pop` method on the Array.
+4. Observe the change.
+5. Repeat step 3 and observe again.
+6. Infer what `pop` does and confirm with [ruby-docs](https://ruby-doc.org/core-3.1.2/Array.html#method-i-pop){:target="_blank"}.
 
+Next, learn about the `push`, `shift`, and `unshift` methods. Decide whether to follow the same steps as above or go directly to ruby documentation. Be sure to write down your findings!
+</section>
 
+<section class="checks-for-understanding">
+### Talking and Writing about Code 
 
-<br><br><br>
+In your notebook, write down the code that follows.  Then write a sentence that describes what each line of code does:
+
+* `ticket_prices = [87, 67, 99, 90, 87]`
+* `ticket_prices.length`
+</section>
