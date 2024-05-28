@@ -11,7 +11,8 @@ title: Module 1 - Lessons
 * [Arrays](./arrays)
 <!-- * [Scope](./scope) -->
 <!-- * [Flow Control](./flow_control) -->
-<!-- * [Beginner Enumerables](./beginner_enumerables) -->
+* [Iteration](./iteration)
+* [Beginner Enumerables](./beginner_enumerables)
 * [Hashes](./hashes)
 * [Boolean Logic](./boolean_logic)
 * [Nested Collections](./nested_collections)
