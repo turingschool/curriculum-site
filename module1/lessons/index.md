@@ -8,7 +8,7 @@ title: Module 1 - Lessons
 ## Programming Fundamentals
 * [Methods & Return Values](./methods_and_return_values)
 <!-- * [Objects, Classes, & Instances](./objects_classes_instances) -->
-<!-- * [Arrays](./arrays) -->
+* [Arrays](./arrays)
 <!-- * [Scope](./scope) -->
 <!-- * [Flow Control](./flow_control) -->
 <!-- * [Beginner Enumerables](./beginner_enumerables) -->
