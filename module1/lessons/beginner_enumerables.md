@@ -1,7 +1,6 @@
 ---
 title: Beginner Enumerables
-length: 120
-tags: enumerables, map, find_all, find, each
+layout: page
 ---
 
 ## Learning Goals
@@ -11,14 +10,18 @@ tags: enumerables, map, find_all, find, each
 * Learn how to explore new enumerables using Ruby docs.
 * Discuss *block scope*
 
+## Prerequisite 
+
+Please be sure you have worked through this [Iteration](./iteration) lesson first.
 
 ## Vocabulary  
 
-* enumerable  
-* iterate  
+* Enumerable  
+* Iterate  
 * map, find, find_all
-* return value
-* block scope
+* Return value
+* Block scope
+
 
 
 ## Warm Up
@@ -32,7 +35,7 @@ tags: enumerables, map, find_all, find, each
 
 ## Intro
 
-Earlier this week, we learned about the method \#each. We used \#each to iterate over a collection to accomplish a variety of tasks: transforming collections, pulling a subset of elements, and creating new things based on some or all of the elements in the collection.  Because iteration is something we do on a nearly daily basis as programmers, Ruby has built some out-of-the-box tools that help us streamline the more common iteration patterns.  These tools are categorized as **enumerables**.  Enumerables are methods that take the base function of \#each and build on it to simplify certain patterns of iteration.
+In the [Iteration](./iteration) lesson, you learned about the method \#each. We used \#each to iterate over a collection to accomplish a variety of tasks: transforming collections, pulling a subset of elements, and creating new things based on some or all of the elements in the collection.  Because iteration is something we do on a nearly daily basis as programmers, Ruby has built some out-of-the-box tools that help us streamline the more common iteration patterns.  These tools are categorized as **enumerables**.  Enumerables are methods that take the base function of \#each and build on it to simplify certain patterns of iteration.
 
 Before we get into the enumerables themselves, let's take a moment to form a strategy for learning all of these new methods.  In a moment, you will receive a half sheet of guided notes, but for now, let's use our notebooks to record the three key parts that we will want to know for any enumerable, including the method \#each: 
 
@@ -110,6 +113,31 @@ p double(numbers)
 ```
 
 Now, our last line of code is `doubles` instead of the \#each block, and the method will return what we expect.
+
+<section class="dropdown">
+### Let's see it in JavaScript
+
+```javascript
+
+function double(numbers) {
+  var doubles = [];
+
+  numbers.forEach(function(number) {
+    doubles.push(number * 2);
+  });
+
+  return doubles;
+}
+
+var numbers = [1, 2, 3, 4, 5]
+console.log(double(numbers));
+
+//output: [2, 4, 6, 8, 10]
+
+```
+</section>
+
+
 
 We can also see the return value of `#each` if we save it to a variable:
 
@@ -189,6 +217,25 @@ numbers = [1, 2, 3, 4, 5]
 p double(numbers)
 ```
 
+<section class="dropdown">
+### Let's see it in JavaScript
+
+```javascript
+
+function double(numbers) {
+  return numbers.map(function(number) {
+    return number * 2;
+  });
+}
+
+var numbers = [1, 2, 3, 4, 5]
+console.log(double(numbers));
+
+//output: [2, 4, 6, 8, 10]
+
+```
+</section>
+
 #### Partner Practice
 
 Let's do some pair programming for these activities - in your break out rooms, one person will be typing code that you both agree on. 
@@ -255,6 +302,26 @@ end
 
 Oh just look at that, so nice. Remember, it will return the **first** item for which the block returns a truthy value.
 
+<section class="dropdown">
+### Let's see it in JavaScript
+
+```javascript
+
+function findFirstEven() {
+  var numbers = [1, 2, 3, 4, 5];
+
+  return numbers.find(function(number) {
+    return number % 2 === 0;
+  });
+}
+
+console.log(findFirstEven());
+
+//output: 2
+
+```
+</section>
+
 #### Partner Practice  
 
 Using `#each`, write the code to find the first sister over four letters in length. Wait to move on until we discuss this as a group.
@@ -309,6 +376,27 @@ def all_the_odds
 end
 ```
 
+<section class="dropdown">
+### Let's see it in JavaScript
+
+```javascript
+
+function allTheOdds() {
+  var numbers = [1, 2, 3, 4, 5];
+
+  return numbers.filter(function(number) {
+    return number % 2 !== 0;
+  });
+}
+
+console.log(allTheOdds());
+
+//output: [1, 3, 5]
+
+```
+</section>
+
+
 #### Partner Practice
 
 Using `#each`, write the code that will return the numbers that are divisible by 3. Wait to move on until we discuss this as a group.
@@ -331,7 +419,7 @@ Share your code with a small group. Talk them through it and be specific. What i
 
 ### Additional Enumerables
 
-Now that we have walked through 3 of the most common Enumerables as a class, its time for you and your partner to do some independent research!  Working with your partner, research the following Enumerables and take notes on their syntax, return value, and best use cases. Be ready to share what you find! The [Enumerable Ruby docs](https://ruby-doc.org/core-2.4.1/Enumerable.html) will be a great place to start!
+Now that we have walked through 3 of the most common Enumerables as a class, its time for you and your partner to do some independent research!  Working with your partner, research the following Enumerables and take notes on their syntax, return value, and best use cases. Be ready to share what you find! The [Enumerable Ruby docs](https://ruby-doc.org/core-3.0.0/Enumerable.html) will be a great place to start!
 
 * \#max
 * \#min
@@ -353,4 +441,4 @@ Now that we have walked through 3 of the most common Enumerables as a class, its
 
 ## Additional Exercises
 
-The [Ruby-Exercises](https://github.com/turingschool/enums-exercises) are a great resource to get familiarized with enumerables. Enum exercises are in the `enumerables` tab.  Read the README to get a handle on how the exercises work, then complete the `map`, `select`, and `find` exercises.  
+The [Ruby-Exercises](https://github.com/turingschool-examples/se-mod1-exercises/tree/main/ruby_exercises/enumerables) are a great resource to get familiarized with enumerables. Enum exercises are in the `enumerables` tab.  Read the README to get a handle on how the exercises work, then complete the `map`, `select`, and `find` exercises.  
