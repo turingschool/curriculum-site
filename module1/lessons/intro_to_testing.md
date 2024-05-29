@@ -32,7 +32,7 @@ tags: ruby, testing
 - Spec files should reflect the class they're testing with `_spec` appended to the file name, e.g. `spec/name_of_class_spec.rb`
 - In your test, you'll now `require "./lib/name_of_class.rb"`
 - Run your spec files from the root of the project directory, e.g. `rspec spec`
-- If you want to run a specfic spec file you can append the location of that file to the `rspec spec` command. So `rspec spec spec/name_of_file_spec.rb`
+- If you want to run a specific spec file you can append the location of that file to the `rspec spec` command. So `rspec spec spec/name_of_file_spec.rb`
 
 ```
 .
@@ -58,13 +58,15 @@ gem install rspec
 - At the top of every spec file: `describe NameOfClass`
 - describe '#name_of_method'
   - It is good practice to have another describe block for the name of method. That way we can group all assertions dealing with this method in this describe block.
-- We need to have an assertion at the end of every test
+- We need to have an **assertion** at the end of every test
   - A lot of times we are going to compare if two values are equal to each other
   - We do that by writing `expect(actual).to eq(expected)` where actual is the result of the method call or object querying, and expected is the value we expect it to be.
 - [RSpec Expectations Documentation](https://www.rubydoc.info/github/rspec/rspec-expectations/RSpec/Expectations)
 
 
 ## Code-Along
+
+Files for our code along can be found in the [se-mod1-exercises repo](https://github.com/turingschool-examples/se-mod1-exercises)
 
 ### Scenario Specifications
 
@@ -165,7 +167,7 @@ end
 
 ## S.E.A.T
 
-Each test that we create needs 4 components to be a properly built test.
+Each test that we create needs 4 components to be a properly built test.  
 
 * Setup - The setup of a test is all of the lines of code that need to be executed in order to verify some behavior. Because each test is run individually, we often see the same setup being created multiple times.
 * Execution - The execution is the actual running of the method we are testing.  This sometimes happens on the same line as the assertion, and sometimes happens prior to the assertion.
@@ -297,3 +299,58 @@ end
   * What goes in the initial describe block?
   * What is the syntax for a RSpec spec?
   * Name 3 `.to` methods you learned about today & describe their syntax.
+
+<br>
+
+<section class="call-to-action">
+### Note
+
+We are using Rspec to test our Ruby code.  However, the testing approach outlined above applies to programming in general.  There are many libraries and frameworks to choose from in order to test code written in various langages.  The syntax may vary but the overall approach is very similar regardless.  
+
+For example, here's what the testing might look like in Javascript, using Mocha testing framework and Chai assertion library.   
+
+```js
+// student-test.js
+var assert = require('chai').assert;
+var expect = require('chai').expect;
+var Student = require('./Student.js');
+
+describe('Student', function () {
+  describe('initialize', function () {
+    it('should be an instance of Student', function () {
+      // setup for test (if necessary)
+
+      // execute function
+      let newStudent = new Student('Penelope')
+
+      // assert what the result SHOULD be
+      expect(newStudent).to.be.an.instanceOf(Student)
+    })
+
+    it('should have a name', function () {
+      let newStudent = new Student('Penelope')
+
+      expect(newStudent.name).to.equal('Penelope')
+    })
+
+    it('should have cookies by default', function () {
+      let newStudent = new Student('Penelope')
+
+      expect(newStudent.cookies).to.deep.equal([])
+    })
+  })
+
+  describe('addCookie', function () {
+    it('should add cookie to cookies array', function () {
+      let newStudent = new Student('Penelope')
+
+      newStudent.addCookie('Chocolate Chip')
+      newStudent.addCookie('Snickerdoodle')
+
+      expect(newStudent.cookies).to.deep.equal(['Chocolate Chip', 'Snickerdoodle'])
+    })
+  })
+})
+```
+</section>
+
