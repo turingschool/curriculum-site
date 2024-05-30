@@ -18,7 +18,7 @@ title: Module 1 - Lessons
 * [Nested Collections](./nested_collections)
 * [Reaching Through Objects](./reaching_through_objects)
 * [Intermediate Enumerables](./intermediate_enumerables)
-<!-- * [Nested Iteration Workshop](./nested_iteration_workshop) -->
+* [Nested Iteration Workshop](./nested_iteration_workshop)
 <!-- * [Class Methods](./class_methods) -->
 <!-- * [Modules](./modules) -->
 <!-- * [Inheritance](./inheritance) -->
