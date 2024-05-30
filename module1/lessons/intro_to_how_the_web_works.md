@@ -12,14 +12,16 @@ tags: http, servers
 
 ### Vocabulary
 
-* Client
-* Server
-* URL
-* URI
-* User
-* Request
-* Response
-* HTTP
+* `Client`: A client is typically a web browser or any application that requests information from a server.
+* `Server`: A server is a computer or system that provides resources, data, services, or programs to clients over a network.
+* `URL (Uniform Resource Locator)`: A URL is the address you type into your web browser to visit a website. It tells the browser where to find the resource you want.
+Rep
+* `URI (Uniform Resource Identifier)`: A URI is a string of characters that uniquely identifies a particular resource. A URL is a type of URI.
+* `User`: The person using the browser is referred to as a user.
+* `Request`: When a client asks a server for information, it sends a request. This request includes details about what information is needed.
+* `Response`: When a server receives a request, it processes it and sends back the requested information in a response.
+* `HTTP` (HyperText Transfer Protocol): A protocol is a set of rules for how data is exchanged over the internet. HTTP is the protocol used for transferring web pages on the internet.
+* `DNS`: A system that translates human-friendly domain names (like turing.edu) into IP addresses that computers use to identify each other on the network.
 
 ## What is the Internet?
 

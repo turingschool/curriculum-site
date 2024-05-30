@@ -27,7 +27,7 @@ title: Module 1 - Lessons
 
 ## Design
 <!-- * [Design Principles](./design_principles) -->
-<!-- * [How the Web Works](./intro_to_how_the_web_works) -->
+* [How the Web Works](./intro_to_how_the_web_works)
 
 ## Testing
 * [Intro to Testing](./intro_to_testing)
