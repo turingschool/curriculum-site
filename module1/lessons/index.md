@@ -26,7 +26,7 @@ title: Module 1 - Lessons
 <!-- * [Ruby Object Model](./ruby_object_model) -->
 
 ## Design
-<!-- * [Design Principles](./design_principles) -->
+* [Design Principles](./design_principles)
 * [How the Web Works](./intro_to_how_the_web_works)
 
 ## Testing

@@ -7,30 +7,54 @@ length: 60
 ## Learning Goals
 
 Students will:
-* Research and articulate different programming principles
+* Be able to define and discuss common programming principles.
+* Research common programming principles and synthesize how they've been used in their programming studies so far. 
 
-## Part 1: Research (10 mins)
+## Warm Up
 
-Count off into groups of 6.
-Each group of 1-6 will go their separate ways for now, but will come back together later. Remember who your group is, then go to your topic group (all the 1's should be together, 5's together, etc.)
+Think about the industry or career you have the most experience in. Are there any "right ways" of doing something that basically _everyone_ agrees on? What about basic safety guidelines? 
 
-For each of the following topics, work with your topic group to research the following:
+## Design Principles in Practice
+
+Similar to most industries, when thinking about programming principles, developers are used to designing their code around accepted practices & industry standards. When applications follow these best practices, it helps to ensure that both developers and users have a smooth time of building & using the end product.
+
+**Why do we care?**
+
+In terms of programming, we care about best practices & design principles because they help our application code be more _readable_ and _maintainable_ in the long run, which means greater _legibility_ and potentially greater _efficiency_. 
+
+There is also an aspect of programming that developers should espouse called "developer empathy", meaning we should consider not only the user's experience but also _the developer that comes after you_ in maintaining and building off of your code. Who would want to inherit a mess? Not me! 
+
+**Where do these design principles come from?**
+
+If you haven't noticed yet, developers (and people in tech in general) have __lots__ of opinions! Over the years, developers have written books, published papers, or even designed entire frameworks around specific principles that they think are the _most_ important. Generally, it's good to have a well-rounded knowledge of the most common principles in use today. Principles may go by many different names, but their content stays relatively the same between languages & frameworks. 
+
+
+**What happens if I _don't_ follow one of these principles?**
+
+No one is coming to put you in "developer jail" if you don't follow these principles! But remember, you may be asked to improve your code or you may also ask others to improve their code (we call this a _code review_ and it is a standard practice). Just as "driving with both hands" and "don't run with scissors" aren't _the law_ doesn't mean they're not good ideas to still follow! 
+
+## Part 1: Research
+
+In small groups, research each of the following topics:
 
 1. Code Smells
-2. Single Responsibility Principle
+2. Single Responsibility Principle (SRP)
 3. Abstraction
 4. Encapsulation
 5. Law of Demeter
-6. DRY/YAGNI
+6. DRY vs. WET
+7. YAGNI (You Ain't Gonna Need It)
 
-## Part 2: Solidify & Communicate (15 mins)
+## Part 2: Solidify & Communicate 
 
-Each group should make a Chart Paper summarizing the assigned principle and why it is important.
-Examples, analogies, and diagrams are encouraged!
+In your group, take your research of each above topic and summarize why it's important, including examples, and optionally including analogies and/or diagrams. 
 
-## Part 3: Share (20 mins)
+## Part 3: Share
 
-Come back together with your 1-6 group. Each member should have researched a different topic. You are now the expert - take 2 minutes to share the following on your topic:
+After your group has a summarization of each topic, come back together to discuss each topic individually, using some of the following guidelines: 
 
 1. What is it?
 2. Why is it important?
+3. Have you seen this used in your coding journey so far?
+   - Or, do you have an example of how this principle _could_ be used? 
+4. Do you have any remaining questions about this design principle? 
