@@ -1,5 +1,5 @@
 ---
-title: Git Flow
+title: Git Sample Flow
 tags: git, github
 ---
 
