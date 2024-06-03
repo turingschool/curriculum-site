@@ -6,6 +6,7 @@ tags: ruby, mixins
 ---
 
 ## Learning Goals
+* understand how mixins are used in programming
 * understand the role the Modules play in Ruby
 * use a module to create a mixin to make our code DRYer (Don't Repeat Yourself)
 
@@ -21,7 +22,7 @@ tags: ruby, mixins
 
 Jot down your thoughts for the following questions. Be ready to share.
 
-* What do you know about modules already? If little, what would you guess modules are all about based on the name?
+* What do you know about mixins already? If little, what would you guess 'mixins' are all about based on the name?
 * Football players and soccer players both have unique attributes. What behaviors might they share?
 * What behaviors/abilities might be shared between an instructor and a student?
 
@@ -34,6 +35,8 @@ We're going to learn about Modules, a simple tool that will do a few completely 
 * Mixins allow us to share behavior between objects
 * Ruby implements mixins with Modules
 
+In Object-Oriented Programming, we can use a 'mixin' (or 'mix-in') to share methods across different classes. The implementation details of how methods are shared will depend upon the language, but often, mixins are described as being "included." This is the way that Modules work in Ruby.
+
 ### Modules
 
 * Modules may look like classes, but they only hold methods
@@ -41,7 +44,7 @@ We're going to learn about Modules, a simple tool that will do a few completely 
 * Modules *do not* store state
 * Modules cannot be instantiated. This means that you cannot type somethinglike `MyModule.new`
 
-Let's look at two separate classes to start exploring the idea of modules. Clone down [this repo](https://github.com/turingschool-examples/ruby-module-example).
+Let's look at two separate classes to start exploring the idea of modules. Navigate to the examples from the `lessons/modules/socials` directory in the [se-mod1-exercises repo](https://github.com/turingschool-examples/se-mod1-exercises/tree/4b63156e2ee0176d621e3916028b5b7b75b4bc65/lessons/modules/socials).
 
 First, we'll experiment with the `StatusUpdate` class. 
 
@@ -96,7 +99,7 @@ photo.display
 
 ### Modules
 
-We can extract this duplication into a **module** which we'll include within each class. Oftentimes, you'll see modules named with the convention "-able", like [Comparable](https://docs.ruby-lang.org/en/2.5.0/Comparable.html) or [Enumerable](https://docs.ruby-lang.org/en/2.5.0/Enumerable.html). 
+We can extract this duplication into a **module** which we'll include within each class. Oftentimes, you'll see modules named with the convention "-able", like [Comparable](https://docs.ruby-lang.org/en/3.0/Comparable.html) or [Enumerable](https://docs.ruby-lang.org/en/3.0/Enumerable.html). 
 
 `touch commentable.rb`
 
@@ -229,7 +232,7 @@ end
 
 ## Additional Reading
 
-Module Resources:
 * [Include vs Extend in Ruby](http://www.railstips.org/blog/archives/2009/05/15/include-vs-extend-in-ruby/) from John Nunemaker
 * [Modules](http://ruby-doc.com/docs/ProgrammingRuby/html/tut_modules.html) in Programming Ruby / RubyDoc
 * [Ruby Class, Module, and Mixin](http://matt.aimonetti.net/posts/2012/07/30/ruby-class-module-mixins/) by Matt Aimonetti
+* [Mixins in OOP](https://en.wikipedia.org/wiki/Mixin)

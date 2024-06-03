@@ -20,7 +20,7 @@ title: Module 1 - Lessons
 * [Intermediate Enumerables](./intermediate_enumerables)
 * [Nested Iteration Workshop](./nested_iteration_workshop)
 <!-- * [Class Methods](./class_methods) -->
-<!-- * [Modules](./modules) -->
+* [Modules](./modules)
 <!-- * [Inheritance](./inheritance) -->
 <!-- * [CSV Workshop](./csv_walkthrough) -->
 <!-- * [Ruby Object Model](./ruby_object_model) -->
