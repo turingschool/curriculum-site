@@ -24,7 +24,7 @@ Reasons why pairing is beneficial (to you and the team):
 # DTR
 When forming a new paired team or group, it's important to start off by talking through expectations, limitations, and boundaries _before_ jumping into any code. At Turing, we do this with a DTR (Define the Relationship.)
 
-[DTR Template](https://docs.google.com/document/d/1HFWSZExSWgGJdqLkEH4DXs-z1gZxMNkv4n1NO9U1eJU/edit)
+[DTR Template](https://docs.google.com/document/d/18q_7uy5R9Ad6psNUgzJ4bnFG11sBCT5CoYFHVXdCkWc/edit)
 
 Moving forward, all Turing paired and group projects will start with a DTR. 
 
