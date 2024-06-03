@@ -4,7 +4,7 @@ tags: git, github
 ---
 
 ## Learning Goals
-- [Be able to use git and GitHub to collaborate on code with another developer](https://frontend.turing.edu/lessons/module-1/dev-skills-git-team-workflow.html)
+- [Be able to use git and GitHub to collaborate on code with another developer](https://curriculum.turing.edu/module1/lessons/git_sample_flow)
 - Be able to submit and respond to a pull request
 - Understand the importance of code review
 
@@ -176,7 +176,7 @@ Yes! As long as a branch is pushed up to GitHub, _anyone_ can pull it down and w
 ### Merge Conflict? Read here!
 
 - [This video](https://www.youtube.com/watch?v=j0MW7jSc25I) walks you through a merge conflict
-- You can also reference [this lesson](https://frontend.turing.edu/lessons/module-1/git-merge-conflicts.html)
+- You can also reference [this lesson](https://curriculum.turing.edu/module1/lessons/git_merge_conflicts)
 </section>
 
 <section class="dropdown">
