@@ -1,8 +1,6 @@
 ---
 layout: page
 title: Intermediate Enumerables
-length: 90
-tags: enumerables, max, min, max_by, min_by, sort_by, all?, any?, one?, none?
 ---
 
 ## Learning Goals
@@ -10,9 +8,6 @@ tags: enumerables, max, min, max_by, min_by, sort_by, all?, any?, one?, none?
 * Understand Block Return Values
 * Be able to use `max`, `max_by,` their opposites, and `sort_by` appropriately.
 
-## Slides
-
-Available [here](../slides/intermediate_enumerables)
 
 ## Vocabulary
 * Enumerable
@@ -30,7 +25,9 @@ Given the array `kardashians = ["Khloe", "Kim", "Kris", "Kourtney"]`, use `find`
 
 ## Exploration: Block Return Values
 
-How do the enumerables we know so far work under the hood? Work through this section with a partner to explore this question. Before you run each code snippet, try to predict the output.
+How do the enumerables we know so far work under the hood? Let's take a look with the following code examples.
+
+Before you run each code snippet, try to predict the output.
 
 #### map
 
@@ -119,7 +116,7 @@ Discuss the following questions with a partner and answer in your notebooks:
 1. How does `map` know what value to map to?
 1. How does `find_all` know which elements will be returned?
 1. How do you think `find` knows which element to return?
-1. Read the descriptions for `map`, `find`, and `find_all` in the [Ruby Docs Enumerables Page](https://ruby-doc.org/core-2.4.0/Enumerable.html). How are these descriptions similar/different to your answers to the first 3 questions?
+1. Read the descriptions for `map`, `find`, and `find_all` in the [Ruby Docs Enumerables Page](https://ruby-doc.org/core-3.0.0/Enumerable.html). How are these descriptions similar/different to your answers to the first 3 questions?
 
 ## min / max
 
@@ -148,7 +145,7 @@ puts nums.max
 
 And what if we wanted to take the smallest? You'd just use `.min` instead.
 
-**TURN & TALK:** All the other enumerables have a do block; these don't but are still considered enumerables - why?
+**Consider This:** All the other enumerables have a do block; these don't, but are still considered enumerables - why?
 
 ## Comparing Strings
 
@@ -172,9 +169,8 @@ This code, here, it'll return us `"Amy"`. Be careful - this is NOT straight up c
 true
 ```
 
-If we swap out the min for a max, what will we get?
+If we swap out the `min` for a `max`, what will we get?
 
-This is normally where we would have you try this on your own, but I'm not going to insult your intelligence.
 
 ## min_by / max_by
 
@@ -242,7 +238,7 @@ people << Person.new("Scarlett", 9)
 people << Person.new("Stella", 8)
 ```
 
-What if we wanted to get the max Person by age? If you call `people.max`, Ruby will tell you it doesn't know how to compare two `Person` objects.
+What if we wanted to get the max Person by age (also known as the "oldest")? If you call `people.max`, Ruby will tell you it doesn't know how to compare two `Person` objects.
 
 So let's walk this process out and look at how we would do this with .each. It's a lot like how we would implement .max or .min.
 
@@ -361,41 +357,17 @@ Given what you just learned about `all?` - can make an educated guess about what
 
 ## Practice
 
-```ruby
-class Person
-  attr_reader :name,
-              :age
+[Mod 1 Exercises](https://github.com/turingschool-examples/se-mod1-exercises/tree/main/lessons/enumerables_2/exercises)
+- Open your Mod 1 Exercises Repo and navigate to `lessons/enumerables_2/exercises`. 
+- Follow the instructions in the Readme.
 
-  def initialize(name, age)
-    @name = name
-    @age  = age
-  end
-end
-
-kardashians = []
-
-kardashians << Person.new("Kourtney", 39)
-kardashians << Person.new("kim", 37)
-kardashians << Person.new("Kris", 62)
-kardashians << Person.new("Khloe", 33)
-```
-
-Write code, without using /#each, to:
-
-1. Get the youngest member
-1. Get the person with the longest name
-1. Sort them by age
-1. Check if all their names start with a `k` (case insensitive)
-1. Check if any of them are younger than 18
-1. Sort them by the last letter of their name, descending (Should be "Kourtney", "Kris", "Kim", "Khloe")
-1. Check if exactly one Person is neither "Kris" nor younger than 38 (Should be true)
 
 ## Wrap Up
 
 * Name all the enumerables you know. What do they each return?
 
-### For Homework:
-In the enums-exercises, complete the following:
+### More Practice
+In the Mod 1 Exercises repo, navigate to `ruby_exercises/enumerables/exercise_1`, complete the following:
 
 * find_using_max_by_test.rb
 * sort_by_test.rb

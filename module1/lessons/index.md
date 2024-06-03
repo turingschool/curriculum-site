@@ -7,18 +7,18 @@ title: Module 1 - Lessons
 
 ## Programming Fundamentals
 * [Methods & Return Values](./methods_and_return_values)
-<!-- * [Objects, Classes, & Instances](./objects_classes_instances) -->
+* [Objects, Classes, & Instances](./objects_classes_instances)
 * [Arrays](./arrays)
 <!-- * [Scope](./scope) -->
-<!-- * [Flow Control](./flow_control) -->
+* [Flow Control](./flow_control)
 * [Iteration](./iteration)
 * [Beginner Enumerables](./beginner_enumerables)
 * [Hashes](./hashes)
 * [Boolean Logic](./boolean_logic)
 * [Nested Collections](./nested_collections)
-<!-- * [Reaching Through Objects](!needs lesson plan!) -->
-<!-- * [Intermediate Enumerables](./intermediate_enumerables) -->
-<!-- * [Nested Iteration Workshop](./nested_iteration_workshop) -->
+* [Reaching Through Objects](./reaching_through_objects)
+* [Intermediate Enumerables](./intermediate_enumerables)
+* [Nested Iteration Workshop](./nested_iteration_workshop)
 <!-- * [Class Methods](./class_methods) -->
 * [Modules](./modules)
 <!-- * [Inheritance](./inheritance) -->
@@ -26,8 +26,8 @@ title: Module 1 - Lessons
 <!-- * [Ruby Object Model](./ruby_object_model) -->
 
 ## Design
-<!-- * [Design Principles](./design_principles) -->
-<!-- * [How the Web Works](./intro_to_how_the_web_works) -->
+* [Design Principles](./design_principles)
+* [How the Web Works](./intro_to_how_the_web_works)
 
 ## Testing
 * [Intro to Testing](./intro_to_testing)
@@ -40,10 +40,11 @@ title: Module 1 - Lessons
 * [Using ChatGPT Effectively](./chatgpt)
 
 ## Version Control
-* [Git Workflow](./git_collaboration)
-* [Git for Pairs](./git_for_pairs)
-* [Git Cheat Sheet](./git_sample_flow)
-* [Git Merge Conflicts](./git_merge_conflicts)
+* [Git: Collaborative Workflow](./git_collaboration)
+* [Git: For Pairs](./git_for_pairs)
+* [Git: Sample Flow](./git_sample_flow)
+* [Git: Merge Conflicts](./git_merge_conflicts)
+* [Git and GitHub Cheat Sheet](./git_cheatsheet)
 
 ## Professional Development
 * [Overview](./pd_overview)
