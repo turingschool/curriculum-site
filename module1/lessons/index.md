@@ -40,11 +40,11 @@ title: Module 1 - Lessons
 * [Using ChatGPT Effectively](./chatgpt)
 
 ## Version Control
-* [Git Workflow](./git_collaboration)
-* [Git for Pairs](./git_for_pairs)
-* [Git Sample Flow](./git_sample_flow)
-* [Git Cheat Sheet](./git_cheatsheet)
-* [Git Merge Conflicts](./git_merge_conflicts)
+* [Git: Collaborative Workflow](./git_collaboration)
+* [Git: For Pairs](./git_for_pairs)
+* [Git: Sample Flow](./git_sample_flow)
+* [Git: Merge Conflicts](./git_merge_conflicts)
+* [Git and GitHub Cheat Sheet](./git_cheatsheet)
 
 ## Professional Development
 * [Overview](./pd_overview)

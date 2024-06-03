@@ -1,5 +1,5 @@
 ---
-title: Git Workflow
+title: Git Collaborative Workflow
 tags: git, github
 ---
 
