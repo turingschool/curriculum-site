@@ -10,7 +10,7 @@ title: Module 1 - Lessons
 <!-- * [Objects, Classes, & Instances](./objects_classes_instances) -->
 * [Arrays](./arrays)
 <!-- * [Scope](./scope) -->
-<!-- * [Flow Control](./flow_control) -->
+* [Flow Control](./flow_control)
 * [Iteration](./iteration)
 * [Beginner Enumerables](./beginner_enumerables)
 * [Hashes](./hashes)
