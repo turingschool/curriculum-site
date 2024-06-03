@@ -42,7 +42,8 @@ title: Module 1 - Lessons
 ## Version Control
 * [Git Workflow](./git_collaboration)
 * [Git for Pairs](./git_for_pairs)
-* [Git Cheat Sheet](./git_sample_flow)
+* [Git Sample Flow](./git_sample_flow)
+* [Git Cheat Sheet](./git_cheatsheet)
 * [Git Merge Conflicts](./git_merge_conflicts)
 
 ## Professional Development
