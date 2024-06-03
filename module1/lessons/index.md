@@ -9,7 +9,7 @@ title: Module 1 - Lessons
 * [Methods & Return Values](./methods_and_return_values)
 * [Objects, Classes, & Instances](./objects_classes_instances)
 * [Arrays](./arrays)
-<!-- * [Scope](./scope) -->
+* [Scope](./scope)
 * [Flow Control](./flow_control)
 * [Iteration](./iteration)
 * [Beginner Enumerables](./beginner_enumerables)

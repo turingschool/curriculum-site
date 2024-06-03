@@ -32,6 +32,8 @@ Have you ever written code in one place, but have had trouble accessing it? What
 
 Scope is the kind of thing that you think you don't need to know until it starts causing you trouble. Even then, it is generally unnecessary to know the rules of how scope works in Ruby. It's more important that when you see unexpected behavior, that scope of your variables/method names is one of the things on your list to check.
 
+Note that scope and the challenges developers run into around scope are not unique to Ruby.  Scope can be challenging in any programming language.
+
 Today, we will be exploring several different elements of Ruby that have different scopes:
 
 * Local Variables
@@ -301,11 +303,11 @@ Notice that unlike local variables and methods, when an instance variable is out
 
 ## Activity
 
-Clone [this repository](https://github.com/turingschool-examples/mod-1-be-exercises/tree/main/lessons/scope)
+Clone [this repository](https://github.com/turingschool-examples/se-mod1-exercises/tree/main/lessons/scope)
 
 Follow the instructions in the README.
 
 
 ## Conclusion
 
-Scope is a pretty complicated topic, especially in Ruby. While it's not important to know every rule of scope, it is important to know when you create a variable or method, where you have access to it, and what it has access to. Scope can also get much more complicated when you have many things named the same, so the easiest solution is to give each thing its own unique name.
+Scope is a pretty complicated topic. While it's not important to know every rule of scope, it is important to know when you create a variable or method, where you have access to it, and what it has access to. Scope can also get much more complicated when you have many things named the same, so the easiest solution is to give each thing its own unique name.
