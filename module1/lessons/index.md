@@ -7,7 +7,7 @@ title: Module 1 - Lessons
 
 ## Programming Fundamentals
 * [Methods & Return Values](./methods_and_return_values)
-<!-- * [Objects, Classes, & Instances](./objects_classes_instances) -->
+* [Objects, Classes, & Instances](./objects_classes_instances)
 * [Arrays](./arrays)
 <!-- * [Scope](./scope) -->
 * [Flow Control](./flow_control)
@@ -20,7 +20,7 @@ title: Module 1 - Lessons
 * [Intermediate Enumerables](./intermediate_enumerables)
 * [Nested Iteration Workshop](./nested_iteration_workshop)
 <!-- * [Class Methods](./class_methods) -->
-<!-- * [Modules](./modules) -->
+* [Modules](./modules)
 <!-- * [Inheritance](./inheritance) -->
 <!-- * [CSV Workshop](./csv_walkthrough) -->
 <!-- * [Ruby Object Model](./ruby_object_model) -->

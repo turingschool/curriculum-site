@@ -1,7 +1,6 @@
 ---
 title: Objects, Classes, and Instances
-length: 180
-tags: ruby, object-oriented programming
+layout: page
 ---
 
 ## Learning Goals
@@ -12,7 +11,6 @@ tags: ruby, object-oriented programming
 * Provide access to state using `attr_reader`s and `attr_accessor`s
 * Use methods to provide behaviors to instances of a class
 * Create a new instance of a class and call methods on that instance
-
 
 ## Vocabulary
 
@@ -63,13 +61,34 @@ class NameOfClass
 end
 ```
 
-So, for example, if we wanted to create a Dog class, we could do the following:
+<section class="dropdown">
 
+### Defining a similar class in JavaScript
+
+```javascript
+class NameOfClass {
+}
+```
+
+</section>
+
+So, for example, if we wanted to create a Dog class, we could do the following:
 
 ```ruby
 class Dog
 end
 ```
+
+<section class="dropdown">
+
+### Creating a Dog class in JavaScript
+
+```javascript
+class Dog {
+}
+```
+
+</section>
 
 Notice the use of `UpperCamelCase` for the class name.
 
@@ -77,11 +96,11 @@ Generally we will want to put more information in our classes to make them usefu
 
 ### Example - Class/Instance Syntax
 
-Let's follow a class example with a Unicorn class. I will create a directory in the classwork directory called `objects_classes_and_instances`. Within that directory, I'll create a `unicorn.rb` file, and put the following information into that file. (You will take these same steps later for a different class😉)
+Let's follow a class example with a `Unicorn` class. I will create a directory in the classwork directory called `objects_classes_and_instances`. Within that directory, I'll create a `unicorn.rb` file, and put the following information into that file. (You will take these same steps later for a different class😉)
 
 ```ruby
 # ~/turing/1module/classwork/objects_classes_and_instances/unicorn.rb
-# Notice that `class` is lowercase while `NameOfClass` is UpperCamelCased.
+# Notice that `class` is lowercase while `Unicorn` is UpperCamelCased.
 
 class Unicorn
 end
@@ -99,27 +118,53 @@ unicorn_2 = Unicorn.new
 require 'pry'; binding.pry
 ```
 
+<section class="dropdown">
+
+### Creating object instances in JavaScript
+
+```javascript
+// ~/turing/1module/classwork/objects_classes_and_instances/runner.js
+const Unicorn = require('./unicorn');
+
+const unicorn1 = new Unicorn();
+const unicorn2 = new Unicorn();
+
+// Use console.log to inspect
+console.log(unicorn1);
+console.log(unicorn2);
+```
+
+</section>
+
 We can run the `runner.rb` file from the command line if we are inside of our `objects_classes_and_instances` directory by typing the following: `ruby runner.rb`.
 
 When we run this file, our terminal should open up a pry session when it reads the line: `binding.pry`. Inside of that pry session, we'll type `unicorn_1` and hit return to see what the variable `unicorn_1` is holding. Then, we'll type `unicorn_2` to see what that variable is holding.
 
+<section class="note">
+
+### Note
+
+To run your file using Javascript, run `node runner.js` from the terminal.
+
+JavaScript doesn't have a `binding.pry` equivalent, therefore you will use `console.log` for debugging.
+
+</section>
+
 ## Reflection
 
-- How are those two things the same?
+- How are the two objects the same?
 - How are they different?
 
 ## Attributes in Ruby Classes
 
-Above we created a Unicorn class and then also created specific instances of the unicorn class that we held in the variables `unicorn_1` and `unicorn_2`. Generally the objects we create will come from the same template, but each will be a unique object.
+Above we created a `Unicorn` class and then also created specific instances of the unicorn class that we held in the variables `unicorn_1` and `unicorn_2`. Generally the objects we create will come from the same template, but each will be a unique object.
 
-Take a look at these unicorns.
-
-Each one is different in important ways. For example, each one has its own:
+We can make each one different in some important ways. For example, each one should have its own:
 
 * name
 * color
 
-We can model these attributes in code by using *instance variables*. Generally we define these instance variables in a special method called `initialize` that is run every time a new instance of a class is created. Make sure to spell it correctly😬.
+We can model these attributes in code by using *instance variables*. Generally we define these instance variables in a special method called `initialize` that is run every time a new instance of a class is created. Make sure to spell it correctly 😬.
 
 ### Initialize
 
@@ -128,12 +173,24 @@ When we run `Unicorn.new` in Ruby, what actually happens? We can see from the la
 ```ruby
 class Unicorn
   def initialize
-    #any code here will run each time a new instance is created
+    # Any code here will run each time a new instance is created
   end
 end
-
-...
 ```
+
+<section class="dropdown">
+
+### JavaScript has an equivalent function called the constructor function
+
+```javascript
+class Unicorn {
+  constructor() {
+    // Any code here will run each time a new instance is created
+  }
+}
+```
+
+</section>
 
 This method is run once and only once during an Object's lifetime, when we call `new`. Other than that, initialize is like any other method where we can put Ruby code:
 
@@ -143,9 +200,21 @@ class Unicorn
     puts "A new Unicorn object has been created"
   end
 end
-
-...
 ```
+
+<section class="dropdown">
+
+### Here is the equivalent in JavaScript
+
+```javascript
+class Unicorn {
+  constructor() {
+    console.log("A new Unicorn object has been created");
+  }
+}
+```
+
+</section>
 
 ### Modeling State with Attributes
 
@@ -160,23 +229,51 @@ Let's add some attributes to the `Unicorn` class. The `@` symbol before a variab
 ```ruby
 class Unicorn
   def initialize(name_parameter, color_parameter)
-    @name       = name_parameter
-    @color      = color_parameter
+    @name = name_parameter
+    @color = color_parameter
   end
 end
 ```
+
+<section class="dropdown">
+
+### Adding attributes to our Unicorn class in JavaScript
+
+```javascript
+class Unicorn {
+  constructor(nameParameter, colorParameter) {
+    this.name = nameParameter;
+    this.color = colorParameter;
+  }
+}
+```
+
+</section>
 
 Because attributes are something we want to persist throughout an object's lifetime, we typically define them inside the initialize method because we want them to exist as soon as the object is created.
 
 We have now created a method class that will allow us to create many different instances of Unicorn, each one slightly different from the last. How do we do that in practice? Let's update the runner file so that it includes the following:
 
 ```ruby
-unicorn_1  = Unicorn.new("Sparkle", "rainbow")
-
-unicorn_2   = Unicorn.new("", "white")
+unicorn_1 = Unicorn.new("Sparkle", "rainbow")
+unicorn_2 = Unicorn.new("", "white")
 
 require 'pry'; binding.pry
 ```
+
+<section class="dropdown">
+
+### Passing arguments to our Unicorn class in JavaScript
+
+```javascript
+const unicorn1 = new Unicorn("Sparkle", "rainbow");
+const unicorn2 = new Unicorn("", "white");
+
+console.log(unicorn1);
+console.log(unicorn2);
+```
+
+</section>
 
 When we include the arguments to `.new`, Ruby will pass those arguments to the initialize method for us. Note that the arguments that we pass to `new` are order dependent. So, in the first example when we pass `"Sparkle"` as the first argument, we are saying that the name of the Unicorn we are creating is Sparkle. When we pass an empty string (`""`) the second time we call `new` we are saying that the Unicorn that we created doesn't have a name.
 
@@ -185,12 +282,28 @@ What we have just done is a very common pattern. We gave our initialize method s
 ```ruby
 class Unicorn
   def initialize(name, color)
-    @name            = brand
-    @color           = color
-    @magical_powers  = []
+    @name = name
+    @color = color
+    @magical_powers = [] # We are setting the default value of magical_powers to an empty array
   end
 end
 ```
+
+<section class="dropdown">
+
+### Setting a default value for an attribute in JavaScript
+
+```javascript
+class Unicorn {
+  constructor(name, color) {
+    this.name = name;
+    this.color = color;
+    this.magicalPowers = []; // We are setting the default value of magicalPowers to an empty array
+  }
+}
+```
+
+</section>
 
 ### Practice
 
@@ -202,7 +315,7 @@ Now, give your Person class some attributes that are set using arguments to init
 
 That's all well and good, but what can we do with all these attributes that we've created? They're no good to us if we can't use them.
 
-Generally, the way that we access information stored in a class is by *sending it messages* or *calling methods* on that class. We do that using `.` syntax.
+Generally, the way that we access information stored in a class is by *calling methods* on that class. We do that using dot `.` syntax.
 
 Let's run our runner file again and check to see what this returns:
 
@@ -210,21 +323,30 @@ Let's run our runner file again and check to see what this returns:
 unicorn_1.name
 ```
 
+<section class="dropdown">
+
+### Accessing an object's attribute in JavaScript (Spoiler Alert: It's exactly the same!)
+
+```javascript
+unicorn1.name
+```
+
+</section>
+
 We should get an error that says something about the method `.name` not existing (a `no method` error). The syntax here is correct, but we haven't told our `Unicorn` class how to respond when it receives the message `name`.
 
 We can do that with methods like the ones we've seen before, but attributes stored as instance variables are special. We can tell our class to provide access to them using attribute readers. Let's do that now.
 
-### Example - Accessing Attributes
+### Example - Accessing Attributes in Ruby
 
 Let's update our Unicorn class to include the lines below.
 
 ```ruby
 class Unicorn
-
   def initialize(name, color)
-    @name            = name
-    @color           = color
-    @magical_powers  = []
+    @name = name
+    @color = color
+    @magical_powers = []
   end
 
   def name
@@ -252,16 +374,24 @@ class Unicorn
               :magical_powers
 
   def initialize(name, color)
-    @name              = name
-    @color             = color
-    @magical_powers    = []
+    @name = name
+    @color = color
+    @magical_powers = []
   end
 end
 ```
 
-Let's run our runner file again and see if you can still call `unicorn_1.brand` and the other attributes.
+Let's run our runner file again and see if you can still call `unicorn_1.name` and the other attributes.
 
 An important thing to remember is that although there is a special syntax for creating `attr_reader`s, they are still just methods. Remember the error we got earlier was a **no method error** for `name`.
+
+<section class="note">
+
+### Note
+
+This is not the case with JavaScript, you automatically get access to these attributes without using something like `attr_reader`.
+
+</section>
 
 ### Practice
 
@@ -276,14 +406,29 @@ Define an `add_power` method that allows you to give your unicorn another magica
 
 ```ruby
 class Unicorn
-# ... attr_readers & initialize method
+  # [ ... attr_readers & initialize method ]
 
   def add_power(power)
     @magical_powers << power
   end
-
 end
 ```
+
+<section class="dropdown">
+  
+### Adding other methods to your classes in JavaScript
+
+```javascript
+class Unicorn {
+  // [ ... constructor function ]
+
+  addPower(power) {
+    this.magicalPowers.push(power);
+  }
+}
+```
+
+</section>
 
 Let's update our runner file so that you:
 
@@ -318,7 +463,6 @@ end
 ```
 
 Let's update our runner file to add Power objects to your unicorn.
-
 
 ## Practice
 
