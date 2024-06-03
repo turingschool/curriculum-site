@@ -1,8 +1,6 @@
 ---
 layout: page
 title: Test Driven Development
-tags: basics, testing, encapsulation
-length: 60
 ---
 
 ## Learning Goals
@@ -82,21 +80,30 @@ require 'rspec'
 
 describe Round do
   describe '#current_card' do
-    cards = CardSetup.new
-    deck = Deck.new(cards)
-    round = Round.new(deck)
     it 'can get back current card' do
+      card1 = Card.new(2, "Hearts")
+      cards = [card1]
+      deck = Deck.new(cards)
+      round = Round.new(deck)
+
       expect(round.current_card).to eq(deck.cards.first)
     end
   end
 end
 ```
 
-Turn and Talk: what might be the pitfalls in a test like this?  How could we improve the test?
+<section class="call-to-action">
+### What might be the pitfalls in a test like this?  How could we improve the test (and thus the behavior of our calculator?)
+
+- We only have one card in our `cards` array, so even if the logic of this method didn't work, we wouldn't know because we don't have enough data in our setup to accurately test the logic. *The Fix:* adding more card objects to our `cards` array.
+- The test is testing for `deck.cards.first`, but this is the same logic in the method, which can result in a false positive. Instead, we can test this more explictly and write `expect(round.current_card.name).to eq "2 of Hearts"` (this assumes a method in the Card class called #name that would string together the value and suit).
+</section>
+
+
 
 ### Testing Edge Cases
 
-* Ensure that your implementation code can handle things we might not expect, e.g.:
+Ensure that your implementation code can handle things we might not expect, for example:
 
 ```ruby
 class Calculator
@@ -119,13 +126,19 @@ describe Calculator do
   end
 end
 ```
-Turn and Talk: what might be the pitfalls in a test like this?  How could we improve the test (and thus the behavior of our calculator?)
+
+
+<section class="call-to-action">
+### What might be the pitfalls in a test like this?  How could we improve the test (and thus the behavior of our calculator?)
+
+- How would this code function if we called `calculator.divide(5,2)`? Our tests can help ensure we've thought about these different situations.
+</section>
 
 ## Implementation
 
 ### Example
 
-Given the following interaction pattern, I'll write a test file for this (not yet existent) class, Car.
+Given the following interaction pattern, I'll write a test file for this (not yet existent) class, `Car`.
 
 ```ruby
 > car = Car.new("Toyota", "Camry")
@@ -139,7 +152,31 @@ car.drive
 => "The Camry is driving"
 ```
 
-### Partner Practice
+```ruby
+# spec/car_spec.rb
+require "./lib/car"
+
+RSpec.describe Car do 
+  describe "instantiation" do 
+    it "has make and model" do 
+      car = Car.new("Toyota", "Camry")
+      expect(car).to be_a Car
+      expect(car.make).to eq "Toyota"
+      expect(car.model).to eq "Camry"
+    end
+  end
+
+  describe "#drive" do 
+    it "returns string confirming driving" do 
+      car = Car.new("Toyota", "Camry")
+      expect(car.drive).to eq "The Camry is driving."
+    end
+  end
+end
+```
+From this example, we can see how the interaction pattern guides or test. We can see the name of the method and what it's return value should be which we can then translate into an RSpec test.
+
+### Practice
 
 Given the following interaction pattern, write a test file for this (not yet existent) class, Student.
 
@@ -161,8 +198,8 @@ student.say_mod
 ## Command vs. Query Methods
 
 Methods either do one of two things for us:
-- Give us information about an object
-- Change something about an object
+- Give us information about an object (a Query Method, or a Getter Method)
+- Change something about an object, (a Command Method, or a Setter Method)
 
 When testing, it's really important to keep in mind what a method should be doing, to ensure we test it well. Stepping out of TDD just for a minute so we can illustrate this, let's look at this example:
 
@@ -175,21 +212,64 @@ class Student
     @mod = mod_parameter
   end
 
-  def say_mod
-    "I'm in Mod 1"
+  def promote
+    @mod += 1
   end
 end
 ```
 
-Discuss with your partner:
+<section class="call-to-action">
+### Write in Your Notebook
+
 - What are all the methods we have on an instance of this class?
-- Which methods give us information about a student object?
-- Which methods change something about a student object?
-- How would you go about testing that the `say mod` method does what it is supposed to?
+- Which methods give us information about a student object? (Query Methods)
+- Which methods change something about a student object? (Command Methods)
+- How would you go about testing that the `promote` method does what it is supposed to?
+</section>
 
 To make sure we're all the same page, let's write this test together.
 
-### Partner Practice
+```ruby
+#spec/student_spec.rb
+require "./lib/student"
+
+RSpec.describe Student do 
+  describe "instantiation" do 
+    it "has a name and mod" do 
+      student = Student.new("Janice Lite", 1)
+      expect(student).to be_a Student
+      expect(student.name).to eq "Janice Lite"
+      expect(student.mod).to eq 1
+    end
+  end
+
+  describe "#promote" do 
+    it "can change mods" do 
+      student = Student.new("Janice Lite", 1)
+      
+      expect(student.mod).to eq 1
+
+      student.promote
+
+      expect(student.mod).to eq 2
+    end
+  end
+end
+
+```
+
+Notice the different in how we test Query vs Command Methods. 
+
+*Query Methods*
+- Tests the return value of a method.
+- Tests the value of an attribute.
+
+*Command Methods*
+- Test the initial value of the attribute.
+- Invoke the command method.
+- Test that the attribute was changed as expected.
+
+### Practice
 
 Given the following interaction pattern, build on your test file for this class.
 
@@ -251,7 +331,7 @@ locker1.student_name
 
 Be ready to share your code with the rest of class!
 
-### With a Partner
+### More Practice
 
 You will not always have interaction patterns to guide your testing. In these cases, you'll need to decide for yourself what you'll name the methods and how you'll decide to implement its functionality.
 
