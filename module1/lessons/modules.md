@@ -99,7 +99,7 @@ photo.display
 
 ### Modules
 
-We can extract this duplication into a **module** which we'll include within each class. Oftentimes, you'll see modules named with the convention "-able", like [Comparable](https://docs.ruby-lang.org/en/2.5.0/Comparable.html) or [Enumerable](https://docs.ruby-lang.org/en/2.5.0/Enumerable.html). 
+We can extract this duplication into a **module** which we'll include within each class. Oftentimes, you'll see modules named with the convention "-able", like [Comparable](https://docs.ruby-lang.org/en/3.0/Comparable.html) or [Enumerable](https://docs.ruby-lang.org/en/3.0/Enumerable.html). 
 
 `touch commentable.rb`
 
