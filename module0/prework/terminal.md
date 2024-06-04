@@ -27,7 +27,7 @@ In the diagram below, we would say that there's a directory called `essays` that
 
 <br>
 <h3>Example #1</h3>
-<div class="flex-container">
+<div style="display: flex;">
 
 <img src="./assets/terminal/files_directories_1.png" alt="files and directories 1">
 
@@ -60,9 +60,9 @@ In the diagram below, we would say that there's a directory called `essays` that
 <br>
 
 <h3>Example #2</h3>
-<div class="flex-container">
+<div style="display: flex;">
   <div>
-<img src="./assets/terminal/files_directories_3.png" alt="files and directories 2">
+  <img src="./assets/terminal/files_directories_3.png" alt="files and directories 2">
   </div>
   <div>
 <p>The path for the grading.txt file is</p>
@@ -76,10 +76,10 @@ In the diagram below, we would say that there's a directory called `essays` that
   </div>
 </div>
 
-<div class="s-card s-border-yellow-500">
+
   <h3>Things to Note</h3>
   <p>We commonly refer to directories with an analogy of ***parent*** and ***child***. In the previous example, <code>to_do</code> is the parent directory of the <code>personal</code> and <code>work</code> directories. <code>projects_to_delegate</code> is a child directory of the <code>work</code> directory.</p>
-</div>
+
 <br>
 
 ## Terminal
@@ -178,7 +178,7 @@ With a visual interface (as shown in the gif above), you can easily see the cont
 
 To see what is inside of a directory, we use the `ls` command, which is short for list. As an example, let's assume that we have the directories and files from this diagram on a computer:
 
-<div class="flex-container">
+<div style="display: flex;">
   <div>
 <img src="./assets/terminal/files_directories_2.png" alt="files and directories 2">
   </div>
@@ -208,7 +208,7 @@ _This is classified as a "Safe" command because there is **nothing** you can mes
 
 You can move into a directory using the `cd` command, which stands for "change directory". After `cd`, type the name of the directory you want to go into.
 
-<div class="flex-container">
+<div style="display: flex;">
 <div>
 <img src="./assets/terminal/files_directories_2.png" alt="files and directories 2">
 </div>
@@ -257,7 +257,7 @@ Notice that my path no longer includes `book_projects` because I'm outside of th
 <div class="s-card">
 <h3>Try It: <code>cd and cd ..</code></h3>
 <p>Using what you've learned, type a response to each prompt in the associated input field. If you aren't sure or want to check yourself, this is a great topic to bring up in your small group Slack channel.</p>
-<div class="flex-container">
+<div style="display: flex;">
 <div>
 <img src="./assets/terminal/files_directories_3.png" alt="files and directories 2">
 </div>
@@ -359,7 +359,7 @@ Now when I run `ls`, I will no longer see `books` listed.
 <div class="s-card">
 <h3>Try It: Removing files (<code>rm</code>) and directories (<code>rm -rf</code>)</h3>
 <p>Using what you've learned, type a response to each prompt in the associated input field. If you aren't sure or want to check yourself, this is a great topic to bring up in your small group Slack channel.</p>
-<div class="flex-container">
+<div style="display: flex;">
 <div>
 <img src="./assets/terminal/files_directories_3.png" alt="files and directories 2">
 </div>
