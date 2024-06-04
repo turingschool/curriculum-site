@@ -10,15 +10,15 @@ title: Iteration
 
 ## Vocabulary
 
-- <span class="vocab">code block</span>
-- <span class="vocab">iterate</span>
-- <span class="vocab">method</span>
+- ***code block***
+- ***iterate***
+- ***method***
 
 ## `each`
 
 [This video explains the `each` method with a similar example to what is below](https://zoom.us/rec/play/wjK1UGkNDIPNN-3fi5RyaXm0n1q1hAPPtZSmvSEx0hsxMrrJbsbUf0yP_Oe_mT-b1JyzZOkNkvoeZnr1.DDs1X1bXngF6uenu?autoplay=true&startTime=1643055950000)
 
-`each` is a <span class="vocab">method</span> in Ruby that can be used to <span class="vocab">iterate</span> over an Array. This means, it can take action on each element of an Array, even when the code for that action is only written once. Look at the following code snippet:
+`each` is a ***method*** in Ruby that can be used to ***iterate*** over an Array. This means, it can take action on each element of an Array, even when the code for that action is only written once. Look at the following code snippet:
 
 ```ruby
 nums = [1, 2, 3, 4]
@@ -41,7 +41,7 @@ Let's break down each part of the code:
   - **`|num|`** - inside the pipe characters (`|`, which can be found just under the delete key on your keyboard), the developer decides on a name for a single element in the Array. Usually, this is the singular form of the Arrays variable name
   - 1 or more lines of code, indented. This code will run for **each** of the elements in the Array. If there are 100 elements, this line will run 100 times. If there is 1 element, this line will run 1 time
   - **`end`** - this tells the program we are done with the `each` block, and is required.
-- Anything written inside of the `do` and `end` is referred to as the <span class="vocab">code block</span>
+- Anything written inside of the `do` and `end` is referred to as the ***code block***
 
 We can also read through annotations of the same code snippet to understand what each part does: 
 
@@ -94,31 +94,31 @@ end
 
 Use the `each` method to solve each problem. You can do this work in the place that works best for you - `irb`, a Ruby file you create and open in VS Code, or somewhere else.
 
-<div class="s-card">
+<div>
   <p>Print out a greeting to each friend:</p>
   <p><code>friends = ["Joe", "Jeff", "Alex", "Justina"]</code></p>
 </div>
 <br>
 
-<div class="s-card">
+<div>
   <p>Find the square of each number:</p>
   <p><code>numbers = [2, 4, 6, 8, 10, 12]</code></p>
 </div>
 <br>
 
-<div class="s-card">
+<div>
   <p>Print out each String in reverse (not sure how to do that? Google!):</p>
   <p><code>words = ["sunny", "beach", "waves", "relax"]</code></p>
 </div>
 <br>
 
-<div class="s-card">
+<div>
   <p>Challenge: Print out numbers that are greater than 10:</p>
   <p><code>numbers = [10, 11, 7, 19, 4, 52, 89, 9, 12, 10]</code></p>
 </div>
 <br>
 
-<div class="s-card">
+<div>
   <p>Challenge: Print out only names that begin with "P":</p>
   <p><code>names = ["Pilar", "Peach", "Pamela", "Tan", "Amanda", "Phil"]</code></p>
 </div>
