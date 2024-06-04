@@ -44,7 +44,7 @@ In the diagram below, we would say that there's a directory called `essays` that
 </div>
 <br>
 
-<div class="s-card s-border-yellow-500">
+<div>
   <h3>Things to Note</h3>
   <ol>
     <li>A file cannot be inside of another file. This means that every part of the path <strong>before</strong> the actual file is a directory. </li>
@@ -93,7 +93,7 @@ Your Terminal will look something like this:
 To open your terminal, we will use a Mac built-in keyboard shortcut. Press `cmd` + `spacebar` and a bar in the middle of your screen should open. This is your Spotlight and it can help you quickly find applications on your laptop. In the spotlight, start typing `Term` for terminal. It should automatically find the Terminal application. Hit `enter` and it should open!
 
 <section class="note">
-<div class="s-card">
+<div>
   <h3>Independent Research</h3>
   <p><em>Be prepared: You are about to be asked to go reseach a technical topic you have received no instruction on. This might feel scary! You might be wondering if it's a mistake! It's not - this is a big part of Turing's teaching and learning, and something we are sending you all the way into on your very first day. It might feel challenging or uncomfortable - sit with that feeling, embrace it, and push yourself to engage!</em></p>
   <p>Take 3 minutes (max) to research each of the following Terminal commands: <code>pwd</code>, <code>touch</code>, and <code>cd ..</code>. Take note of what you learn and any questions that arise from this research.</p>
@@ -101,7 +101,7 @@ To open your terminal, we will use a Mac built-in keyboard shortcut. Press `cmd`
 <br>
 </section>
 
-<div class="s-card s-border-yellow-500">
+<div>
   <h3>Reflection</h3>
   <ul>
     <li>How did it feel to research a technical topic?</li>
@@ -230,7 +230,7 @@ literary_analysis.docx    book_report.docx
 </div>
 </div>
 
-<div class="s-card s-border-yellow-500">
+<div>
   <h3>Things to Note</h3>
   <p>You can't pick any random directory from your computer to give to the <code>cd</code> command. It has to be a directory that is directly inside the current working directory (or you need to use the full path to get to that directory, which we won't talk about in this lesson).</p>
 </div>
@@ -254,7 +254,7 @@ Notice that my path no longer includes `book_projects` because I'm outside of th
 </section>
 
 <br>
-<div class="s-card">
+<div>
 <h3>Try It: <code>cd and cd ..</code></h3>
 <p>Using what you've learned, type a response to each prompt in the associated input field. If you aren't sure or want to check yourself, this is a great topic to bring up in your small group Slack channel.</p>
 <div style="display: flex;">
@@ -276,7 +276,7 @@ Notice that my path no longer includes `book_projects` because I'm outside of th
 </div>
 <br>
 
-<div class="s-card s-border-yellow-500">
+<div>
   <h3>Things to Note</h3>
   <ul>
     <li>Each level in the path is separated by a <code>/</code></li>.
@@ -333,7 +333,7 @@ chapter_2.md
 ```
 
 <section class="note">
-<div class="s-card s-border-yellow-500">
+<div>
   <h3>Things to Note</h3>
   <ul>
     <li>A file removed using the <code>rm</code> command <strong>does not</strong> go into your trash where you could restore it later.</li>
@@ -356,7 +356,7 @@ timo@Tims-MacBook-Pro:~/latest_projects$ rm -rf books
 
 Now when I run `ls`, I will no longer see `books` listed.
 
-<div class="s-card">
+<div>
 <h3>Try It: Removing files (<code>rm</code>) and directories (<code>rm -rf</code>)</h3>
 <p>Using what you've learned, type a response to each prompt in the associated input field. If you aren't sure or want to check yourself, this is a great topic to bring up in your small group Slack channel.</p>
 <div style="display: flex;">
