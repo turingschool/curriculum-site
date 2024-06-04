@@ -10,18 +10,18 @@ title: Terminal
 
 ## Vocabulary
 
-- <span class="vocab">child</span>
-- <span class="vocab">command</span>
-- <span class="vocab">directory</span>
-- <span class="vocab">file</span>
-- <span class="vocab">file path</span>
-- <span class="vocab">"run a command"</span>
-- <span class="vocab">parent</span>
-- <span class="vocab">Terminal</span>
+- ***child*** 
+- ***command*** 
+- ***directory*** 
+- ***file*** 
+- ***file path*** 
+- ***"run a command"*** 
+- ***parent*** 
+- ***Terminal*** 
 
 ## Files, Directories, and Paths
 
-On your computer, you probably have many <span class="vocab">files</span> and <span class="vocab">directories</span>. Files are things like text documents, images, videos, PDFs, etc. Directories (or folders) are the structures we use to organize these files.
+On your computer, you probably have many ***files*** and ***directories***. Files are things like text documents, images, videos, PDFs, etc. Directories (or folders) are the structures we use to organize these files.
 
 In the diagram below, we would say that there's a directory called `essays` that contains three files: `life_lessons.docx`, `book_report.docx`, and `literary_analysis.docx`:
 
@@ -32,7 +32,7 @@ In the diagram below, we would say that there's a directory called `essays` that
 <img src="./assets/terminal/files_directories_1.png" alt="files and directories 1">
 
   <div>
-<p>A <span class="vocab">file path</span> is a way to notate where a file "lives" on your computer. This is the structure:</p>
+<p>A ***file path*** is a way to notate where a file "lives" on your computer. This is the structure:</p>
 <pre>directory_name/file_name.extension</pre>
 <p>The file path for the first file in the diagram would be:</p>
 <pre>essays/life_lessons.docx</pre>
@@ -78,13 +78,13 @@ In the diagram below, we would say that there's a directory called `essays` that
 
 <div class="s-card s-border-yellow-500">
   <h3>Things to Note</h3>
-  <p>We commonly refer to directories with an analogy of <span class="vocab">parent</span> and <span class="vocab">child</span>. In the previous example, <code>to_do</code> is the parent directory of the <code>personal</code> and <code>work</code> directories. <code>projects_to_delegate</code> is a child directory of the <code>work</code> directory.</p>
+  <p>We commonly refer to directories with an analogy of ***parent*** and ***child***. In the previous example, <code>to_do</code> is the parent directory of the <code>personal</code> and <code>work</code> directories. <code>projects_to_delegate</code> is a child directory of the <code>work</code> directory.</p>
 </div>
 <br>
 
 ## Terminal
 
-The <span class="vocab">Terminal</span> is a program we use to give <span class="vocab">commands</span>, or directions, to the computer. We use the Terminal because it is a faster and more precise way to navigate our file systems, and certain tools can only be downloaded and accessed via the Terminal. In this lesson, you will learn 9 commonly used commands, but there are many more you'll learn throughout your time at Turing and in your career.
+The ***Terminal*** is a program we use to give ***commands***, or directions, to the computer. We use the Terminal because it is a faster and more precise way to navigate our file systems, and certain tools can only be downloaded and accessed via the Terminal. In this lesson, you will learn 9 commonly used commands, but there are many more you'll learn throughout your time at Turing and in your career.
 
 Your Terminal will look something like this:
 
