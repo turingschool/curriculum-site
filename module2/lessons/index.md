@@ -11,4 +11,4 @@ title: Module 2 - Lessons
 * [Getting Job Hunt Ready](https://docs.google.com/presentation/d/e/2PACX-1vTDlRAiXiR_PSsAFGQtP8je_pcUWmLdk1kYc4jO4hTyzxDuksNWUMdUITMNXp1pRFMM0gKDiAVyXL0c/pub?start=false&loop=false&delayms=3000)
 
 ## HTML and CSS
-[HTML: Fundamentals](./html_fundamentals)
+* [HTML: Fundamentals](./html_fundamentals)
