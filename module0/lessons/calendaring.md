@@ -3,7 +3,7 @@ layout: page
 title: Calendaring & Time Management
 ---
 
-<div class="s-card s-border-yellow-500">
+<div>
   <h3>Prepare to Engage</h3>
   <p>Whether you are starting your day with this activity or wrapping up a long day of technical work with this, take a moment to ground yourself in why you became a student at Turing. This Career Development work is arguably the most valuable component of your education that will lead you into your new career.</p>
   <p>Take a moment to reset if needed, meditate, or do some physical stretches/movement to get yourself into the space you need to be in to engage in this work. Some optional guiding questions follow.</p>
@@ -25,7 +25,7 @@ Turing is a full-time, immersive program. You are going to learn the technical a
 
 Most students estimate they work an **average of 65-75 hours per week** at Turing; some weeks with fewer hours, some weeks with more hours. While at Turing, **time** is your most valuable commodity. How you use your time will be a determining factor in your overall success in the program.
 
-<div class="s-card">
+<div>
   <h3>65-75 hours per week</h3>
   <p>In whatever way makes most sense to you, visualize what 65-75 hours per week would look like on a daily basis.</p>
   <p>Think about the details of that "daily" life. If you said you'd work ~10 hours/day - what do you do with your other 14? How do you plan in time to eat? How many hours are allotted to sleep? When do you grocery shop? Spend time with family? Walk the dogs? And whatever else is important or essential to you?</p>
@@ -54,7 +54,7 @@ One strategy we’ve seen our most successful students employ is using some type
 
 Mod 0 is short and fast! That may lead us to believe we don't have much time to manage, so we shouldn't worry about it. But, every minute matters, even more so when it is so fast-paced.
 
-<div class="s-card">
+<div>
   <h3>Mod 0 Calendar</h3>
   <ul>
     <li>Consider what you are currently using for a calendaring tool. If you don't have anything, Google Calendar is a great place to start.</li>
@@ -82,7 +82,7 @@ Since each Mod is only 6 weeks long, if you fall behind by one week, it can be r
 
 The <a href="https://curriculum.turing.edu/calendars/calendars.html" target="_blank">module calendars</a> are available for you to add to your calendar or bookmarks. These calendars won't _yet_ have detailed agendas for your first few weeks, but you can revisit the first few weeks of the previous inning (either 7 or 8 weeks before your start date) to understand what your first few weeks will look like. The calendar is subject to change slightly, but this will give you an idea of what the day-to-day experience will be like.
 
-<div class="s-card">
+<div>
   <h3>Mod 1 Calendar</h3>
   <p>Similar to what you did for Mod 0, create a calendar for your first 2 weeks of Mod 1. Keep in mind that these weeks won't be quite as detailed as your Mod 0 calendar, because you don't know as much about the details of each task. As you begin the program, you'll likely add in specific tasks, but for now, you want a general idea of what to expect. Consider your personal needs, relationships, and hours you work best. Your calendar should include the following:</p>
   <ul>

@@ -11,18 +11,18 @@ title: Data Types
 
 ## Vocabulary
 
-- <span class="vocab">assignment operator</span>
-- <span class="vocab">Boolean</span>
-- <span class="vocab">Data Type</span>
-- <span class="vocab">Float</span>
-- <span class="vocab">Integer</span>
-- <span class="vocab">irb</span> (interactive Ruby)
-- <span class="vocab">String</span>
-- <span class="vocab">variable</span>
+- ***assignment operator***
+- ***Boolean***
+- ***Data Type***
+- ***Float***
+- ***Integer***
+- ***irb*** (interactive Ruby)
+- ***String***
+- ***variable***
 
 ## Where To Run Code
 
-By the end of this lesson, you'll be able to use the Terminal, specifically a tool called <span class="vocab"><code>irb</code></span>, to run and check your code. This is a great tool for a beginner, as well as a seasoned software developer, to have. `irb` will allow you to explore and learn Ruby and test out code you've written in a low-stakes environment. It is quick and easy to open up the Terminal and run your code immediately.
+By the end of this lesson, you'll be able to use the Terminal, specifically a tool called ***<code>irb</code>***, to run and check your code. This is a great tool for a beginner, as well as a seasoned software developer, to have. `irb` will allow you to explore and learn Ruby and test out code you've written in a low-stakes environment. It is quick and easy to open up the Terminal and run your code immediately.
 
 ### `irb`: Tips & Tricks
 
@@ -31,7 +31,7 @@ By the end of this lesson, you'll be able to use the Terminal, specifically a to
 - The font size of your terminal can be increased or decreased with shortcuts `cmd + +` or `cmd + -`.
 - To exit the `irb` session, type `exit` in all lowercase, then press `return`.
 
-<div class="s-card">
+<div>
   <h3>Practice: <code>irb</code></h3>
   <ul>
     <li>Open the Terminal using Spotlight.</li>
@@ -43,11 +43,11 @@ By the end of this lesson, you'll be able to use the Terminal, specifically a to
 
 ## Data Types
 
-In this lesson, we will use 4 of Ruby's Data Types. A <span class="vocab">Data Type</span> classifies each piece of data in a Ruby program.
-- <span class="vocab">String</span> - Any series of characters (alpha, numeric, or symbol) between quotation marks
-- <span class="vocab">Integer</span> - Any whole positive or negative number, including 0
-- <span class="vocab">Float</span> - Any positive or negative number that involves a decimal
-- <span class="vocab">Boolean</span> - `true` or `false`
+In this lesson, we will use 4 of Ruby's Data Types. A ***Data Type*** classifies each piece of data in a Ruby program.
+- ***String*** - Any series of characters (alpha, numeric, or symbol) between quotation marks
+- ***Integer*** - Any whole positive or negative number, including 0
+- ***Float*** - Any positive or negative number that involves a decimal
+- ***Boolean*** - `true` or `false`
 
 To connect to how these data types are used in an application we all have some experience with, consider the steps you took to enroll at Turing in the Populi application:
 - **String** - You provided your email address and it was stored as a string, for example: `"helloworld@gmail.com"`
@@ -55,7 +55,7 @@ To connect to how these data types are used in an application we all have some e
 - **Float** - You paid your deposit and that amount was stored as `1200.00`
 - **Boolean** - Once you paid your deposit, the "paid deposit" field said `true`
 
-<div class="s-card">
+<div>
   <h3>Deciding on a Data Type</h3>
   <p>For each of the items listed below, determine which Data Type seems most appropriate to store it as. If you are unsure of any, start a discussion in your Slack group.</p>
   <ul>
@@ -77,11 +77,11 @@ Pieces of data in the various types we've discussed so far are valid Ruby code j
 
 However, if we ever want to reference that email address ever again in our code, the only way would be to read that part of the screen and manually type it out again - and that's not going to make for a very efficient application.
 
-<span class="vocab">Variables</span> are what allow us to store data in a Ruby program. We can think of them as storage containers that hold items we care about and want to keep track of. The label on top of that container is what we can compare to a variable _name_. Variables can store any of the Data Types we've learned today as well as others that you'll learn about in upcoming lessons.
+***Variables*** are what allow us to store data in a Ruby program. We can think of them as storage containers that hold items we care about and want to keep track of. The label on top of that container is what we can compare to a variable _name_. Variables can store any of the Data Types we've learned today as well as others that you'll learn about in upcoming lessons.
 
 ### Variable Syntax
 
-In Ruby, we define variables by typing the name of the variable we wish to create, the <span class="vocab">assignment operator</span>, then the value being stored.
+In Ruby, we define variables by typing the name of the variable we wish to create, the ***assignment operator***, then the value being stored.
 
 ```ruby
 email = "helloworld@gmail.com"
@@ -102,7 +102,7 @@ Naming can be hard, but is important to be thoughtful about and follow conventio
 - All Ruby variables should use `snake_case` - all characters should be lowercase; in multi-word variables, words should be separated with an underscore.
 - Variable names should describe the type of data they hold without being overly verbose or specific (examples: `name`, `email`, etc. non-examples: `x`, `ftga23`, `name_of_incoming_mod_1_back_end_student`).
 
-<div class="s-card">
+<div>
   <h3>Naming Conventions</h3>
   <p>Wherever you take notes, write down each of the following variable names and classify it as a strong variable name that follows Ruby conventions <em>or</em> a poor variable name. Explain why you deemed any variable name a poor one.</p>
   <ul>
@@ -140,7 +140,7 @@ deposit_paid = true
 deposit_paid
 ```
 
-<div class="s-card">
+<div>
   <h3>Variables Practice</h3>
   <ul>
     <li>Open an <code>irb</code> session.</li>
