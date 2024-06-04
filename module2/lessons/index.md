@@ -12,3 +12,7 @@ title: Module 2 - Lessons
 
 ## HTML and CSS
 * [HTML: Fundamentals](./html_fundamentals)
+
+
+## Additional Resources
+* [Chrome Dev Tools](./chrome_dev_tools)

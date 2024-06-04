@@ -12,7 +12,7 @@ tags: html, introduction, practice
 
 ## Pre-Work
 
-Spend 15-20 minutes reading, watching, and completing the content in the [Chrome Dev Tools](./chrome-dev-tools) resource before attending class.
+Spend 15-20 minutes reading, watching, and completing the content in the [Chrome Dev Tools](./chrome_dev_tools) resource before attending class.
 
 ## Vocabulary
 
@@ -232,7 +232,7 @@ Now that you know what clean, correctly indented HTML looks like, and some of th
 </section>
 
 ## Additional Practice
-* [HTML Review Workshop - Structure, Semantics](https://frontend.turing.edu/lessons/module-1/html-semantic-element-review.html)
+* [HTML Review Workshop - Structure, Semantics](./html_semantic_element_review)
 
 ## Additional Resources
 
