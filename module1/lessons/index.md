@@ -35,7 +35,7 @@ title: Module 1 - Lessons
 * [Test Driven Development](./test_driven_development)
 
 ## Debugging
-<!-- * [Debugging Exercises](!needs lesson plan!) -->
+* [Async Intro to Debugging](./debugging_prework)
 <!-- * [Debugging Techniques](./debugging_techniques) -->
 * [Using ChatGPT Effectively](./chatgpt)
 
