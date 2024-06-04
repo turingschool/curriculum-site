@@ -3,7 +3,7 @@ layout: page
 title: Object-Oriented Programming
 ---
 
-<div class="s-card s-border-yellow-500">
+<div>
   <h3>Learning Collaboratively</h3> 
   <p>This lesson is intended for 2-3 students to work through together. Learning collaboratively likely means moving through content slower, but also should result in learning more thoroughly. In addition to working together, this learning environment is new for all students - take time to learn about strategies your partner uses, tips they have, etc. as well as share your best practices!</p>
   <p>To make sure you are set up for success, get yourself prepared for a pairing-like environment. Fill your water bottle, put your phone aside, and be ready to fully engage.</p>
@@ -18,13 +18,13 @@ title: Object-Oriented Programming
 
 ## Vocabulary
 
-- <span class="vocab">attribute</span>
-- <span class="vocab">class</span>
-- <span class="vocab">instance method</span>
-- <span class="vocab">object instance</span>
-- <span class="vocab">Object-Oriented Programming (OOP)</span>
+- ***attribute***
+- ***class***
+- ***instance method***
+- ***object instance***
+- ***Object-Oriented Programming (OOP)***
 
-<div class="s-card s-border-yellow-500">
+<div>
   <h3>Share with Partner</h3> 
   <p>What do you do with the Vocabulary sections? How do you ensure you can fluently define and use all terms listed, by the end of the lesson?</p>
 </div>
@@ -32,7 +32,7 @@ title: Object-Oriented Programming
 
 ## What is OOP?
 
-Back End Engineering is concerned with the management of data for an application. There are different ways we can structure the data itself as well as the systems that manage it. <span class="vocab">Object-Oriented Programming (OOP)</span> is one way to design a program to manage the data in a Back End.
+Back End Engineering is concerned with the management of data for an application. There are different ways we can structure the data itself as well as the systems that manage it. ***Object-Oriented Programming (OOP)*** is one way to design a program to manage the data in a Back End.
 
 OOP is not exclusive to Ruby! In fact, many of the most widely used programming languages follow the patterns of OOP, including Java, C#, and Python.
 
@@ -51,11 +51,11 @@ With the information above, in theory, the manager at the factory should be able
 
 That example about the car factory ties directly to concepts of OOP. We will use three main technical terms today. They are below, with the connection to the car factory example:
 
-- <span class="vocab">class</span> - A class is like a blueprint or template. The factory machines are designed to make a car - that is the template for ALL Ford Escapes. We could probably name it the `EscapeCar` class.
-- <span class="vocab">object instance</span> - An instance is an object that is made from the class template. The blue Escape that the manager requested (and was able to physically sit in and drive) is referred to as an object or instance of the `EscapeCar` class.
-- <span class="vocab">attribute</span> - An attribute is a specific characteristic about an instance that has the potential of varying from other instances. With our Escapes, color, interior and engine would be attributes, because they weren’t programmed into the template, but were extra information the manager was able to give for each specific instance of that class. The fact that the Escape has four wheels may also be an attribute; but it's not a dynamic attribute since all Escapes have four wheels.
+- ***class*** - A class is like a blueprint or template. The factory machines are designed to make a car - that is the template for ALL Ford Escapes. We could probably name it the `EscapeCar` class.
+- ***object instance*** - An instance is an object that is made from the class template. The blue Escape that the manager requested (and was able to physically sit in and drive) is referred to as an object or instance of the `EscapeCar` class.
+- ***attribute*** - An attribute is a specific characteristic about an instance that has the potential of varying from other instances. With our Escapes, color, interior and engine would be attributes, because they weren’t programmed into the template, but were extra information the manager was able to give for each specific instance of that class. The fact that the Escape has four wheels may also be an attribute; but it's not a dynamic attribute since all Escapes have four wheels.
 
-<div class="s-card">
+<div>
   <h3>Brainstorm & Share</h3> 
   <p>Each partner should do this independently: Pick an object that you see in the physical space you are in. It could be a candle, water bottle, glove, anything!</p>
   <ul>
@@ -84,7 +84,7 @@ Answers to the questions above are available on line 50 of the replit, if you’
 
 In the previous section, you identified an object in your physical space and wrote a list of instances and attributes. The Navigator in this activity will direct their Driver to write a Ruby program that represents this object.
 
-<div class="s-card">
+<div>
   <h3>Driver-Navigator</h3> 
   <p>The person with the largest number of characters in their name is the Driver, the other is the Navigator. The Navigator should have this document opened, and the Driver should be screen sharing with their Terminal opened. The Navigator will direct the Driver through the steps listed below.</p>
   <ul>
@@ -102,7 +102,7 @@ In the previous section, you identified an object in your physical space and wro
 
 With the class you wrote in the previous activity try to print out _just_ one attribute. Does it work?
 
-<div class="s-card">
+<div>
   <h3>Problem Solving</h3> 
   <p>Use the resource provided and work together to implement the <code>attr_reader</code>. Work to build an understanding of its utility.</p>
   <p><a href="https://www.educative.io/edpresso/what-is-attrreader-in-ruby" target="blank">You'll need to allow read access with an <code>attr_reader</code></a> inside the class definition.</p>
@@ -135,7 +135,7 @@ In the example above, <code>car1</code> will have "front-wheel" drive by default
 
 Information, even when we include dynamic information, about an object is not always enough. In software engineering, we also want the ability to change information about an object. We will use instance methods to accomplish this.
 
-<span class="vocab">Instance methods</span> are methods defined by the developer that can be called on any existing instance object of that class. What follows is an example to illustrate the syntax:
+***Instance methods*** are methods defined by the developer that can be called on any existing instance object of that class. What follows is an example to illustrate the syntax:
 
 ```ruby
 class EscapeCar
@@ -174,7 +174,7 @@ We won’t get all the way there in illustrating it today, but, we can look at I
 
 Many times, you'll build a class based on specifications (commonly referred to as specs). They will usually be written in the form of tests, which we will learn about later. For now, use the specifications below to write a class and object instances from it. You should struggle a bit while completing this, but do your best and try _something_!
 
-<div class="s-card">
+<div>
   <h3>Dino Class Specifications</h3> 
   <ul>
     <li>In a new file, write a class called <code>Dino</code>.</li>
