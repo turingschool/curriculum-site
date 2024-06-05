@@ -33,8 +33,8 @@ You will complete two assessments and three weekly Independent Challenges in Mod
   * You must earn a _Meets Expectations_ on the Week 6 Final IC to be promoted to Module 2. Students who do not will be offered a re-take.
 
 ### Independent Challenges
-* Weekly Independent Challenges (ICs)
-  * Weeks 2, 4, 5 (aka "Week 2 IC", "Week 4 IC", etc.)
+* Independent Challenges (ICs)
+  * Week 3, Week 4 (optional), and Week 5 
   * The weekly IC's are evaluated, but do not count toward promotion. They are practice for the final Week 6 IC.
 
 Student can find independent challenges to practice [here](https://github.com/turingschool-examples/se-mod1-exercises/blob/main/practice_independent_challenges/README.md). 
