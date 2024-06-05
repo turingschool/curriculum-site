@@ -285,14 +285,19 @@ p result.first # => #<Name:0x00007fa22cfe7dd0 @year=nil, @bio_gender=nil, @ethni
 
 </section>
 
-## Check for Understanding
+<section class="checks-for-understanding">
+
+### Check for Understanding
 
 * What happens if you create a class method and an instance method with the same name?
 * What happens if you call an instance method from within a class method?
 * What about a class method from within another class method?
 * How would you explain the difference between class and instance methods to someone else?
 
+</section>
+
 ## Additional Resources
 
 [Class Methods Review w/ Launch School](https://launchschool.com/books/oo_ruby/read/classes_and_objects_part2)
+
 [Dig Deeper On Class Methods w/ ThoughtBot](https://robots.thoughtbot.com/meditations-on-a-class-method)
