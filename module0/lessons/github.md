@@ -16,12 +16,12 @@ GitHub is a cloud-based Git repository where developers can store and manage the
 
 ## Vocabulary
 
-- <span class="vocab">repository</span>
-- <span class="vocab">local</span>
-- <span class="vocab">remote</span>
-- <span class="vocab">push</span>
-- <span class="vocab">fork</span>
-- <span class="vocab">clone</span>
+- ***repository***
+- ***local***
+- ***remote***
+- ***push***
+- ***fork***
+- ***clone***
 
 ## Warm-Up
 
@@ -29,7 +29,7 @@ Before we dive into creating GitHub repositories, let's take a moment to get com
 
 <img src="./assets/curriculum-repo-page.png" alt="Screen shot of a GitHub repo">
 
-<div class="s-card s-border-yellow-500">
+<div>
   <h3>Key Information on a GitHub Repository</h3>
   <p><a href="https://github.com/ameseee/cover" target="blank">Visit this repository</a> and answer the following:</p>
   <ul>
@@ -43,7 +43,7 @@ Before we dive into creating GitHub repositories, let's take a moment to get com
 
 ## Connecting a Local and Remote Repository
 
-There are many ways to create and connect <span class="vocab">local</span> (on your machine) and <span class="vocab">remote</span> (in the cloud) repositories. We can't go through every combination of ways to do that, so we will focus on one. Once you are comfortable with this way, if you find another way to achieve the same outcome, you can absolutely use that.
+There are many ways to create and connect ***local*** (on your machine) and ***remote*** (in the cloud) repositories. We can't go through every combination of ways to do that, so we will focus on one. Once you are comfortable with this way, if you find another way to achieve the same outcome, you can absolutely use that.
 
 1. Create a directory called `github_practice` and add a file in that directory with the title of your program: `ruby.md` or `javascript.md`.
 1. Initialize a Git repository in your `github_practice` repository.
@@ -59,7 +59,7 @@ There are many ways to create and connect <span class="vocab">local</span> (on y
 What follows is a diagram that breaks down the anatomy of the `git push -u origin main` command:
 <img src="./assets/command-anatomy.png" alt="Anatomy of git push -u origin main command">
 
-<div class="s-card">
+<div>
   <h3>Practice</h3>
   <p>Follow the steps listed above to connect a local Git repository with a GitHub repository.</p>
 </div>
@@ -75,14 +75,14 @@ git push
 
 Since we used the `-u origin main` in our original push to connect the two repos, we already established main as the upstream branch. For subsequent pushes, we can take out that part of the command and simply use <code>git push</code>. _Note:_ If you did not use `-u` to set the upstream, you'll simply type `git push origin main` every time.
 
-After running this command, Git will send your work up to GitHub (you must be connected to the internet), and you'll get many lines of output, finally telling you the work was successfully sent up. Refresh your GitHub browser tab, and the changes will be available there. <span class="vocab">Pushing</span> work up to a repository is the act of using Git commands to send the most recent commits on a local repository up to the remote repository.
+After running this command, Git will send your work up to GitHub (you must be connected to the internet), and you'll get many lines of output, finally telling you the work was successfully sent up. Refresh your GitHub browser tab, and the changes will be available there. ***Pushing*** work up to a repository is the act of using Git commands to send the most recent commits on a local repository up to the remote repository.
 
 <section class="note">
 For the extent of our work with Git and GitHub workflows _during Mod 0_, you will primarily be pushing work up. It is definitely possible to also pull down changes from a remote repository to your local repository, but you will only need to do this if you make changes in the remote repository by mistake. <strong>Please remember to always make edits to files on your local machine and then push them up!</strong> This will avoid any merge conflicts.
 </section>
 
 <br>
-<div class="s-card">
+<div>
   <h3>Practice</h3>
   <p>In your previous repository, make two rounds of changes in the file you created, adding and committing those changes each time. When you're finished, push those changes to GitHub.</p> 
   <p><em>Note: All of these changes should be made in VS Code, not directly in GitHub!</em></p>
@@ -100,7 +100,7 @@ The most common issue on that first round of practice is that students connect t
 1. Now that you're connected to the correct remote repository, you can run those two commands to establish the main branch and push your work: `git branch -M main` and `git push -u origin main`.
 
 <br>
-<div class="s-card">
+<div>
   <h3>More Practice: Git & GitHub Workflow</h3>
   <p>Follow the steps below to practice connecting a local repository to a remote repository.</p>
   <ul>
@@ -119,7 +119,7 @@ The most common issue on that first round of practice is that students connect t
 
 ## Forking and Cloning Repositories
 
-Often, you won't be creating a project from scratch. What if you want to create a copy of an already-existing GitHub repository and work from that repository? We can <span class="vocab">fork</span> a GitHub repository to make a copy of it on our own GitHub account. Or what if the company you're working for already has an application and you need to make changes to it? We can <span class="vocab">clone</span> a GitHub repository to our local machine, so that we can continue making changes from that already existing repository.
+Often, you won't be creating a project from scratch. What if you want to create a copy of an already-existing GitHub repository and work from that repository? We can ***fork*** a GitHub repository to make a copy of it on our own GitHub account. Or what if the company you're working for already has an application and you need to make changes to it? We can ***clone*** a GitHub repository to our local machine, so that we can continue making changes from that already existing repository.
 
 The diagram below visually shows the difference between forking and cloning a repository. In some cases, you may want to both fork and clone a repository. Forking allows you to create your own copy of a remote repository on your GitHub account and then cloning lets you edit and push changes up to your copy of the original repository.
 <br>
@@ -136,7 +136,7 @@ To fork and clone a pre-existing GitHub repository, follow the steps below.
 1. Add and commit your changes. Note: This is not the "Initial commit" on this repo.
 1. Push your changes to GitHub using `git push` and refresh your browser to see those changes reflected in the remote repository.
 
-<div class="s-card s-border-yellow-500">
+<div>
   <h3>Things to Note</h3>
   <p>A few things are a little different when you are cloning down a repository compared to creating your own repo from scratch.</p>
   <ol>
@@ -147,7 +147,7 @@ To fork and clone a pre-existing GitHub repository, follow the steps below.
 </div>
 
 <br>
-<div class="s-card">
+<div>
   <h3>More Practice: Forking & Cloning</h3>
   <p>Work through this prompt independently.</p>
   <ul>
@@ -182,7 +182,7 @@ Other common issues we've seen with students include:
 
 All of these issues can be corrected. The important thing is to reach out for help sooner rather than later. 
 
-<div class="s-card s-border-yellow-500">
+<div>
   <h3>Quick Tip</h3>
   <p>To see if you initialized git in a repository, use <code>ls -a</code> to show hidden files. If you see a hidden <code>.git</code> directory, that means that you have initialized git in that directory. If you don't want to have git tracking in that repository, you can remove it with <code>rm -rf .git</code>.</p>
 </div>

@@ -11,8 +11,8 @@ title: Markdown
 
 ## Vocabulary
 
-- <span class="vocab">Gist</span>
-- <span class="vocab">Markdown</span>
+- ***Gist***
+- ***Markdown***
 
 ## Reminder
 
@@ -20,11 +20,13 @@ If at any time throughout this lesson you feel lost, are unsure of something, or
 
 ## Gists on GitHub
 
-Gists are an easy way to share code with others and they are often used to document technical processes and information. We usually write the information in our <span class="vocab">Gists</span> in a user-friendly language called Markdown.
+Gists are an easy way to share code with others and they are often used to document technical processes and information. We usually write the information in our ***Gists*** in a user-friendly language called Markdown.
 
 ## Markdown
 
-<span class="vocab">Markdown</span> is a lightweight markup language that converts to HTML and can be displayed on the web. It is used widely in the tech industry for documentation. You'll use it in various ways at Turing. Most frequently, you'll use it to document and showcase your projects!
+***Markdown*** is a lightweight markup language that converts to HTML and can be displayed on the web. It is used widely in the tech industry for documentation. You'll use it in various ways at Turing. Most frequently, you'll use it to document and showcase your projects!
+
+<br/>
 
 ## Markdown Practice
 
@@ -57,7 +59,7 @@ Use the tips and guidance that follows to ensure you complete it successfully.
 <br/>
 <br/>
 
-<div class="s-card">
+<div>
   <h3>Markdown Practice - Mod 0 Plan</h3>
   <p>Document your personal plan for success in Mod 0 while incorporating each of the following Markdown elements into your Gist:</p>
   <ul>
@@ -100,7 +102,10 @@ puts "Dear #{name} -- #{affirmation}"
 
 To create the `fenced code block`, we use three backtics on a single line to open the fenced code block, followed by several lines of code, and another set of three backtics on a single line to close the code block.
 
-<div class="s-card">
+<br/>
+<br/>
+
+<div>
   <h3>Markdown Practice - Round 2</h3>
   <p>Update your gist with both types of code blocks.</p>
   <ul>
@@ -121,6 +126,8 @@ When you are finished editing your Mod 0 Plan, click the green `Create secret gi
 8. A link
 9. An inline code block
 10. A fenced code block
+
+<br/>
 
 ## Check For Understanding
 

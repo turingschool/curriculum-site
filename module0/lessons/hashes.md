@@ -11,11 +11,11 @@ title: Hashes
 
 ## Vocabulary
 
-- <span class="vocab">Hash</span>
-- <span class="vocab">hash rocket</span>
-- <span class="vocab">key</span>
-- <span class="vocab">key-value pair</span>
-- <span class="vocab">value</span>
+- ***Hash***
+- ***hash rocket***
+- ***key***
+- ***key-value pair***
+- ***value***
 
 ## Warm-Up
 
@@ -28,13 +28,13 @@ students = ["Cristie Soto", "A+", "B", "in progress", true, "Oscar Smith", "A-",
 
 ## Hashes
 
-Hashes allow us to structure data in a different way than Arrays. It's not better; it's just different. Like an Array, a Hash is a data structure used for representing a collection of things. But where an Array generally represents a list of ordered, indexed values, **a <span class="vocab">Hash</span> represents a collection of _named_ values**. These names are called <span class="vocab">keys</span>, and each key has a corresponding <span class="vocab">value</span>. In a Hash, we can insert data by assigning it to a name and later retrieving it using the same name.
+Hashes allow us to structure data in a different way than Arrays. It's not better; it's just different. Like an Array, a Hash is a data structure used for representing a collection of things. But where an Array generally represents a list of ordered, indexed values, **a ***Hash*** represents a collection of _named_ values**. These names are called ***keys***, and each key has a corresponding ***value***. In a Hash, we can insert data by assigning it to a name and later retrieving it using the same name.
 
 Some languages call their Hashes _dictionaries_ for this reason – you look up a word (the label) to retrieve its definition (the data or value with which the label was associated).
 
 ## Hash Syntax
 
-- A hash is enclosed in curly braces `{ }`, <span class="vocab">key-value</span> pairs are separated by commas, and keys and values are separated by either a hash rocket (`=>`) (or a colon if the key is a symbol).
+- A hash is enclosed in curly braces `{ }`, ***key-value*** pairs are separated by commas, and keys and values are separated by either a hash rocket (`=>`) (or a colon if the key is a symbol).
 - Each key in a hash must be unique
   - If you attempt to have duplicate keys when you first create a hash, you will get a warning: `key :key_name is duplicated and overwritten on line X error`
   - If you try to add a new key-value pair using a key that already exists, that new key-value pair will overwrite the previous one - _dangerous_.
@@ -49,7 +49,7 @@ student1 = {
 - Values can be accessed with bracket notation where we call the variable holding the hash and then bracket the key that corresponds to the data we're wanting.
   - `student1["name"]` returns `"Christie Soto"`
 
-<div class="s-card">
+<div>
   <h3>Hash or Array?</h3> 
   <p>For each example, determine if a Hash or Array would be more appropriate, and explain why.</p>
   <ul>
@@ -96,7 +96,7 @@ student1 = {
 
 These two definitions for our `student1` hash produce the exact same hash, however the second is the *preferred* syntax. Please note: The colon must immediately follow the name of the key without any spaces in between.
 
-<div class="s-card">
+<div>
   <h3>Hash Syntax Practice</h3> 
   <p>Complete the following work in an <code>irb</code> session or a new Ruby file, working in VS Code:</p>
   <ol>
@@ -162,7 +162,7 @@ suitcase.values
 Note that when we use the `.keys` and `.values` Hash methods, the return value of each is an Array!
 <br>
 
-<div class="s-card">
+<div>
   <h3>Hash Syntax and Access Practice</h3> 
   <p>Use the following <code>zoo</code> variable to complete each prompt:</p>
   <pre>

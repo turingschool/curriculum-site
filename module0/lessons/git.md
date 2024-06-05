@@ -16,7 +16,7 @@ Stop at the provided prompts to take notes and complete practice exercises as in
 
 ## Practice
 
-<div class="s-card">
+<div>
   <h3>Exercise 1</h3>
   <ol>
     <li>Navigate to your home directory.</li>
@@ -38,7 +38,7 @@ Stop at the provided prompts to take notes and complete practice exercises as in
 </div>
 <br>
 
-<div class="s-card">
+<div>
   <h3>Exercise 2</h3>
   <p>Before you run each Git command, pause and predict what the output, if any, will be.</p>
   <ol>
