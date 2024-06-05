@@ -66,7 +66,7 @@ In Ruby, classes are also objects themselves. We can call methods on full classe
 
 ### Note
 
-In other languages, you may hear class methods called "static" methods, they are referring to the same thing.
+In JavaScript and other languages, you may hear class methods referred to as "static" methods, they are referring to the same thing.
 
 </section>
 
