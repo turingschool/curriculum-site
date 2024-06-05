@@ -23,7 +23,7 @@ title: Module 1 - Lessons
 * [Modules](./modules)
 <!-- * [Inheritance](./inheritance) -->
 <!-- * [CSV Workshop](./csv_walkthrough) -->
-<!-- * [Ruby Object Model](./ruby_object_model) -->
+* [Ruby Object Model (Polymorhism Sample)](./ruby_object_model_poly)
 
 ## Design
 * [Design Principles](./design_principles)
