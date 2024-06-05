@@ -1,7 +1,7 @@
 ---
 title: Class Methods
 length: 60min
-tags: ruby, class methods, OOP
+layout: page
 ---
 
 ## Learning Goals
@@ -10,11 +10,18 @@ tags: ruby, class methods, OOP
 * Use a class method to create instances of that class.
 * Distinguish between class and instance methods with the same name.
 
-
 ## Vocabulary
 
 * Instance Method
 * Class Method
+
+<section class="note">
+
+### Note
+
+In JavaScript, especially in a functional programming context, we often use functions and modules instead of classes to organize and manage data operations. This can lead to different design patterns compared to Ruby's object-oriented approach. The examples provided are what the equivalent would look like if you were coding in an object-oriented approach in JavaScript.
+
+</section>
 
 ## Lesson
 
@@ -27,7 +34,25 @@ tags: ruby, class methods, OOP
 # => "Hello, Jay!"
 ```
 
-* What do we call the method `say_hello` on? What do we call the method `new` on?
+<section class="dropdown">
+
+### Here is how you might create an instance and use a method in JavaScript
+
+```javascript
+const sam = new User("Sam");
+sam.sayHello("Jay"); // "Hello, Jay!"
+```
+
+</section>
+
+<section class="call-to-action">
+
+### In Your Notebook
+
+What do we call the method `say_hello` on? <br>
+What do we call the method `new` on?
+
+</section>
 
 ### Discussion
 
@@ -37,9 +62,17 @@ We define methods in our class, we store some state in our instance variables, w
 
 In Ruby, classes are also objects themselves. We can call methods on full classes the same way that we call methods on instances of that class (think about `.new`), the difference is how we define those methods.
 
+<section class="note">
+
+### Note
+
+In other languages, you may hear class methods called "static" methods, they are referring to the same thing.
+
+</section>
+
 ### Exploration
 
-Using the following SocialMediaUser class, think about what you expect each method to return and why. If you have time, pseudocode what you think you'd do (in words/logic, not in code) to get that return value.
+Using the following `SocialMediaUser` class, think about what you expect each method to return and why. If you have time, pseudocode what you think you'd do (in words/logic, not in code) to get that return value.
 
 ```ruby
 class SocialMediaUser
@@ -62,7 +95,7 @@ class SocialMediaUser
 end
 ```
 
-What is the difference between these methods? 
+What is the difference between these methods?
 
 #### Syntax & Uses
 
@@ -74,14 +107,31 @@ class Greeter
     puts "Hello!"
   end
 end
+
+Greeter.say_hello # => "Hello!"
 ```
 
 Then, in order to call that method we could use `Greeter.say_hello`. Note that we don't have to create an instance of this class to do this.
 
+<section class="dropdown">
+
+### Here is how you might define and use a class method in JavaScript
+
+```javascript
+class Greeter {
+  static sayHello() {
+    console.log("Hello!");
+  }
+}
+
+Greeter.sayHello(); // "Hello!"
+```
+
+</section>
+
 Why would we do this? There are a number of pieces of functionality that we might want to ascribe to a Class over a specific instance of a class. We could use the class to track information about all instances of a class, or make it so that a class is in charge of creating instances of itself in those cases where creation is not as straightforward as calling `new` and passing some variables.
 
-
-Look above at our SocialMediaUser class-- why do you think we defined `most_popular` and `find` as class methods and not instance methods? 
+Look above at our `SocialMediaUser` class-- why do you think we defined `most_popular` and `find` as class methods and not instance methods?
 
 ### Demo
 
@@ -103,20 +153,47 @@ end
 
 # runner.rb
 users = [
-    {name: "Sal"},
-    {name: "Brian"},
-    {name: "Megan"},
-  ]
+  {name: "Sal"},
+  {name: "Brian"},
+  {name: "Megan"},
+]
 
 User.create_multiple(users)
 ```
 
+<section class="dropdown">
 
+### Here is how you might handle creating multiple instances in JavaScript
 
+```javascript
+// User.js
+class User {
+  constructor(name) {
+    this.name = name;
+  }
+
+  static createMultiple(users) {
+    return users.map(user => {
+      return new User(user.name)
+    });
+  }
+}
+
+// runner.js
+const users = [
+  {name: "Sal"},
+  {name: "Brian"},
+  {name: "Megan"},
+];
+
+User.createMultiple(users);
+```
+
+</section>
 
 ## Practical Use, Experimentation
 
-In Module 2, you will learn about databases and use a library to fetch things from a database. The following exercises will allow you to explore these ideas further to give you a better understanding of what's happening within your classes that interact with the database.
+In Module 2, you will learn about databases and use a library called ActiveRecord to fetch things from a database. The following exercises will allow you to explore these ideas further to give you a better understanding of what's happening within your classes that interact with the database.
 
 ### Getting Started
 
@@ -153,49 +230,60 @@ class Name
     
     result
   end
-
+end
 ```
 
 1. Add code to the `self.find_by_name` method, which builds an array of `Name` objects that match the name column from our CSV data.
-  1. how many rows of data can you find for the following names:
-    1. Ian, MEGAN, Sal, Omar, Riley, HUNTER
-1. Build ONE alternative copy of `seld.find_by_name` for findind things specifically by another field, like `count`, `rank`, and `year`. These would be called, for instance, `self.find_by_year` etc.
+    * How many rows of data can you find for the following names:
+        * Ian
+        * MEGAN
+        * Sal
+        * Omar
+        * Riley
+        * HUNTER
+1. Build ONE alternative copy of `self.find_by_name` for finding things specifically by another field, like `count`, `rank`, and `year`. These would be called, for instance, `self.find_by_year` etc.
 1. Create a new class method called `self.where` which takes a hash of details, and builds an array of `Name` objects that match the CSV data. This method will need to copy the `CSV.read` line from our `self.find_by_name` method.
-  1. The 'key' of the hash will be a symbol that matches the name of the column in the CSV file.
-  1. For example, we might call `results = Name.where( { rank: "15" } )`
-  1. how many rows of data can you find for:
-    1. Rows with a rank of 25
-    1. Rows with a bio_gender of male? of female?
-    1. Rows with an ethnicity of "BLACK NON HISPANIC"?
+    * The 'key' of the hash will be a symbol that matches the name of the column in the CSV file.
+        * For example, we might call `results = Name.where( { rank: "15" } )`
+    * How many rows of data can you find for:
+        * Rows with a rank of 25
+        * Rows with a bio_gender of male? of female?
+        * Rows with an ethnicity of "BLACK NON HISPANIC"?
 1. Create a new class method called `self.order` which will allow us to sort data based on a hash of input.
-  1. A use-case will look like `results = Name.order( { year: :asc } )`
-    1. This would sort our CSV file by year in ascending order.
-    1. What is the first row of data that comes back?
-  1. A use-case will look like `results = Name.order( { name: :desc } )`
-    1. This would sort our CSV file by name in descending order.
-    1. What is the first row of data that comes back?
-    
-Extensions
+    * A use-case will look like `results = Name.order( { year: :asc } )`
+        * This would sort our CSV file by year in ascending order.
+        * What is the first row of data that comes back?
+    * A use-case will look like `results = Name.order( { name: :desc } )`
+        * This would sort our CSV file by name in descending order.
+        * What is the first row of data that comes back?
+
+#### Extensions
 
 1. How would you adapt your `.where` method to take multiple fields of data to match?
-  1. For example, we might call `results = Name.where( { name: "Ian", rank: "15" } )`
+    * For example, we might call `results = Name.where( { name: "Ian", rank: "15" } )`
 1. How would you adapt your `.order` method to take multiple fields of data to sort?
-  1. For example, we might call `results = Name.order( { ethnicity: :asc, name: :descending } )`
+    * For example, we might call `results = Name.order( { ethnicity: :asc, name: :descending } )`
 
 There are other methods that our database library would build for us including the following. Discuss with your partner how you would build these:
 
-- select: takes a list of fields, and only populates Name objects with the fields you choose
-  - example:
+* `select`: takes a list of fields, and only populates Name objects with the fields you choose
+  * Example:
+
 ```ruby
 result = Name.select(["name", "rank"])
-p result.first
-#<Name:0x00007fa22cfe7dd0 @year=nil, @bio_gender=nil, @ethnicity=nil, @name="Ian", @count=nil, @rank="24">
+p result.first # => #<Name:0x00007fa22cfe7dd0 @year=nil, @bio_gender=nil, @ethnicity=nil, @name="Ian", @count=nil, @rank="24">
 ```
-- limit: takes an integer parameter and returns only that many objects, eg `Name.limit(10)`
-- average: takes a field name to average, returns a float, eg `Name.average("rank")`
 
-**The `ActiveRecord` library will also build methods on-the-fly based on the attribute names.** If there is a field called "name" it will build a method called "find_by_name". If there is a field called "ethnicity", it will build a method called "find_by_ethnicity" and so on.
+* `limit`: takes an integer parameter and returns only that many objects, eg `Name.limit(10)`
+* `average`: takes a field name to average, returns a float, eg `Name.average("rank")`
 
+<section class="note">
+
+### Note 
+
+**The `ActiveRecord` library will also build methods on-the-fly based on the attribute names.** If there is a field called "name" it will build a method called `find_by_name`. If there is a field called "ethnicity", it will build a method called `find_by_ethnicity` and so on. More on this in Mod 2.
+
+</section>
 
 ## Check for Understanding
 
@@ -203,7 +291,6 @@ p result.first
 * What happens if you call an instance method from within a class method?
 * What about a class method from within another class method?
 * How would you explain the difference between class and instance methods to someone else?
-
 
 ## Additional Resources
 
