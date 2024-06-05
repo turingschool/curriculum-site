@@ -49,8 +49,8 @@ sam.sayHello("Jay"); // "Hello, Jay!"
 
 ### In Your Notebook
 
-What do we call the method `say_hello` on? <br>
-What do we call the method `new` on?
+1. What do we call the method `say_hello` on?
+2. What do we call the method `new` on?
 
 </section>
 
