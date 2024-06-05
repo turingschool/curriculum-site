@@ -21,7 +21,7 @@ title: Module 1 - Lessons
 * [Nested Iteration Workshop](./nested_iteration_workshop)
 * [Class Methods](./class_methods)
 * [Modules](./modules)
-<!-- * [Inheritance](./inheritance) -->
+* [Inheritance](./inheritance)
 <!-- * [CSV Workshop](./csv_walkthrough) -->
 <!-- * [Ruby Object Model](./ruby_object_model) -->
 
