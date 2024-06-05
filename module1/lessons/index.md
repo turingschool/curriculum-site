@@ -24,6 +24,7 @@ title: Module 1 - Lessons
 * [Inheritance](./inheritance)
 <!-- * [CSV Workshop](./csv_walkthrough) -->
 <!-- * [Ruby Object Model](./ruby_object_model) -->
+* [JavaScript Party](./js-party)
 
 ## Design
 * [Design Principles](./design_principles)
