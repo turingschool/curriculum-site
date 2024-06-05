@@ -339,6 +339,8 @@ Note that in `base_salary` and `bonus`, we are using `self.class` to refer to th
 </section>
 </section>
 
+## Conclusion
+Although this lesson has focused on inheritance showing multiple Ruby examples, these concepts are applicable to many other programming languages as well including JavaScript. While the execution can look slightly different from language to language, the main idea is that you can take the methods and attributes of a superclass and use them in a subclass, which allows you to reuse code and create a hierarchy of classes.
 
 <section class="checks-for-understanding">
 ## Check for Understanding
