@@ -17,6 +17,11 @@ layout: page
 To start, we need to make sure we have the appropriate tooling installed.
 
 * [pry](https://github.com/pry/pry) - `gem install pry`
+<section class="dropdown">
+### Javascript debugging tools
+- [Chrome DevTools](https://developer.chrome.com/docs/devtools/) - Built-in debugging tools
+- [VSCode Debugger](https://code.visualstudio.com/docs/editor/debugging) - Integrated debugging tool
+</section>
 
 We'll also be using [Erroneous Creatures](https://github.com/turingschool-examples/se-mod1-exercises/tree/main/lessons/debugging/erroneous_creatures) which is in the Debugging Lesson directory of your mod-1-be-exercises repository.
 
