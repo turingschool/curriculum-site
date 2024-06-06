@@ -18,7 +18,7 @@ To start, we need to make sure we have the appropriate tooling installed.
 
 * [pry](https://github.com/pry/pry) - `gem install pry`
 
-We'll also be using [Erroneous Creatures](https://github.com/turingschool-examples/mod-1-be-exercises/tree/main/lessons/debugging/erroneous_creatures) which is in the Debugging Lesson directory of your mod-1-be-exercises repository.
+We'll also be using [Erroneous Creatures](https://github.com/turingschool-examples/se-mod1-exercises/tree/main/lessons/debugging/erroneous_creatures) which is in the Debugging Lesson directory of your mod-1-be-exercises repository.
 
 <!-- We'll also be using the [Erroneous Creatures](https://github.com/turingschool-examples/erroneous_creatures) respository. Clone that repository so that you have a version that you can work on locally. -->
 
