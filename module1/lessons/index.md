@@ -36,7 +36,7 @@ title: Module 1 - Lessons
 
 ## Debugging
 * [Async Intro to Debugging](./debugging_prework)
-<!-- * [Debugging Techniques](./debugging_techniques) -->
+* [Debugging Techniques](./debugging_techniques)
 * [Using ChatGPT Effectively](./chatgpt)
 
 ## Version Control

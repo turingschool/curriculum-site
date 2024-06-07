@@ -7,27 +7,31 @@ layout: page
 
 ## Learning Goals
 
-* Understand how to read a stack trace
-* Understand common error messages
-* Understand how to use pry to create breakpoints in code to help verify assumptions
-* Develop a debugging process
+- Understand how to read a stack trace
+- Understand common error messages
+- Understand how to use `pry` to create breakpoints in code to help verify assumptions
+- Develop a debugging process
 
 ## Tools & Repositories
 
 To start, we need to make sure we have the appropriate tooling installed.
 
-* [pry](https://github.com/pry/pry) - `gem install pry`
+- [pry](https://github.com/pry/pry) - `gem install pry`
+<section class="dropdown">
+### Javascript debugging tools
+- [Chrome DevTools](https://developer.chrome.com/docs/devtools/) - Built-in debugging tools
+- [VSCode Debugger](https://code.visualstudio.com/docs/editor/debugging) - Integrated debugging tool
+- JavaScript developers often use `console.log()` to get visibility into their code and the data they are working with. By logging variables and outputs at different points in the code, developers can understand how data is flowing through their application and identify where things might be going wrong. For more information on console.log(), you can refer to the [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/API/console/log_static).
+</section>
 
-We'll also be using [Erroneous Creatures](https://github.com/turingschool-examples/mod-1-be-exercises/tree/main/lessons/debugging/erroneous_creatures) which is in the Debugging Lesson directory of your mod-1-be-exercises repository.
-
-<!-- We'll also be using the [Erroneous Creatures](https://github.com/turingschool-examples/erroneous_creatures) respository. Clone that repository so that you have a version that you can work on locally. -->
+We'll also be using [Erroneous Creatures](https://github.com/turingschool-examples/se-mod1-exercises/tree/main/lessons/debugging/erroneous_creatures) which is in the Debugging Lesson directory of your mod-1-be-exercises repository.
 
 
 ## Warmup
 
-* What do you do when you don't know what's going wrong with your application?
-* What do you know about `pry`?
-* What questions do you still have about `pry`?
+- What do you do when you don't know what's going wrong with your application?
+- What do you know about `pry`?
+- What questions do you still have about `pry`?
 
 ## Debugging Process
 
@@ -38,18 +42,18 @@ There are two ways that programming can go wrong:
 
 Having a debugging process when things go wrong is crucial to being an effective developer. No matter how skilled you are at coding, you will always write bugs, so it is very important to know how to hunt them down and fix them.
 
-The recommended series of steps you should take to Debug your program are:
+The recommended series of steps you should take to debug your program are:
 
-* Read your error (the WHOLE error)
-* Read your stack trace (find the error).
-* Verify your assumptions.
-* Try things.
+- Read your error (the WHOLE error)
+- Read your stack trace (find the error).
+- Verify your assumptions.
+- Try things.
 
 You might add `research` to that list, but generally research is something that you do so that you can try things.
 
 ## Stack Trace
 
-A Stack Trace shows what line of code an error occurred on, and all the method calls that led to that error. It is like a treasure map of exactly where to find the cause of the error.
+A stack trace shows the line of code where an error occurred and all the method calls that led to that error.
 
 ### Reading a Stack Trace
 
@@ -70,25 +74,39 @@ Let's look at an example. If we run the `hobbit_spec.rb` test in our erroneous_c
 
 Let's break this down line by line:
 
-* `4) Hobbit can get tired if play 3times`: This is RSpec telling us what test was running when this error occurred.
-* `NoMethodError: undefined method '>=' for nil:NilClass`: This is the actual error that occurred
-* All of the following lines are part of the **Stack Trace**:
-  * `./lib/hobbit.rb:18:in 'adult?'`: This is the first line of the stack trace, and is the line where the error actually happened. This is telling us that the error occurred in the `hobbit.rb` file on line 18. The next part, `in 'adult?'` tells us that this error happened in the `adult?` method. `hobbit.rb:18` is the most important part of the whole stack trace. It tells us the exact location of the error.
-  * `./lib/hobbit.rb:22:in 'play'`: The next line in the stack trace tells us where the `adult?` method was called from. Again, the most important part is the file and line number, `hobbit.rb` line 22. The last part, `in 'play'` is telling us that the `play` method was running when the `adult?` method was called.
-  * `./spec/hobbit_spec.rb:79:in 'block (3 levels) in <top (required)>'`: The next line in the stack trace tells us where the `play` method was called from. It was called from the `hobbit_spec.rb` file on line 79 in a block.
-  * `./spec/hobbit_spec.rb:78:in 'times'` and `./spec/hobbit_spec.rb:78:in 'block (2 levels) in <top (required)>'` are telling us that that block was part of a `times` loop that started on line `78`.
+- `4) Hobbit can get tired if play 3times`: This is RSpec telling us what test was running when this error occurred.
+- `NoMethodError: undefined method '>=' for nil:NilClass`: This is the actual error that occurred
+- All of the following lines are part of the **Stack Trace**:
+  - `./lib/hobbit.rb:18:in 'adult?'`: This is the first line of the stack trace, and is the line where the error actually happened. This is telling us that the error occurred in the `hobbit.rb` file on line 18. The next part, `in 'adult?'` tells us that this error happened in the `adult?` method. `hobbit.rb:18` is the most important part of the whole stack trace. It tells us the exact location of the error.
+  - `./lib/hobbit.rb:22:in 'play'`: The next line in the stack trace tells us where the `adult?` method was called from. Again, the most important part is the file and line number, `hobbit.rb` line 22. The last part, `in 'play'` is telling us that the `play` method was running when the `adult?` method was called.
+  - `./spec/hobbit_spec.rb:79:in 'block (3 levels) in <top (required)>'`: The next line in the stack trace tells us where the `play` method was called from. It was called from the `hobbit_spec.rb` file on line 79 in a block.
+  - `./spec/hobbit_spec.rb:78:in 'times'` and `./spec/hobbit_spec.rb:78:in 'block (2 levels) in <top (required)>'` are telling us that that block was part of a `times` loop that started on line `78`.
 
 If we chart this out as a series of method calls, it looks something like this:
 
 ```
 it 'Hobbit can get tired if play 3times' -> times -> play -> adult?
 ```
+<section class="dropdown">
+### Let's see it in JavaScript
+```
+Uncaught TypeError: Cannot read property 'push' of undefined
+    at Array.push (<anonymous>)
+    at addItem (script.js:10)
+    at HTMLButtonElement.<anonymous> (script.js:20)
+```
+- `Uncaught TypeError`: Cannot read property 'push' of undefined: This is the actual error that occurred. It tells us that the push method was called on undefined, indicating that the array we're trying to push to does not exist or is not initialized.
 
+- at `Array.push (<anonymous>)`: This line indicates that the error occurred during an anonymous call to the push method on an array. This is a built-in JavaScript method, so the error doesn't originate from user-defined code but from a misuse of this method.
+
+- `at addItem (script.js:10)`: The next line in the stack trace shows the addItem function where the push method was called. The error occurred in the script.js file on line 10. This is where we should start our investigation.
+
+- `at HTMLButtonElement`.<anonymous> (script.js:20): This final line indicates that the addItem function was called from an anonymous function attached to an HTML button element, which is defined in the script.js file on line 20.
+</section>
 ### Tracing back through our Program
 
-When we use the stack trace, we start at the top and work our way down. In this case, we start at `hobbit.rb:18` to see the line where the error occurred. The error was `undefined method '>=' for nil:NilClass`. Looking at that line of code, we can see that the variable `@age` was misspelled, causing it to be `nil`. Fixing the spelling resolves the error.
+When using a stack trace, start at the top and work your way down. Identify the file and line number where the error occurred, and understand the sequence of method calls or function invocations that led to the error.
 
-If we didn't find an error in the `play` method, we could take another step back into the `adult?` method to see if we can find an error there.
 
 ## Errors
 
@@ -112,7 +130,14 @@ When you see an error in your terminal, it can be tempting to read it as "blah b
 `syntax error, unexpected end-of-input, expecting keyword_end` - You have an extra `end` or an `end` in the wrong place. Indenting your code properly will make it MUCH easier to hunt down the offensive end.
 
 `require': cannot load such file -- file_name (LoadError)` - Ruby cannot load the file `file_name`. Make sure `file_name` is spelled correctly, the path is written correctly i.e. `./lib/file_name`, and that you are running from the root directory of your project.
+<section class="dropdown">
+### Let's see it in JavaScript:
+- `TypeError`: Cannot read property 'x' of undefined: You tried to access a property on an undefined object.
+- `ReferenceError`: x is not defined: You tried to use a variable that hasn't been declared.
+- `SyntaxError`: Unexpected token: There is a syntax error in your code.
 
+
+</section>
 ## Verifying Your Assumptions
 
 Not verifying your assumptions can be one of the costliest mistakes you make as a dev. It's possible to be *absolutely convinced* that you know exactly what's causing an error, spend hours working to resolve an issue that you're sure exists, only to later find that the error occurred long before the piece of code that held your focus so tightly.
@@ -142,7 +167,7 @@ Let's run the `hippogriff_spec.rb`, and review the errors that are generated the
     <li> Is there any setup involved before we hit that line?</li>
     <li> If so, can we use pry to confirm that the setup has been completed successfully? Do we have access to the variables that we think we do? Are they holding the objects we expect them to?</li>
     <li> What about in the Hippogriff class itself? What line is generating an error?</li>
-    <li> Use pry to verify that the variables we are using in </li>that method are holding the objects we expect them to.
+    <li> Use pry to verify that the variables we are using in that method are holding the objects we expect them to.</li>
     <li> Can you identify the error?</li>
     <li> Can you make the test pass?</li>
   </ul>
@@ -199,5 +224,5 @@ Use the debugging techniques discussed above to diagnose and fix the bugs and ge
 
 #### Other Resources
 
-* [Older Lesson for Reference](http://tutorials.jumpstartlab.com/topics/debugging/debugging.html)
+- [Older Lesson for Reference](http://tutorials.jumpstartlab.com/topics/debugging/debugging.html)
       *Note: Some of the content in the older lesson is out of date.*
