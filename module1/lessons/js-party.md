@@ -59,6 +59,67 @@ A few things you might want to google or check out in the MDN docs as you party:
 [string interpolation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals#string_interpolation)
 [type coercion](https://developer.mozilla.org/en-US/docs/Glossary/Type_coercion)
 
+<br>
+
+## Functions
+
+<!-- Ruby call 'em hashes, JavaScript calls 'em **Objects.**  Just like hashes, an object is a data type that allows us to group related data in various key-value pairs. -->
+
+Here's an example of some functions in JavaScript:
+```js
+
+```
+
+<!-- Objects in JS can hold any other data type within it's key-value pairs.  You can even declare methods within an object in JS (without having to build an entire Class).  -->
+
+### Functions Party Exercises
+
+Use this repl to practice working with functions in JavaScript.  Use google, MDN and each other when you get stuck. You're not suppose to know this, so just have a little fun trying to figure it out.
+
+[Functions Playground repl]( )
+
+## Conditionals
+
+<!-- Ruby call 'em hashes, JavaScript calls 'em **Objects.**  Just like hashes, an object is a data type that allows us to group related data in various key-value pairs. -->
+
+Here's an example of some conditionals in JavaScript:
+```js
+
+```
+
+<!-- Objects in JS can hold any other data type within it's key-value pairs.  You can even declare methods within an object in JS (without having to build an entire Class).  -->
+
+### Conditionals Party Exercises
+
+Use this repl to practice working with conditionals in JavaScript.  Use google, MDN and each other when you get stuck. You're not suppose to know this, so just have a little fun trying to figure it out.
+
+[Conditionals Playground repl]( )
+
+
+<br>
+
+## Objects (hashes)
+
+Ruby call 'em hashes, JavaScript calls 'em **Objects.**  Just like hashes, an object is a data type that allows us to group related data in various key-value pairs.
+
+Here's an example of a few objects in JavaScript:
+```js
+var student = {
+  name: "Mark", 
+  age: 34, 
+  isSmart: true, 
+  cohort: "SE 2407"
+  instructors: ["Juliet", "Heather", "Kayla"]
+}
+```
+
+Objects in JS can hold any other data type within it's key-value pairs.  You can even declare methods within an object in JS (without having to build an entire Class). 
+
+### Object Party Exercises
+
+Use this repl to practice working with objects in JavaScript.  Use google, MDN and each other when you get stuck. You're not suppose to know this, so just have a little fun trying to figure it out.
+
+[Object Playground repl](https://replit.com/@replit1369/Object-Play)
 
 <br>
 
@@ -92,45 +153,32 @@ A few things you might want to google or check out in the MDN docs as you party:
 
 <br>
 
-## Objects (hashes)
+
+## For Loops and Iterator Methods
 
 Ruby call 'em hashes, JavaScript calls 'em **Objects.**  Just like hashes, an object is a data type that allows us to group related data in various key-value pairs.
 
-Here's an example of a few objects in JavaScript:
+Here's an example  in JavaScript:
 ```js
-var student = {
-  name: "Mark", 
-  age: 34, 
-  isSmart: true, 
-  cohort: "SE 2407"
-  instructors: ["Juliet", "Heather", "Kayla"]
-}
+
 ```
 
 Objects in JS can hold any other data type within it's key-value pairs.  You can even declare methods within an object in JS (without having to build an entire Class). 
 
-### Object Party Exercises
+### For Loops and Iterators Party Exercises
 
 Use this repl to practice working with objects in JavaScript.  Use google, MDN and each other when you get stuck. You're not suppose to know this, so just have a little fun trying to figure it out.
 
-[Object Playground repl](https://replit.com/@replit1369/Object-Play)
-
+[Loops and Iterators Playground repl]( )
 
 <br>
 
-## TOPIC
+## HTML
 
-Ruby call 'em hashes, JavaScript calls 'em **Objects.**  Just like hashes, an object is a data type that allows us to group related data in various key-value pairs.
+<br>
 
-Here's an example of a few objects in JavaScript:
-```js
+## CSS
 
-```
+<br>
 
-Objects in JS can hold any other data type within it's key-value pairs.  You can even declare methods within an object in JS (without having to build an entire Class). 
-
-### Object Party Exercises
-
-Use this repl to practice working with objects in JavaScript.  Use google, MDN and each other when you get stuck. You're not suppose to know this, so just have a little fun trying to figure it out.
-
-[Object Playground repl](https://replit.com/@replit1369/Object-Play)
+## The DOM
