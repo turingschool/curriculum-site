@@ -3,6 +3,9 @@ layout: page
 title: Module 2 - Lessons
 ---
 
+## Introduction To Rails
+* [Beginner Rails Workshop](./beginner_rails_workshop)
+
 ## Professional Development
 * [Overview](./pd_overview)
 * [Building Your Brand on LinkedIn](https://docs.google.com/presentation/d/e/2PACX-1vS8CZUjYkpnkTJrp2Ga8um-UUFUsJ-5JA85FF9x875J-l_eKy7IyL47sAt8kl_FOlg7rG5ntVxpk5he/pub?start=false&loop=false&delayms=3000)
