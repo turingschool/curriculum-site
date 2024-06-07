@@ -63,20 +63,62 @@ A few things you might want to google or check out in the MDN docs as you party:
 
 ## Functions
 
-<!-- Ruby call 'em hashes, JavaScript calls 'em **Objects.**  Just like hashes, an object is a data type that allows us to group related data in various key-value pairs. -->
+Functions in JavaScript are just like methods in Ruby - they let us capture code in a reusable way.  In JavaScript, functions can stand alone and don't *have* to be part of an object or class.  If we do declare a function as part of an object or class in JavaScript, we would call that function a "method" - just like in Ruby.
 
-Here's an example of some functions in JavaScript:
+Here are some examples of functions in JavaScript:
 ```js
+function printGreeting(greeting) {
+  console.log(greeting)
+}
+
+printGreeting('hi')  
+//  prints "hi" to the console
+
+printGreeting('sup')
+//  prints "sup" to the console
+
+printGreeting('oh hello there darling!')
+//  prints "oh hello there darling!" to the console
+```
+
+Note that we can invoke the printGreeting function many times and pass different data to it as an argument each time.  This function just takes in data as an argument, then prints it to the console.  If we wanted to capture and store that data rather than just printing it, we would need to use the return keyword to get a value from the invocation of that function.  See this in the example below.
+
+```js
+function captureGreeting(greeting) {
+  return greeting
+}
+
+var hiGreeting = captureGreeting('hi')  
+//  nothing would print to the console now but "hi" would be stored in the hiGreeting variable
+
+var supGreeting = captureGreeting('sup')
+//  nothing prints to the console but 'sup' is stored in the variable
+
+var fancyGreeting = captureGreeting('oh hello there darling!')
+//  nothing prints to the console but 'oh hello there darling!' is stored in the variable
+```
+
+The syntax above is from ES5, a previous version of JavaScript that uses the "function" keyword.  Its very common and you will see this and use this syntax.  An update to JavaScript (ES6) provided a new syntax option for writing functions.  We often call this syntax "arrow functions".  See the captureGreeting function written in ES6 arrow function syntax below. 
+
+```js
+var captureGreeting = (greeting) => {
+  return greeting
+}
+
+var hiGreeting = captureGreeting('hi')  
+//  nothing would print to the console now but "hi" would be stored in the hiGreeting variable
 
 ```
 
-<!-- Objects in JS can hold any other data type within it's key-value pairs.  You can even declare methods within an object in JS (without having to build an entire Class).  -->
+You'll eventually need to understand and use both options but don't stress that now, it will come with time.  We recommend starting with the ES5 version using the "function" keyword.
 
 ### Functions Party Exercises
 
-Use this repl to practice working with functions in JavaScript.  Use google, MDN and each other when you get stuck. You're not suppose to know this, so just have a little fun trying to figure it out.
+Use this repl to practice writing functions in JavaScript.  Use google, MDN and each other when you get stuck. You're not suppose to know this, so just have a little fun trying to figure it out.
 
-[Functions Playground repl]( )
+[Functions Playground repl](https://replit.com/@replit1369/Functions-Playground)
+
+<br>
 
 ## Conditionals
 
