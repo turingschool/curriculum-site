@@ -57,7 +57,7 @@ Elements are created with either one or more tags and are used to describe and h
 
 Most elements are created using an opening and closing tag which surround the child elements and/or text content. `<h1>Text Content</h1>`
 
-Elements which are created with only one tag are called [empty elements](https://developer.mozilla.org/en-US/docs/Glossary/Empty_element) (also known as self-closing elements) and cannot have any child elements. Examples of this are `<img>` and `<input>`.
+Elements which are created with only one tag are called [void elements](https://developer.mozilla.org/en-US/docs/Glossary/Void_element) (also known as self-closing elements) and cannot have any child elements. Examples of this are `<img>` and `<input>`.
 
 <section class="note">
 ### Pro Tip
