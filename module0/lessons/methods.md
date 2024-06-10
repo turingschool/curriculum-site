@@ -13,16 +13,16 @@ title: Methods
 
 ## Vocabulary
 
-- <span class="vocab">method</span>
-- <span class="vocab">define</span>
-- <span class="vocab">execute or call</span>
-- <span class="vocab">return</span>
-- <span class="vocab">parameter</span>
-- <span class="vocab">argument</span>
+- ***method***
+- ***define***
+- ***execute or call***
+- ***return***
+- ***parameter***
+- ***argument***
 
 ## Methods
 
-A <span class="vocab">Method</span> is a package of instructions. Once a method is defined, it can be used as many times as needed. Ruby provides many built-in methods that developers can use. 
+A ***Method*** is a package of instructions. Once a method is defined, it can be used as many times as needed. Ruby provides many built-in methods that developers can use. 
 
 ## Defining Our Own Methods
 
@@ -49,7 +49,7 @@ After defining a method, nothing will _appear_ to happen. The interpreter that r
 
 ### Syntax for _Calling_ a Method
 
-To instruct the interpreter to carry out the instructions in a method, the developer must write code to <span class="vocab">call</span> or <span class="vocab">execute</span> that method. Simply writing the name of the method, `greet_a_texan` in this example, <span class="vocab">calls</span> or executes the method. When we call this method by writing the name of the method, it triggers the "instructions" held within the code block of that method. Now, this method by itself only returns the string "Howdy, partner!" - we still need to use a `puts` command to _see_ that return value in the console.
+To instruct the interpreter to carry out the instructions in a method, the developer must write code to ***call*** or ***execute*** that method. Simply writing the name of the method, `greet_a_texan` in this example, ***calls*** or executes the method. When we call this method by writing the name of the method, it triggers the "instructions" held within the code block of that method. Now, this method by itself only returns the string "Howdy, partner!" - we still need to use a `puts` command to _see_ that return value in the console.
 
 ```ruby
 # method call
@@ -66,7 +66,7 @@ Examples of method names that follow best practices:
 - `add_two_numbers`
 - `find_longest_name`
 
-In the example above, the developer chose the method name of `greet_a_texan`. Method names should usually include verbs, since methods _do_ something. The definition just tells the program that it's a set of directions ready to be followed; the _method call_ is what makes the code in the method <span class="vocab">execute</span>, or follow the packaged directions. You can call a method as many times as you want, once it's been defined!
+In the example above, the developer chose the method name of `greet_a_texan`. Method names should usually include verbs, since methods _do_ something. The definition just tells the program that it's a set of directions ready to be followed; the _method call_ is what makes the code in the method ***execute***, or follow the packaged directions. You can call a method as many times as you want, once it's been defined!
 
 ### A Method Metaphor
 
@@ -83,9 +83,9 @@ If this were a cookie machine, for example, the machine would take in all of the
 
 We can imagine that our cookie machine would do all of those steps and then give us back freshly baked, warm cookies! 
 
-Let's expand this example to any kind of machine. We give the machine the raw materials, it does something with those materials, and then returns the final product. This is _very_ similar to what we are doing with our own <span class="vocab">methods</span>. We give the method some piece of data or information (or even multiple pieces of information) and then the method does something with that information and spits out a return value. 
+Let's expand this example to any kind of machine. We give the machine the raw materials, it does something with those materials, and then returns the final product. This is _very_ similar to what we are doing with our own ***methods***. We give the method some piece of data or information (or even multiple pieces of information) and then the method does something with that information and spits out a return value. 
 
-<div class="s-card s-border-yellow-500">
+<div>
   <h3>Think About It</h3> 
   <p>Look at the method call below and make a guess about how this might be different from the previous method example.</p>
   <pre>
@@ -100,7 +100,7 @@ Without possibly having all the information about Ruby syntax, you probably made
 
 ### Arguments & Parameters
 
-<span class="vocab">Arguments</span> are the technical term for the inputs to a method such as the String that was provided in the parenthesis after the method name in the previous example. As developers, we have the control to name the <span class="vocab">parameters</span>, or placeholders, for the data that will be passed in. Those names should follow variable name conventions and be concise, yet descriptive. The number of arguments passed in should match the number of parameters declared.
+***Arguments*** are the technical term for the inputs to a method such as the String that was provided in the parenthesis after the method name in the previous example. As developers, we have the control to name the ***parameters***, or placeholders, for the data that will be passed in. Those names should follow variable name conventions and be concise, yet descriptive. The number of arguments passed in should match the number of parameters declared.
 
 ```ruby
 # name is a parameter
@@ -123,7 +123,7 @@ puts greet_a_texan("Brian")
 
 <br>
 
-<div class="s-card">
+<div>
   <h3>Practice</h3>
   <!-- <p>In your Breakout room, the person with the longest first name will Drive. The other will Navigate. The Driver should screenshare a replit and the Navigator should keep these instructions up.</p> -->
   <ul>
@@ -135,14 +135,14 @@ puts greet_a_texan("Brian")
 
 ### Return Values
 
-A <span class="vocab">return value</span> is either:
+A ***return value*** is either:
 
 - **Defined _implicity_**: By default, the last line of code automatically becomes the return value of the method. 
 <br>
 OR
 - **Defined _explicitly_**: By using the `return` keyword, we can also specify the return value of the method. 
 
-In the `add` example below, the return value is an Integer or Float, based on what values were passed in as arguments. If 2 and 3 are passed in, the return value is 5. This is called an <span class="vocab">implicit return</span>. <strong>Ruby automatically returns the value of the last expression in a method if no `return` is present.</strong> For this reason, if we want to return the value of the last expression in a method, we usually do not use the `return` keyword, as it is considered redundant and unnecessary. 
+In the `add` example below, the return value is an Integer or Float, based on what values were passed in as arguments. If 2 and 3 are passed in, the return value is 5. This is called an ***implicit return***. <strong>Ruby automatically returns the value of the last expression in a method if no `return` is present.</strong> For this reason, if we want to return the value of the last expression in a method, we usually do not use the `return` keyword, as it is considered redundant and unnecessary. 
 
 ```ruby
 def add(num1, num2)
@@ -153,7 +153,7 @@ add(2, 3)
 # => 5 (return value is 5 since that's the sum of 2+3, and on the last line of the method)
 ```
 
-In the `subtract` example below, the return value will be whatever is stored in the `difference` variable. If 10 and 7 are passed in as arguments, the return value is 3 because the last line of the method uses the `return` keyword to return the `difference` variable. This is called an <span class="vocab">explicit return</span>.
+In the `subtract` example below, the return value will be whatever is stored in the `difference` variable. If 10 and 7 are passed in as arguments, the return value is 3 because the last line of the method uses the `return` keyword to return the `difference` variable. This is called an ***explicit return***.
 
 ```ruby
 def subtract(bigger, smaller)
@@ -165,7 +165,7 @@ subtract(10, 7)
 #  => 3 (return value is 3 since it is stored in the difference variable, and the last line of the method uses the return keyword)
 ```
 
-<div class="s-card s-border-yellow-500">
+<div>
   <h3>Best Practices</h3> 
   <p>Typically, we do not include an explicit <code>return</code> unless it is absolutely necessary. Since ruby methods automatically <code>return</code> the  value of the last line, it's common practice to use <em>implicit</em> returns like in the first example above.</p>
 </div>
@@ -209,7 +209,7 @@ puts sum2
 
 <br>
 
-<div class="s-card">
+<div>
   <h3>Practice</h3>
   <!-- <p>In your Breakout room, the person with the shortest first name will Drive. The other will Navigate. The Driver should screenshare a replit and the Navigator should keep these instructions up.</p> -->
   <ul>
@@ -223,7 +223,7 @@ puts sum2
 
 <br>
 
-<div class="s-card s-border-yellow-500">
+<div>
   <h3>Key Points Summary</h3>
   <ul>
     <li>A method is a packaged set of directions. If the method is never <em>called</em>, it will never run. And a method can be called many times, if needed!</li>
@@ -242,7 +242,7 @@ Take time between now and your next session to self-teach the following section.
 
 ## Warm-Up for Built-In Methods
 
-<div class="s-card">
+<div>
   <h3>Exploration: PART 1</h3> 
   <p>Fork, then run the code <a href="https://replit.com/@turingschool/m0builtinmethods#main.rb" target="blank">in this replit</a> and observe the output.</p>
   <p><strong>Think:</strong> How did each line of code, produce each respective line of output? Which parts make sense, and which are confusing?</p>
@@ -251,7 +251,7 @@ Take time between now and your next session to self-teach the following section.
 
 ## Methods
 
-A <span class="vocab">Method</span> is a package of instructions. Once a method is defined, it can be used as many times as needed. Ruby provides many built-in methods that developers can use. 
+A ***Method*** is a package of instructions. Once a method is defined, it can be used as many times as needed. Ruby provides many built-in methods that developers can use. 
 
 The code snippet that follows was part of the previous Exploration activity:
 
@@ -266,7 +266,7 @@ To describe the code snippet in English, one could say, "the `odd question mark`
 In this particular example, the utility of the `odd?` method is to determine if an Integer is odd, or not. It answers the question with a Boolean (`true` or `false`). The benefit of having this method built into Ruby is if a developer needs to check if a number is odd or not, they only have to type `.odd?` anywhere they need to check. If they didn't have a pre-packaged method, they'd have to write several lines of code involving logic, every time they want to check if an integer is odd. **Reusability is what makes methods so powerful.**
 
 <br>
-<div class="s-card">
+<div>
   <h3>Exploration: PART 2</h3> 
   <p>In <a href="https://replit.com/@turingschool/m0builtinmethods#main.rb" target="blank">the same replit</a> from the first exploration, comment <em>out</em> the code from Part 1, and <em>uncomment</em> the code under Part 2.</p>
   <ul>
@@ -288,7 +288,7 @@ To describe the code snippet in English, one could say, "the first line declares
 </section>
 
 <br>
-<div class="s-card">
+<div>
   <h3>Exploration: PART 3</h3> 
   <p>In <a href="https://replit.com/@turingschool/m0builtinmethods#main.rb" target="blank">the same replit</a>, comment <em>out</em> the code from Part 2, and <em>uncomment</em> the variable declarations and first method call under Part 3.</p>
   <ul>
@@ -301,7 +301,7 @@ To describe the code snippet in English, one could say, "the first line declares
 </div>
 <br>
 
-<div class="s-card s-border-yellow-500">
+<div>
   <h3>Key Points</h3> 
   <ul>
     <li>A method is a package of instructions that once defined, can be reused as many times as needed.</li>

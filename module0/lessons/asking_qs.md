@@ -43,7 +43,7 @@ When asking your question in Slack, to write the inline code, use a single backt
 
 ## Examples and Non-Examples
 
-<div class="s-card">
+<div>
 <h3>Robyn & Arrays</h3>
 <p>The question that follows, from Robyn, isn't specific and puts a lot of work on the people potentially answering the question. Not only will people not completely know how to answer this question, the answers also won't help Robyn's learning much. If an employer saw a question like this from Robyn, they'd learn that they aren't resourceful and don't communicate their needs well. An employer might conclude that Robyn will be a costly employee who won't contribute much.</p>
 <blockquote>
@@ -56,7 +56,7 @@ When asking your question in Slack, to write the inline code, use a single backt
 </div>
 <br>
 
-<div class="s-card">
+<div>
 <h3>Kaitlyn & Homework Help</h3>
 <p>Kaitlyn's initial question for help on her homework puts a big demand on the reader, and probably doesn't set her up to learn a lot. Most companies prefer asynchronous communication until live communication is necessary; seeing that Kaitlyn isn't communicating a clear question in writing could be a flag that she won't work independently.</p>
 <blockquote>

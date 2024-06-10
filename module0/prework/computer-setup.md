@@ -62,7 +62,12 @@ To ensure that you are prepared for your first session:
 - Read [Slack 101](https://frontend.turing.edu/lessons/module-1/slack101.html) to understand how to take advantage of the most useful features in Slack.
 - Upload a clear and appropriate headshot for your profile image.
 - [Set up your Slack profile](https://www.loom.com/share/6f10b796c90f40c09594899d71bf401a) to include your cohort, program, pronouns, and time zone.
-- It's a good idea to get in the habit of checking Slack daily starting now.
+
+
+<img src="./assets/slack/ProfileExample.png" class="medium center-img"/>
+
+
+**It's a good idea to get in the habit of checking Slack daily starting now.**
 <br>
 
 ### Create a Replit Account

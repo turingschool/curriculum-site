@@ -19,9 +19,9 @@ title: Module 1 - Lessons
 * [Reaching Through Objects](./reaching_through_objects)
 * [Intermediate Enumerables](./intermediate_enumerables)
 * [Nested Iteration Workshop](./nested_iteration_workshop)
-<!-- * [Class Methods](./class_methods) -->
+* [Class Methods](./class_methods)
 * [Modules](./modules)
-<!-- * [Inheritance](./inheritance) -->
+* [Inheritance](./inheritance)
 <!-- * [CSV Workshop](./csv_walkthrough) -->
 <!-- * [Ruby Object Model](./ruby_object_model) -->
 
@@ -36,7 +36,7 @@ title: Module 1 - Lessons
 
 ## Debugging
 * [Async Intro to Debugging](./debugging_prework)
-<!-- * [Debugging Techniques](./debugging_techniques) -->
+* [Debugging Techniques](./debugging_techniques)
 * [Using ChatGPT Effectively](./chatgpt)
 
 ## Version Control
