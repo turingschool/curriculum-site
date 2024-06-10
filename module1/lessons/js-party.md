@@ -15,6 +15,22 @@ We'll use this time to get our hands dirty actually *writing* some code in JavaS
 
 Google and the [MDN docs](https://developer.mozilla.org/en-US/) will be your friends as you're trying to work with JavaScript.  You might even leverage chatGPT for help if you're stuck and can't find solutions through google and MDN.  Just be sure to struggle through a bit on your own before turning to chatGPT.  And remember, chatGPT often provides info that is very much *not* correct. Ask it for help, not for the answers.
 
+## Set Up
+
+**Create a Replit Account**
+[Replit](https://replit.com/~) provides an online platform that allows us to write code and see the results almost immediately - all inside of one browser tab! There are many other similar (and awesome) tools available but replit is used regularly in Mods 1 and 2, so Mod 0 provides an introduction and some exposure.
+
+Follow the steps below (if they are not necessary because you have already done them or have experience with replit, you can skip this):
+
+- Create a free account.
+- [Bookmark the Replit webpage on Chrome](https://support.google.com/chrome/answer/188842?hl=en&co=GENIE.Platform%3DDesktop), so that you can easily find it again later.
+- Watch [this video](https://www.youtube.com/watch?v=cnLE3bH6fHE) to learn how to navigate the interface and create new projects. Feel free to speed up the video as you watch.
+
+A few notes: 
+ - When using Replit for Javascript exercises, we will use Node.js.  
+ - When opening up the practice Repl's below, you'll need fork each one to create your own copy to play around in.
+ - *Important:*  Along the bottom toolbar in each Repl you'll see an AI option.  You do *NOT* want to have AI autocomplete enabled.  Having this enabled will provide you with the code solutions you're supposed to be figuring out on your own.  Having this enable renders your practice an big ol' waste of time.  
+
 ## Data Types & Variables
 
 JavaScript has 6 primitive (simple) data types but for now we really only care about 5 of them: Boolean, Undefined, Null, Number, String (BUNNS).  JS also has Object and Array as it's 2 non-primitive (reference) data types. 
@@ -50,7 +66,7 @@ You aren’t likely to specifically assign a value of **undefined** so there’s
 
 ### Data Types & Variables Party Exercises
 
-Use this repl to practice working variables and data types in JavaScript.  Use google, MDN and each other when you get stuck. You're not suppose to know this, so just have a little fun trying to figure it out.
+Use this repl to practice working variables and data types in JavaScript.  Use google, MDN and each other when you get stuck. You're not suppose to know this, so just have a little fun trying to figure it out.  Be sure to disable AI Autocomplete at the bottom (towards the left).
 
 [Data Types and Variables Playground repl](https://replit.com/@replit1369/Data-Types-and-Variables-playground#index.js)
 
@@ -114,7 +130,7 @@ You'll eventually need to understand and use both options but don't stress that 
 
 ### Functions Party Exercises
 
-Use this repl to practice writing functions in JavaScript.  Use google, MDN and each other when you get stuck. You're not suppose to know this, so just have a little fun trying to figure it out.
+Use this repl to practice writing functions in JavaScript.  Use google, MDN and each other when you get stuck. You're not suppose to know this, so just have a little fun trying to figure it out.   Be sure to disable AI Autocomplete at the bottom (towards the left).
 
 [Functions Playground repl](https://replit.com/@replit1369/Functions-Playground)
 
@@ -122,20 +138,53 @@ Use this repl to practice writing functions in JavaScript.  Use google, MDN and 
 
 ## Conditionals
 
-<!-- Ruby call 'em hashes, JavaScript calls 'em **Objects.**  Just like hashes, an object is a data type that allows us to group related data in various key-value pairs. -->
+JavaScript lets us use `if / else if / else` statements to handle conditional logic.  You can use just an `if`.  You can use `if / else`.  Or you can use `if / else if / else` with as many `else if` conditions as you need.
 
-Here's an example of some conditionals in JavaScript:
+Here's an example of an if/else conditionals in JavaScript:
 ```js
+function evaluateSleep(hoursOfSleep) {  
+  if (hoursOfSleep < 6) {
+    console.log("I am groggy.");
+  } else {
+    console.log("I feel fantastic!");
+  }
+}
 
+evaluateSleep(8);
+// "I feel fantastic!" would print to the console
+
+
+evaluateSleep(5);
+// "I am groggy." would print to the console
 ```
 
-<!-- Objects in JS can hold any other data type within it's key-value pairs.  You can even declare methods within an object in JS (without having to build an entire Class).  -->
+Here's an example of an if/else if/else conditionals in JavaScript:
+```js
+function findLocation(nextLocation) {  
+  if (nextLocation === "home") {
+    console.log("It's been a long day, let's go home!");
+  } else if (nextLocation === "work") {
+    console.log("Good morning, finding the fastest route to work!");
+  } else {
+    console.log("Finding location.  Found it!  Let's go!");
+  }
+}
+
+findLocation("home");
+// "It's been a long day, let's go home!" would print to the console
+
+findLocation("work");
+// "Good morning, finding the fastest route to work!" would print to the console
+
+findLocation("taco bell");
+// "Finding location.  Found it!  Let's go!" would print to the console
+```
 
 ### Conditionals Party Exercises
 
-Use this repl to practice working with conditionals in JavaScript.  Use google, MDN and each other when you get stuck. You're not suppose to know this, so just have a little fun trying to figure it out.
+Use this repl to practice working with conditionals in JavaScript.  Use google, MDN and each other when you get stuck. You're not suppose to know this, so just have a little fun trying to figure it out.   Be sure to disable AI Autocomplete at the bottom (towards the left).
 
-[Conditionals Playground repl]( )
+[Conditionals Playground repl](https://replit.com/@replit1369/Conditionals-Playground#index.js)
 
 
 <br>
@@ -159,7 +208,7 @@ Objects in JS can hold any other data type within it's key-value pairs.  You can
 
 ### Object Party Exercises
 
-Use this repl to practice working with objects in JavaScript.  Use google, MDN and each other when you get stuck. You're not suppose to know this, so just have a little fun trying to figure it out.
+Use this repl to practice working with objects in JavaScript.  Use google, MDN and each other when you get stuck. You're not suppose to know this, so just have a little fun trying to figure it out.   Be sure to disable AI Autocomplete at the bottom (towards the left).
 
 [Object Playground repl](https://replit.com/@replit1369/Object-Play)
 
@@ -181,7 +230,7 @@ Arrays in JS can hold any other data type.  You could have an array of strings, 
 
 ### Array Party Exercises
 
-Use this repl to practice working with arrays in JavaScript.  Use google, MDN and each other when you get stuck. You're not suppose to know this, so just have a little fun trying to figure it out.
+Use this repl to practice working with arrays in JavaScript.  Use google, MDN and each other when you get stuck. You're not suppose to know this, so just have a little fun trying to figure it out.    Be sure to disable AI Autocomplete at the bottom (towards the left).
 
 [Array Playground repl](https://replit.com/@replit1369/Array-play#index.js)
 
@@ -198,29 +247,35 @@ A few things you might want to google or check out in the MDN docs as you party:
 
 ## For Loops and Iterator Methods
 
-Ruby call 'em hashes, JavaScript calls 'em **Objects.**  Just like hashes, an object is a data type that allows us to group related data in various key-value pairs.
+In any programming language, we will find outselves needing to "loop through" or "iterate over" collections of data stored in arrays.  Javascript lets us do this with a `for loop` and with various built in iterator methods like [forEach()](), [map()](), [filter()](), [find()](), and [reduce()]().  
 
-Here's an example  in JavaScript:
+For now, lets focus on for loops.
+
+Here's an example of a basic for loop in JavaScript:
 ```js
+for (var i = 0; i < 10; i++) {
+  console.log(i);
+}
 
+//This for loop iterates 10 times because of the condition `i < 10` and simply logs the value of `i` each loop.
 ```
 
-Objects in JS can hold any other data type within it's key-value pairs.  You can even declare methods within an object in JS (without having to build an entire Class). 
+When used to iterate over an array, a for loop lets us use the `i` variable to access each element in an array, one at a time, and perform some action on or with that element.  
 
-### For Loops and Iterators Party Exercises
+Here's an example of a for loop used with an array in JavaScript:
+```js
+var fruits = ['apples', 'oranges', 'bananas'];
 
-Use this repl to practice working with objects in JavaScript.  Use google, MDN and each other when you get stuck. You're not suppose to know this, so just have a little fun trying to figure it out.
+for (var i = 0; i < fruits.length; i++) {
+  console.log(`I have some ${fruits[i]}`);
+}
 
-[Loops and Iterators Playground repl]( )
+//This for loop iterates based on the length of the array to ensure it can access every element.  Then we use `i` in bracket notation to access the corresponding element on each loop.
+```
 
-<br>
+### For Loops Party Exercises
 
-## HTML
+Use this repl to practice iterating over arrays with a for loop.  Use google, MDN and each other when you get stuck. You're not suppose to know this, so just have a little fun trying to figure it out.    Be sure to disable AI Autocomplete at the bottom (towards the left).
 
-<br>
+[For Loops Playground repl](https://replit.com/@replit1369/for-loop-Playground#index.js)
 
-## CSS
-
-<br>
-
-## The DOM
