@@ -6,19 +6,20 @@ title: JS Party
 ## Learning Goals
 
 - Get exposure to JavaScript syntax
-- Get your hands dirty with unfamiliar code
+- Interact with and write unfamiliar code
 - Just have a little fun!
 
 ## Party Plans
 
 We'll use this time to get our hands dirty actually *writing* some code in JavaScript.   This is important practice but should feel like it is low stakes, no pressure, and dare we say....fun!  Be confident, be reckless, do something weird, break stuff.   
 
-Google and the [MDN docs](https://developer.mozilla.org/en-US/) will be your friends as you're trying to work with JavaScript.  You might even leverage chatGPT for help if you're stuck and can't find solutions through google and MDN.  Just be sure to struggle through a bit on your own before turning to chatGPT.  And remember, chatGPT often provides info that is very much *not* correct. Ask it for help, not for the answers.
+Google and the [MDN docs](https://developer.mozilla.org/en-US/) will be your friends as you're trying to work with JavaScript.  You might even leverage chatGPT for help if you're stuck and can't find solutions through google and MDN.  Just be sure to struggle through a bit on your own before turning to chatGPT.  And remember, chatGPT often provides info that is very much *not* correct. Ask it for help, not for "the answers".
 
 ## Set Up
 
-**Create a Replit Account**
-[Replit](https://replit.com/~) provides an online platform that allows us to write code and see the results almost immediately - all inside of one browser tab! There are many other similar (and awesome) tools available but replit is used regularly in Mods 1 and 2, so Mod 0 provides an introduction and some exposure.
+**Create a Replit Account**  
+
+[Replit](https://replit.com/~) provides an online platform that allows us to write code and see the results almost immediately - all inside of one browser tab! 
 
 Follow the steps below (if they are not necessary because you have already done them or have experience with replit, you can skip this):
 
@@ -28,12 +29,14 @@ Follow the steps below (if they are not necessary because you have already done 
 
 A few notes: 
  - When using Replit for Javascript exercises, we will use Node.js.  
- - When opening up the practice Repl's below, you'll need fork each one to create your own copy to play around in.
- - *Important:*  Along the bottom toolbar in each Repl you'll see an AI option.  You do *NOT* want to have AI autocomplete enabled.  Having this enabled will provide you with the code solutions you're supposed to be figuring out on your own.  Having this enable renders your practice an big ol' waste of time.  
+ - When opening up the practice Repls below, you'll need fork each one to create your own copy to play around in.
+ - *Important:*  Along the bottom toolbar in each Repl you'll see an AI option.  You do *NOT* want to have AI autocomplete enabled.  Having this enabled will provide you with the code solutions you're supposed to be figuring out on your own.  Having this enabled renders your practice a big ol' waste of time.  
+
+<br>
 
 ## Data Types & Variables
 
-JavaScript has 6 primitive (simple) data types but for now we really only care about 5 of them: Boolean, Undefined, Null, Number, String (BUNNS).  JS also has Object and Array as it's 2 non-primitive (reference) data types. 
+JavaScript has 6 primitive (simple) data types but for now we really only care about 5 of them: Boolean, Undefined, Null, Number, String (BUNNS).  JS also has Objects and Arrays as its 2 non-primitive (reference) data types. 
 
 Just like in Ruby, JS lets us store values in variables.  We can declare variables and assign, and re-assign values to them.
 
@@ -44,7 +47,7 @@ var boolean = true
 var number = 5
 var string = "potato"
 
-var object: {
+var object = {
   firstKey: 1,
   secondKey: 2,
   thirdKey: 3
@@ -53,11 +56,11 @@ var object: {
 var array = ['one', 'two', 'three']
 ```
 
-Note that strings in JavaScript require quotation marks (or backticks).  But you can choose to use single or double quotes - its the wild west over here.
+Note that strings in JavaScript require quotation marks (or backticks).  But you can choose to use single *or* double quotes - it's the wild west over here.
 
-**What about undefined and null?**
-Well, both mean “nothing”.
-**Null** is like a placeholder where someone proactively decided to specifically declare “nothing”.
+**What about undefined and null?**  
+Well, both mean “nothing”.  
+**Null** is like a placeholder where someone proactively decided to specifically declare “nothing”.  
 **Undefined** is kind of unintentional. Like, it’s nothing because no one got around to declaring or assigning anything yet so it defaults to “nothing”.
 
 A use case for **null** might be creating a userEmail variable and assigning it to null in case the user does not provide an email.
@@ -66,13 +69,13 @@ You aren’t likely to specifically assign a value of **undefined** so there’s
 
 ### Data Types & Variables Party Exercises
 
-Use this repl to practice working variables and data types in JavaScript.  Use google, MDN and each other when you get stuck. You're not suppose to know this, so just have a little fun trying to figure it out.  Be sure to disable AI Autocomplete at the bottom (towards the left).
+Use this repl to practice working with variables and data types in JavaScript.  Use google, MDN and each other when you get stuck. You're not suppose to know this, so just have a little fun trying to figure it out.  Be sure to disable AI Autocomplete at the bottom of the repl (towards the left).
 
 [Data Types and Variables Playground repl](https://replit.com/@replit1369/Data-Types-and-Variables-playground#index.js)
 
-A few things you might want to google or check out in the MDN docs as you party:
-[concatenation](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Strings#concatenation_using)
-[string interpolation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals#string_interpolation)
+A few things you might want to google or check out in the MDN docs as you party:  
+[concatenation](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Strings#concatenation_using)  
+[string interpolation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals#string_interpolation)  
 [type coercion](https://developer.mozilla.org/en-US/docs/Glossary/Type_coercion)
 
 <br>
@@ -114,7 +117,7 @@ var fancyGreeting = captureGreeting('oh hello there darling!')
 //  nothing prints to the console but 'oh hello there darling!' is stored in the variable
 ```
 
-The syntax above is from ES5, a previous version of JavaScript that uses the "function" keyword.  Its very common and you will see this and use this syntax.  An update to JavaScript (ES6) provided a new syntax option for writing functions.  We often call this syntax "arrow functions".  See the captureGreeting function written in ES6 arrow function syntax below. 
+The syntax above is from ES5, a version of JavaScript that uses the "function" keyword.  It's very common and you will see and use this syntax.  An update to JavaScript (ES6) provided a new syntax option for writing functions.  We often call this syntax "arrow functions".  See the captureGreeting function written in ES6 arrow function syntax below. 
 
 ```js
 var captureGreeting = (greeting) => {
@@ -140,7 +143,7 @@ Use this repl to practice writing functions in JavaScript.  Use google, MDN and 
 
 JavaScript lets us use `if / else if / else` statements to handle conditional logic.  You can use just an `if`.  You can use `if / else`.  Or you can use `if / else if / else` with as many `else if` conditions as you need.
 
-Here's an example of an if/else conditionals in JavaScript:
+Here's an example of an if/else conditional in JavaScript:
 ```js
 function evaluateSleep(hoursOfSleep) {  
   if (hoursOfSleep < 6) {
@@ -158,7 +161,7 @@ evaluateSleep(5);
 // "I am groggy." would print to the console
 ```
 
-Here's an example of an if/else if/else conditionals in JavaScript:
+Here's an example of an if/else if/else conditional in JavaScript:
 ```js
 function findLocation(nextLocation) {  
   if (nextLocation === "home") {
@@ -193,18 +196,23 @@ Use this repl to practice working with conditionals in JavaScript.  Use google, 
 
 Ruby call 'em hashes, JavaScript calls 'em **Objects.**  Just like hashes, an object is a data type that allows us to group related data in various key-value pairs.
 
-Here's an example of a few objects in JavaScript:
+Here's an example of an object in JavaScript:
 ```js
 var student = {
   name: "Mark", 
   age: 34, 
   isSmart: true, 
-  cohort: "SE 2407"
-  instructors: ["Juliet", "Heather", "Kayla"]
+  cohort: "SE 2407",
+  instructors: ["Juliet", "Heather", "Kayla"],
+  location: {
+    city: "Denver",
+    state: "Colorado",
+    timezone: "Mountain"
+  }
 }
 ```
 
-Objects in JS can hold any other data type within it's key-value pairs.  You can even declare methods within an object in JS (without having to build an entire Class). 
+Objects in JS can hold any data type within it's key-value pairs.  You can even declare methods within an object in JS (without having to build an entire Class). 
 
 ### Object Party Exercises
 
@@ -217,14 +225,14 @@ Use this repl to practice working with objects in JavaScript.  Use google, MDN a
 
 ## Arrays
 
-Just like Ruby, in JavaScript an **Array** is a data type that allows us to store multiple pieces of data in _one_ variable
+Just like Ruby, in JavaScript an **Array** is a data type that allows us to store multiple pieces of data in _one_ variable.  The data should be all the same data type and serve as a sort of "collection".  
 
 Here's an example of an array in JavaScript:
 ```js
 var students = ["Cindy", "Josiah", "Rigo"]
 ```
 
-Note the similarities between JavaScript and Ruby. Both languages have Arrays and are declared very similarly. The main difference is that JavaScript uses `var` to declare a variable.
+Note the similarities between JavaScript and Ruby. Both languages have Arrays and declare them very similarly. The main difference is that JavaScript uses `var` to declare a variable.
 
 Arrays in JS can hold any other data type.  You could have an array of strings, numbers, objects (like hashes in Ruby), or even an array of other arrays.
 
@@ -232,24 +240,16 @@ Arrays in JS can hold any other data type.  You could have an array of strings, 
 
 Use this repl to practice working with arrays in JavaScript.  Use google, MDN and each other when you get stuck. You're not suppose to know this, so just have a little fun trying to figure it out.    Be sure to disable AI Autocomplete at the bottom (towards the left).
 
-[Array Playground repl](https://replit.com/@replit1369/Array-play#index.js)
-
-A few things you might want to google or check out in the MDN docs as you party:
-[string interpolation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals#string_interpolation)
-[for loop](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for)
-[forEach()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
-[map()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
-[toUpperCase()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase)
-
+[Array Playground repl](https://replit.com/@replit1369/Array-playground#index.js)
 
 <br>
 
 
 ## For Loops and Iterator Methods
 
-In any programming language, we will find outselves needing to "loop through" or "iterate over" collections of data stored in arrays.  Javascript lets us do this with a `for loop` and with various built in iterator methods like [forEach()](), [map()](), [filter()](), [find()](), and [reduce()]().  
+In any programming language, we will find ourselves needing to "loop through" or "iterate over" collections of data stored in arrays.  Javascript lets us do this with a `for loop` and with various built in iterator methods like forEach(), map(), filter(), find(), and reduce().  
 
-For now, lets focus on for loops.
+For now, let's focus on for loops.
 
 Here's an example of a basic for loop in JavaScript:
 ```js
@@ -260,7 +260,7 @@ for (var i = 0; i < 10; i++) {
 //This for loop iterates 10 times because of the condition `i < 10` and simply logs the value of `i` each loop.
 ```
 
-When used to iterate over an array, a for loop lets us use the `i` variable to access each element in an array, one at a time, and perform some action on or with that element.  
+When used to iterate over an array, a for loop lets us use the `i` variable in bracket notation to access each element in an array, one at a time, and perform some action on or with that element.  
 
 Here's an example of a for loop used with an array in JavaScript:
 ```js
@@ -279,3 +279,15 @@ Use this repl to practice iterating over arrays with a for loop.  Use google, MD
 
 [For Loops Playground repl](https://replit.com/@replit1369/for-loop-Playground#index.js)
 
+A few things you might want to google or check out in the docs as you party:
+[forEach()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)  
+[map()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)  
+[find()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find)  
+[filter()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)  
+[reduce()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce)  
+[toUpperCase()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase)
+
+
+## Wrap Up
+
+You can see that as developers, we will likely want to do similar data manipulation and logic regardless of what programming language we might be using.  The biggest difference, and biggest tripping point, is often syntax. When you realize that the work you're doing really applies to programming in general, not a specific language, it empowers you to feel confident in your ability to pick up and add *any* language to your skill set.  A little bit of practice, using your resources, asking questions and paying close attention to those details - especially syntax, will allow you to do so successfully. 
