@@ -5,6 +5,7 @@ title: Module 2 - Lessons
 
 ## Introduction To Rails
 * [Beginner Rails Workshop](./beginner_rails_workshop)
+* [Introduction to MVC](./intro_to_mvc)
 
 ## Professional Development
 * [Overview](./pd_overview)
