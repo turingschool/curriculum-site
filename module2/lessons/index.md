@@ -16,6 +16,8 @@ title: Module 2 - Lessons
 ## HTML and CSS
 * [HTML: Fundamentals](./html_fundamentals)
 
+## Testing and Debugging
+* [Feature Testing with RSpec](./feature_testing_with_rspec)
 
 ## Additional Resources
 * [Chrome Dev Tools](./chrome_dev_tools)
