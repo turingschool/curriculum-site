@@ -22,7 +22,7 @@ title: Module 1 - Lessons
 * [Class Methods](./class_methods)
 * [Modules](./modules)
 * [Inheritance](./inheritance)
-<!-- * [CSV Workshop](./csv_walkthrough) -->
+* [File IO](./file_io)
 <!-- * [Ruby Object Model](./ruby_object_model) -->
 
 ## Design
