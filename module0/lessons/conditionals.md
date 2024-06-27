@@ -10,16 +10,16 @@ title: Conditionals
 
 ## Vocabulary
 
-- <span class="vocab">comparison operators</span>
-- <span class="vocab">conditionals</span>
-- <span class="vocab">if statements</span>
-- <span class="vocab">logical operators</span>
+- ***comparison operators***
+- ***conditionals***
+- ***if statements***
+- ***logical operators***
 
 ## Comparison Operators
 
 _This will connect to Booleans, which you learned about in the Data Types lesson._
 
-Conditional statements, or <span class="vocab">conditionals</span>, are Ruby statements that evaluate to `true` or `false`. The most common operators used for conditions are <span class="vocab">comparison operators</span>:
+Conditional statements, or ***conditionals***, are Ruby statements that evaluate to `true` or `false`. The most common operators used for conditions are ***comparison operators***:
 
 - `==` (equal)
 - `!=` (not equal)
@@ -49,7 +49,7 @@ age > 12
 # --> false
 ```
 
-<div class="s-card s-border-yellow-500">
+<div>
   <h3>Equality vs. Assignment</h3>
   <p>The most common mistake people encounter when writing conditional statements is related to the difference between <code>=</code> and <code>==</code>.</p>
   <ul>
@@ -62,7 +62,7 @@ age > 12
 
 <br>
 
-<div class="s-card">
+<div>
   <h3>Comparisons</h3> 
   <p>Complete the following work in an <code>irb</code> session:</p>
   <ul>
@@ -82,7 +82,7 @@ For the remaining practice activities in this assignment, you can use `irb`, cre
 
 ## If Statements
 
-<span class="vocab">If statements</span> are the most common form of conditionals. The logic of an <code>if statement</code> in Ruby follows the same logic in other programming languages.
+***If statements*** are the most common form of conditionals. The logic of an <code>if statement</code> in Ruby follows the same logic in other programming languages.
 
 ### `if`
 
@@ -104,7 +104,7 @@ if greeting == "Hello"
 end
 ```
 
-<div class="s-card">
+<div>
   <h3>Try It: <code>if</code> statements</h3>
   <p>Define an <code>age</code> variable and assign it to an Integer. Then, write code that will print out the String "Welcome to the Website" only if the user is 21 or older.</p>
 </div>
@@ -124,7 +124,7 @@ else
 end
 ```
 
-<div class="s-card">
+<div>
   <h3>Try It: <code>else</code> statements</h3>
   <p>Go back to your previous exercise with the <code>age</code> variable. Use an <code>else</code> statement that prints out a different message if the user is not 21 or older.</p>
 </div>
@@ -148,7 +148,7 @@ end
 
 Notice that code inside the `else` statement will only run when none of the previous conditions evaluate to true.
 
-<div class="s-card">
+<div>
   <h3>Try It: <code>elsif</code> statements</h3>
   <p>Continue building on the previous work you've done with the <code>age</code> variable. Write code that will print out the String "Welcome to the Website" only if the user is 21 or older. If the user is under the age of 2, print out "How are you even on this device?". If the user is any other age, print out "You aren't quite old enough to visit, sorry!".</p>
 </div>
@@ -161,7 +161,7 @@ _Optional:_ Read the <a href="http://tutorials.jumpstartlab.com/projects/ruby_in
 </section>
 
 <br>
-<div class="s-card">
+<div>
   <h3>More Practice</h3>
   <ul>
     <li>Declare a variable that stores your name in a String.</li>
@@ -177,7 +177,7 @@ Take time between now and your next session to self-teach the following section.
 
 ## Logical Operators
 
-There are three <span class="vocab">logical operators</span> in Ruby; we will learn two today:
+There are three ***logical operators*** in Ruby; we will learn two today:
 - `&&` (Logical And Operator)
 - `||` (Logical Or Operator)
 
@@ -222,7 +222,7 @@ age < 30 || time < 2.0
 # false (neither meet requirement)
 ```
 
-<div class="s-card">
+<div>
   <h3>Logical Operators</h3> 
   <p>Complete the following work in an <code>irb</code> session:</p>
   <ul>
@@ -237,7 +237,7 @@ age < 30 || time < 2.0
 
 Now that you know about logical operators and `if statements`, let's combine that new knowledge to complete a final exercise.
 
-<div class="s-card">
+<div>
   <h3>More Practice: Logical Operators with Conditions</h3>
   <ul>
     <li>Declare a variable that stores a password.</li>

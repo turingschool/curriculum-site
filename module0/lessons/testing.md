@@ -12,16 +12,16 @@ title: Intro to Testing
 
 ## Vocabulary
 
-- <span class="vocab">assertion</span>
-- <span class="vocab">rspec</span>
-- <span class="vocab">Test Driven Development</span>
-- <span class="vocab">test</span>
-- <span class="vocab">testing framework</span>
+- ***assertion***
+- ***rspec***
+- ***Test Driven Development***
+- ***test***
+- ***testing framework***
 
 
 ## Tests
 
-In software, it is common to write automated <span class="vocab">tests</span> to verify that our code behaves the way we want it to and doesn't have any negative or unexpected side effects (bugs) on any other part of a project. These tests are usually written in the same language the code itself is in, with the help of a tool that is usually categorized as a <span class="vocab">testing framework</span>.
+In software, it is common to write automated ***tests*** to verify that our code behaves the way we want it to and doesn't have any negative or unexpected side effects (bugs) on any other part of a project. These tests are usually written in the same language the code itself is in, with the help of a tool that is usually categorized as a ***testing framework***.
 
 ### File Structure
 
@@ -41,7 +41,7 @@ project_name
 
 ## `rspec`
 
-<span class="vocab">rspec</span> is a tool, classified as a testing framework, that allows us to write automated tests that will test our Ruby code. Just like we must write Ruby exactly as it's intended to be used, we must carefully use the syntax and methods available within `rspec`. <a target="blank" href="https://rspec.info/documentation/3.9/rspec-core/RSpec/Core/Configuration">The official `rspec` documentation</a> may at first seem dense; it has much more than what you will even get into in Mod 1, but it's great to be aware of and start getting comfortable reading if you need a resource during or after this lesson.
+***rspec*** is a tool, classified as a testing framework, that allows us to write automated tests that will test our Ruby code. Just like we must write Ruby exactly as it's intended to be used, we must carefully use the syntax and methods available within `rspec`. <a target="blank" href="https://rspec.info/documentation/3.9/rspec-core/RSpec/Core/Configuration">The official `rspec` documentation</a> may at first seem dense; it has much more than what you will even get into in Mod 1, but it's great to be aware of and start getting comfortable reading if you need a resource during or after this lesson.
 
 ### Setup `rspec`
 
@@ -64,7 +64,7 @@ To run a test, or spec, file, in the Terminal:
 rspec <name_of_class_spec>.rb
 ```
 
-<div class="s-card s-border-yellow-500">
+<div>
   <h3>Documentation Reading</h3> 
   <p>There are times when you need to follow directions exactly, and times when you might need to adjust to add in custom information. In the previous examples, we can infer that <code>name_of_class_spec</code> is not actually a file name, but the documention is intending to show the reader that the last part of the file name should be <code>_spec</code>, preceded by the name of the class the test file will be testing.</p>
 </div>
@@ -169,7 +169,7 @@ class Student
 end
 ```
 
-<div class="s-card">
+<div>
 <h3>Explore <code>rspec</code></h3>
 <p>Follow the directions to set up a small project that uses <code>rspec</code>:</p>
 <ul>
@@ -190,7 +190,7 @@ end
 
 ## Test Driven Development
 
-<span class="vocab">Test Driven Development</span> is a common process for writing software. It entails writing the tests before the code, then using the test to guide the developers while writing the actual code. This lesson will provide some _exposure_ to the process, and the Mod 1 curriculum will dive deep into it and require it of students.
+***Test Driven Development*** is a common process for writing software. It entails writing the tests before the code, then using the test to guide the developers while writing the actual code. This lesson will provide some _exposure_ to the process, and the Mod 1 curriculum will dive deep into it and require it of students.
 
 When provided the test file that follows (the same one we've been looking at in previous examples), one can turn that code into directions that inform what should be written into the `Student` class.
 
@@ -234,7 +234,7 @@ class Student
   end
 end
 ```
-<div class="s-card">
+<div>
   <h3>Practice Reading Tests</h3> 
   <p>Read the test in <a href="https://gist.github.com/ameseee/037a9d2f9bfcd7beee85b528785c0c1c" target="blank">this file</a> and write out a list of human-readable, clear directions you could read aloud to someone you are pairing with in order to pass the tests. One of the tests does push you to apply some learning that was not explicitly covered in this less - that was intentional! The goal is not to be perfect or perfectly correct; it's to push you to apply some other knowledge and start getting comfortable with unknown code.</p>
 </div>

@@ -10,29 +10,29 @@ title: Terminal
 
 ## Vocabulary
 
-- <span class="vocab">child</span>
-- <span class="vocab">command</span>
-- <span class="vocab">directory</span>
-- <span class="vocab">file</span>
-- <span class="vocab">file path</span>
-- <span class="vocab">"run a command"</span>
-- <span class="vocab">parent</span>
-- <span class="vocab">Terminal</span>
+- ***child*** 
+- ***command*** 
+- ***directory*** 
+- ***file*** 
+- ***file path*** 
+- ***"run a command"*** 
+- ***parent*** 
+- ***Terminal*** 
 
 ## Files, Directories, and Paths
 
-On your computer, you probably have many <span class="vocab">files</span> and <span class="vocab">directories</span>. Files are things like text documents, images, videos, PDFs, etc. Directories (or folders) are the structures we use to organize these files.
+On your computer, you probably have many ***files*** and ***directories***. Files are things like text documents, images, videos, PDFs, etc. Directories (or folders) are the structures we use to organize these files.
 
 In the diagram below, we would say that there's a directory called `essays` that contains three files: `life_lessons.docx`, `book_report.docx`, and `literary_analysis.docx`:
 
 <br>
 <h3>Example #1</h3>
-<div class="flex-container">
+<div style="display: flex;">
 
 <img src="./assets/terminal/files_directories_1.png" alt="files and directories 1">
 
   <div>
-<p>A <span class="vocab">file path</span> is a way to notate where a file "lives" on your computer. This is the structure:</p>
+<p>A ***file path*** is a way to notate where a file "lives" on your computer. This is the structure:</p>
 <pre>directory_name/file_name.extension</pre>
 <p>The file path for the first file in the diagram would be:</p>
 <pre>essays/life_lessons.docx</pre>
@@ -44,7 +44,7 @@ In the diagram below, we would say that there's a directory called `essays` that
 </div>
 <br>
 
-<div class="s-card s-border-yellow-500">
+<div>
   <h3>Things to Note</h3>
   <ol>
     <li>A file cannot be inside of another file. This means that every part of the path <strong>before</strong> the actual file is a directory. </li>
@@ -60,9 +60,9 @@ In the diagram below, we would say that there's a directory called `essays` that
 <br>
 
 <h3>Example #2</h3>
-<div class="flex-container">
+<div style="display: flex;">
   <div>
-<img src="./assets/terminal/files_directories_3.png" alt="files and directories 2">
+  <img src="./assets/terminal/files_directories_3.png" alt="files and directories 2">
   </div>
   <div>
 <p>The path for the grading.txt file is</p>
@@ -76,15 +76,15 @@ In the diagram below, we would say that there's a directory called `essays` that
   </div>
 </div>
 
-<div class="s-card s-border-yellow-500">
+
   <h3>Things to Note</h3>
-  <p>We commonly refer to directories with an analogy of <span class="vocab">parent</span> and <span class="vocab">child</span>. In the previous example, <code>to_do</code> is the parent directory of the <code>personal</code> and <code>work</code> directories. <code>projects_to_delegate</code> is a child directory of the <code>work</code> directory.</p>
-</div>
+  <p>We commonly refer to directories with an analogy of ***parent*** and ***child***. In the previous example, <code>to_do</code> is the parent directory of the <code>personal</code> and <code>work</code> directories. <code>projects_to_delegate</code> is a child directory of the <code>work</code> directory.</p>
+
 <br>
 
 ## Terminal
 
-The <span class="vocab">Terminal</span> is a program we use to give <span class="vocab">commands</span>, or directions, to the computer. We use the Terminal because it is a faster and more precise way to navigate our file systems, and certain tools can only be downloaded and accessed via the Terminal. In this lesson, you will learn 9 commonly used commands, but there are many more you'll learn throughout your time at Turing and in your career.
+The ***Terminal*** is a program we use to give ***commands***, or directions, to the computer. We use the Terminal because it is a faster and more precise way to navigate our file systems, and certain tools can only be downloaded and accessed via the Terminal. In this lesson, you will learn 9 commonly used commands, but there are many more you'll learn throughout your time at Turing and in your career.
 
 Your Terminal will look something like this:
 
@@ -93,7 +93,7 @@ Your Terminal will look something like this:
 To open your terminal, we will use a Mac built-in keyboard shortcut. Press `cmd` + `spacebar` and a bar in the middle of your screen should open. This is your Spotlight and it can help you quickly find applications on your laptop. In the spotlight, start typing `Term` for terminal. It should automatically find the Terminal application. Hit `enter` and it should open!
 
 <section class="note">
-<div class="s-card">
+<div>
   <h3>Independent Research</h3>
   <p><em>Be prepared: You are about to be asked to go reseach a technical topic you have received no instruction on. This might feel scary! You might be wondering if it's a mistake! It's not - this is a big part of Turing's teaching and learning, and something we are sending you all the way into on your very first day. It might feel challenging or uncomfortable - sit with that feeling, embrace it, and push yourself to engage!</em></p>
   <p>Take 3 minutes (max) to research each of the following Terminal commands: <code>pwd</code>, <code>touch</code>, and <code>cd ..</code>. Take note of what you learn and any questions that arise from this research.</p>
@@ -101,7 +101,7 @@ To open your terminal, we will use a Mac built-in keyboard shortcut. Press `cmd`
 <br>
 </section>
 
-<div class="s-card s-border-yellow-500">
+<div>
   <h3>Reflection</h3>
   <ul>
     <li>How did it feel to research a technical topic?</li>
@@ -178,7 +178,7 @@ With a visual interface (as shown in the gif above), you can easily see the cont
 
 To see what is inside of a directory, we use the `ls` command, which is short for list. As an example, let's assume that we have the directories and files from this diagram on a computer:
 
-<div class="flex-container">
+<div style="display: flex;">
   <div>
 <img src="./assets/terminal/files_directories_2.png" alt="files and directories 2">
   </div>
@@ -208,7 +208,7 @@ _This is classified as a "Safe" command because there is **nothing** you can mes
 
 You can move into a directory using the `cd` command, which stands for "change directory". After `cd`, type the name of the directory you want to go into.
 
-<div class="flex-container">
+<div style="display: flex;">
 <div>
 <img src="./assets/terminal/files_directories_2.png" alt="files and directories 2">
 </div>
@@ -230,7 +230,7 @@ literary_analysis.docx    book_report.docx
 </div>
 </div>
 
-<div class="s-card s-border-yellow-500">
+<div>
   <h3>Things to Note</h3>
   <p>You can't pick any random directory from your computer to give to the <code>cd</code> command. It has to be a directory that is directly inside the current working directory (or you need to use the full path to get to that directory, which we won't talk about in this lesson).</p>
 </div>
@@ -254,10 +254,10 @@ Notice that my path no longer includes `book_projects` because I'm outside of th
 </section>
 
 <br>
-<div class="s-card">
+<div>
 <h3>Try It: <code>cd and cd ..</code></h3>
 <p>Using what you've learned, type a response to each prompt in the associated input field. If you aren't sure or want to check yourself, this is a great topic to bring up in your small group Slack channel.</p>
-<div class="flex-container">
+<div style="display: flex;">
 <div>
 <img src="./assets/terminal/files_directories_3.png" alt="files and directories 2">
 </div>
@@ -276,7 +276,7 @@ Notice that my path no longer includes `book_projects` because I'm outside of th
 </div>
 <br>
 
-<div class="s-card s-border-yellow-500">
+<div>
   <h3>Things to Note</h3>
   <ul>
     <li>Each level in the path is separated by a <code>/</code></li>.
@@ -333,7 +333,7 @@ chapter_2.md
 ```
 
 <section class="note">
-<div class="s-card s-border-yellow-500">
+<div>
   <h3>Things to Note</h3>
   <ul>
     <li>A file removed using the <code>rm</code> command <strong>does not</strong> go into your trash where you could restore it later.</li>
@@ -356,10 +356,10 @@ timo@Tims-MacBook-Pro:~/latest_projects$ rm -rf books
 
 Now when I run `ls`, I will no longer see `books` listed.
 
-<div class="s-card">
+<div>
 <h3>Try It: Removing files (<code>rm</code>) and directories (<code>rm -rf</code>)</h3>
 <p>Using what you've learned, type a response to each prompt in the associated input field. If you aren't sure or want to check yourself, this is a great topic to bring up in your small group Slack channel.</p>
-<div class="flex-container">
+<div style="display: flex;">
 <div>
 <img src="./assets/terminal/files_directories_3.png" alt="files and directories 2">
 </div>

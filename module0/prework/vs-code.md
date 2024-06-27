@@ -14,13 +14,13 @@ If at anytime throughout this lesson you get stuck or have questions, please hea
 
 ## Vocabulary
 
-- <span class="vocab">VS Code</span>
-- <span class="vocab">Code Editor</span>
-- <span class="vocab">Keyboard shortcuts</span>
+- ***VS Code***
+- ***Code Editor***
+- ***Keyboard shortcuts***
 
 ## VS Code
 
-<span class="vocab">Visual Studio Code</span> or VS Code is a <span class="vocab">code editor</span>. It is a desktop application where we write the code that powers our applications. It offers features like syntax highlighting and line numbers (and many more!) that make it easier for developers to write code efficiently. There are many other code editors - some similar to VS Code and some with even more built-in tools. We ask all incoming students to start with VS Code, so the whole class is using the same set of tools while we focus on learning foundational coding tools and concepts. After Mod 1, students can choose to use other editors.
+***Visual Studio Code*** or VS Code is a ***code editor***. It is a desktop application where we write the code that powers our applications. It offers features like syntax highlighting and line numbers (and many more!) that make it easier for developers to write code efficiently. There are many other code editors - some similar to VS Code and some with even more built-in tools. We ask all incoming students to start with VS Code, so the whole class is using the same set of tools while we focus on learning foundational coding tools and concepts. After Mod 1, students can choose to use other editors.
 
 >VS Code is the application we will use to write code in programming languages, such as Ruby and JavaScript. In the Terminal, we run commands to communicate with various programs on the computer.
 
@@ -50,9 +50,9 @@ Inside the `index.md` file you just made, type some text using markdown into VS 
 
 ## VS Code Keyboard Shortcuts
 
-To maximize your time as a developer, the use of <span class="vocab">keyboard shortcuts</span> will be essential. If you are new to a Mac and/or a development environment, it can feel overwhelming at first. Below is a list of common shortcuts. You are not expected to memorize these all right away, it will come over time.
+To maximize your time as a developer, the use of ***keyboard shortcuts*** will be essential. If you are new to a Mac and/or a development environment, it can feel overwhelming at first. Below is a list of common shortcuts. You are not expected to memorize these all right away, it will come over time.
 
-<div class="s-card">
+<div>
   <h3>VS Code Keyboard Shortcuts</h3>
   <p>With that current <code>index.md</code> open in VS Code, follow the steps below to practice using some of the most common keyboard shortcuts in VS Code.</p>
   <ol>
@@ -84,7 +84,7 @@ You may need to practice these shortcuts quite a few times before you start to b
 - Learning keyboard shortcuts is a process of consistency and time. The best way to learn these is to pick *one* shortcut to implement into your routine each day. Just one. Write it down in a notebook and make sure you intentionally and consciously use that new keyboard shortcut the entire day. Over time, you will build up muscle memory for utilizing these shortcuts.
 - You can find more commands, cheatsheets, and resources by googling `VS Code keyboard shortcuts`!
 
-<div class="s-card">
+<div>
   <h3>Turn on Auto Save</h3>
   <p>To quickly save any file, you can use <code>cmd + s</code>. However, if you prefer to have your files auto-save when you switch to another application, go to `File` at the top of your VS Code window and select <code>Auto Save</code>. We highly recommend turning on auto-save to start with.</p>
 </div>

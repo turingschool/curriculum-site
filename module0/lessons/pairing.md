@@ -3,7 +3,7 @@ layout: page
 title: Pair Programming
 ---
 
-<div class="s-card s-border-yellow-500">
+<div>
   <h3>Prepare to Engage</h3>
   <p>Whether you are starting your day with this activity or wrapping up a long day of technical work with this, take a moment to ground yourself in why you became a student at Turing. This Career Development work is arguably the most valuable component of your education that will lead you into your new career.</p>
   <p>Take a moment to reset if needed, meditate, or do some physical stretches/movement to get yourself into the space you need to be in to engage in this work. Some optional guiding questions follow.</p>
@@ -23,20 +23,20 @@ title: Pair Programming
 
 ## Vocabulary
 
-- <span class="vocab">Driver</span>
-- <span class="vocab">Navigator</span>
-- <span class="vocab">Pairing</span>
-- <span class="vocab">Pair Programming</span>
+- ***Driver***
+- ***Navigator***
+- ***Pairing***
+- ***Pair Programming***
 
 ## Pair Programming
 
-<span class="vocab">Pair Programming</span> is a technique in which two software developers work together on a problem. We commonly refer to it as <span class="vocab">Pairing</span>. The concept of pairing comes from the Agile Methodology, which you'll learn more about during your time at Turing.
+***Pair Programming*** is a technique in which two software developers work together on a problem. We commonly refer to it as ***Pairing***. The concept of pairing comes from the Agile Methodology, which you'll learn more about during your time at Turing.
 
 ## Driver Navigator
 
-There are many styles of pairing. In Mod 0, we will introduce and focus on the Driver Navigator style. In this style of pairing, the person determined to be the <span class="vocab">Driver</span> should screen share and type all work the pair does. The <span class="vocab">Navigator</span> is responsible for doing the problem-solving and communicating to the Driver what they should be typing.
+There are many styles of pairing. In Mod 0, we will introduce and focus on the Driver Navigator style. In this style of pairing, the person determined to be the ***Driver*** should screen share and type all work the pair does. The ***Navigator*** is responsible for doing the problem-solving and communicating to the Driver what they should be typing.
 
-<div class="s-card">
+<div>
   <h3>Watch an Example</h3>
   <p><a href="https://turingschool.zoom.us/rec/share/EC89i-P37Wnke3mSf0_Jk4nCTkP4CUgm97IXmSJAYYog1FdBYkDdzlGdsHMXG2Oq.ksixjk2usE-Cvhz0?startTime=1646316847000" target="blank">This video shows two developers pairing on a simple task.</a></p>
   <p>Watch it and reflect on how they interacted. Observe what they each did in the Driver and Navigator role.</p>

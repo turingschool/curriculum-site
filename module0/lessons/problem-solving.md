@@ -22,7 +22,7 @@ With practice, you'll get faster at problem solving, but in the beginning it can
 
 <br>
 
-<div class="s-card">
+<div>
   <h3>Problem Solving Example</h3>
   <p>Pretend your assignment is to write a function or method that accepts an array as an argument and returns a number representing the number of elements in the array. Below is one way you might use the 8 steps to Problem Solving:</p>
   <ol>
@@ -73,14 +73,14 @@ If the solution you're looking for isn't in the first two pages of results, it's
 ## Problem Solving in Action
 Open up a new replit to complete the following challenges. Don't get too caught up in finding the solution - focus instead on your PROCESS. Push yourself to slow down and follow the process outlined above. And remember that you can post questions in Slack if you hit blockers!
 
-<div class="s-card">
+<div>
   <h3>Challenge 1</h3>
   <p>Write a method or function that accepts a string. The method or function should return a boolean that describes whether or not the string has an even number of characters.</p>
 </div>
 
 <br>
 
-<div class="s-card">
+<div>
   <h3>Challenge 2</h3>
   <p>Update your previous method or function so it accepts an array. The method or function should return a boolean that describes whether or not the array's length is an even number.</p>
 </div>
@@ -91,7 +91,7 @@ Before continuing, take some time to reflect on the following questions.
 - What might make this process challenging?
 - Are there any steps you would add or modify?
 
-<div class="s-card">
+<div>
   <h3>Challenge 3</h3>
   <p>Write a method or function that accepts a number from 1-24 that represents the current time rounted to the closest hour in 24-hour military time. (i.e. 11 = 11:00 AM, 16 = 4:00 PM). The function should return a different greeting based on the time of day.</p>
   <ul>
@@ -104,14 +104,14 @@ Before continuing, take some time to reflect on the following questions.
 
 <br>
 
-<div class="s-card">
+<div>
   <h3>Challenge 4 - OPTIONAL! Spicy!</h3>
   <p>Write a method or function that accepts an array of 10 integers (between 0 and 9) and returns a string of those numbers in the form of a phone number. For example, if you were given <code>[5, 5, 5, 1, 2, 3, 4, 5, 6, 7]</code>, the method or function will return <code>555-123-4567</code>.</p>
 </div>
 
 <br>
 
-<div class="s-card">
+<div>
   <h3>Challenge 5 - OPTIONAL! Super Spicy!</h3>
   <p>Start with the array of strings below. Print all of the words in the array, but change every <strong>t</strong> to an uppercase <strong>T</strong>.</p>
   <p>Starter array: <code>['cat', 'dog', 'parrot', 'turtle', 'bird']</code></p>
