@@ -1,12 +1,12 @@
 ---
-title: Object-Oriented Programming
+title: The Lookup Chain
 length: 60min
 layout: page
 ---
 
 ## Learning Goals
 
-* Understand and explain the Look Up Chain and how it relates to the principle of Polymorphism in Object-Oriented Programming.
+* Understand and explain the Lookup Chain and how it relates to the principle of Polymorphism in Object-Oriented Programming.
 * Explore how Ruby's object model facilitates this principle.
 
 ## Vocabulary
@@ -16,7 +16,7 @@ layout: page
 * Superclass
 * Module
 * Object Model
-* Look Up Chain
+* Lookup Chain
 
 ## WarmUp
 
@@ -210,7 +210,7 @@ Once you have finished the activity, write out the order of the Lookup Chain as 
 
 ## WrapUp
 
-* How does Ruby's look up chain work? What is the order it checks things?
+* How does Ruby's lookup chain work? What is the order it checks things?
 * What are three methods you can use to learn about where a built-in Ruby method gets its components?
 * Draw a diagram of where Ruby would look for the method `::new`
 
