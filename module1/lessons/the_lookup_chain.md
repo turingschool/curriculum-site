@@ -150,7 +150,7 @@ From this information, we can deduce that `BasicObject` doesn't include any modu
 
 Our updated diagram:
 
-![Imgur](../../assets/images/lessons/)
+![Imgur](../../assets/images/lessons/the_lookup_chain/dog_inheritance_final.png)
 
 <section class="note">
 
