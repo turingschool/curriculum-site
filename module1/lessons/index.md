@@ -23,7 +23,7 @@ title: Module 1 - Lessons
 * [Modules](./modules)
 * [Inheritance](./inheritance)
 <!-- * [CSV Workshop](./csv_walkthrough) -->
-* [The Lookup Chain](./the_lookup_chain)
+* [The Lookup Chain](./lookup_chain)
 
 ## Design
 * [Design Principles](./design_principles)
