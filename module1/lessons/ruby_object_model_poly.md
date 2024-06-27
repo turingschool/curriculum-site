@@ -28,7 +28,7 @@ layout: page
 
 ## Investigative Methods
 
-These three methods can help you investigate the relationships between classes and modules in Ruby. All methods are run on the class (i.e., `String`, `Hash`):
+These three methods can help you investigate the relationships between classes and modules in Ruby. All methods are run on the class (i.e., `String.ancestors`, `Hash.included_modules`):
 
 * `.ancestors`: lists all classes along the inheritance chain, and any modules included by those classes.
 * `.included_modules`: returns a list of all modules included by any class along the inheritance chain.
@@ -101,7 +101,7 @@ Notice how we have included two instances of Dog in this diagram. This is to ill
 
 Also notice that we call `.superclass` on the `Dog` class, not the dog instance. What happens if we call `.superclass` on a dog instance? Try it to find out.
 
-Because our class inherits from `Object`, which inherits from `BasicObject`, we know that any class we create will have those two ancestors. This is where `:new` comes from. Look in the [Ruby Docs BasicObject Page](https://ruby-doc.org/core-2.4.1/BasicObject.html) and you'll see the `:new` defined there.
+Because our class inherits from `Object`, which inherits from `BasicObject`, we know that any class we create will have those two ancestors. This is where `:new` comes from. Look in the [Ruby Docs BasicObject Page](https://ruby-doc.org/core-3.0.0/BasicObject.html) and you'll see the `:new` defined there.
 
 <section class="dropdown">
 
@@ -168,13 +168,13 @@ Using `.class`, `.ancestors`, `.included_modules`, and `.superclass`, diagram th
 
 # The Lookup Chain and Polymorphism
 
-In programming, polymorphism lets us use the same method or property in different classes or objects. Each class or object can have its own special version of a method through a process called **method overriding**.
+In programming, polymorphism lets us use the same method or property in different classes or objects. Each class or object can have its own special version of a method through a process called **method overriding**, where a local definition of a method overrides the same method from the parent class.
 
 <section class="note">
 
 ### Note
 
-Another form of polymorphism is **method overloading** which allows you to create multiple versions of the same method, each with different parameters. Neither Ruby or JavaScript support method overloading.
+Another form of polymorphism is **method overloading**, which allows you to create multiple versions of the same method, each with different parameters. Contrary to method overriding, an overloaded method can live in the same class. Neither Ruby nor JavaScript support method overloading.
 
 </section>
 
@@ -192,7 +192,7 @@ In JavaScript, the **prototype chain** plays a similar role to Ruby's Lookup Cha
 
 ## Lookup Chain Exercise
 
-Complete [this activity](https://github.com/turingschool-examples/lookup_chain_exercise). In the first part of the activity, you will map the Object Model for a `Chair` instance, just as we did above. Then you will alter the code to explore the order of the Lookup Chain.
+Complete [this activity](https://github.com/turingschool-examples/se-mod1-exercises/tree/main/lessons/ruby_object_model/lookup_chain_exercise). In the first part of the activity, you will map the Object Model for a `Chair` instance, just as we did above. Then you will alter the code to explore the order of the Lookup Chain.
 
 Once you have finished the activity, write out the order of the Lookup Chain as concisely as possible.
 
