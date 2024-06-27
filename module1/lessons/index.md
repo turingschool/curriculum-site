@@ -31,7 +31,7 @@ title: Module 1 - Lessons
 
 ## Testing
 * [Intro to Testing](./intro_to_testing)
-<!-- * [Mocks & Stubs](./mocks_stubs) -->
+* [Mocks & Stubs](./mocks_stubs)
 * [Test Driven Development](./test_driven_development)
 
 ## Debugging

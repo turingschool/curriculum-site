@@ -1,6 +1,6 @@
 ---
 title: The Lookup Chain
-length: 60min
+length: 120min
 layout: page
 ---
 
