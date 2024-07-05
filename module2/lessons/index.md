@@ -5,6 +5,9 @@ title: Module 2 - Lessons
 
 ## Introduction To Rails
 * [Beginner Rails Workshop](./beginner_rails_workshop)
+* [One to Many Relationships in the Database](./one_to_many_relationships_part1)
+* [One to Many Relationships in Rails](./one_to_many_relationships_part2)
+
 * [Introduction to MVC](./intro_to_mvc)
 
 ## Professional Development
