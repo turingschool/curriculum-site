@@ -18,3 +18,4 @@ title: Module 2 - Lessons
 
 ## Additional Resources
 * [Chrome Dev Tools](./chrome_dev_tools)
+
