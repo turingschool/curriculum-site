@@ -1,6 +1,6 @@
 ---
 title: The Lookup Chain
-length: 60min
+length: 120min
 layout: page
 ---
 
@@ -95,7 +95,7 @@ pry(main)> BasicObject.superclass
 
 Calling `.class` on the Dog object leads us to the `Dog` class. Calling `.superclass` on the `Dog` class leads us to `Object`, and calling `superclass` on `Object` leads us to `BasicObject`. `BasicObject` has no superclass, so the inheritance chain ends there. We can summarize this information in a diagram:
 
-![Dog Inheritance](../../assets/images/lessons/the_lookup_chain/dog_inheritance.png)
+![Dog Inheritance](../../assets/images/lessons/lookup_chain/dog_inheritance.png)
 
 Notice how we have included two instances of Dog in this diagram. This is to illustrate that there can be many instances of a class, and they all have a `.class` pointer to their Class. In this example, there can be many instances of Dog that all have the same `Dog` class.
 
@@ -150,7 +150,7 @@ From this information, we can deduce that `BasicObject` doesn't include any modu
 
 Our updated diagram:
 
-![Imgur](../../assets/images/lessons/the_lookup_chain/dog_inheritance_final.png)
+![Imgur](../../assets/images/lessons/lookup_chain/dog_inheritance_final.png)
 
 <section class="note">
 
