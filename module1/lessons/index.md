@@ -25,6 +25,7 @@ title: Module 1 - Lessons
 <!-- * [CSV Workshop](./csv_walkthrough) -->
 <!-- * [Ruby Object Model](./ruby_object_model) -->
 * [JavaScript Party](./js-party)
+* [File IO](./file_io)
 * [The Lookup Chain](./lookup_chain)
 
 ## Design
