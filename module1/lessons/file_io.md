@@ -157,7 +157,7 @@ end
 
 ### File I/O in JavaScript
 
-Reading from and writing to files in Javascript is very similar to the process we just covered in Ruby! There is a ['File system'](https://nodejs.org/api/fs.html#file-system) module in Node.js. This module is very versatile and allows for interaction with more file types than just CSVs.
+We'll be working in Ruby, but reading from and writing to files in Javascript is very similar to the process we just covered! There is a ['File system'](https://nodejs.org/api/fs.html#file-system) module in Node.js. This module is very versatile and allows for interaction with more file types than just CSVs.
 
 <section class="dropdown">
 
@@ -191,4 +191,4 @@ function formatRowData(row) {
 ### Practice
 
 1. On your own, try reading the file and creating magical pet objects.
-1. Head over to the "big repo" and find the `event_manager` directory. It can be found under `../mod-1-be-exercises/lessons/csv_files/event_manager`. Follow the instructions in the `exercise.md` file. The Readme will also provide some additional information.
+1. Head over to the [event_manager directory]((https://github.com/turingschool-examples/se-mod1-exercises/tree/main/lessons/csv_files/event_manager)) in your "big repo".  Read through the overview in the README, then follow the instructions in the `exercise.md` file. This [Event Manager Lesson](https://curriculum.turing.edu/module1/projects/event_manager) will provide a more detailed walkthrough. 
