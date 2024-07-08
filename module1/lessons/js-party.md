@@ -67,16 +67,16 @@ A use case for **null** might be creating a userEmail variable and assigning it 
 
 You aren’t likely to specifically assign a value of **undefined** so there’s not a great use case to use as an example.
 
-### Data Types & Variables Party Exercises
+### 🎉 Data Types & Variables Party Exercises
 
 Use this repl to practice working with variables and data types in JavaScript.  Use google, MDN and each other when you get stuck. You're not suppose to know this, so just have a little fun trying to figure it out.  Be sure to disable AI Autocomplete at the bottom of the repl (towards the left).
 
 [Data Types and Variables Playground repl](https://replit.com/@replit1369/Data-Types-and-Variables-playground#index.js)
 
 A few things you might want to google or check out in the MDN docs as you party:  
-[concatenation](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Strings#concatenation_using)  
-[string interpolation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals#string_interpolation)  
-[type coercion](https://developer.mozilla.org/en-US/docs/Glossary/Type_coercion)
+*[concatenation](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Strings#concatenation_using)*  
+*[string interpolation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals#string_interpolation)*  
+*[type coercion](https://developer.mozilla.org/en-US/docs/Glossary/Type_coercion)*
 
 <br>
 
@@ -84,7 +84,7 @@ A few things you might want to google or check out in the MDN docs as you party:
 
 JavaScript lets us combines multiples pieces of data into one big string using concatenation or interpolation - essentially two different syntax options to accomplish the same goal.  Sometimes, JavaScript will use type coercion when it's trying to be helpful.  Whether developers actually appreciate these "helpful" efforts is debatable. 
 
-### Type Coercion, Concatenation & Interpolation Party Exercises
+### 🎉 Type Coercion, Concatenation & Interpolation Party Exercises
 
 Use this repl to practice working with type coercion, concatenation & interpolation in JavaScript.  Use google, MDN and each other when you get stuck. You're not suppose to know this, so just have a little fun trying to figure it out.  Be sure to disable AI Autocomplete at the bottom of the repl (towards the left).
 
@@ -147,7 +147,7 @@ var hiGreeting = captureGreeting('hi')
 
 You'll eventually need to understand and use both options but don't stress that now, it will come with time.  We recommend starting with the ES5 version using the "function" keyword.
 
-### Functions Party Exercises
+### 🎉 Functions Party Exercises
 
 Use this repl to practice writing functions in JavaScript.  Use google, MDN and each other when you get stuck. You're not suppose to know this, so just have a little fun trying to figure it out.   Be sure to disable AI Autocomplete at the bottom (towards the left).
 
@@ -199,7 +199,7 @@ findLocation("taco bell");
 // "Finding location.  Found it!  Let's go!" would print to the console
 ```
 
-### Conditionals Party Exercises
+### 🎉 Conditionals Party Exercises
 
 Use this repl to practice working with conditionals in JavaScript.  Use google, MDN and each other when you get stuck. You're not suppose to know this, so just have a little fun trying to figure it out.   Be sure to disable AI Autocomplete at the bottom (towards the left).
 
@@ -230,7 +230,7 @@ var student = {
 
 Objects in JS can hold any data type within it's key-value pairs.  You can even declare methods within an object in JS (without having to build an entire Class). 
 
-### Object Party Exercises
+### 🎉 Object Party Exercises
 
 Use this repl to practice working with objects in JavaScript.  Use google, MDN and each other when you get stuck. You're not suppose to know this, so just have a little fun trying to figure it out.   Be sure to disable AI Autocomplete at the bottom (towards the left).
 
@@ -252,7 +252,7 @@ Note the similarities between JavaScript and Ruby. Both languages have Arrays an
 
 Arrays in JS can hold any other data type.  You could have an array of strings, numbers, objects (like hashes in Ruby), or even an array of other arrays.
 
-### Array Party Exercises
+### 🎉 Array Party Exercises
 
 Use this repl to practice working with arrays in JavaScript.  Use google, MDN and each other when you get stuck. You're not suppose to know this, so just have a little fun trying to figure it out.    Be sure to disable AI Autocomplete at the bottom (towards the left).
 
@@ -289,7 +289,7 @@ for (var i = 0; i < fruits.length; i++) {
 //This for loop iterates based on the length of the array to ensure it can access every element.  Then we use `i` in bracket notation to access the corresponding element on each loop.
 ```
 
-### For Loops Party Exercises
+### 🎉 For Loops Party Exercises
 
 Use this repl to practice iterating over arrays with a for loop.  Use google, MDN and each other when you get stuck. You're not suppose to know this, so just have a little fun trying to figure it out.    Be sure to disable AI Autocomplete at the bottom (towards the left).
 
@@ -297,15 +297,15 @@ Use this repl to practice iterating over arrays with a for loop.  Use google, MD
 
 Now lets take a sneak peek at another, more sophisticated way to iterate over data in JavaScript - Array Prototype Iterator Methods!
 
-[Iterators Sneak Peek Playground](https://replit.com/@replit1369/Iterators-Sneak-Peek-Playground#index.js)
+[Iterators Sneak Peek Playground repl](https://replit.com/@replit1369/Iterators-Sneak-Peek-Playground#index.js)
 
-A few things you might want to google or check out in the docs as you party:
-[forEach()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)  
-[map()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)  
-[find()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find)  
-[filter()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)  
-[reduce()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce)  
-[toUpperCase()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase)
+A few things you might want to google or check out in the docs as you party:    
+    *[forEach()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)*  
+    *[map()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)*  
+    *[find()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find)*  
+    *[filter()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)*  
+    *[reduce()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce)*  
+    *[toUpperCase()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase)*
 
 
 ## Wrap Up
