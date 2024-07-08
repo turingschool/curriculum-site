@@ -22,7 +22,7 @@ title: Module 1 - Lessons
 * [Class Methods](./class_methods)
 * [Modules](./modules)
 * [Inheritance](./inheritance)
-<!-- * [CSV Workshop](./csv_walkthrough) -->
+* [File IO](./file_io)
 * [The Lookup Chain](./lookup_chain)
 
 ## Design
