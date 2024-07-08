@@ -295,6 +295,10 @@ Use this repl to practice iterating over arrays with a for loop.  Use google, MD
 
 [For Loops Playground repl](https://replit.com/@replit1369/for-loop-Playground#index.js)
 
+Now lets take a sneak peek at another, more sophisticated way to iterate over data in JavaScript - Array Prototype Iterator Methods!
+
+[Iterators Sneak Peek Playground](https://replit.com/@replit1369/Iterators-Sneak-Peek-Playground#index.js)
+
 A few things you might want to google or check out in the docs as you party:
 [forEach()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)  
 [map()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)  
@@ -311,3 +315,7 @@ You can see that as developers, we will likely want to do similar data manipulat
 ## More Practice (optional)
 
 [More Functions Playground](https://replit.com/@replit1369/More-Functions-Playground)
+
+If you're looking for additional practice and elaboration on these JavaScript topics, you can check out our [legacy Front End curriculum lessons](https://frontend.turing.edu/lessons/) to learn more.
+
+This [Extra Practice](https://frontend.turing.edu/lessons/module-1/extra-practice.html) resource from our legacy FE Curriculum may also be helpful.
