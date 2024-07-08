@@ -6,6 +6,7 @@ tags: csv tutorial
 ### File IO with CSV
 
 ### Vocabulary
+
 - IO
 - Read
 - Parse
@@ -13,12 +14,13 @@ tags: csv tutorial
 
 ### Introduction
 
-Thinking back on projects and class lessons, how have you been making instances of objects so far? 
+Thinking back on projects and class lessons, how have you been making instances of objects so far?
 
 Likely you have been creating an instance of the object you need:
+
 - Directly in a `runner.rb` file.
--  In your setup in spec files. 
--  Collecting user input and using that information to instantiate.
+- In your setup in spec files.
+- Collecting user input and using that information to instantiate.
 - Receiving API data (DMV Project), using that data to instantiate in a "factory".
 - Creating a Class Method that takes data and turns creates instances with the data sent into the arguments.
 
@@ -55,7 +57,7 @@ file = File.readlines("names.txt")
 puts file
 ```
 
-Great! We've successfully gotten input, or __read__, from a text file using Ruby. But what if we want to use Ruby to 'output' (create) a file? 
+Great! We've successfully gotten input, or **read**, from a text file using Ruby. But what if we want to use Ruby to 'output' (create) a file?
 
 The `File.open` method can accept two arguments. The first argument will be the file we want to open, and the second argument will be the 'mode.' From the docs:
 
@@ -80,6 +82,7 @@ The `File.open` method can accept two arguments. The first argument will be the 
      Creates a new file for reading and writing if file does
      not exist.
 ```
+
 </section>
 
 To create a new list of names, we want "w" or "w+" mode.
@@ -152,46 +155,40 @@ CSV.foreach('./data/animal_lovers.csv', headers: true, header_converters: :symbo
 end
 ```
 
-### Using JavaScript to read a CSV file
+### File I/O in JavaScript
 
-In Node.js, we can require the 'File system' module to read from and write to files, similar to how we required the `'CSV'` class in Ruby.
+Reading from and writing to files in Javascript is very similar to the process we just covered in Ruby! There is a ['File system'](https://nodejs.org/api/fs.html#file-system) module in Node.js. This module is very versatile and allows for interaction with more file types than just CSVs.
 
-```javascript
-const fs = require('fs');
-```
+<section class="dropdown">
 
-This `fs` module has a variety of methods for interacting with a file system, which you can read more about in the documentation [here](https://nodejs.org/api/fs.html#file-system).
+### Optional JavaScript Example
 
-In this example, we're going to use `fs.readFileSync()` and `forEach()` to create and print JavaScript objects for each row in our CSV file.
+Here is an example of reading from a file using the `File system` module, commonly referred to as fs.
 
-With a partner see if you can explain what is happening in the code below and use `console.log()` to confirm your assumptions.
+This example uses `fs.readFileSync()` to create and print JavaScript objects for each row in the animal_lovers CSV file.
 
 ```javascript
 const fs = require('fs');
 
-var data = fs.readFileSync('animal_lovers.csv').toString().split("\n");
+var data = fs.readFileSync('animal_lovers.csv').toString().split('\n');
 data.forEach(formatRowData);
 
 function formatRowData(row) {
-  var lineArrays = row.split(",");
-  if (lineArrays[0] != "id") {
-    let rowObject = {
-      "first_name": lineArrays[1],
-      "last_name": lineArrays[2],
-      "age": lineArrays[3]
-    }
-    console.log(rowObject);
-  }
+	var lineArrays = row.split(',');
+	if (lineArrays[0] != 'id') {
+		let rowObject = {
+			first_name: lineArrays[1],
+			last_name: lineArrays[2],
+			age: lineArrays[3],
+		};
+		console.log(rowObject);
+	}
 }
 ```
 
-<section class="dropdown">
-### Can we use the same method to work with file types other than CSV?
-
-Yes! `fs.readFileSync()` and the async version, `fs.readFile()`, works with any file extension which supports reading (such as `.txt` and `.json`).
 </section>
 
 ### Practice
 
 1. On your own, try reading the file and creating magical pet objects.
-1. Head over to the "big repo" and find the `event_manager` directory. It can be found under `../mod-1-be-exercises/lessons/csv_files/event_manager`. Follow the instructions in the `exercise.md` file. The Readme will also provide some additional information. 
+1. Head over to the "big repo" and find the `event_manager` directory. It can be found under `../mod-1-be-exercises/lessons/csv_files/event_manager`. Follow the instructions in the `exercise.md` file. The Readme will also provide some additional information.
