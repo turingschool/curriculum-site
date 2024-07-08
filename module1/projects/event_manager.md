@@ -88,10 +88,10 @@ ruby: No such file or directory -- lib/event_manager.rb (LoadError)
 ```
 For this project we are going to use the following sample data:
 
-* [Small Sample](event_attendees.csv)
-* [Large Sample](full_event_attendees.csv)
+* [Small Sample](../assets/event_attendees.csv)
+* [Large Sample](../assets/full_event_attendees.csv)
 
-Download the *[small sample](event_attendees.csv)* csv file and save it in the
+Download the *small sample* csv file and save it in the
 root of `event_manager` directory.
 
 ```
@@ -433,7 +433,7 @@ solve the second issue and the third issue.
 
 * Some zip codes are represented with less than a five-digit number
 
-If we looked at the [larger sample of data](full_event_attendees.csv) we would
+If we looked at the *larger sample of data* we would
 see that the majority of the shorter zip codes are from individuals from states
 in the north-eastern part of the United States. Many zip codes there start with
 0. This data was likely stored in the database as an integer, and not as text,

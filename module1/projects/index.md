@@ -20,4 +20,4 @@ The project specs will be linked below as each project is assigned.
 
 ## Additional Projects and Resources
 
-- [Event Manager:]() Supplement to File IO lesson
+- [Event Manager:](./event_manager) Supplement to File IO lesson
