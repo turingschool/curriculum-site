@@ -307,3 +307,7 @@ A few things you might want to google or check out in the docs as you party:
 ## Wrap Up
 
 You can see that as developers, we will likely want to do similar data manipulation and logic regardless of what programming language we might be using.  The biggest difference, and biggest tripping point, is often syntax. When you realize that the work you're doing really applies to programming in general, not a specific language, it empowers you to feel confident in your ability to pick up and add *any* language to your skill set.  A little bit of practice, using your resources, asking questions and paying close attention to those details - especially syntax, will allow you to do so successfully. 
+
+## More Practice (optional)
+
+[More Functions Playground](https://replit.com/@replit1369/More-Functions-Playground)
