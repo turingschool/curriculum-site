@@ -191,4 +191,4 @@ function formatRowData(row) {
 ### Practice
 
 1. On your own, try reading the file and creating magical pet objects.
-1. Head over to the [event_manager directory]((https://github.com/turingschool-examples/se-mod1-exercises/tree/main/lessons/csv_files/event_manager)) in your "big repo".  Read through the overview in the README, then follow the instructions in the `exercise.md` file. This [Event Manager Lesson](https://curriculum.turing.edu/module1/projects/event_manager) will provide a more detailed walkthrough. 
+1. Head over to the [event_manager directory](https://github.com/turingschool-examples/se-mod1-exercises/tree/main/lessons/csv_files/event_manager) in your "big repo".  Read through the overview in the README, then follow the instructions in the `exercise.md` file. This [Event Manager Lesson](https://curriculum.turing.edu/module1/projects/event_manager) will provide a more detailed walkthrough. 
