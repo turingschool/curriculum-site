@@ -80,6 +80,22 @@ A few things you might want to google or check out in the MDN docs as you party:
 
 <br>
 
+## Type Coercion, Concatenation, Interpolation
+
+JavaScript lets us combines multiples pieces of data into one big string using concatenation or interpolation - essentially two different syntax options to accomplish the same goal.  Sometimes, JavaScript will use type coercion when it's trying to be helpful.  Whether developers actually appreciate these "helpful" efforts is debatable. 
+
+### Type Coercion, Concatenation & Interpolation Party Exercises
+
+Use this repl to practice working with type coercion, concatenation & interpolation in JavaScript.  Use google, MDN and each other when you get stuck. You're not suppose to know this, so just have a little fun trying to figure it out.  Be sure to disable AI Autocomplete at the bottom of the repl (towards the left).
+
+[Type Coercion Concatenation Interpolation Playground repl](https://replit.com/@replit1369/Type-Coercion-Concatenation-Interpolation-Playground)
+
+A few things you might want to google or check out in the MDN docs as you party:  
+[concatenation](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Strings#concatenation_using)  
+[string interpolation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals#string_interpolation)  
+[type coercion](https://developer.mozilla.org/en-US/docs/Glossary/Type_coercion)
+<br>
+
 ## Functions
 
 Functions in JavaScript are just like methods in Ruby - they let us capture code in a reusable way.  In JavaScript, functions can stand alone and don't *have* to be part of an object or class.  If we do declare a function as part of an object or class in JavaScript, we would call that function a "method" - just like in Ruby.
