@@ -186,6 +186,10 @@ What are mocks and stubs? When would you use them?
 Mocks and Stubs aren’t exclusive to Ruby, several languages including JavaScript use them too!
 </section>
 
+### More Practice
+
+How could mocks and stubs be used in your DMV project? Take a look at [this repo](https://github.com/turingschool-examples/mocks-and-stubs-dmv) to see how they are used to mock network calls made to retrieve facility information! We will revisit this topic in Mod 3. 
+
 ## Further Reading
 
 * Martin Fowler - Test Double: link [here](http://www.martinfowler.com/bliki/TestDouble.html)
