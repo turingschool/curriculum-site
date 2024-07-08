@@ -22,6 +22,9 @@ title: Module 1 - Lessons
 * [Class Methods](./class_methods)
 * [Modules](./modules)
 * [Inheritance](./inheritance)
+<!-- * [CSV Workshop](./csv_walkthrough) -->
+<!-- * [Ruby Object Model](./ruby_object_model) -->
+* [JavaScript Party](./js-party)
 * [File IO](./file_io)
 * [The Lookup Chain](./lookup_chain)
 
