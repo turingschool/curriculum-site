@@ -25,6 +25,7 @@ title: Module 1 - Lessons
 <!-- * [CSV Workshop](./csv_walkthrough) -->
 <!-- * [Ruby Object Model](./ruby_object_model) -->
 * [JavaScript Party](./js-party)
+* [The Lookup Chain](./lookup_chain)
 
 ## Design
 * [Design Principles](./design_principles)
@@ -32,12 +33,12 @@ title: Module 1 - Lessons
 
 ## Testing
 * [Intro to Testing](./intro_to_testing)
-<!-- * [Mocks & Stubs](./mocks_stubs) -->
+* [Mocks & Stubs](./mocks_stubs)
 * [Test Driven Development](./test_driven_development)
 
 ## Debugging
 * [Async Intro to Debugging](./debugging_prework)
-<!-- * [Debugging Techniques](./debugging_techniques) -->
+* [Debugging Techniques](./debugging_techniques)
 * [Using ChatGPT Effectively](./chatgpt)
 
 ## Version Control
