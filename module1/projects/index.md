@@ -18,3 +18,6 @@ The project specs will be linked below as each project is assigned.
 - Week 3-4 (Paired): TBD <!-- [Battleship](./battleship/)-->
 - Week 5-6 (Group Final): TBD <!--[Futbol](./futbol_pd/) -->
 
+## Additional Projects and Resources
+
+- [Event Manager:](./event_manager) Supplement to File IO lesson
