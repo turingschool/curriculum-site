@@ -56,37 +56,9 @@ Depending on how encompassing a user story is, you may want to break a single us
 
 ## Feature Testing Tools
 
-Depending upon what language you're working in, you may write feature tests using webdriver frameworks like Jasmine, Cypress, Nightwatch, or others. These testing tools work by using a [headless browser](https://en.wikipedia.org/wiki/Headless_browser) to mimic user behavior.
+For this lesson, and future Rails apps at Turing, we'll be using Capybara. Capybara is not the only feature testing or integration testing framework! Later this module, we will explore an extension to Capybara that allows us to test JavaScript interactions on a Rails view. If you work with other frameworks and languages down the road, you may write feature tests using webdriver frameworks like Jasmine, Cypress, Nightwatch, or others. When building React applications in Mod 3, you will explore Cypress. But more on that later! 
 
-<section class="dropdown">
-### Sneak Peek into Cypress tests
-
-In JavaScript applications, "feature tests" are more commonly referred to as "end-to-end" tests, part of the "acceptance test" phase of development. Here's an example of an "E2E" test in Cypress:
-```javascript
-  beforeEach(() => {
-    cy.intercept("GET", "https://api.openbrewerydb.org/breweries?by_city=savannah", {
-      statusCode: 200,
-      fixture: "savannah_breweries"
-    })
-    .visit("http://localhost:3000/")
-  });
-
-  it("should have a form to enter a city and display that city's breweries", () => {
-    cy.get("input[name='city']").type("savannah")
-    .get(".search-button").click()
-    .get(".breweries-container").find(".brewery-card-wrapper").should("have.length", 2)
-    .get(".brewery-name").first().contains("h2", "Moon River Brewing Co")
-    .get(".brewery-name").last().contains("h2", "Two Tides Brewing Company")
-    .get(".brewery-location").first().contains("p", "Savannah, Georgia")
-  });
-```
-</section>
-
-For this lesson, and future Rails apps at Turing, we'll be using Capybara. By default, Capybara uses a driver called `:rack_test`, which does not support JavaScript. That's fine for our needs right now! Capybara is driver-agnostic and comes with built-in support for the popular webdriver [Selenium](https://github.com/SeleniumHQ/selenium), which we could add later on if needed.
-
-[Capybara](https://github.com/teamcapybara/capybara#using-capybara-with-rspec) is a Ruby test framework that allows you to feature test any RACK-based app.
-
-It provides a DSL (domain specific language) to help you query and interact with the DOM.
+[Capybara](https://github.com/teamcapybara/capybara#using-capybara-with-rspec) is a Ruby test framework that provides a DSL (domain specific language) to help you query and interact with the DOM.
 
 For example, the following methods are included in the Capybara DSL:
 
@@ -212,7 +184,6 @@ Then I am taken to the songs index
 ## Checks for Understanding
 
 - What is a Feature Test?
-- What is a Headless Browser?
 - What is Capybara?
 - What are User Stories?
 
