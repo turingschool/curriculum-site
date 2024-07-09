@@ -63,8 +63,7 @@ When you create a migration file, the file name will contain a timestamp (someth
 
 ### Part 2: Postico
 
-<!-- For the current SE 2 schedule, students start task manager in the morning before this lesson and then continue it over the weekend. We do not plan to share the fully completed task_manager with them at this point. But the link is here if you need it! -->
-<!-- Fork and clone [this repo](https://github.com/turingschool-examples/task_manager_se), then cd into the `task_manager` directory. Use Postico to do the following: -->
+Fork and clone [this repo](https://github.com/turingschool-examples/task_manager_se) of a completed task manager application, then cd into the `task_manager` directory. Use Postico to do the following:
 
 Pull up the Task Manager application you have been working on.
 
