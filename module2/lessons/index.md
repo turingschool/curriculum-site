@@ -5,6 +5,10 @@ title: Module 2 - Lessons
 
 ## Introduction To Rails
 * [Beginner Rails Workshop](./beginner_rails_workshop)
+* [One to Many Relationships in the Database](./one_to_many_relationships_part1)
+* [One to Many Relationships in Rails](./one_to_many_relationships_part2)
+
+* [Introduction to MVC](./intro_to_mvc)
 
 ## Professional Development
 * [Overview](./pd_overview)
@@ -16,8 +20,13 @@ title: Module 2 - Lessons
 ## Databases
 * [Intro to Databases and ORMs](./databases_and_orms)
 
+## Active Record
+* [SQL and Active Record](./sql_and_active_record)
+
+
 ## HTML and CSS
 * [HTML: Fundamentals](./html_fundamentals)
 
 ## Additional Resources
 * [Chrome Dev Tools](./chrome_dev_tools)
+
