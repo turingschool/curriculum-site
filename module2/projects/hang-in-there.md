@@ -17,10 +17,10 @@ Sometimes you need a pick me up. Remember those motivational posters that were a
 
 ## Resources 
 
-<section class="answer">
+<section class="dropdown">
 ### Helpful Hints
 
-<section class="answer">
+<section class="dropdown">
 ### What's the deal with deploying?
 
 Deploying your repos allows you to have a live site for your application. You'll be able to share this link with friends and family to show off what you're learning! You will also include deploy links on your resume so potential employers can see what you've built! 
@@ -34,7 +34,7 @@ Below are instructions for deploying to GH Pages:
     - If you don't want to wait, your GH pages URL will follow this format: "https://username.github.io/hang-in-there/". Replace "username" with the repo owner's GH username and "hang-in-there" with your repo's name (if different). The URL will not work right away - that's ok! Add it to the Project Submission form anyway. 
 </section>
 
-<section class="answer">
+<section class="dropdown">
 ### Why are our PRs pushing to the Turing repo?
 
 Forks are typically used to let someone propose changes to your project, that would eventually be merged back into the original repo you forked from. So a fork will always remain connected to the original repo.
@@ -44,14 +44,14 @@ When merging a PR, you should see a dropdown to select which repo you want to me
 If you want to change the default, follow the steps [here](https://stackoverflow.com/questions/44466618/default-branch-for-pull-request).
 </section>
 
-<section class="answer">
+<section class="dropdown">
 ### Where are our console logs?
 
 If you console log something in your project, you’ll see it in the dev tools console when you open the page in your browser (`open index.html`). Nothing will appear in your terminal. Remember, you need to refresh the browser each time you make an update to your code.
 </section>
 </section>
 
-<section class="answer">
+<section class="dropdown">
 ### Refactoring as You Go
 
 Between each iteration, take some time to look at the code you've written and make any changes that might improve the readability of your code. Refactoring as you go can help ensure that everyone understands the code you've written so far AND make it easier to build on top of that code.
@@ -80,26 +80,26 @@ Remember - shorter code isn't always better!
 Then:
 
 * Explore the repository to see what's going on in the code. Look at each file.
-  * What pieces of code might you use to complete iterations, and what pieces will you have to create?
-* All of your JavaScript will be written in `main.js`. 
+  * What pieces of the existing code might you use to complete iterations, and what pieces will you have to create?
+* All of your JavaScript will be written in `main.js`. You will make edits and additions to the html and css files.
 
 **By EOD on Kick Off Day:** 
 
 * Read the entire project spec and rubric.  Post questions in slack.
 * Complete [this project submission form](https://docs.google.com/forms/d/1kW1JPMpZUhAjzIDnW_wDrGB8PtRDTIFh9ohpkd5h0xk/edit) to ensure your project manager has the necessary links. See `Helpful Hints` for help with deploying!
-* Add your assigned project manager as a collaborator to your forked repository.
+* Add your project manager as a collaborator to your forked repository.
 </section>
 
-<section class="answer">
+<section class="dropdown">
 ### Iteration 0 - Main Page
 
 ![homepage](../../assets/images/projects/hang-in-there/homepage.png)
 
-- When the page loads, we should see a poster with a randomly selected image, title, and quote
+- When the page loads, users should see a poster with a randomly selected image, title, and quote
 - Every time the user clicks the Show Random Poster button, a new random poster is displayed.
 </section>
 
-<section class="answer">
+<section class="dropdown">
 ### Iteration 1 - Switching Views
 
 Form view:
@@ -113,10 +113,11 @@ Saved posters view:
 - When a user clicks the "Nevermind, take me back!" or "Back to Main" buttons, we should only see the main poster section
 - In summary: Be able to switch between the three views (main poster, form, and saved posters) on the correct button clicks
 
-_Hint: go check out the HTML and CSS files to see how the form and saved posters sections are being hidden in the first place_
+_Hint: 
+We aren't actually navigating different pages of a website here. Instead, we will fake that navigation by hiding and unhiding entire sections. Go check out the HTML and CSS files to see how the form and saved posters sections are being hidden in the first place_
 </section>
 
-<section class="answer">
+<section class="dropdown">
 ### Iteration 2 - Creating a New Poster
 
 Result after clicking Show My Poster button:
@@ -124,19 +125,19 @@ Result after clicking Show My Poster button:
 
 - On the new poster form view, users should be able to fill out the three input fields and then hit the Show My Poster button
 - When the Show My Poster button is clicked, several things will happen:
-  - Use the values from the inputs to create a new, unique poster object (part of your data model)
+  - First, use the values from the inputs to create a new, unique poster object and save it as the value of the `currentPoster` global variable (part of your data model)
   - Save the submitted data into the respective arrays (image URL into the images array, etc - all part of your data model) so that future random posters can use the user-created data
   - Change back to the main poster view (hiding the form view again)
-  - Use the new, unique poster object (part of your data model) to display the newly created poster image, title, and quote in the main view on the DOM
+  - Use the new, unique poster object (which should be saved in the `currentPoster` variable - part of your data model) to display the newly created poster image, title, and quote in the main view on the DOM
 
-<section class="note">
+<section class="dropdown">
 ### Hint!
 
-Is something weird happening when you click the button? Try googling `event.preventDefault()`! 
+Something weird is probably happening when you click the button to submit the form? Try googling `event.preventDefault()`! 
 </section>
 </section>
 
-<section class="answer">
+<section class="dropdown">
 ### Iteration 3 - Saving & Viewing Posters
 
 - When a user clicks the "Save This Poster" button, the current main poster will be added to the `savedPosters` array.
@@ -146,7 +147,7 @@ Is something weird happening when you click the button? Try googling `event.prev
 - Ensure styling, sizes and layouts of the Saved Posters view match the comp photo shown in Iteration 1
 </section>
 
-<section class="answer">
+<section class="dropdown">
 ### Iteration 4 - Deleting Saved Posters
 
 - From the saved posters view, if a user double clicks a saved poster, it will be deleted
@@ -154,7 +155,7 @@ Is something weird happening when you click the button? Try googling `event.prev
 
 </section>
 
-<section class="answer">
+<section class="dropdown">
 ### Optional Extensions
 
 Here's a list of possible extensions to implement - but **ONLY IF** your team has completed all the previous iterations **AND** have cleaned up your code to make it DRYer and more readable.
@@ -194,7 +195,7 @@ This project has 4 evaluated concepts:
 Competency & understanding of these concepts can be demonstrated in many ways. **The following examples are not checklists to complete!** They are illustrations to guide your team as you develop this project and continue your learning.
 </section>
 
-<section class="answer">
+<section class="dropdown">
 ### JavaScript
 
 💫ON TRACK💫 can look like:
@@ -211,7 +212,7 @@ Competency & understanding of these concepts can be demonstrated in many ways. *
 - Functions make use of arguments and parameters to be dynamic and reusable where possible without overengineering
 </section>
 
-<section class="answer">
+<section class="dropdown">
 ### Workflow & Professional Habits
 
 💫ON TRACK💫 can look like:
@@ -227,7 +228,7 @@ Competency & understanding of these concepts can be demonstrated in many ways. *
 - Meaningful decisions are documented through code reviews. Suggested/requested edits are made before merging.
 </section>
 
-<section class="answer">
+<section class="dropdown">
 ### Reading Code
 
 💫ON TRACK💫 can look like:
