@@ -130,11 +130,8 @@ Result after clicking Show My Poster button:
   - Change back to the main poster view (hiding the form view again)
   - Use the new, unique poster object (which should be saved in the `currentPoster` variable - part of your data model) to display the newly created poster image, title, and quote in the main view on the DOM
 
-<section class="dropdown">
-### Hint!
-
-Something weird is probably happening when you click the button to submit the form? Try googling `event.preventDefault()`! 
-</section>
+_Hint:
+Notice something weird happening when you click the button to submit the form? Try googling `event.preventDefault()`!_
 </section>
 
 <section class="dropdown">
@@ -143,15 +140,215 @@ Something weird is probably happening when you click the button to submit the fo
 - When a user clicks the "Save This Poster" button, the current main poster will be added to the `savedPosters` array.
 - If a user clicks the "Save This Poster" more than once on a single poster, it will still only be saved once (no duplicates)
 - When a user clicks the "Show Saved Posters" button, we should see the saved posters section
-- All the posters in the `savedPosters` array should be displayed in the saved posters grid section
+- All the posters in the `savedPosters` array should be displayed in the saved posters grid section (again, no duplicates)
 - Ensure styling, sizes and layouts of the Saved Posters view match the comp photo shown in Iteration 1
+
+_Hint:
+Make sure you check out the existing html and css.  Are there existing classes and styles already written that you can use to get the correct styling?_
 </section>
 
 <section class="dropdown">
-### Iteration 4 - Deleting Saved Posters
+### Iteration 4 - Feature Add!  Unmotivational Posters - Set Up
 
-- From the saved posters view, if a user double clicks a saved poster, it will be deleted
+The product team wants to expand the application with a new feature - Unmotivational Posters.  
+
+- On the main view, a user should see a newly added "Unmotivational Posters" button located after the existing buttons.
+- When a user clicks the "Unmotivational Posters" button, we should see an newly created Unmotivational Posters html section with:
+  - a title of "Unmotivational Posters"
+  - a div that will eventually hold the displayed posters (not actually a visible part of the page until posters are displayed)
+  - a "Back to Main" button
+  - The main poster view should be hidden when viewing the Unmotivational Posters view
+- When a user clicks the "Back to Main" button, we should see the main poster view and the unmotivational posters view should be hidden.
+
+_Hint:  
+You will be adding to the existing HTML.  It's valuable to pay close attention to the existing code and try to be consistent as you add on._
+
+</section>
+
+<section class="dropdown">
+### Iteration 5 - Unmotivational Posters - Data Display
+
+The data you'll need to complete this feature is in the dataset below.
+
+<section class="dropdown">
+### Unmotivational Posters Dataset
+
+```js
+const unmotivationalPosters = [
+  {
+    name: "FAILURE",
+    description: "Why bother trying? It's probably not worth it.",
+    price: 68.00,
+    year: 2019,
+    vintage: true,
+    img_url: "./assets/failure.jpg",
+  },
+  {
+    name: "MEDIOCRITY",
+    description: "Dreams are just that—dreams.",
+    price: 127.00,
+    year: 2021,
+    vintage: false,
+    img_url: "./assets/mediocrity.jpg",
+  },
+  {
+    name: "REGRET",
+    description: "Hard work rarely pays off.",
+    price: 89.00,
+    year: 2018,
+    vintage: true,
+    img_url:  "./assets/regret.jpg",
+  },
+  {
+    name: "FUTILITY",
+    description: "You're not good enough.",
+    price: 150.00,
+    year: 2016,
+    vintage: false,
+    img_url:  "./assets/futility.jpg",
+  },
+  {
+    name: "DEFEAT",
+    description: "It's too late to start now.",
+    price: 35.00,
+    year: 2023,
+    vintage: false,
+    img_url:  "./assets/defeat.jpg",
+  },
+  {
+    name: "HOPELESSNESS",
+    description: "Stay in your comfort zone; it's safer.",
+    price: 112.00,
+    year: 2020,
+    vintage: true,
+    img_url: "./assets/hopelessness.jpg",
+  },
+  {
+    name: "LAZINESS",
+    description: "You can't change anything.",
+    price: 25.00,
+    year: 2022,
+    vintage: false,
+    img_url: "./assets/laziness.jpg",
+  },
+  {
+    name: "PROCRASTINATION",
+    description: "Better to avoid failure by not trying at all.",
+    price: 48.00,
+    year: 2017,
+    vintage: true,
+    img_url: "./assets/procrastination.jpg",
+  },
+  {
+    name: "DESPAIR",
+    description: "Let someone else do it; you’ll just mess it up.",
+    price: 73.00,
+    year: 2015,
+    vintage: false,
+    img_url: "./assets/despair.jpg",
+  },
+  {
+    name: "NEGLECT",
+    description: "Happiness is overrated.",
+    price: 160.00,
+    year: 2019,
+    vintage: true,
+    img_url: "./assets/neglect.jpg",
+  },
+  {
+    name: "FEAR",
+    description: "Giving up is always an option.",
+    price: 91.00,
+    year: 2014,
+    vintage: false,
+    img_url: "./assets/fear.jpg",
+  },
+  {
+    name: "APATHY",
+    description: "No one cares about your effort.",
+    price: 110.00,
+    year: 2016,
+    vintage: true,
+    img_url: "./assets/apathy.jpg",
+  },
+  {
+    name: "MISERY",
+    description: "Why take risks when you can stay stagnant?",
+    price: 55.00,
+    year: 2021,
+    vintage: false,
+    img_url: "./assets/misery.jpg",
+  },
+  {
+    name: "BLAME",
+    description: "Expect disappointment and you'll never be disappointed.",
+    price: 39.00,
+    year: 2017,
+    vintage: true,
+    img_url: "./assets/blame.jpg",
+  },
+  {
+    name: "DOUBT",
+    description: "Success is for other people, not you.",
+    price: 140.00,
+    year: 2020,
+    vintage: false,
+    img_url: "./assets/doubt.jpg",
+  }
+];
+```
+</section>
+
+Lets assume this data was pulled from a database.  Each object has more data than what we need for creating and displaying posters. Our posters only have, and only need, an id, imageURL, title and quote.  We'll want to _clean_ this data before we use it in our application.
+
+- Copy/paste the dataset into your main.js file after the existing arrays of images, titles and quotes.
+- Create a cleanData() function to go through each piece of this data and make it match the format we've been using for our poster data. 
+  - _Hint - use the existing createPoster() function to help you accomplish this._
+  - _Hint - you can reach for a for loop **or** an iterator method here - several options will work - it's your choice!_
+- When a user visits the Unmotivational Posters view, we should see all 15 unmotivational posters displayed. **Use the cleaned data for this**
+
+
+Unmotivational view:
+![unmotivational-top-of-page](../../assets/images/projects/hang-in-there/unmotivational-top-of-page.png)
+![unmotivational-bottom-of-page](../../assets/images/projects/hang-in-there/unmotivational-bottom-of-page.png)
+
+
+- Using CSS, make the styling/format of the new "Unmotivational Posters" and "Back to Main" buttons match the other buttons throughout the app.
+- Using CSS flexbox (not grid), control the layout of the posters to match the comp.  _Note: the number of posters you see in each row will flex based on the width of the screen, thats a good thing!_
+- Using CSS, Make the style and size of the unmotivational posters match the comp.
+
+
+_When you're done, take a moment to see how the layout of the unmotivational posters flexes to adapt to the width available when you drag your dev console to be wider/narrower while on the unmotivational view. Compare that to the saved view which uses grid._
+
+
+
+<!-- Maybe iteration 5 introduces new dataset of existing objects that they have to:
+- clean the data to get rid of unneeded keys and format it to match existing poster objects with id, image, title, quote - using map and createPoster() to do it. return the new array of cleaned data from the function
+- create an html section to display unmotivationals 
+  - should start with hidden class applied in html
+  - should have a div to hold the posters
+  - should have a back to main button
+- Create a button on main page to view unmotivationals 
+- Use JS to show unmotivational page on button click
+- Use JS to hide unmotivational page and show main page on back-to-main click
+
+- Use JS and cleanedData to display all 15 unmotivationals om the unmotivational page when clicking button to go there.  using js to add html for each poster to the section/div you created in the HTML
+- Use CSS to match styling and format of buttons (back to main and unmotivational posters)
+- Use CSS flexbox not grid (and maybe tweak HTML) to control the layout of the posters to match comp.  
+- Use CSS to size and style the posters to match comp
+- afterwards try opening your dev console while on the unmotivational view and see how flexbox adapts to the size available.  compare that to the saved view which uses grid -->
+
+</section>
+
+<section class="dropdown">
+### Iteration 6 - Deleting Saved Posters
+
+Our product team realizes that some users will love the Unmotivational Posters features while others might feel like it harshes the positive vibe of the application. They'd like us to add functionality so that users will be able to delete an unmotivational poster by double clicking on it.
+
+- From the unmotivational posters view, if a user double clicks a poster, it will be deleted
   -  HTML `onclick` attributes should not be used in any HTML code - all functionality should be through JavaScript.  
+  -  The poster should be removed from the unmotivational posters data set _and_ should no longer be displayed on the DOM. 
+
 
 </section>
 
