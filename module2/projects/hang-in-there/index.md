@@ -447,6 +447,15 @@ This means, we DO NOT want to see:
 </section>
 
 
+Additional detail is included in the pages below.
+
+* [Submission](./submission)
+* [Peer Code Review](./peer_code_review)
+* [Evaluation Rubric](./rubric)
+
+
+
+
 <!-- Notes for repo updates:
 - add ids so we can use to query by id
 
