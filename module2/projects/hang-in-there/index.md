@@ -87,7 +87,6 @@ Then:
 **By EOD on Kick Off Day:** 
 
 * Read the entire project spec and rubric.  Post questions in slack.
-* Complete [this project submission form](https://docs.google.com/forms/d/1kW1JPMpZUhAjzIDnW_wDrGB8PtRDTIFh9ohpkd5h0xk/edit) to ensure your project manager has the necessary links. See `Helpful Hints` for help with deploying!
 * Add your project manager as a collaborator to your forked repository.
 </section>
 
