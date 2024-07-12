@@ -17,9 +17,11 @@ title: Module 2 - Lessons
 * [Networking](https://docs.google.com/presentation/d/e/2PACX-1vQa672IV-XwWG9q-ujEJ0w72QCBzf4jVMNI-trwLuKt9kk_ewe0l6Mk6YSWoo9UYMETbJ5RZ3akKyux/pub?start=false&loop=false&delayms=3000)
 * [Getting Job Hunt Ready](https://docs.google.com/presentation/d/e/2PACX-1vTDlRAiXiR_PSsAFGQtP8je_pcUWmLdk1kYc4jO4hTyzxDuksNWUMdUITMNXp1pRFMM0gKDiAVyXL0c/pub?start=false&loop=false&delayms=3000)
 
-## Active Record
 
+## Databases
 * [SQL and Active Record](./sql_and_active_record)
+* [Joins](./joins)
+<!-- * [Joining Multiple Tables](./joins_2)-->
 
 ## HTML and CSS
 * [HTML: Fundamentals](./html_fundamentals)
