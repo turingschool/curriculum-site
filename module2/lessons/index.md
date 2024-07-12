@@ -26,6 +26,9 @@ title: Module 2 - Lessons
 ## HTML and CSS
 * [HTML: Fundamentals](./html_fundamentals)
 
+## Active Record
+* [Class vs Instance Methods](./class_vs_instance_methods.md)
+
 ## Additional Resources
 * [Chrome Dev Tools](./chrome_dev_tools)
 
