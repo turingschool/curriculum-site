@@ -36,12 +36,7 @@ This project has 4 evaluated concepts:
 - HTML/CSS
 - Functionality
 
-
-<section class="note">
-### Note about the below criteria
-
 The following examples of competency & understanding are illustrations to guide you as you develop this project and continue your learning. They are not the *only* ways to demonstrate competency.
-</section>
 
 <section class="dropdown">
 ### Reading Code
