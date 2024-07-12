@@ -4,12 +4,13 @@ title: Hang In There - Pair
 
 ## Learning Goals
 
+* Practice reading, understanding, and using existing code
 * Write clean, DRY JavaScript
   * Build out functionality using functions that show trends toward SRP
-  * Manipulate the page after it has loaded adding, removing, and updating elements on the DOM
-* Begin to understand the connection between HTML, CSS and JavaScript
-  * Practice reading, understanding, and using provided code
-* Use array prototype iterator methods to display data on the DOM
+  * Manipulate the page after it has loaded by adding, removing, and updating elements on the DOM
+  * Use array prototype iterator methods to reformat data and display it on the DOM
+* Use CSS and HTML to match styling and layout of provided comps
+
 
 ## Overview
 
@@ -354,104 +355,13 @@ You are welcome to add your own extensions. Be sure they are thoughtful in terms
 
 ---
 
-## Project Feedback
-
-When projects are graded, we want you to view the evaluation + feedback as a means to inform your learning, rather than as static "grades". Feedback from instructors will focus on areas where you have an opportunity to deepen your understanding. 
-
-The evaluation will provide feedback by answering this important question: **Does the project demonstrate student understanding of the learning goals & concepts?**
-
-Projects will answer that question, with each section of the rubric (see below) receiving a `yes`, `not yet`, or `wow` marking.
-
-The overall project outcome is determined by "averaging" each rubric's outcome. You can think of a "yes" being worth a 1, a "not yet" being worth a 0, and a "wow" being worth a 2. For this project, an average of 0.5 is considered a passing project that demonstrates good student understanding!
-
-## Rubric
-
-This project has 4 evaluated concepts:
-
-- JavaScript
-- Workflow & Professional Habits
-- Reading Code
-- Functionality
-
-<section class="note">
-### Note about the below criteria
-
-Competency & understanding of these concepts can be demonstrated in many ways. **The following examples are not checklists to complete!** They are illustrations to guide your team as you develop this project and continue your learning.
-</section>
-
-<section class="dropdown">
-### JavaScript
-
-💫ON TRACK💫 can look like:
-- JS is formatted according to the [Turing JS style guide](https://github.com/turingschool-examples/javascript/tree/main/es5)
-- The main JS file is organized thoughtfully (DOM variables together, event listeners together, functions together)
-- Variable and function naming is meaningful, readable, and follow convention. (Arrays are plural, functions begin with present-tense verb, etc.) 
-- Functions are DRY (Don't Repeat Yourself) and demonstrate SRP (Single Responsibility Principle)
-- Global variables are limited to only those that are necessary.
-- Only semantic/organizational comments remain in file (if any). No console logs remain in any files.
-
-✨WOW✨ can look like:
-
-- Team keeps the data model logic separate from the DOM logic
-- Functions make use of arguments and parameters to be dynamic and reusable where possible without overengineering
-</section>
-
-<section class="dropdown">
-### Workflow & Professional Habits
-
-💫ON TRACK💫 can look like:
-- The team's norming document is taken seriously, with thoughtful reflections from all team members regarding their skills, learning goals, work styles, etc. 
-- The work is distributed equitably; Commit/code contributions (viewable under `Insights` tab) are roughly even for each team member.
-- Commits are made regularly to describe small chunks of working code. Commit messages are descriptive, concise, and consistent across all team members.
-- The team keeps the main branch clean by using branches for new, unreviewed code. No one pushes code directly to the main branch.
-- PRs have clear, thorough descriptions, such that a new person joining the codebase can clearly understand the proposed changes and evolution of the codebase.
-- The README template is filled out thoughtfully and completely.
-
-✨WOW✨ can look like:   
-- Team uses a [PR template](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/creating-a-pull-request-template-for-your-repository).
-- Meaningful decisions are documented through code reviews. Suggested/requested edits are made before merging.
-</section>
-
-<section class="dropdown">
-### Reading Code
-
-💫ON TRACK💫 can look like:
-- The team takes time to thoroughly understand the provided code
-- Provided code is used effectively (the provided createPoster function, the provided assets, the provided HTML & CSS)
-  - The team does not directly edit the HTML or CSS file
-  - The team does not ignore provided styling
-  - No code is added that makes the provided code redundant
-
-✨WOW✨ can look like:
-- Creating and sharing a document (with your PM) for the team's observations of and questions about the existing code
-</section>
-
-<section class="answer">
-### Functionality
-
-Functionality is the least important piece of the rubric. It’s included because it is another benchmark to gauge proficiency (for example, we can’t grade your JS if there isn’t enough of it written!). However, you should not pursue functionality at the expense of code quality or the learning/growth of all team members.
-
-This means, we DO NOT want to see:
-
-* Code that completes iterations but is sloppy
-* One or both team members do not understand every single line of code
-* One or both team members skips the problem solving process (pseudocoding, talking out the problem, articulating, planning) in the pursuit of completing functionality
-
-**Well-refactored, thoughtful code is better than sloppy extra features.**
-
-💫ON TRACK💫 can look like:
-- All of the expectations of iterations 0-4 are complete without bugs
-
-✨WOW✨ can look like:
-- All of the expectations of iterations 0-4 and an extension are complete without bugs
-</section>
 
 
 Additional detail is included in the pages below.
 
 * [Submission](./submission)
 * [Peer Code Review](./peer_code_review)
-* [Evaluation Rubric](./rubric)
+* [Evaluation Rubric](./evaluation_rubric)
 
 
 
