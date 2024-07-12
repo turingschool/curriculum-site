@@ -114,7 +114,9 @@ Saved posters view:
 - In summary: Be able to switch between the three views (main poster, form, and saved posters) on the correct button clicks
 
 _Hint: 
-We aren't actually navigating different pages of a website here. Instead, we will fake that navigation by hiding and unhiding entire sections. Go check out the HTML and CSS files to see how the form and saved posters sections are being hidden in the first place_
+We aren't actually navigating different pages of a website here. Instead, we will fake that navigation by hiding and unhiding entire sections. Go check out the HTML and CSS files to see how the form and saved posters sections are being hidden in the first place._  
+
+_Consider how you might use arguments/parameters to make dynamic reusable functions to control what is shown/hidden._
 </section>
 
 <section class="dropdown">
@@ -148,7 +150,7 @@ Make sure you check out the existing html and css.  Are there existing classes a
 </section>
 
 <section class="dropdown">
-### Iteration 4 - Feature Add!  Unmotivational Posters - Set Up
+### Iteration 4 - Feature Add!  Un-motivational Posters - Set Up and Data Display
 
 The product team wants to expand the application with a new feature - Unmotivational Posters.  
 
@@ -161,17 +163,12 @@ The product team wants to expand the application with a new feature - Unmotivati
 - When a user clicks the "Back to Main" button, we should see the main poster view and the unmotivational posters view should be hidden.
 
 _Hint:  
-You will be adding to the existing HTML.  It's valuable to pay close attention to the existing code and try to be consistent as you add on._
-
-</section>
-
-<section class="dropdown">
-### Iteration 5 - Unmotivational Posters - Data Display
+You will be adding to the existing HTML.  It's valuable to pay close attention to the existing code and try to be consistent as you add on._  
 
 The data you'll need to complete this feature is in the dataset below.
 
 <section class="dropdown">
-### Unmotivational Posters Dataset
+### Un-motivational Posters Dataset
 
 ```js
 const unmotivationalPosters = [
@@ -305,45 +302,35 @@ Lets assume this data was pulled from a database.  Each object has more data tha
 - Create a cleanData() function to go through each piece of this data and make it match the format we've been using for our poster data. 
   - _Hint - use the existing createPoster() function to help you accomplish this._
   - _Hint - you can reach for a for loop **or** an iterator method here - several options will work - it's your choice!_
-- When a user visits the Unmotivational Posters view, we should see all 15 unmotivational posters displayed. **Use the cleaned data for this**
+- When a user visits the Unmotivational Posters view, we should see all 15 unmotivational posters displayed. **Use the cleaned data for this.**
 
 
-Unmotivational view:
-![unmotivational-top-of-page](../../assets/images/projects/hang-in-there/unmotivational-top-of-page.png)
-![unmotivational-bottom-of-page](../../assets/images/projects/hang-in-there/unmotivational-bottom-of-page.png)
+</section>
+
+<section class="dropdown">
+### Iteration 5 - Un-motivational Posters - Comp Matching 
+
+Unmotivational view (top of page):  
+![unmotivational-top-of-page](../../assets/images/projects/hang-in-there/unmotivational-top-of-page.png)  
+Unmotivational view (bottom of page):  
+![unmotivational-bottom-of-page](../../assets/images/projects/hang-in-there/unmotivational-bottom-of-page.png)  
 
 
 - Using CSS, make the styling/format of the new "Unmotivational Posters" and "Back to Main" buttons match the other buttons throughout the app.
 - Using CSS flexbox (not grid), control the layout of the posters to match the comp.  _Note: the number of posters you see in each row will flex based on the width of the screen, thats a good thing!_
-- Using CSS, Make the style and size of the unmotivational posters match the comp.
+- Using CSS, make the style and size of the unmotivational posters match the comp.
 
+_Hint:  
+Consider the existing html and css as you style this view.  Are there places you can reuse existing classes/styling?  Ensure your work doesn't change the styling of the other parts of the app (like saved posters)._  
 
-_When you're done, take a moment to see how the layout of the unmotivational posters flexes to adapt to the width available when you drag your dev console to be wider/narrower while on the unmotivational view. Compare that to the saved view which uses grid._
-
-
-
-<!-- Maybe iteration 5 introduces new dataset of existing objects that they have to:
-- clean the data to get rid of unneeded keys and format it to match existing poster objects with id, image, title, quote - using map and createPoster() to do it. return the new array of cleaned data from the function
-- create an html section to display unmotivationals 
-  - should start with hidden class applied in html
-  - should have a div to hold the posters
-  - should have a back to main button
-- Create a button on main page to view unmotivationals 
-- Use JS to show unmotivational page on button click
-- Use JS to hide unmotivational page and show main page on back-to-main click
-
-- Use JS and cleanedData to display all 15 unmotivationals om the unmotivational page when clicking button to go there.  using js to add html for each poster to the section/div you created in the HTML
-- Use CSS to match styling and format of buttons (back to main and unmotivational posters)
-- Use CSS flexbox not grid (and maybe tweak HTML) to control the layout of the posters to match comp.  
-- Use CSS to size and style the posters to match comp
-- afterwards try opening your dev console while on the unmotivational view and see how flexbox adapts to the size available.  compare that to the saved view which uses grid -->
+_When you're done, take a moment to see how the layout of the unmotivational posters flexes to adapt to the width available when you drag your dev console to be wider/narrower while on the unmotivational view. Compare that to the saved view which uses grid._  
 
 </section>
 
 <section class="dropdown">
 ### Iteration 6 - Deleting Saved Posters
 
-Our product team realizes that some users will love the Unmotivational Posters features while others might feel like it harshes the positive vibe of the application. They'd like us to add functionality so that users will be able to delete an unmotivational poster by double clicking on it.
+Our product team realizes that some users will love the Unmotivational Posters feature while others might feel like it harshes the positive vibe of the application. They'd like us to add functionality so that users will be able to delete an unmotivational poster by double clicking on it.
 
 - From the unmotivational posters view, if a user double clicks a poster, it will be deleted
   -  HTML `onclick` attributes should not be used in any HTML code - all functionality should be through JavaScript.  
@@ -473,39 +460,9 @@ This means, we DO NOT want to see:
 - how to incorporate more html and styling and flexbox?
 - Maybe Iteration 5?
 
-Maybe iteration 5 introduces new dataset of existing objects that they have to:
-- clean the data to get rid of unneeded keys and format it to match existing poster objects with id, image, title, quote - using map and createPoster() to do it. return the new array of cleaned data from the function
-- create an html section to display unmotivationals 
-  - should start with hidden class applied in html
-  - should have a div to hold the posters
-  - should have a back to main button
-- Create a button on main page to view unmotivationals 
-- Use JS to show unmotivational page on button click
-- Use JS to hide unmotivational page and show main page on back-to-main click
-- Use JS and cleanedData to display all 15 unmotivationals om the unmotivational page when clicking button to go there.  using js to add html for each poster to the section/div you created in the HTML
-- Use CSS flexbox not grid (and maybe tweak HTML) to control the layout of the posters to match comp.  
-- Use CSS to size and style the posters to match comp
-- afterwards try opening your dev console while on the unmotivational view and see how flexbox adapts to the size available.  compare that to the saved view which uses grid
 
 
 
-- iterator over the data to display it in the new section
-- do css styling and flexbox layout for the new section 
-
-
-
-
-
-
-
-
-
-Maybe css and flexbox 4 buttons:
-- wrap in div and apply flexbox
-- stack vertically
-- centered
-- could start with no border radius and need to apply
-- change button color and hover color  "designer wants to change the button look"
 
 Code:
 button {
