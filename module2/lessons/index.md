@@ -19,13 +19,16 @@ title: Module 2 - Lessons
 
 ## Databases
 * [Intro to Databases and ORMs](./databases_and_orms)
-
-## Active Record
 * [SQL and Active Record](./sql_and_active_record)
+* [Joins](./joins)
+<!-- * [Joining Multiple Tables](./joins_2)-->
 
 
 ## HTML and CSS
 * [HTML: Fundamentals](./html_fundamentals)
+
+## Active Record
+* [Class vs Instance Methods](./class_vs_instance_methods.md)
 
 ## Additional Resources
 * [Chrome Dev Tools](./chrome_dev_tools)
