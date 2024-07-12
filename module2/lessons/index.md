@@ -15,7 +15,7 @@ title: Module 2 - Lessons
 
 ## Databases
 * [Joins](./joins)
-* [Joining Multiple Tables](./joins_2)
+<!-- * [Joining Multiple Tables](./joins_2)-->
 
 ## HTML and CSS
 * [HTML: Fundamentals](./html_fundamentals)
