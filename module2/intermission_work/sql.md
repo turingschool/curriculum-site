@@ -9,30 +9,28 @@ For your SQl intermission work, you will complete an introductory tutorial, and 
 
 ## Jumpstart Lab Tutorial
 
-Work through the [Jumpstart Lab SQL Tutorial](http://tutorials.jumpstartlab.com/topics/sql/fundamental_sql.html), **but do not complete the "Sequel" tutorial linked at the bottom of the Jumpstart Lab page.** Then complete the Checks for Understanding.
+Work through the [Jumpstart Lab SQL Tutorial](http://tutorials.jumpstartlab.com/topics/sql/fundamental_sql.html), **but you don't need to read past the "Adding Columns to the Table" section** Then complete the Checks for Understanding.
 
 ### Checks for Understanding
 
 1. What is a database?
 1. What is SQL?
-1. What is SQLite3?
+1. What is PostgreSQL?
 1. What is a Table?
 1. What is a primary key?
-1. What is a foreign key?
 1. Explain what each of the following SQL commands do:
   * insert
   * select
   * where
   * order by
-  * inner join
 
 ## SQL Exercises
 
-Now you'll work through some of the exercises at [pgexercises.com](https://pgexercises.com/). In the Jumpstart Lab tutorial, you used SQLite3. In these exercises, you will use Postgresql. It's largely the same, but make sure that when you are looking at documentation you are looking at the [Postgresql Documentation](https://www.postgresql.org/docs/9.3/index.html).
+Now you'll work through some of the exercises at [pgexercises.com](https://pgexercises.com/). In these exercises, you will use Postgresql. If needed, you can refer to [Postgresql Documentation](https://www.postgresql.org/docs/9.3/index.html).
 
-Work through the three following sections (Basic, Joins, Aggregates) of exercises on the site. Make sure you are also reading the Answers and Discussion section at the bottom, even if you get the answer right. There are some helpful explanations and alternative solutions.
+Work through the first section of exercises on the site. Make sure you are also reading the Answers and Discussion section at the bottom, even if you get the answer right. There are some helpful explanations and alternative solutions. If you enjoy these exercises, there are additional sections below, but you should prioritize completing other required intermission work before you return to the additional exercises. 
 
-To reiterate from before, you do not need to be a master of SQL coming out these exercises, so you should **timebox these exercises**. Timebox each of the three sections to **no more than 2 hours** for a maximum of 6 hours spent on these exercises. There will likely be exercises that you have difficulty completing, and that's okay! Use the provided hints, give it your best effort, and skip to the answer if you can't get it. Just make sure you read and understand the answer before moving on.
+To reiterate from before, you do not need to be a master of SQL coming out these exercises, so you should **timebox these exercises**. This first "Basics" section should be limited to 2 hours. The sections below on Joins and Aggregates are **not required**. There will likely be exercises that you have difficulty completing, and that's okay! Use the provided hints, give it your best effort, and skip to the answer if you can't get it. Just make sure you read and understand the answer before moving on.
 
 After you complete the exercises, answer the Checks for Understanding.
 
@@ -45,6 +43,14 @@ After you complete the exercises, answer the Checks for Understanding.
 1. [Unique and Order](https://pgexercises.com/questions/basic/unique.html)
 1. [Basic Aggregate](https://pgexercises.com/questions/basic/agg.html)
 
+### Checks for Understanding
+
+1. How can you limit which columns you select from a table?
+1. How can you limit which rows you select from a table?
+1. How can you give a selected column a different name in your output?
+1. How can you sort your output from a SQL statement?
+
+## Additional Practice - Not required
 ### Joins
 
 1. [Intro to Joins](https://pgexercises.com/questions/joins/simplejoin.html)
@@ -57,15 +63,3 @@ After you complete the exercises, answer the Checks for Understanding.
 1. [Group](https://pgexercises.com/questions/aggregates/count3.html)
 1. [Sum](https://pgexercises.com/questions/aggregates/fachours.html)
 1. [Aggregates and Joins](https://pgexercises.com/questions/aggregates/facrev.html)
-
-### Checks for Understanding
-
-1. How can you limit which columns you select from a table?
-1. How can you limit which rows you select from a table?
-1. How can you give a selected column a different name in your output?
-1. How can you sort your output from a SQL statement?
-1. What is joining? When do you need to join?
-1. What is an aggregate function?
-1. List three aggregate functions and what they do.
-1. What does the `group` statement do?
-1. How does the `group` statement relate to aggregates?

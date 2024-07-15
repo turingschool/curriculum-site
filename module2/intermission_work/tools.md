@@ -26,6 +26,11 @@ https://eggerapps.at/postico/
 
 This is a tool that will make it much easier to navigate your local databases and build/run SQL commands.
 
+## Install Postman
+
+https://www.postman.com/downloads/
+ **NOTE:** do not use the web version, you will want to download it in order to use all features.
+
 ## Install Chrome
 
 If you are currently using another browser, download and install Chrome [here](https://www.google.com/chrome/). This will make it so that we can share shortcuts and have a consistent experience when debugging together as a class.

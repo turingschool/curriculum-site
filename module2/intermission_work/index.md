@@ -5,6 +5,7 @@ layout: page
 
 ## Learning Goals
 
+* Explore and sharpen JavaScript fundamentals
 * Understand basic HTML elements and attributes
 * Understand basic CSS styling
 * Understand what a relational database is
@@ -31,15 +32,15 @@ Time-box recommendations are in each section's instructions, and also included h
 1. Sign up for the [GitHub Student Developer Pack](https://education.github.com/pack), using your `@turing.edu` email address. 
    - This step sometimes takes a few days for GitHub to complete, but once you sign up for your credits you'll be able to take advantage of their benefits! 
    - Follow [these instructions](https://mod4.turing.edu/lessons/intermission/gh-student-instructions.html) to get the info you require to complete registration. **You do NOT need to complete the Heroku steps at this time!** Ask in #codehelp if you get stuck. 
-2. [Get Module 2 Tools](./tools)
-3. [Intro to LinkedIn](./linkedin)
-4. Styling (2 hrs total)
-    * [Intro to HTML](./html) (1h)
-    * [Intro to CSS](./css) (1h)
-    * STRICTLY TIME BOX THESE EXPLORATIONS. You will only need to know extremely basic HTML and CSS in this mod.
-5. [Intro to SQL](./sql) (2 hrs total, 20-45 minutes each section)
-6. Complete this [Intro to Ruby on Rails](./intro_to_rails)
-7. Complete the [Dog Party](./dog_party) mini-project
+2. [Ruby and Rails versions installation guide](./ruby_and_rails_versions.md)
+3. [Get Module 2 Tools](./tools)
+4. [Intro to LinkedIn](./linkedin)
+5. Styling (4 hrs total)
+    * [Intro to HTML](./html) (2h)
+    * [Intro to CSS](./css) (2h)
+6. [Intro to SQL](./sql) (2 hrs total)
+7. Complete this [Intro to APIs in Ruby on Rails](./intro_to_rails)  (30min - 1h)
+8. Complete the [Dog Party](./dog_party) mini-project (Until complete)
 
 ### If you are Repeating
 
