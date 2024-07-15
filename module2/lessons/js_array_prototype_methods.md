@@ -86,7 +86,7 @@ They allow us to loop through an existing array, looking at each element one at 
 Iteration prototype methods (such as forEach, filter, etc.) **take in a callback function as an argument**. The callback function is what takes in the mandatory and optional parameters!
 
 ```js
-someArrayData.somePrototypeMethod(function callBack (/* parameter(s) */) {
+someArrayData.forEach(function callBack (/* parameter(s) */) {
   // some statements
   // often a return statement
 })
@@ -94,14 +94,14 @@ someArrayData.somePrototypeMethod(function callBack (/* parameter(s) */) {
 
 Since these prototype methods were introduced as part of ES6, the document will show them written using a fat arrow like below.  You are encouraged to use this same syntax for your iterator callbacks.
 ```js
-someArrayData.somePrototypeMethod((/* parameter(s) */) => {
+someArrayData.forEach((/* parameter(s) */) => {
   // some statements
   // often a return statement
 })
 ```
 
 <section class="note">
-### More on these callbacks
+### Common stumbling blocks
 
 Many callbacks require a return statement in order to work. When working with iterators (or really any code), we'll be putting that code within a well-named, reusable function so we can control exactly when that code is run.  
 
@@ -411,12 +411,12 @@ Now that we've had a chance to go through each of these iterator methods, let's 
 <section class="call-to-action">
 ### Exploration Activity
 
-Take a few minutes to consider the following questions for each of the iterator methods (`forEach`, `map`, `find`, `filter`, & `reduce`)
-- What does the callback function return?
+Take a few minutes to jot down notes (again) or a create a visual for the iterator methods (`forEach`, `map`, `filter`, `sort` & `reduce`)
+- What does the method (really the callback function) return?
 - What are the mandatory parameters? Optional parameters?
 - What are common use cases? When would I use this method?
 
-As a class, let's go through these questions together in this [JamBoard](https://jamboard.google.com/d/1dMlfYlFx5alIyANQMLM8roC-cTy038c1iVfkg1o0hSk/edit?usp=sharing){:target='blank'}.
+<!-- As a class, let's go through these questions together in this [JamBoard](https://jamboard.google.com/d/1dMlfYlFx5alIyANQMLM8roC-cTy038c1iVfkg1o0hSk/edit?usp=sharing){:target='blank'}. -->
 </section>
 
 ## Practice
