@@ -20,14 +20,15 @@ title: Module 2 - Lessons
 * [Beginner Rails Workshop](./beginner_rails_workshop)
 * [One to Many Relationships in the Database](./one_to_many_relationships_part1)
 * [One to Many Relationships in Rails](./one_to_many_relationships_part2)
-
 * [Introduction to MVC](./intro_to_mvc)
 
 
 ## Databases
+* [Intro to Databases and ORMs](./databases_and_orms)
 * [SQL and Active Record](./sql_and_active_record)
 * [Joins](./joins)
 <!-- * [Joining Multiple Tables](./joins_2)-->
+
 
 ## Active Record
 * [Class vs Instance Methods](./class_vs_instance_methods.md)
