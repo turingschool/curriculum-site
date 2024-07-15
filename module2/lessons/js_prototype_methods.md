@@ -21,7 +21,7 @@ tags: javascript, arrays, prototypes, mutator, accessor, callback functions
 <section class="call-to-action">
 ### Warm Up
 
-<div class="answer">
+<div class="dropdown">
 
 ### Exploration
 
@@ -37,7 +37,7 @@ For the array above,
 - Extra: How would you programmatically find the number of elements in the array above? 
 </div>
 
-<div class="answer">
+<div class="dropdown">
 ### Discuss
 
 - Consider the processes you just thought through. Both of the challenges above are based on array prototype methods. One is based on a mutator method and one is based on an accessor method. Which do you think was which? Why? (Refer to the vocabulary terms above for a reminder on what `Mutator` and `Accessor` mean.)
@@ -132,10 +132,10 @@ Note that ES6 arrow functions have a "shortcut" syntax option that allows for *i
 
 We are going to focus on:
 * `filter()`
-* `forEach()`
 * `map()`
 * `reduce()`
 * `sort()`
+* `forEach()`
 
 ## How to use `Array.filter(callbackFunction)`
 
@@ -145,10 +145,10 @@ First, let's do `filter` together. The instructor will model how they would use 
 ### Exercises
 
 #### Example #1
-Return a new array of *odd* numbers using the `filter` prototype method.   
+Return a new array of the names that are 4 letters or less using the `filter` prototype method.   
 
 ```js
-const numbers = [1, 2, 3, 4, 5, 6, 7];
+const names = ['nick', 'ben', 'trisha', 'john', 'dustin'];
 ```  
 
 
@@ -179,6 +179,118 @@ Be sure to include these in your notes, if you haven't already!
 </section>
 
 Note that depending on the syntax you use for your callback function, you may not need to explicitly write the `return` keyword.  You can leverage the *implicit return* available in certain arrow function syntax.
+
+## How to use `Array.map(callbackFunction)`
+
+<section class="call-to-action">
+### Exercises
+
+#### Example #1
+Using `map`, iterate over the array of prices, increase the price by $1, and return a new array of increased prices.  Store them in a variable called `increasedPrices`.  
+
+```js
+const prices = [4.99, 5.50, 7.00, 10.25];
+```  
+
+#### Example #2
+Using an array of temperature data in Fahrenheit, convert the date to degrees Celsius and store them in a variable called `degreesC`. [Here is the formula](http://www.rapidtables.com/convert/temperature/how-fahrenheit-to-celsius.htm){:target='blank'} to convert from Fahrenheit to Celsius.  
+
+```js
+const degreesF = [67, 32, 55, 102]
+
+// console output
+=> [19.44, 0, 12.77, 38.88]
+ ```  
+</section>
+
+<section class="dropdown">
+### Important Takeaways  
+
+Be sure to include these in your notes, if you haven't already!
+* Use `map` when you want a new array based on your original, with some modification to each item.
+* Although similar to `forEach`, each time the callback is executed in `map`, whatever is returned from the callback is added to the new array
+* `map` will *ALWAYS* return a **new array of the same length** as the original array.
+</section>
+
+## How to use `Array.reduce(callbackFunction)`
+
+<section class="note">
+### Helpful Tips
+
+Note that the `reduce` method is slightly different than the previous iterator methods.  `reduce` takes two arguments:
+
+_Callback Function_ - Within the callback, we have access to the accumulator, the current element in the iteration, the current element's index, and the original array we are looping over
+
+_Initial Value_ - The initial value to be used as the accumulator (the first argument to the first call of the callback). The accumulator is the *single value* that will eventually be returned. It's called an accumulator because each iteration over the array will modify the accumulator value until the loop is complete.
+</section>
+
+<section class="call-to-action">
+### Problem Set
+
+#### Example #1
+Using `reduce`, sum up all of the numbers.  
+
+```js
+const numbers = [1, 2, 3, 4, 5];
+
+// console output
+=> 15
+```  
+
+#### Example #2
+Using `reduce`, create a new object the stores the lengths of each word.  
+
+```js
+const adjectives = ['fantastic', 'amazing', 'childish'];
+
+// console output
+=> { fantastic: 9, amazing: 7, childish: 8 }
+```  
+</section>
+
+<section class="dropdown">
+### Important Takeaways  
+
+Be sure to include these in your notes, if you haven't already!
+* Useful for turning an array into a single value, be it a number, string, object, or another array.
+* Useful for returning one that is a combination / sum of values from an original array.
+* Also useful for converting an array into another data type.
+* REMEMBER...you must always return the *accumulator* in the callback function.
+</section>
+
+## How to use `Array.sort(callbackFunction)`
+
+<section class="call-to-action">
+### Exercises
+
+#### Example #1
+Find the first number that is greater than 20.  
+
+```js
+const numbers = [15, 6, 14, 2, 22, 9, 45];
+```  
+
+
+#### Example #2
+Find the first pet that is three years old and store it in a `foundPet` variable.  
+```js
+let pets = [
+  { name: 'harvey', age: 1 },
+  { name: 'julius', age: 3 },
+  { name: 'mishu', age: 3 },
+];
+```  
+</section>
+
+<section class="dropdown">
+### Important Takeaways  
+
+Be sure to include these in your notes, if you haven't already!
+* Useful for when you need to find a specific item in an array that matches a given condition.
+* Always will return the first element where the callback function returns *true*.  (even if there are other matches)
+* The callback needs to return a **boolean**. You also cannot modify the element you're finding.
+</section>
+
 
 ## How to use `Array.forEach(callbackFunction)`
 
@@ -226,117 +338,6 @@ Be sure to include these in your notes, if you haven't already!
 * `forEach` does **NOT** return anything (even if you have a return statement).  You can store element data into a variable, but the variable MUST exist outside of the `forEach`.
 </section>  
 
-## How to use `Array.map(callbackFunction)`
-
-<section class="call-to-action">
-### Exercises
-
-#### Example #1
-Using `map`, iterate over the array of prices, increase the price by $1, and return a new array of increased prices.  Store them in a variable called `increasedPrices`.  
-
-```js
-const prices = [4.99, 5.50, 7.00, 10.25];
-```  
-
-#### Example #2
-Using an array of temperature data in Fahrenheit, convert the date to degrees Celsius and store them in a variable called `degreesC`. [Here is the formula](http://www.rapidtables.com/convert/temperature/how-fahrenheit-to-celsius.htm){:target='blank'} to convert from Fahrenheit to Celsius.  
-
-```js
-const degreesF = [67, 32, 55, 102]
-
-// console output
-=> [19.44, 0, 12.77, 38.88]
- ```  
-</section>
-
-<section class="answer">
-### Important Takeaways  
-
-Be sure to include these in your notes, if you haven't already!
-* Use `map` when you want a new array based on your original, with some modification to each item.
-* Although similar to `forEach`, each time the callback is executed in `map`, whatever is returned from the callback is added to the new array
-* `map` will *ALWAYS* return a **new array of the same length** as the original array.
-</section>
-
-
-## How to use `Array.find(callbackFunction)`
-
-<section class="call-to-action">
-### Exercises
-
-#### Example #1
-Find the first number that is greater than 20.  
-
-```js
-const numbers = [15, 6, 14, 2, 22, 9, 45];
-```  
-
-
-#### Example #2
-Find the first pet that is three years old and store it in a `foundPet` variable.  
-```js
-let pets = [
-  { name: 'harvey', age: 1 },
-  { name: 'julius', age: 3 },
-  { name: 'mishu', age: 3 },
-];
-```  
-</section>
-
-<section class="answer">
-### Important Takeaways  
-
-Be sure to include these in your notes, if you haven't already!
-* Useful for when you need to find a specific item in an array that matches a given condition.
-* Always will return the first element where the callback function returns *true*.  (even if there are other matches)
-* The callback needs to return a **boolean**. You also cannot modify the element you're finding.
-</section>
-
-## How to use `Array.reduce(callbackFunction)`
-
-<section class="note">
-### Helpful Tips
-
-Note that the `reduce` method is slightly different than the previous iterator methods.  `reduce` takes two arguments:
-
-_Callback Function_ - Within the callback, we have access to the accumulator, the current element in the iteration, the current element's index, and the original array we are looping over
-
-_Initial Value_ - The initial value to be used as the accumulator (the first argument to the first call of the callback). The accumulator is the *single value* that will eventually be returned. It's called an accumulator because each iteration over the array will modify the accumulator value until the loop is complete.
-</section>
-
-<section class="call-to-action">
-### Problem Set
-
-#### Example #1
-Using `reduce`, sum up all of the numbers.  
-
-```js
-const numbers = [1, 2, 3, 4, 5];
-
-// console output
-=> 15
-```  
-
-#### Example #2
-Using `reduce`, create a new object the stores the lengths of each word.  
-
-```js
-const adjectives = ['fantastic', 'amazing', 'childish'];
-
-// console output
-=> { fantastic: 9, amazing: 7, childish: 8 }
-```  
-</section>
-
-<section class="answer">
-### Important Takeaways  
-
-Be sure to include these in your notes, if you haven't already!
-* Useful for turning an array into a single value, be it a number, string, object, or another array.
-* Useful for returning one that is a combination / sum of values from an original array.
-* Also useful for converting an array into another data type.
-* REMEMBER...you must always return the *accumulator* in the callback function.
-</section>
 
 <section class="note">
 ### Before we close out today...
