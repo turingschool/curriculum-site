@@ -46,23 +46,6 @@ For the array above,
 </section>
 
 
-
-
-
-
-
-
-<!-- 
-
-
-
-lots of hands on practice
-look at documentation
-mention context and other protoype methods at the end, not at the beginning
-not just arrays - includes split are string methods
-
- -->
-
 ## Prototype Methods
 When working with data, we often want to do something _with_ that data, or do something _to_ that data.  Programming languages have built in methods that help us do this.  You've already worked with built-in Ruby methods like each, join, split, filter, map and more.  Just like Ruby, JavaScript has built-in prototype methods that let us access or mutate data.  
 
@@ -175,10 +158,13 @@ Be sure to include these in your notes, if you haven't already!
 * `filter` will return a new **array** with all elements that match a condition.
 * Useful for when you need to find a subset of elements in an array that matches a given condition.
 * The callback needs to return an express that evaluates to a **boolean** value of true or false. 
-* The matching elements are returned as they are. You cannot modify the element(s) you're filtering for.
+* The matching elements are returned as they are. You cannot modify the element(s) you're filtering for within the filtering function.
+* `filter` has the conditional logic built in (thats the point). You shouldn't need to write an if/else within a filter.
 </section>
 
 Note that depending on the syntax you use for your callback function, you may not need to explicitly write the `return` keyword.  You can leverage the *implicit return* available in certain arrow function syntax.
+
+<br>
 
 ## How to use `Array.map(callbackFunction)`
 
@@ -212,10 +198,12 @@ Be sure to include these in your notes, if you haven't already!
 * `map` will *ALWAYS* return a **new array of the same length** as the original array.
 </section>
 
+<br>
+
 ## How to use `Array.reduce(callbackFunction)`
 
-<section class="note">
-### Helpful Tips
+<section class="note dropdown">
+### Helpful Notes
 
 Note that the `reduce` method is slightly different than the previous iterator methods.  `reduce` takes two arguments:
 
@@ -225,7 +213,7 @@ _Initial Value_ - The initial value to be used as the accumulator (the first arg
 </section>
 
 <section class="call-to-action">
-### Problem Set
+### Exercises
 
 #### Example #1
 Using `reduce`, sum up all of the numbers.  
@@ -258,13 +246,60 @@ Be sure to include these in your notes, if you haven't already!
 * REMEMBER...you must always return the *accumulator* in the callback function.
 </section>
 
+<br>
+
 ## How to use `Array.sort(callbackFunction)`
+
+<section class="note dropdown">
+### Helpful Notes
+
+The `sort` method takes in an optional callback function as an argument.  The callback compares two elements at a time, then the `sort` method rearranges (or "sorts") the elements accordingly, iteration by iteration.  
+
+_Optional Callback Function_ - Within the callback function, we use two arguments to represent the two elements being compared each iteration - often represented as `a` and `b`.
+
+Without the callback function, `sort` uses a default sorting algorithm that simply sorts the array items in ascending order. However, it uses _lexicographical sorting_, not numerical sorting.  So while this _might_ achieve our desired result _sometimes_, more often than not we will need the optional callback function to specify how we want the elements sorted.
+
+You need to know how to use `sort` to accomplish your sorting goal. How it does the sorting under the hood is interesting, but not _need to know_ essential info right now.  If you're curious, check out the dropdown below.
+
+<section class="dropdown"> 
+### How sort() sorts....
+
+The value returned by the callback function causes sort to rearrange the two elements in question as follows:
+  - If the value returned is 0 then sort leaves both elements in the same place.
+  - If the value returned is negative, then the first element is placed before the second element.
+  - If the value returned is positive, then the second element is placed before the first element.
+
+Examples of the default sorting algorithm:
+```js
+var letters = ['a', 'd', 'c', 'b'];
+var sortedLetters = letters.sort();
+
+console.log(sortedLetters); // Logs ['a', 'b', 'c', 'd']
+```
+Looks fine so far right?  Check out the peculiarities of this next example:  
+```js
+var numbers = [1, 7, 3, 10];
+var sortedNumbers = numbers.sort();
+
+console.log(sortedNumbers); // Logs [1, 10, 3, 7]  
+```
+Not what we expected. This is due to the default lexicographical sorting. We'll need to use the callback function to sort these numerically. 
+
+
+</section>
+</section>
+
+
+As you check out the docs on the `sort` method, ask yourself:
+- Is sort an accessor or mutator method?
+- What does sort return?
+- Within the callback function, how do I sort in ascending order?  How do I sort in descending order?
 
 <section class="call-to-action">
 ### Exercises
 
 #### Example #1
-Find the first number that is greater than 20.  
+Sort the numbers in ascending order.
 
 ```js
 const numbers = [15, 6, 14, 2, 22, 9, 45];
@@ -272,25 +307,43 @@ const numbers = [15, 6, 14, 2, 22, 9, 45];
 
 
 #### Example #2
-Find the first pet that is three years old and store it in a `foundPet` variable.  
+Write a function `sortDescending(numbers)`that takes in the number array from above as an argument and returns the array with the number sorted in descending order.
+
+
+#### Example #3
+Write a function `sortCitiesByPopulation(cities)` that takes an array of cities and uses the sort method to sort the cities based on their population in descending order. Return the array of sorted cities.
+
 ```js
-let pets = [
-  { name: 'harvey', age: 1 },
-  { name: 'julius', age: 3 },
-  { name: 'mishu', age: 3 },
+const cities = [
+  { name: 'New York', population: 8398748, country: 'United States' },
+  { name: 'Tokyo', population: 37393000, country: 'Japan' },
+  { name: 'London', population: 8908081, country: 'United Kingdom' },
+  { name: 'Mumbai', population: 12478447, country: 'India' }
 ];
-```  
+
+console.log(sortCitiesByPopulation(cities));
+// Output: [
+//   { name: 'Tokyo', population: 37393000, country: 'Japan' },
+//   { name: 'Mumbai', population: 12478447, country: 'India' },
+//   { name: 'London', population: 8908081, country: 'United Kingdom' }
+//   { name: 'New York', population: 8398748, country: 'United States' },
+// ]
+```
+
 </section>
 
 <section class="dropdown">
 ### Important Takeaways  
 
 Be sure to include these in your notes, if you haven't already!
-* Useful for when you need to find a specific item in an array that matches a given condition.
-* Always will return the first element where the callback function returns *true*.  (even if there are other matches)
-* The callback needs to return a **boolean**. You also cannot modify the element you're finding.
+* Useful when you need to sort elements.
+* Will return a reference to the original array which has been sorted - mutator!
+* The callback lets us to control how elements are sorted. We can sort objects by specified properties using dot notation.
+* Returning `a - b` in the callback sorts from least to greatest.  Return `b - a` sorts from greatest to least.
+
 </section>
 
+<br>
 
 ## How to use `Array.forEach(callbackFunction)`
 
@@ -345,6 +398,12 @@ Be sure to include these in your notes, if you haven't already!
 Take some time this afternoon to review what some of the highlights were for each prototype method.  Often when trying to solve a problem, there isn't just one answer.  Sometimes problems can be solved through a combination of prototype methods!  We'll review these more tomorrow and continue working through a few more examples then!
 </section>
 
+<br>
+
+---
+
+<br>
+
 ## Reviewing Our Prototype Iterator Methods *(Day 2)*
 
 Now that we've had a chance to go through each of these iterator methods, let's review the highlights.  Take a look at the activity below:
@@ -368,13 +427,88 @@ As a class, let's go through these questions together in this [JamBoard](https:/
 The only way to get better and more comfortable with these prototype methods is to continue practicing them. Here are a [few more examples](https://github.com/turingschool-examples/iterator-methods-stations){:target='blank'} to work through.  Focus on the prototype methods that are more challenging for you first! 
 </section>
 
+## Not just arrays
+
+Prototype methods exist for many data types, not just arrays. For example, [`split`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split) is a  string prototype method that breaks up a string into substrings and returns those substrings to us in an array.  There is also a string prototype method [`includes`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes) that acts similarly to the array prototype method `includes` used in our accessor example from part 1 of this lesson. 
+
+There are many array (and other data types) prototype methods we haven't touched in this lesson. Open the MDN documentation for the [`forEach()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) method and skim the left sidebar to see the other array prototype methods available to you. Rather than trying to learn all of those methods, it's enough to just know you can use MDN or simply google something like "remove specific element from array javascript" to find additional methods to meet specific needs as they arise.  
+
+## More Practice
+
+<section class="dropdown">
+### split(): Split Sentences into Words
+
+Write a function `splitSentencesIntoWords(sentences)` that takes an array of sentences and uses the split method to split each sentence into an array of words. Return an array of arrays, where each inner array contains the words of a sentence.
+
+```js
+const sentences = [
+  'This is the first sentence.',
+  'The second sentence is here.',
+  'And here is the third one.'
+];
+
+console.log(splitSentencesIntoWords(sentences));
+// Output: [['This', 'is', 'the', 'first', 'sentence.'], ['The', 'second', 'sentence', 'is', 'here.'], ['And', 'here', 'is', 'the', 'third', 'one.']]
+```
+### includes(): Check if library has book
+
+Write a function `checkLibrary("Moby Dick")` that takes in a book title and uses the includes() method to check if it's included in the libraryBooks array.  Your function should return `true` when invoked with the argument "Moby Dick" and `false` when invoked with the argument "The Color Purple".
+
+```js
+const libraryBooks = [
+  '1984',
+  'Don Quixote',
+  'Moby Dick',
+  'Of Mice and Men',
+  'Lord of the Flies'
+];
+
+console.log(checkLibrary("Moby Dick"); //true
+console.log(checkLibrary("The Color Purple"); //false
+
+```
+
+### join(): Concatenate Product Names
+
+Write a function `concatenateProductNames(products)` that takes an array of products and uses the join method to concatenate the names of all products into a single string. The names should be separated by a comma and space. Return the resulting string.
+
+```js
+
+const coolProducts = [
+  { id: 101, name: 'Laptop', price: 1200 },
+  { id: 102, name: 'Smartphone', price: 800 },
+  { id: 103, name: 'Headphones', price: 100 },
+  { id: 104, name: 'Tablet', price: 300 }
+];
+
+
+console.log(concatenateProductNames(coolProducts));
+// Output: "Laptop, Smartphone, Headphones, Tablet"
+```
+</section>
+
+
+## Assessment Prep
+
+To be prepared for final assessments (and interview code challenges), you should work daily towards fluency with the following methods:
+* **join()** - joins all elements of an array into a single string.
+* **split()** - splits a string into an array of substrings.
+* **includes()** - checks if an element (or string) is included in the original array (or string)
+* **push()** - pushes a new element into an array (at the end)
+* **forEach()** - iterates over each element in an array letting you do something to (or with) each element. Cannot return a value.
+* **filter()** - iterates over each element in an array and returns a new array of only the elements that match the specified condition
+* **map()** - iterates over each element in an array and returns a new array of the same length with the modified elements
+* **reduce()** - iterates over each element in an array and returns a single value (the accumulator) of your specifications
+* **sort()** - iterates over each element in an array and sorts the elements (in place) based on your specified sorting 
+
 <section class="checks-for-understanding">
 ### Checks for Understanding
 
 * What is a prototype method?
-* Compare and contrast `filter` and `find`.
+* What is a callback function?
 * Compare and contrast `forEach` and `map`.
 * When might `reduce` be a useful method?
+* When sorting an array of objects, how do you control which property is being used to sort the objects?
 * Which prototype methods are the most confusing for you right now?
 </section>
 
@@ -383,30 +517,3 @@ The only way to get better and more comfortable with these prototype methods is 
 * [JavaScript Callback Functions - What are Callbacks in JS and How to Use Them](https://www.freecodecamp.org/news/javascript-callback-functions-what-are-callbacks-in-js-and-how-to-use-them/){:target='blank'}
 * [Callback Functions MDN](https://developer.mozilla.org/en-US/docs/Glossary/Callback_function){:target='blank'}
 
-
-
-Prototype methods exist for many data types, not just arrays. For example, [`split`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split) is a  string prototype method that breaks up a string into substrings and returns those substrings to us in an array.  There is also a string prototype method [`includes`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes) that acts similarly to the array prototype method `includes` used in an example previously. 
-
-There are many array (and other data types) prototype methods we haven't touched in this lesson. Open the MDN documentation for the [`forEach()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) method and skim the left sidebar to see the other array prototype methods available to you. Rather than trying to learn all of those methods, it's enough to just know you can use MDN or simply google something like "remove specific element from array javascript" to find additional methods to meet specific needs as they arise.  
-
-
-To be prepared for final assessments (and interview code challenges), you should work towards fluency with the following methods:
-- forEach
-- filter
-- map
-- reduce
-- sort
-- push
-- join
-- includes
-- split
-
-* **join()** - It joins all elements of an array into a single string.
-* **split()** - It splits a string into an array of substrings.
-* **includes()** - checks if 
-* **push()** - pushes a new element into an array (at the end)
-* **forEach()** - pushes a new element into an array (at the end)
-* **filter()** - pushes a new element into an array (at the end)
-* **map()** - pushes a new element into an array (at the end)
-* **reduce()** - pushes a new element into an array (at the end)
-* **sort()** - pushes a new element into an array (at the end)
