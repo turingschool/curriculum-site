@@ -158,9 +158,9 @@ We see things like...
 - A box or button changing colors once we've already clicked it, or visited that link
 ... on almost a daily basis!
 
-We talked earlier about how powerful the DOM is because it allows us to interact with HTML elements via JavaScript. This also gives us the power to **modify the styles applied to said elements** via JavaScript.
+We talked earlier about how powerful the DOM is because it allows us to interact with HTML elements via JavaScript. This also gives us the power to **modify the styles applied to said elements** via JavaScript.  
 
-We will briefly discuss two ways to do this:
+Even though you haven't yet learned CSS, we will briefly discuss two ways to do this:
 1. Directly manipulate the style of the element through inline styles
 2. **Add or remove classes from the element** (the preferred way).
 
@@ -204,9 +204,13 @@ Fork [this CodePen](https://codepen.io/hannahhudson/pen/JjyKBpW) and follow the 
 - Un-comment line 4. What changed about the button? What remained the same?
 </section>
 
-Typically, if you are going to add/remove a class via JavaScript, that class should be declared **below** the class that originally styled the given element. This is because of the cascading nature of CSS; any time rules conflict, the rule declared lower on the sheet will take precedence.
-
 Read up on [this documentation](https://developer.mozilla.org/en-US/docs/Web/API/Element/classList) to learn how to **remove** a class from an elements classList! Hint: `toggle` may soon be a friend of yours, as well!
+
+In summary, in your CSS file you can apply styles to a specific class selector - like a "pink" class.  Then, in your JS file, you can use `button.classList.add('pink')` to apply all those styles at once by adding that "pink" class to the specified button.  
+
+Note that if you are going to add/remove a class via JavaScript, that class should be declared **below** the original styling for the given element in the CSS file. This is because of the cascading nature of CSS; any time rules conflict, the rule declared lower on the sheet will take precedence.
+
+
 
 ## Wrap Up
 
