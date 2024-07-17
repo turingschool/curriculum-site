@@ -26,6 +26,7 @@ title: Module 2 - Lessons
 
 ## HTML and CSS
 * [HTML: Fundamentals](./html_fundamentals)
+* [CSS: Fundamentals](./css_fundamentals.md)
 
 ## Active Record
 * [Class vs Instance Methods](./class_vs_instance_methods.md)
