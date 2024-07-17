@@ -172,18 +172,22 @@ These properties will get you far enough for now, but they're just scratching th
 
 When you are about to use flexbox, ask yourself the following questions:
 - *What elements do I want to move?*
-- *What is the parent element of those elements?* (this is where the flex properties should live!)
+- *What is the parent element of those elements?*  (this is where the flex properties should live!)
 
 If flex isn't working the way you think it should, check the following things:
-- *Did I remember to include `display: flex;`?* Without that line of code, the other flex properties won't work!
-- *Am I sure I'm adding the flex properties to the correct element?* Check the parent-child relationship in the HTML file to be sure that you are adding those properties to the direct parent.
-- *Is the parent element big enough?* Add a border to the parent element. If it is the same width and/or height as the children, you won't be able to move those children as expected.
+- *Did I remember to include `display: flex;`?*  
+    Without that line of code, the other flex properties won't work!
+- *Am I sure I'm adding the flex properties to the correct element?*  
+    Check the parent-child relationship in the HTML file to be sure that you are adding those properties to the direct parent.  
+    You might have to create/add a direct parent in the HTML if there isn't already one - a great use case for <div>
+- *Is the parent element big enough?*  
+    Add a border to the parent element. If it is the same width and/or height as the children, you won't be able to move those children as expected.
 
 CSS tends to require a lot of trial and error when you're first learning it. Often, the CSS flow for newbies is something like:
- - Developer edits their css file and reload their webpage to see if it's what they want.
+ - Developer edits their css file and reloads their webpage to see if it's what they want.
  - Developer realizes it's not quite right, so they edit their CSS file again, reload again, on and on and on.
 
-We encourage you to make your CSS changes in your dev tools which will instantly show you the result. You can keep editing the CSS right in your dev tools until it's right, then copy those rules over to your text editor and save yourself all the time on the back and forth.
+We encourage you to make your CSS changes in your dev tools which will instantly show you the result. You can keep editing the CSS right in your dev tools until it's right, then **copy those rules over to your text editor** and save yourself all the time on the back and forth.
 
 ## Using Flexbox on Nested Elements
 
