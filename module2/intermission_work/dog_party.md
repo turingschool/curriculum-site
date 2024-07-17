@@ -299,7 +299,7 @@ Let's add some of the styling for our hero section:
 
 .hero button {
     padding: 10px 20px;
-    background-color: #048eaa;
+    background-color: #190390;
     color: #ffffff;
     border: none;
     cursor: pointer;
@@ -351,6 +351,44 @@ Cool!!! Let's use the class selector to add some styling to our css.
 - It looks like we have some border color around images, where should we add them in our css file? Which selector should we use to add that border color? 
 ### Step 5 : Styling the Footer 
 Your task is to add the footer section styling. How would you add the 3 social media icons in the footer section. You can find these icons in the asset folder. How would you add styling for them in your CSS file? 
+
+## Phase Three : 
+#### Step 1: Create main.js file. 
+First, create a new file called main.js in your project directory. This is where we are going to add our Javascript code. 
+Next, we need to link this file to our index.html file” to “Next, we need to link this file to our index.html file. Add a `<script>` tag to link the main.js file at the end of the body tag.
+```html
+<!-- ... existing code ... -->
+<script src="main.js"></script>
+</body>
+</html>
+```
+#### Step 2: Add Javascript for DOM manipulation.
+Now, let's add the Javascript code to handle the form submission and update the dog name in the hero section. 
+Here is the steps that we need to take when we want to update the dog name in the hero section. 
+- First,select the form element from the DOM. 
+- Next, add an event listener to that form. 
+- After that, get the value of the input field.
+- Lastly, update the text of the h1 tag to the value of the input field. 
+Ok first thing first, let's select those elements in our main.js file, by using (querySelector)[https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector].
+```js
+var form = document.querySelector('.hero form'); // document here is referring to the DOM (Document Object Model), .hero is the class name of the form, and form is the tag name of the form.
+var input = document.querySelector('#dog-name'); // #dog-name is referring to the ID of the input field. 
+var headerText = document.querySelector('.hero h1 strong');// .hero is the class name of the h1 tag, and strong is the tag name of the strong tag. So here we are referring to the strong tag inside the h1 tag which is inside the hero section.
+```
+I recommend console.log the form, input, and headerText and open your Chrome DevTools console tab to see the output.
+
+#### Step 3: Add event listener to the form. 
+Let's add our event listener to the form, to add the eventListener on submit, we can use the (addEventListener)[https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener] method. Since this method accept 2 parameters one is a type of the event and the other one is a callback function. Let's add that to our form 
+
+```js
+form.addEventListener('submit', function(event){
+    event.preventDefault();// Prevents the default behavior of the form which is to submit the form.
+    var dogName = input.value;
+    headerText.innerText = dogName
+})
+```
+Wow! What just happened? let's break this code together. we added an eventListener to our form to listen for the submit event. When the form is submitted, the (event.preventDefault)[https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault] method is called to prevent the default behavior of the form which is to submit the form. 
+the variable dogName is storing the value of the input field. so when the user add the name of the dog and click on the submit button, the name of the dog will be stored in that value and on the next line we are updating the text of the h1 tag to the value of the input field.
 
 ## Further Reading & Resources : 
 - [FlexBox Froggy ](https://flexboxfroggy.com/). Have fun 😉
