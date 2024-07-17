@@ -23,10 +23,12 @@ title: Module 2 - Lessons
 * [Joins](./joins)
 <!-- * [Joining Multiple Tables](./joins_2)-->
 
-
 ## HTML and CSS
 * [HTML: Fundamentals](./html_fundamentals)
 * [CSS: Fundamentals](./css_fundamentals)
+
+## JS and DOM
+* [JS: Intro to the DOM](./js_intro_to_dom)
 
 ## Active Record
 * [Class vs Instance Methods](./class_vs_instance_methods.md)
