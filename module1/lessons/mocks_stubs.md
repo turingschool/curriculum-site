@@ -1,13 +1,14 @@
 ---
-layout: page
 title: Mocks and Stubs
+length: 90min
+layout: page
 ---
 
 ## Learning Goals
 
 * Understand what mocking and stubbing is and why we would use it.
   * Understand the difference between a mock and a stub.
-* Learn the syntax for mocks and stubs with rspec.
+* Learn the syntax for mocks and stubs with RSpec.
 * Practice creating stubs to help with integration tests.
 
 ## Vocabulary
@@ -26,16 +27,16 @@ title: Mocks and Stubs
 
 ### Setup
 
-* Navigate to the [Bob Ross directory](https://github.com/turingschool-examples/mod-1-be-exercises/tree/main/lessons/mocks_stubs/bob_ross) in the Mocks and Stubs folder in the mod-1-be-exercises repo on your local computer.
-
+* Navigate to the [Bob Ross directory](https://github.com/turingschool-examples/se-mod1-exercises/tree/main/lessons/mocks_stubs/bob_ross) in the Mocks and Stubs folder in the mod-1-be-exercises repo on your local computer.
 
 ### Mocks
 
 In the test below, we are testing `Bob`'s `paints` method to see that it returns a collection of `Paint` instances.
 
-inside `spec/bob_spec.rb`:
+In `spec/bob_spec.rb`:
+
 ```ruby
-it 'can add paint' do
+it "can add paint" do
   bob = Bob.new
   paint_1 = Paint.new("Alizarin Crimson")
   paint_2 = Paint.new("Van Dyke Brown")
@@ -47,36 +48,42 @@ it 'can add paint' do
 end
 ```
 
-**Discussion:**
+<section class="call-to-action">
+### Discussion
 
 Run the test - why is it so slow?
+</section>
 
-In this particular example, we are relying on creating an object that takes a loooong time to create.  In this example, we have forced the issue by putting a `sleep` in the Paint class; but in the real world, this kind of slow down could be caused by a lengthy API call, or perhaps another team is working on the Paint class, and we don't have the class yet (and it is not our task to create the class).  In order to focus our test more distinctly on the Bob class, we can use a Mock.
+In this particular example, we are relying on creating an object that takes a loooong time to create.  In this example, we have forced the issue by putting a `sleep` in the `Paint` class; but in the real world, this kind of slow down could be caused by a lengthy API call, or perhaps another team is working on the `Paint` class, and we don't have the class yet (and it is not our task to create the class). In order to focus our test more distinctly on the `Bob` class, we can use a Mock.
 
-**Mocks are objects that stand in for other objects.** The other object might be one that's not implemented yet, doesn't yet have the functionality we need, or maybe we just want to work with a simpler situation. You can think of a mock as fake or a dummy object. Since some programming languages call these "doubles", I like to think of Mocks as "stunt doubles" -- they look the same as the original, but act a little different.
+**Mocks are objects that stand in for other objects.** 
 
-In the test above, we are going to use the rspec method `double` to create a mock object to stand in for a Paint object.
+The other object might be one that's not implemented yet, doesn't yet have the functionality we need, or maybe we just want to work with a simpler situation. You can think of a mock as fake or a dummy object. Since some programming languages call these "doubles", I like to think of Mocks as "stunt doubles" -- they look the same as the original, but act a little different.
+
+In the test above, we are going to use the RSpec method `double` to create a mock object to stand in for a `Paint` object.
 
 ```ruby
 paint_1 = double("paint")
 ```
 
-The string provided is just a placeholder, it's not actually used, but it can be helpful to differentiate these objects later if you need to.
+The string provided is just a placeholder, it's not actually used, but it can be helpful to differentiate these objects later [in the terminal] if you need to.
 
 Remember, a mock is a simple object that stands in for another object. At the base level, a mock is just a "thing" -- a blank canvas that we can use for just about anything. (no pun intended to Bob Ross and the painting theme!)
 
-Let's update this test so that it uses mock objects instead of full Paint objects.
-
+<section class="call-to-action">
+Let's update this test so that it uses mock objects instead of full `Paint` objects.
+</section>
 
 ### Stubs
 
 In our next test, we are testing that we can get an array of the paint colors (not just paint objects).
 
 ```ruby
-def test_it_can_return_colors
+it "can return paint colors" do
   bob = Bob.new
   paint_1 = double("my first paint")
   paint_2 = double("my second paint")
+
   bob.add_paint(paint_1)
   bob.add_paint(paint_2)
 
@@ -84,29 +91,50 @@ def test_it_can_return_colors
 end
 ```
 
-**A stub is a fake method.** It can be added to an object that doesn't have that method yet, or it can override an existing method on an existing object. We can add a stub to a mock so our fake object will now have a fake method:
+**A stub is a fake method.**
+
+It can be added to an object that doesn't have that method yet, or it can override an existing method on an existing object. We can add a stub to a mock so our fake object will now have a fake method:
 
 ```ruby
-paint_1 = double("paint")
-allow(paint_1).to receive(:color).and_return('Van Dyke Brown')
+paint_1 = double("my first paint")
+allow(paint_1).to receive(:color).and_return("Alizarin Crimson")
 ```
-Now, whenever we call `paint_1.color` it will return `"Van Dyke Brown"`.
 
-Let's update this test so that it stubs out the color method for the Mock objects.
+Now, whenever we call `paint_1.color` it will return `"Alizarin Crimson"`.
 
+Let's update this test so that it stubs out the color method for the mocked objects.
 
-> **It's important to note:**
-> You don't HAVE to have a mock object to use stubs. You can stub a method response on a real object too:
->
-> ```ruby
-> paint_1 = Paint.new('bad color name')
-> allow(paint_1).to receive(:color).and_return('a better color name!')
-> ```
+```ruby
+it "can return paint colors" do
+  bob = Bob.new
+  paint_1 = double("my first paint")
+  paint_2 = double("my second paint")
 
+  bob.add_paint(paint_1)
+  bob.add_paint(paint_2)
+
+  allow(paint_1).to receive(:color).and_return("Alizarin Crimson")
+  allow(paint_2).to receive(:color).and_return("Van Dyke Brown")
+
+  expect(bob.paint_colors).to eq(["Alizarin Crimson", "Van Dyke Brown"])
+end
+```
+
+<section class="note">
+### Note
+
+You don't HAVE to have a mock object in order to use stubs. You can stub a method response on a real object too:
+
+```ruby
+paint_1 = Paint.new('bad color name')
+allow(paint_1).to receive(:color).and_return('a better color name!')
+```
+
+</section>
 
 ### **Pair Work:**
 
-With that last test, update it to use mocks and stubs so that you can make it pass without invoking the Paint class. (Your tests should run in under 1 second)
+With this last test, update it to use mocks and stubs so that you can make it pass without invoking the `Paint` class. (All your tests should run in under 1 second)
 
 ```ruby
 it 'can calculate total paint amount' do
@@ -128,20 +156,21 @@ A "unit" test will test one small "unit" of your code. Most typically, this is a
 An "integration" test is usually a bigger test, sometimes called a "feature" test, that checks that multiple "units" are working together as expected. Like unit tests, these can also take various inputs and have much larger impacts of change that we should test for to make sure that all of the pieces we expect to work together are each doing their part to build a successful outcome.
 
 An example in the Bob Ross repo:
-- We have a Paint class with tests. These are unit tests. They take different setups and produce different expectations.
-- We have a Bob class with tests, and some of these are unit tests (can we make a new Bob object, add paints) and some of these are integration tests which rely on the Paint methods working correctly (if we call `bob.paint_colors` we expect that `paint_1.color` works properly.
+
+* We have a `Paint` class with tests. These are unit tests. They take different setups and produce different expectations.
+* We have a `Bob` class with tests, and some of these are unit tests (can we make a new `Bob` object, add paints) and some of these are integration tests which rely on the `Paint` methods working correctly (i.e. If we call `bob.paint_colors` we expect that `paint_1.color` works properly.)
 
 ---
 
-### Individual Practice:
+### Individual Practice
 
 **Setup:**
 
-* Navigate to the [User Image Generator directory](https://github.com/turingschool-examples/mod-1-be-exercises/tree/main/lessons/mocks_stubs/user_image_generator) in the Mocks and Stubs lesson of the mod-1-be-exercises repo.
+* Navigate to the [User Image Generator directory](https://github.com/turingschool-examples/se-mod1-exercises/tree/main/lessons/mocks_stubs/user_image_generator) in the Mocks and Stubs lesson of the [se-mod1-exercises](https://github.com/turingschool-examples/se-mod1-exercises) repo.
 
 **Directions:**
 
-* Review the Image Generator class and corresponding spec file to familiarize yourself with the functionality
+* Review the `Image Generator` class and corresponding spec file to familiarize yourself with the functionality
 * Leveraging stubs, write tests for `#generate_images` and `#change_max_size`
 * Move on to the `user_spec.rb`
 * Run the tests, and read through the comments carefully
@@ -151,7 +180,17 @@ An example in the Bob Ross repo:
 
 What are mocks and stubs? When would you use them?
 
+<section class="note">
+### Note
+
+Mocks and Stubs aren’t exclusive to Ruby, several languages including JavaScript use them too!
+</section>
+
+### More Practice
+
+How could mocks and stubs be used in your DMV project? Take a look at [this repo](https://github.com/turingschool-examples/mocks-and-stubs-dmv) to see how they are used to mock network calls made to retrieve facility information! We will revisit this topic in Mod 3. 
+
 ## Further Reading
 
-- Martin Fowler - Test Double: link [here](http://www.martinfowler.com/bliki/TestDouble.html)
-- Gerard Meszaros - Test Double: link [here](http://xunitpatterns.com/Test%20Double.html)
+* Martin Fowler - Test Double: link [here](http://www.martinfowler.com/bliki/TestDouble.html)
+* Gerard Meszaros - Test Double: link [here](http://xunitpatterns.com/Test%20Double.html)
