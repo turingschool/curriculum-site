@@ -116,7 +116,7 @@ Controllers should limit their database actions to very simple lookups, or creat
 
 ### Experiment
 
-- Add a new route and serializer so that the user can successfully visit `localhost:3000/easteregg` and see a new JSON formatting of your choice.
+- Add a new route, controller action, and serializer so that the user can successfully visit `localhost:3000/easteregg` and see a new JSON formatting of your choice.
 - Add a new route so that the user can go to `localhost:3000/showmethetasks` and be redirected to all of the tasks.
 
 NOTE: For task 2, You should not have to create a new serializer.
