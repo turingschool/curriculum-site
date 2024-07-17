@@ -26,13 +26,6 @@ Read through [Intro to CSS Pre-Work document](./intro-to-css-prework.html) and a
 - `selector` used to target HTML elements on our web pages that we want to style
 - `rule` selector(s) and a declaration block come together to create a rule
 
-## Warm Up
-
-<section class="call-to-action">
-Follow the prompts in [this jamboard](https://jamboard.google.com/d/1yTjsi9F5jFsDXLKDbeSgW1eXLKtk7uuqFZglYHKRb4I/edit?usp=sharing)
-</section>
-
-
 ## What is CSS?
 CSS can do SO MUCH more than just add color or make things pretty. CSS can be used to create artwork like [this project](https://www.cssartist.com/inprogress) by Kassandra Sanchez. CSS can also make complex processes more intuitive and accessible users, like [TurboTax](https://turbotax.intuit.com/personal-taxes/online/) and [airbnb](https://www.airbnb.com/). CSS is a powerful tool for frontend developers. Let's jump in to see how it works!  
 
@@ -40,9 +33,9 @@ It’s a “style sheet language” that lets you style the HTML elements on you
 
 ## Anatomy of a Basic CSS Rule
 
-![CSS Rule](/assets/images/css-rule.png)
+![CSS Rule](./assets/images/css-rule.png)
 
-We can target an HTML element in CSS many ways:
+We can target HTML elements in CSS in many ways:
 ```css
 // by element name
 h1 {
@@ -67,6 +60,21 @@ h1 {
 }
 ```
 
+We can also apply CSS declarations to multiple elements at once:
+```css
+//stack selectors and separate with commas
+.nav-button, 
+.submit-button,
+.delete-button {
+  background-color: grey;
+  border-radius: 5px;
+  color: blue;
+}
+
+
+```
+
+
 <p class="codepen" data-height="300" data-theme-id="37918" data-default-tab="html,result" data-user="kaylaewood" data-slug-hash="mdEexwR" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="CSS Rules">
   <span>See the Pen <a href="https://codepen.io/kaylaewood/pen/mdEexwR">
   CSS Rules</a> by Kayla Wood (<a href="https://codepen.io/kaylaewood">@kaylaewood</a>)
@@ -82,8 +90,6 @@ With your partner, use the CodePen above to explore.
 * Do you notice a pattern for what styling is taking precedent?
 * Write down any questions that come up!
 </section>
-
-[Read More on the CSS Cascade](https://wattenberger.com/blog/css-cascade)
 
 ## Dev Tools and CSS
 
@@ -126,7 +132,7 @@ Each element's content is in a rectangular box. CSS leverages **the box model** 
 
 This diagram can be found in the CSS Dev Tools and the same color coding is used when we hover over elements in the browser with the inspector selected.
 
-# ![Box Model](/assets/images/box-model.jpg)
+# ![Box Model](./assets/images/box-model.jpg)
 
 ## Recreating Comps
 
@@ -150,6 +156,7 @@ You will have one hour to work on `iteration 1` of [this activity](https://githu
 ## Additional Resources
 
 * [MDN Common CSS Properties](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Properties_Reference)
+* [Complex CSS Selectors](https://learn.shayhowe.com/advanced-html-css/complex-selectors/)
 * [Turing CSS Style Guide](https://github.com/turingschool-examples/css)
 * [Visual Guide to CSS](http://cssreference.io/)
 * [MDN CSS Box Model](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
