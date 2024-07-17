@@ -29,18 +29,26 @@ Work on the following assignments in order. Each assignment will assume that you
 
 Time-box recommendations are in each section's instructions, and also included here for convenience. 
 
+**Accounts and Tools**
 1. Sign up for the [GitHub Student Developer Pack](https://education.github.com/pack), using your `@turing.edu` email address. 
    - This step sometimes takes a few days for GitHub to complete, but once you sign up for your credits you'll be able to take advantage of their benefits! 
    - Follow [these instructions](https://mod4.turing.edu/lessons/intermission/gh-student-instructions.html) to get the info you require to complete registration. **You do NOT need to complete the Heroku steps at this time!** Ask in #codehelp if you get stuck. 
 2. [Ruby and Rails versions installation guide](./ruby_and_rails_versions.md)
 3. [Get Module 2 Tools](./tools)
 4. [Intro to LinkedIn](./linkedin)
-5. Styling (4 hrs total)
+
+**Introductory FE Learning**
+
+1. Styling (4 hrs total)
     * [Intro to HTML](./html) (2h)
     * [Intro to CSS](./css) (2h)
-6. [Intro to SQL](./sql) (2 hrs total)
-7. Complete this [Intro to APIs in Ruby on Rails](./intro_to_rails)  (30min - 1h)
-8. Complete the [Dog Party](./dog_party) mini-project (Until complete)
+2. Complete the [Dog Party](./dog_party) mini-project (Until complete) 
+
+**Introductory BE Learning**
+
+1. [Intro to SQL](./sql) (2 hrs total)
+2. Complete this [Intro to APIs in Ruby on Rails](./intro_to_rails)  (30min - 1h)
+
 
 ### If you are Repeating
 
