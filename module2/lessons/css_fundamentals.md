@@ -10,9 +10,9 @@ tags: css, box model, syntax
 * Use Chrome Dev Tools to debug CSS
 * Demonstrate understanding of the box model by recreating small comps
 
-## Pre-Work
+<!-- ## Pre-Work
 
-Read through [Intro to CSS Pre-Work document](./intro-to-css-prework.html) and all links provided and complete exercises provided in it. Be prepared to demonstrate your understanding of the concepts in that document when you come to this class.
+Read through [Intro to CSS Pre-Work document](./intro-to-css-prework.html) and all links provided and complete exercises provided in it. Be prepared to demonstrate your understanding of the concepts in that document when you come to this class. -->
 
 ## Vocabulary
 
@@ -29,11 +29,17 @@ Read through [Intro to CSS Pre-Work document](./intro-to-css-prework.html) and a
 ## What is CSS?
 CSS can do SO MUCH more than just add color or make things pretty. CSS can be used to create artwork like [this project](https://www.cssartist.com/inprogress) by Kassandra Sanchez. CSS can also make complex processes more intuitive and accessible users, like [TurboTax](https://turbotax.intuit.com/personal-taxes/online/) and [airbnb](https://www.airbnb.com/). CSS is a powerful tool for frontend developers. Let's jump in to see how it works!  
 
-It’s a “style sheet language” that lets you style the HTML elements on your page. CSS works _with_ HTML, but isn't HTML. CSS controls the positioning, sizing, colors, and specific fonts on your page. There is a `class` and `id` attribute available to use on __every__ HTML element. In addition to the plain old element names themselves, these attributes allow you to create "targets" for both your CSS and JavaScript. They are hooks that you can use to manipulate the look and behavior of your HTML elements.
+It’s a “style sheet language” that lets you style the HTML elements on your page. CSS works _with_ HTML and controls the positioning, sizing, colors, and specific fonts on your page.  
+
+CSS can be implemented as `inline css`, `internal css` or `external css`.  We will always implement CSS externally with a css file that gets linked in the HTML document - the approach used by modern applications.  Why don't we want to use inline or internal CSS styling? 
+
 
 ## Anatomy of a Basic CSS Rule
 
 ![CSS Rule](./assets/images/css-rule.png)
+
+### Selectors  
+There is a `class` and `id` attribute available to use on __every__ HTML element. In addition to the plain old element names themselves, these attributes are selectors that allow you to "target" and manipulate HTML elements in CSS and in JavaScript.  
 
 We can target HTML elements in CSS in many ways:
 ```css
@@ -60,20 +66,60 @@ h1 {
 }
 ```
 
-We can also apply CSS declarations to multiple elements at once:
+An HTML element can have zero, one, or _multiple_ classes applied to it. Class attributes can help us write cleaner and more DRY (don’t repeat yourself) CSS because we can apply the same class to multiple elements in our HTML that share certain styles. Then, in our CSS, we simply apply all the shared styles to that shared class. We can also apply CSS declarations to multiple elements at once by stacking the selectors. 
+
+For example:
+
+```html
+<h1 class="italic">Hello, World!</h1>
+<nav>
+  <button class="nav-button">Home</button>
+  <button class="nav-button">About</button>
+  <button class="nav-button">Contact Us</button>
+</nav>
+<p>Very important text</p>
+<input type="text" id="name" name="name-input">
+<button class="submit-button italic" type="submit">Submit</button>
+<p class="italic">Yes, yes, very very important info here</p>
+<button class="delete-button">Delete</button>
+```
+
 ```css
 //stack selectors and separate with commas
 .nav-button, 
 .submit-button,
 .delete-button {
-  background-color: grey;
   border-radius: 5px;
   color: blue;
+  padding: 10px;
 }
 
+//individually apply styles that are not shared
+.nav-button {
+  background-color: black;
+}
 
+.submit-button {
+  background-color: grey;
+}
+
+.delete-button {
+  width: 100px;
+}
+
+//Apply italic styling to the h1, a p tag and the submit button all at once via this shared class
+.italic {
+  font-style: italic;
+}
 ```
 
+<section class="note">
+### Unique IDs
+
+IDs help us accomplish a similar goal as classes do. The difference is that IDs should be unique, never used more than once. Think of it like this:  
+- A `class` of students has a code like 2408. All students share a piece of information that applies to them.
+- An individual student has a personal `ID` number, like a drivers license or SSN, etc. that is unique to them.
+</section>
 
 <p class="codepen" data-height="300" data-theme-id="37918" data-default-tab="html,result" data-user="kaylaewood" data-slug-hash="mdEexwR" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="CSS Rules">
   <span>See the Pen <a href="https://codepen.io/kaylaewood/pen/mdEexwR">
