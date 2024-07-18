@@ -22,8 +22,9 @@ title: Module 1 - Lessons
 * [Class Methods](./class_methods)
 * [Modules](./modules)
 * [Inheritance](./inheritance)
-<!-- * [CSV Workshop](./csv_walkthrough) -->
-* [The Lookup Chain](./the_lookup_chain)
+* [JavaScript Party](./js-party)
+* [File IO](./file_io)
+* [The Lookup Chain](./lookup_chain)
 
 ## Design
 * [Design Principles](./design_principles)
@@ -31,7 +32,7 @@ title: Module 1 - Lessons
 
 ## Testing
 * [Intro to Testing](./intro_to_testing)
-<!-- * [Mocks & Stubs](./mocks_stubs) -->
+* [Mocks & Stubs](./mocks_stubs)
 * [Test Driven Development](./test_driven_development)
 
 ## Debugging
