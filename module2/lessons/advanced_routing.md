@@ -17,7 +17,7 @@ layout: page
 - namespace
 
 ## Set Up
-For part of this lesson we'll use the [`advanced-routing`](https://github.com/turingschool-examples/set-list-api/tree/advanced-routing-start) branch of the Set List Tutorial.
+For part of this lesson we'll use the [`advanced-routing-start`](https://github.com/turingschool-examples/set-list-api/tree/advanced-routing-start) branch of the Set List Tutorial.
 
 ## Warm Up
 
