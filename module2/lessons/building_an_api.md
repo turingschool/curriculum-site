@@ -216,11 +216,7 @@ This is because we haven't yet set up our routing.
 
 ```ruby
 Rails.application.routes.draw do
-  namespace :api do
-    namespace :v1 do
-      resources :books, only: [:index]
-    end
-  end
+  get "/api/v1/books", to: "api/v1/books#index"
 end
 ```
 
@@ -435,11 +431,8 @@ Let’s update our routes:
 
 ```ruby
 Rails.application.routes.draw do
-  namespace :api do
-    namespace :v1 do
-      resources :books, only: [:index, :show]
-    end
-  end
+  get "/api/v1/books", to: "api/v1/books#index"
+  get "/api/v1/books/:id", to: "api/v1/books#show"
 end
 ```
 
@@ -519,12 +512,10 @@ We have been to this rodeo before. Let’s add a route and an action:
 
 *config/routes.rb*
 
-```
-namespace :api do
-  namespace :v1 do
-    resources :books, only: [:index, :show, :create]
-  end
-end
+```ruby
+get "/api/v1/books", to: "api/v1/books#index"
+get "/api/v1/books/:id", to: "api/v1/books#show"
+post "/api/v1/books", to: "api/v1/books#create"
 ```
 
 *app/controllers/api/v1/books_controller.rb*
@@ -616,11 +607,10 @@ end
 *config/routes.rb*
 
 ```ruby
-namespace :api do
-  namespace :v1 do
-    resources :books, only: [:index, :show, :create, :update]
-  end
-end
+get "/api/v1/books", to: "api/v1/books#index"
+get "/api/v1/books/:id", to: "api/v1/books#show"
+post "/api/v1/books", to: "api/v1/books#create"
+patch "/api/v1/books/:id", to: "api/v1/books#update"
 ```
 
 *app/controllers/api/v1/books_controller.rb*
@@ -672,16 +662,12 @@ Let’s make the test pass.
 *config/routes.rb*
 
 ```ruby
-namespace :api do
-  namespace :v1 do
-    resources :books
-  end
-end
+get "/api/v1/books", to: "api/v1/books#index"
+get "/api/v1/books/:id", to: "api/v1/books#show"
+post "/api/v1/books", to: "api/v1/books#create"
+patch "/api/v1/books/:id", to: "api/v1/books#update"
+delete "/api/v1/books/:id", to: "api/v1/books#destroy"
 ```
-
-<section class="call-to-action">
-  Why did we remove the list of actions instead of adding `:delete` to our list: `only: [:index, :show, :create, :update, :delete]`
-</section>
 
 *app/controllers/api/v1/books_controller.rb*
 
@@ -765,15 +751,13 @@ So lets make ourselves an appropriate route:
 
 ```ruby
 Rails.application.routes.draw do
-  namespace :api do
-    namespace :v1 do
-      resources :books
-    end
+  get "/api/v1/books", to: "api/v1/books#index"
+  get "/api/v1/books/:id", to: "api/v1/books#show"
+  post "/api/v1/books", to: "api/v1/books#create"
+  patch "/api/v1/books/:id", to: "api/v1/books#update"
+  delete "/api/v1/books/:id", to: "api/v1/books#destroy"
 
-    namespace :v2 do
-      resources :books, only: [:index]
-    end
-  end
+  get "/api/v2/books", to: "api/v2/books#index"
 end
 ```
 
