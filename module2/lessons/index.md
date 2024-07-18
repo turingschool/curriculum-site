@@ -10,6 +10,9 @@ title: Module 2 - Lessons
 
 * [Introduction to MVC](./intro_to_mvc)
 
+## Rails Application and Development
+* [Advanced Routing](./advanced_routing)
+
 ## Professional Development
 * [Overview](./pd_overview)
 * [Building Your Brand on LinkedIn](https://docs.google.com/presentation/d/e/2PACX-1vS8CZUjYkpnkTJrp2Ga8um-UUFUsJ-5JA85FF9x875J-l_eKy7IyL47sAt8kl_FOlg7rG5ntVxpk5he/pub?start=false&loop=false&delayms=3000)
