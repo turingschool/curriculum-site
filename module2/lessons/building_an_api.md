@@ -25,7 +25,7 @@ We can provide a better experience for our clients (other developers) by version
 
 We’ll be building a versioned API in this tutorial.
 
-## Tutorial
+## Setup
 
 ### RSpec, Factory Bot Setup, Faker
 
@@ -38,12 +38,21 @@ $ bundle
 $ bundle exec rails db:create
 ```
 
-Add `gem “rspec-rails”` to your :development, :test block in your Gemfile, along with `gem "pry"`.
+Add `gem "rspec-rails"` to your :development, :test block in your Gemfile, along with `gem "pry"`.
 
 ```bash
 $ bundle
 $ rails g rspec:install
 ```
+
+<section class="call-to-action">
+#### Think Break
+
+Why did we add these two gems to the `:development, :test` blocks?
+
+What did the `rails g rspec:install` command do for us?
+
+</section>
 
 By default, the Rails 7 test environment renders exception templates for rescuable exceptions. You can find this configuration in `config/environments/test.rb`:
 
@@ -73,6 +82,13 @@ config.include FactoryBot::Syntax::Methods
 ### Creating Our First Test
 
 Now that our configuration is set up, we can start test driving our code. First, let's set up the test file. In true TDD form, we need to create the structure of the test folders ourselves. Even though we are going to be creating controller files for our api, users are going to be sending HTTP requests to our app. For this reason, we are going to call these specs `requests` instead of `controller specs`. Let's create our folder structure.
+
+<section class="call-to-action">
+#### Did You Know
+
+Controller specs used to be common in Rails apps. If you get a job working in an older version of Rails, you may see Controller specs! The Rails community has largely moved toward Request specs and is how new apps are typically developed these days.
+
+</section>
 
 ```bash
 $ mkdir -p spec/requests/api/v1
@@ -171,6 +187,13 @@ FactoryBot.define do
 end
 ```
 
+<section class="call-to-action">
+#### Think Break
+
+Aside from being boring, why else might we want more dynamic data for our test objects?
+
+</section>
+
 ### Api::V1::BooksController#index
 
 We're TDD'ing so let's run our tests again.
@@ -255,7 +278,7 @@ class Api::V1::BooksController < ApplicationController
 end
 ```
 
-So let’s run our test again, and good news we are successfully getting a response! But we aren't actually getting any data. Without any data or templates, Rails 5 API will respond with `Status 204 No Content`. Since it's a `2xx` status code, it is interpreted as a success.
+So let’s run our test again, and good news we are successfully getting a response! But we aren't actually getting any data. Without any data or templates, Rails 5+ API will respond with `Status 204 No Content`. Since it's a `2xx` status code, it is interpreted as a success.
 
 Now lets see if we can actually get some data.
 
@@ -274,7 +297,7 @@ describe "Books API" do
 
     expect(response).to be_successful
 
-    books = JSON.parse(response.body)
+    books = JSON.parse(response.body, symbolize_names: true)
   end
 end
 ```
@@ -342,6 +365,18 @@ end
 ```
 
 Run your tests again and they should still be passing.****
+
+<section class="call-to-action">
+#### Think Break
+
+What is this block doing for us?
+```ruby
+  books.each do |book|
+    expect...
+  end
+```
+
+</section>
 
 ### BooksController#show
 
@@ -447,14 +482,14 @@ Also note that we aren't parsing the response to access the last book we created
 
 ```ruby
 it "can create a new book" do
-  book_params = ({
+  book_params = {
                   title: 'Murder on the Orient Express',
                   author: 'Agatha Christie',
                   genre: 'mystery',
                   summary: 'Filled with suspense.',
                   number_sold: 432
-                })
-  headers = {"CONTENT_TYPE" => "application/json"}
+  }
+  headers = { "CONTENT_TYPE" => "application/json" }
 
   # We include this header to make sure that these params are passed as JSON rather than as plain text
   post "/api/v1/books", headers: headers, params: JSON.generate(book: book_params)
@@ -531,6 +566,20 @@ private
   end
 ```
 
+<section class="call-to-action">
+#### Think Break
+
+But wait, what are strong params?
+
+In Rails, "strong parameters" is a feature used to help prevent mass-assignment vulnerabilities by requiring explicit allowance of the parameters that can be used in a controller.
+
+Per the docs, using a private method to encapsulate the permissible parameters is a good pattern since you'll be able to reuse the same permit list between create and update.
+
+You can [read more about strong params](https://api.rubyonrails.org/v7.1.3.4/classes/ActionController/StrongParameters.html) in the Rails docs.
+
+</section>
+
+
 We should now have three passing tests.
 
 ### BooksController#Update
@@ -547,8 +596,8 @@ it "can update an existing book" do
   previous_name = Book.last.title
   book_params = { title: "Charlotte's Web" }
   headers = {"CONTENT_TYPE" => "application/json"}
-
   # We include this header to make sure that these params are passed as JSON rather than as plain text
+  
   patch "/api/v1/books/#{id}", headers: headers, params: JSON.generate({book: book_params})
   book = Book.find_by(id: id)
 
@@ -557,6 +606,10 @@ it "can update an existing book" do
   expect(book.title).to eq("Charlotte's Web")
 end
 ```
+
+<section class="call-to-action">
+  We're using a `PATCH` in our test. What is the difference between a `PATCH` and a `PUT`?
+</section>
 
 ### Try to test drive the implementation before you look at the code below.
 
@@ -596,7 +649,7 @@ it "can destroy an book" do
 
   expect(response).to be_successful
   expect(Book.count).to eq(0)
-  expect{Book.find(book.id)}.to raise_error(ActiveRecord::RecordNotFound)
+  expect{ Book.find(book.id) }.to raise_error(ActiveRecord::RecordNotFound)
 end
 ```
 
@@ -610,7 +663,7 @@ it "can destroy an book" do
 
   expect{ delete "/api/v1/books/#{book.id}" }.to change(Book, :count).by(-1)
 
-  expect{Book.find(book.id)}.to raise_error(ActiveRecord::RecordNotFound)
+  expect{ Book.find(book.id) }.to raise_error(ActiveRecord::RecordNotFound)
 end
 ```
 
@@ -625,6 +678,10 @@ namespace :api do
   end
 end
 ```
+
+<section class="call-to-action">
+  Why did we remove the list of actions instead of adding `:delete` to our list: `only: [:index, :show, :create, :update, :delete]`
+</section>
 
 *app/controllers/api/v1/books_controller.rb*
 
