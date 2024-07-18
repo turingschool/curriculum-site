@@ -11,7 +11,7 @@ title: Module 2 - Lessons
 * [Introduction to MVC](./intro_to_mvc)
 
 ## Rails Application and Development
-* [Advanced Routing](./advanced_routing.md)
+* [Advanced Routing](./advanced_routing)
 
 ## Professional Development
 * [Overview](./pd_overview)

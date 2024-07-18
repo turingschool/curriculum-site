@@ -17,11 +17,11 @@ layout: page
 - namespace
 
 ## Set Up
-For part of this lesson we'll use the `advanced-routing` branch of the Set List Tutorial [here](https://github.com/turingschool-examples/set-list-7/tree/advanced-routing). 
+For part of this lesson we'll use the [`advanced-routing`](https://github.com/turingschool-examples/set-list-api/tree/advanced-routing-start) branch of the Set List Tutorial.
 
 ## Warm Up
 
-In your notebook, without using your computer, fill in the following table for the 8 ReSTful routes for a generic "resource”
+In your notebook, without using your computer, fill in the following table for the 5 ReSTful routes for a generic "resource”
 
 Include the following for each:
 
@@ -29,9 +29,26 @@ Include the following for each:
 - URI Pattern
 - Controller#Action
 
+<section class="dropdown">
+### More RESTful Routes  
+
+Did you know...
+
+...when working with Rails as a monolith, using views instead of API endpoints, we actually have two additional RESTful routes.
+
+Think about if we had the resource of :dogs and we wanted to create a new dog record. The user would first need to access a form to fill out information needed to create this dog. To access that form, the route would be
+`get "/dogs/new"`
+Once the user is done filling out the form and clicks `Submit`, the form will make an http request to `post "/dogs"` and the new record is created.
+
+The last additional route in a Rails monolith is `get "/dogs/:id/edit"` which renders a form to edit a specific dog resource. When the `Submit` button is clicked, the form makes an http request to `patch "/dogs/:id"` (or `put "/dogs/:id"`) and updates that resource.
+
+You can see these addition routes listed [here](https://guides.rubyonrails.org/v7.0.4/routing.html#resource-routing-the-rails-default:~:text=2.2%20CRUD%2C%20Verbs%2C%20and%20Actions). 
+
+</section>
+
 ## Rails Resources
 
-Rails gives us a handy shortcut for generating the 8 ReSTful routes in our routes.rb file. Open up any Rails app, such as SetList, and add the following line anywhere in your routes file:
+Rails gives us a handy shortcut for generating the 5 ReSTful routes in our routes.rb file. Open up any Rails app, such as SetList, and add the following line anywhere in your routes file:
 
 **config/routes.rb**
 
@@ -41,19 +58,19 @@ resources :dogs
 
 Run `rails routes -c dogs` from the command line. The `-c` stands for controller, so it will only show you routes for the dogs.
 
-With a partner, explore what this output gives you.
+Explore what this output gives you.
 
 ## Only/Except
 
-You never want to create routes that you haven't implemented in your code. If you have `resources :dogs` in your routes file, but you haven't implemented the `DogsController#destroy` action, you would be exposing an unused route. Instead, we give our resource an `only` option to explicitly say which ReSTful routes we want created. For example, if we only wanted the dogs index, new, and create actions, we could put this in our routes file.
+You never want to create routes that you haven't implemented in your code. If you have `resources :dogs` in your routes file, but you haven't implemented the `DogsController#destroy` action, you would be exposing an unused route. Instead, we give our resource an `only` option to explicitly say which ReSTful routes we want created. For example, if we only wanted the dogs index, and create actions, we could put this in our routes file.
 
 **config/routes.rb**
 
 ```ruby
-resources :dogs, only: [:index, :new, :create]
+resources :dogs, only: [:index, :create]
 ```
 
-You can also use `except`, which will generate the 8 ReSTful routes *except* the ones specified.
+You can also use `except`, which will generate the 5 ReSTful routes *except* the ones specified.
 
 **config/routes.rb**
 
@@ -66,7 +83,7 @@ This would be the same as:
 **config/routes.rb**
 
 ```ruby
-resources :dogs, only: [:index, :show, :new, :create, :edit, :update]
+resources :dogs, only: [:index, :show, :create, :update]
 ```
 
 Note: Generally its better to use `only` and not `except` because it’s easier to think in terms of positive rather than negative, and it’s preferred to use `only` instead of `except` even if it results in longer code.
@@ -80,7 +97,7 @@ Some resources are logically dependent on other resources. In SetList, Songs can
 If we look in our routes for SetList, we'll see:
 
 ```ruby
-get "/artists/:artist_id/songs/new", to: "songs#new"
+post "/artists/:artist_id/songs", to: "songs#create"
 ```
 
 When we want to make a new song, we need to know which artist we are making the song for. We can also accomplish this with the `resources` syntax by nesting with a `do` block:
@@ -91,17 +108,17 @@ resources :artists do
 end
 ```
 
-This will generate 8 ReSTful routes for artists *and* 8 ReSTful routes for songs that are nested under an artist. You can also use only/except for nested resources:
+This will generate 5 ReSTful routes for artists *and* 5 ReSTful routes for songs that are nested under an artist. You can also use only/except for nested resources:
 
 ```ruby
 resources :artists, only: [:show] do
-  resources :songs, only: [:edit]
+  resources :songs, only: [:update]
 end
 ```
 
 Just like before, we only want to create the routes we need.
 
-With a partner, refactor the nested routes in SetList to use the `resources` syntax.
+Take a moment to refactor the nested routes in SetList to use the `resources` syntax.
 
 ## What's the difference between Nested Resources and Namespacing?
 
@@ -176,13 +193,13 @@ visit artist_path(journey)
 
 Be careful. If you forget to pass a parameter to a route helper that needs it, the error message will start to look like a "missing route" error. Read the ENTIRE error, and it will actually tell you that the route helper is missing a parameter.
 
-## Partner Practice
+## Practice
 
 Refactor some of the code in setlist to use Route Helpers rather than hardcoded routes.
 
 ## Checks for Understanding
 
-- What are the 7 ReSTful routes and their controller/actions?
+- What are the 5 ReSTful routes and their controller/actions?
 - What routes would `resources :dogs, only: [:destroy, :index]` generate?
 - What routes would the following generate?
 
@@ -197,7 +214,7 @@ end
 
 
 
-Completed code can be found on the `advanced-routing-complete` branch [here](https://github.com/turingschool-examples/set-list-7/tree/advanced-routing-complete).
+Completed code can be found on the `advanced-routing-complete` branch [here](https://github.com/turingschool-examples/set-list-api/tree/advanced-routing-refactored).
 
 
 ## Additional Resources
