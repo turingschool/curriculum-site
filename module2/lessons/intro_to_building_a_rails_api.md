@@ -7,30 +7,8 @@ layout: page
 ## Learning Goals
 
 - Understand how an API works at a conceptual level
-- Understand REST and how it influences API development
 - Understand what makes a valid JSON data structure
 
-
-## Reviewing REST
-
-> It’s a CONCEPT, not a LAW.
-> 
-
-We want to practice REST as much as possible, but we should consider it a "very strongly encouraged guideline" and not a strict immovable law of how to develop software.
-
-REST, as a concept, came from the need to mimic some amount of "state" between HTTP requests and responses, since HTTP is a stateless protocol. It ties together the idea of HTTP verbs and URI paths/routes into a uniform interface by which we can state "I want to create a new resource" or "I want to change something about a specific resource".
-
-### Rails likes RESTful things
-
-Rails makes it very easy to build CRUD interfaces for resources, and doesn't care if our response to a user is HTML, JSON, XML, plaintext, or something else.
-
-The controller actions (create, destroy, update, etc) aren't exactly the same as the HTTP verbs specified with a URI path, but it's easy to draw the comparison.
-
-In the end, though, as developers we have a choice to make around our development interface (sometimes called Developer Experience, similar to User Experience for UI), and making our code easy to maintain.
-
-### RESTful Wrap-Up
-
-REST is language-agnostic, and is a standard we should continue to build, but we ARE allowed some flexibility.
 
 ## APIs
 
@@ -114,7 +92,6 @@ If you see `/app/assets` and `/app/helpers` in a project you started from new th
 - `response`: captures the response to a given request 
 - `JSON.parse(response)`: parses a JSON response
 
-We strongly encourage you to use [Faker](https://github.com/faker-ruby/faker) and [FactoryBot](https://github.com/thoughtbot/factory_bot) for your testing. We'll review how to set those up in the next lesson.
 
 ## Namespacing and Routing will be extra important!
 
@@ -148,4 +125,3 @@ The controller, then, will hand off the data from the model to a Serializer, whi
 
 - What are some reasons you'd want to create an API?
 - At its core, what is JSON?
-- What are the main differences between creating a traditional Rails application and creating an API?
