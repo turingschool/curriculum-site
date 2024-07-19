@@ -9,6 +9,8 @@ title: Module 2 - Lessons
 * [One to Many Relationships in Rails](./one_to_many_relationships_part2)
 * [Introduction to MVC](./intro_to_mvc)
 
+## Rails Application and Development
+* [Advanced Routing](./advanced_routing)
 
 ## Databases
 * [Intro to Databases and ORMs](./databases_and_orms)
@@ -16,15 +18,15 @@ title: Module 2 - Lessons
 * [Joins](./joins)
 <!-- * [Joining Multiple Tables](./joins_2)-->
 
-## HTML/CSS
+## HTML and CSS
 * [HTML: Fundamentals](./html_fundamentals)
-<!-- * [CSS: Fundamentals](./css_fundamentals) -->
-<!-- * [CSS: Flexbox](./flexbox) -->
-
+* [CSS: Fundamentals](./css_fundamentals)
+* [CSS: Flexbox](./css_flexbox)
+* [CSS: Intro To Layout](./css_intro_to_layout) (prework for Flexbox lesson)
 
 ## JavaScript
 <!-- * [JS: Fundamentals](./js_fundamentals) -->
-<!-- * [JS: Intro to the DOM](./js_intro_to_dom) -->
+* [JS: Intro to the DOM](./js_intro_to_dom)
 <!-- * [JS: Event Listeners](./js_event_listeners) -->
 * [JS: Array Prototype Methods](./js_array_prototype_methods)
 
