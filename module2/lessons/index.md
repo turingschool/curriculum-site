@@ -10,6 +10,7 @@ title: Module 2 - Lessons
 * [Introduction to MVC](./intro_to_mvc)
 
 ## Rails Application and Development
+* [Routing: REST](./restful_routes_and_crud.md)
 * [Advanced Routing](./advanced_routing)
 
 ## Databases
@@ -42,4 +43,3 @@ title: Module 2 - Lessons
 
 ## Additional Resources
 * [Chrome Dev Tools](./chrome_dev_tools)
-
