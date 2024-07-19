@@ -8,7 +8,7 @@ tags: javascript, arrays, prototypes, mutator, accessor, callback functions
 
 * Be able to describe prototype methods, mutators and accessors
 * Practice using MDN documentation
-* Practice using array prototype methods for data manipulaton and problem solving
+* Practice using array prototype methods for data manipulation and problem solving
 * Understand the use-cases for different prototype methods
 
 ## Vocabulary
@@ -463,8 +463,8 @@ const libraryBooks = [
   'Lord of the Flies'
 ];
 
-console.log(checkLibrary("Moby Dick"); //true
-console.log(checkLibrary("The Color Purple"); //false
+console.log(checkLibrary("Moby Dick")); //true
+console.log(checkLibrary("The Color Purple")); //false
 
 ```
 
