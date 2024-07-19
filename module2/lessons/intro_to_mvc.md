@@ -20,8 +20,8 @@ title: Introduction to MVC
 
 ## Warmup
 
-- Open the Task Manager app you completed earlier in the inning. If you need a fresh copy of that application for any reason, a complete version can be found [here](https://github.com/turingschool-examples/task-manager-7-complete).
-<!-- TODO: Will need a complete version of this to link here -->
+- Open the Task Manager app you completed earlier in the inning. If you need a fresh copy of that application for any reason, a complete version can be found [here](https://github.com/turingschool-examples/task-manager-api).
+
 - In your own words, what are the primary responsibilities of the models, serializers, and controllers in Task Manager?
 
 ## Overview
