@@ -15,7 +15,7 @@ The project specs will be linked below as each project is assigned.
 - Week 2-3 (Solo): [DMV](./dmv/)
 <!-- Option to add more advanced option with Connect Four as other pair project -->
 <!-- - Week 3-4 (Paired): [Battleship](./battleship/) or [Connect Four)(./connect_four) -->
-- Week 3-4 (Paired): TBD <!-- [Battleship](./battleship/)-->
+- Week 3-4 (Paired):  [Battleship](./battleship/)
 - Week 5-6 (Group Final): TBD <!--[Futbol](./futbol_pd/) -->
 
 ## Additional Projects and Resources
