@@ -3,19 +3,6 @@ layout: page
 title: Module 2 - Lessons
 ---
 
-## HTML/CSS
-* [HTML: Fundamentals](./html_fundamentals)
-<!-- * [CSS: Fundamentals](./css_fundamentals) -->
-<!-- * [CSS: Flexbox](./flexbox) -->
-
-
-## JavaScript
-<!-- * [JS: Fundamentals](./js_fundamentals) -->
-<!-- * [JS: Intro to the DOM](./js_intro_to_dom) -->
-<!-- * [JS: Event Listeners](./js_event_listeners) -->
-* [JS: Array Prototype Methods](./js_array_prototype_methods)
-
-
 ## Introduction To Rails
 * [Beginner Rails Workshop](./beginner_rails_workshop)
 * [One to Many Relationships in the Database](./one_to_many_relationships_part1)
@@ -29,6 +16,17 @@ title: Module 2 - Lessons
 * [Joins](./joins)
 <!-- * [Joining Multiple Tables](./joins_2)-->
 
+## HTML/CSS
+* [HTML: Fundamentals](./html_fundamentals)
+<!-- * [CSS: Fundamentals](./css_fundamentals) -->
+<!-- * [CSS: Flexbox](./flexbox) -->
+
+
+## JavaScript
+<!-- * [JS: Fundamentals](./js_fundamentals) -->
+<!-- * [JS: Intro to the DOM](./js_intro_to_dom) -->
+<!-- * [JS: Event Listeners](./js_event_listeners) -->
+* [JS: Array Prototype Methods](./js_array_prototype_methods)
 
 ## Active Record
 * [Class vs Instance Methods](./class_vs_instance_methods.md)
