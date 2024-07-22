@@ -42,40 +42,11 @@ Let's revisit the codepen from the Warm Up and add in an Event Listener. We stil
 - In the warmup, you wrote code to change the title, fact and image.  Move this code into a changePageContent() function that will be invoked by the eventListener.
 </section>
 
-<!-- <section class="call-to-action">
-### Talk It out
-Take turns with your partner talking through the code found [here](https://codepen.io/hfaerber/pen/mdwPvjd). Practice using technical vocabulary. It's okay to mess up! This takes practice. If you need help, look below!
-</section>
-
-<section class="answer">
-### Need help talking through the code?
-1. We're querying for all of the elements we need and we're storing them in variables.
-2. We're adding an event listener to the `<button>` with the class of `.change-text`.
-3. We're passing `addEventListener()` two arguments:
-  - The type of event we're interested in listening for.
-  - The name of a function that should be called whenever that event happens.
-4. We declare the function that will be called when the button is clicked.
-</section> -->
-
-<!-- <section class="call-to-action"> -->
 ## Explore
 
 There are many types of events beyond just "click".   Explore this list of [Mouse Events](https://developer.mozilla.org/en-US/docs/Web/API/Element#mouse_events) on MDN. Scroll beyond just mouse events to explore keyboard events, focus events, etc.  
 
 Open up a webpage that you often visit. Maybe it's a social media page, maybe it's your bank's website, maybe it's a news site. Take a few minutes and list all the event listeners that you think might be on that page! What do they do?
-
-<!-- </section> -->
-
-
-<!-- ## Style Change on Button Click
-
-Like we mentioned earlier, it's pretty common for a user to experience helpful feedback from an application after they've taken some sort of action.
-
-Take for example the "heart" icon on CodePen. CodePen has 4 levels of "love" - 0, 1, 2, and 3. Each time a heart is clicked, the user increments their love up by one. (Until the click when it is red and at level 3 - at that point, it goes back to 0). While the "love leveling" is a bit confusing, this is still a great example of **styles changing based on user interaction**.
-
-<img class="medium" src="./assets/images/dom/codepen-heart-click.gif">
-
-Note: Refer to the Introduction to the [DOM](https://curriculum.turing.edu/module2/lessons/js_intro_to_dom) for changing styles based on user interaction.. -->
 
 <section class="call-to-action">
 ### Pair Challenge
@@ -288,21 +259,7 @@ Psst..[here](https://images.unsplash.com/photo-1512742282398-91d6f0580591?q=80&w
 
 </section>
 
-<!-- Below is an example of a small application that takes a user input, then changes the color of a box based on that input: -->
 
-<!-- <p class="codepen" data-height="300" data-theme-id="37918" data-default-tab="html,result" data-user="turing-school" data-slug-hash="bGGeKVa" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Color Box"> -->
-  <!-- <span>See the Pen <a href="https://codepen.io/turing-school/pen/bGGeKVa"> -->
-  <!-- Color Box</a> by Turing School (<a href="https://codepen.io/turing-school">@turing-school</a>) -->
-  <!-- on <a href="https://codepen.io">CodePen</a>.</span> -->
-<!-- </p> -->
-<!-- <script async src="https://static.codepen.io/assets/embed/ei.js"></script> -->
-
-<!-- Let's break down what's happening in the CodePen above:
-- **Lines 1-3:** Declare variables for the DOM elements that we will need (box, input field, button)
-- **Line 5:** Attach an event listener to the button
-- **Line 7:** Declare a function that will execute when the button is clicked
-  - Declare a variable, `color` that takes the value the user selected and stores it
-  - Applies an inline style, `backgroundColor` with that newly selected color -->
 
 ## Check For Understanding
 
@@ -322,11 +279,9 @@ What if you need to use logic to determine which function should be invoked on a
 
 ## Suggested re-teaching practice
 
-When you study event listeners, here are some suggested exercises:
-
-- Look up what some common event listener types are (you've already seen `click`!)
-- Read up on the [event listener documentation](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener)
 - Create a codepen with an HTML form that collects to-do list info:  task, priority level, description. When the user enters info and submits the form, create a litte "card" of that info and display it on the DOM. 
+- Read up on the [event listener documentation](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener)
+- Explore event bubbling and event delegation using google, youtube and MDN
 
 
 
@@ -352,35 +307,38 @@ Examples:
 
  -->
 
-
- Pair Challenge Example:
- - start with a button in html
- - start with section around the div box
- - button to Add box
- - create event listener for this
- - add boxes to the section
-
- Then we want to add event listener so that if we click on a box within the section, it makes it pink by adding the pink class to the classList.
- console log the event
- console log event.target
- OOPs!  but what if we click in the section but not on a specific box?? what happens? the whole section turns pink?  how can we tweak our code 
-so that it only adds the class pink if the target of the click was one of the boxes?
-lets actually toggle instead of add so that we can switch between pink and gray
+<!-- This is the codepen where I was working through the brainstorming. need to create new one for lesson starting boilerplate -->
+<!-- https://codepen.io/hfaerber/pen/wvLGoVv -->
 
 
-This is the codepen where I was working through the brainstorming. need to create new one for lesson starting boilerplate
-https://codepen.io/hfaerber/pen/wvLGoVv
+<!-- Hoarding of the examples/practice exercises I've cut from this original lesson: -->
+
+<!-- Below is an example of a small application that takes a user input, then changes the color of a box based on that input: -->
+
+<!-- <p class="codepen" data-height="300" data-theme-id="37918" data-default-tab="html,result" data-user="turing-school" data-slug-hash="bGGeKVa" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Color Box"> -->
+  <!-- <span>See the Pen <a href="https://codepen.io/turing-school/pen/bGGeKVa"> -->
+  <!-- Color Box</a> by Turing School (<a href="https://codepen.io/turing-school">@turing-school</a>) -->
+  <!-- on <a href="https://codepen.io">CodePen</a>.</span> -->
+<!-- </p> -->
+<!-- <script async src="https://static.codepen.io/assets/embed/ei.js"></script> -->
+
+<!-- Let's break down what's happening in the CodePen above:
+- **Lines 1-3:** Declare variables for the DOM elements that we will need (box, input field, button)
+- **Line 5:** Attach an event listener to the button
+- **Line 7:** Declare a function that will execute when the button is clicked
+  - Declare a variable, `color` that takes the value the user selected and stores it
+  - Applies an inline style, `backgroundColor` with that newly selected color -->
 
 
-Scavenger hunt?
-console log the event
-what was the event type?  click
-what was the target of the event?  div
-if we dig into that target's classList, what classes does the classList contain?
-what is the parentNode of the target?
-What classes are contained in the parent's classList
-does the target have an id?
-what is the innerText?
-what is the innerHTML?
-what is the previousElementSibling?
-what is the nextElementSibling?
+
+
+
+<!-- ## Style Change on Button Click
+
+Like we mentioned earlier, it's pretty common for a user to experience helpful feedback from an application after they've taken some sort of action.
+
+Take for example the "heart" icon on CodePen. CodePen has 4 levels of "love" - 0, 1, 2, and 3. Each time a heart is clicked, the user increments their love up by one. (Until the click when it is red and at level 3 - at that point, it goes back to 0). While the "love leveling" is a bit confusing, this is still a great example of **styles changing based on user interaction**.
+
+<img class="medium" src="./assets/images/dom/codepen-heart-click.gif">
+
+Note: Refer to the Introduction to the [DOM](https://curriculum.turing.edu/module2/lessons/js_intro_to_dom) for changing styles based on user interaction.. -->
