@@ -22,7 +22,7 @@ tags: javascript, dom, events, event listener, event handler, event target
 
 <section class="call-to-action">
 ### Warm Up
-Complete the tasks listed in the JS file on [this codepen](https://codepen.io/hfaerber/pen/JjJXxae).
+Complete the tasks listed in the JS file on [this codepen](https://codepen.io/turingschool/pen/MWMeopJ?editors=1010).
 </section>
 
 ## Event Listeners
@@ -35,11 +35,14 @@ This power emerges when we start **listening for user events**. This is the crux
 Let's revisit the codepen from the Warm Up and add in an Event Listener. We still want to change the title, fact, and image, but we want to do so only when a users clicks a button.  
   
 - Add a "Click Me" button to your html above the <h1> element. Let's give it an id of 'click-me'.
-- In your js file, use `document.querySelector()` to grab that button and save it to a variable
+- In your js file, use `document.querySelector()` to grab that button by its id and save it to a variable
 - Now add an eventListener to the button.
   - We want the eventListener to listen for a "click" event that happens on that button. 
   - When the "click" happens on the button, we want to invoke a function that does all the things we want to do. Let's call that function changePageContent().
 - In the warmup, you wrote code to change the title, fact and image.  Move this code into a changePageContent() function that will be invoked by the eventListener.
+
+Consider:  
+- Why don't we invoke the function within the eventListener?  What happens if we do?
 </section>
 
 ## Explore
@@ -117,7 +120,7 @@ In your breakout room, put it together in code.  Switch driver-navigator roles f
 </section>
 
 ## Event.target
-Let's add another feature together: *Users should be able to click on any of the boxes they've added and see that box change from gray to pink.*  
+Let's add another feature together: *Users should be able to click on any of the boxes they've added and see that box change from gray to purple.*  
 
 First think it through, break it down and plan it out.  
 *After user adds more boxes...clicks any box...that box turns purple...*
@@ -127,19 +130,19 @@ Take a few minutes to ask yourself and pseudocode out:
 * What event do you want to be "listening" for?  What element does that event need to happen on?
 * What do you want to happen when the event occurs on the specified element?  What will you name the function that holds that code?
 
-Hm, usually we just use `document.querySelector()` to grab the element we want to add the eventListener to.  But the boxes are being dynamically added to the DOM when the user clicks the Add Box button.  We can't grab them using document.querySelector() because they don't exist when the files load.  We'll have to use a workaround approach that leverages the `event.target`.
+Hm, usually we just use `document.querySelector()` to grab the element we want to add the eventListener to.  But the boxes are being dynamically added to the DOM when the user clicks the Add Box button.  We can't grab them using `document.querySelector()` because they don't exist yet when the files load.  We'll have to use a workaround approach that leverages the `event.target`.
 
 What we can do is write code that says:
-1. "Listen" to the entire <section> that the boxes live in for a "click"...
+1. "Listen" for a "click" within the entire <section> that the boxes live in...
 1. When a click happens within that section, figure out which box was clicked on...
 1. Turn that box purple by adding the "purple" class that's already styled in the CSS file
 
 <section class="dropdown">
-### Step 1: "Listen" to the entire section that the boxes live in for a "click"
+### Step 1: "Listen" for a "click" within the entire section that the boxes live in
 
 - Query the <section> and save to a variable
 - Add eventListener to the <section> which will listen for a "click" and invoke a changeColor function
-- Build the changeColor function skeleton
+- Build the changeColor function skeleton (we'll add the functionality in step 2)
 </section>
 
 <section class="dropdown">
@@ -149,9 +152,10 @@ Ok...but, how??
 
 - In the changeColor function, console log the keyword "event"
 - Open the dev console and click one of the boxes to see the event print to the console
-- Woooooow!  Use the dropdown arrow to dig deeper into the event.  
+- Woooooow!  Use the dropdown arrow to dig deeper into the event.
 
-- Complete this Scavenger Hunt, jotting the answers in your notes:
+<br>
+Complete this Scavenger Hunt, jotting the answers in your notes:
   - What is the event type?   
   - What is the target of the event?  
   - If we dig into that target's classList, what class(es) does the classList contain?
@@ -169,22 +173,11 @@ Now that we know about `event.target`, we can use that to access whichever box w
 </section>
 
 <section class="dropdown">
-### Key Takeaways:
-
-- You can console log the event to get visibility into its many properties and their build in methods.
-- We can use dot notation to access these properties and run the built in methods.
-- Each DOM element has a classList with methods for .add(), .remove(), .contains(), .toggle()
-- When a user takes an action, that action is an "event" and the "target" of that event is whatever element it happened on. We can access it via `event.target`
-- This is all related to the concepts of event delegation and event bubbling.  Not essential to dig into now but something you'll want to google and learn about down the road. Maybe as interview prep.
-
-</section>
-
-<section class="dropdown">
 ### Step 3: Turn the clicked-on box purple by adding the "purple" class that is already styled in the CSS file
 
 - Within the changeColor() function, add the "purple" class to the event.target's classList
 
-Uh-oh!  What happens if we click in the `<section>` but not on one of the boxes?  Thats not what we want to happen.
+Uh-oh!  What happens if we click in the `<section>` but not on one of the boxes?  That's not what we want to happen.
 
 What logic can we add to our changeColor() function so that it only adds the purple class to the classList **if** the target of the click is one of the boxes?  
 
@@ -193,11 +186,23 @@ Every box has the class "box".  Maybe we can use code to say: "if the element th
 </section>
 
 <section class="dropdown">
-### Step 4: More Practice
+### Key Takeaways:
+
+- You can console log the event to get visibility into its many properties and their build in methods.
+- We can use dot notation to access these properties and run the built in methods.
+- Each DOM element has a classList with methods for .add(), .remove(), .contains(), .toggle()
+- When a user takes an action, that action is an "event" and the "target" of that event is whatever element it happened on. We can access it via `event.target`.
+- This is all related to the concepts of event delegation and event bubbling.  Not essential to dig into now but something you'll want to google and learn about down the road. Maybe as interview prep.
+
+</section>
+
+<section class="dropdown">
+### Optional Practice - Get Weird
 
 - What if we want to toggle between gray and purple on each click? 
 - What if in addition to turning it purple, we wanted to add the text "Hi!" inside the box when it gets clicked?
-- What if we wanted to have a user click a box and have the box right BEFORE it turn purple instead? The box right AFTER it?
+- What if we wanted to have a user click a box and have the box right BEFORE it turn purple instead? 
+- What if we wanted to have a user click a box and have the box that is TWO boxes AFTER it turn purple instead? 
 
 </section>
 
@@ -224,14 +229,14 @@ Follow the steps below to explore how `.value` works!
 When called, the `.value` property on an input element will return the **current value**.
 
 <section class="note">
-One of the top misconceptions/mistakes we see students make while in Mod 1 is attempt to capture the value of an input while the input is empty. If you want to get a user's input, we have to get the value **inside of some event listener** - on an event that happens *after* the user has typed into the input field.
+One of the top misconceptions/mistakes we see students make while in Mod 1 is attempt to capture the value of an input while the input is empty. If you want to get a user's input, we have to get the value *after* the user has entered it.  We do this by accessing the `.value` property **via some event listener** - on an event that happens *after* the user has typed into the input field - like clicking Submit after filling out a form. 
 </section>
 
 <section class="call-to-action">
 ### Paired Practice
 Go back to your initial codepen from the warm up.  We've already written code to change the content of the page on button click.  But now that we know that we can access the user input with the `.value` property, we can refactor this to be more realistic! 
 
-Copy paste this simple form into the html so the user can input the new title, fact and image link.  
+Delete the Click Me button we previously added and copy-paste this simple form into the html so the user can input the new title, fact and image url.  
 
 ```js
 <form>
@@ -255,7 +260,7 @@ Take a few minutes to ask yourself and pseudocode out:
 
 Now code it out.  One person should screen share and drive, the other should navigate.  Navigator can also be coding along on their machine.
 
-Psst..[here](https://images.unsplash.com/photo-1512742282398-91d6f0580591?q=80&w=2874&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D) is an imageurl for a cute hedgehog photo, in case you want to use it.
+Psst... [here](https://images.unsplash.com/photo-1512742282398-91d6f0580591?q=80&w=2874&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D) is an image url for a cute hedgehog photo, in case you want to use it.
 
 </section>
 
@@ -266,13 +271,13 @@ Psst..[here](https://images.unsplash.com/photo-1512742282398-91d6f0580591?q=80&w
 <section class="call-to-action">
 ### Think About It  
 
-What are the 3 pieces required when doing DOM manipulation based on user interaction?
-How do you access the values a user has input?
-What is the prefered way to change styles programmatically?
-How do you access the element that a click event (or other type of event) occured on?
-How do you access and manipulate element that have been dynamically added to the DOM (since you can use a simple querySelector)?
+* What are 3 steps required when doing DOM manipulation based on user interaction?
+* How do you access the values a user has entered?
+* What is the preferred way to change styles programmatically?
+* How do you access the element that a click event (or other type of event) occurred on?
+* How do you access and manipulate elements that have been dynamically added to the DOM (since you can't use a simple querySelector)?
 
-Consider:
+Consider:  
 What if you wanted to invoke 3 functions in a row on button click?  
 What if you need to use logic to determine which function should be invoked on an event?   
 </section>  
