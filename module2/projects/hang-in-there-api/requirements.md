@@ -251,46 +251,23 @@ This endpoint should:
 You may choose to divide these up between your project partners in whatever way seems best; you may also choose to implement the first story/stories _together_ to both have a solid understanding first, before dividing & conquering if you choose. 
 
 ---
-## 3. Data Crunching with ActiveRecord and SQL
+## 3. Using ActiveRecord and SQL
 
----
+<details><summary><h4>Returning Count</h4></summary>
 
-## 4. Extensions and Exploration
-<!-- alternative extension idea is to do some FE work -->
-### Extension 1: Non-RESTful Search Endpoints
+This endpoint should:
 
-* `GET /api/vi/posters/find`, find a single poster which matches a search term
-* `GET /api/vi/posters/find_all`, find all posters which match a search term
+* Add a `count` value to our JSON response. Following JSON:API convention, this should be added as a key value pair with a key of `"meta"` at the same level as our `"data"` key. `"meta"` has a value of a hash (`{}`) and within that hash is the key value pair of `"count": [integer]`
 
-These endpoints will make use of query parameters as described below:
+#### Request examples:
+* `GET /api/v1/posters`
 
-<details><summary><h4>1. "Find One" endpoint</h4></summary>
-
-These endpoints should:
-
-* return a single object, if found
-* return the first object in the database in case-insensitive alphabetical order if multiple matches are found
-  * e.g., if "Disaster" and "Terrible" exist as poster names, "Disaster" would be returned, even if "Terrible" was created first
-* allow the user to specify a 'name' query parameter:
-  * for posters, the user can send `?name=ter` and it will search the `name` field in the database table
-  * the search data in the `name` query parameter should require the database to do a case-insensitive search for text fields
-    * e.g., searching for 'ter' should find 'Terrible' and 'Disaster'
-* allow the user to send multiple query parameters:
-  * `description` will search the `description` field in the database table, and the search data in the `description` query parameter should require the database to do a case-insensitive search for text fields
-  * `max_price=99.99` should look for anything with a price less than or equal to $99.99
-  * `min_price=99.99` should look for anything with a price less than or equal to $99.99
-
-### Request examples:
-* `GET /api/v1/posters/find?name=ter`
-* `GET /api/v1/posters/find?description=late`
-* `GET /api/v1/posters/find?min_price=50`
-* `GET /api/v1/posters/find?max_price=150`
-
-Example JSON response for `GET /api/v1/posters/find?name=fail`
+Example JSON response for `GET /api/v1/posters`
 
 ```json
 {
-  "data": {
+  "data": [
+    {
       "id": "1",
       "type": "poster",
       "attributes": {
@@ -301,21 +278,59 @@ Example JSON response for `GET /api/v1/posters/find?name=fail`
         "vintage": true,
         "img_url": "https://images.unsplash.com/photo-1620401537439-98e94c004b0d"
       }
+    },
+    {
+      "id": "2",
+      "type": "poster",
+      "attributes": {
+        "name": "REGRET",
+        "description": "Hard work rarely pays off.",
+        "price": 89.00,
+        "year": 2018,
+        "vintage": true,
+        "img_url":  "https://plus.unsplash.com/premium_photo-1661293818249-fddbddf07a5d",
+      }
+    },
+    {
+      "id": "3",
+      "type": "poster",
+      "attributes": {
+        "name": "MEDIOCRITY",
+        "description": "Dreams are just that—dreams.",
+        "price": 127.00,
+        "year": 2021,
+        "vintage": false,
+        "img_url": "https://images.unsplash.com/photo-1551993005-75c4131b6bd8",
+      }
     }
+  ],
+  "meta": {
+    "count": 3
+  }
 }
-```
 
-<hr/>
+
+```
 
 </details>
 
-<details><summary><h4>2. "Find All" endpoint</h4></summary>
+<details><summary><h4>Sorting Results by Query Parameters</h4></summary>
 
-These endpoints will follow the same rules as the "find" endpoints.
+This endpoint should:
 
-The JSON response will always be an array of objects, even if zero matches or only one match is found.
+* return all objects in the database in the appropriately sorted order, based on the query params received.
+* allow the user to specify a 'sort' query parameter:
+  * for posters, the user can send `?sort=asc` and it will return records sorted by `created_at` date, ascending
+  * for posters, the user can send `?sort=desc` and it will return records sorted by `created_at` date, descending
+  
 
-Example JSON response for `GET /api/v1/posters/find_all?name=ter`
+#### Request examples:
+* `GET /api/v1/posters?sort=asc`
+* `GET /api/v1/posters?sort=desc`
+
+The JSON response will always be an array of objects, even if there are zero results.
+
+Example JSON response for `GET /api/v1/posters?sort=asc`
 
 ```json
 {
@@ -344,10 +359,120 @@ Example JSON response for `GET /api/v1/posters/find_all?name=ter`
         "img_url": "https://unsplash.com/photos/low-angle-of-hacker-installing-malicious-software-on-data-center-servers-using-laptop-9nk2antk4Bw"
       }
     }
-  ]
+  ],
+  "meta": {
+    "count": 2
+  }
 }
 
 
 ```
+
+</details>
+
+
+<details><summary><h4>Filtering Results by Query Parameters</h4></summary>
+
+This endpoint should:
+
+* return all objects in the database in case-insensitive alphabetical order if multiple matches are found
+  * e.g., if "Disaster" and "Terrible" exist as poster names, "Disaster" would be listed first, even if "Terrible" was created first
+* allow the user to specify a 'name' query parameter:
+  * for posters, the user can send `?name=ter` and it will search the `name` field in the database table
+  * the search data in the `name` query parameter should require the database to do a case-insensitive search for text fields
+    * e.g., searching for 'ter' should find 'TERRIBLE' and 'DISASTER'
+* return all objects in the database that meet the price threshold specification: 
+  * `max_price=99.99` should look for anything with a price less than or equal to $99.99
+  * `min_price=99.99` should look for anything with a price less than or equal to $99.99
+
+### Request examples:
+* `GET /api/v1/posters?name=ter`
+* `GET /api/v1/posters?min_price=50`
+* `GET /api/v1/posters?max_price=150`
+
+The JSON response will always be an array of objects, even if zero matches or only one match is found.
+
+Example JSON response for `GET /api/v1/posters?name=ter`
+
+```json
+{
+  "data": [
+    {
+      "id": "1",
+      "type": "poster",
+      "attributes": {
+        "name": "DISASTER",
+        "description": "It's a mess and you haven't even started yet.",
+        "price": 28.00,
+        "year": 2016,
+        "vintage": false,
+        "img_url": "https://images.unsplash.com/photo-1485617359743-4dc5d2e53c89"
+      }
+    },
+    {
+      "id": "2",
+      "type": "poster",
+      "attributes": {
+        "name": "TERRIBLE",
+        "description": "It's too awful to look at.",
+        "price": 15.00,
+        "year": 2022,
+        "vintage": true,
+        "img_url": "https://unsplash.com/photos/low-angle-of-hacker-installing-malicious-software-on-data-center-servers-using-laptop-9nk2antk4Bw"
+      }
+    }
+  ],
+  "meta": {
+    "count": 2
+  }
+}
+```
+
+Example JSON response for `GET /api/v1/posters?max_price=20.00`
+
+```json
+{
+  "data": [
+    {
+      "id": "2",
+      "type": "poster",
+      "attributes": {
+        "name": "TERRIBLE",
+        "description": "It's too awful to look at.",
+        "price": 15.00,
+        "year": 2022,
+        "vintage": true,
+        "img_url": "https://unsplash.com/photos/low-angle-of-hacker-installing-malicious-software-on-data-center-servers-using-laptop-9nk2antk4Bw"
+      }
+    }
+  ],
+  "meta": {
+    "count": 1
+  }
+}
+```
+Example JSON response for `GET /api/v1/posters?min_price=2000.00`
+
+```json
+{
+  "data": [],
+  "meta": {
+    "count": 0
+  }
+}
+
+
+```
+
+</details>
+
+---
+
+## 4. Extensions and Exploration
+<!-- alternative extension idea is to do some FE work -->
+<!-- ### Errors and Validations -->
+
+
+
 
 </details>
