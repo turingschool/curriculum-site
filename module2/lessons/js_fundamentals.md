@@ -406,13 +406,7 @@ return x + y / 3;
 
 ## Conditionals
 
-Sometimes we want to perform an action based on some kind of condition. In English, we can say "If this thing is true, then do that." To do this in JavaScript, we can write conditionals to take a certain path in our program.
-
-To use conditionals, we first need to use expressions, operators, and statements.
-
-## Basic Conditional Structure
-
-Let's now look at the basic structure of a conditional:
+Sometimes we want to perform an action based on some kind of condition. In English, we can say "If this thing is true, then do that."  Let's look at the basic structure of a conditional in JavaScript:  
 
 ```javascript
 if (expression) {
@@ -460,6 +454,120 @@ function evaluateSleep(hoursOfSleep) {
 evaluateSleep(8)
 evaluateSleep(4)
 ```
+
+## for loops
+
+All programming languages have ways to loop (or iterate) through data. JS is no exception. 
+
+Copy/paste this JavaScript for loop into your repl and run it to see how the value of "i" changes on each "loop"
+```javascript
+for (let i = 0; i < 10; i++) {
+  console.log(i);
+}
+```
+
+If we break this down, we see that our loop is constructed from the following parts:
+
+* the keyword `for`
+* a set of rules, or conditions (var i = 0; i < 10; i++ )
+  * `let i = 0` is the _initialization_. Creating a variable "i" and starting it at a value of 0.
+  * `i < 10` is the _condition_. Stating "keep looping as long as the current value of `i` is less than 10".
+  * `i++` is the _increment_.  Adding 1 to the value of `i` after each loop.
+* opening and closing curly braces that contain the code statements we want executed on each loop. In this case: `console.log(i);`
+
+We can use `for` loops to execute some code a certain number of times, like we're doing above.  More commonly, we can use `for` loops with arrays to access each element in the array one at a time using `i` and bracket notation, and then do something _to_ that element or _with_ that element.
+
+Copy/paste the following examples into your repl and run the code.
+```js
+//Example 1
+let fruits = ['apples', 'oranges', 'bananas'];
+
+function bragYourFruits() {
+  for (let i = 0; i < fruits.length; i++) {
+    console.log("I have some " + fruits[i]);
+  }
+}
+
+bragYourFruits()
+```
+
+```js
+//Example 2
+let kids = ['chris', 'heather', 'erica', 'rachel', 'becca'];
+
+function shoutForChildren() {
+  for (let i = 0; i < kids.length; i++) {
+    console.log(kids[i].toUpperCase());
+  }
+}
+
+shoutForChildren()
+```
+
+<section class="call-to-action">
+### In your repl:  
+
+Copy/paste the code below into your repl. Finish building the "guts" of the calculateTotalPoint function based on the commented out directions.
+
+```js
+// Practice 1
+let points = [7, 3, 0, 14];
+
+function calculateTotalPoints() {
+  // add code here to loop over the points array, adding up all the numbers as you go until you get the total sum
+  // return the total sum as the return value of the function
+  // Hint!  You'll probably need a variable to keep track of the running sum total as you add it all up
+
+
+}
+
+console.log(calculateTotalPoints()) //this invocation is inside a console log so we can see the return value printed to the console
+```
+
+<section class="dropdown">
+### Solution
+
+```js
+let points = [7, 3, 0, 14];
+
+function calculateTotalPoints() {
+  let counter = 0
+  for (let i = 0; i < points.length; i++) {
+    counter += points[i]
+  }
+  return counter
+}
+
+console.log(calculateTotalPoints())
+
+// Our function should return 24
+```
+</section>
+
+Now let's actually _use_ the return value elsewhere in some code.
+
+Copy/paste the code below after your completed calculateTotalPoints function. Run it!
+```js
+function printTotalPoints() {
+  return `Your team scored ${calculateTotalPoints()} points!`;
+}
+
+console.log(printTotalPoints());
+// expected output: "Your team scored 24 points!"
+```
+
+
+</section>
+
+<section class="note">
+
+`for` loops are not the only way to loop over an array. Next week you'll learn about build-in array prototype iterator methods like:
+
+.forEach(), .map(), .sort(), .filter(), .reduce()
+
+These were all written into the JavaScript language "under the hood" with a for loop!
+</section>
+
 
 <section class="dropdown">
 ### More Key Points
@@ -512,7 +620,16 @@ Expressions are parts of our code that get _evaluated_ down to a single value.
 
 </section>
 
+<section class="dropdown">
+### for loops let us repeat a block of code a certain number of times, often the length of a specific array
+
+* In a `for` loop we can use `i` in bracket notation `[i]` to access each element in an array, loop by loop 
+
 </section>
+
+</section>
+
+
 
 
 ### Debugging in Javascript
@@ -537,7 +654,7 @@ When working with JavaScript, it is useful to keep your console open at all time
 
 Given the following function called `printStuff()`, adding `console.log()` will print the value of `myVariable` to the console.
 
-```
+```js
 const printStuff = function(){
   var myVariable = 5 + 5
   console.log(myVariable);
