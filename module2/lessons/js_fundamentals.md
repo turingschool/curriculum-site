@@ -88,8 +88,16 @@ The complex data types we'll work with are:
 * **Objects** 
   * like hashes in Ruby - groupings of related data in key-value pairs
 * **Arrays**
-  * like, well, arrays in Ruby
+  * like, well, arrays in Ruby  
 
+We access data in objects and arrays similarly to how we would do so in Ruby - using dot notation or bracket notation.
+
+### Your Turn (in your forked repl)
+
+* Use console.log and dot notation to print the value "brown" from the policeSketchDescription object
+* Use console.log and dot notation to print # of visible tattoos from the policeSketchDescription object
+* Use console.log and bracket notation to print first element in the favoriteFoods array - 'pizza'
+* Use console.log and bracket notation to print last element in the favoriteFoods array - 'sushi'
 
 <section class="call-to-action">
 
@@ -174,9 +182,9 @@ You won't likely need either of these in your time at Turing so we won't dig int
 
 - String: any characters wrapped in quotation marks (single or double quotes) - often just normal text/words
 
-- Object: like a hash in Ruby
+- Object: like a hash in Ruby - access data using bracket or dot notation
 
-- Array: like an array in Ruby
+- Array: like an array in Ruby - access data using bracket notation
 
 </section>
 
@@ -283,6 +291,168 @@ console.log('BOOM');
 alert('POW');
 ```
 
+# Functions
+Just like methods in Ruby, in JS functions are reusable blocks of code that group statements together to perform a specific task. To create a function, you must give it a name and then write the statements required for the function to achieve its task inside the function's curly braces. Let's work through the pieces and parts of a function.
+
+## Anatomy of a Function:
+```javascript
+// ES 5 syntax for declaring a function
+function logStatement() {
+  let myFirstStatement = "Assigning a string to a variable called 'myFirstStatement'";
+  alert('This is my second statement!');
+  console.log(myFirstStatement);
+}
+
+// ES6 syntax for declaring a function (arrow function)
+// const logStatement = () => {
+//   let myFirstStatement = "Assigning a string to a variable called 'myFirstStatement'";
+//   alert('This is my second statement!');
+//   console.log(myFirstStatement);
+// }
+```
+
+- You declare a function using the keyword `function`.
+- You name the function based on what it does using a present-tense action verb. Then include a set of parentheses after the name, which can be empty or accept parameters.
+- After the parenthesis you open a set of curly braces, which act as bookends to hold the set of statements you want the function to run when it is called.
+- Calling, or "invoking" the function is quite easy. Simply type the function name with its parenthesis and any associated parameters.
+
+## Call a Function:
+```javascript
+// Calling a function without arguments
+logStatement();
+
+// Calling a function with arguments.  You can only pass arguments if you've created parameters to accept those values in the function declaration.
+logStatement("arg1", "arg2");
+```
+
+When this code is read, `logStatement()` is "called", all three statements within the function's body (those curly braces) get run.
+
+### Your Turn
+Let's go ahead and declare `logStatement()` in the console together and then call it. What do you notice about the code as it is being run? What do you notice about the code being run if you swap the 2nd and 3rd statements?
+
+Create your own functions in the console:
+
+- Write a function called "greetPerson" that declares a `firstName` variable and a `lastName` variable, then prints a greeting message that incorporates the full name, and then prints a random number just for fun.
+- Write a function that assigns three different math equations to three different variables:  
+  - an "addition" variable with a simple addition equation  
+  - a "subtraction" variable with a simple subtraction equation
+  - a "multiplication" variable with a simple multiplication equation
+  - then, add up the values of all three variables and log it to the console
+
+## Pass Information to a Function:
+Functions often need data to do their job. We pass data into function with _parameters and arguments_. You declare your parameters inside the () parenthesis of the function declaration.  Parameters act like variables INSIDE the function. They get their values when you pass _arguments_ in the function invocation and you can use the parameters within the function just like you would use variables.
+
+### Parameters vs. Arguments
+There's a subtle difference. Parameters are the placeholders declared in the function declaration (similar to declaring a variable).
+Arguments are the assigned values you provide for each parameter/placeholder each time you invoke the function.
+
+```javascript
+// parameters named on declaration of function
+function myDreamCar(make, model) {
+  return "Buy me " + make + " " + model;
+}
+
+// arguments "Audi" and "R8" passed into the invocation of the function
+myDreamCar("Audi", "R8");
+```
+
+## Getting A Value from Functions  
+
+Sometimes we have functions that need to do some sort of calculation or data manipulation, then give us back the result so that we can use that value elsewhere in our code. Often, we will take that returned value and use it to update what is being displayed to our user in an application.
+
+For example:
+
+- A user enters their birthday.
+- We have a function that takes in that birthdate and uses it to calculate their age.
+- Our function will then _return_ their age value.
+- We use that returned age value in our code that displays user info on the webpage.  
+
+You will often be invoking functions within other functions and using their return values elsewhere as you build your code. Some functions return something, other functions just do something.  
+
+To get a value back from a function, you have to use the `return` keyword.  
+Let's practice in our repl:
+
+```javascript
+function addTwoNumbers(num1, num2) {
+  console.log('Boom');
+  return num1 + num2;
+}
+
+var result = addTwoNumbers(4, 7)
+```
+
+We are capturing the value being returned from the function invocation in our "result" variable.  If we console.log the "result" variable, we should see 11 printed to the console after "Boom" is printed.
+
+<section class="dropdown">
+### What happens if we move the console log statement to come after the return statement?
+
+The return statement **ends the execution of the function** and **provides the value to be returned to the function caller**. Any lines of code that come after the return statement in a function will not run.   
+
+If there is no return statement in a function, "undefined" is returned by default.   Remember, some functions need to return a value, others just do stuff without needing to return any value.  In that case, they would by default return "undefined.  
+
+The following return statements all break the function execution:
+
+```javascript
+return;
+return true;
+return false;
+return x;
+return x + y / 3;
+```
+</section>
+
+
+# Conditionals
+
+Sometimes we want to perform an action based on some kind of condition. In English, we can say "If this thing is true, then do that." To do this in JavaScript, we can write conditionals to take a certain path in our program.
+
+To use conditionals, we first need to use expressions, operators, and statements.
+
+## Basic Conditional Structure
+
+Let's now look at the basic structure of a conditional:
+
+```javascript
+if (expression) {
+  statement;
+} else {
+  statement;
+}
+```
+
+If the expression evaluates to `true`, then the statement(s) for that condition will run. Otherwise, if the expression is `false`, then the statement(s) will not run at all. The expression will usually contain an operator to make a comparison (that evaluates to true or false).
+
+Some examples of expressions we could use for a conditional are:
+
+* `myNum < 5`
+* `userCity === "Denver"`
+* `isTired === true`
+
+Now for some real conditional examples.
+
+```javascript
+let cookie = "chocolate chip";
+
+if (cookie === "chocolate chip") {
+  alert("This cookie is a chocolate chip cookie!");
+} else if (cookie === "oatmeal raisin") {
+  alert("This is not a cookie :(");
+} else {
+  alert("I bet you wish you had a chocolate chip cookie");
+}
+```
+
+```javascript
+let hoursOfSleep = 8;
+
+if (hoursOfSleep < 6) {
+  console.log('I am groggy.');
+} else {
+  console.log('I feel fantastic!');
+}
+```
+
+
 ### Debugging in Javascript
 
 In Ruby, debugging often involves using tools like pry to insert breakpoints and inspect the state of the program. Ruby's interactive console allows you to pause execution and explore variables, methods, and the call stack.
@@ -340,140 +510,3 @@ For a more in-depth lesson on working with DevTools - check out [advanced debugg
 
 ---
 </section>
-
-# Functions
-Functions are a way to group statements together to perform a specific task. Functions are reusable blocks of code. To create a function, you must give it a name and then write the statements required for the function to achieve its task inside the function's curly braces. Let's work through the pieces and parts of a function.
-
-## Anatomy of a Function:
-```javascript
-function myCoolFunction() {
-  let myFirstStatement = "Assigning a string to a variable called 'myFirstStatement'";
-  alert('This is my second statement!');
-  console.log(myFirstStatement);
-}
-// because definition of method will not change
-// const myFirstStatement = () => {
-//   let myFirstStatement = "Assigning a string to a variable called 'myFirstStatement'";
-//   alert('This is my second statement!');
-//   console.log(myFirstStatement);
-// }
-```
-
-- You declare a function using the keyword `function`.
-- You can name the function anything you want, but it must include a set of parentheses after the name, which can be empty or accept parameters.
-- You must follow the name of the function with a set of curly braces, which act as bookends to hold the set of statements you want the function to run when it is called.
-- Calling the function is quite easy. Simply type the function name with its parenthesis and any associated parameters.
-
-## Call a Function:
-```javascript
-// Calling a function without arguments
-myCoolFunction();
-
-// Calling a function with arguments
-myCoolFunction(arg1, arg2);
-```
-
-When this code is read, `myCoolFunction()` is "called", all three statements within the function's body (those curly braces) get run.
-
-### Your Turn
-Let's go ahead and declare `myCoolFunction()` in the console together and then call it. What do you notice about the code as it is being run? What do you notice about the code being run if you swap the 2nd and 3rd statements?
-
-Create your own functions in the console:
-
-- Write a function that declares a `firstName` variable and a `lastName` variable, then alerts the user with a message that incorporates the full name, and then logs a random number to the console.
-- Write a function that assigns three different math equations to three different variables, then log the sum of the values of all three variables
-- Write a function that alerts the user with a message of "YO!", and then logs to the console a sum of eight different integers.
-
-## Pass Information to a Function:
-Sometimes you need to give a function some information in order for it to do its job. You can give that function the information it needs by providing _parameters_. These are bits of information that you identify with appropriately named labels (you get to decide the notation) inside the parentheses of your named function. The words you use for your parameters act like variables INSIDE the function, which means they serve as means to pass values.
-
-### Parameters vs. Arguments
-There's a subtle difference. Basically, when you declare a function, and you stipulate the function will accept some bits of information, those are parameters. Then, when you pass the values of the parameters, those are called arguments. Like this:
-
-```javascript
-// parameters named on declaration of function
-function myDreamCar(make, model) {
-  return "Buy me " + make + " " + model;
-}
-
-// arguments "Audi" and "R8" passed into a called function
-myDreamCar("Audi", "R8");
-```
-
-## Getting A Value from Functions
-Some functions return information to the code that called them. Wait - what? When a function performs a calculation, like 2 + 2, it will return the "answer" of 4, right? Yes, AND, you still have to tell it to do so. Let's work with some return statements in functions with parameters in the console:
-
-```javascript
-function addTwoNumbers(num1, num2) {
-  return num1 + num2;
-  console.log('Boom');
-}
-```
-
-<strong>The return statement ends function execution and specifies a value to be returned to the function caller. </strong>
-It looks like this:
-
-```javascript
-return [[expression]]
-// The expression to return. If omitted, undefined is returned instead.
-```
-
-When a `return` statement is called in a function, the execution of this function is stopped. If specified, a given value is returned to the function caller. If the expression is omitted, undefined is returned instead. The following return statements all break the function execution:
-
-```javascript
-return;
-return true;
-return false;
-return x;
-return x + y / 3;
-```
-
-# Conditionals
-
-Sometimes we want to perform an action based on some kind of condition. In English, we can say "If this thing is true, then do that." To do this in JavaScript, we can write conditionals to take a certain path in our program.
-
-To use conditionals, we first need to use expressions, operators, and statements.
-
-## Basic Conditional Structure
-
-Let's now look at the basic structure of a conditional:
-
-```javascript
-if (expression) {
-  statement;
-} else {
-  statement;
-}
-```
-
-If the expression evaluates to `true`, then the statement(s) for that condition will run. Otherwise, if the expression is `false`, then the statement(s) will not run at all. The expression will usually contain an operator to make a comparison (that evaluates to true or false).
-
-Some examples of expressions we could use for a conditional are:
-
-* `myNum < 5`
-* `userCity === "Denver"`
-* `isTired === true`
-
-Now for some real conditional examples.
-
-```javascript
-let cookie = "chocolate chip";
-
-if (cookie === "chocolate chip") {
-  alert("This cookie is a chocolate chip cookie!");
-} else if (cookie === "oatmeal raisin") {
-  alert("This is not a cookie :(");
-} else {
-  alert("I bet you wish you had a chocolate chip cookie");
-}
-```
-
-```javascript
-let hoursOfSleep = 8;
-
-if (hoursOfSleep < 6) {
-  console.log('I am groggy.');
-} else {
-  console.log('I feel fantastic!');
-}
-```
