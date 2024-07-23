@@ -11,6 +11,8 @@ title: Module 2 - Lessons
 
 ## Rails Application and Development
 * [Advanced Routing](./advanced_routing)
+* [Data Validations](./data_validations)
+* [Error Handling](./error_handling)
 
 ## Databases
 * [Intro to Databases and ORMs](./databases_and_orms)
@@ -42,4 +44,3 @@ title: Module 2 - Lessons
 
 ## Additional Resources
 * [Chrome Dev Tools](./chrome_dev_tools)
-
