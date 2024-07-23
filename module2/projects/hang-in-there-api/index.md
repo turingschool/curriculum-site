@@ -46,14 +46,14 @@ The error messages aren't that great, but we're here to help you diagnose the pr
 
 ## Technical Requirements
 
-<!-- The Technical Requirements for this project can be found [here](./requirements) -->
+The Technical Requirements for this project can be found [here](./requirements)
 
 
 ## Evaluation
 
-<!-- Evaluation details can be found [here](./evaluation) -->
+Evaluation details can be found [here](./evaluation)
 
 
-## Peer Code Review
+<!-- ## Peer Code Review -->
 
 <!-- Instructions for the peer review can be found [here](./peer_code_review) -->
