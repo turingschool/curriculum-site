@@ -154,6 +154,7 @@ let mythicalCreature = "unicorns"; //notice no extra space in the "unicorns" str
 let creatureCount = `<p>I have ${quantity} very fancy ${mythicalCreature}</p>`
 ```
 
+<section class="dropdown">
 ### Key Points So Far
 
 That was a lot of information. Let's go over the most important things we need to know.  
@@ -264,6 +265,7 @@ var showName = num + word;
 
 We're not covering it today but eventually, you'll want [do your research on their differences.](https://codeburst.io/difference-between-var-let-and-const-in-javascript-fbce2fba7b4). They each behave a little differently in terms of scope and reassignment, so it's important to understand the differences. If you don't, you might run into some errors.
 
+</section>
 </section>
 
 
@@ -402,7 +404,7 @@ return x + y / 3;
 </section>
 
 
-# Conditionals
+## Conditionals
 
 Sometimes we want to perform an action based on some kind of condition. In English, we can say "If this thing is true, then do that." To do this in JavaScript, we can write conditionals to take a certain path in our program.
 
@@ -431,26 +433,86 @@ Some examples of expressions we could use for a conditional are:
 Now for some real conditional examples.
 
 ```javascript
-let cookie = "chocolate chip";
-
-if (cookie === "chocolate chip") {
-  alert("This cookie is a chocolate chip cookie!");
-} else if (cookie === "oatmeal raisin") {
-  alert("This is not a cookie :(");
-} else {
-  alert("I bet you wish you had a chocolate chip cookie");
+function identifyCookie(cookie) {
+  if (cookie === "chocolate chip") {
+    console.log("This cookie is a chocolate chip cookie!");
+  } else if (cookie === "oatmeal raisin") {
+    console.log("This should not even be called a cookie :(");
+  } else {
+    console.log("I bet you wish you had a chocolate chip cookie");
+  }
 }
+
+identifyCookie("chocolate chip")
+identifyCookie("oatmeal raisin")
+identifyCookie("sugar")
 ```
 
 ```javascript
-let hoursOfSleep = 8;
-
-if (hoursOfSleep < 6) {
-  console.log('I am groggy.');
-} else {
-  console.log('I feel fantastic!');
+function evaluateSleep(hoursOfSleep) {  
+  if (hoursOfSleep < 6) {
+    console.log('I am groggy.');
+  } else {
+    console.log('I feel fantastic!');
+  }
 }
+
+evaluateSleep(8)
+evaluateSleep(4)
 ```
+
+<section class="dropdown">
+### More Key Points
+
+That was a lot of information. Let's go over the most important things we need to know.  
+
+<section class="dropdown">
+### Various operators allow us to store data, do logic, math, comparisons and more  
+
+Common examples:  
+`=` Assign and reassign values.  
+`+` Add numbers or concatenate strings.  
+`===` Strictly equals (checks for an exact match)
+
+  
+`+=`  Add _and_ reassign.  
+```js
+var counter = 0;
+counter += 1  //adds one to the previous value of counter and saves it as counter's new value
+```
+</section>
+
+<section class="dropdown">
+### Statements and Expressions
+
+Statements are our lines of code that get executed one by one and do something.  
+`console.log('hello world')`  
+  
+Expressions are parts of our code that get _evaluated_ down to a single value.   
+`(user.location === 'Denver')`  < an expression that evaluates to true or false
+
+</section>
+
+<section class="dropdown">
+### We use parameters and arguments to pass values (data) to functions
+
+* We declare the parameters in the function declaration.  
+* We pass new values to the parameters each time we call the function by passing arguments in the invocation.
+* Usually we want to pass an argument for every parameter.  2 parameters? Pass 2 arguments.
+* Arguments provide values to the parameters _in order_.  First arg becomes the value of the first param. 2nd arg > 2nd param. Etc
+
+<img class="medium" src="./assets/images/argsandparams.png">
+</section>
+
+<section class="dropdown">
+### The "return" keyword lets us get a value from a function when we invoke it.
+
+* Once JS runs the `return` statement, the function execution stops and no more code is executed.  
+* If no return value is specified in a function, it returns "undefined" by default.
+
+</section>
+
+</section>
 
 
 ### Debugging in Javascript
