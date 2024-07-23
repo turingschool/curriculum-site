@@ -229,22 +229,20 @@ Follow the steps below to explore how `.value` works!
 When called, the `.value` property on an input element will return the **current value**.
 
 <section class="note">
-One of the top misconceptions/mistakes we see students make while in Mod 1 is attempt to capture the value of an input while the input is empty. If you want to get a user's input, we have to get the value *after* the user has entered it.  We do this by accessing the `.value` property **via some event listener** - on an event that happens *after* the user has typed into the input field - like clicking Submit after filling out a form. 
+One of the top misconceptions/mistakes we see students make while in Mod 1 is attempting to capture the value of an input while the input is empty. If you want to get a user's input, we have to get the value *after* the user has entered it.  We do this by accessing the `.value` property **via some event listener** - on an event that happens *after* the user has typed into the input field - like clicking Submit after filling out a form. 
 </section>
 
 <section class="call-to-action">
 ### Paired Practice
 Go back to your initial codepen from the warm up.  We've already written code to change the content of the page on button click.  But now that we know that we can access the user input with the `.value` property, we can refactor this to be more realistic! 
 
-Delete the Click Me button we previously added and copy-paste this simple form into the html so the user can input the new title, fact and image url.  
+Delete the "Click Me" button we previously added and copy-paste the inputs and button into the html so the user can input the new title, fact and image url.  
 
 ```js
-<form>
-  <input id="title-input" placeholder="title">
-  <input id="fact-input" placeholder="fact">
-  <input id="image-input" placeholder="image url">
+  <input id="title-input" placeholder="title"/>
+  <input id="fact-input" placeholder="fact"/>
+  <input id="image-input" placeholder="image url"/>
   <button>Submit</button>
-</form>
 ```
 
 Use JavaScript to capture the input values when the user clicks the submit button and update the content of the page accordingly.
@@ -260,8 +258,12 @@ Take a few minutes to ask yourself and pseudocode out:
 
 Now code it out.  One person should screen share and drive, the other should navigate.  Navigator can also be coding along on their machine.
 
-Psst... [here](https://images.unsplash.com/photo-1512742282398-91d6f0580591?q=80&w=2874&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D) is an image url for a cute hedgehog photo, in case you want to use it.
+Psst... [here](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6IR-XzcjhzVo2oAi9T5O9D-2fu237ITsqrX7PI2zc7LNDHomL5Wtz&usqp=CAE&s) is an image url for a cute hedgehog photo, in case you want to use it.
 
+
+**Consider:**    
+What if you wanted to invoke 3 functions in a row on button click?  
+What if you need to use logic to determine which function should be invoked on an event?   
 </section>
 
 
@@ -277,16 +279,14 @@ Psst... [here](https://images.unsplash.com/photo-1512742282398-91d6f0580591?q=80
 * How do you access the element that a click event (or other type of event) occurred on?
 * How do you access and manipulate elements that have been dynamically added to the DOM (since you can't use a simple querySelector)?
 
-Consider:  
-What if you wanted to invoke 3 functions in a row on button click?  
-What if you need to use logic to determine which function should be invoked on an event?   
 </section>  
 
 ## Suggested re-teaching practice
 
+- Work through the exercises in [this legacy front end lesson](https://frontend.turing.edu/lessons/module-1/js-event-bubbling-and-delegation.html) on Event Bubbling and Event Delegation
 - Create a codepen with an HTML form that collects to-do list info:  task, priority level, description. When the user enters info and submits the form, create a litte "card" of that info and display it on the DOM. 
 - Read up on the [event listener documentation](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener)
-- Explore event bubbling and event delegation using google, youtube and MDN
+
 
 
 
@@ -315,35 +315,6 @@ Examples:
 <!-- This is the codepen where I was working through the brainstorming. need to create new one for lesson starting boilerplate -->
 <!-- https://codepen.io/hfaerber/pen/wvLGoVv -->
 
+<!-- This codepen has Heather's solution to the final practice exercise of changing the elephant content to a different animal.
+https://codepen.io/hfaerber/pen/wvLWRQr?editors=1010 -->
 
-<!-- Hoarding of the examples/practice exercises I've cut from this original lesson: -->
-
-<!-- Below is an example of a small application that takes a user input, then changes the color of a box based on that input: -->
-
-<!-- <p class="codepen" data-height="300" data-theme-id="37918" data-default-tab="html,result" data-user="turing-school" data-slug-hash="bGGeKVa" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Color Box"> -->
-  <!-- <span>See the Pen <a href="https://codepen.io/turing-school/pen/bGGeKVa"> -->
-  <!-- Color Box</a> by Turing School (<a href="https://codepen.io/turing-school">@turing-school</a>) -->
-  <!-- on <a href="https://codepen.io">CodePen</a>.</span> -->
-<!-- </p> -->
-<!-- <script async src="https://static.codepen.io/assets/embed/ei.js"></script> -->
-
-<!-- Let's break down what's happening in the CodePen above:
-- **Lines 1-3:** Declare variables for the DOM elements that we will need (box, input field, button)
-- **Line 5:** Attach an event listener to the button
-- **Line 7:** Declare a function that will execute when the button is clicked
-  - Declare a variable, `color` that takes the value the user selected and stores it
-  - Applies an inline style, `backgroundColor` with that newly selected color -->
-
-
-
-
-
-<!-- ## Style Change on Button Click
-
-Like we mentioned earlier, it's pretty common for a user to experience helpful feedback from an application after they've taken some sort of action.
-
-Take for example the "heart" icon on CodePen. CodePen has 4 levels of "love" - 0, 1, 2, and 3. Each time a heart is clicked, the user increments their love up by one. (Until the click when it is red and at level 3 - at that point, it goes back to 0). While the "love leveling" is a bit confusing, this is still a great example of **styles changing based on user interaction**.
-
-<img class="medium" src="./assets/images/dom/codepen-heart-click.gif">
-
-Note: Refer to the Introduction to the [DOM](https://curriculum.turing.edu/module2/lessons/js_intro_to_dom) for changing styles based on user interaction.. -->
