@@ -7,7 +7,7 @@ type: project
 _[Back to Hang in There API Home](./index)_
 
 ## Presentation
-For the project evaluation, each project pair should prepare a 10 minute presentation.Your presentation should cover the following points:
+For the project evaluation, each project pair should prepare presentation. Your presentation should cover the following points:
 
 * Demonstration of functionality via Postman suites
 * Technical quality and organization of the code, identifying code that should be refactored and how it would be refactored
@@ -49,3 +49,10 @@ Your project will be evaluated based on the following rubric:
 * **Meets Expectations**: ActiveRecord helpers are utilized whenever possible. ActiveRecord is used in a clear and effective way to read/write data. No Ruby is used to process data. All queries functional and accurately implemented.
 * **Approaching Expectations**: Ruby is used to process data that could use ActiveRecord instead. Some instances where ActiveRecord helpers are not utilized. Some queries not accurately implemented.
 * **Below Expectations**: Ruby is used to process data more often than ActiveRecord. Many cases where ActiveRecord helpers are not utilized.
+
+### Project Mangement
+
+* **Exceeds Expectations**: GitHub Project board is fully up to date in all checkins and the evaluation. Students create custom cards on the project board to track tasks in addition to user stories.
+* **Meets Expectations**: Student uses GitHub Project to track all user stories. Project board is mostly up to date in all checkins. Project board is fully up to date at the evaluation.
+* **Approaching Expectations**: GitHub Project board is not utilized during one of the checkins. Project board is not fully up to date during evaluation.
+* **Below Expectations**: GitHub projects is not utilized.
