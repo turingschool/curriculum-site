@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Error Handling in Rails Application
-length: 120
+length: 150
 tags: rails, errors, rescue, raise, exceptions
 ---
 
