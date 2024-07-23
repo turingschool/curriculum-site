@@ -1,5 +1,5 @@
 ---
-title: Hang In There - Pair
+title: Hang In There - Solo
 ---
 
 ## Learning Goals
