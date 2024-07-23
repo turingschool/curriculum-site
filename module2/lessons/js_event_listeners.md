@@ -289,29 +289,6 @@ What if you need to use logic to determine which function should be invoked on a
 
 
 
-
-<!-- Actual learning goals and topics needing covered
-
-See example and syntax for eventListener
-
-Practice the steps of putting together an event listener
- - what elements do i need to grab?  What element do i want to add the listener to?  What elements will i manipulate when the listener is triggered?
- - write the event listener
- - write the function the event listener will trigger
-
-See that the code to change things on the DOM can/will be tied to a user event.
-Practing adding html to the dom with innerHTML
-Practice adding, removing and toggling classList
-Practice checking if classList contains a specific class
-
-Clearly outlined key takeaways
-
-
-Examples:
-2 codepens, do more in each of them.
-
- -->
-
 <!-- This is the codepen where I was working through the brainstorming. need to create new one for lesson starting boilerplate -->
 <!-- https://codepen.io/hfaerber/pen/wvLGoVv -->
 
