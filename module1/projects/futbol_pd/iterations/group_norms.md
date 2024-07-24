@@ -9,7 +9,7 @@ _[Back to Futbol Home](../index)_
 Your group should plan and expect to spend _at least_ the first full project day on iteration 1. We've provided some resources to guide this iteration, however you are encouraged to explore on your own and come up with a plan that works best for your team.
 
 ### Git Workflow Expectations
-You've already spent a lot of time this mod working with [git](https://backend.turing.edu/module1/lessons/git_and_github) and [git workflow](https://frontend.turing.edu/lessons/module-1/git-collaboration.html). Now, you will be collaborating with three or more people for the first time. Spend some time with your group reviewing git workflow and determine the [workflow](https://backend.turing.edu/module1/lessons/git_for_pairs) that will be best for your group. While you have flexibility as to what this means for you, it should include the use of branches and pull requests for merging changes. We never want to merge directly to main.
+You've already spent a lot of time this mod working with [git workflow](../../../lessons/git_for_pairs.md). Now, you will be collaborating with three or more people for the first time. Spend some time with your group reviewing git workflow and determine the workflow that will be best for your group. While you have flexibility as to what this means for you, it should include the use of branches and pull requests for merging changes. We never want to merge directly to main.
 
 
 ### Communication and Collaboration
@@ -28,12 +28,12 @@ There are a few things to consider when deciding how you want to organization yo
 * What classes do you need?
   * Classes should be compact.
   * Classes should have a single responsibility - you should be able to describe what a class is responsible for in one sentence.
-* Use the tools we have learned recently when thinking about reorganization - [Modules](https://backend.turing.edu/module1/lessons/modules), [Inheritance](https://backend.turing.edu/module1/lessons/inheritance), [Class Methods](https://backend.turing.edu/module1/lessons/class_methods), and Plain Old Ruby Objects (POROs).
+* Use the tools we have learned recently when thinking about reorganization - [Modules](../../../lessons/modules.md), [Inheritance](../../../lessons/inheritance.md), [Class Methods](../../../lessons/class_methods.md), and Plain Old Ruby Objects (POROs).
 * What makes the most sense for how to break this out in to pieces that individuals or pairs can work on. Odds are, you won't be mob programming the entire project.
 * How will you determine when something is "good enough" to move on to the next thing (potential to refactor later)?
 
 ## Deliverables
-Your iteration deliverable is to [create a README](https://backend.turing.edu/module1/lessons/writing_a_readme) with the following. As you craft your answers, consider how you might talk about these same topics in a job interview after you graduate.
+Your iteration deliverable is to [create a README](../../../lessons/writing_a_readme.md) with the following. As you craft your answers, consider how you might talk about these same topics in a job interview after you graduate.
 
 * A 1-2 summary or bullet points outlining your plan for check-ins throughout the duration of the project.
 
