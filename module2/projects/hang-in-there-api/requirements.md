@@ -82,39 +82,39 @@ Example JSON response:
   "data": [
     {
       "id": "1",
-        "type": "poster",
-        "attributes": {
-          "name": "FAILURE",
-          "description": "Why bother trying? It's probably not worth it.",
-          "price": 68.00,
-          "year": 2019,
-          "vintage": true,
-          "img_url": "https://images.unsplash.com/photo-1620401537439-98e94c004b0d"
-        }
+      "type": "poster",
+      "attributes": {
+        "name": "FAILURE",
+        "description": "Why bother trying? It's probably not worth it.",
+        "price": 68.00,
+        "year": 2019,
+        "vintage": true,
+        "img_url": "https://images.unsplash.com/photo-1620401537439-98e94c004b0d"
+      }
     },
     {
       "id": "2",
-        "type": "poster",
-        "attributes": {
-          "name": "REGRET",
-          "description": "Hard work rarely pays off.",
-          "price": 89.00,
-          "year": 2018,
-          "vintage": true,
-          "img_url":  "https://plus.unsplash.com/premium_photo-1661293818249-fddbddf07a5d",
-        }
+      "type": "poster",
+      "attributes": {
+        "name": "REGRET",
+        "description": "Hard work rarely pays off.",
+        "price": 89.00,
+        "year": 2018,
+        "vintage": true,
+        "img_url":  "https://plus.unsplash.com/premium_photo-1661293818249-fddbddf07a5d",
+      }
     },
     {
       "id": "3",
-        "type": "poster",
-        "attributes": {
-          "name": "MEDIOCRITY",
-          "description": "Dreams are just that—dreams.",
-          "price": 127.00,
-          "year": 2021,
-          "vintage": false,
-          "img_url": "https://images.unsplash.com/photo-1551993005-75c4131b6bd8",
-        }
+      "type": "poster",
+      "attributes": {
+        "name": "MEDIOCRITY",
+        "description": "Dreams are just that—dreams.",
+        "price": 127.00,
+        "year": 2021,
+        "vintage": false,
+        "img_url": "https://images.unsplash.com/photo-1551993005-75c4131b6bd8",
+      }
     }
   ]
 }
@@ -468,11 +468,112 @@ Example JSON response for `GET /api/v1/posters?min_price=2000.00`
 
 ---
 
-## 4. Extensions and Exploration
-<!-- alternative extension idea is to do some FE work -->
-<!-- ### Errors and Validations -->
+## 4. Extensions and Exploration - Validations and Errors
 
+### Validations
+Add some validations to your `Poster` model:
+  * `name` should be required AND unique
+  * `description` should be required
+  * `year` should be required AND an integer
+  * `price` should be required AND a float
+  * `vintage` should be required
 
+Write tests for these validations.
 
+### Errors
+Right now you are only solving for what happens when everything goes right. We call this the Happy Path. But what about when things go wrong? And what can go wrong here anyways? Think about what your code would do in the following scenarios. Try it out in Postman. Is this what you want to happen?
+* GET `/api/v1/posters/:id`
+  * For an ID that doesn't exist
+* POST `/api/v1/posters/:id`
+  * When we're missing some attributes
+  * If someone tries to create a poster with a duplicate name?
+* PATCH `/api/v1/posters/:id`
+  * If we try to update the name to a name that already exists in our database?
+  * If we try to delete a required attribute?
 
+We have to assume our users will sometimes try to do things we don't want or expect them to. We call these scenarios Sad Paths and Edge Cases. Update your endpoints to handle these errors. 
+
+### Examples
+
+<details><summary><h4>GET /api/v1/posters/:id</h4></summary>
+
+**Request**
+```bash
+GET /api/v1/posters/bad_id
+Content-Type: application/json
+Accept: application/json
+```
+**Response**
+```json
+status: 404
+body:
+
+{
+  "errors": [
+    {
+      "status": "404",
+      "message": "Record not found"
+    }
+  ]
+}
+```
+</details>
+
+<details><summary><h4>POST /api/v1/posters/</h4></summary>
+
+**Request**
+```bash
+POST /api/v1/posters/
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "FAILURE",
+  "year": 2019,
+  "vintage": true,
+  "price": 20.00
+}
+```
+**Response**
+```json
+status: 422
+body:
+
+{
+  "errors": [
+    {
+      "status": "422",
+      "message": "Description cannot be blank."
+    }
+  ]
+}
+```
+</details>
+
+<details><summary><h4>PATCH /api/v1/posters/:id</h4></summary>
+
+**Request**
+```bash
+PATCH /api/v1/posters/:id
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": ""
+}
+```
+**Response**
+```json
+status: 422
+body:
+
+{
+  "errors": [
+    {
+      "status": "422",
+      "message": "Name cannot be blank."
+    }
+  ]
+}
+```
 </details>
