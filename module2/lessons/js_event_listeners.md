@@ -49,7 +49,7 @@ Consider:
 
 There are many types of events beyond just "click".   Explore this list of [Mouse Events](https://developer.mozilla.org/en-US/docs/Web/API/Element#mouse_events) on MDN. Scroll beyond just mouse events to explore keyboard events, focus events, etc.  
 
-Open up a webpage that you often visit. Maybe it's a social media page, maybe it's your bank's website, maybe it's a news site. Take a few minutes and list all the event listeners that you think might be on that page! What do they do?
+Open up a webpage that you often visit. Maybe it's a social media page, maybe it's your bank's website, maybe it's a news site. Take a few minutes and list all the event listeners that you think might be on that page! What type of events might they be listening for? What functionality occurs when those events happen? 
 
 <section class="call-to-action">
 ### Pair Challenge
@@ -284,7 +284,7 @@ What if you need to use logic to determine which function should be invoked on a
 ## Suggested re-teaching practice
 
 - Work through the exercises in [this legacy front end lesson](https://frontend.turing.edu/lessons/module-1/js-event-bubbling-and-delegation.html) on Event Bubbling and Event Delegation
-- Create a codepen with an HTML form that collects to-do list info:  task, priority level, description. When the user enters info and submits the form, create a litte "card" of that info and display it on the DOM. 
+- Create a codepen with an HTML form that collects to-do list info:  task, priority level, description. When the user enters info and submits the form, create a litte "card" of that info and display it on the DOM. For an added challenge, add functionality to delete the task card if the user double clicks it.
 - Read up on the [event listener documentation](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener)
 
 
