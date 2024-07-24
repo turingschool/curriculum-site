@@ -18,6 +18,7 @@ Last week you built a front end for your not so motivational posters. This week,
 ## Postman
 
 ### Running one endpoint at a time
+TODO: Create and link Postman collection once project spec is approved.
 
 As you develop your endpoints, run `rails s` and find the appropriate endpoint within the Postman collection you imported. For example, "Get All Posters". When you select "Get All Posters" from the list, you should see a Postman tab open, pre-populated with everything you need to connect to the endpoint in your code and see if it works correctly.
 
