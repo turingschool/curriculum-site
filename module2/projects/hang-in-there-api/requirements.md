@@ -383,12 +383,12 @@ Example JSON response for `GET /api/v1/posters?sort=asc`
 
 This endpoint should:
 
-* return all objects in the database in case-insensitive alphabetical order if multiple matches are found
-  * e.g., if "Disaster" and "Terrible" exist as poster names, "Disaster" would be listed first, even if "Terrible" was created first
 * allow the user to specify a 'name' query parameter:
   * for posters, the user can send `?name=ter` and it will search the `name` field in the database table
   * the search data in the `name` query parameter should require the database to do a case-insensitive search for text fields
     * e.g., searching for 'ter' should find 'TERRIBLE' and 'DISASTER'
+  * return all objects in the database in case-insensitive alphabetical order if multiple matches are found
+    * e.g., if "Disaster" and "Terrible" exist as poster names, "Disaster" would be listed first, even if "Terrible" was created first
 * return all objects in the database that meet the price threshold specification: 
   * `max_price=99.99` should look for anything with a price less than or equal to $99.99
   * `min_price=99.99` should look for anything with a price less than or equal to $99.99
