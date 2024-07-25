@@ -57,7 +57,7 @@ Start coding by referencing the pseudocode you’ve written.
 
 ### Extra Practice
 If you finish all of the practice in the repo, the Turing Staff created the following extra practice exercises:
-- [Gist of Leveled Practice](https://gist.github.com/kaylagordon/c1f62f2c43e27dee3c6176f4d54aa3b6)
+- [this extra-practice-se2-assessment-style repo](https://github.com/turingschool-examples/extra-practice-se2-assessment-style)
 - [Replit Exercises #1](https://replit.com/@kaylaewood/iteratorpractice#index.js)
 - [Replit Exercises #2](https://replit.com/@kaylaewood/iteratorpractice2#index.js)
 
