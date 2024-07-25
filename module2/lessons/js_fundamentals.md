@@ -81,7 +81,7 @@ The basic (primitive) data types we'll work with are BUNNS:
   * any number - a negative, decimal or whole number (*not* in quotation marks)
  
 * **String**
-  * text data - any characters wrapped in quotation marks (including lettesr, numbers, symbols, spaces)
+  * text data - any characters wrapped in quotation marks (including letters, numbers, symbols, spaces)
   * in JS you can use 'single quotes' or "double quotes"
 
 The complex data types we'll work with are:
@@ -238,7 +238,7 @@ var name = "Hillary";
 var age = 30;
 var location = "Denver";
 
-var interpolatedString = `My friend ${name} is ${age} years old and lives in ${Denver}.`
+var interpolatedString = `My friend ${name} is ${age} years old and lives in ${location}.`
 ```
 
 </section>
