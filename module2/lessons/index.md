@@ -26,7 +26,7 @@ title: Module 2 - Lessons
 * [CSS: Intro To Layout](./css_intro_to_layout) (prework for Flexbox lesson)
 
 ## JavaScript
-<!-- * [JS: Fundamentals](./js_fundamentals) -->
+* [JS: Fundamentals](./js_fundamentals)
 * [JS: Intro to the DOM](./js_intro_to_dom)
 * [JS: Event Listeners](./js_event_listeners)
 * [JS: Array Prototype Methods](./js_array_prototype_methods)
