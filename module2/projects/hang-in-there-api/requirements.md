@@ -68,7 +68,8 @@ You will need to expose the data through a multitude of API endpoints. All of yo
 
 You will need to expose the following RESTful API endpoints for the following:
 
-<details><summary><h3>1. Fetch all Posters</h3></summary>
+<section class="dropdown">
+### 1. Fetch all Posters
 These "index" endpoints should:
 
 * render a JSON representation of all records of the requested resource
@@ -119,10 +120,10 @@ Example JSON response:
   ]
 }
 ```
+</section>
 
-<hr/>
-</details>
-<details><summary><h3>2. Fetch a single record</h3></summary>
+<section class="dropdown">
+### 2. Fetch a single record
 
 This endpoint for Posters should:
 
@@ -148,11 +149,11 @@ Example JSON response:
 }
 ```
 
-<hr/>
-</details>
+</section>
 
 
-<details><summary><h3>3. Create a Poster</h3></summary>
+<section class="dropdown">
+### 3. Create a Poster
 
 This endpoint should:
 
@@ -190,11 +191,10 @@ Example JSON response after successfully creating a Poster resource:
   }
 }
 ```
+</section>
 
-<hr/>
-</details>
-
-<details><summary><h3>4. Update a Poster</h3></summary>
+<section class="dropdown">
+### 4. Update a Poster
 
 This endpoint should:
 
@@ -233,19 +233,18 @@ Example JSON response for the Poster resource:
   }
 }
 ```
-<hr/>
-</details>
+</section>
 
 
-<details><summary><h3>5. Destroy a Poster</h3></summary>
+<section class="dropdown">
+### 5. Destroy a Poster
 
 This endpoint should:
 * destroy the corresponding record (if found) and any associated data
 * NOT return any JSON body at all, and should return a `204`` HTTP status code
 * NOT utilize a Serializer (Rails will handle sending a `204` on its own if you just `.destroy` the object)
 
-<hr/>
-</details>
+</section>
 
 
 You may choose to divide these up between your project partners in whatever way seems best; you may also choose to implement the first story/stories _together_ to both have a solid understanding first, before dividing & conquering if you choose. 
@@ -253,7 +252,16 @@ You may choose to divide these up between your project partners in whatever way 
 ---
 ## 3. Using ActiveRecord and SQL
 
-<details><summary><h4>Returning Count</h4></summary>
+Now we're going to make our app work a little harder for us by returning a count of items returned per request and allowing users to sort and filter results through the use of query params in their requests. As in the previous section:
+
+* All endpoints will expect to return JSON data only
+* All endpoints should be exposed under an `api` and version (`v1`) namespace (e.g. `/api/v1/posters`)
+* API will be compliant to the [JSON API spec](https://jsonapi.org/) and match our requirements below precisely
+* Controller actions should be limited to only the standard Rails actions and follow good RESTful convention.
+
+
+<section class="dropdown">
+### Returning Count
 
 This endpoint should:
 
@@ -311,10 +319,10 @@ Example JSON response for `GET /api/v1/posters`
 
 
 ```
+</section>
 
-</details>
-
-<details><summary><h4>Sorting Results by Query Parameters</h4></summary>
+<section class="dropdown">
+### Sorting Results by Query Parameters
 
 This endpoint should:
 
@@ -367,11 +375,11 @@ Example JSON response for `GET /api/v1/posters?sort=asc`
 
 
 ```
+</section>
 
-</details>
 
-
-<details><summary><h4>Filtering Results by Query Parameters</h4></summary>
+<section class="dropdown">
+### Filtering Results by Query Parameters
 
 This endpoint should:
 
@@ -463,8 +471,7 @@ Example JSON response for `GET /api/v1/posters?min_price=2000.00`
 
 
 ```
-
-</details>
+</section>
 
 ---
 
@@ -493,9 +500,10 @@ Right now you are only solving for what happens when everything goes right. We c
 
 We have to assume our users will sometimes try to do things we don't want or expect them to. We call these scenarios Sad Paths and Edge Cases. Update your endpoints to handle these errors. 
 
-### Examples
+#### Examples
 
-<details><summary><h4>GET /api/v1/posters/:id</h4></summary>
+<section class="dropdown">
+### GET /api/v1/posters/:id
 
 **Request**
 ```bash
@@ -517,9 +525,10 @@ body:
   ]
 }
 ```
-</details>
+</section>
 
-<details><summary><h4>POST /api/v1/posters/</h4></summary>
+<section class="dropdown">
+### POST /api/v1/posters/
 
 **Request**
 ```bash
@@ -548,9 +557,10 @@ body:
   ]
 }
 ```
-</details>
+</section>
 
-<details><summary><h4>PATCH /api/v1/posters/:id</h4></summary>
+<section class="dropdown">
+### PATCH /api/v1/posters/:id
 
 **Request**
 ```bash
@@ -576,4 +586,4 @@ body:
   ]
 }
 ```
-</details>
+</section>
