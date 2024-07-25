@@ -8,6 +8,8 @@ title: Module 2 - Lessons
 * [One to Many Relationships in the Database](./one_to_many_relationships_part1)
 * [One to Many Relationships in Rails](./one_to_many_relationships_part2)
 * [Introduction to MVC](./intro_to_mvc)
+* [Introduction to Building an API](./intro_to_building_a_rails_api)
+* [Building an API in Rails](./building_an_api)
 
 ## Rails Application and Development
 * [Routing: REST](./restful_routes_and_crud.md)
