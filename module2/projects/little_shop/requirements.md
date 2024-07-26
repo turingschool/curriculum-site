@@ -115,9 +115,7 @@ end
 
 #### Error Responses
 
-If the user causes an error for which you are sending a 400-series error code, the JSON body of the response should follow a similar JSON Spec of a `data` element, with a `nil` ID, and empty attributes.
-
-As an **EXTENSION**, customize the error message to use this format instead:
+If the user causes an error for which you are sending a 400-series error code, the JSON body of the response should follow this format:
 
 ```json
 {
@@ -133,6 +131,11 @@ As an **EXTENSION**, customize the error message to use this format instead:
 You can customize the value of the `message` element, but the `message` element must be present.
 
 The `errors` element will always be an array and contain one or more strings of why the user's request was unsuccessful. Examples will include a "ID was invalid" in the case of a 404, or "the 'description' parameter was missing"
+
+#### DRY Exception Handlers in Code
+
+As part of the project, we're requiring students try to refactor exception handling and sad path logic in their controllers as much as possible. Take a look at [this page](./dry_exception_handling) to learn more about some options. 
+
 #### Sad Path vs Edge Case
 
 Sad Path: the user did something which didn't cause an _error_ but didn't work out the way they'd hoped. For example, searching for a merchant by name and getting zero results is a "sad path"
