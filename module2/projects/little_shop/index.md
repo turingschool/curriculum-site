@@ -12,6 +12,8 @@ You are working for a company developing an E-Commerce Application. Your team is
 
 Your job is to expose the data that powers the site through an API that the front end would consume. You won't be building an actual front end for this project, so you can look at [these Wireframes](./wireframes) to get an idea of how the front end would integrate with your back end.
 
+<!-- TO-DO: Add details about connecting to an already existing FE app that will consume these endpoints -->
+
 ## Learning Goals
 
 ### Explicit
@@ -37,7 +39,7 @@ Below are skills that are more general/necessary on the job that are practiced b
 
 ## Project Management
 
-The organization of this project spec is by feature type. However, it is encouraged that you work through a little of each feature type rather than trying to complete an entire feature type before moving to the next. We encourage you to use an Agile approach as much as possible to complete this assignment, and to review the work and develop estimated milestones before you begin. **Any good set of milestones will allow for some slippage before the project is due.**
+Groups must utilize a project board in order to organize areas of work and allow for  visibility of each other's progress. In addition, groups will be evaluated on the evidence of meaningful code review, either via comments on a PR, or through discussion of live code review during their evaluation. 
 
 ## Postman
 
@@ -75,6 +77,7 @@ You can click on the "Test Results (7/7)" to see which tests passed.
 
 The error messages aren't that great, but we're here to help you diagnose the problems.
 
+<!-- TO-DO: make required? -->
 **IMPORTANT** some of the endpoints include EDGE CASE testing, which should be saved as "extension" work.
 
 #### Running the full test suite
@@ -89,6 +92,15 @@ As it runs, it will show you which tests are passing or failing.
 ## Technical Requirements
 
 The Technical Requirements for this project can be found [here](./requirements)
+
+## Deployment
+
+Groups are required to deploy this API to the Internet, using either Heroku or Render. To avoid difficult deployment troubleshooting, please deploy early and deploy often! To use Heroku, follow [these instructions](https://devcenter.heroku.com/articles/getting-started-with-rails7) and don't forget to provision a database! If you're using Render, check out our guide [here]()
+
+## Connecting to the FE
+
+<!-- TO-DO! -->
+
 
 
 ## Extensions
