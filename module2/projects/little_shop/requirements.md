@@ -145,15 +145,28 @@ You will need to expose the following RESTful API endpoints for the following:
 
 * Merchants:
   * get all merchants
+  * get all merchants sorted by newest to oldest
+  * get all merchants with returned items (check invoice)
+  * get all merchants with calculated count of items
   * get one merchant
+  * create a merchant
+  * edit a merchant
+  * delete a merchant
   * get all items for a given merchant ID
+
 * Items:
   * get all items
+  * get all items sorted by price (low to high)
   * get one item
   * create an item
   * edit an item
   * delete an item
   * get the merchant data for a given item ID
+
+* Additional RESTful endpoints
+  * get all customer names for a given merchant
+  * get all invoices for a given merchant, filtered by status
+
 
 ## SECTION TWO: Non-RESTful Search Endpoints
 
@@ -171,9 +184,9 @@ Or,
 
 ## Your Project MVP
 
-In total, the MINIMUM requirement will be 11 endpoints:
+In total, the MINIMUM requirement will be 20 endpoints:
 
-* section one has 9 endpoints
+* section one has 18 endpoints
 * section two has 2 endpoints
 
 
@@ -225,6 +238,40 @@ Example JSON response for the Merchant resource:
 }
 ```
 
+For "Fetch all" endpoints that have a condition (i.e. sorted, filtered, etc.), the following parameters should be added to the request to indicate what type of condition should be included in the response:
+
+* `?sorted=age` on the merchants index to sort merchants by created_at timestamp, newest first
+* `?sorted=price` on the items index to sort items by price, cheapest first
+* `?status=returned` on the merchants index to include only merchants that have had items from an invoice returned (hint: look at merchant's invoices)
+* `?count=true` on the merchants index to include the calculated `item_count` attribute (see below)
+
+**Calculated Attribute**
+
+One of the merchant endpoints requires the ability to add a calculated count attribute for every merchant, indicating the number of items the merchant has. This calculated attribute should be added to every merchant, in the attributes section, as see below:
+
+```json
+{
+  "data": [
+    {
+      "id": "1",
+        "type": "merchant",
+        "attributes": {
+          "name": "Mike's Awesome Store",
+          "item_count": 14
+        }
+    },
+    {
+      "id": "2",
+      "type": "merchant",
+      "attributes": {
+        "name": "Store of Fate",
+        "item_count": 24
+      }
+    }
+  ]
+}
+```
+
 <hr/>
 </details>
 
@@ -257,14 +304,15 @@ Note that the `unit_price` is sent as numeric data, and not string data.
 </details>
 
 
-<details><summary><h3>3: Create an Item</h3></summary>
+<details><summary><h3>3: Create an Item/Merchant</h3></summary>
 
 This endpoint should:
 
-* create a record and render a JSON representation of the new Item record.
-* follow this pattern: `POST /api/v1/items`
+* create a record and render a JSON representation of the new Item or Merchant record.
+* follow this pattern: `POST /api/v1/items` or `POST /api/v1/merchants`
 * accept the following JSON body with only the following fields:
 
+Item:
 ```json
 {
   "name": "value1",
@@ -274,6 +322,12 @@ This endpoint should:
 }
 ```
 (Note that the unit price is to be sent as a numeric value, not a string.)
+Merchant
+```json
+{
+  "name": "merchant_name"
+}
+```
 
 * return an error if any attribute is missing
 * should ignore any attributes sent by the user which are not allowed
@@ -295,17 +349,32 @@ Example JSON response for the Item resource:
 }
 ```
 
+Example JSON response for the Merchant resource:
+
+```json
+{
+  "data": {
+    "id": "16",
+    "type": "merchant",
+    "attributes": {
+      "name": "Toys R Us"
+    }
+  }
+}
+```
+
 <hr/>
 </details>
 
-<details><summary><h3>4: Update an Item</h3></summary>
+<details><summary><h3>4: Update an Item or Merchant</h3></summary>
 
 This endpoint should:
 
-* update the corresponding Item (if found) with whichever details are provided by the user
+* update the corresponding resource (if found) with whichever details are provided by the user
 * render a JSON representation of the updated record.
-* follow this pattern: `PATCH /api/v1/items/:id`
-* accept the following JSON body with one or more of the following fields:
+* follow this pattern: `PATCH /api/v1/items/:id` or `PATCH /api/v1/merchants/:id`
+* Merchant Update: accept a JSON body with a new name value, and no other attributes
+* Item Update: accept the following JSON body with one or more of the following fields:
 The body should follow this pattern:
 
 ```json
@@ -334,15 +403,29 @@ Example JSON response for the Item resource:
   }
 }
 ```
+
+Example JSON response for the Merchant resource:
+
+```json
+{
+  "data": {
+    "id": "1",
+    "type": "merchant",
+    "attributes": {
+      "name": "New Toy Store Name"
+    }
+  }
+}
+```
 <hr/>
 </details>
 
 
-<details><summary><h3>5: Destroy an Item</h3></summary>
+<details><summary><h3>5: Destroy an Item or Merchant</h3></summary>
 
 This endpoint should:
 * destroy the corresponding record (if found) and any associated data
-* destroy any invoice if this was the only item on an invoice
+* Item Destroy: destroy any invoice if this was the only item on an invoice
 * NOT return any JSON body at all, and should return a `204`` HTTP status code
 * NOT utilize a Serializer (Rails will handle sending a `204` on its own if you just `.destroy` the object)
 
@@ -361,6 +444,99 @@ These endpoints should show related records for a given resource. The relationsh
 
 </details>
 
+<details><summary><h3>7. Get All Customers for a Merchant</h3></summary>
+
+This endpoint should:
+
+* render a JSON representation of all customers that have an invoice associated with the given merchant
+* always return an array of data, even if one or zero resources are found
+* NOT include dependent data of the resource (e.g., don't include the invoice information in the response, just the customer data)
+* follow this pattern: `GET /api/v1/merchants/:merchant_id/customers`
+
+Example JSON response:
+
+```json
+{
+  "data": [
+    {
+      "id": "7",
+        "type": "customer",
+        "attributes": {
+          "first_name": "Parker",
+          "last_name": "Daugherty"
+        }
+    },
+    {
+      "id": "25",
+        "type": "customer",
+        "attributes": {
+          "first_name": "Kirstin",
+          "last_name": "Wehner"
+        }
+    },
+    {
+      "id": "29",
+        "type": "customer",
+        "attributes": {
+          "first_name": "Albina",
+          "last_name": "Erdman"
+        }
+    }
+  ]
+}
+```
+
+<hr/>
+</details>
+
+
+<details><summary><h3>8. Get All Invoices for Merchant Based on Status</h3></summary>
+
+This endpoint should:
+
+* render a JSON representation of all invoices for a given merchant that have a status matching the desired status query parameter
+* always return an array of data, even if one or zero resources are found
+* Only allow the `status` query parameter to be sent in, and only with the following values: `shipped`, `returned` or `packaged`
+* follow this pattern: `GET /api/v1/merchants/:merchant_id/invoices?status=<status>`
+
+Example JSON response:
+
+```json
+{
+  "data": [
+    {
+      "id": "86",
+        "type": "invoice",
+        "attributes": {
+          "customer_id": "17",
+          "merchant_id": "3",
+          "status": "shipped"
+        }
+    },
+    {
+      "id": "186",
+        "type": "invoice",
+        "attributes": {
+          "customer_id": "39",
+          "merchant_id": "3",
+          "status": "shipped"
+        }
+    },
+    {
+      "id": "318",
+        "type": "invoice",
+        "attributes": {
+          "customer_id": "67",
+          "merchant_id": "3",
+          "status": "shipped"
+        }
+    }
+  ]
+}
+```
+
+<hr/>
+</details>
 <br>
 
 ---
@@ -478,6 +654,8 @@ Example JSON response for `GET /api/v1/merchants/find_all?name=ring`
 ```
 
 </details>
+
+## SECTION THREE: RESTful Endpoints, Minimum Requirements:
 
 ---
 
