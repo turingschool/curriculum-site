@@ -108,4 +108,17 @@ This is much better, because now our `update` and `destroy` actions will handle 
 
 We can keep our code _even more DRY_ by rescuing from a given exception across all controllers. Try it out by moving this `rescue_from` and `not_found_response` method to the ApplicationController!
 
+### Thinking About Patterns
+
+Take a few minutes on your own to answer the following questions:
+
+* What do you like about this approach?
+* What do you not like about this approach?
+* How could you use `rescue` in conjunction with ActiveRecord validations?
+
+### Resources
+
+* [Rebased on API error handling](https://blog.rebased.pl/2016/11/07/api-error-handling.html)
+* [Stackify on rescuing exceptions in ruby](https://stackify.com/rescue-exceptions-ruby/)
+* [Geeks for Geeks on hanling exceptions in ruby](https://www.geeksforgeeks.org/ruby-exception-handling/)
 
