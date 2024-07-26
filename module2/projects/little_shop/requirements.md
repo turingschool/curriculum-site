@@ -75,6 +75,7 @@ Finally, commit your setup steps and push to a new repo. Share that new repo wit
 You will need to expose the data through a multitude of API endpoints. All of your endpoints should follow these technical expectations:
 
 * All endpoints should be fully tested for happy path AND sad path. **The Postman tests are not a substitute for writing your own tests.**
+  * As an extension, you can explore integrating testing gems such as [FactoryBot](https://github.com/thoughtbot/factory_bot/blob/master/GETTING_STARTED.md) and/or [Faker](https://github.com/faker-ruby/faker#default) into your projects.
 * All endpoints will expect to return JSON data only
 * All endpoints should be exposed under an `api` and version (`v1`) namespace (e.g. `/api/v1/items`)
 * API will be compliant to the [JSON API spec](https://jsonapi.org/) and match our requirements below precisely
