@@ -53,7 +53,7 @@ system(cmd)
   * run `Customer.last` to see the object: `#<Customer id: 1000, first_name: "Shawn", last_name: "Langworth", created_at: "2012-03-27 14:58:15", updated_at: "2012-03-27 14:58:15">`
   * If this all checks out you should be good to go.
 
-3. Use a tool like Postico to examine the 6 tables that were created. Pay careful attention to the merchants, items, invoices and customers table. Be mindful of the data types of each field:
+3. Use a tool like Postico to examine the 6 tables that were created. Pay careful attention to the merchants, items, invoices and customers table. It's a good idea to use a database visualizer like [DBDesigner](https://www.dbdesigner.net/) to create a visual schema for your team. Be mindful of the data types of each field:
   * merchants
   * items
   * customers
@@ -145,9 +145,9 @@ You will need to expose the following RESTful API endpoints for the following:
 
 * Merchants:
   * get all merchants
-  * get all merchants sorted by newest to oldest
-  * get all merchants with returned items (check invoice)
-  * get all merchants with calculated count of items
+    * get all merchants sorted by newest to oldest
+    * get all merchants with returned items (check invoice)
+    * get all merchants with calculated count of items
   * get one merchant
   * create a merchant
   * edit a merchant
@@ -156,7 +156,7 @@ You will need to expose the following RESTful API endpoints for the following:
 
 * Items:
   * get all items
-  * get all items sorted by price (low to high)
+  *   get all items sorted by price (low to high)
   * get one item
   * create an item
   * edit an item
@@ -184,13 +184,13 @@ Or,
 
 ## Your Project MVP
 
-In total, the MINIMUM requirement will be 20 endpoints:
+In total, the MINIMUM requirement will be 16 endpoints:
 
-* section one has 18 endpoints
+* section one has 14 endpoints (some with additional features via query parameters)
 * section two has 2 endpoints
 
 
-You may choose to divide these up between your project partners in whatever way seems best; you may also choose to implement the first story/stories _together_ to both have a solid understanding first, before dividing & conquering if you choose. 
+You may choose to divide these up between your project partners in whatever way seems best. One pair could handle the Merchant stories, and one pair could handle the Item and additional endpoints. You may also decide to work on the first story/stories together to have a solid understanding first before dividing and conquering. 
 
 You can reference the [Wireframes](./wireframes) to get a better idea of how these endpoints might be used in a frontend application.
 
@@ -425,7 +425,6 @@ Example JSON response for the Merchant resource:
 
 This endpoint should:
 * destroy the corresponding record (if found) and any associated data
-* Item Destroy: destroy any invoice if this was the only item on an invoice
 * NOT return any JSON body at all, and should return a `204`` HTTP status code
 * NOT utilize a Serializer (Rails will handle sending a `204` on its own if you just `.destroy` the object)
 

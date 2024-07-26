@@ -8,7 +8,7 @@ type: project
 
 # Extensions & Extra Practice
 
-
+<!-- TO-DO AR and SQL extensions -->
 ## External API Consumption
 
 <br>
