@@ -15,6 +15,18 @@ There are two ways we'd like you to demonstrate mastery. Both are essential for 
 * Accurate implementation/problem-solving
 * Eloquent articulation of your thought process
 
+🚨 You should expect to need the following methods on your midmod and final assessments:
+- forEach
+- filter
+- reduce
+- map
+- sort
+- includes
+- split 
+- join
+
+Object.keys() **will not** be needed for your midmod or final assessments.
+
 
 ## Set Up
 
@@ -56,9 +68,7 @@ Start coding by referencing the pseudocode you’ve written.
 
 
 ### Extra Practice
-If you finish all of the practice in the repo, the Turing Staff created the following extra practice exercises:
+If you finish all of the practice in the repo, the Turing Staff created the following extra practice exercises that are formatted more similarly to the assessment format:
 - [this extra-practice-se2-assessment-style repo](https://github.com/turingschool-examples/extra-practice-se2-assessment-style)
-- [Replit Exercises #1](https://replit.com/@kaylaewood/iteratorpractice#index.js)
-- [Replit Exercises #2](https://replit.com/@kaylaewood/iteratorpractice2#index.js)
 
 A group of former students created this wild and unruly [bank of practice exercises](https://docs.google.com/spreadsheets/d/1R8imTyYD64FPWJ_mD5QlZI0ybyU1QNkm1ntJqRT7r7k/edit#gid=2076278354) called iron-FE.  Some students find these prompts helpful but they are not managed by Turing instructors in any way. 
