@@ -77,9 +77,6 @@ You can click on the "Test Results (7/7)" to see which tests passed.
 
 The error messages aren't that great, but we're here to help you diagnose the problems.
 
-<!-- TO-DO: make required? -->
-**IMPORTANT** some of the endpoints include EDGE CASE testing, which should be saved as "extension" work.
-
 #### Running the full test suite
 
 In the bottom right corner of the Postman interface, you'll see a "Runner" button. Click that and a new panel will appear. From here, you can drag one of the three "Rails Engine" collections to the right side of the screen.
