@@ -4,8 +4,6 @@ length: 120
 layout: page
 ---
 
-# Building an API
-
 ## Setup
 We will be using a repo called [Set List](https://github.com/turingschool-examples/set-list-api/tree/songs-index-complete) for this lesson. Please clone this repo and checkout the `songs-index-complete` branch.
 
