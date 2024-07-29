@@ -1,5 +1,5 @@
 ---
-title: Intro to Building an API in Rails
+title: Building an API
 length: 120
 layout: page
 ---
