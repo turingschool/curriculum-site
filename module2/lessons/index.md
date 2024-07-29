@@ -45,3 +45,4 @@ title: Module 2 - Lessons
 
 ## Additional Resources
 * [Chrome Dev Tools](./chrome_dev_tools)
+* [JSON for API development](../resources/json_for_api_development.md)
