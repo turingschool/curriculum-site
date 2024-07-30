@@ -5,14 +5,12 @@ length: 1 week
 tags:
 type: project
 ---
-<style>
-summary:hover {
-  background-color: #bbe5fa;
-}
-</style>
+
 
 
 _[Back to Little Shop Home](./index)_
+
+<section class="dropdown">
 # 1. Setup
 
 1. Create a Rails API project called `little_shop` (make sure you do not set up a "traditional" Rails project with a frontend, this is an API-only project). `rails new little_shop -T -d="postgresql" --api`
@@ -67,9 +65,9 @@ system(cmd)
 
 
 Finally, commit your setup steps and push to a new repo. Share that new repo with your project partner(s). Be sure to add them as a collaborator.
+</section>
 
----
-
+<section class="dropdown">
 # 2. API Endpoints, general definitions
 
 You will need to expose the data through a multitude of API endpoints. All of your endpoints should follow these technical expectations:
@@ -198,12 +196,14 @@ You may choose to divide these up between your project partners in whatever way 
 
 You can reference the [Wireframes](./wireframes) to get a better idea of how these endpoints might be used in a frontend application.
 
----
+</section>
 
+<section class="dropdown">
 # 3. API requests/responses, more detail
-# SECTION ONE: RESTful requests
 
-<details><summary><h3>1. Fetch all Items/Merchants</h3></summary>
+# SECTION ONE: RESTful requests
+<section class="dropdown">
+## 1. Fetch all Items/Merchants
 
 These "index" endpoints for items and merchants should:
 
@@ -276,10 +276,10 @@ One of the merchant endpoints requires the ability to add a calculated count att
 }
 ```
 
-<hr/>
-</details>
 
-<details><summary><h3>2. Fetch a single record</h3></summary>
+</section>
+<section class="dropdown">
+## 2. Fetch a single record
 
 This endpoint for Items and Merchants should:
 
@@ -305,10 +305,10 @@ Example JSON response for the Item resource:
 Note that the `unit_price` is sent as numeric data, and not string data.
 
 <hr/>
-</details>
+</section>
 
-
-<details><summary><h3>3: Create an Item/Merchant</h3></summary>
+<section class="dropdown">
+## 3: Create an Item/Merchant
 
 This endpoint should:
 
@@ -368,9 +368,9 @@ Example JSON response for the Merchant resource:
 ```
 
 <hr/>
-</details>
-
-<details><summary><h3>4: Update an Item or Merchant</h3></summary>
+</section>
+<section class="dropdown">
+## 4: Update an Item or Merchant
 
 This endpoint should:
 
@@ -422,10 +422,9 @@ Example JSON response for the Merchant resource:
 }
 ```
 <hr/>
-</details>
-
-
-<details><summary><h3>5: Destroy an Item or Merchant</h3></summary>
+</section>
+<section class="dropdown">
+## 5: Destroy an Item or Merchant
 
 This endpoint should:
 * destroy the corresponding record (if found) and any associated data
@@ -433,10 +432,10 @@ This endpoint should:
 * NOT utilize a Serializer (Rails will handle sending a `204` on its own if you just `.destroy` the object)
 
 <hr/>
-</details>
+</section>
 
-
-<details><summary><h3>6. Relationship Endpoints</h3></summary>
+<section class="dropdown">
+## 6. Relationship Endpoints
 
 These endpoints should show related records for a given resource. The relationship endpoints you should expose are:
 
@@ -445,9 +444,10 @@ These endpoints should show related records for a given resource. The relationsh
 * `GET /api/v1/items/:id/merchant` - return the merchant associated with an item
   * return a 404 if the item is not found
 
-</details>
+</section>
 
-<details><summary><h3>7. Get All Customers for a Merchant</h3></summary>
+<section class="dropdown">
+## 7. Get All Customers for a Merchant
 
 This endpoint should:
 
@@ -488,12 +488,10 @@ Example JSON response:
   ]
 }
 ```
+</section>
 
-<hr/>
-</details>
-
-
-<details><summary><h3>8. Get All Invoices for Merchant Based on Status</h3></summary>
+<section class="dropdown">
+## 8. Get All Invoices for Merchant Based on Status
 
 This endpoint should:
 
@@ -538,11 +536,12 @@ Example JSON response:
 }
 ```
 
-<hr/>
-</details>
-<br>
+</section>
+</section>
 
 ---
+
+<section class="dropdown">
 # SECTION TWO
 ## Non-RESTful Search Endpoints
 
@@ -566,8 +565,8 @@ Once you choose the group you are implementing, you will build the corresponding
 * `GET /api/vi/merchants/find_all`, find all merchants which match a search term
 
 These endpoints will make use of query parameters as described below:
-
-<details><summary><h3>7. "Find One" endpoints</h3></summary>
+<section class="dropdown">
+## 7. "Find One" endpoints
 
 These endpoints should:
 
@@ -620,10 +619,10 @@ Example JSON response for `GET /api/v1/merchants/find?name=ring`
 ```
 
 <hr/>
+</section>
 
-</details>
-
-<details><summary><h3>8. "Find All" endpoints</h3></summary>
+<section class="dropdown">
+## 8. "Find All" endpoints
 
 These endpoints will follow the same rules as the "find" endpoints.
 
@@ -656,4 +655,5 @@ Example JSON response for `GET /api/v1/merchants/find_all?name=ring`
 
 ```
 
-</details>
+</section>
+</section>

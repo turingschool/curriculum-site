@@ -10,9 +10,9 @@ type: project
 
 You are working for a company developing an E-Commerce Application. Your team is working in a service-oriented architecture, meaning the front and back ends of this application are separate and communicate via APIs. 
 
-Your job is to expose the data that powers the site through an API that the front end would consume. You won't be building an actual front end for this project, so you can look at [these Wireframes](./wireframes) to get an idea of how the front end would integrate with your back end.
+Your job is to expose the data that powers the site through an API that the front end would consume. You will be working with an existing front end application that consumes these APIs, and part of your work will also be to make a few adjustments to that front end as well (see "Connecting to the Front End" below). We also have [these Wireframes](./wireframes) available from the company's design team. 
 
-<!-- TO-DO: Add details about connecting to an already existing FE app that will consume these endpoints -->
+<!-- TO-DO: Add details about connecting to an already existing FE app that will consume these endpoints. Consider removing wireframes entirely? -->
 
 ## Learning Goals
 
@@ -37,13 +37,16 @@ Below are skills that are more general/necessary on the job that are practiced b
 * Breaking down a problem into small steps
 * Practice individual research (articles, videos, mentors)
 
+<section class="dropdown">
 ## Project Management
 
 Groups must utilize a project board in order to organize areas of work and allow for  visibility of each other's progress. In addition, groups will be evaluated on the evidence of meaningful code review, either via comments on a PR, or through discussion of live code review during their evaluation. 
+</section>
 
+<section class="dropdown">
 ## Postman
 
-We have adapted this project from previous cohorts and have rewritten a fully functional test suite right within Postman. By importing the JSON files noted below, you can open the Postman "Runner" and execute a large suite of tests.
+By importing the JSON files noted below, you can open the Postman "Runner" and execute a large suite of tests.
 
 **Note: not ALL of the Postman tests will be passing in order to pass the project**. You will need to examine the tests you NEED to run, since we're giving students some choice in how to build the application.
 
@@ -84,18 +87,21 @@ In the bottom right corner of the Postman interface, you'll see a "Runner" butto
 Next, you can select/deselect which tests you'd like to run. Finally, click the "Run Rails Engine" button.
 
 As it runs, it will show you which tests are passing or failing.
-
+</section>
 
 ## Technical Requirements
 
 The Technical Requirements for this project can be found [here](./requirements)
 
+<section class="dropdown">
 ## Deployment
 
 Groups are required to deploy this API to the Internet, using either Heroku or Render. To avoid difficult deployment troubleshooting, please deploy early and deploy often! To use Heroku, follow [these instructions](https://devcenter.heroku.com/articles/getting-started-with-rails7) and don't forget to provision a database! If you're using Render, check out our guide [here](https://curriculum.turing.edu/module2/lessons/deployment_guide)
+</section>
 
+<section class="dropdown">
 ## Connecting to the FE
-
+</section>
 <!-- TO-DO! -->
 
 
