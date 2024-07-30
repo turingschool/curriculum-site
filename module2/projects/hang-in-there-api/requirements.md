@@ -49,7 +49,7 @@ _[Back to Hang In There API Home](./index)_
                   price: 89.00,
                   year: 2018,
                   vintage: true,
-                  img_url:  "https://plus.unsplash.com/premium_photo-1661293818249-fddbddf07a5d", )
+                  img_url:  "https://plus.unsplash.com/premium_photo-1661293818249-fddbddf07a5d")
   ```
 
 6. Finally, commit your setup steps and push to a new repo. Share that new repo with your project partner(s). Be sure to add them as a collaborator.
@@ -128,7 +128,7 @@ Example JSON response:
 This endpoint for Posters should:
 
 * render a JSON representation of the corresponding record, if found
-* follow this pattern: `GET /api/v1/poster/:id`
+* follow this pattern: `GET /api/v1/posters/:id`
 
 Example JSON response:
 
@@ -391,7 +391,7 @@ This endpoint should:
     * e.g., if "Disaster" and "Terrible" exist as poster names, "Disaster" would be listed first, even if "Terrible" was created first
 * return all objects in the database that meet the price threshold specification: 
   * `max_price=99.99` should look for anything with a price less than or equal to $99.99
-  * `min_price=99.99` should look for anything with a price less than or equal to $99.99
+  * `min_price=99.99` should look for anything with a price more than or equal to $99.99
 
 ### Request examples:
 * `GET /api/v1/posters?name=ter`
@@ -485,7 +485,7 @@ Add some validations to your `Poster` model:
   * `price` should be required AND a float
   * `vintage` should be required
 
-Write tests for these validations.
+Write tests for these validations. You can add the [shoulda-matchers](https://github.com/thoughtbot/shoulda-matchers) gem to help with testing if you'd like.
 
 ### Errors
 Right now you are only solving for what happens when everything goes right. We call this the Happy Path. But what about when things go wrong? And what can go wrong here anyways? Think about what your code would do in the following scenarios. Try it out in Postman. Is this what you want to happen?
