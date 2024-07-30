@@ -73,6 +73,29 @@ The following methods trigger validations, and will save the object to the datab
 
 **The bang versions (e.g. save!) raise an exception if the record is invalid. The non-bang versions don't: save and update return false, and create returns the object.**
 
+## Active Record Validations
+
+So how do we tell Rails how to validate our models? We can use [ActiveRecord validations](https://guides.rubyonrails.org/active_record_validations.html) in our model classes to be explicit about what Rails should consider a valid or invalid record. To require an artist's name, we could do the following:
+
+```ruby
+class Artist < ApplicationRecord
+  has_many :songs
+  validates :name, presence: true
+```
+
+### Try It!
+
+Open up your set-list application, any branch that includes a song and artist will work, and add this validation.
+
+Then, open up a Rails console and check out the differences when between AR methods when validations are present and an artist is created with no name:
+
+```
+Artist.create()
+Artist.create!()
+Artist.new()
+Artist.save
+```
+
 ## Boolean Gotcha
 
 Since `false.blank?` is true, if you want to validate the presence of a boolean field, you should use one of the following validations:
