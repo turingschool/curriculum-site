@@ -237,19 +237,6 @@ end
 ```
 
 ### A Second Approach to Error Handling
-<!-- TODO, we use song.create originally in this application. I think we definitely don't want to leave just song.create because it will not fail on the validations.
-
-We could use create! with a begin/rescue because it will throw an exception if the validations fail. But I see in the slides "Typically, we only use create! in tests or seeds files. To keep our application from crashing, we want to handle invalid data more elegantly."
-
-I'm thinking of starting the branch with this code and then adding the error handling below in this lesson:
-
-def create
-    song = Song.new(song_params)
-    song.save
-    render json: song, status: 201
-end
-
-I think this approach with .new is the nicest, but don't want to confuse students with sometimes using create and sometimes using new... Thoughts? -->
 
 Before we implement error handling for our `create` endpoint, let's see what currently happens.
 
@@ -264,38 +251,88 @@ Make a `POST` request to your `Songs` endpoint and use the following request bod
 }
 ```
 
-In your terminal you should see an error that looks similar to the following:
+You should see an API response that starts similarly to the following:
 
-```
-Started POST "/api/v1/songs" for ::1 at 2024-07-23 11:53:52 -0600
-Processing by Api::V1::SongsController#create as */*
-  Parameters: {"title"=>"Example Song", "length"=>12, "song"=>{"title"=>"Example Song", "length"=>12}}
-  TRANSACTION (0.1ms)  BEGIN
-  ↳ app/controllers/api/v1/songs_controller.rb:23:in `create'
-  TRANSACTION (0.1ms)  ROLLBACK
-  ↳ app/controllers/api/v1/songs_controller.rb:23:in `create'
-Completed 201 Created in 17ms (Views: 0.2ms | ActiveRecord: 35.8ms | Allocations: 4758)
-```
-
-The Transaction was rolled back and the song wasn't added to the database! 
-
-And you should see an API response similar to the following:
 ```json
 {
-    "id": null,
-    "title": "Example Song",
-    "length": 12,
-    "play_count": null,
-    "created_at": null,
-    "updated_at": null,
-    "artist_id": null
+    "status": 422,
+    "error": "Unprocessable Content",
+    "exception": "#<ActiveRecord::RecordInvalid: Validation failed: Artist must exist>",
+    "traces": {
+        "Application Trace": [
+            {
+                "exception_object_id": 19040,
+                "id": 12,
+                "trace": "app/controllers/api/v1/songs_controller.rb:11:in `create'"
+            }
+        ],
+        "Framework Trace": [
+            {
+                "exception_object_id": 19040,
+                "id": 0,
+                "trace": "activerecord (7.1.3.4) lib/active_record/validations.rb:84:in `raise_validation_error'"
+            },
+            {
+                "exception_object_id": 19040,
+                "id": 1,
+                "trace": "activerecord (7.1.3.4) lib/active_record/validations.rb:55:in `save!'"
+            },
+            {
+                "exception_object_id": 19040,
+                "id": 2,
+                "trace": "activerecord (7.1.3.4) lib/active_record/transactions.rb:313:in `block in save!'"
+            },
+            {
+                "exception_object_id": 19040,
+                "id": 3,
+                "trace": "activerecord (7.1.3.4) lib/active_record/transactions.rb:365:in `block in with_transaction_returning_status'"
+            },
+            ...
+        ]
+    }
 }
 ```
-As an API user this is very confusing. Was this song added to the database? If not, how does the user know what the problem is?
+As an API user this is a very messy response. It's way longer than it needs to be and could be much cleaner.
 
-Replace your current `create` endpoint with the following code. Send the same API request again and notice how much better the user experience is!
+There are two approaches we can take to cleaning this up. The first is to make use of the begin/rescue syntax we use for the `show` endpoint. 
 
-What is different between this approach and the approach for the `show` endpoint?
+#### Begin/Rescue Error Handling
+
+Replace your `create` endpoint with the following, and make another POST request.
+
+```ruby
+def create
+  begin
+    render json: song = Song.create!(song_params), status: 201
+  rescue ActiveRecord::RecordInvalid => exception
+    render json: {
+      errors: [
+        {
+          status: "422",
+          title: exception.message
+        }
+      ]
+    }, status: :unprocessable_entity
+  end
+end
+```
+
+You're API response should now look something like this. Much nicer!
+
+```json
+{
+    "errors": [
+        {
+            "status": "422",
+            "title": "Validation failed: Artist must exist"
+        }
+    ]
+}
+```
+
+#### If/Else Error Handling
+
+Now, replace your current `create` endpoint with the following code. Send the same API request again and notice that again you have a much more user friendly response!
 
 ```ruby
 def create
@@ -315,9 +352,9 @@ def create
 end
 ```
 
-Here we are able to make use of an if/else statement because `song.save` returns us a boolean to let us know if that method was successful. We can see this from [the save docs](https://www.rubydoc.info/docs/rails/3.2.8/ActiveRecord%2FPersistence:save). The `find` method we used earlier behaves differently and just throws an exception that we need to use `rescue` to recover from. We can see this from [the find docs](https://www.rubydoc.info/docs/rails/3.2.8/ActiveRecord%2FFinderMethods:find)
+What is different between this approach and the approach for the `show` endpoint?
 
-We also make use of the `422` error code for an unprocessable entity.
+Here we have switched to using `new` and `save` to create a new entity. And we are able to make use of an if/else statement because `song.save` returns us a boolean to let us know if that method was successful. We can see this from [the save docs](https://www.rubydoc.info/docs/rails/3.2.8/ActiveRecord%2FPersistence:save). The `find` method we used earlier behaves differently and just throws an exception that we need to use `rescue` to recover from. We can see this from [the find docs](https://www.rubydoc.info/docs/rails/3.2.8/ActiveRecord%2FFinderMethods:find)
 
 ### Error Handling and Validations
 
