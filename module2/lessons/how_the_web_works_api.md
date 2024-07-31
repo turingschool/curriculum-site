@@ -164,9 +164,9 @@ For example, when you see a weather widget on a website, that frontend is reques
 
 ### Key Concepts of Web APIs
 
-1. Endpoints: Specific URLs that represent different resources or actions, typically used to retrieve data
-2. Request Methods: HTTP verbs that indicate the desired action
-3. Request/Response Format: Often JSON for modern web APIs
+1. **Endpoints**: Specific URLs that represent different resources or actions, typically used to retrieve data
+2. **Request Methods**: HTTP verbs that indicate the desired action
+3. **Request/Response Format**: Often JSON for modern web APIs
 
 ## Introduction to JSON
 
@@ -202,13 +202,13 @@ When thinking about the role that APIs play in our web applications, they are an
 
 Endpoint: `https://pets-api.turingschool-examples.com/api/v1`
 
+Observe the responses, including status codes, headers, and body content.
+
 - GET `/pets`
 - GET `/pets/:id`
 - POST `/pets` (with a JSON body)
 - PUT `/pets/:id` (with a JSON body)
 - DELETE `/pets/:id`
-
-Observe the responses, including status codes, headers, and body content.
 
 ## Checks for Understanding
 
