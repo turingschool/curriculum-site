@@ -55,3 +55,4 @@ title: Module 2 - Lessons
 - [Chrome Dev Tools](./chrome_dev_tools)
 - [JSON for API development](../resources/json_for_api_development)
 - [How the Web Works I: HTTP Request/Response Cycle](./how_the_web_works_http)
+- [How the Web Works II: APIs](./how_the_web_works_api)
