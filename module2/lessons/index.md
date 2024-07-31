@@ -14,8 +14,11 @@ title: Module 2 - Lessons
 
 ## Rails Application and Development
 
-- [Routing: REST](./restful_routes_and_crud)
-- [Advanced Routing](./advanced_routing)
+* [Routing: REST](./restful_routes_and_crud.md)
+* [Advanced Routing](./advanced_routing)
+* [Data Validations](./data_validations)
+* [Error Handling](./error_handling)
+
 
 ## Databases
 
