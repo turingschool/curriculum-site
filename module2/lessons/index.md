@@ -8,6 +8,7 @@ title: Module 2 - Lessons
 * [One to Many Relationships in the Database](./one_to_many_relationships_part1)
 * [One to Many Relationships in Rails](./one_to_many_relationships_part2)
 * [Introduction to MVC](./intro_to_mvc)
+* [Serializers](./serializers)
 
 ## Rails Application and Development
 * [Advanced Routing](./advanced_routing)
@@ -42,4 +43,3 @@ title: Module 2 - Lessons
 
 ## Additional Resources
 * [Chrome Dev Tools](./chrome_dev_tools)
-
