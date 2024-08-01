@@ -29,6 +29,30 @@ With how we've used `render json:` up til now, all data related with the resou
 
 Let's imagine that you don't just want the raw guts of your model converted to JSON and sent out to the user -- maybe you want to customize what you send back.
 
+## Reviewing JSON
+
+What do you already know about JSON?
+
+JSON stands for *JavaScript Object Notation*. It's a way to organize and store data that is easy for both people and computers to understand. JSON is commonly used when sending data from a server to a web page. It's the format we use for our API responses.
+
+Here is an example of some JSON representing a user profile:
+
+```json
+{
+  "name": "Jane Doe",
+  "age": 28,
+  "email": "jane.doe@example.com",
+  "isMember": true,
+  "favorites": {
+    "color": "blue",
+    "food": "pizza"
+  },
+  "hobbies": ["reading", "swimming", "coding"]
+}
+```
+
+In what ways does this feel similar to nested collections?
+
 ## Specifications for JSON Response
 
 Let's use the [json:api](https://jsonapi.org/) specification for our JSON responses. Take a minute to familiarize yourself with the documentation.
@@ -72,7 +96,7 @@ So we have our responses from our server, but it isn’t JSON API 1.0 And it has
 
 This is some practice time for you. 
 
-1. Create a serializer for `Song` and build out a hash that will look like the following *WITHOUT THE USE OF A GEM.* (You only need to do this for the show)
+1. Create a serializer for `Song` and build out a hash that will look like the following *WITHOUT THE USE OF A GEM.* (You only need to do this for the show endpoint)
 
 ```ruby
 {
@@ -139,77 +163,44 @@ end
 
 We can see that instead of just letting our ActiveRecord be rendered in JSON, we are going to take our collections, and send them to the serializer, and have the result of THAT be converted to JSON.
 
-This Gem can also be used to easily set up relationships between entities. You will use this functionality later in the mod!
+We can also make use of methods in our `Song` model and then set it as an attribute in our serializer.
 
-<!-- 
-This syntax is a bit different from what we are used to. We use `attribute` singular, and then as a symbol we pick the name of what we want our attribute to be. We use a do end block similar to an enumerable with a block parameter. Now the block parameter, `object` is a lot like self. We get to use it for each single thing of a collection we pass to the serializer. We are essentially saying for each thing you serialize, grab the books and count them too. In this manner we can add a custom generated value for each book.
+Let's return the average plays per day for each song.
 
-We can also have a custom static attribute like so:
+*app/models/song.rb*
+
+Add the following method into your song class.
+
+```ruby
+def average_plays_per_day
+  if created_at.nil? || play_count.nil? || play_count == 0
+    return 0
+  end
+
+  days_since_creation = ((Time.now - created_at) / 1.day).ceil
+  
+  play_count / days_since_creation
+end
+```
+
+Then in your serializer you can make use of that method by adding that attribute
 
 *app/serializers/store_serializer.rb*
 
 ```ruby
 class StoreSerializer
   include JSONAPI::Serializer
-  attributes :name
-
-  has_many :books
-
-  attribute :num_books do |object|
-    object.books.count
-  end
-
-  attribute :active do
-    true
-  end
+  attributes :id, :title, :length, :play_count, :average_plays_per_day
 end
 ```
-
-Alternatively we could create a num_books method in our `Store` model and then set it as an attribute in our serializer:
-
-*app/models/store.rb*
-
-```ruby
-class Store < ApplicationRecord
-  has_many :store_books 
-  has_many :books, through: :store_books
-  
-  def num_books
-    self.books.count
-  end 
-end
-```
-
-*app/serializers/store_serializer.rb*
-
-```ruby
-class StoreSerializer
-  include JSONAPI::Serializer
-  attributes :name, :num_books
-
-  has_many :books
-  
-  attribute :active do
-    true
-  end
-end
-```
- -->
-
-<!-- Completed version of this lesson to this point is available [here](https://github.com/turingschool-examples/building_internal_apis_7/tree/customizing-json). -->
+ 
+Completed version of this lesson to this point is available [here](https://github.com/turingschool-examples/set-list-api/tree/serializers-complete).
 
 ## Extra Practice
 
-<!-- TODO, not sure what extra practice we want because we just have one model here... -->
+Update your `Song` serializer to return different fields and check out the results in Postman.
 
-<!-- Do what we did to `Stores`, but for `Books` now.
-
-- Some existing fields
-    - `id`, `title`, `author`, `genre`, `summary`, `num_sold`
-- Some custom fields
-    - `num_stores`
-- A relationship
-    - `stores` -->
+Then update your model and serializer to also return `length_in_minutes`.
 
 ## Additional Resources
 
