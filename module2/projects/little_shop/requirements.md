@@ -133,7 +133,7 @@ The `errors` element will always be an array and contain one or more strings of 
 
 #### DRY Exception Handlers in Code
 
-As part of the project, we're requiring students try to refactor exception handling and sad path logic in their controllers as much as possible. Take a look at [this page](./dry_exception_handling) to learn more about some options. 
+As part of the project, we're requiring students to try to refactor exception handling and sad path logic in their controllers as much as possible. Take a look at [this page](./dry_exception_handling) to learn more about some options. 
 
 #### Sad Path vs Edge Case
 
@@ -212,7 +212,7 @@ These "index" endpoints for items and merchants should:
 * NOT include dependent data of the resource (e.g., if you're fetching merchants, do not send any data about merchant's items or invoices)
 * follow this pattern: `GET /api/v1/<resource>`
 
-Example JSON response for the Merchant resource:
+### Example JSON response for the Merchant resource:
 
 ```json
 {
@@ -286,7 +286,7 @@ This endpoint for Items and Merchants should:
 * render a JSON representation of the corresponding record, if found
 * follow this pattern: `GET /api/v1/<resource>/:id`
 
-Example JSON response for the Item resource:
+### Example JSON response for the Item resource:
 
 ```json
 {
@@ -304,6 +304,20 @@ Example JSON response for the Item resource:
 
 Note that the `unit_price` is sent as numeric data, and not string data.
 
+### Example JSON response for the Merchant resource:
+
+```json
+{
+  "data": {
+    "id": "1",
+    "type": "merchant",
+    "attributes": {
+      "name": "Crafty Coders"
+    }
+  }
+}
+```
+
 <hr/>
 </section>
 
@@ -316,7 +330,7 @@ This endpoint should:
 * follow this pattern: `POST /api/v1/items` or `POST /api/v1/merchants`
 * accept the following JSON body with only the following fields:
 
-Item:
+### Item:
 ```json
 {
   "name": "value1",
@@ -326,7 +340,8 @@ Item:
 }
 ```
 (Note that the unit price is to be sent as a numeric value, not a string.)
-Merchant
+
+### Merchant: 
 ```json
 {
   "name": "merchant_name"
@@ -336,7 +351,7 @@ Merchant
 * return an error if any attribute is missing
 * should ignore any attributes sent by the user which are not allowed
 
-Example JSON response for the Item resource:
+### Example JSON response for the Item resource:
 
 ```json
 {
@@ -353,7 +368,7 @@ Example JSON response for the Item resource:
 }
 ```
 
-Example JSON response for the Merchant resource:
+### Example JSON response for the Merchant resource:
 
 ```json
 {
@@ -391,7 +406,7 @@ The body should follow this pattern:
 ```
 (Note that the unit price is to be sent as a numeric value, not a string.)
 
-Example JSON response for the Item resource:
+### Example JSON response for the Item resource:
 
 ```json
 {
@@ -408,7 +423,7 @@ Example JSON response for the Item resource:
 }
 ```
 
-Example JSON response for the Merchant resource:
+### Example JSON response for the Merchant resource:
 
 ```json
 {
@@ -456,7 +471,7 @@ This endpoint should:
 * NOT include dependent data of the resource (e.g., don't include the invoice information in the response, just the customer data)
 * follow this pattern: `GET /api/v1/merchants/:merchant_id/customers`
 
-Example JSON response:
+### Example JSON response:
 
 ```json
 {
@@ -500,7 +515,7 @@ This endpoint should:
 * Only allow the `status` query parameter to be sent in, and only with the following values: `shipped`, `returned` or `packaged`
 * follow this pattern: `GET /api/v1/merchants/:merchant_id/invoices?status=<status>`
 
-Example JSON response:
+### Example JSON response:
 
 ```json
 {
@@ -604,7 +619,7 @@ These endpoints should:
 * `GET /api/v1/items/find?name=ring&min_price=50&max_price=250`
   * cannot send both `name` and `min_price` and `max_price`
 
-Example JSON response for `GET /api/v1/merchants/find?name=ring`
+### Example JSON response for `GET /api/v1/merchants/find?name=ring`
 
 ```json
 {
@@ -630,7 +645,7 @@ The JSON response will always be an array of objects, even if zero matches or on
 
 It should not return a 404 if no matches are found.
 
-Example JSON response for `GET /api/v1/merchants/find_all?name=ring`
+### Example JSON response for `GET /api/v1/merchants/find_all?name=ring`
 
 ```json
 {
