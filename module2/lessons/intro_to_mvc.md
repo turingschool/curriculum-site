@@ -14,18 +14,20 @@ title: Introduction to MVC
 - MVC
 - Model
 - View
+- Serializer
 - Controller
 - DSL (Domain Specific Language)
 
 ## Warmup
 
-- Open the Task Manager app you completed earlier in the inning. If you need a fresh copy of that application for any reason, a complete version can be found [here](https://github.com/turingschool-examples/task-manager-7-complete).
-- In your own words, what are the primary responsibilities of the models, views, and controllers in Task Manager?
+- Open the Task Manager app you completed earlier in the inning. If you need a fresh copy of that application for any reason, a complete version can be found [here](https://github.com/turingschool-examples/task-manager-api).
+
+- In your own words, what are the primary responsibilities of the models, serializers, and controllers in Task Manager?
 
 ## Overview
 
 - **Models** - Interact with the database. Holds other methods related to a particular resource (e.g. a `task`)
-- **Views** - Templates for pages that we will display to our user. Frequently contain placeholders for data, making them dynamic.
+- **Views** - Presents an application's data to the user. In Task Manager, this was the JSON rendered in the controller with the use of Serializers. In other applications this might look like an HTML template.
 - **Controllers** - Coordinate the response to an HTTP request. In Task Manager, we just had one, but it is common to have multiple controllers.
 
 ## Controller
@@ -45,7 +47,7 @@ Look at your `tasks_controller.rb`:
 - Controllers send commands to models to perform database interactions
     - ex: the `index` action retrieves all the tasks
     - ex: the `create` action saves a new task
-- Controllers pass data to views via instance variables
+- Controllers pass data to our serializers or html templates
 
 ## Model
 
@@ -58,16 +60,11 @@ Look at your Task model.
 
 ## View
 
-Look at a view from Task Manager.
+In our first iteration of Task Manager, we allowed Rails to send back all data we had about our `Task` resources in our database with `Task.all`. Recall that we refactored our controllers to use a Serializer instead. Look at a Serializer from Task Manager. Our Serializer allows us to control exactly what data we send to the user from our database, how we want it formatted, and even the ability to add in additional information that may not be stored in our database.
 
-- By default, Rails looks for our views in a `/views` directory.
-- Use ERB (embedded ruby) to describe how data should be used to create HTML
-    - `<%= %>` renders the return value of the enclosed statement. Use this when you need something to be a part of the HTML document sent to the User.
-        - ex: `<p><%= task.description %></p>`**This piece of code will be extremely useful for assigning** `id` **attributes dynamically, which is important for testing. Bookmark this piece of code!**
-        - ex: `<div id="task-<%= task.id %> >"`
-    - `<% %>` does not render the return value. Use this when you don't want the return value to become part of the HTML. Typically, these are used for Ruby statements that control other statements.
-        - ex: `<% tasks.each do |task| %>` ... `<% end %>`
-        - ex: `<% if @tasks %>` ... `<% end %>`
+- Serializers are used to generate custom JSON so we can control exactly what the controller sends back to our user.
+- It's good to know that in some applications, the View might be HTML instead of JSON. 
+- Regardless of the format returned by the controller, the View represents how we present data to our user. 
         
 
 ## Putting it All Together
@@ -79,7 +76,7 @@ Look at a view from Task Manager.
 - Within that controller action, we:
     1. Perform any data manipulation we need using our model
     2. Collect any data we need to use in our view (using a model as a go-between)
-    3. Render a view or redirect
+    3. Render a view (as JSON or HTML) or redirect
 
 Let's draw a diagram to represent this process.
 
@@ -99,30 +96,30 @@ We saw earlier that the Model is responsible for interaction with the database. 
 
 A Model generally does not alter data. For example, it would be appropriate for the Model to calculate the average age of all students, but it should NOT 'round' that data to, say, two decimal places. It can force the result to be a floating point number with `.to_f`, but it should return raw data as much as possible.
 
-### Views -- Presentation Logic
+### Views as Serializers -- Presentation Logic
 
-Views have very little logic in them, generally just if/else statements and perhaps doing some basic iteration over a dataset. *The primary goal of a View is to manipulate raw data given to it by a Controller to present that data* in a way that is useful to our users.
+Serializers have very little logic in them, generally just if/else statements and perhaps doing some basic iteration over a dataset. *The primary goal of the View layer is to manipulate raw data given to it by a Controller to present that data* in a way that is useful to our users.
 
-If a View has access to an instance variable, or a collection of instances in an array that it is iterating over, it's appropriate for the View to call "instance methods" from the Model class if needed. A View should not call *class* methods except in extremely rare cases where a data builder requires it, such as a drop-down select in a form for example.
+Serializers are typically given a resource or collection of resources from our database to iterate over. It's appropriate for the Serializer to call instance methods from the Model class if needed. A Serializer should not call *class* methods except in extremely rare cases where a data builder requires it, such as working with associated database resources (you haven't learned about these yet, so it's okay if you aren't sure what that means).
 
 <section class="call-to-action">
-### MVC and Forms
+### MVC and data
 
-In MVC applications, we can get and manipulate data on an html page in multiple ways. You've collected data from a user with JavaScript eventListeners as part of the Hang In There project, and now we are using erb to get data from our view to our controller, as well as from our controller to our view.
+In MVC applications, we can get and manipulate data in multiple ways. Sometimes we use HTML and forms. You've collected data from a user with JavaScript eventListeners as part of the Hang In There project, and now we are using JSON from HTTP requests to send data to our controller, as well as from our controller to our view layer, which in our case is JSON.
 </section>
 
 ### Controllers -- Business Logic, or Application Logic
 
-Our Controllers are the "traffic cop" between our Models and our Views. Based on the incoming request, each controller method knows precisely which Model(s) it needs to utilize to fetch or write data, and will generally hand that data off to a View for presentation.
+Our Controllers are the "traffic cop" between our Models and our View layer. Based on the incoming request, each controller method knows precisely which Model(s) it needs to utilize to fetch or write data, and will generally hand that data off to a Serializer for presentation.
 
-Controllers should limit their database actions to very simple lookups, or creation of a resource. A controller should not do very much data manipulation, that "data logic" is the role of the Model. Likewise, the controller should pre-fetch as much data as possible so the View does not call Class methods from the Models.
+Controllers should limit their database actions to very simple lookups, or creation of a resource. A controller should not do very much data manipulation, that "data logic" is the role of the Model. Likewise, the controller should pre-fetch as much data as possible so the Serializer or HTML template does not call Class methods from the Models.
 
 ### Experiment
 
-- Add a new route and view so that the user can successfully visit `localhost:3000/easteregg` and see a new view of your choice.
+- Add a new route, controller action, and serializer so that the user can successfully visit `localhost:3000/easteregg` and see a new JSON formatting of your choice.
 - Add a new route so that the user can go to `localhost:3000/showmethetasks` and be redirected to all of the tasks.
 
-NOTE: For task 2, You should not have to create a new view.
+NOTE: For task 2, You should not have to create a new serializer.
 
 **Let’s also quickly talk about why the 2nd path isn’t a good idea.**
 
@@ -131,4 +128,3 @@ NOTE: For task 2, You should not have to create a new view.
 - What does MVC stand for?
 - What are the "logic responsibilities" for each part of the MVC pattern?
 - How is data passed through the MVC pattern?
-- What is the difference between `<%= %>` and `<% %>`?

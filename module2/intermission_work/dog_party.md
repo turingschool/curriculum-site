@@ -3,7 +3,7 @@ title: Dog Party
 ---
 ## Overview
 
-Welcome to the Dog Party project! As a software developer, you’ll often need to build user interfaces (UI) based on[comps](https://en.wikipedia.org/wiki/Comprehensive_layout) provided by a designer. In this project, you’ll create a one-page static site to practice writing well-structured, semantic HTML and clean, precise CSS.
+Welcome to the Dog Party project! As a software developer, you’ll often need to build user interfaces (UI) based on [comps](https://en.wikipedia.org/wiki/Comprehensive_layout) provided by a designer. In this project, you’ll create a one-page static site to practice writing well-structured, semantic HTML and clean, precise CSS.
 
 We’ve provided a design comp and a set of technical specifications. Your challenge is to build the site according to these requirements.
 
@@ -65,15 +65,19 @@ In here you are seeing the basic outline of the HTML you will need to start with
 - The `<link rel="stylesheet" href="style.css">` This line links the HTML document to an external CSS file named "style.css". It allows the HTML to use the styles defined in "style.css" for layout and design.
 - The `<body></body>` element is the container for all the content on the page. 
 Wow that's a lot of code, but it's all very important. 
-let's move on to adding more content to our HTML file. But before we do that, let's talk about how to look at our page in the browser. 
-<section class="note">
-## Viewing Your HTML File in the Browser
+Let's move on to adding more content to our HTML file. But before we do that, let's talk about how to look at our page in the browser. 
+
+<section class="dropdown">
+### Viewing Your HTML File in the Browser
 
 To see how your HTML file looks in a web browser:
 
 1. **Save Your File**: Ensure that your `index.html` file is saved in your `dog_party` directory.
 
 2. **Open the File**:
+    - **Using the Terminal**:
+        - `cd` into the repo then run `open index.html` in your terminal.  Depending on the structure of your repo, the path to get to the index.html file might differ slightly in different repos.  For example, `open /src/index.html`
+        - We recommend getting familiar with this approach but you can see other options below.
     - **Using File Explorer/Finder**:
         - Navigate to the directory where your `index.html` file is located.
         - Double-click on the `index.html` file. This should open the file in your default web browser.
@@ -81,9 +85,9 @@ To see how your HTML file looks in a web browser:
         - Open your preferred web browser.
         - Press `Cmd + O` (Mac) to open a file.
         - Navigate to your `index.html` file and select it to open.
+    - **Using a Code Editor**:
+        - If you are using a code editor like Visual Studio Code, you can right-click on the `index.html` file and select "Open with Live Server" (if you have the Live Server extension installed). This will open your file in the browser and automatically refresh it whenever you make changes.
 
-3. **Using a Code Editor**:
-    - If you are using a code editor like Visual Studio Code, you can right-click on the `index.html` file and select "Open with Live Server" (if you have the Live Server extension installed). This will open your file in the browser and automatically refresh it whenever you make changes.
 
 By following these steps, you can view your HTML file in the browser and see how your code renders on the web. This is crucial for testing and ensuring that your webpage looks and behaves as expected.
 </section>
@@ -178,7 +182,7 @@ To do this we are going to need to use a `section` tag.
 After making one dog div, it looks like we need to add the rest of our dogs, which they all kind of look similar, only the image and the description is different. I'll let you add those dog-info divs to your work. 
 <section class="dropdown">
 
-#### Here is how your body section of your HTML should look like:
+### Here is how your body section of your HTML should look like:
 
 ```html
 <body>
@@ -248,7 +252,7 @@ header {
     align-items: center;
 }
 ```
-I've added few other properties to the header, like padding, display, justify-content, and align-items. We'll discuss what each property means in M2. But for now if you want to know more you can look into the documentation here. [Flex](https://developer.mozilla.org/en-US/docs/Web/CSS/flex) box and it's usage. Flex box is really helpful in creating layouts, and centering items. I would suggest you all to play around with flex box, and the padding size, change the padding to 40px, and see what changes, take notes and be ready to share this with you cohort. 
+We've added few other properties to the header, like padding, display, justify-content, and align-items. We'll discuss what each property means in M2. But for now if you want to know more you can look into the documentation here. [Flex](https://developer.mozilla.org/en-US/docs/Web/CSS/flex) box and it's usage. Flex box is really helpful in creating layouts, and centering items. I would suggest you all to play around with flex box, and the padding size, change the padding to 40px, and see what changes, take notes and be ready to share this with you cohort. 
 Let's add styling for our logo and nav-list. Since the image in our header has a class of logo, we can add a selector for that, by adding a .logo to our css. 
 ```css
 .logo {
@@ -299,7 +303,7 @@ Let's add some of the styling for our hero section:
 
 .hero button {
     padding: 10px 20px;
-    background-color: #048eaa;
+    background-color: #190390;
     color: #ffffff;
     border: none;
     cursor: pointer;
@@ -352,5 +356,68 @@ Cool!!! Let's use the class selector to add some styling to our css.
 ### Step 5 : Styling the Footer 
 Your task is to add the footer section styling. How would you add the 3 social media icons in the footer section. You can find these icons in the asset folder. How would you add styling for them in your CSS file? 
 
-## Further Reading & Resources : 
-- [FlexBox Froggy ](https://flexboxfroggy.com/). Have fun 😉
+## Phase Three : 
+
+We want users of our application to actually be able to type a name into the name field and when they click the "Name This Dog" button, we want the site's h1 header to now display the dog's name instead of the text "Some Dogs".
+
+#### Step 1: Create main.js file. 
+First, create a new file called `main.js` in your project directory. This is where we are going to add our Javascript code. 
+Next, we need to link this file to our `index.html` file. Add a `<script>` tag to link the main.js file at the end of the body tag.
+```html
+<!-- ... existing code ... -->
+<script src="main.js"></script>
+</body>
+</html>
+```
+#### Step 2: Add Javascript for DOM manipulation.
+Now, let's add the Javascript code to handle the form submission and update the dog name in the hero section. 
+Here is the steps that we need to take when we want to update the dog name in the hero section. 
+- First, select the form element from the DOM. 
+- Next, add an event listener to that form. 
+- After that, get the value of the input field.
+- Lastly, update the text of the h1 tag to be the value the user entered in the input field.  
+
+Ok first thing first, in our main.js file, let's select the elements we'll need by using [document.querySelector](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector).
+```js
+var form = document.querySelector('.hero form'); // document here is referring to the DOM (Document Object Model), .hero is the class name of the form, and form is the tag name of the form.  This tell JS to go find a form element that inside an element with the class name .hero
+var input = document.querySelector('#dog-name'); // #dog-name is referring to the ID of the input field. 
+var headerText = document.querySelector('.hero h1 strong');// .hero is the class name of the h1 tag, and strong is the tag name of the strong tag. So here we are referring to the strong tag inside the h1 tag which is inside the hero section.
+```
+Take a moment to console.log the form, input, and headerText variables.  Open your Chrome DevTools console tab (command+option+i) to see the output.
+
+#### Step 3: Add event listener to the form. 
+Let's add our event listener to the form. We can use the (addEventListener)[https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener] method.  
+This method accepts 2 parameters:  
+- the type of the event we're "listening" for, in this case "submit"
+- a callback function outlining the code we want to run when that "submit" event happens to the form. 
+
+```js
+form.addEventListener('submit', function(event){
+    event.preventDefault();// Prevents the default behavior of the form which is refresh the page on form submission.
+    var dogName = input.value;
+    headerText.innerText = dogName
+})
+```
+Wow! What just happened? Let's break it down together.  
+- By adding an eventListener to our form, we saying "hey pay attention to this form and if a "submit" event happens to it, run all this code"
+- The default behavior of the form is to reload the page on form submission, but we don't actually want that to happen.  So we use the [event.preventDefault](https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault) method to prevent the page from reloading.  
+- The variable `dogName` is capturing and storing whatever the user has typed into the input field by accessing the input's value property.  
+- On the next line, we are using the [`.innerText`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/innerText) property of the `headerText` element and reassiging it's value to be the value the user entered into the input field.
+
+We could refactor this to clean it up a bit. Rather than putting all the code we want executed directly inside the eventListener, we'll want to pull that code out into its own well-named function, then simply reference that function in the event listener.  This refactoring will keep our logic neatly placed in a function and let our eventListener be simple and logic-free.
+
+Write a function called displayDogName and move the logic from the eventListener into that function.  Then, for the second argument of your eventListener, replace the anonymous function and all its code with that named function.  
+
+```js
+form.addEventListener('submit', displayDogName)
+
+function displayDogName (event) {
+  event.preventDefault();// Prevents the default behavior of the form which is refresh the page on form submission.
+  var dogName = input.value;
+  headerText.innerText = dogName
+}
+```
+
+Using JavaScript, we can select any element on the DOM and manipulated as we wish.  Pretty cool, right??
+
+
