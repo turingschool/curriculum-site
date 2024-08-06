@@ -72,6 +72,7 @@ If you instead get a version of Rails besides `7.1.2`, follow [these instruction
 
 - Follow along with this [Task Manager Tutorial*](https://github.com/turingschool-examples/se_task_manager_rails) to create a Rails application with C.R.U.D. functionality.
 - Answer the Check for Understanding questions at the bottom of the README when you have finished working through the tutorial.
+- You will submit your work using [this form](https://forms.gle/iGjXVB72pwxdzTPU6).
 
 <div class="note">
 #### Pro Tip From Alumni:
