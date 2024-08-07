@@ -1,6 +1,6 @@
 ---
 layout: page
-title: SE M1 Portfolio Requirements
+title: SE Portfolio Requirements
 ---
 
 ## Purpose
