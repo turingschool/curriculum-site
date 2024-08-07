@@ -194,8 +194,14 @@ Another common way to call an API is by using an application such as Postman. Po
 
 When thinking about the role that APIs play in our web applications, they are another data source for us to call on to retrieve some data, similar to accessing data from your own database. The biggest difference being, you don't have to manage the API database yourself. How cool is that!
 
-<section class="call-to-action">
+<section class="dropdown">
 ### What are some potential drawbacks of using an API?
+
+- **API Dependency:** Your application relies on a third-party service, which can be risky if the API changes or becomes unavailable.
+- **Rate Limiting:** Many APIs restrict the number of requests you can make in a given time period.
+- **Cost:** Some APIs charge for usage, which can become expensive as your application scales.
+- **Versioning Issues:** API providers may update their services, potentially breaking your integration if you don't keep up.
+- **Limited Conrol:** You're bound by the API's functionality and can't easily modify it to suit your specific needs.
 </section>
 
 ## Additional Postman Practice

@@ -12,14 +12,18 @@ title: Module 2 - Lessons
 - [Introduction to Building an API](./intro_to_building_a_rails_api)
 - [Building an API in Rails](./building_an_api)
 
+## Web Applications
+
+- [How the Web Works I: HTTP Request/Response Cycle](./how_the_web_works_http)
+- [How the Web Works II: APIs](./how_the_web_works_api)
+
 ## Rails Application and Development
 
-* [Routing: REST](./restful_routes_and_crud.md)
-* [Advanced Routing](./advanced_routing)
-* [Model Testing](./model_testing)
-* [Data Validations](./data_validations)
-* [Error Handling](./error_handling)
-
+- [Routing: REST](./restful_routes_and_crud.md)
+- [Advanced Routing](./advanced_routing)
+- [Model Testing](./model_testing)
+- [Data Validations](./data_validations)
+- [Error Handling](./error_handling)
 
 ## Databases
 
@@ -42,9 +46,9 @@ title: Module 2 - Lessons
 - [JS: Event Listeners](./js_event_listeners)
 
 ## JS Array Prototype Methods
+
 - [JS: Array Prototype Methods](./js_array_prototype_methods)
 - [JS: Approaching Problems Many Ways ](./js_approaching_problems_many_ways.md)
-
 
 ## Active Record
 
@@ -62,5 +66,3 @@ title: Module 2 - Lessons
 
 - [Chrome Dev Tools](./chrome_dev_tools)
 - [JSON for API development](../resources/json_for_api_development)
-- [How the Web Works I: HTTP Request/Response Cycle](./how_the_web_works_http)
-- [How the Web Works II: APIs](./how_the_web_works_api)
