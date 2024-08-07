@@ -386,6 +386,13 @@ end
 
 Use TDD to create an instance method on our `Artist` model that returns the average of a single artist's songs. As you build out this method, remember to use `pry` and `self` to help debug and guide your implementations!
 
+
+## Practice
+
+For additional exercises, check out the `associations-practice-setup` branch of [Set List](https://github.com/turingschool-examples/set-list-api/blob/associations-practice-setup/README.md) and refer to the README for instructions on how to move through the practice. 
+
+Solutions are on the `associations-practice-solutions` branch. 
+
 ## Wrap Up
 
 - What are two different types of table relationships that you might need to implement? In what scenario would you use each?
