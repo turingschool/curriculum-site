@@ -15,6 +15,7 @@ In Module 1, students will learn programming fundamentals by building software i
 
 ## Other Resources
 - [Mod 1 Exercises](https://github.com/turingschool-examples/se-mod1-exercises)
+- [Slack 101](./lessons/slack_101.md)
 
 ## Requirements
 - [Portfolio Guidelines](./requirements/portfolio_guidelines)
