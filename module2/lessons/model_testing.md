@@ -109,7 +109,7 @@ Here are some common tests you'll find in the model:
 * Testing validations
 * Testing instance and class methods
 
-In our [ActiveRecord Associations](https://curriculum.turing.edu/module2/lessons/one_to_many_relationships_part2) class we discuss testing relationships, and we'll get to testing validations in [Data Validations](https://curriculum.turing.edu/module2/lessons/data_validations), so the focus of this lesson plan will be testing instance methods. The good news: we've seen this type of test before in Module 1!
+In our [ActiveRecord Associations](./one_to_many_relationships_part2) class we discuss testing relationships, and we'll get to testing validations in [Data Validations](./data_validations), so the focus of this lesson plan will be testing instance methods. The good news: we've seen this type of test before in Module 1!
 
 ### Testing Instance Methods in the Model
 
