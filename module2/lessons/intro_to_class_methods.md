@@ -3,7 +3,7 @@ title: Intro to Class Methods (in Rails)
 length: 45
 layout: page
 ---
-
+<!-- Archived Class? -->
 ## Learning Goals
 
 - Review Class Methods in Ruby

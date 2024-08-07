@@ -16,6 +16,7 @@ title: Module 2 - Lessons
 
 * [Routing: REST](./restful_routes_and_crud.md)
 * [Advanced Routing](./advanced_routing)
+* [Model Testing](./model_testing)
 * [Data Validations](./data_validations)
 * [Error Handling](./error_handling)
 
