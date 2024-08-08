@@ -43,12 +43,12 @@ Time-box recommendations are in each section's instructions, and also included h
 1. Styling (4 hrs total)
    - [Intro to HTML](./html) (2h)
    - [Intro to CSS](./css) (2h)
-2. Complete the [Dog Party](./dog_party) mini-project (Until complete)
+2. Complete the [Dog Party](./dog_party) mini-project (Until complete - 8h or so)
 
 **Introductory BE Learning**
 
 1. [Intro to SQL](./sql) (2 hrs total)
-2. Complete this [Intro to APIs in Ruby on Rails](./intro_to_rails) (30min - 1h)
+2. Complete this [Intro to APIs in Ruby on Rails](./intro_to_rails) (15 min)
 
 ### If you are Repeating
 
