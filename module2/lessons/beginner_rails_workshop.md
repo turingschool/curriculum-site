@@ -63,15 +63,15 @@ $ rails -v
 
 Be careful not to install the latest version of Rails by only doing `gem install rails` -- there are always newer versions and our curruiculum is based on these specific versions, so you will need to uninstall and reinstall correctly. 
 
-If you instead get a version of Rails besides `7.1.2`, follow [these instructions](https://github.com/turingschool-examples/task_manager_rails/blob/master/rails_uninstall.md).
+If you instead get a version of Rails besides `7.1.2`, follow [these instructions*](https://github.com/turingschool-examples/se_task_manager_rails/blob/161-update-task-manager-to-start-with-database-setup/rails_uninstall.md).
 
 <br>
 
 ## Action Item: Task Manager Tutorial
 
-
-- Follow along with this [Task Manager Tutorial](https://github.com/turingschool-examples/se_task_manager_rails/blob/main/README.md) to create a Rails application with C.R.U.D. functionality.
+- Follow along with this [Task Manager Tutorial*](https://github.com/turingschool-examples/se_task_manager_rails) to create a Rails application with C.R.U.D. functionality.
 - Answer the Check for Understanding questions at the bottom of the README when you have finished working through the tutorial.
+- You will submit your work using [this form](https://forms.gle/iGjXVB72pwxdzTPU6).
 
 <div class="note">
 #### Pro Tip From Alumni:
