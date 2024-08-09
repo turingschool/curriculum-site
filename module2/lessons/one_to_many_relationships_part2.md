@@ -26,10 +26,10 @@ tags: migrations, databases, relationships, rails, activerecord
 
 ## Setup
 
-This lesson plan starts at the `associations-practice` branch of [this SetList repo](https://github.com/turingschool-examples/set-list-7/). In order to set up the app for this lesson:
+This lesson plan references our Set List Repo. For this first walkthrough, you can start at the `songs-index-complete` branch of [the repo](https://github.com/turingschool-examples/set-list-api/tree/songs-index-complete). In order to set up the app for this lesson:
 
 - Clone the repo
-- Checkout the `associations-practice` branch
+- Checkout the `songs-index-complete` branch
 - Run `bundle install`
 - Run `rails db:{drop,create,migrate,seed}`
 
@@ -455,4 +455,4 @@ Use TDD to create an instance method on our `Artist` model that returns the av
     - Add a reference from one table to another
     
 
-Completed code from this lesson plan can be found on this branch [here](https://github.com/turingschool-examples/set-list-7/tree/associations-practice-solutions\).
+Completed code from this walkthrough can be found on this branch [here](https://github.com/turingschool-examples/set-list-api/tree/associations-practice-setup). This branch also has some additional exercises designed for exploring ActiveRecord associations. Solutions for these exercises can be found [here.](https://github.com/turingschool-examples/set-list-api/tree/associations-practice-solutions)

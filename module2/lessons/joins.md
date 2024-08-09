@@ -11,13 +11,13 @@ title: Joins in SQL and Active Record
 
 ## Homework & Warm Up
 
-Before this class, try working through the directions in the README file of the [joins-homework](https://github.com/turingschool-examples/set-list-7/tree/joins-homework) branch in  Set List Tutorial. 
+Before this class, try working through the directions in the README file of the [joins-homework](https://github.com/turingschool-examples/set-list-api/tree/joins-homework) branch in  Set List Tutorial. 
 
-The 2nd part of the `joins-homework` exercises is to try some Join queries on your own, in the `spec/models/playlist_spec.rb` file. Reference this lesson for help writing AR Joins queries. 
+The 2nd part of the `joins-homework` exercises is to try some Join queries on your own, in the `spec/models/artist_spec.rb` file. Reference this lesson for help writing AR or SQL Joins queries. 
 
 ## Set Up
 
-For this lesson's code-along, you can start work from [this branch](https://github.com/turingschool-examples/set-list-7/tree/generic-start) of the Set List Tutorial.
+For this lesson's code-along, you can start work from the `joins-homework` branch of the Set List Tutorial.
 ```bash
 bundle install
 rails db:{drop,create,migrate,seed}
@@ -240,3 +240,6 @@ irb(main):001:0> Artist.joins(:songs).where('songs.length > ?', 400)
 
 ## Further Reading
 For an exploration of how to join multiple tables together, and advanced joining techniques, review the lesson [here](./joins_2).
+
+## Homework Solutions
+Check out [this branch](https://github.com/turingschool-examples/set-list-api/tree/joins-homework-solutions) to see solutions to the homework exercises.

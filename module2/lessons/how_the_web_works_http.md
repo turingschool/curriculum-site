@@ -1,0 +1,139 @@
+---
+title: "How the Web Works I: HTTP request/response cycle"
+length: 60
+tags: http, servers
+layout: page
+---
+
+## Introduction
+
+Understanding how the web works, particularly the HTTP request/response cycle, is fundamental for any web developer. This knowledge forms the backbone of web communication across the Internet and the foundation of all web applications. In this lesson, through our exploration into the request/response cycle, we'll explore the key concepts and components that make the web function, as well as the role and responsibilities each component plays within this cycle.
+
+### Learning Goals
+
+- Define the vocabulary of the web
+- Describe the request/response cycle at a high level
+- Describe the parts of a URL
+- Explain verb/path combinations
+- Describe the 5 common HTTP verbs
+
+### Asynchronous Lesson Instructions
+
+1. Read this lesson plan, and jot down any questions or uncertainties
+1. Watch [this video](https://www.youtube.com/watch?v=eesqK59rhGA) about the HTTP request/response cycle
+1. Fill out this [Exit Ticket](https://forms.gle/qd8txSmCyCzWdskCA)
+
+### Vocabulary
+
+- Client
+- Server
+- URL
+- URI
+- User
+- Request
+- Response
+- HTTP
+- Verb
+- Path
+
+## What is the Internet?
+
+The Internet, which for most people, is the web ... how does that work?
+
+The basis of all web interactions is someone asking for information, and receiving information. In order to ask for and receive any information, we need two players - the asker and the producer. In basic web interactions, the 'asker' is usually called a **client**, and the 'producer' is usually called a **server**. Clients send **Requests** to Servers asking for some kind of information. Upon receiving a Request, Servers send **Responses** back to the Client.
+
+The **Internet** is the network between devices that allows Clients and Servers to exchange this information. **HTTP** is a set of rules for how this exchange of information happens. Clients and Servers adhere to these rules to ensure that they understand each other's Requests and Responses.
+
+In the web development world, a client is a web browser (i.e. Chrome, Firefox, etc.), not an individual person. The person using the browser is referred to as a **User**.
+
+## Penpal Analogy
+
+Okay, that was a lot of information. Let's break all of this down with a metaphor:
+
+Imagine you're writing to a penpal. The process would look something like this:
+
+1. Write a letter
+1. Specify your penpal's address
+1. Drop the letter in your mailbox
+1. The letter goes through the postal system and arrives at your penpal's mailbox
+
+Your penpal then goes through a very similar set of steps:
+
+1. Read your letter and write a response
+1. Specify your address
+1. Drop their letter in their mailbox
+1. The letter goes through the postal system and arrives at your mailbox
+
+In this analogy:
+
+- You are the **Client**
+- Your penpal is the **Server**
+- Your letter is the **Request**
+- Your penpal's letter is the **Response**
+- The postal system, the thing responsible for ensuring your letters are delivered, is **The Internet**
+
+**HTTP** is the language you write in so that your penpal can understand you. You may write in English because you know you both understand English. If you wrote a letter in Spanish and your penpal only spoke English, they might write you a letter back saying "Please write to me in English".
+
+Metaphor aside, let's run through the protocol as executed by computers:
+
+1. You open your browser, the Client, and type in a web address like `http://turing.edu` and hit enter.
+1. The browser takes this address and builds an **HTTP Request**. It addresses it to the Server located at `http://turing.edu`.
+1. The Request is handed off to your Internet Service Provider (ISP) (like CenturyLink or Comcast) and they send it through the Internet, mostly a series of wires and fiber optic cables, to the Server
+1. The Server reads the Request. It knows how to read it because it is formatted as an **HTTP Request**.
+1. The Server generates an **HTTP Response** to that Request.
+1. The server hands the Response off to their ISP and it goes through the internet to arrive at your computer.
+1. Your browser reads the Response. It knows how to read it because it is formatted as an **HTTP Response**.
+1. Your browser displays the data on your machine.
+
+That's the HTTP Request/Response cycle. At its core, it is a bunch of formatting rules that Clients and Servers use to talk to each other. You can read more on the [wikipedia page](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol) or the [IETF specification](https://tools.ietf.org/html/rfc2616).
+
+## The Request and Response Cycle
+
+As we start to build out web applications, it is important to be able to visualize the way information flows through the system; typically called the Request/Response Cycle.
+
+First a user gives a client a URL, the client builds a **request** for information (or resources) to be generated by a server. When the server receives that request, it uses the information included in the request to build a **response** that contains the requested information. Once built, that response is sent back to the client in the requested format, to be rendered to the user.
+
+It is our job as web developers to build out and maintain servers that can successfully build responses based on standardized requests that will be received. But, what does a standard request look like? We need to know that before we can start building servers that will respond successfully.
+
+The standard, or protocol we use is **HTTP**.
+
+## HTTP Requests and Responses
+
+The HyperText Transfer Protocol gives us rules about how messages should be sent around the Internet. The system that initiates a connection sends a "request", and the system the answers sends a "response".
+
+### HTTP Request
+
+When a "client" (like a web browser) retrieves information, it sends a payload of data to a server as a "request". This request has many parts, but for now we are going to focus on the **verb** and **path**.
+
+### Verb and Path
+
+Every request needs to be able to tell a server _what_ information is requested and _how_ that information is being requested. The _what_ is the **path** (also know as a URI), indicating what resource this request is referencing.
+
+Examples of a path:
+
+- `/tasks`
+- `/tasks/4`
+- `/items/6/reviews`
+
+The _how_ is the **verb**, indicating what actions the server should take regarding the requested resource. While the path can vary greatly based on the application, the verbs follow common patterns. There are 5 common HTTP verbs:
+
+- GET - retrieve some information to be READ by the client/user
+- POST - CREATE a new resource with information contained in the request
+- PUT - UPDATE an entire resource with information contained in the request
+- PATCH - UPDATE a part of a resource with information contained in the request
+- DELETE - DESTROY a resource, typically indicating that it is removed from the database
+
+With these 5 verbs, we send requests that allow us to perform all CRUD functions (create, read, update, destroy) for resources in a database!
+
+## Checks for Understanding
+
+- Describe the HTTP request/response cycle. Use each of the following terms:
+  - User
+  - Client
+  - Server
+  - Request
+  - Response
+  - HTTP
+- What is a path?
+- What is a verb?
+- What are the 5 common http verbs and what do they do?

@@ -33,7 +33,7 @@ title: SQL and ActiveRecord
 
 ### Setup
 
-You can pull down the `sql-ar-setup` branch of our [Set List Tutorial repo](https://github.com/turingschool-examples/set-list-7/tree/sql-ar-setup).
+You can pull down the `sql-ar-setup` branch of our [Set List Tutorial repo](https://github.com/turingschool-examples/set-list-api/tree/sql-ar-setup).
 
 Make sure you start by running:
 

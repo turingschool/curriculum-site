@@ -12,7 +12,7 @@ layout: page
 
 ## Set Up
 
-This lesson plan starts with the `class-vs-instance-setup` branch of our good old Set List Tutorial Repo. Get it [here](https://github.com/turingschool-examples/set-list-7/tree/class-vs-instance-setup). Then, follow the normal setup tasks:
+This lesson plan starts with the `class-vs-instance-methods-setup` branch of our good old Set List Tutorial Repo. Get it [here](https://github.com/turingschool-examples/set-list-api/tree/class-vs-instance-methods-setup). Then, follow the normal setup tasks:
 
 - Run `bundle install`
 - Run `rails db:{drop,create,migrate,seed}`
@@ -59,7 +59,7 @@ Using model tests and the corresponding models only, write methods that will:
 - Return a list of songs that have a title that contains the word "love"
 - Return the 3 songs that have the most plays, a length greater than `x` where `x` can be any integer value, and were updated within the last three days
 
-Answers to these practice problems can be found on the `class-vs-instance-solutions` branch [here](https://github.com/turingschool-examples/set-list-7/tree/class-vs-instance-solutions).
+Answers to these practice problems can be found on the `class-vs-instance-complete` branch [here](https://github.com/turingschool-examples/set-list-api/tree/class-vs-instance-complete).
 
 ## Checks for Understanding
 Answer the following questions either in your notebook or by taking [this review quiz](https://forms.gle/BG6JfUSAhSioYero6).

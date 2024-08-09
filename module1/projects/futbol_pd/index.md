@@ -31,7 +31,7 @@ Each of the methods we will implement should be defined as instance methods on `
 
 We recommend taking a "red, green, refactor" approach. First, write tests, write code that makes the tests pass, and then focus on refactoring and organizing after you have working tests and code. It will be easier to make decisions about new classes, modules, methods, etc. when you have seen working code.
 
-A key goal of this project is to work effectively in teams of 3-5 people. We **STRONGLY** encourage you to track your progress by utilizing a project management tool such as GitHub Projects or Trello; we will not be requiring a project management tool for the project, but it is a good habit to get into! If you choose not to use a project management tool, your group should still decide how tasks are being assigned to group members and how the status of those tasks should be communicated to the group.
+A key goal of this project is to work effectively in teams of 3-5 people. We **REQUIRE** you to track your progress by utilizing a project management tool such as GitHub Projects or Trello. Using a project management tool will help ensure that tasks are being assigned to group members effectively and that the status of those tasks is communicated clearly to the group.
 
 See [the evaluation rubric](./rubric) for more details and what exactly you should accomplish in this project.
 
