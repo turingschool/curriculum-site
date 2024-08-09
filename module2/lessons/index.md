@@ -11,11 +11,13 @@ title: Module 2 - Lessons
 - [Introduction to MVC](./intro_to_mvc)
 - [Introduction to Building an API](./intro_to_building_a_rails_api)
 - [Building an API in Rails](./building_an_api)
+- [Serializers](./serializers)
 
 ## Web Applications
 
 - [How the Web Works I: HTTP Request/Response Cycle](./how_the_web_works_http)
 - [How the Web Works II: APIs](./how_the_web_works_api)
+
 
 ## Rails Application and Development
 
@@ -66,3 +68,4 @@ title: Module 2 - Lessons
 
 - [Chrome Dev Tools](./chrome_dev_tools)
 - [JSON for API development](../resources/json_for_api_development)
+
