@@ -2,7 +2,7 @@
 title: Coupon Codes API
 ---
 
-This project is an extension of the Rails Engine group project. You will add functionality for merchants to create coupons for their shop. 
+This project is an extension of the Little Shop group project. You will add functionality for merchants to create coupons for their shop. 
 
 ## Learning Goals
 
@@ -23,10 +23,10 @@ This project is an extension of the Rails Engine group project. You will add fun
 
 ## Setup
 
-This project is an extension of Rails Engine. Students have two options for setup:
+This project is an extension of Little Shop. Students have two options for setup:
 
-1. If your Rails Engine project is complete, you can use it as a starting point for this project. If you are not the repo owner, fork the project to your account. If you are the repo owner, you can work off the repo without forking, just make sure your teammates have a chance to fork before pushing any commits to your repo.
-1. If your Rails Engine project is _not_ complete, fork ****Update** [this repo](need to update)** as a starting point for this project.
+1. If your Little Shop project is complete, you can use it as a starting point for this project. If you are not the repo owner, fork the project to your account. If you are the repo owner, you can work off the repo without forking, just make sure your teammates have a chance to fork before pushing any commits to your repo.
+1. If your Little Shop project is _not_ complete, fork ****Update** [this repo](need to update)** as a starting point for this project.
 
 ## Evaluation
 Evaluation information for this project can be found [here](./evaluation).
@@ -36,6 +36,9 @@ Evaluation information for this project can be found [here](./evaluation).
 ## Functionality Overview
 
 * A Coupon belongs to a Merchant
+* An Invoice optionally belongs to a Coupon. An invoice may only have one coupon.
+  * Note: When creating this new association on Invoice, your existing tests will fail unless the association is optional. Use these guides as a reference.
+  * You are not required to build functionality for a user applying a coupon to an invoice, but can instead use test data, Rails console or seed data to add coupons to existing invoices to verify behavior.
 * You should be full CRUD functionality for coupons with criteria/restrictions defined below:
    - A merchant can have a maximum of 5 activated coupons in the system at one time.
    - A merchant cannot delete a coupon, rather they can activate/deactivate them.
@@ -44,12 +47,49 @@ Evaluation information for this project can be found [here](./evaluation).
 * A coupon code from a Merchant only applies to Items sold by that Merchant.
 
 ​
-## JSON Contract
+## 1) CRUD Endpoints
 
 Below is the expected JSON response for each request. We have also outlined a few examples of Sad Paths you may consider adding in. In your project, you should take time to implement at least 2 sad paths total, but you are not limited to the examples we provide. 
 
 <section class="dropdown">
-### 1. Merchant Coupons Index 
+### 1. Merchant Coupon Show Page 
+
+Returns a specific coupon and shows a count of how many times that coupon has been used.
+
+**Request**
+```bash
+GET /api/v1/merchants/:merchant_id/coupons/:id
+Content-Type: application/json
+Accept: application/json
+```
+
+**Response**
+
+```json
+status: 200
+body:
+
+{
+  "data": {
+    "id": "1",
+    "type": "coupon",
+    "attributes": {
+      "name": "Buy One Get One 50",
+      "code": "BOGO50",
+      "amount_off": 50,
+      "percent_off": null,
+      "status": "active",
+      "merchant_id": 1,
+      "uses": 1    
+    }
+  }
+}
+
+```
+</section>
+
+<section class="dropdown">
+### 2. Merchant Coupons Index 
 
 Returns all of a merchant's coupons
 
@@ -74,7 +114,8 @@ Accept: application/json
         "amount_off": 50,
         "percent_off": null,
         "status": "active",
-        "merchant_id": 1
+        "merchant_id": 1,
+        "uses": 1
       }
     },
     {
@@ -86,7 +127,8 @@ Accept: application/json
         "amount_off": null,
         "percent_off": 25,
         "status": "inactive",
-        "merchant_id": 1
+        "merchant_id": 1,
+        "uses": 0
       }
     },
     {
@@ -98,7 +140,8 @@ Accept: application/json
         "amount_off": 10,
         "percent_off": null,
         "status": "active",
-        "merchant_id": 1
+        "merchant_id": 1,
+        "uses": 2
       }
     }
   ]
@@ -107,7 +150,7 @@ Accept: application/json
 </section>
 
 <section class="dropdown">
-### 2. Merchant Coupon Create 
+### 3. Merchant Coupon Create 
 
 Create a new coupon for a merchant
 
@@ -141,7 +184,8 @@ body:
       "amount_off": 50,
       "percent_off": null,
       "status": "active",
-      "merchant_id": 1
+      "merchant_id": 1,
+      "uses": 0
     }
   }
 }
@@ -152,42 +196,6 @@ body:
 1. This Merchant already has 5 active coupons
 2. Coupon code entered is NOT unique
 
-</section>
-
-<section class="dropdown">
-### 3. Merchant Coupon Show Page 
-
-Returns a specific coupon
-
-**Request**
-```bash
-GET /api/v1/merchants/:merchant_id/coupons/:id
-Content-Type: application/json
-Accept: application/json
-```
-
-**Response**
-
-```json
-status: 200
-body:
-
-{
-  "data": {
-    "id": "1",
-    "type": "coupon",
-    "attributes": {
-      "name": "Buy One Get One 50",
-      "code": "BOGO50",
-      "amount_off": 50,
-      "percent_off": null,
-      "status": "active",
-      "merchant_id": 1    
-    }
-  }
-}
-
-```
 </section>
 
 <section class="dropdown">
@@ -222,7 +230,8 @@ body:
       "amount_off": 50,
       "percent_off": null,
       "status": "inactive",
-      "merchant_id": 1    
+      "merchant_id": 1,
+      "uses": 1
     }
   }
 }
@@ -261,12 +270,17 @@ body:
       "amount_off": 50,
       "percent_off": null,
       "status": "active",
-      "merchant_id": 1    
+      "merchant_id": 1,
+      "uses": 2
     }
   }
 }
 ```
 </section>
+
+----
+
+## 2) Iterating on Existing Endpoints
 
 <section class="dropdown">
 ### 6. Merchant Coupon Index Sorted
@@ -294,7 +308,8 @@ Accept: application/json
         "amount_off": 50,
         "percent_off": null,
         "status": "active",
-        "merchant_id": 1
+        "merchant_id": 1,
+        "uses": 1
       }
     },
     {
@@ -306,7 +321,8 @@ Accept: application/json
         "amount_off": 10,
         "percent_off": null,
         "status": "active",
-        "merchant_id": 1
+        "merchant_id": 1,
+        "uses": 2
       }
     },
     {
@@ -318,7 +334,8 @@ Accept: application/json
         "amount_off": null,
         "percent_off": 25,
         "status": "inactive",
-        "merchant_id": 1
+        "merchant_id": 1,
+        "uses": 0
       }
     },
   ]
@@ -327,86 +344,124 @@ Accept: application/json
 </section>
 
 <section class="dropdown">
-### 7. Merchant Invoice Show Page: Subtotal and Grand Total Revenues
+### 7. Merchant Invoice
 
-As a merchant
-When I visit one of my merchant invoice show pages
-I see the subtotal for my merchant from this invoice (that is, the total that does not include coupon discounts)
-And I see the grand total revenue after the discount was applied
-And I see the name and code of the coupon used as a link to that coupon's show page.
+Return a merchant's invoice and include the id of the coupon used (if one was used)
+
+**Request**
+```bash
+GET /api/v1/merchants/:merchant_id/invoices/:id
+Content-Type: application/json
+Accept: application/json
 ```
 
+**Response**
+
+```json
+{
+  "data": [
+    {
+      "id": "86",
+        "type": "invoice",
+        "attributes": {
+          "customer_id": "17",
+          "merchant_id": "3",
+          "coupon_id": "1",
+          "status": "shipped"
+        }
+    },
+    {
+      "id": "186",
+        "type": "invoice",
+        "attributes": {
+          "customer_id": "39",
+          "merchant_id": "3",
+          "coupon_id": "2",
+          "status": "shipped"
+        }
+    },
+    {
+      "id": "318",
+        "type": "invoice",
+        "attributes": {
+          "customer_id": "67",
+          "merchant_id": "3",
+          "coupon_id": null,
+          "status": "shipped"
+        }
+    }
+  ]
+}
 ```
+
 </section>
 
 <section class="dropdown">
-### 8. Admin Invoice Show Page: Subtotal and Grand Total Revenues
+### 8. Merchants
 
-As an admin
-When I visit one of my admin invoice show pages
-I see the name and code of the coupon that was used (if there was a coupon applied)
-And I see both the subtotal revenue from that invoice (before coupon) and the grand total revenue (after coupon) for this invoice.
+Update the merchants endpoint to include a count of coupons for each merchant and a count of invoices with coupons applied for each merchant.
 
-* Alternate Paths to consider: 
-1. There may be invoices with items from more than 1 merchant. Coupons for a merchant only apply to items from that merchant.
-2. When a coupon with a dollar-off value is used with an invoice with multiple merchants' items, the dollar-off amount applies to the total amount even though there may be items present from another merchant.
+**Request**
+```bash
+GET /api/v1/merchants
+Content-Type: application/json
+Accept: application/json
 ```
+
+**Response**
+
+```json
+{
+  "data": [
+    {
+      "id": "1",
+        "type": "merchant",
+        "attributes": {
+          "name": "Mike's Awesome Store",
+          "coupons_count": 3,
+          "invoice_coupon_count": 2
+        }
+    },
+    {
+      "id": "2",
+      "type": "merchant",
+      "attributes": {
+        "name": "Store of Fate",
+        "coupons_count": 0,
+        "invoice_coupon_count": 0
+      }
+    },
+    {
+      "id": "3",
+      "type": "merchant",
+      "attributes": {
+        "name": "This is the limit of my creativity",
+        "coupons_count": 1,
+        "invoice_coupon_count": 4
+      }
+    }
+  ]
+}
+  
+```
+
 </section>
 
 
 
 ----
 
+## 3) Frontend
+
+TODO: Add the frontend stories
+
+----
 
 ## Extensions
 
-Students can pick one or more of these extension features/stories to add to their project: 
+Students can pick one or more of these extension features to add to their project: 
 
 1. On the Merchant Coupon Index page, active and inactive coupons are sorted in order of popularity, from most to least. 
-2. Coupons can be used by multiple customers, but may only be used one time per customer.
-3. Inactive coupons cannot be added to an Invoice. 
-4. A Coupon has a maximum number of uses before it is automatically deactivated. When implemented, prove that the number of times used on the Merchant Coupon Show Page is updated accordingly. 
-5. Holiday Coupons can be used up to 1 week from the actual holiday date. The coupon should automatically inactivate once someone tries to create an Invoice with that Coupon after a week of the holiday.
-6. Generate unique coupon codes as suggestions when creating a new coupon.
-
-API Consumption is available for this project as an extension as well. 
-
-```
-9: Holidays API
-
-As a merchant
-When I visit the coupons index page
-I see a section with a header of "Upcoming Holidays"
-In this section the name and date of the next 3 upcoming US holidays are listed.
-
-Use the Next Public Holidays Endpoint in the [Nager.Date API](https://date.nager.at/swagger/index.html)
-```
-
-```
-10. Create a Holiday Coupon
-
-As a merchant,
-when I visit my coupons index page,
-In the Holiday Coupons section, I see a `Create Coupon` button next to each of the 3 upcoming holidays.
-When I click on the button I am taken to the new coupon page where I see a pre-filled name in the form, similar to:
-
-   Name: <name of holiday> coupon
-   Code: <uniquely generated code suggestion>
-
-All other fields, I will need to fill out myself
-I can leave the information as-is, or modify it before saving.
-When I click save, 
-I am redirected to my coupon index page where I see the newly-created coupon added to the list.
-```
-
-```
-11. View a Holiday Coupon
-
-As a merchant (if I have created a holiday coupon for a specific holiday),
-when I visit my coupon index page,
-within the `Upcoming Holidays` section I should not see the button to 'Create a Coupon' next to that holiday,
-instead I should see a `View coupon` link.
-When I click the link 
-I am taken to the coupon show page for that holiday coupon.
-```
-
+2. Inactive coupons cannot be added to an Invoice. 
+3. A Coupon has a maximum number of uses before it is automatically deactivated. When implemented, prove that the number of times used on the Merchant Coupon Show Page is updated accordingly. 
+4. Generate unique coupon codes as suggestions when creating a new coupon.
