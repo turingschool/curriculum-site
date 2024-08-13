@@ -99,10 +99,10 @@ The Technical Requirements for this project can be found [here](./requirements)
 Groups are required to deploy this API to the Internet, using either Heroku or Render. To avoid difficult deployment troubleshooting, please deploy early and deploy often! To use Heroku, follow [these instructions](https://devcenter.heroku.com/articles/getting-started-with-rails7) and don't forget to provision a database! If you're using Render, check out our guide [here](https://curriculum.turing.edu/module2/lessons/deployment_guide)
 </section>
 
-<section class="dropdown">
 ## Connecting to the FE
-</section>
-<!-- TO-DO! -->
+
+Requirements for connecting this project to the front end can be found [here](./front_end_requirements)
+
 
 
 

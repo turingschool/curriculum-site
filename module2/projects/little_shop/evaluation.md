@@ -10,7 +10,9 @@ _[Back to Little Shop Home](./index)_
 For the project evaluation, each project team will meet with an instructor for a 30 minute session. Teams should prepare a presentation that covers the following:
 
 <!-- TO-DO Change to using FE to demonstrate functionality? -->
-* Demonstration of functionality via Postman suites
+<!-- * Demonstration of functionality via Postman suites and FE application -->
+* Demonstration of functionality via your FE application and Postman Suites
+  * Outlining at least 3 styling improvements you made, why you chose them and what your inspiration design was
 * Discussion of technical quality and organization of the code, identifying code that should be refactored and how it would be refactored
 * Running your application's test suite and a discussion of test coverage (happy/sad paths and any edge cases)
 * Identifying the area(s) of code of which you are most proud, and an area where you would like specific feedback
@@ -28,7 +30,7 @@ Your project will be evaluated based on the following rubric:
 ### Feature Delivery
 
 * Exceeds Expectations: Project completes all requirements and at least one extensions.
-* Meets Expectations: Project completes all requirements. Postman tests pass, and FE functions correctly when wired up to API. 
+* Meets Expectations: Project completes all requirements. Postman tests pass/FE functions correctly.  FE requirements are met.
 * Approaching Expectations: Project fails to complete 1 - 2 required endpoints
 * Below Expectations: Project fails to complete more than 3 or more endpoints
 
