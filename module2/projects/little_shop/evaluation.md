@@ -9,10 +9,9 @@ _[Back to Little Shop Home](./index)_
 ## Presentation
 For the project evaluation, each project team will meet with an instructor for a 30 minute session. Teams should prepare a presentation that covers the following:
 
-<!-- TO-DO Change to using FE to demonstrate functionality? -->
-<!-- * Demonstration of functionality via Postman suites and FE application -->
-* Demonstration of functionality via your FE application and Postman Suites
+* Demonstration of functionality via your FE application (and Postman Suites for functionality not covered in FE app)
   * Outlining at least 3 styling improvements you made, why you chose them and what your inspiration design was
+  * Demonstrating your FE refactoring and FE feature add
 * Discussion of technical quality and organization of the code, identifying code that should be refactored and how it would be refactored
 * Running your application's test suite and a discussion of test coverage (happy/sad paths and any edge cases)
 * Identifying the area(s) of code of which you are most proud, and an area where you would like specific feedback

@@ -10,8 +10,9 @@ type: project
 
 You are working for a company developing an E-Commerce Application. Your team is working in a service-oriented architecture, meaning the front and back ends of this application are separate and communicate via APIs. 
 
-Your job is to expose the data that powers the site through an API that the front end would consume. You will be working with an existing front end application that consumes these APIs, and part of your work will also be to make a few adjustments to that front end as well (see "Connecting to the Front End" below). We also have [these Wireframes](./wireframes) available from the company's design team. 
-
+Your job is to expose the data that powers the site through an API that a front end will consume. You will be working with an existing front end application that consumes these APIs, and part of your work will also be to make a few adjustments to that front end as well (see "Connecting to the Front End" below). 
+<!-- We also have [these Wireframes](./wireframes) available from the company's design team.  --> 
+<!-- TO DO:  Delete the wireframes.  Add from the actually FE boilerplate if we need some -->
 <!-- TO-DO: Add details about connecting to an already existing FE app that will consume these endpoints. Consider removing wireframes entirely? -->
 
 ## Learning Goals
@@ -25,7 +26,10 @@ Your job is to expose the data that powers the site through an API that the fron
 * Use MVC to organize code effectively, lmiting data logic in controllers and serializers
 * Track user stories with GitHub Projects
 * Deploy your application to the internet (?)
-* FE LEARNING GOALS
+* Improve an existing FE application by:
+    * Styling the user interface
+    * Refactoring JavaScript code
+    * Adding an additional FE feature
 
 ### Implicit
 Below are skills that are more general/necessary on the job that are practiced by completing the goals above.
@@ -89,26 +93,24 @@ Next, you can select/deselect which tests you'd like to run. Finally, click the 
 As it runs, it will show you which tests are passing or failing.
 </section>
 
-## Technical Requirements
+## BE Technical Requirements
 
-The Technical Requirements for this project can be found [here](./requirements)
+The BE Technical Requirements for this project can be found [here](./requirements)
 
 <section class="dropdown">
-## Deployment
+## BE Deployment
 
 Groups are required to deploy this API to the Internet, using either Heroku or Render. To avoid difficult deployment troubleshooting, please deploy early and deploy often! To use Heroku, follow [these instructions](https://devcenter.heroku.com/articles/getting-started-with-rails7) and don't forget to provision a database! If you're using Render, check out our guide [here](https://curriculum.turing.edu/module2/lessons/deployment_guide)
 </section>
 
-## Connecting to the FE
+## FE Requirements
 
-Requirements for connecting this project to the front end can be found [here](./front_end_requirements)
-
-
+The FE Requirements for this project can be found [here](./front_end_requirements)
 
 
 ## Extensions
 
-Review the evaluation details to ensure you have completed each section of it before tackling any extensions. If all requirements have been met, then please work on the extensions found [here](./extensions)
+Review the evaluation details to ensure you have completed each section of it before tackling any extensions. If all BE and FE requirements have been met, then please work on the extensions found [here](./extensions)
 
 
 ## Evaluation
