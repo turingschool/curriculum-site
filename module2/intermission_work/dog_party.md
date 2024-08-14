@@ -39,6 +39,7 @@ We’ve provided a design comp and a set of technical specifications. Your chall
 ## Phase Zero: Understanding the Comp
 
 To better understand the comp, let’s break it down into sections. Here’s how each section is separated:
+
 ![Dog Part Box Model](./assets/dog-party-js-wireframe.jpg)
 
 ## Phase One: Basic Requirements
@@ -80,7 +81,6 @@ In here you are seeing the basic outline of the HTML you will need to start with
 To see how your HTML file looks in a web browser:
 
 1. **Save Your File**: Ensure that your `index.html` file is saved in your `dog_party` directory.
-
 2. **Open the File**:
    - **Using the Terminal**:
      - `cd` into the repo then run `open index.html` in your terminal. Depending on the structure of your repo, the path to get to the index.html file might differ slightly in different repos. For example, `open /src/index.html`
@@ -249,7 +249,7 @@ After making one dog div, it looks like we need to add the rest of our dogs, whi
 
 Well done, now we are almost done with our HTML file. We'll comeback to footer section after we are done with some styling.
 
-## Phase Two: Styling
+## Phase Two: Styling with CSS
 
 ### Step 1: Global Styles
 
@@ -400,7 +400,7 @@ Cool!!! Let's use the class selector to add some styling to our css.
 
 Don't worry if you cannot match it exactly, just do your best. Consider what you've learned already. You may want to make use of div, section, and image tags.
 
-## Phase Three:
+## Phase Three: Adding behavior JavaScript
 
 We want users of our application to actually be able to type a name into the name field and when they click the "Name This Dog" button, we want the site's `<h1>` header to now display the dog's name instead of the text "Some Dogs".
 
