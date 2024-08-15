@@ -92,7 +92,7 @@ As it runs, it will show you which tests are passing or failing.
 
 ## BE Technical Requirements
 
-The BE Technical Requirements for this project can be found [here](./requirements)
+The BE Technical Requirements for this project can be found [here](./back_end_requirements)
 
 
 ## FE Requirements

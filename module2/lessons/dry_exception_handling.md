@@ -3,7 +3,7 @@ layout: page
 title: Little Shop DRY Exception Handling
 length: 1.5 weeks
 tags:
-type: project
+type: lesson
 ---
 
 # Refactoring Our Exception Handling

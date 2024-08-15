@@ -26,6 +26,7 @@ title: Module 2 - Lessons
 - [Model Testing](./model_testing)
 - [Data Validations](./data_validations)
 - [Error Handling](./error_handling)
+- [Error Handling pt 2: DRYing it up](./dry_exception_handling)
 
 ## Databases
 

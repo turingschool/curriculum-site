@@ -57,6 +57,6 @@ Your project will be evaluated based on the following rubric:
 ### SQL/ActiveRecord
 
 * Exceeds Expectations: At least one ActiveRecord/SQL extension is complete.
-* Meets Expectations: All queries are functional and accurate, and are written in either AR or Ruby (i.e. no Ruby is used to process data)
+* Meets Expectations: All queries are functional and accurate, and are written in either AR or SQL (i.e. no Ruby is used to process data)
 * Approaching Expectations: Some Ruby is used to process data instead of using AR/SQL. Or, some queries are not accurate.
 * Below Expectations: Ruby is used more often than SQL/AR to process data. Or, no queries are correct.

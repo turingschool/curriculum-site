@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Little Shop Requirements
+title: Little Shop BE Requirements
 length: 1 week
 tags:
 type: project
@@ -17,8 +17,7 @@ _[Back to Little Shop Home](./index)_
 
 2. Set Up [SimpleCov](https://github.com/colszowka/simplecov) to track test coverage in your little_shop API project.
 
-    <!-- to-do: add link to new pgdump -->
-3. Download [little_shop_development.pgdump]() and move it into the `/db/` folder in another folder called `/data/`, so your project files look like this:
+3. Download [little_shop_development.pgdump](./little_shop_development.pgdump) and move it into the `/db/` folder in another folder called `/data/`, so your project files look like this:
 ```
 /app
 /bin
@@ -132,7 +131,7 @@ The `errors` element will always be an array and contain one or more strings of 
 
 #### DRY Exception Handlers in Code
 
-As part of the project, we're requiring students to try to refactor exception handling and sad path logic in their controllers as much as possible. Take a look at [this page](./dry_exception_handling) to learn more about some options. 
+As part of the project, we're requiring students to try to refactor exception handling and sad path logic in their controllers as much as possible. Take a look at [this page](https://curriculum.turing.edu/module2/lessons/dry_exception_handling) to learn more about some options. 
 
 #### Sad Path vs Edge Case
 
@@ -188,18 +187,15 @@ Or,
 </section>
 
 
-## Your Project MVP
+## Your BE Application
 
-In total, the MINIMUM requirement will be 16 endpoints:
+In total, the MINIMUM requirement for the BE portion of this project will be 16 endpoints:
 
 * section one has 14 endpoints (some with additional features via query parameters)
 * section two has 2 endpoints
 
 
 You may choose to divide these up between your project partners in whatever way seems best. One pair could handle the Merchant stories, and one pair could handle the Item and additional endpoints. You may also decide to work on the first story/stories together to have a solid understanding first before dividing and conquering. 
-
-<!-- You can reference the [Wireframes](./wireframes) to get a better idea of how these endpoints might be used in a frontend application. -->
-
 
 <section class="dropdown">
 ### SECTION ONE: RESTful Requests - More Detail
