@@ -11,9 +11,6 @@ type: project
 You are working for a company developing an E-Commerce Application. Your team is working in a service-oriented architecture, meaning the front and back ends of this application are separate and communicate via APIs. 
 
 Your job is to expose the data that powers the site through an API that a front end will consume. You will be working with an existing front end application that consumes these APIs, and part of your work will also be to make a few adjustments to that front end as well (see "Connecting to the Front End" below). 
-<!-- We also have [these Wireframes](./wireframes) available from the company's design team.  --> 
-<!-- TO DO:  Delete the wireframes.  Add from the actually FE boilerplate if we need some -->
-<!-- TO-DO: Add details about connecting to an already existing FE app that will consume these endpoints. Consider removing wireframes entirely? -->
 
 ## Learning Goals
 
@@ -97,7 +94,6 @@ As it runs, it will show you which tests are passing or failing.
 
 The BE Technical Requirements for this project can be found [here](./requirements)
 
-<!-- I moved the BE deployment info to the bottom of the BE requirements page bc the FE deployment info is at the bottom of the FE requirements page and I wanted BE and FE requirements to be right after each other on the main spec page. -->
 
 ## FE Requirements
 
