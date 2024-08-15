@@ -198,7 +198,7 @@ In total, the MINIMUM requirement will be 16 endpoints:
 
 You may choose to divide these up between your project partners in whatever way seems best. One pair could handle the Merchant stories, and one pair could handle the Item and additional endpoints. You may also decide to work on the first story/stories together to have a solid understanding first before dividing and conquering. 
 
-You can reference the [Wireframes](./wireframes) to get a better idea of how these endpoints might be used in a frontend application.
+<!-- You can reference the [Wireframes](./wireframes) to get a better idea of how these endpoints might be used in a frontend application. -->
 
 
 <section class="dropdown">

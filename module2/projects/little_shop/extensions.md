@@ -6,6 +6,8 @@ tags:
 type: project
 ---
 
+_[Back to Little Shop Home](./index)_
+
 # Extensions & Extra Practice
 
 <!-- TO-DO AR and SQL extensions -->
@@ -13,7 +15,8 @@ type: project
 
 <br>
 
-<details><summary><h3>9. Get Item Images</h3></summary>
+<section class="dropdown">
+### Get Item Images
 
 #### Details: 
 1. The endpoint should be in the pattern of `GET /api/v1/items/:id`, to add onto the "Fetch a Single Record" endpoint (#2 above).
@@ -22,61 +25,61 @@ type: project
 4. The `data` top level key should always point to an array even if one or zero images were found for this image. 
 5. If no image is found, a link to a placeholder image URL can be used (see [placehold.co](https://placehold.co/)), using the `Text` option to include a URL-encoded string representing the Item's name in the placeholder image. 
 
-    <details><summary><h5>Example #1 😁 </h5></summary>
+<section class="call-to-action">  
+### Example 1 😁  
 
-    **Request:**
-    ```
-      GET /api/v1/item/1
-      Content-Type: application/json
-      Accept: application/json
-    ```
+**Request:**
+```
+  GET /api/v1/item/1
+  Content-Type: application/json
+  Accept: application/json
+```
 
-    **Response:**
-    `status: 200`
-    ```json
-    {
-      "data": {
-        "id": "1",
-        "type": "item",
-        "attributes": {
-          "name": "Super Widget",
-          "description": "A most excellent widget of the finest crafting",
-          "unit_price": 109.99, 
-          "image_url": "https://api.unsplash.com/photos/eOLpJytrbsQ" //or, https://placehold.co/600x400?text=Super+Widget
+**Response:**
+`status: 200`
+```json
+{
+  "data": {
+    "id": "1",
+    "type": "item",
+    "attributes": {
+      "name": "Super Widget",
+      "description": "A most excellent widget of the finest crafting",
+      "unit_price": 109.99, 
+      "image_url": "https://api.unsplash.com/photos/eOLpJytrbsQ" //or, https://placehold.co/600x400?text=Super+Widget
+    }
+  }
+}
+```
+</section>
+<section class="call-to-action">
+### Example 2 😭 
+  
+  **Request:**
+  ```
+  GET /api/v1/item/123123123123 (where this is an invalid ID)
+  Content-Type: application/json
+  Accept: application/json
+  ```
+
+  **Response:** 
+  `status: 404`
+  ```json
+{
+    "errors": [
+        {
+            "detail": "Couldn't find Item with 'id'=123123123123"
         }
-      }
-    }
-    ```
-    </details>
-    <details><summary><h5>Example #2 😭 </h5></summary>
-      
-      **Request:**
-      ```
-      GET /api/v1/item/123123123123 (where this is an invalid ID)
-      Content-Type: application/json
-      Accept: application/json
-      ```
-
-      **Response:** 
-      `status: 404`
-      ```json
-    {
-        "errors": [
-            {
-                "detail": "Couldn't find Item with 'id'=123123123123"
-            }
-        ]
-    }
-      ```
-    </details>
-
-    ---
-
-</details>
+    ]
+}
+  ```
+</section>
+</section>
 
 
 
-<details><summary><h3>10. Get Merchant Images</h3></summary>
+<section class="dropdown">
+### Get Merchant Images
 
 #### Details: 
 1. The endpoint should be in the pattern of `GET /api/v1/merchants/:id`, to add onto the "Fetch a Single Record" endpoint (#2 above).
@@ -85,7 +88,8 @@ type: project
 4. The `data` top level key should always point to an array even if one or zero images were found for this image. 
 5. If no image is found, a link to a placeholder image URL can be used (see [placehold.co](https://placehold.co/)), using the `Text` option to include a URL-encoded string representing the merchant's name in the placeholder image. 
 
-    <details><summary><h5>Example #1 😁 </h5></summary>
+<section class="call-to-action">
+### Example 1 😁
 
     **Request:**
     ```
@@ -110,8 +114,9 @@ type: project
       ]
     },
     ```
-    </details>
-    <details><summary><h5>Example #2 😭 </h5></summary>
+</section>
+<section class="call-to-action">
+### Example 2 😭
       
       **Request:**
       ```
@@ -132,4 +137,4 @@ type: project
     }
       ```
     </details>
-</details>
+</section>
