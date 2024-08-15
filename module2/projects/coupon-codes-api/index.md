@@ -26,7 +26,7 @@ This project is an extension of the Little Shop group project. You will add func
 This project is an extension of Little Shop. Students have two options for setup:
 
 1. If your Little Shop project is complete, you can use it as a starting point for this project. If you are not the repo owner, fork the project to your account. If you are the repo owner, you can work off the repo without forking, just make sure your teammates have a chance to fork before pushing any commits to your repo.
-1. If your Little Shop project is _not_ complete, fork ****Update** [this repo](need to update)** as a starting point for this project.
+1. If your Little Shop project is _not_ complete, fork **[this repo](https://github.com/turingschool-examples/little-shop-be)** as a starting point for this project.
 
 ## Evaluation
 Evaluation information for this project can be found [here](./evaluation).
@@ -39,7 +39,7 @@ Evaluation information for this project can be found [here](./evaluation).
 * An Invoice optionally belongs to a Coupon. An invoice may only have one coupon.
   * Note: When creating this new association on Invoice, your existing tests will fail unless the association is optional. Use these guides as a reference.
   * You are not required to build functionality for a user applying a coupon to an invoice, but can instead use test data, Rails console or seed data to add coupons to existing invoices to verify behavior.
-* You should be full CRUD functionality for coupons with criteria/restrictions defined below:
+* You should build full CRUD functionality for coupons with criteria/restrictions defined below:
    - A merchant can have a maximum of 5 activated coupons in the system at one time.
    - A merchant cannot delete a coupon, rather they can activate/deactivate them.
    - A Coupon has a name, unique code (e.g. "BOGO50"), and either percent-off or dollar-off value. The coupon's code must be unique in the whole database.
@@ -237,8 +237,8 @@ body:
 }
 ```
 
-<!-- **Sad Paths to consider:**
-1. A coupon cannot be deactivated if there are any pending invoices with that coupon. -->
+**Sad Paths to consider:**
+1. A coupon cannot be deactivated if there are any pending invoices with that coupon.
 </section>
 
 <section class="dropdown">

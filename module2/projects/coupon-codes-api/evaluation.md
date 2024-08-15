@@ -27,17 +27,17 @@ Your project will be evaluated based on the following rubric:
 
 ### Feature Delivery
 
-* Exceeds Expectations: Project completes all requirements and at least one extensions.
+* Exceeds Expectations: Project completes all requirements and at least one extension.
 * Meets Expectations: Project completes all requirements. Postman tests pass, and FE functions correctly when wired up to API. 
 * Approaching Expectations: Project fails to complete 1 - 2 required endpoints
 * Below Expectations: Project fails to complete more than 3 or more endpoints
 
-### Project Management
+### Technical Presentation
 
-* Exceeds Expectations: GitHub Project Board is fully up to date in all checkins and the evaluation. Live presentation is prepared with visuals, a logical flow, and distributed talking points. Students complete all requirements in "Meets Expectations" as well
-* Meets Expectations: Students use GitHub projects or similar tool to track all project tasks. Project board is mostly up to date in all checkins, and fully up to date in evaluation. Students participate in meaningful code review and it's visible through PR comments or live meetings (students can speak to one of these meetings). Live presentation is prepared, and follows a logical flow. All group members participate, but maybe with some instructor prompting.
-* Approaching Expectations: Project board is not utilized, or not up to date at evaluation. Evidence of meaningful code revision is minimal. Presentation is disorganized, and not all members participate (note: individual team members can receive different scores for this section)
-* Below Expectations: GitHub Projects is not utilized. No evidence of code review. Unprepared presentation that doesn't cover all topics listed above. 
+* Exceeds Expectations: The student has a well organized presentation that addresses each point directly, uses technical vocabulary correctly throughout the presentation, and can speak to the iterations of their progress on complex queries using visuals.
+* Meets Expectations: Student has a well-organized presentation that addresses each presentation point directly, and can speak to how they arrived at their solutions to the complex, logic-heavy user stories.
+* Approaching Expectations: Student presents their code and is able to talk about 3 of the presentation points, but does not speak to how they arrived at complex solutions in their code.
+* Below Expectations: Student is unprepared for the presentation and requires prompts from the instructor to talk about the code. 
 
 ### Test Driven Development
 
