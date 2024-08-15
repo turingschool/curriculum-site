@@ -11,13 +11,13 @@ type: project
 _[Back to Little Shop Home](./index)_
 
 <section class="dropdown">
-# 1. Setup
+### Setup
 
 1. Create a Rails API project called `little_shop` (make sure you do not set up a "traditional" Rails project with a frontend, this is an API-only project). `rails new little_shop -T -d="postgresql" --api`
 
 2. Set Up [SimpleCov](https://github.com/colszowka/simplecov) to track test coverage in your little_shop API project.
 
-<!-- to-do: add link to new pgdump -->
+    <!-- to-do: add link to new pgdump -->
 3. Download [little_shop_development.pgdump]() and move it into the `/db/` folder in another folder called `/data/`, so your project files look like this:
 ```
 /app
@@ -59,7 +59,7 @@ system(cmd)
   * invoice_items
   * transactions
 
-**NOTE** We updated this process to avoid confusion and taking a significant amount of time; the main learning goals of the project are the Rails API endpoints, not the process of importing CSV data. Avoid starting out with a Rake task to do the import and follow these instructions instead. If in doubt, ask your instructors first.
+**NOTE** The main learning goals of the project are the Rails API endpoints, not the process of importing CSV data. Avoid starting out with a Rake task to do the import and follow these instructions instead. If in doubt, ask your instructors first.
 
 **NOTE** If your `rails new ...` project name from above is NOT exactly called "little_shop" you will need to modify the `cmd` variable to change the `-d` parameter from `little_shop_development` to `<YOUR PROJECT NAME>_development` instead. If you have questions, ask your instructors.
 
@@ -67,8 +67,7 @@ system(cmd)
 Finally, commit your setup steps and push to a new repo. Share that new repo with your project partner(s). Be sure to add them as a collaborator.
 </section>
 
-<section class="dropdown">
-# 2. API Endpoints, general definitions
+### API Endpoints, general definitions
 
 You will need to expose the data through a multitude of API endpoints. All of your endpoints should follow these technical expectations:
 
@@ -141,7 +140,9 @@ Sad Path: the user did something which didn't cause an _error_ but didn't work o
 
 Edge Case: the user did something which broke the functionality of an endpoint. For example, a user searches for an item based on a negative price, or searching between revenue dates where the end date comes before the start date.
 
-## SECTION ONE: RESTful Endpoints, Minimum Requirements:
+<section class='call-to-action'>
+## Minimum Requirements:
+### SECTION ONE: RESTful Endpoints
 
 You will need to expose the following RESTful API endpoints for the following:
 
@@ -170,7 +171,7 @@ You will need to expose the following RESTful API endpoints for the following:
   * get all invoices for a given merchant, filtered by status
 
 
-## SECTION TWO: Non-RESTful Search Endpoints
+### SECTION TWO: Non-RESTful Search Endpoints
 
 You will get to choose ONE group of endpoint pairs from the following list:
 
@@ -184,6 +185,9 @@ Or,
   * Find one ITEM based on search criteria, and
   * Find all MERCHANTS based on search criteria
 
+</section>
+
+
 ## Your Project MVP
 
 In total, the MINIMUM requirement will be 16 endpoints:
@@ -196,14 +200,11 @@ You may choose to divide these up between your project partners in whatever way 
 
 You can reference the [Wireframes](./wireframes) to get a better idea of how these endpoints might be used in a frontend application.
 
-</section>
 
 <section class="dropdown">
-# 3. API requests/responses, more detail
-
-# SECTION ONE: RESTful requests
+### SECTION ONE: RESTful Requests - More Detail
 <section class="dropdown">
-## 1. Fetch all Items/Merchants
+### 1. Fetch all Items/Merchants
 
 These "index" endpoints for items and merchants should:
 
@@ -278,8 +279,9 @@ One of the merchant endpoints requires the ability to add a calculated count att
 
 
 </section>
+
 <section class="dropdown">
-## 2. Fetch a single record
+### 2. Fetch a single record
 
 This endpoint for Items and Merchants should:
 
@@ -322,7 +324,7 @@ Note that the `unit_price` is sent as numeric data, and not string data.
 </section>
 
 <section class="dropdown">
-## 3: Create an Item/Merchant
+### 3: Create an Item/Merchant
 
 This endpoint should:
 
@@ -384,8 +386,9 @@ This endpoint should:
 
 <hr/>
 </section>
+
 <section class="dropdown">
-## 4: Update an Item or Merchant
+### 4: Update an Item or Merchant
 
 This endpoint should:
 
@@ -438,8 +441,9 @@ The body should follow this pattern:
 ```
 <hr/>
 </section>
+
 <section class="dropdown">
-## 5: Destroy an Item or Merchant
+### 5: Destroy an Item or Merchant
 
 This endpoint should:
 * destroy the corresponding record (if found) and any associated data
@@ -450,7 +454,7 @@ This endpoint should:
 </section>
 
 <section class="dropdown">
-## 6. Relationship Endpoints
+### 6. Relationship Endpoints
 
 These endpoints should show related records for a given resource. The relationship endpoints you should expose are:
 
@@ -462,7 +466,7 @@ These endpoints should show related records for a given resource. The relationsh
 </section>
 
 <section class="dropdown">
-## 7. Get All Customers for a Merchant
+### 7. Get All Customers for a Merchant
 
 This endpoint should:
 
@@ -506,7 +510,7 @@ This endpoint should:
 </section>
 
 <section class="dropdown">
-## 8. Get All Invoices for Merchant Based on Status
+### 8. Get All Invoices for Merchant Based on Status
 
 This endpoint should:
 
@@ -557,8 +561,7 @@ This endpoint should:
 ---
 
 <section class="dropdown">
-# SECTION TWO
-## Non-RESTful Search Endpoints
+### SECTION TWO: Non-RESTful Search Endpoints - More detail
 
 As a reminder, for Section Two you should choose a group of endpoints to implement, either: 
 
@@ -581,7 +584,7 @@ Once you choose the group you are implementing, you will build the corresponding
 
 These endpoints will make use of query parameters as described below:
 <section class="dropdown">
-## 7. "Find One" endpoints
+### 9. "Find One" endpoints
 
 These endpoints should:
 
@@ -637,7 +640,7 @@ These endpoints should:
 </section>
 
 <section class="dropdown">
-## 8. "Find All" endpoints
+### 10. "Find All" endpoints
 
 These endpoints will follow the same rules as the "find" endpoints.
 
@@ -671,4 +674,14 @@ It should not return a 404 if no matches are found.
 ```
 
 </section>
+</section>
+
+
+### BE Deployment (Required)
+
+Groups are required to deploy this API to the Internet, using either Heroku or Render. To avoid difficult deployment troubleshooting, please deploy early and deploy often! To use Heroku, follow [these instructions](https://devcenter.heroku.com/articles/getting-started-with-rails7) and don't forget to provision a database! If you're using Render, check out our guide [here](https://curriculum.turing.edu/module2/lessons/deployment_guide)
+
+<section class="call-to-action">
+
+### See FE Requirements [here](front_end_requirements)
 </section>

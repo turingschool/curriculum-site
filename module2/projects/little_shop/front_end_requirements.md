@@ -102,8 +102,8 @@ Similarly, we dont want to go through the effort of doing a PATCH network reques
 
 Your front end work will be evaluated alongside your backend work. All of the work completed on the FE application should be thorough, bug-free and completed with the user experience in mind.  You will need to demonstrate and speak to your decision making and approach for implementing the styling changes, refactoring to use prototype methods, and the added feature of your choice. The README of your FE application should outline the improvements you made to the FE boilerplate and highlight the decision making, approach, challenges and learnings that went into it along the way.  You're encouraged to include gifs/screenshots in the README to demonstrate the work you did. 
 
-See the [evaluation spec](./evaluation.md) for more details.
+See the [evaluation spec](evaluation) for more details.
 
 ## Deployment (Not Required for FE application)
 
-You are not required to deploy your FE application. If you do choose to deploy your application, you will want to refactor the base url used for the GET/POST/PATCH/DELETE requests to have your FE fetching data from your deployed backend application, rather than the locally hosted backend.  Without this change, the deployed frontend will only be able to display and manipulate data if user also has the backend running locally. 
+You are not required to deploy your FE application. If you do choose to deploy your application, you will want to refactor the base url used for the GET/POST/PATCH/DELETE requests to have your FE fetching data from your deployed backend application, rather than the locally hosted backend.  Without this change, the deployed frontend will only be able to display and manipulate data if the user also has the backend running locally. 

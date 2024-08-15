@@ -48,7 +48,7 @@ Groups must utilize a project board in order to organize areas of work and allow
 </section>
 
 <section class="dropdown">
-## Postman
+### Postman
 
 By importing the JSON files noted below, you can open the Postman "Runner" and execute a large suite of tests.
 
@@ -97,11 +97,11 @@ As it runs, it will show you which tests are passing or failing.
 
 The BE Technical Requirements for this project can be found [here](./requirements)
 
-<section class="dropdown">
-## BE Deployment
+<!-- <section class="dropdown">
+### BE Deployment
 
 Groups are required to deploy this API to the Internet, using either Heroku or Render. To avoid difficult deployment troubleshooting, please deploy early and deploy often! To use Heroku, follow [these instructions](https://devcenter.heroku.com/articles/getting-started-with-rails7) and don't forget to provision a database! If you're using Render, check out our guide [here](https://curriculum.turing.edu/module2/lessons/deployment_guide)
-</section>
+</section> -->
 
 ## FE Requirements
 
