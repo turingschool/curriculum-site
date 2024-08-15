@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Little Shop Extensions
+title: Little Shop BE Extensions
 length: 1 week
 tags:
 type: project
