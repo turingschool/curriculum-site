@@ -97,11 +97,7 @@ As it runs, it will show you which tests are passing or failing.
 
 The BE Technical Requirements for this project can be found [here](./requirements)
 
-<!-- <section class="dropdown">
-### BE Deployment
-
-Groups are required to deploy this API to the Internet, using either Heroku or Render. To avoid difficult deployment troubleshooting, please deploy early and deploy often! To use Heroku, follow [these instructions](https://devcenter.heroku.com/articles/getting-started-with-rails7) and don't forget to provision a database! If you're using Render, check out our guide [here](https://curriculum.turing.edu/module2/lessons/deployment_guide)
-</section> -->
+<!-- I moved the BE deployment info to the bottom of the BE requirements page bc the FE deployment info is at the bottom of the FE requirements page and I wanted BE and FE requirements to be right after each other on the main spec page. -->
 
 ## FE Requirements
 
