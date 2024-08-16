@@ -25,6 +25,5 @@ In Module 2, students will be introduced to HTML, CSS, and JavaScript while also
 
 ## Requirements
 
-
 - [Portfolio Guidelines](./requirements/portfolio_guidelines)
 - [Promotion Requirements](./requirements/promotion_requirements)

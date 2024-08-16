@@ -18,7 +18,6 @@ title: Module 2 - Lessons
 - [How the Web Works I: HTTP Request/Response Cycle](./how_the_web_works_http)
 - [How the Web Works II: APIs](./how_the_web_works_api)
 
-
 ## Rails Application and Development
 
 - [Routing: REST](./restful_routes_and_crud.md)
@@ -50,7 +49,7 @@ title: Module 2 - Lessons
 ## JS Array Prototype Methods
 
 - [JS: Array Prototype Methods](./js_array_prototype_methods)
-- [JS: Approaching Problems Many Ways ](./js_approaching_problems_many_ways.md)
+- [JS: Approaching Problems Many Ways](./js_approaching_problems_many_ways.md)
 
 ## Active Record
 
@@ -68,4 +67,3 @@ title: Module 2 - Lessons
 
 - [Chrome Dev Tools](./chrome_dev_tools)
 - [JSON for API development](../resources/json_for_api_development)
-
