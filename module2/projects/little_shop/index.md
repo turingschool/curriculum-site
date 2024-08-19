@@ -54,8 +54,8 @@ By importing the JSON files noted below, you can open the Postman "Runner" and e
 #### Importing the Test Suite
 
 Download the test suites for Postman:
-* [Rails Engine, Section 1](./RailsEngineSection1.postman_collection.json)
-* [Rails Engine, Section 2](./RailsEngineSection2.postman_collection.json)
+* [Little Shop BE, Section 1](./LittleShopBE,Part1.postman_collection.json)
+* [Little Shop BE, Section 2](./LittleShopBE,Part2.postman_collection.json)
 
 Click on each link to load it in your browser, then hit Cmd-S to save it to your system.
 

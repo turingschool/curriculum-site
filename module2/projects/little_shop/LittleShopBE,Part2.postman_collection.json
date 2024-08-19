@@ -1,9 +1,10 @@
 {
 	"info": {
-		"_postman_id": "88a116e7-0503-45b9-9c1d-0e88fc5f57ca",
-		"name": "Rails Engine Lite, Part 2",
-		"description": "Turing School of Software & Design, Backend Module 3 Solo Project\n\n\"Rails Engine\" is a Rails-based API which mimics an e-commerce platform reporting tool as an API. Users can query and store merchants and items, and retrieve information about an item's merchant, or a list of a merchant's items. Users can also run one of several \"business intelligence\" endpoints to do rich reporting using ActiveRecord queries.",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+		"_postman_id": "0f32a27f-648d-4ea8-ac84-2f90f4ecacbd",
+		"name": "Little Shop BE, Part 2",
+		"description": "Turing School of Software & Design, Software Engineering Program Module 2\n\n\"Little Shop BE\" is a Rails-based API which mimics an e-commerce platform reporting tool as an API. Users can query and store merchants and items, and retrieve information about an item's merchant, a merchant's customers and invoices, or a list of a merchant's items. The Little Shop API endpoints are consumed by the Little Shop FE server, and this Postman collection is an additional tool to verify the API is serving the right JSON schema.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22241276"
 	},
 	"item": [
 		{

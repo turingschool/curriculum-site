@@ -1,9 +1,10 @@
 {
 	"info": {
-		"_postman_id": "1d0f75c2-4c1c-49b9-896f-e9a4aa295a66",
-		"name": "Rails Engine Lite, Part 1",
-		"description": "Turing School of Software & Design, Backend Module 3 Solo Project\n\n\"Rails Engine\" is a Rails-based API which mimics an e-commerce platform reporting tool as an API. Users can query and store merchants and items, and retrieve information about an item's merchant, or a list of a merchant's items. Users can also run one of several \"business intelligence\" endpoints to do rich reporting using ActiveRecord queries.",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+		"_postman_id": "68d3ec3f-5f5a-4d00-b08a-c5d6d9e7a5db",
+		"name": "Little Shop BE, Part 1",
+		"description": "Turing School of Software & Design, Software Engineering Program Module 2\n\n\"Little Shop BE\" is a Rails-based API which mimics an e-commerce platform reporting tool as an API. Users can query and store merchants and items, and retrieve information about an item's merchant, or a list of a merchant's items.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22241276"
 	},
 	"item": [
 		{
@@ -29,9 +30,55 @@
 									"        pm.expect(payload.data[0].attributes.name).to.eq(pm.globals.get('first_merchant_name'));",
 									"    });",
 									"});",
+									"",
+									"pm.sendRequest('http://localhost:3000/api/v1/merchants?count=true', (error, response) => {",
+									"    if (error) {",
+									"        console.log(error);",
+									"    }",
+									"    pm.test('happy path for count parameter, merchants returned with item_count', () => {",
+									"        pm.expect(error).to.equal(null);",
+									"        pm.response.to.have.status(200);",
+									"        var payload = response.json();",
+									"        pm.expect(payload).to.have.property('data');",
+									"        pm.expect(payload.data).to.be.an('array');",
+									"        pm.expect(payload.data[0].attributes.item_count).to.eq(pm.globals.get('first_merchant_item_count'));",
+									"    });",
+									"});",
+									"",
+									"pm.sendRequest('http://localhost:3000/api/v1/merchants?sorted=age', (error, response) => {",
+									"    if (error) {",
+									"        console.log(error);",
+									"    }",
+									"    pm.test('happy path for sort parameter, all merchants returned and sorted', () => {",
+									"        pm.expect(error).to.equal(null);",
+									"        pm.response.to.have.status(200);",
+									"        var payload = response.json();",
+									"        pm.expect(payload).to.have.property('data');",
+									"        pm.expect(payload.data).to.be.an('array');",
+									"        pm.expect(payload.data[0].attributes.name).to.not.eq(pm.globals.get('first_merchant_name'));",
+									"    });",
+									"});",
+									"",
+									"pm.sendRequest('http://localhost:3000/api/v1/merchants?status=returned', (error, response) => {",
+									"    if (error) {",
+									"        console.log(error);",
+									"    }",
+									"    pm.test('happy path for status filter, all merchants with invoices indicated returned items are returned', () => {",
+									"        pm.expect(error).to.equal(null);",
+									"        pm.response.to.have.status(200);",
+									"        var payload = response.json();",
+									"        pm.expect(payload).to.have.property('data');",
+									"        pm.expect(payload.data).to.be.an('array');",
+									"        pm.expect(payload.data.length).to.eq(1);",
+									"        pm.expect(payload.data[0].attributes.name).to.eq(pm.globals.get('returned_merchant_name'));",
+									"    });",
+									"});",
+									"",
+									"",
 									""
 								],
-								"type": "text/javascript"
+								"type": "text/javascript",
+								"packages": {}
 							}
 						},
 						{
@@ -40,9 +87,12 @@
 								"exec": [
 									"pm.globals.set('first_merchant_name', 'Schroeder-Jerde');",
 									"pm.globals.set('twenty_first_merchant_name', 'Leffler, Rice and Leuschke');",
-									"pm.globals.set('fiftieth_merchant_name', 'Paucek Inc');"
+									"pm.globals.set('fiftieth_merchant_name', 'Paucek Inc');",
+									"pm.globals.set('first_merchant_item_count', 15);",
+									"pm.globals.set('returned_merchant_name', 'Glover Inc');"
 								],
-								"type": "text/javascript"
+								"type": "text/javascript",
+								"packages": {}
 							}
 						}
 					],
@@ -284,6 +334,288 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "Create (and Delete) One Merchant",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"response should be okay to process\", function () {",
+									"    pm.response.to.not.be.error;",
+									"    pm.response.to.have.status(201);",
+									"",
+									"    const schema = {",
+									"        \"type\": \"object\",",
+									"        \"properties\": {",
+									"            \"data\": {",
+									"                \"type\": \"object\",",
+									"                \"properties\": {",
+									"                    \"id\": { \"type\": \"string\" },",
+									"                    \"type\": { \"type\": \"string\" },",
+									"                    \"attributes\": { ",
+									"                        \"type\": \"object\",",
+									"                        \"properties\": {",
+									"                            \"name\": { \"type\": \"string\"}",
+									"                        },",
+									"                        \"required\": [\"name\"]",
+									"                    }",
+									"                },",
+									"                \"required\": [\"id\", \"type\", \"attributes\"]",
+									"            }",
+									"        },",
+									"        \"required\": ['data']",
+									"    }",
+									"",
+									"    // expect a \"data\" attribute",
+									"    pm.response.to.have.jsonBody('data');",
+									"    var jsonData = pm.response.json();",
+									"    var data = jsonData.data;",
+									"    var id_to_delete = Number(data.id);",
+									"    var url = `http://localhost:3000/api/v1/merchants/${id_to_delete}`",
+									"    console.log('calling DELETE for', url)",
+									"    pm.sendRequest({url: url, method: 'DELETE'}, function (err, response) {",
+									"        if (err) {",
+									"            console.log(err);",
+									"        }",
+									"    });",
+									"",
+									"    // now check that the whole schema matches by name and data type",
+									"    pm.response.to.have.jsonSchema(schema);",
+									"",
+									"    // expect data has exactly 3 attributes",
+									"    pm.expect(Object.keys(data).length).to.eq(3);",
+									"",
+									"    // expect that our \"attributes\" portion has exactly 1 attribute",
+									"    pm.expect(Object.keys(data.attributes).length).to.eq(1);",
+									"",
+									"    // expect our values to match",
+									"    pm.expect(data.type).to.eq('merchant');",
+									"    pm.expect(data.id).to.eq(String(id_to_delete));",
+									"    pm.expect(data.attributes.name).to.eq(pm.globals.get('merchant_name'));",
+									"});",
+									"",
+									"pm.sendRequest({url: 'http://localhost:3000/api/v1/merchants', method: 'POST'}, (error, response) => {",
+									"    if (error) {",
+									"        console.log(error);",
+									"    }",
+									"    pm.test('sad path, cannot create merchant without attributes', () => {",
+									"        pm.expect(response.code).to.be.oneOf([400, 422]);",
+									"        var payload = response.json();",
+									"        pm.expect(payload).to.have.property('message');",
+									"        pm.expect(payload).to.have.property('errors')",
+									"        pm.expect(payload.errors).to.be.an('array');",
+									"        pm.expect(payload.errors[0]).be.a('string');",
+									"    });",
+									"});",
+									"",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.globals.set('merchant_name', 'New Merchant');"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"{{merchant_name}}\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/merchants",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"merchants"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update One Merchant",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.globals.set('merchant_id', 4);",
+									"",
+									"pm.sendRequest(`http://localhost:3000/api/v1/merchants/${pm.globals.get('merchant_id')}`, (error, response) => {",
+									"    if (error) {",
+									"        console.log(error);",
+									"    } else {",
+									"        var data = response.json().data;",
+									"console.log(data);",
+									"        pm.globals.set('old_merchant_name', data.attributes.name);",
+									"    }",
+									"});",
+									"",
+									"pm.globals.set('new_merchant_name', 'Merchant New and Improved');",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"happy path, update one merchant by id\", function () {",
+									"    pm.response.to.not.be.error;",
+									"    pm.expect(pm.response.code).to.be.oneOf([200,201,202]);",
+									"",
+									"    const schema = {",
+									"        \"type\": \"object\",",
+									"        \"properties\": {",
+									"            \"data\": {",
+									"                \"type\": \"object\",",
+									"                \"properties\": {",
+									"                    \"id\": { \"type\": \"string\" },",
+									"                    \"type\": { \"type\": \"string\" },",
+									"                    \"attributes\": { ",
+									"                        \"type\": \"object\",",
+									"                        \"properties\": {",
+									"                            \"name\": { \"type\": \"string\"}",
+									"                        },",
+									"                        \"required\": [\"name\"]",
+									"                    }",
+									"                },",
+									"                \"required\": [\"id\", \"type\", \"attributes\"]",
+									"            }",
+									"        },",
+									"        \"required\": ['data']",
+									"    }",
+									"",
+									"    // restore merchant to what it used to be",
+									"    if (pm.globals.get('old_merchant_name') !== null) {",
+									"        const patchRequest = {",
+									"            url: `http://localhost:3000/api/v1/merchants/${pm.globals.get('merchant_id')}`,",
+									"            method: 'PATCH',",
+									"            header: {",
+									"                'Content-Type': 'application/json',",
+									"            },",
+									"            body: JSON.stringify({",
+									"                name: pm.globals.get('old_merchant_name')",
+									"            })",
+									"        };",
+									"        pm.sendRequest(patchRequest, (error, response) => {",
+									"            console.log(error ? error : response.json());",
+									"        });",
+									"    }",
+									"",
+									"    // expect a \"data\" attribute",
+									"    pm.response.to.have.jsonBody('data');",
+									"    var jsonData = pm.response.json();",
+									"    var data = jsonData.data;",
+									"",
+									"    // now check that the whole schema matches by name and data type",
+									"    pm.response.to.have.jsonSchema(schema);",
+									"",
+									"    // expect data has exactly 3 attributes",
+									"    pm.expect(Object.keys(data).length).to.eq(3);",
+									"",
+									"    // expect that our \"attributes\" portion has exactly 1 attributes",
+									"    pm.expect(Object.keys(data.attributes).length).to.eq(1);",
+									"",
+									"    // expect our values to match",
+									"    pm.expect(data.id).to.eq(String(pm.globals.get('merchant_id')));",
+									"    pm.expect(data.type).to.eq('merchant');",
+									"    pm.expect(data.attributes.name).to.eq(pm.globals.get('new_merchant_name'));",
+									"});",
+									"",
+									"",
+									"",
+									"",
+									"",
+									"pm.sendRequest({",
+									"    url: `http://localhost:3000/api/v1/merchants/99999999`,",
+									"    method: 'PUT',",
+									"    header: {",
+									"        'Content-Type': 'application/json',",
+									"    },",
+									"}, (error, response) => {",
+									"    pm.test('edge case, bad merchant id returns 400 or 404', () => {",
+									"        pm.expect(response.code).to.be.oneOf([400, 404]);",
+									"    });",
+									"});",
+									"",
+									"pm.sendRequest({",
+									"    url: `http://localhost:3000/api/v1/merchants/string-instead-of-integer`,",
+									"    method: 'PUT',",
+									"    header: {",
+									"        'Content-Type': 'application/json',",
+									"    },",
+									"    body: JSON.stringify({",
+									"        name: pm.globals.get('old_item_name')",
+									"    })",
+									"}, (error, response) => {",
+									"    pm.test('edge case, string id returns 404', () => {",
+									"        pm.expect(response).to.have.property('code', 404);",
+									"        pm.expect(response).to.have.property('status', 'Not Found');",
+									"    });",
+									"});",
+									"",
+									"",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"{{new_merchant_name}}\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/merchants/{{merchant_id}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"merchants",
+								"{{merchant_id}}"
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		},
@@ -349,9 +681,25 @@
 									"    pm.expect(Object.keys(first_item.attributes).length).to.eq(4);",
 									"",
 									"    pm.expect(first_item.attributes.name).to.eq(pm.globals.get('first_item_name'));",
-									"});"
+									"});",
+									"",
+									"pm.sendRequest('http://localhost:3000/api/v1/items?sorted=price', (error, response) => {",
+									"    if (error) {",
+									"        console.log(error);",
+									"    }",
+									"    pm.test('happy path for sort parameter, all items returned and sorted by price', () => {",
+									"        pm.expect(error).to.equal(null);",
+									"        pm.response.to.have.status(200);",
+									"        var payload = response.json();",
+									"        pm.expect(payload).to.have.property('data');",
+									"        pm.expect(payload.data).to.be.an('array');",
+									"        pm.expect(payload.data[0].attributes.unit_price).to.eq(pm.globals.get('cheapest_item_price'));",
+									"    });",
+									"});",
+									""
 								],
-								"type": "text/javascript"
+								"type": "text/javascript",
+								"packages": {}
 							}
 						},
 						{
@@ -362,9 +710,12 @@
 									"pm.globals.set('twenty_first_item_name', 'Item Rerum Ab');",
 									"pm.globals.set('fiftieth_item_name', 'Item Sunt Nesciunt');",
 									"",
-									"pm.globals.set('total_item_count', 2483);"
+									"pm.globals.set('total_item_count', 2483);",
+									"",
+									"pm.globals.set('cheapest_item_price', 0.38);"
 								],
-								"type": "text/javascript"
+								"type": "text/javascript",
+								"packages": {}
 							}
 						}
 					],
@@ -964,35 +1315,88 @@
 			]
 		},
 		{
-			"name": "Extensions, Edge Cases",
+			"name": "1c. Invoices and Customers",
 			"item": [
 				{
-					"name": "Get a Merchant's Items Edge Case",
+					"name": "Get All Customers for Given Merchant",
 					"event": [
 						{
 							"listen": "prerequest",
 							"script": {
 								"exec": [
-									"pm.globals.set('merchant_id', 'string-instead-of-integer');",
+									"pm.globals.set('merchant_id', 4);",
 									""
 								],
-								"type": "text/javascript"
+								"type": "text/javascript",
+								"packages": {}
 							}
 						},
 						{
 							"listen": "test",
 							"script": {
 								"exec": [
-									"pm.test(\"sad path, fetch one merchant by id\", function () {",
-									"    pm.response.to.be.error;",
-									"    pm.response.to.have.status(404);",
+									"pm.test(\"happy path, fetch customer names for a given merchant\", function () {",
+									"    pm.response.to.not.be.error;",
+									"    pm.response.to.have.status(200);",
 									"",
-									"    // expect an \"errors\" attribute",
-									"    pm.response.to.have.jsonBody('errors');",
+									"    const customer_schema = {",
+									"        \"type\": \"object\",",
+									"        \"properties\": {",
+									"            \"id\": { \"type\": \"string\" },",
+									"            \"type\": { \"type\": \"string\" },",
+									"            \"attributes\": { ",
+									"                \"type\": \"object\",",
+									"                \"properties\": {",
+									"                    \"first_name\": { \"type\": \"string\"},",
+									"                    \"last_name\": { \"type\": \"string\"}",
+									"                },",
+									"                \"required\": [\"first_name\", \"last_name\"]",
+									"            }",
+									"        },",
+									"        \"required\": [\"id\", \"type\", \"attributes\"]",
+									"    }",
+									"",
+									"    const base_schema = {",
+									"        \"type\": \"object\",",
+									"        \"properties\": {",
+									"            \"data\": {",
+									"                \"type\": \"array\",",
+									"            }",
+									"        },",
+									"        \"required\": ['data']",
+									"    }",
+									"",
+									"    // expect a \"data\" attribute",
+									"    pm.response.to.have.jsonBody('data');",
+									"    var jsonData = pm.response.json();",
+									"    var data = jsonData.data;",
+									"    var first_customer = data[0];",
+									"",
+									"    // now check that the whole schema matches and has the right number of items",
+									"    pm.response.to.have.jsonSchema(base_schema);",
+									"    pm.expect(data.length).to.eq(50);",
+									"",
+									"    // now inspect the first item's schema to ensure it also matches",
+									"    pm.expect(first_customer).to.have.jsonSchema(customer_schema);",
+									"",
+									"    // expect customer data has exactly 3 attributes",
+									"    pm.expect(Object.keys(first_customer).length).to.eq(3);",
+									"",
+									"    // expect that our customer \"attributes\" portion has exactly 2 attributes",
+									"    pm.expect(Object.keys(first_customer.attributes).length).to.eq(2);",
 									"});",
+									"",
+									"pm.sendRequest('http://localhost:3000/api/v1/merchants/8923987297/customers', (error, response) => {",
+									"    pm.test('sad path, bad integer id returns 404', () => {",
+									"        pm.expect(response).to.have.property('code', 404);",
+									"        pm.expect(response).to.have.property('status', 'Not Found');",
+									"    });",
+									"});",
+									"",
 									""
 								],
-								"type": "text/javascript"
+								"type": "text/javascript",
+								"packages": {}
 							}
 						}
 					],
@@ -1000,7 +1404,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:3000/api/v1/merchants/{{merchant_id}}/items",
+							"raw": "http://localhost:3000/api/v1/merchants/{{merchant_id}}/customers",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -1011,52 +1415,58 @@
 								"v1",
 								"merchants",
 								"{{merchant_id}}",
-								"items"
+								"customers"
 							]
 						}
 					},
 					"response": []
 				},
 				{
-					"name": "Get One Merchant Edge Case Copy",
+					"name": "Get All Invoices for Given Merchant",
 					"event": [
 						{
 							"listen": "prerequest",
 							"script": {
 								"exec": [
-									"pm.globals.set('merchant_id', 42);",
-									"",
-									"pm.globals.set('merchant_name', 'Glover Inc');",
+									"pm.globals.set('merchant_id', 86);",
+									"pm.globals.set('filtered_invoice_id', '4844');",
 									""
 								],
-								"type": "text/javascript"
+								"type": "text/javascript",
+								"packages": {}
 							}
 						},
 						{
 							"listen": "test",
 							"script": {
 								"exec": [
-									"pm.test(\"happy path, fetch one merchant by id\", function () {",
+									"pm.test(\"happy path, fetch invoices for a given merchant\", function () {",
 									"    pm.response.to.not.be.error;",
 									"    pm.response.to.have.status(200);",
 									"",
-									"    const schema = {",
+									"    const invoice_schema = {",
+									"        \"type\": \"object\",",
+									"        \"properties\": {",
+									"            \"id\": { \"type\": \"string\" },",
+									"            \"type\": { \"type\": \"string\" },",
+									"            \"attributes\": { ",
+									"                \"type\": \"object\",",
+									"                \"properties\": {",
+									"                    \"merchant_id\": { \"type\": \"number\"},",
+									"                    \"customer_id\": { \"type\": \"number\"},",
+									"                    \"status\": { \"type\": \"string\"}",
+									"                },",
+									"                \"required\": [\"merchant_id\", \"customer_id\", \"status\"]",
+									"            }",
+									"        },",
+									"        \"required\": [\"id\", \"type\", \"attributes\"]",
+									"    }",
+									"",
+									"    const base_schema = {",
 									"        \"type\": \"object\",",
 									"        \"properties\": {",
 									"            \"data\": {",
-									"                \"type\": \"object\",",
-									"                \"properties\": {",
-									"                    \"id\": { \"type\": \"string\" },",
-									"                    \"type\": { \"type\": \"string\" },",
-									"                    \"attributes\": { ",
-									"                        \"type\": \"object\",",
-									"                        \"properties\": {",
-									"                            \"name\": { \"type\": \"string\"},",
-									"                        },",
-									"                        \"required\": [\"name\"]",
-									"                    }",
-									"                },",
-									"                \"required\": [\"id\", \"type\", \"attributes\"]",
+									"                \"type\": \"array\",",
 									"            }",
 									"        },",
 									"        \"required\": ['data']",
@@ -1066,38 +1476,49 @@
 									"    pm.response.to.have.jsonBody('data');",
 									"    var jsonData = pm.response.json();",
 									"    var data = jsonData.data;",
+									"    var first_invoice = data[0];",
 									"",
-									"    // now check that the whole schema matches by name and data type",
-									"    pm.response.to.have.jsonSchema(schema);",
+									"    // now check that the whole schema matches and has the right number of invoices",
+									"    pm.response.to.have.jsonSchema(base_schema);",
+									"    pm.expect(data.length).to.eq(57);",
 									"",
-									"    // expect data has exactly 3 attributes",
-									"    pm.expect(Object.keys(data).length).to.eq(3);",
+									"    // now inspect the first item's schema to ensure it also matches",
+									"    pm.expect(first_invoice).to.have.jsonSchema(invoice_schema);",
 									"",
-									"    // expect that our \"attributes\" portion has exactly 1 attribute",
-									"    pm.expect(Object.keys(data.attributes).length).to.eq(1);",
+									"    // expect customer data has exactly 3 attributes",
+									"    pm.expect(Object.keys(first_invoice).length).to.eq(3);",
 									"",
-									"    // expect our values to match",
-									"    pm.expect(data.id).to.eq(String(pm.globals.get('merchant_id')));",
-									"    pm.expect(data.type).to.eq('merchant');",
-									"    pm.expect(data.attributes.name).to.eq(pm.globals.get('merchant_name'));",
+									"    // expect that our customer \"attributes\" portion has exactly 3 attributes",
+									"    pm.expect(Object.keys(first_invoice.attributes).length).to.eq(3);",
 									"});",
 									"",
-									"pm.sendRequest('http://localhost:3000/api/v1/merchants/8923987297', (error, response) => {",
+									"pm.sendRequest('http://localhost:3000/api/v1/merchants/8923987297/invoices', (error, response) => {",
 									"    pm.test('sad path, bad integer id returns 404', () => {",
 									"        pm.expect(response).to.have.property('code', 404);",
 									"        pm.expect(response).to.have.property('status', 'Not Found');",
 									"    });",
 									"});",
 									"",
-									"pm.sendRequest('http://localhost:3000/api/v1/merchants/string-instead-of-integer', (error, response) => {",
-									"    pm.test('edge case, string id returns 404', () => {",
-									"        pm.expect(response).to.have.property('code', 404);",
-									"        pm.expect(response).to.have.property('status', 'Not Found');",
+									"pm.sendRequest('http://localhost:3000/api/v1/merchants/86/invoices?status=packaged', (error, response) => {",
+									"    if (error) {",
+									"        console.log(error);",
+									"    }",
+									"    pm.test('happy path for status, all invoices returned for given status', () => {",
+									"        pm.expect(error).to.equal(null);",
+									"        pm.response.to.have.status(200);",
+									"        var payload = response.json();",
+									"        pm.expect(payload).to.have.property('data');",
+									"        pm.expect(payload.data).to.be.an('array');",
+									"        pm.expect(payload.data.length).to.eq(1);",
+									"        pm.expect(payload.data[0].id).to.eq(pm.globals.get('filtered_invoice_id'));",
 									"    });",
 									"});",
+									"",
+									"",
 									""
 								],
-								"type": "text/javascript"
+								"type": "text/javascript",
+								"packages": {}
 							}
 						}
 					],
@@ -1105,7 +1526,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:3000/api/v1/merchants/{{merchant_id}}",
+							"raw": "http://localhost:3000/api/v1/merchants/{{merchant_id}}/invoices",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -1115,7 +1536,8 @@
 								"api",
 								"v1",
 								"merchants",
-								"{{merchant_id}}"
+								"{{merchant_id}}",
+								"invoices"
 							]
 						}
 					},
