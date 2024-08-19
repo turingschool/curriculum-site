@@ -29,7 +29,7 @@ Your project will be evaluated based on the following rubric:
 ### Feature Delivery
 
 * Exceeds Expectations: Project completes all requirements and at least one extensions.
-* Meets Expectations: Project completes all requirements. Postman tests pass/FE functions correctly.  FE requirements are met.
+* Meets Expectations: Project completes all requirements. Postman tests pass/FE functions correctly.  FE requirements are met. BE application is successfully deployed. 
 * Approaching Expectations: Project fails to complete 1 - 2 required endpoints
 * Below Expectations: Project fails to complete more than 3 or more endpoints
 
