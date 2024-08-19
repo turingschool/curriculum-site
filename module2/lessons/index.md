@@ -3,7 +3,27 @@ layout: page
 title: Module 2 - Lessons
 ---
 
-## Introduction To Rails
+## HTML and CSS
+
+- [HTML: Fundamentals](./html_fundamentals)
+- [CSS: Fundamentals](./css_fundamentals)
+- [CSS: Flexbox](./css_flexbox)
+- [CSS: Intro To Layout](./css_intro_to_layout) (prework for Flexbox lesson)
+
+## JavaScript
+
+- [JS: Fundamentals](./js_fundamentals)
+- [JS: Intro to the DOM](./js_intro_to_dom)
+- [JS: Event Listeners](./js_event_listeners)
+- [JS: Array Prototype Methods](./js_array_prototype_methods)
+- [JS: Approaching Problems Many Ways](./js_approaching_problems_many_ways.md)
+
+## Web Applications
+
+- [How the Web Works I: HTTP Request/Response Cycle](./how_the_web_works_http)
+- [How the Web Works II: APIs](./how_the_web_works_api)
+
+## Rails Development
 
 - [Beginner Rails Workshop](./beginner_rails_workshop)
 - [One to Many Relationships in the Database](./one_to_many_relationships_part1)
@@ -12,21 +32,13 @@ title: Module 2 - Lessons
 - [Introduction to Building an API](./intro_to_building_a_rails_api)
 - [Building an API in Rails](./building_an_api)
 - [Serializers](./serializers)
-
-## Web Applications
-
-- [How the Web Works I: HTTP Request/Response Cycle](./how_the_web_works_http)
-- [How the Web Works II: APIs](./how_the_web_works_api)
-
-
-## Rails Application and Development
-
 - [Routing: REST](./restful_routes_and_crud.md)
 - [Advanced Routing](./advanced_routing)
 - [Model Testing](./model_testing)
 - [Data Validations](./data_validations)
 - [Error Handling](./error_handling)
 - [Error Handling pt 2: DRYing it up](./dry_exception_handling)
+- [Active Record: Class vs Instance Methods](./class_vs_instance_methods)
 
 ## Databases
 
@@ -34,28 +46,6 @@ title: Module 2 - Lessons
 - [SQL and Active Record](./sql_and_active_record)
 - [Joins](./joins)
 <!-- * [Joining Multiple Tables](./joins_2)-->
-
-## HTML and CSS
-
-- [HTML: Fundamentals](./html_fundamentals)
-- [CSS: Fundamentals](./css_fundamentals)
-- [CSS: Flexbox](./css_flexbox)
-- [CSS: Intro To Layout](./css_intro_to_layout) (prework for Flexbox lesson)
-
-## Intro to JavaScript
-
-- [JS: Fundamentals](./js_fundamentals)
-- [JS: Intro to the DOM](./js_intro_to_dom)
-- [JS: Event Listeners](./js_event_listeners)
-
-## JS Array Prototype Methods
-
-- [JS: Array Prototype Methods](./js_array_prototype_methods)
-- [JS: Approaching Problems Many Ways ](./js_approaching_problems_many_ways.md)
-
-## Active Record
-
-- [Class vs Instance Methods](./class_vs_instance_methods)
 
 ## Professional Development
 
@@ -69,4 +59,3 @@ title: Module 2 - Lessons
 
 - [Chrome Dev Tools](./chrome_dev_tools)
 - [JSON for API development](../resources/json_for_api_development)
-
