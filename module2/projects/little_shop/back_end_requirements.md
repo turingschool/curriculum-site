@@ -105,9 +105,9 @@ The error messages aren't that great, but we're here to help you diagnose the pr
 
 #### Running the full test suite
 
-In the bottom right corner of the Postman interface, you'll see a "Runner" button. Click that and a new panel will appear. From here, you can drag one of the three "Rails Engine" collections to the right side of the screen.
+In the bottom right corner of the Postman interface, you'll see a "Runner" button. Click that and a new panel will appear. From here, you can drag one of the two "Little Shop" collections to the right side of the screen.
 
-Next, you can select/deselect which tests you'd like to run. Finally, click the "Run Rails Engine" button.
+Next, you can select/deselect which tests you'd like to run. Finally, click the "Run Little Shop" button.
 
 As it runs, it will show you which tests are passing or failing.
 </section>
