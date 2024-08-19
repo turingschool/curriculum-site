@@ -44,52 +44,6 @@ Below are skills that are more general/necessary on the job that are practiced b
 Groups must utilize a project board in order to organize areas of work and allow for  visibility of each other's progress. In addition, groups will be evaluated on the evidence of meaningful code review, either via comments on a PR, or through discussion of live code review during their evaluation. 
 </section>
 
-<section class="dropdown">
-### Postman
-
-By importing the JSON files noted below, you can open the Postman "Runner" and execute a large suite of tests.
-
-**Note: not ALL of the Postman tests will be passing in order to pass the project**. You will need to examine the tests you NEED to run, since we're giving students some choice in how to build the application.
-
-#### Importing the Test Suite
-
-Download the test suites for Postman:
-* [Little Shop BE, Section 1](./LittleShopBE,Part1.postman_collection.json)
-* [Little Shop BE, Section 2](./LittleShopBE,Part2.postman_collection.json)
-
-Click on each link to load it in your browser, then hit Cmd-S to save it to your system.
-
-In Postman, in the top left corner, click on the "Import" button, and use the file selector to locate the two files on your operating system.
-
-Next, you'll "confirm" the import. The test suite should display as a "Postman Collection v2.1" and import as a "Collection". Click the "Import" button to continue.
-
-Within your collections in Postman, you should see two collections-- "Rails Engine Lite, Part 1", and "Rails Engine Lite, Part 2". 
-
-#### Running the Tests
-
-There are two ways to run the test suite: one endpoint at a time, or the whole suite.
-
-#### Running one endpoint at a time
-
-As you develop your endpoints, run `rails s` and find the appropriate endpoint within the Postman collection you imported. For example, "Get All Merchants". When you select "Get All Merchants" from the list, you should see a Postman tab open, pre-populated with everything you need to connect to the endpoint in your code and see if it works correctly.
-
-Click the "Send" button in the top right corner.
-
-In the lower portion of the Postman interface, you should see "Body", "Cookies", "Headers" and a spot that says something like "Test Results (7/7)". This would indicate that 7 tests passed out of 7. If you see, for example, 3/7 then 3 tests passed and 4 did not.
-
-You can click on the "Test Results (7/7)" to see which tests passed.
-
-The error messages aren't that great, but we're here to help you diagnose the problems.
-
-#### Running the full test suite
-
-In the bottom right corner of the Postman interface, you'll see a "Runner" button. Click that and a new panel will appear. From here, you can drag one of the three "Rails Engine" collections to the right side of the screen.
-
-Next, you can select/deselect which tests you'd like to run. Finally, click the "Run Rails Engine" button.
-
-As it runs, it will show you which tests are passing or failing.
-</section>
-
 ## BE Technical Requirements
 
 The BE Technical Requirements for this project can be found [here](./back_end_requirements)

@@ -66,9 +66,66 @@ system(cmd)
 Finally, commit your setup steps and push to a new repo. Share that new repo with your project partner(s). Be sure to add them as a collaborator.
 </section>
 
+
+<section class="dropdown">
+### Postman
+
+By importing the JSON files noted below, you can open the Postman "Runner" and execute a large suite of tests.
+
+**Note: not ALL of the Postman tests will be passing in order to pass the project**. You will need to examine the tests you NEED to run, since we're giving students some choice in how to build the application.
+
+#### Importing the Test Suite
+
+Download the test suites for Postman:
+* [Little Shop BE, Section 1](./LittleShopBE,Part1.postman_collection.json)
+* [Little Shop BE, Section 2](./LittleShopBE,Part2.postman_collection.json)
+
+Click on each link to load it in your browser, then hit Cmd-S to save it to your system.
+
+In Postman, in the top left corner, click on the "Import" button, and use the file selector to locate the two files on your operating system.
+
+
+Within your collections in Postman, you should see two collections-- "Little Shop BE, Part 1", and "Little Shop BE, Part 2". 
+
+#### Running the Tests
+
+There are two ways to run the test suite: one endpoint at a time, or the whole suite.
+
+#### Running one endpoint at a time
+
+As you develop your endpoints, run `rails s` and find the appropriate endpoint within the Postman collection you imported. For example, "Get All Merchants". When you select "Get All Merchants" from the list, you should see a Postman tab open, pre-populated with everything you need to connect to the endpoint in your code and see if it works correctly.
+
+Click the "Send" button in the top right corner.
+
+In the lower portion of the Postman interface, you should see "Body", "Cookies", "Headers" and a spot that says something like "Test Results (7/7)". This would indicate that 7 tests passed out of 7. If you see, for example, 3/7 then 3 tests passed and 4 did not.
+
+You can click on the "Test Results (7/7)" to see which tests passed.
+
+The error messages aren't that great, but we're here to help you diagnose the problems.
+
+#### Running the full test suite
+
+In the bottom right corner of the Postman interface, you'll see a "Runner" button. Click that and a new panel will appear. From here, you can drag one of the three "Rails Engine" collections to the right side of the screen.
+
+Next, you can select/deselect which tests you'd like to run. Finally, click the "Run Rails Engine" button.
+
+As it runs, it will show you which tests are passing or failing.
+</section>
+
+<section class="dropdown">
 ### API Endpoints, general definitions
 
-You will need to expose the data through a multitude of API endpoints. All of your endpoints should follow these technical expectations:
+## Your BE Application
+
+In total, the MINIMUM requirement for the BE portion of this project will be 16 endpoints:
+
+* Section One has 14 endpoints (some with additional features via query parameters)
+* Section Two has 2 endpoints
+
+
+You may choose to divide these up between your project partners in whatever way seems best. One pair could handle the Merchant stories, and one pair could handle the Item and additional endpoints. You may also decide to work on the first story/stories together to have a solid understanding first before dividing and conquering. 
+
+All of your endpoints should follow these technical expectations:
 
 * All endpoints should be fully tested for happy path AND sad path. **The Postman tests are not a substitute for writing your own tests.**
   * As an extension, you can explore integrating testing gems such as [FactoryBot](https://github.com/thoughtbot/factory_bot/blob/master/GETTING_STARTED.md) and/or [Faker](https://github.com/faker-ruby/faker#default) into your projects.
@@ -109,7 +166,7 @@ module Api
   end
 end
 ```
-
+<section class="dropdown">
 #### Error Responses
 
 If the user causes an error for which you are sending a 400-series error code, the JSON body of the response should follow this format:
@@ -138,6 +195,7 @@ As part of the project, we're requiring students to try to refactor exception ha
 Sad Path: the user did something which didn't cause an _error_ but didn't work out the way they'd hoped. For example, searching for a merchant by name and getting zero results is a "sad path"
 
 Edge Case: the user did something which broke the functionality of an endpoint. For example, a user searches for an item based on a negative price, or searching between revenue dates where the end date comes before the start date.
+</section>
 
 <section class='call-to-action'>
 ## Minimum Requirements:
@@ -185,17 +243,7 @@ Or,
   * Find all MERCHANTS based on search criteria
 
 </section>
-
-
-## Your BE Application
-
-In total, the MINIMUM requirement for the BE portion of this project will be 16 endpoints:
-
-* section one has 14 endpoints (some with additional features via query parameters)
-* section two has 2 endpoints
-
-
-You may choose to divide these up between your project partners in whatever way seems best. One pair could handle the Merchant stories, and one pair could handle the Item and additional endpoints. You may also decide to work on the first story/stories together to have a solid understanding first before dividing and conquering. 
+</section>
 
 <section class="dropdown">
 ### SECTION ONE: RESTful Requests - More Detail
@@ -554,7 +602,6 @@ This endpoint should:
 </section>
 </section>
 
----
 
 <section class="dropdown">
 ### SECTION TWO: Non-RESTful Search Endpoints - More detail
@@ -672,10 +719,11 @@ It should not return a 404 if no matches are found.
 </section>
 </section>
 
-
+<section class="dropdown">
 ### BE Deployment (Required)
 
 Groups are required to deploy this API to the Internet, using either Heroku or Render. To avoid difficult deployment troubleshooting, please deploy early and deploy often! To use Heroku, follow [these instructions](https://devcenter.heroku.com/articles/getting-started-with-rails7) and don't forget to provision a database! If you're using Render, check out our guide [here](https://curriculum.turing.edu/module2/lessons/deployment_guide)
+</section>
 
 <section class="call-to-action">
 
