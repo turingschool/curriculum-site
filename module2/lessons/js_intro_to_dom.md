@@ -9,6 +9,9 @@ tags: javascript, dom, browser
 * Access and use the Chrome Developer Tools
 * Continue to develop a basic understanding for JavaScript syntax
 * Understand how to query DOM elements and update a page after its been loaded
+  * Change the text displayed on a page
+  * Change the html displayed on a page
+  * Change styling using JavaScript
 
 ## Vocabulary
 
