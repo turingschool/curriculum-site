@@ -113,12 +113,16 @@ After running the code in the console that is pictured above, the text of the `h
 <section id="try-it" class="call-to-action">
 ### Try It
 
-Fork [this CodePen](https://codepen.io/turing-school/pen/bGGmOrR) and complete the steps listed below, in the `JS` file of the CodePen.
+Fork [this CodePen](https://codepen.io/turing-school/pen/bGGmOrR).  In the `JS` file of the CodePen, complete the steps listed below.  Work through each bullet one at a time.
 
 - Declare a variable `studentName` and assign the value of the element with the class of `student` to it
 - Declare a variable `schoolName` and assign the value of the `h3` element to it
 - Declare a variable `bestGrade` and assign the value of the element with a class of `grade-2` to it
-- Declare a variable `newData` and assign an object with keys of `studentName`, `schoolName`, and `bestGrade` (whose values are new strings with whatever information you want to display on the page instead) to it
+
+Now that we've queried the elements we need, we're going to change the data being displayed to users.  So we need somewhere to store the new data that we're going to display instead.
+- Declare a variable `newData` to store an object with keys of `studentName`, `schoolName`, and `bestGrade`.  Make the value of each key be the new name, school, and grade that you'll want to change the display to.   
+
+Now, change the text of each queried element to display the data you saved in your newData object.
 - Change the `innerText` of the `studentName` variable to the `studentName` value from your `newData` object
 - Change the `innerText` of the `schoolName` variable to the `schoolName` value from your object
 - Change the `innerText` of the `bestGrade` variable to be the grade you gave your `bestGrade` key in your object
