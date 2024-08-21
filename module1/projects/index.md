@@ -12,6 +12,7 @@ The project specs will be linked below as each project is assigned.
 <!-- Alternate between Flash Cards and War or Peace for repeaters -->
 <!-- Week 1-2 (Solo): [War or Peace](./war_or_peace/)-->
 Week 1-2 (Solo): [Flash Cards](./flashcards/)
+
 <!-- Week 1-2 (Solo):  [Flash Cards](./flashcards/)-->
 <!-- Week 2-3 (Solo): [DMV](./dmv/)-->
 Week 2-3 (Solo): TBD  
