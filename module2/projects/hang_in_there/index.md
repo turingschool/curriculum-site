@@ -93,7 +93,7 @@ Then:
 <section class="dropdown">
 ### Iteration 0 - Main Page
 
-![homepage](../../../assets/images/projects/hang-in-there/homepage.png)
+![homepage](../../../assets/images/projects/hang_in_there/homepage.png)
 
 - When the page loads, users should see a poster with a randomly selected image, title, and quote
 - Every time the user clicks the Show Random Poster button, a new random poster is displayed.
@@ -103,10 +103,10 @@ Then:
 ### Iteration 1 - Switching Views
 
 Form view:
-![form](../../../assets/images/projects/hang-in-there/form.png)
+![form](../../../assets/images/projects/hang_in_there/form.png)
 
 Saved posters view:
-![saved posters](../../../assets/images/projects/hang-in-there/saved.png)
+![saved posters](../../../assets/images/projects/hang_in_there/saved.png)
 
 - When a user clicks the "Make Your Own Poster" button, we should see the form, and the main poster should be hidden
 - When a user clicks the "Show Saved Posters" button, we should see the saved posters area, and the main poster should be hidden
@@ -123,7 +123,7 @@ _Consider how you might use arguments/parameters to make dynamic reusable functi
 ### Iteration 2 - Creating a New Poster
 
 Result after clicking Show My Poster button:
-![result](../../../assets/images/projects/hang-in-there/form-result.png)
+![result](../../../assets/images/projects/hang_in_there/form-result.png)
 
 - On the new poster form view, users should be able to fill out the three input fields and then hit the Show My Poster button
 - When the Show My Poster button is clicked, several things will happen:
@@ -311,9 +311,9 @@ Lets assume this data was pulled from a database.  Each object has more data tha
 ### Iteration 5 - Un-motivational Posters - Comp Matching 
 
 Unmotivational view (top of page):  
-![unmotivational-top-of-page](../../../assets/images/projects/hang-in-there/unmotivational-top-of-page.png)  
+![unmotivational-top-of-page](../../../assets/images/projects/hang_in_there/unmotivational-top-of-page.png)  
 Unmotivational view (bottom of page):  
-![unmotivational-bottom-of-page](../../../assets/images/projects/hang-in-there/unmotivational-bottom-of-page.png)  
+![unmotivational-bottom-of-page](../../../assets/images/projects/hang_in_there/unmotivational-bottom-of-page.png)  
 
 
 - Using CSS, make the styling/format of the new "Unmotivational Posters" and "Back to Main" buttons match the other buttons throughout the app.
