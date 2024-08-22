@@ -12,7 +12,7 @@ _[Back to Little Shop Home](./index)_
 
 ## Connecting to the FE
 
-Upon successful completion of the backend requirements, groups will be able to see their endpoint data within [this front end boilerplate repo](https://github.com/turingschool-examples/little-shop-fe-vite).  This front end repo uses vanilla JavaScript, CSS and HTML and was built with Vite - a fast and modern development build tool. You can (and should) learn more about Vite's features [here](https://vitejs.dev/).
+Upon successful completion of the backend requirements, groups will be able to see their endpoint data within [this front end boilerplate repo](https://github.com/turingschool-examples/little-shop-fe-group-starter).  This front end repo uses vanilla JavaScript, CSS and HTML and was built with Vite - a fast and modern development build tool. You can (and should) learn more about Vite's features [here](https://vitejs.dev/).
 
 Follow the directions in repo's README to fork, clone, install and run the front end.  
 
