@@ -145,7 +145,7 @@ Use the `each` method to solve each problem. You can do this work in the place t
 </div>
 <br>
 
-## Addtional Practice
+## Additional Practice
 This practice work is encouraged, but not required.
 
 [Follow the directions in the README of this GitHub repository](https://github.com/turingschool-examples/se-mod1-exercises/tree/main/ruby_exercises/enumerables).
