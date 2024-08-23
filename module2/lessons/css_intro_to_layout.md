@@ -58,7 +58,7 @@ There is just one important difference between the two:
 </section>
 
 ## CSS Display Property
-The `display` property allows us to change the default value of block and inline level elements. Along with block and inline, we have a few other display values to choose from. Some common ones you will see are "none", "flex" and "grid." We'll learn about flex tomorrow!
+The `display` property allows us to change the default value of block and inline level elements. Along with block and inline, we have a few other display values to choose from. Some common ones you will see are "none", "flex" and "grid." We'll learn about flex soon!
 
 ```
 display: inline-block;
@@ -99,7 +99,7 @@ opacity: 0
 - What is the difference between inline, block and inline-block?
 - List out three elements that are block level by default.
 - List out three elements that are inline level by default.
-- Write down at least one question you have about the display property for class tomorrow. 
+- Write down at least one question you have about the display property for the upcoming CSS: Flexbox class. 
 
 </section>
 
