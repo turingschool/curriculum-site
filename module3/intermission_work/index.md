@@ -23,7 +23,8 @@ If you need help updating Ruby or Rails versions, check out [this page](https://
 To start your Professional Development work in mod 3, plan to spend 60-90 minutes completing [this async lesson on crafting your Resume](https://docs.google.com/presentation/d/1HDtaMhRxM226YZWQqe93ILUpBIzDLzXFMEKOmjT1yUc/edit#slide=id.p1). 
 
 ### 2. Consuming APIs with Ruby
-<!-- To-Do: make new exercise -->
+
+Complete [this exercise](../lessons/consuming_an_api_ruby.md) to gain familiarity with consuming an external API within your Set List application! 
 
 ### 3. Read / Take Notes
 [Sandi Metz's _Rules for Developers_](https://robots.thoughtbot.com/sandi-metz-rules-for-developers)
@@ -36,7 +37,6 @@ Fork and clone [Here Be Dragons](https://github.com/turingschool-examples/here-b
 
 ### 5. Service-Oriented Architecture
 
-<!-- To-Do: Link! -->
 Review this lesson on Service-Oriented Architecture [here](../lessons/intro_to_soa.md)
 
 ### 6. Intro to React
