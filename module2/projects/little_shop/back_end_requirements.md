@@ -74,6 +74,7 @@ Due to policies around `Cross-Origin Resource Sharing` (CORS), there is some add
 Requirements for handling CORS:
 1. Add the gem `rack-cors` to your Gemfile. It should already be commented out in your Gemfile as it comes baked into every Gemfile. You'll just need to uncomment it and run `bundle install`
 2. In the `config/initializers/cors.rb` file, you'll need to add the following code:
+
 ```ruby
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
