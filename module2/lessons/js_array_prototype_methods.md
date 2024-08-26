@@ -179,7 +179,7 @@ const prices = [4.99, 5.50, 7.00, 10.25];
 ```  
 
 #### Example #2
-Using an array of temperature data in Fahrenheit, convert the date to degrees Celsius and store them in a variable called `degreesC`. [Here is the formula](http://www.rapidtables.com/convert/temperature/how-fahrenheit-to-celsius.htm){:target='blank'} to convert from Fahrenheit to Celsius.  
+Using an array of temperature data in Fahrenheit, convert the date to degrees Celsius and store them in a variable called `degreesC`. [Here is the formula](http://www.rapidtables.com/convert/temperature/how-fahrenheit-to-celsius.htm){:target='blank'} to convert from Fahrenheit to Celsius.  *NOTE: dont worry about rounding the decimals in repl.it!
 
 ```js
 const degreesF = [67, 32, 55, 102]
