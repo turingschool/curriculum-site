@@ -241,9 +241,11 @@ const adjectives = ['fantastic', 'amazing', 'childish'];
 
 Be sure to include these in your notes, if you haven't already!
 * Useful for turning an array into a single value, be it a number, string, object, or another array.
-* Useful for returning one that is a combination / sum of values from an original array.
+* Useful for returning a value that is a combination / sum of values from an original array.
 * Also useful for converting an array into another data type.
 * REMEMBER...you must always return the *accumulator* in the callback function.
+* The *initialValue* is technically optional but we strongly recommend always explicitly declaring it.  It is the starting value of your accumulator.
+
 </section>
 
 <br>
