@@ -50,7 +50,7 @@ Each requirement below asks you to complete a specific task/feature in your fron
 
 Spend some time working through the following styling tasks:
   1. One small way to make a user's experience better is to make it obvious when something is clickable. Notice on this lesson page what happens when you hover over a clickable item (the dropdown arrow, nav elements, Turing logo, etc). **Update the CSS so that the mouse changes when a user hovers over any button on your application.**
-  2. The layout for the Items page isn't great. **Implement flexbox so the item cards are more visibily appealing.** Think about things like text alignment, margins and spacing, and using rows/columns. There's no right way to make the Items page look - just be prepared to defend your choices.
+  2. The layout for the Items page isn't great. **Implement flexbox so the item cards are more visually appealing.** Think about things like text alignment, margins and spacing, and using rows/columns. There's no right way to make the Items page look - just be prepared to defend your choices.
   3. **Make at least TWO other styling improvements to your front end application.** You can add colors, change the spacing, round off the buttons, add micro-animations and hover states, etc. In your eval, you'll need to point out and speak to these styling improvements and why you made chose to make them. 
 
  It can be helpful to find an inspo pic and work towards it - you won't be exactly matching anything so don't lose time struggling to get something pixel-perfect. If you're struggling to find an inspo pic, use this one:  
