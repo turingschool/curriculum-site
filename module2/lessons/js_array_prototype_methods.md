@@ -450,6 +450,10 @@ const sentences = [
 console.log(splitSentencesIntoWords(sentences));
 // Output: [['This', 'is', 'the', 'first', 'sentence.'], ['The', 'second', 'sentence', 'is', 'here.'], ['And', 'here', 'is', 'the', 'third', 'one.']]
 ```
+</section>
+
+<section class="dropdown">
+
 ### includes(): Check if library has book
 
 Write a function `checkLibrary("Moby Dick")` that takes in a book title and uses the includes() method to check if it's included in the libraryBooks array.  Your function should return `true` when invoked with the argument "Moby Dick" and `false` when invoked with the argument "The Color Purple".
@@ -467,6 +471,9 @@ console.log(checkLibrary("Moby Dick")); //true
 console.log(checkLibrary("The Color Purple")); //false
 
 ```
+</section>
+
+<section class="dropdown">
 
 ### join(): Concatenate Product Names
 
