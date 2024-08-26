@@ -66,6 +66,39 @@ system(cmd)
 Finally, commit your setup steps and push to a new repo. Share that new repo with your project partner(s). Be sure to add them as a collaborator.
 </section>
 
+<section class="dropdown">
+### Connecting to the FE
+
+Due to policies around `Cross-Origin Resource Sharing` (CORS), there is some additional configuration required in your API in order to allow our back end and front end applications to communicate with each other. We basically need to allow our API to **accept requests from our front end application** rather than blocking them for security reasons. It is the software development equivalent of *stranger danger*.  We'll talk more about CORS in module 3, so don't worry about understanding the details of this configuration or the motivation behind it quite yet. If you're curious, you can read more about it [here](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS). 
+
+Requirements for handling CORS:
+1. Add the gem `rack-cors` to your Gemfile. It should already be commented out in your Gemfile as it comes baked into every Gemfile. You'll just need to uncomment it and run `bundle install`
+2. In the `config/initializers/cors.rb` file, you'll need to add the following code:
+
+```ruby
+Rails.application.config.middleware.insert_before 0, Rack::Cors do
+  allow do
+    origins "localhost:5173"
+
+    resource "*",
+      headers: :any,
+      methods: [:get, :post, :put, :patch, :delete, :options, :head]
+  end
+end
+
+```
+
+What's happening here?
+- Our front end application will run locally on our machine on port 5173
+- We're telling our Rails app that we trust requests coming from our front end application, so we can add its base URL (`localhost:5173`) as an origin.
+- We'll accept any request from this origin, including any headers and any HTTP methods. We're whitelisting all of them! 
+
+**With these 2 small changes, our applications will be able to communicate with each other**
+
+</section>
+
+
+
 
 <section class="dropdown">
 ### Postman
