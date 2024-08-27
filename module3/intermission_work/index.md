@@ -24,7 +24,7 @@ To start your Professional Development work in mod 3, plan to spend 60-90 minute
 
 ### 2. Consuming APIs with Ruby
 
-Complete [this exercise](../lessons/consuming_an_api_ruby.md) to gain familiarity with consuming an external API within your Set List application! 
+Complete [this exercise](../lessons/consuming_an_api_ruby) to gain familiarity with consuming an external API within your Set List application! 
 
 ### 3. Read / Take Notes
 [Sandi Metz's _Rules for Developers_](https://robots.thoughtbot.com/sandi-metz-rules-for-developers)
@@ -37,7 +37,7 @@ Fork and clone [Here Be Dragons](https://github.com/turingschool-examples/here-b
 
 ### 5. Service-Oriented Architecture
 
-Review this lesson on Service-Oriented Architecture [here](../lessons/intro_to_soa.md)
+Review this lesson on Service-Oriented Architecture [here](../lessons/intro_to_soa)
 
 ### 6. Intro to React
 
@@ -47,16 +47,16 @@ Review this lesson on Service-Oriented Architecture [here](../lessons/intro_to_s
 Complete this IdeaBox exercise.
 
 <section class="dropdown">
-## Optional Exercises and Exploration
+### Optional Exercises and Exploration
 
-### 1. Additional SQL Practice
+#### 1. Additional SQL Practice
 
-### 2. HTTP Request/Response Cycle Review
+#### 2. HTTP Request/Response Cycle Review
 * On one piece of paper, write out all of the parts of an example `HTTP GET` request (Diagram the DNS look-up as well as how a Rails Application would handle the request via MVC)
   * **Even better:** write your explanation as a metaphor
 * On a separate piece of paper, write out an example 200 response to that request with all of the parts
 
-### 3. Data Structures and Algorithms
+#### 3. Data Structures and Algorithms
 
 Read: [An Overview of Data Structures for Ruby Developers](https://www.rubyguides.com/2019/04/ruby-data-structures/)
 
@@ -64,7 +64,7 @@ We are going to be covering various data structures to prepare you for the job h
 
 If you've done Beat Box, let's get serious and have a [Date Night](https://backend.turing.edu/module1/projects/date_night)!
 
-### 4. Security
+#### 4. Security
 
 * Check out [Hacksplaining](https://www.hacksplaining.com/lessons) and go through these lessons, or whatever seems interesting to you!
   * SQL Injection
