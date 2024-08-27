@@ -26,7 +26,17 @@ This project is an extension of the Little Shop group project. You will add func
 This project is an extension of Little Shop. Students have two options for setup:
 
 1. If your Little Shop project is complete, you can use it as a starting point for this project. If you are not the repo owner, fork the project to your account. If you are the repo owner, you can work off the repo without forking, just make sure your teammates have a chance to fork before pushing any commits to your repo.
-1. If your Little Shop project is _not_ complete, fork **[this repo](https://github.com/turingschool-examples/little-shop-be)** as a starting point for this project.
+1. If your Little Shop project is _not_ complete, fork **[this repo](https://github.com/turingschool-examples/little-shop-be-final-starter)** as a starting point for this project.
+
+## Database Notes
+
+Regardless of which setup option you choose, you will need to make database migrations to complete this project. Because our initial database setup happens when running `rails db:seed` because we're using a Postgres database dump file, you might run into issues if you reset your database (i.e. drop it and recreate it). Typically, Rails doesn't allow you to run your seeds file before you run database migrations, but you will have to do that on your project since your seeding step sets up the preliminary database. If you need to reset your database, run the following in this order:
+
+```bash
+rails db:{drop,create}
+rails runner ActiveRecord::Tasks::DatabaseTasks.load_seed
+rails db:migrate
+```
 
 ## Evaluation
 Evaluation information for this project can be found [here](./evaluation).
