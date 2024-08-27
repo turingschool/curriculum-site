@@ -27,5 +27,8 @@ title: Module 3 - Lessons
 * [Scope & Scope Chain](.) -->
 
 
+## Fullstack Web Development
+* [Intro to Service-Oriented Architecture](./intro_to_soa.md)
+
 ## Professional Development
 * [Mod 3 PD Curriculum](../pd/)
