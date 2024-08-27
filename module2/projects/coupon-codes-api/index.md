@@ -62,7 +62,7 @@ Evaluation information for this project can be found [here](./evaluation).
 Below is the expected JSON response for each request. We have also outlined a few examples of Sad Paths you may consider adding in. In your project, you should take time to implement at least 2 sad paths total, but you are not limited to the examples we provide. 
 
 <section class="dropdown">
-### 1. Merchant Coupon Show Page 
+### 1. Merchant Coupon Show 
 
 Returns a specific coupon and shows a count of how many times that coupon has been used.
 
@@ -328,7 +328,22 @@ Accept: application/json
 
 ## 3) Frontend
 
-TODO: Add the frontend stories
+Now that we have all this coupon data, we can update our frontend to display some of it. On an individual merchant's page, display the following:
+
+
+### 9. List of Coupons
+Users can click on a merchant and see a list of all the coupons for that merchant.
+
+
+
+
+### 10. Sort by Active and Inactive Coupons
+Additionally, there should be a "Sort by Active" button that will sort the coupons by active and inactive.
+
+
+
+### 11. Display a count of total coupons and total invoices with coupons applied
+Above the list of coupons, display a count of total coupons and total invoices with coupons applied.
 
 ----
 
