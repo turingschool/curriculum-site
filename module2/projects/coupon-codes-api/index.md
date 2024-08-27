@@ -30,7 +30,7 @@ This project is an extension of Little Shop. Students have two options for setup
 
 ## Database Notes
 
-Regardless of which setup option you choose, you will need to make database migrations to complete this project. Because our initial database setup happens when running `rails db:seed` because we're using a Postgres database dump file, you might run into issues if you reset your database (i.e. drop it and recreate it). Typically, Rails doesn't allow you to run your seeds file before you run database migrations, but you will have to do that on your project since your seeding step sets up the preliminary database. If you need to reset your database, run the following in this order:
+Regardless of which setup option you choose, you will need to make database migrations to complete this project. Our initial database setup happens when running `rails db:seed` because we're using a Postgres database dump file. You might run into issues if you reset your database (i.e. drop it and recreate it). Typically, Rails doesn't allow you to run your seeds file before you run database migrations, but you will have to do that on your project since your seeding step sets up the preliminary database. If you need to reset your database, run the following in this order:
 
 ```bash
 rails db:{drop,create}
@@ -47,7 +47,7 @@ Evaluation information for this project can be found [here](./evaluation).
 
 * A Coupon belongs to a Merchant
 * An Invoice optionally belongs to a Coupon. An invoice may only have one coupon.
-  * Note: When creating this new association on Invoice, your existing tests will fail unless the association is optional. Use these guides as a reference.
+  * Note: When creating this new association on Invoice, your existing tests will fail unless the association is optional. Use [these guides](https://guides.rubyonrails.org/association_basics.html#optional) as a reference.
   * You are not required to build functionality for a user applying a coupon to an invoice, but can instead use test data, Rails console or seed data to add coupons to existing invoices to verify behavior.
 * You should build full CRUD functionality for coupons with criteria/restrictions defined below:
    - A merchant can have a maximum of 5 activated coupons in the system at one time.
@@ -66,13 +66,6 @@ Below is the expected JSON response for each request. We have also outlined a fe
 
 Returns a specific coupon and shows a count of how many times that coupon has been used.
 
-**Request**
-```bash
-GET /api/v1/merchants/:merchant_id/coupons/:id
-Content-Type: application/json
-Accept: application/json
-```
-
 **Response**
 
 ```json
@@ -85,12 +78,7 @@ body:
     "type": "coupon",
     "attributes": {
       "name": "Buy One Get One 50",
-      "code": "BOGO50",
-      "amount_off": 50,
-      "percent_off": null,
-      "status": "active",
-      "merchant_id": 1,
-      "uses": 1    
+      ...remaining attributes go here...   
     }
   }
 }
@@ -103,13 +91,6 @@ body:
 
 Returns all of a merchant's coupons
 
-**Request**
-```bash
-GET /api/v1/merchants/:merchant_id/coupons
-Content-Type: application/json
-Accept: application/json
-```
-
 **Response**
 
 ```json
@@ -120,12 +101,7 @@ Accept: application/json
       "type": "coupon",
       "attributes": {
         "name": "Buy One Get One 50",
-        "code": "BOGO50",
-        "amount_off": 50,
-        "percent_off": null,
-        "status": "active",
-        "merchant_id": 1,
-        "uses": 1
+        ...remaining attributes go here...
       }
     },
     {
@@ -133,12 +109,7 @@ Accept: application/json
       "type": "coupon",
       "attributes": {
         "name": "25 Percent Sale",
-        "code": "25PERCENT",
-        "amount_off": null,
-        "percent_off": 25,
-        "status": "inactive",
-        "merchant_id": 1,
-        "uses": 0
+        ...remaining attributes go here...
       }
     },
     {
@@ -146,12 +117,7 @@ Accept: application/json
       "type": "coupon",
       "attributes": {
         "name": "One More Coupon",
-        "code": "MONEYOFF",
-        "amount_off": 10,
-        "percent_off": null,
-        "status": "active",
-        "merchant_id": 1,
-        "uses": 2
+       ...remaining attributes go here...
       }
     }
   ]
@@ -164,21 +130,7 @@ Accept: application/json
 
 Create a new coupon for a merchant
 
-**Request**
-```
-POST /api/v1/merchants/:merchant_id/coupons
-Content-Type: application/json
-Accept: application/json
-
-{
-  "name": "Buy One Get One 50",
-  "code": "BOGO50",
-  "amount_off": 50,
-  "percent_off": null,
-  "status": "active",
-  "merchant_id": 1
-}
-```
+**Response**
 
 ```json
 status: 201
@@ -190,12 +142,7 @@ body:
     "type": "coupon",
     "attributes": {
       "name": "Buy One Get One 50",
-      "code": "BOGO50",
-      "amount_off": 50,
-      "percent_off": null,
-      "status": "active",
-      "merchant_id": 1,
-      "uses": 0
+      ...remaining attributes go here...
     }
   }
 }
@@ -213,16 +160,6 @@ body:
 
 Updates a coupon from active to inactive
 
-**Request**
-```bash
-PATCH /api/v1/merchants/:merchant_id/coupons/:id
-Content-Type: application/json
-Accept: application/json
-
-{
-  "status": "inactive"
-}
-```
 
 **Response**
 
@@ -236,12 +173,7 @@ body:
     "type": "coupon",
     "attributes": {
       "name": "Buy One Get One 50",
-      "code": "BOGO50",
-      "amount_off": 50,
-      "percent_off": null,
-      "status": "inactive",
-      "merchant_id": 1,
-      "uses": 1
+      ...remaining attributes go here...
     }
   }
 }
@@ -256,15 +188,7 @@ body:
 
 Updates a coupon from inactive to active
 
-```bash
-PATCH /api/v1/merchants/:merchant_id/coupons/:id
-Content-Type: application/json
-Accept: application/json
-
-{
-  "status": "active"
-}
-```
+**Response**
 
 ```json
 status: 200
@@ -276,12 +200,7 @@ body:
     "type": "coupon",
     "attributes": {
       "name": "Buy One Get One 50",
-      "code": "BOGO50",
-      "amount_off": 50,
-      "percent_off": null,
-      "status": "active",
-      "merchant_id": 1,
-      "uses": 2
+      ...remaining attributes go here...
     }
   }
 }
@@ -297,60 +216,6 @@ body:
 
 When passed a query param, returns coupons sorted by active or inactive
 
-**Request**
-```bash
-GET /api/v1/merchants/:merchant_id/coupons?sort=status
-Content-Type: application/json
-Accept: application/json
-```
-
-**Response**
-
-```json
-{
-  "data": [
-    {
-      "id": "1",
-      "type": "coupon",
-      "attributes": {
-        "name": "Buy One Get One 50",
-        "code": "BOGO50",
-        "amount_off": 50,
-        "percent_off": null,
-        "status": "active",
-        "merchant_id": 1,
-        "uses": 1
-      }
-    },
-    {
-      "id": "3",
-      "type": "coupon",
-      "attributes": {
-        "name": "One More Coupon",
-        "code": "MONEYOFF",
-        "amount_off": 10,
-        "percent_off": null,
-        "status": "active",
-        "merchant_id": 1,
-        "uses": 2
-      }
-    },
-    {
-      "id": "2",
-      "type": "coupon",
-      "attributes": {
-        "name": "25 Percent Sale",
-        "code": "25PERCENT",
-        "amount_off": null,
-        "percent_off": 25,
-        "status": "inactive",
-        "merchant_id": 1,
-        "uses": 0
-      }
-    },
-  ]
-}
-```
 </section>
 
 <section class="dropdown">
@@ -409,7 +274,7 @@ Accept: application/json
 <section class="dropdown">
 ### 8. Merchants
 
-Update the merchants endpoint to include a count of coupons for each merchant and a count of invoices with coupons applied for each merchant.
+Update the merchants index endpoint to include a count of coupons for each merchant and a count of invoices with coupons applied for each merchant.
 
 **Request**
 ```bash
