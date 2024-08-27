@@ -193,7 +193,7 @@ We encourage you to make your CSS changes in your dev tools which will instantly
 
 <div class="call-to-action">
 ### Try It 4
-  - In your repo, switch to the `flexbox-nested-elements` branch.
+  - In your repo, switch to the `flexbox-nested-elements` branch by following the steps below:
     - In your terminal, run `git fetch` to fetch all the remote branches
     - Then run `git checkout flexbox-nested-elements` to move over to that branch.
   - Explore the existing code and the UI
