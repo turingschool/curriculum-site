@@ -32,7 +32,7 @@ Questions to consider. Take a minute to think to yourself before checking out th
 
 ## Exercise
 
-We'll be returning to our beloved [Set List API](https://github.com/turingschool-examples/set-list-api/tree/consumping-apis-start), and starting from the `consuming-apis-start` branch. 
+We'll be returning to our beloved [Set List API](https://github.com/turingschool-examples/set-list-api/tree/consuming-apis-start), and starting from the `consuming-apis-start` branch. 
 
 This branch has added an additional incomplete endpoint, which takes a query parameter of an artist name and should return an image of that artist. Right now, there is a test set up to verify the endpoint returns an image url, the photographer's info, and some alt text for the image. But, our database doesn't store that information, and we don't want to have to store it. Instead, there's a great API we can use to retrieve photos of these artists: [Pexels!](https://www.pexels.com/api/)
 
