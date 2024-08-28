@@ -97,6 +97,10 @@ Then:
 
 - When the page loads, users should see a poster with a randomly selected image, title, and quote
 - Every time the user clicks the Show Random Poster button, a new random poster is displayed.
+
+Note: Figuring out where to even start can be the hardest and the most overwhelming part of a new project. When you're frozen in that, just start somewhere - anywhere.  
+Ask yourself: _"What's one small thing, anything, I could do to get started? Maybe just adding a console log to see some data?"_   
+Then, as you go and start to build momentum, continue to ask _"What am I actually trying to do right now?"       "Ok, what am I trying to do next?"       "What do I want THIS line of code to do, just this line?"_
 </section>
 
 <section class="dropdown">
