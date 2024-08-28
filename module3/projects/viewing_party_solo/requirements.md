@@ -47,6 +47,8 @@ You will need to expose the data through a multitude of API endpoints. All of yo
 * All endpoints should be exposed under an `api` and version (`v1`) namespace (e.g. `/api/v1/movies`)
 * API will be compliant to the [JSON API spec](https://jsonapi.org/) and match our requirements below precisely
 * Controller actions should be limited to only the standard Rails actions and follow good RESTful convention.
+* You will decide the most RESTful paths for your endpoints. 
+* Your application's README should document the paths and the requirements for each endpoint (i.e. should the API key be passed as a query parameter, or in the header?)
 
 
 You will need to expose the following RESTful API endpoints for the following:
