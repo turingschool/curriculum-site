@@ -3,8 +3,6 @@ title: Viewing Party API
 layout: page
 ---
 
-# Viewing Party API
-
 ## Project Description
 
 For this project, you will be finishing an API that provides endpoints to explore movies and create a Viewing Party Event that invites users and keeps track of a host. Your job is to connect with an [external API](https://developers.themoviedb.org/3/getting-started/introduction) and collect relevant information, set up the database to allow the creation of viewing parties, and handle some basic authorization.
