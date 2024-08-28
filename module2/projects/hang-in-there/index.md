@@ -142,11 +142,11 @@ Notice something weird happening when you click the button to submit the form? T
 - When a user clicks the "Save This Poster" button, the current main poster will be added to the `savedPosters` array.
 - If a user clicks the "Save This Poster" more than once on a single poster, it will still only be saved once (no duplicates)
 - When a user clicks the "Show Saved Posters" button, we should see the saved posters section
-- All the posters in the `savedPosters` array should be displayed in the saved posters grid section (again, no duplicates)
-- Ensure styling, sizes and layouts of the Saved Posters view match the comp photo shown in Iteration 1
+- All the posters in the `savedPosters` array should be displayed as little mini posters in the saved posters grid section (again, no duplicates)
+- Ensure styling, sizes and layouts of the mini posters in the Saved Posters view match the comp photo of that Saved Posters view that is shown in Iteration 1
 
 _Hint:
-Make sure you check out the existing html and css.  Are there existing classes and styles already written that you can use to get the correct styling?_
+What existing classes and styles are already written in your css that you can use to get the correct styling for your mini posters in the Saved Posters view?_
 </section>
 
 <section class="dropdown">
