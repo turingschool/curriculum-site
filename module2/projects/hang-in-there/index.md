@@ -296,13 +296,13 @@ const unmotivationalPosters = [
 ```
 </section>
 
-Lets assume this data was pulled from a database.  Each object has more data than what we need for creating and displaying posters. Our posters only have, and only need, an id, imageURL, title and quote.  We'll want to _clean_ this data before we use it in our application.
+Let's assume this data was pulled from a database.  Each object has more data than what we need for creating and displaying posters. Our posters only have, and only need, an id, imageURL, title and quote.  We'll want to _clean_ this data before we use it in our application.
 
 - Copy/paste the dataset into your main.js file after the existing arrays of images, titles and quotes.
 - Create a cleanData() function to go through each piece of this data and make it match the format we've been using for our poster data. 
   - _Hint - use the existing createPoster() function to help you accomplish this._
   - _Hint - you can reach for a for loop **or** an iterator method here - several options will work - it's your choice!_
-- When a user visits the Unmotivational Posters view, we should see all 15 unmotivational posters displayed. **Use the cleaned data for this.**
+- When a user visits the Unmotivational Posters view, we should see all 15 unmotivational posters displayed immediately. **Use the cleaned data for this.**
 
 
 </section>
@@ -316,9 +316,9 @@ Unmotivational view (bottom of page):
 ![unmotivational-bottom-of-page](../../../assets/images/projects/hang-in-there/unmotivational-bottom-of-page.png)  
 
 
-- Using CSS, make the styling/format of the new "Unmotivational Posters" and "Back to Main" buttons match the other buttons throughout the app.
-- Using CSS flexbox (not grid), control the layout of the posters to match the comp.  _Note: the number of posters you see in each row will flex based on the width of the screen, thats a good thing!_
-- Using CSS, make the style and size of the unmotivational posters match the comp.
+- Using CSS, make the styling/format of the new "Unmotivational Posters" button on the main page and the "Back to Main" button on the Unmotivational Posters page match the other buttons throughout the app.
+- Using CSS flexbox (not grid), control the layout of the unmotivational posters to match the comp provided here.  _Note: the number of posters you see in each row will flex based on the width of the screen, thats a good thing!_
+- Using CSS, make the style and size of the unmotivational posters match the comp provided here.  You'll notice they look slightly different than the saved posters.
 
 _Hint:  
 Consider the existing html and css as you style this view.  Are there places you can reuse existing classes/styling?  Ensure your work doesn't change the styling of the other parts of the app (like saved posters)._  
@@ -335,6 +335,7 @@ Our product team realizes that some users will love the Unmotivational Posters f
 - From the unmotivational posters view, if a user double clicks a poster, it will be deleted
   -  HTML `onclick` attributes should not be used in any HTML code - all functionality should be through JavaScript.  
   -  The poster should be removed from the unmotivational posters data set _and_ should no longer be displayed on the DOM. 
+  -  If the user navigates away from the Unmotivational Posters view after deleting some posters, those posters should still be gone when they navigate back to that view.  _Note: However, because we aren't implementing local storage, if a user refreshes the app, everything will be reset including deleted unmotivational posters and saved motivational posters._
 
 
 </section>
