@@ -13,6 +13,8 @@ _[Back to Little Shop Home](./index)_
 <section class="dropdown">
 ### Setup
 
+Follow these steps carefully! Skipping just one can lead you down an error-filled rabbit hole!
+
 1. Create a Rails API project called `little_shop` (make sure you do not set up a "traditional" Rails project with a frontend, this is an API-only project). `rails new little_shop -T -d="postgresql" --api`
 
 2. Set Up [SimpleCov](https://github.com/colszowka/simplecov) to track test coverage in your little_shop API project.
@@ -32,7 +34,7 @@ etc
 ```
   - this file is in a binary format and your browser may try to automatically download the file instead of viewing it
 
-1. Set up your `db/seeds.rb` file with the following content:
+4. Set up your `db/seeds.rb` file with the following content:
 ```ruby
 cmd = "pg_restore --verbose --clean --no-acl --no-owner -h localhost -U $(whoami) -d little_shop_development db/data/little_shop_development.pgdump"
 puts "Loading PostgreSQL Data dump into local database with command:"
@@ -40,9 +42,9 @@ puts cmd
 system(cmd)
 ```
 
-1. Run `rails db:{drop,create,migrate,seed}` and you may see lots of output including some warnings/errors from `pg_restore` that you can ignore. If you're unsure about the errors you're seeing, ask an instructor.
+5. Run `rails db:{drop,create,migrate,seed}` and you may see lots of output including some warnings/errors from `pg_restore` that you can ignore. If you're unsure about the errors you're seeing, ask an instructor.
 
-2. Run `rails db:schema:dump` - Check to see that your `schema.rb` exists and has the proper tables/attributes that match the data in Postico. You can do the following to check to see if you have set up rails to effectively communicate with the database.
+6. Run `rails db:schema:dump` - Check to see that your `schema.rb` exists and has the proper tables/attributes that match the data in Postico. You can do the following to check to see if you have set up rails to effectively communicate with the database.
   * Add a `customer.rb` file to your models directory
   * Create a `Customer` class that inherits from `ApplicationRecord`
   * run `rails c` to jump into your rails console.
@@ -50,13 +52,15 @@ system(cmd)
   * run `Customer.last` to see the object: `#<Customer id: 1000, first_name: "Shawn", last_name: "Langworth", created_at: "2012-03-27 14:58:15", updated_at: "2012-03-27 14:58:15">`
   * If this all checks out you should be good to go.
 
-3. Use a tool like Postico to examine the 6 tables that were created. Pay careful attention to the merchants, items, invoices and customers table. It's a good idea to use a database visualizer like [DBDesigner](https://www.dbdesigner.net/) to create a visual schema for your team. Be mindful of the data types of each field:
+7. Use a tool like Postico to examine the 6 tables that were created. Pay careful attention to the merchants, items, invoices and customers table. It's a good idea to use a database visualizer like [DBDesigner](https://www.dbdesigner.net/) to create a visual schema for your team. Be mindful of the data types of each field:
   * merchants
   * items
   * customers
   * invoices
   * invoice_items
   * transactions
+
+8. Create model files for each of these resources. You won't need to manipulate all of these models, but it's important these files exist, and have the necessary ActiveRecord relationship methods in them (either `belongs_to` or `has_many`). Add (and test!) the relationships for each model. You might notice that InvoiceItem is a bit different and requires 2 `belongs_to` relationships. That's okay! Add both, and we'll dive more into the specifics of what's happening here in Mod 3. 
 
 **NOTE** The main learning goals of the project are the Rails API endpoints, not the process of importing CSV data. Avoid starting out with a Rake task to do the import and follow these instructions instead. If in doubt, ask your instructors first.
 
@@ -520,10 +524,11 @@ The body should follow this pattern:
 </section>
 
 <section class="dropdown">
-### 5: Destroy an Item or Merchant
+### 5: Delete an Item or Merchant
 
 This endpoint should:
 * destroy the corresponding record (if found) and any associated data
+* handle "cascading deletes" so that if a resource is deleted, any associated resources are also deleted. For example, if a merchant is deleted, any items for that merchant should also be deleted. Do some Googling to learn how Rails handles this for its models (hint: it's simpler than you think)
 * NOT return any JSON body at all, and should return a `204`` HTTP status code
 * NOT utilize a Serializer (Rails will handle sending a `204` on its own if you just `.destroy` the object)
 
