@@ -316,9 +316,9 @@ Unmotivational view (bottom of page):
 ![unmotivational-bottom-of-page](../../../assets/images/projects/hang-in-there/unmotivational-bottom-of-page.png)  
 
 
-- Using CSS, make the styling/format of the new "Unmotivational Posters" button on the main page and the "Back to Main" button on the Unmotivational Posters page match the other buttons throughout the app.
+- Using CSS, make the styling/format of the new "Unmotivational Posters" button (on the main page) and the "Back to Main" button (on the Unmotivational Posters page) match the other buttons throughout the app.
 - Using CSS flexbox (not grid), control the layout of the unmotivational posters to match the comp provided here.  _Note: the number of posters you see in each row will flex based on the width of the screen, thats a good thing!_
-- Using CSS, make the style and size of the unmotivational posters match the comp provided here.  You'll notice they look slightly different than the saved posters.
+- Using CSS, make the style and size of the unmotivational posters match the comp provided here.  You'll notice they should look slightly different than the saved posters.
 
 _Hint:  
 Consider the existing html and css as you style this view.  Are there places you can reuse existing classes/styling?  Ensure your work doesn't change the styling of the other parts of the app (like saved posters)._  
