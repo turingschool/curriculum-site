@@ -14,8 +14,9 @@ The project specs will be linked below as each project is assigned.
 Week 1-2 (Solo): [Flash Cards](./flashcards/)
 
 <!-- Week 1-2 (Solo):  [Flash Cards](./flashcards/)-->
-<!-- Week 2-3 (Solo): [DMV](./dmv/)-->
-Week 2-3 (Solo): TBD  
+Week 2-3 (Solo): [DMV](./dmv/)
+
+<!-- Week 2-3 (Solo): TBD -->
 <!-- Option to add more advanced option with Connect Four as other pair project -->
 <!-- Week 3-4 (Paired): [Battleship](./battleship/) or [Connect Four)(./connect_four) -->
 Week 3-4 (Paired): TBD  
