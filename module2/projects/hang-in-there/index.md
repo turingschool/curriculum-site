@@ -338,7 +338,7 @@ Our product team realizes that some users will love the Unmotivational Posters f
 
 - From the unmotivational posters view, if a user double clicks a poster, it will be deleted
   -  HTML `onclick` attributes should not be used in any HTML code - all functionality should be through JavaScript.  
-  -  The poster should be removed from the unmotivational posters data set _and_ should no longer be displayed on the DOM. 
+  -  The poster should be removed from your cleaned unmotivational posters data set **_and_** should no longer be displayed on the DOM. 
   -  If the user navigates away from the Unmotivational Posters view after deleting some posters, those posters should still be gone when they navigate back to that view.  _Note: However, because we aren't implementing local storage, if a user refreshes the app, everything will be reset including deleted unmotivational posters and saved motivational posters._
 
 
