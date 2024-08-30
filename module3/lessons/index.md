@@ -5,10 +5,10 @@ title: Module 3 - Lessons
 <!-- Comment the following lessons in as they are updated and deemed ready to go! -->
 
 ## Consuming APIs
-<!-- * [Many To Many Relationship](.)
-* [Authorization](.)
-* [Testing Tools for API Consumption](.)
-* [Refactoring Patterns for API Consumption](.) -->
+<!-- * [Many To Many Relationship](.) -->
+<!-- * [Authorization](.) -->
+* [Testing Tools for API Consumption](./testing_tools_for_api_consumption)
+<!-- * [Refactoring Patterns for API Consumption](.) -->
 
 ## React
 <!-- * [Intro to React](.)
