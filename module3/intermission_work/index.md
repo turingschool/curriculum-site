@@ -22,34 +22,33 @@ If you need help updating Ruby or Rails versions, check out [this page](https://
 
 To start your Professional Development work in mod 3, plan to spend 60-90 minutes completing [this async lesson on crafting your Resume](https://docs.google.com/presentation/d/1HDtaMhRxM226YZWQqe93ILUpBIzDLzXFMEKOmjT1yUc/edit#slide=id.p1). 
 
-### 2. Consuming APIs with Ruby
+### 2. Intro to React
+
+Complete this [IdeaBox tutorial](../lessons/ideabox.md). This tutorial will take you about 4 hours to complete.
+
+### 3. Consuming APIs with Ruby
 
 Complete [this exercise](../lessons/consuming_an_api_ruby) to gain familiarity with consuming an external API within your Set List application! 
 
-### 3. Read / Take Notes
-[Sandi Metz's _Rules for Developers_](https://robots.thoughtbot.com/sandi-metz-rules-for-developers)
+### 4. Dev Best Practices
 
-### 4. Practice with Deeply Nested Collections
+Read [Sandi Metz's _Rules for Developers_](https://robots.thoughtbot.com/sandi-metz-rules-for-developers) and take some notes on what you learn!
+
+### 5. Practice with Deeply Nested Collections
 
 As we know, when consuming APIs, the data is often returned in deeply nested collections, so when using Ruby, we will need to tap into our Mod 1 skills to practice digging through them to retrieve the data you need.
 
 Fork and clone [Here Be Dragons](https://github.com/turingschool-examples/here-be-dragons). Get the tests to pass. This is something you'll turn in with your submission, so make sure you make a forked copy of it. 
 
-### 5. Service-Oriented Architecture
+### 6. Service-Oriented Architecture
 
-Review this lesson on Service-Oriented Architecture [here](../lessons/intro_to_soa)
-
-### 6. Intro to React
-
-<!-- Watch this video about the React framework. COULDNT FIND A GOOD VIDEO THAT ISNT TOO LONG. Ideabox should have a little intro to React, no? -->
-
-<!-- To-Do: add link for Ideabox -->
-Complete this IdeaBox exercise.
+Review this lesson on Service-Oriented Architecture [here](../lessons/intro_to_soa).
 
 <section class="dropdown">
 ### Optional Exercises and Exploration
 
 #### 1. Additional SQL Practice
+* There are some great exercises for practicing SQL commands here: [https://pgexercises.com/](https://pgexercises.com/)
 
 #### 2. HTTP Request/Response Cycle Review
 * On one piece of paper, write out all of the parts of an example `HTTP GET` request (Diagram the DNS look-up as well as how a Rails Application would handle the request via MVC)
