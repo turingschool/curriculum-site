@@ -190,7 +190,7 @@ You won't likely need either of these in your time at Turing so we won't dig int
 </section>
 
 <section class="dropdown">
-### What are the differencs and use cases for undefined vs null?
+### What are the differences and use cases for undefined vs null?
 Both mean "nothing".  
 Null is like a placeholder where someone proactively decided to specifically declare "nothing".  
 Undefined is kind of unintentional. Like, it's nothing because no one got around to declaring anything so it defaults to "nothing".

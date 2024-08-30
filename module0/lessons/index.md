@@ -44,6 +44,9 @@ Note: You are not expected to be experts on these topics, but you should come to
 * Pre-teach this [Testing]({{ site.url }}/module0/lessons/testing) lesson.
 * Complete some [Programming Exercises](https://github.com/turingschool-examples/se-mod1-exercises). We'd like you to focus on the `data-types`, `ints-and-floats`, and `strings` folders.
 
+## Important Note
+On the first day of Mod1, you we will be introducing you to all of the instructors at **8:30 AM MT**.  Make sure to note this early start on your calendar!!
+
 <br>
 <br>
 <br>

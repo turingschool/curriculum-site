@@ -97,6 +97,10 @@ Then:
 
 - When the page loads, users should see a poster with a randomly selected image, title, and quote
 - Every time the user clicks the Show Random Poster button, a new random poster is displayed.
+
+Note: Figuring out where to even start can be the hardest and the most overwhelming part of a new project. When you're frozen in that, just start somewhere - anywhere.  
+Ask yourself: _"What's one small thing, anything, I could do to get started? Maybe just adding a console log to see some data?"_   
+Then, as you go and start to build momentum, continue to ask _"What am I actually trying to do right now?"       "Ok, what am I trying to do next?"       "What do I want THIS line of code to do, just this line?"_
 </section>
 
 <section class="dropdown">
@@ -142,11 +146,11 @@ Notice something weird happening when you click the button to submit the form? T
 - When a user clicks the "Save This Poster" button, the current main poster will be added to the `savedPosters` array.
 - If a user clicks the "Save This Poster" more than once on a single poster, it will still only be saved once (no duplicates)
 - When a user clicks the "Show Saved Posters" button, we should see the saved posters section
-- All the posters in the `savedPosters` array should be displayed in the saved posters grid section (again, no duplicates)
-- Ensure styling, sizes and layouts of the Saved Posters view match the comp photo shown in Iteration 1
+- All the posters in the `savedPosters` array should be displayed as little mini posters in the saved posters grid section (again, no duplicates)
+- Ensure styling, sizes and layouts of the mini posters in the Saved Posters view match the comp photo of that Saved Posters view that is shown in Iteration 1
 
 _Hint:
-Make sure you check out the existing html and css.  Are there existing classes and styles already written that you can use to get the correct styling?_
+What existing classes and styles are already written in your css that you can use to get the correct styling for your mini posters in the Saved Posters view?_
 </section>
 
 <section class="dropdown">
@@ -296,13 +300,13 @@ const unmotivationalPosters = [
 ```
 </section>
 
-Lets assume this data was pulled from a database.  Each object has more data than what we need for creating and displaying posters. Our posters only have, and only need, an id, imageURL, title and quote.  We'll want to _clean_ this data before we use it in our application.
+Let's assume this data was pulled from a database.  Each object has more data than what we need for creating and displaying posters. Our posters only have, and only need, an id, imageURL, title and quote.  We'll want to _clean_ this data before we use it in our application.
 
 - Copy/paste the dataset into your main.js file after the existing arrays of images, titles and quotes.
 - Create a cleanData() function to go through each piece of this data and make it match the format we've been using for our poster data. 
   - _Hint - use the existing createPoster() function to help you accomplish this._
   - _Hint - you can reach for a for loop **or** an iterator method here - several options will work - it's your choice!_
-- When a user visits the Unmotivational Posters view, we should see all 15 unmotivational posters displayed. **Use the cleaned data for this.**
+- When a user visits the Unmotivational Posters view, we should see all 15 unmotivational posters displayed immediately. **Use the cleaned data for this.**
 
 
 </section>
@@ -316,9 +320,9 @@ Unmotivational view (bottom of page):
 ![unmotivational-bottom-of-page](../../../assets/images/projects/hang_in_there/unmotivational-bottom-of-page.png)  
 
 
-- Using CSS, make the styling/format of the new "Unmotivational Posters" and "Back to Main" buttons match the other buttons throughout the app.
-- Using CSS flexbox (not grid), control the layout of the posters to match the comp.  _Note: the number of posters you see in each row will flex based on the width of the screen, thats a good thing!_
-- Using CSS, make the style and size of the unmotivational posters match the comp.
+- Using CSS, make the styling/format of the new "Unmotivational Posters" button (on the main page) and the "Back to Main" button (on the Unmotivational Posters page) match the other buttons throughout the app.
+- Using CSS flexbox (not grid), control the layout of the unmotivational posters to match the comp provided here.  _Note: the number of posters you see in each row will flex based on the width of the screen, thats a good thing!_
+- Using CSS, make the style and size of the unmotivational posters match the comp provided here.  You'll notice they should look slightly different than the saved posters.
 
 _Hint:  
 Consider the existing html and css as you style this view.  Are there places you can reuse existing classes/styling?  Ensure your work doesn't change the styling of the other parts of the app (like saved posters)._  
@@ -334,7 +338,8 @@ Our product team realizes that some users will love the Unmotivational Posters f
 
 - From the unmotivational posters view, if a user double clicks a poster, it will be deleted
   -  HTML `onclick` attributes should not be used in any HTML code - all functionality should be through JavaScript.  
-  -  The poster should be removed from the unmotivational posters data set _and_ should no longer be displayed on the DOM. 
+  -  The poster should be removed from your cleaned unmotivational posters data set **_and_** should no longer be displayed on the DOM. 
+  -  If the user navigates away from the Unmotivational Posters view after deleting some posters, those posters should still be gone when they navigate back to that view.  _Note: However, because we aren't implementing local storage, if a user refreshes the app, everything will be reset including deleted unmotivational posters and saved motivational posters._
 
 
 </section>

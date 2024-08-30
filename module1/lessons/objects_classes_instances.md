@@ -31,7 +31,7 @@ For example:
 
 * Type of object: Refrigerator
 * Specific instances:
-    * Staff Fridge, Small Fridge in Student Kitchen, Large Fridge in Student Kitchen
+    * Your Kitchen Fridge, Your Garage Fridge, Your Neighbor's Kitchen Fridge
 * Attributes:
   * Brand, Color, Temperature
 * Behaviors:
@@ -46,9 +46,9 @@ In programming, a **Class** is something that models:
 1. State
 2. Behavior
 
-State is what something *is*. Behavior is what something *does*. In the warm up, our *Class* was refrigerator. We modeled the state of a refrigerator by defining the attributes "brand", "color", and "temperature". We modeled the behavior of a refrigerator by defining the methods "add food", "remove food", and "change temperature".
+State is what something *is*. Behavior is what something *does*. In the warm up, our *Class* was Refrigerator. We modeled the state of a refrigerator by defining the attributes "brand", "color", and "temperature". We modeled the behavior of a refrigerator by defining the methods "add food", "remove food", and "change temperature".
 
-An **Instance** or **Object** is a concrete representation of a Class. In the previous activity, "staff refrigerator" is a specific Instance of the Fridge Class. We can also say that "staff refrigerator" is a Fridge Object. Do not get confused by the terms Instance and Object. They mean the exact same thing (for now).
+An **Instance** or **Object** is a concrete representation of a Class. In the previous activity, "your refrigerator" is a specific Instance of the Refrigerator Class. We can also say that "your refrigerator" is a Refrigerator Object. Do not get confused by the terms Instance and Object. They mean the exact same thing (for now).
 
 Think of a **Class** like a blueprint for a house and an **Instance** as an actual house. The blueprint is a just an idea of how the house should be built, and the house is the realization of that blueprint.
 
@@ -118,6 +118,16 @@ unicorn_2 = Unicorn.new
 require 'pry'; binding.pry
 ```
 
+We can run the `runner.rb` file from the command line if we are inside of our `objects_classes_and_instances` directory by typing the following: `ruby runner.rb`.
+
+When we run this file, our terminal should open up a pry session when it reads the line: `binding.pry`. Inside of that pry session, we'll type `unicorn_1` and hit return to see what the variable `unicorn_1` is holding. Then, we'll type `unicorn_2` to see what that variable is holding.
+
+### Reflection
+
+- How are the two objects the same?
+- How are they different?
+
+
 <section class="dropdown">
 
 ### Creating object instances in JavaScript
@@ -134,12 +144,6 @@ console.log(unicorn1);
 console.log(unicorn2);
 ```
 
-</section>
-
-We can run the `runner.rb` file from the command line if we are inside of our `objects_classes_and_instances` directory by typing the following: `ruby runner.rb`.
-
-When we run this file, our terminal should open up a pry session when it reads the line: `binding.pry`. Inside of that pry session, we'll type `unicorn_1` and hit return to see what the variable `unicorn_1` is holding. Then, we'll type `unicorn_2` to see what that variable is holding.
-
 <section class="note">
 
 ### Note
@@ -150,10 +154,8 @@ JavaScript doesn't have a `binding.pry` equivalent, therefore you will use `cons
 
 </section>
 
-## Reflection
+</section>
 
-- How are the two objects the same?
-- How are they different?
 
 ## Attributes in Ruby Classes
 

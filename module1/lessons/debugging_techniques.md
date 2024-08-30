@@ -24,7 +24,7 @@ To start, we need to make sure we have the appropriate tooling installed.
 - JavaScript developers often use `console.log()` to get visibility into their code and the data they are working with. By logging variables and outputs at different points in the code, developers can understand how data is flowing through their application and identify where things might be going wrong. For more information on console.log(), you can refer to the [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/API/console/log_static).
 </section>
 
-We'll also be using [Erroneous Creatures](https://github.com/turingschool-examples/se-mod1-exercises/tree/main/lessons/debugging/erroneous_creatures) which is in the Debugging Lesson directory of your mod-1-be-exercises repository.
+We'll also be using [Erroneous Creatures](https://github.com/turingschool-examples/se-mod1-exercises/tree/main/lessons/debugging/erroneous_creatures) which is in the Debugging Lesson directory of your se-mod1-exercises repository.
 
 
 ## Warmup
