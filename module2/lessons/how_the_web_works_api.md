@@ -216,6 +216,13 @@ Observe the responses, including status codes, headers, and body content.
 - PUT `/pets/:id` (with a JSON body)
 - DELETE `/pets/:id`
 
+<section class="note">
+### Note
+
+Be sure to replace `:id` with an actual ID of a pet
+
+</section>
+
 ## Checks for Understanding
 
 - What are the main components of an HTTP Request and an HTTP Response?
