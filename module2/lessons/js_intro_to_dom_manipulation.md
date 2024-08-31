@@ -197,6 +197,8 @@ Consider:
 - Why don't we use `()` to invoke the function within the eventListener?  What happens if we do?
 </section>
 
+<!-- YOURTURN -->
+
 ### Explore
 
 There are many types of events beyond just "click".   Explore this list of [Mouse Events](https://developer.mozilla.org/en-US/docs/Web/API/Element#mouse_events) on MDN. Scroll beyond just mouse events to explore keyboard events, focus events, etc.  
@@ -211,27 +213,69 @@ The [innerHTML](https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHT
 
 It can not only insert plain text, but it can insert HTML elements. For the example below, we will query and manipulate the Try It Together section above.
 
+
+### Check It Out
+
+<section class="dropdown">
+
+In your browser dev tools, copy paste the following code:
 ```javascript
 var box = document.querySelector('#try-it');
+```
+Then type `box` and hit return to see the value of that variable. Click on the dropdown arrow to see the full html within the box section.   
+</section>
 
-var pageData = {
-  title: "Pizza is Tasty",
-  body: "Yum!"
-}
+<section class="dropdown">
 
+
+What do you think the following code will do? Make a guess.
+Now, run it in your console: 
+```javascript
 box.innerHTML = `
-  <h3>${pageData.title}</h3>
-  <p>${pageData.body}</p>
+  <h3>Pizza is Tasty</h3>
+  <p>Yum!</p>
 `;
 ```
+Log the box variable again and open up the dropdown to see what has changed.  
+</section>
 
-BEFORE you run this code, consider....what do you think is happening? What do you think will happen when it's run?
+<section class="dropdown">
 
-Try running this code in the browser and see what happens to the "Try It" box just above on the page!
+
+What do you think the following code will do? How will it be different than the code we just ran?
+Guess, then run it in your console: 
+```javascript
+box.innerHTML = `
+  <p>Pepperoni!</p>
+`;
+```
+Log the box variable again and open up the dropdown to see what has changed.
+</section>
+
+
+<!-- <section class="call-to-action">
+### Your Turn
+
+In the elephants codepen from the warmup:
+<!-- //add section to elephnate -->
+- Query the section element and save it to a variable
+- Use innerHTML to change the 
+</section> -->
+
+<section class="dropdown">
+
+### Key Takeaways
+
+We can _access_ the text/html content of an element using dot notation with `innerText`/`innerHTML`.  
+We can _change_ the text/html content of an element using `=` or `+=`.
+
+</section>
+
+
 
 ## Changing Styles Programmatically
 
-It isn't rare to see an application change the color of something after a user interacts with it.
+It isn't uncommon to see an application change the color of something after a user interacts with it.
 
 We see things like...
 - Toggling light and dark mode
@@ -242,7 +286,7 @@ We see things like...
 We talked earlier about how powerful the DOM is because it allows us to interact with HTML elements via JavaScript. This also gives us the power to **modify the styles applied to said elements** via JavaScript.  
 
 Even though you haven't yet learned CSS, we will briefly discuss two ways to do this:
-1. Directly manipulate the style of the element through inline styles
+1. Directly manipulate the style of the element through inline styles (not best practice)
 2. **Add or remove classes from the element** (the preferred way).
 
 ### Directly Manipulate the Style of the Element
@@ -259,7 +303,7 @@ Type or copy/paste the code snippet below into the dev tools to see it change!
 ```javascript
 var box = document.querySelector('#change-my-border-box');
 
-box.style.borderColor = "blue";
+box.style.borderColor = "purple";
 ```
 
 We actually avoid inline styling because we usually want to make more than one tiny change and each inline style change requires it's own line of code. This can make for long functions that are difficult to read. Adding or removing classes (examples below) is strongly preferred. Plus, that lets us keep all our styling declarations in one place - the CSS file. Much more maintainable!
@@ -311,6 +355,15 @@ In order to keep learning about the DOM and DOM manipulation, here are some sugg
 
 
 <!-- KEY POINTS TO ADD THROUGHOUT:
+<section class="dropdown">
+
+### Key Takeaways
+
+We saw in the first two examples that DOM manipulation based on user interaction requires at least 3 steps.  
+* Elements: Querying the elements we'll need 
+* Event Listener: Adding the event listener
+* Function: Creating the function that the event listener will trigger
+</section>
 
 - the browser loads the html file and creates the DOM/DOM tree, turning each html element into a DOM node
 - document.querySelector can be used to grab elements by html tag 'h1', class '.call-to-action' or '#id'.  Note: there are other more complex options for selectors out there, they arent NEED to know right now
@@ -352,4 +405,13 @@ In order to keep learning about the DOM and DOM manipulation, here are some sugg
 //insertAdjacentHTML? maybe day 2?
 // change styles programmatically
 // .value....
+ -->
+
+
+
+<!-- END OF DAY FRIDAY
+
+have a good outline, finished innerHTML....but for the examples in this lesson, we aren't actually using eventlisteners.  need to update so they use eventlisteners.  for the color box we could  just add one color, then toggle it 
+
+
  -->
