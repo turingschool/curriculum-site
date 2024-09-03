@@ -120,15 +120,15 @@ One of the top misconceptions/mistakes we see students make is attempting to cap
 </section>
 
 ### Thinking Ahead:    
-What if you wanted to invoke 3 functions in a row on button click?  
+- What if you wanted to invoke 3 functions in a row on button click?  
 <!-- Create a handler function that invokes all 3, invoke the handler in your event listener -->
-What if you need to use logic to determine which function should be invoked on an event?  
+- What if you need to use logic to determine which function should be invoked on an event?  
 <!-- We can add whatever logic we want to the functions that our event handlers run. -->
-Is it ok to have logic written out within our event listeners? Why? Why not?  
+- Is it ok to have logic written out within our event listeners? Why? Why not?  
 <!-- Not ideal, we want event listeners to simply and cleanly invoke one function -->
-What if we need to pass an argument to the function we're invoking in our event listeners?  
+- What if we need to pass an argument to the function we're invoking in our event listeners?  
 <!-- We can open an anonymous function that invokes our event handler function and passes it an argument -->
-Why should we save our queried elements to variables?  Why don't we just type out the query selector when we need to access that variable?  
+- Why should we save our queried elements to variables?  Why don't we just type out the query selector when we need to access that variable?  
 <!-- Keeping them neatly stored in variables at the top of our file keeps our code readable and maintainable.  Plus it ensure we are repetitively querying the same element. -->
 
 
@@ -244,7 +244,7 @@ Every box has the class "box".  Maybe we can use code to say: "if the element th
 ## Check For Understanding
 
 <section class="call-to-action">
-### Think About It  
+### Recap
 
 * What are 3 steps required when doing DOM manipulation based on user interaction?
 * How do you access the values a user has entered?

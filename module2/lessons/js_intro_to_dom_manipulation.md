@@ -347,7 +347,7 @@ We've seen that DOM manipulation based on user interaction requires at least 3 s
 * Event Listener: Adding the event listener
 * Function: Creating the function that the event listener will trigger
 
-As you work through the practice below, first plan out what each of those three steps entail so you can take a methodical approach to writing the code.  
+As you work through the practice below, first **psuedocode** out what each of those three steps entail so you can take a methodical approach to writing the code.  
 
 
 <section class="call-to-action">
@@ -391,72 +391,3 @@ Let's take a few minutes to look back at what we've started to learn!
 
 
 
-
-
-
-
-<!-- KEY POINTS TO ADD THROUGHOUT:
-<section class="dropdown">
-
-### Key Takeaways
-
-We saw in the first two examples that DOM manipulation based on user interaction requires at least 3 steps.  
-* Elements: Querying the elements we'll need 
-* Event Listener: Adding the event listener
-* Function: Creating the function that the event listener will trigger
-</section>
-
-- 
-- document.querySelector can be used to grab elements by html tag 'h1', class '.call-to-action' or '#id'.  Note: there are other more complex options for selectors out there, they arent NEED to know right now
-- There are other ways to access elements besides jsut document.querySelector.   querySelectorAll,  getElementByID...etc
-- .innerText lets us access and manipulate the text content of elements have hold text content
-- .innerHTML lets us access and manipulate the html of an element
-- there are others!  LIke .insertAdjacentHTML
-- .value lets us get the user input from an input element 
-- .addEventListeners lets us control when code is run so that it only gets run if/when a user takes a certain action on a certain element
-
-
-
-
- -->
-
-
-
-<!-- //use elephants for day 1 dom and event listeners
-//use boxes for day 2 event.target
-
-//Warm up: build or look at elephants codepen 
-
-//What is the DOM?
-
-// query Selecting elements
-// do it in console - together
-// then they do it in elephants code pen
-
-// change it's innerText
-// do it in console - together
-// then they do it in elephants code pen
-//school example?
-
-// but we want to do this in response to a user action...
-// EVENT
-//EVENT LISTENERS
-
-//innerHTML
-//insertAdjacentHTML? maybe day 2?
-// change styles programmatically
-// .value....
- -->
-
-
-
-<!-- END OF DAY FRIDAY
-
-have a good outline, finished innerHTML....but for the examples in this lesson, we aren't actually using eventlisteners.  need to update so they use eventlisteners.  for the color box we could  just add one color, then toggle it 
-
-
-added section to elephants
-added blue styling to elephants
-
-
- -->
