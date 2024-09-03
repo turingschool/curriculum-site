@@ -42,14 +42,15 @@ The FE Requirements for this project can be found [here](./front_end_requirement
 <section class="dropdown">
 ### Extensions (Optional)
 
-You may pick one or more of these extension features to add to your project, **only if** you have completed all prior requirements and have refactored your code as needed for code quality: 
-1. On the Merchant Coupon Index page, active and inactive coupons are sorted in order of popularity, from most to least. 
-2. Inactive coupons cannot be added to an Invoice. 
-3. A Coupon has a maximum number of uses before it is automatically deactivated. When implemented, prove that the number of times used on the Merchant Coupon Show Page is updated accordingly. 
-4. Generate unique coupon codes as suggestions when creating a new coupon.
+You may pick one or more of these extension features to add to your project, **only if** you have completed all prior requirements and have refactored your code as needed for code quality.
 
+BE Extensions:
+1. Inactive coupons cannot be added to an Invoice. 
+2. A Coupon has a maximum number of uses before it is automatically deactivated. When implemented, prove that the number of times used on the Merchant Coupon Show Page is updated accordingly. 
+3. Generate unique coupon codes as suggestions when creating a new coupon.
 
-<!-- - When I am viewing the coupons for a merchant, I should see a "View Active Coupons" button that will update the list to only showing active coupons. There should be a way to go back to viewing all coupons (active AND inactive).
-- When I am viewing the coupons for a merchant, I should see a count of total coupons and total invoices with coupons applied. -->
+FE Extensions:
+1. When I am viewing the coupons for a merchant, I should see a "View Active Coupons" button that will update the list to only showing active coupons. There should be a way to go back to viewing all coupons (active AND inactive). 
+2. When I am viewing the coupons for a merchant, I should see a count of total coupons and total invoices with coupons applied.
 </section>
 
