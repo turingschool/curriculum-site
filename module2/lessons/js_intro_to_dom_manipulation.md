@@ -354,8 +354,12 @@ As you work through the practice below, first plan out what each of those three 
 ### Your Turn
 
 In the Animals codepen from the warmup:
+
+Add Fact:
 - Add another button with "Add Fact" text and id of "add-fact-btn".
 - Write code so that when a user clicks the Add Fact button, another `<p>` element with another animal fact is added to the `<section>` element, just below the image  
+
+Change Color:
 - Add another button with "Change Color" text and id of "change-color-btn"
 - Write code so that when a user clicks the Change Color button, the ".blue" class styling from the CSS file is applied to the `<section>` element, making its background blue.
 
