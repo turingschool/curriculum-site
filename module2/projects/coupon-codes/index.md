@@ -50,6 +50,7 @@ BE Extensions:
 3. Generate unique coupon codes as suggestions when creating a new coupon.
 
 FE Extensions:
+As a user...
 1. When I am viewing the coupons for a merchant, I should see a "View Active Coupons" button that will update the list to only showing active coupons. There should be a way to go back to viewing all coupons (active AND inactive). 
 2. When I am viewing the coupons for a merchant, I should see a count of total coupons and total invoices with coupons applied.
 </section>
