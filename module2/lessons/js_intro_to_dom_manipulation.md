@@ -28,8 +28,8 @@ tags: javascript, dom, browser, event listeners
 
 <section class="call-to-action">
 ### Warm Up
-<!-- need to revise this template and rename -->
-Fork [this codepen](https://codepen.io/turingschool/pen/MWMeopJ?editors=1010). Digest the code in the html file. Ignore the CSS file for now. Read the comments in the JS file outlining what we're going to try to accomplish.  Brainstorm, how might we approach this.
+Fork [this Animal codepen](https://codepen.io/turingschool/pen/MWMeopJ?editors=1010).  
+Digest the code in the html file. Ignore the CSS file for now. Read the comments in the JS file outlining what we're going to try to accomplish.  Brainstorm, how might we approach this.
 </section>
 
 ## Document Object Model
@@ -75,7 +75,7 @@ var title = document.querySelector('h1');
 
 title;
 
-//=> <h1>JS: Intro to the DOM</h1>
+//=> <h1>JS: Intro to DOM Manipulation</h1>
 ```
 
 <section id="explore" class="call-to-action">
@@ -91,8 +91,8 @@ Then, call the `box` variable (by typing in `box`, then hitting `return`).
 - What is returned?
 - Where does that element appear in the browser?
 - There are several sections with that class name on this page - why do you think that only _one_ of them is stored in the `box` variable?
-- Is there a unique identifier on each of those sections that we could use if we wanted to be more specific when querying?  
-  - Let's change our code to use that unique identifier instead!
+- If we were wanting to get _this_ Explore box instead, is there a unique identifier on it that we could use to be more specific when querying?  
+  - Let's change our code to use that unique identifier for this box instead!
 </section>
 
 We've already seen three of the different selector options we can use in our query:
@@ -100,7 +100,7 @@ We've already seen three of the different selector options we can use in our que
 - by class: `document.querySelector('.call-to-action')`
 - by id: : `document.querySelector('#explore')`
 
-Notice:
+Take Note:
 - selectors must always be in quotation marks (single or double)
 - class selectors must be prefaced with a `.`
 - id selectors must be prefaced with a `#`
@@ -109,7 +109,7 @@ Notice:
 <section class="call-to-action">
 ### Your Turn
 
-In the warmup codepen, query the three elements we're going to want access to.  Save each in a well-named variable.  
+In the warmup Animal codepen, query the three elements we're going to want access to.  Save each in a well-named variable.  
 
 - the title  
 - the elephant fact  
@@ -127,13 +127,11 @@ console.log('title', title)
 
 Now that we know how to query elements, let's look at how to update the content of an element we've accessed.
 
-We'll continue using our `title` variable for this example.
-
 ```javascript
 var title = document.querySelector('h1');
 ```
 
-Since our `title` variable stores a DOM element, we now have access to all the properties and methods that are attached to that DOM element. We won't learn about all of them today. Just a few to get you started.
+When we query a DOM element and store it in a variable, we now have access to all the properties and methods that are attached to that DOM element. We won't learn about all of them today. Just a few to get you started.
 
 ### `innerText`
 
@@ -159,19 +157,17 @@ Looking at the `<img>` in the html, is there a different property we might be ab
 <section class="call-to-action">
 ### Your Turn
 
-Fork [this CodePen](https://codepen.io/turing-school/pen/bGGmOrR).  In the `JS` file of the CodePen, complete the steps listed below.  Work through each bullet one at a time.
+Fork [this Report Card CodePen](https://codepen.io/turingschool/pen/rNEqEVw).  In the `JS` file of the CodePen, complete the steps listed below.  Work through each bullet one at a time.
 
 - Declare a variable `studentName` and assign the value of the element with the class of `student` to it
-- Declare a variable `schoolName` and assign the value of the `h3` element to it
 - Declare a variable `bestGrade` and assign the value of the element with a class of `grade-2` to it
 
 Now that we've queried the elements we need, we're going to change the data being displayed to users.  So we need somewhere to store the new data that we're going to display instead.
-- Declare a variable `newData` to store an object with keys of `studentName`, `schoolName`, and `bestGrade`.  Make the value of each key be the new name, school, and grade that you'll want to change the display to.   
+- Declare a variable `newData` to store an object with keys of `studentName` and `bestGrade`.  Make the value of each key be the new name, school, and grade that you'll want to change the display to.   
 
 Now, change the text of each queried element to display the data you saved in your newData object.
-- Change the `innerText` of the `studentName` variable to the `studentName` value from your `newData` object (use dot notation)
-- Change the `innerText` of the `schoolName` variable to the `schoolName` value from your object
-- Change the `innerText` of the `bestGrade` variable to be the grade you gave your `bestGrade` key in your object
+- Change the `innerText` of the `studentName` variable to be the `studentName` value from your `newData` object (use dot notation)
+- Change the `innerText` of the `bestGrade` variable to be the `bestGrade` value from your `newData` object
 </section>
 
 ## Event Listeners
@@ -183,13 +179,13 @@ This power emerges when we start **listening for user events**. This is the crux
 <section id="try-it" class="call-to-action">
 ### Try It Together
 
-Let's add an eventListener to our Report Card codepen. We still want to change the student name, school name, and grade, but we want to do so only when the user takes an action.  Let's say we want to change that data if a user clicks on the "Report Card" title
+Let's add an eventListener to our Report Card codepen. We still want to change the student name and grade, but we want to do so only when the user takes an action.  Let's say we want to change that data if a user clicks on the "Report Card" title
   
 - We'll use `document.querySelector()` to grab the "Report Card" `<h1>` and save it to a variable
 - Now we can add an eventListener to that `<h1>` title.
   - We want the eventListener to listen for a "click" event that happens on that title element. 
-  - When the "click" happens on the title element, we want to invoke a function that does all the things we want to do. Let's call that function `editReportCard()`.
-- You've already written the code to change the student name, school name, and grade.  Now we can move this code into the `changePageContent()` function that is being invoked by the eventListener.
+  - When the "click" happens on the title element, we want to invoke a function that does all the things we want to do. Let's call that function `editReportCard`.
+- You've already written the code to change the student name and grade.  Now we can move this code into the `editReportCard` function that is being invoked by the eventListener.
 
 Consider:  
 - Why don't we use `()` to invoke the function within the eventListener?  What happens if we do?
@@ -204,8 +200,8 @@ In the codepen from the Warm Up, follow the bullets below to add in an Event Lis
 - In your js file, use `document.querySelector()` to grab that button by its id and save it to a variable
 - Now add an eventListener to the button.
   - We want the eventListener to listen for a "click" event that happens on that button. 
-  - When the "click" happens on the button, invoke a function that does all the things we want to do. Call that function `changePageContent()`.
-- You've already written the code to change the title, fact and image.  Move this code into the `changePageContent()` function that is being invoked by the eventListener.
+  - When the "click" happens on the button, invoke a function that does all the things we want to do. Call that function `changePageContent`.
+- You've already written the code to change the title, fact and image.  Move this code into the `changePageContent` function that is being invoked by the eventListener.
 </section>
 
 ### Explore
@@ -254,7 +250,7 @@ Log the box variable again and open up the dropdown to see what has changed.
 What do you think the following code will do? How will it be different than the code we just ran?
 Guess, then run it in your console: 
 ```javascript
-box.innerHTML = `
+box.innerHTML += `
   <p>Pepperoni!</p>
 `;
 ```
@@ -322,7 +318,7 @@ Since it's common to need to change multiple CSS declarations, we can instead ad
 <section id="check-it-out-2" class="call-to-action">
 ### Check It Out
 
-Fork [this CodePen](https://codepen.io/turingschool/pen/yLdRWxY) and follow the directions below:
+Fork [this Color Box CodePen](https://codepen.io/turingschool/pen/yLdRWxY) and follow the directions below:
 - Read through the code that is currently written, and observe the result in the mini-browser
 - Un-comment line 3. What changed about the box? What remained the same?
 - Un-comment line 4. What changed about the box? What remained the same?
@@ -334,14 +330,32 @@ In summary, in your CSS file you can apply styles to a specific class selector -
 
 Note that if you are going to add/remove a class via JavaScript, that class should be declared **below** the original styling for the given element in the CSS file. This is because of the cascading nature of CSS; any time rules conflict, the rule declared lower on the sheet will take precedence.
 
+<section class="dropdown">
+
+### Key Takeaways
+- In your CSS file you can apply styles to specific class selectors.  Then you can use JS to add/remove/toggle that class to specified elements so that it will/will not have those styles applied.
+- If you're going to add/remove a class with JavaScript, the styling for that class should be declared **below** the original styling for the given element in the CSS file. 
+- We _can_ apply styles to an element directly with JavaScript but manipulating the `.style` property - but we do not want to do this.
+
+
+</section>
+<br>
+
+## Putting it all together
+We've seen that DOM manipulation based on user interaction requires at least 3 steps.  
+* Elements: Querying the elements we'll need 
+* Event Listener: Adding the event listener
+* Function: Creating the function that the event listener will trigger
+
+As you work through the practice below, first plan out what each of those three steps entail so you can take a methodical approach to writing the code.  
+
 
 <section class="call-to-action">
 ### Your Turn
 
-In the elephants codepen from the warmup:
-- Add another button with "Add Fact" text and id of "add-fact-btn"  
+In the Animals codepen from the warmup:
+- Add another button with "Add Fact" text and id of "add-fact-btn".
 - Write code so that when a user clicks the Add Fact button, another `<p>` element with another animal fact is added to the `<section>` element, just below the image  
-
 - Add another button with "Change Color" text and id of "change-color-btn"
 - Write code so that when a user clicks the Change Color button, the ".blue" class styling from the CSS file is applied to the `<section>` element, making its background blue.
 
@@ -352,21 +366,29 @@ Spicy:
 </section>
 
 
-<!-- ## Wrap Up
+## Wrap Up
 
 Let's take a few minutes to look back at what we've started to learn!
 
-<section id="one-more-time" class="call-to-action">
-### One more time...
+- What is the DOM?  How is it created?
+<!-- the browser loads the html file and creates the DOM/DOM tree, turning each html element into a DOM node -->
+- How can we grab elements from the DOM to work with them in our JS?
+<!-- document.querySelector can be used to grab elements by html tag 'h1', class '.call-to-action' or '#id'. Also, querySelectorAll, getElementById, etc.  There are also more complex CSS selectors we can use that arent need to know right now-->
+- How can we change the text of an element?
+<!-- .innerText -->
+- How can we change the html of an element?
+<!-- .innerHTML or .insertAdjacentHTML (not taught today) -->
+- How can we change styling applied to an element?  
+<!-- classList.add('className')  also .remove and .toggle -->
+- What are the 3 steps for writing code that response to user interactions?
+<!-- * Elements: Querying the elements we'll need  -->
+<!-- * Event Listener: Adding the event listener -->
+<!-- * Function: Creating the function that the event listener will trigger -->
 
-</section>
 
-### Suggested re-teaching practice
 
-In order to keep learning about the DOM and DOM manipulation, here are some suggestions:
 
-- Use CodePen to practice creating HTML elements to interact with using JavaScript
-- Practice manipulating the DOM of various websites through the developer tools, using `document.querySelector()` - have fun creating ridiculous things to screenshot
+
 
 
 <!-- KEY POINTS TO ADD THROUGHOUT:
@@ -380,7 +402,7 @@ We saw in the first two examples that DOM manipulation based on user interaction
 * Function: Creating the function that the event listener will trigger
 </section>
 
-- the browser loads the html file and creates the DOM/DOM tree, turning each html element into a DOM node
+- 
 - document.querySelector can be used to grab elements by html tag 'h1', class '.call-to-action' or '#id'.  Note: there are other more complex options for selectors out there, they arent NEED to know right now
 - There are other ways to access elements besides jsut document.querySelector.   querySelectorAll,  getElementByID...etc
 - .innerText lets us access and manipulate the text content of elements have hold text content
