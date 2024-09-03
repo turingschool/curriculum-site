@@ -9,7 +9,8 @@ _[Back to Coupon Codes Home](./index)_
 ## Presentation
 For the project evaluation, you will meet with an instructor for a 20 minute session. You should prepare a presentation that covers the following:
 
-* Demonstration of functionality via Postman suites
+* Demonstration of backend functionality via Postman suites
+* Demonstration of frontend functionality via running app in Browser
 * Discussion of technical quality and organization of the code, identifying code that should be refactored and how it would be refactored
 * Running your application's test suite and a discussion of test coverage (happy/sad paths and any edge cases)
 * Identifying the area(s) of code of which you are most proud, and an area where you would like specific feedback
