@@ -29,7 +29,7 @@ tags: javascript, dom, browser, event listeners
 <section class="call-to-action">
 ### Warm Up
 <!-- need to revise this template and rename -->
-Fork [this codepen](https://codepen.io/turingschool/pen/MWMeopJ?editors=1010). Digest the code in the html file.  Read the comments in the JS file outlining what we're going to try to accomplish.  Brainstorm, how might we approach this.
+Fork [this codepen](https://codepen.io/turingschool/pen/MWMeopJ?editors=1010). Digest the code in the html file. Ignore the CSS file for now. Read the comments in the JS file outlining what we're going to try to accomplish.  Brainstorm, how might we approach this.
 </section>
 
 ## Document Object Model
@@ -139,7 +139,6 @@ Since our `title` variable stores a DOM element, we now have access to all the p
 
 The [innerText](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/innerText) property holds the text that lives inside of a given element. In our codepen, the text content inside of the `h1` is `Elephants!`.  We can access that text content by accessing the element's `innerText` property. We can use the `=` assignment operator to change it.
 
-<!-- //can delete image asset not being used -->
 <section class="call-to-action">
 ### Try It Together 
 
@@ -184,20 +183,30 @@ This power emerges when we start **listening for user events**. This is the crux
 <section id="try-it" class="call-to-action">
 ### Try It Together
 
-Let's revisit the codepen from the Warm Up and add in an Event Listener. We still want to change the title, fact, and image, but we want to do so only when the user clicks a button.  
+Let's add an eventListener to our Report Card codepen. We still want to change the student name, school name, and grade, but we want to do so only when the user takes an action.  Let's say we want to change that data if a user clicks on the "Report Card" title
   
-- Add a "Click Me" button to your html above the <h1> element. Let's give it an id of  'click-me'.
-- In your js file, use `document.querySelector()` to grab that button by its id and save it to a variable
-- Now add an eventListener to the button.
-  - We want the eventListener to listen for a "click" event that happens on that button. 
-  - When the "click" happens on the button, we want to invoke a function that does all the things we want to do. Let's call that function `changePageContent()`.
-- You've already written the code to change the title, fact and image.  Move this code into the `changePageContent()` function that is being invoked by the eventListener.
+- We'll use `document.querySelector()` to grab the "Report Card" `<h1>` and save it to a variable
+- Now we can add an eventListener to that `<h1>` title.
+  - We want the eventListener to listen for a "click" event that happens on that title element. 
+  - When the "click" happens on the title element, we want to invoke a function that does all the things we want to do. Let's call that function `editReportCard()`.
+- You've already written the code to change the student name, school name, and grade.  Now we can move this code into the `changePageContent()` function that is being invoked by the eventListener.
 
 Consider:  
 - Why don't we use `()` to invoke the function within the eventListener?  What happens if we do?
 </section>
 
-<!-- YOURTURN -->
+<section class="call-to-action">
+### Your Turn
+
+In the codepen from the Warm Up, follow the bullets below to add in an Event Listener. We still want to change the title, fact, and image, but we want to do so only when the user clicks a button.  
+  
+- Add a "Change Animal" button to your html above the <h1> element. Give it an id of  'change-animal-btn'.
+- In your js file, use `document.querySelector()` to grab that button by its id and save it to a variable
+- Now add an eventListener to the button.
+  - We want the eventListener to listen for a "click" event that happens on that button. 
+  - When the "click" happens on the button, invoke a function that does all the things we want to do. Call that function `changePageContent()`.
+- You've already written the code to change the title, fact and image.  Move this code into the `changePageContent()` function that is being invoked by the eventListener.
+</section>
 
 ### Explore
 
@@ -251,16 +260,6 @@ box.innerHTML = `
 ```
 Log the box variable again and open up the dropdown to see what has changed.
 </section>
-
-
-<!-- <section class="call-to-action">
-### Your Turn
-
-In the elephants codepen from the warmup:
-<!-- //add section to elephnate -->
-- Query the section element and save it to a variable
-- Use innerHTML to change the 
-</section> -->
 
 <section class="dropdown">
 
@@ -323,10 +322,10 @@ Since it's common to need to change multiple CSS declarations, we can instead ad
 <section id="check-it-out-2" class="call-to-action">
 ### Check It Out
 
-Fork [this CodePen](https://codepen.io/hannahhudson/pen/JjyKBpW) and follow the directions below:
+Fork [this CodePen](https://codepen.io/turingschool/pen/yLdRWxY) and follow the directions below:
 - Read through the code that is currently written, and observe the result in the mini-browser
-- Un-comment line 3. What changed about the button? What remained the same?
-- Un-comment line 4. What changed about the button? What remained the same?
+- Un-comment line 3. What changed about the box? What remained the same?
+- Un-comment line 4. What changed about the box? What remained the same?
 </section>
 
 Read up on [this documentation](https://developer.mozilla.org/en-US/docs/Web/API/Element/classList) to learn how to **remove** a class from an elements classList! Hint: `toggle` may soon be a friend of yours, as well!
@@ -336,6 +335,22 @@ In summary, in your CSS file you can apply styles to a specific class selector -
 Note that if you are going to add/remove a class via JavaScript, that class should be declared **below** the original styling for the given element in the CSS file. This is because of the cascading nature of CSS; any time rules conflict, the rule declared lower on the sheet will take precedence.
 
 
+<section class="call-to-action">
+### Your Turn
+
+In the elephants codepen from the warmup:
+- Add another button with "Add Fact" text and id of "add-fact-btn"  
+- Write code so that when a user clicks the Add Fact button, another `<p>` element with another animal fact is added to the `<section>` element, just below the image  
+
+- Add another button with "Change Color" text and id of "change-color-btn"
+- Write code so that when a user clicks the Change Color button, the ".blue" class styling from the CSS file is applied to the `<section>` element, making its background blue.
+
+Spicy:
+- Refactor your Add Fact code so that it uses the [.insertAdjacentHTML() method](https://developer.mozilla.org/en-US/docs/Web/API/Element/insertAdjacentHTML) to acheive the same result
+- Refactor your Change Color code so that it toggles the background color blue/not-blue with each click.
+
+</section>
+
 
 <!-- ## Wrap Up
 
@@ -344,7 +359,7 @@ Let's take a few minutes to look back at what we've started to learn!
 <section id="one-more-time" class="call-to-action">
 ### One more time...
 
-</section> -->
+</section>
 
 ### Suggested re-teaching practice
 
@@ -412,6 +427,10 @@ We saw in the first two examples that DOM manipulation based on user interaction
 <!-- END OF DAY FRIDAY
 
 have a good outline, finished innerHTML....but for the examples in this lesson, we aren't actually using eventlisteners.  need to update so they use eventlisteners.  for the color box we could  just add one color, then toggle it 
+
+
+added section to elephants
+added blue styling to elephants
 
 
  -->
