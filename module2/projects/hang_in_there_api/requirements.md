@@ -532,7 +532,7 @@ body:
 
 **Request**
 ```bash
-POST /api/v1/posters/
+POST /api/v1/posters
 Content-Type: application/json
 Accept: application/json
 
