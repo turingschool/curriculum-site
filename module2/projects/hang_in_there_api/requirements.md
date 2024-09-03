@@ -528,7 +528,7 @@ body:
 </section>
 
 <section class="dropdown">
-### POST /api/v1/posters/
+### POST /api/v1/posters
 
 **Request**
 ```bash
