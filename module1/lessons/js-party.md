@@ -17,20 +17,11 @@ Google and the [MDN docs](https://developer.mozilla.org/en-US/) will be your fri
 
 ## Set Up
 
-**Create a Replit Account**  
+**Follow the instructions in the README to fork and clone this [se-mod2-exercise repo](https://github.com/turingschool-examples/se-mod2-exercises)**.
 
-[Replit](https://replit.com/~) provides an online platform that allows us to write code and see the results almost immediately - all inside of one browser tab! 
+Be sure to clone this repo into a directory where it will be easily accessible.  You will use this repo for all of your JS Party exercises as well as the exercises you'll do in front end lessons in Mod 2.  
 
-Follow the steps below (if they are not necessary because you have already done them or have experience with replit, you can skip this):
-
-- Create a free account.
-- [Bookmark the Replit webpage on Chrome](https://support.google.com/chrome/answer/188842?hl=en&co=GENIE.Platform%3DDesktop), so that you can easily find it again later.
-- Watch [this video](https://www.youtube.com/watch?v=cnLE3bH6fHE) to learn how to navigate the interface and create new projects. Feel free to speed up the video as you watch.
-
-A few notes: 
- - When using Replit for Javascript exercises, we will use Node.js.  
- - When opening up the practice Repls below, you'll need fork each one to create your own copy to play around in.
- - *Important:*  Along the bottom toolbar in each Repl you'll see an AI option.  You do *NOT* want to have AI autocomplete enabled.  Having this enabled will provide you with the code solutions you're supposed to be figuring out on your own.  Having this enabled renders your practice a big ol' waste of time.  
+*Important:*  VS Code offers packages and tools that can help you write your code. You should **NOT** be using any tools that will autocomplete or suggest autocompletion for your code as you work through these examples (and other Turing code).  Having this type of tool enabled will provide you with the code solutions you're supposed to be **figuring out** on your own.  This quickly renders your practice, and your tuition, to be a big ol' waste. 
 
 <br>
 
@@ -69,9 +60,7 @@ You aren’t likely to specifically assign a value of **undefined** so there’s
 
 ### 🎉 Data Types & Variables Party Exercises
 
-Use this repl to practice working with variables and data types in JavaScript.  Use google, MDN and each other when you get stuck. You're not suppose to know this, so just have a little fun trying to figure it out.  Be sure to disable AI Autocomplete at the bottom of the repl (towards the left).
-
-[Data Types and Variables Playground repl](https://replit.com/@replit1369/Data-Types-and-Variables-playground#index.js)
+Open the [Data Types and Variables Playground file](https://github.com/turingschool-examples/se-mod2-exercises/blob/main/js_party/data_types_and_variables_playground.js) in the JS Party folder of your SE2 repo to practice working with variables and data types in JavaScript.  Use google, MDN and each other when you get stuck. You're not suppose to know this, so just have a little fun trying to figure it out. 
 
 A few things you might want to google or check out in the MDN docs as you party:  
 *[concatenation](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Strings#concatenation_using)*  
@@ -86,9 +75,7 @@ JavaScript lets us combines multiples pieces of data into one big string using c
 
 ### 🎉 Type Coercion, Concatenation & Interpolation Party Exercises
 
-Use this repl to practice working with type coercion, concatenation & interpolation in JavaScript.  Use google, MDN and each other when you get stuck. You're not suppose to know this, so just have a little fun trying to figure it out.  Be sure to disable AI Autocomplete at the bottom of the repl (towards the left).
-
-[Type Coercion Concatenation Interpolation Playground repl](https://replit.com/@replit1369/Type-Coercion-Concatenation-Interpolation-Playground)
+Open the [Type Coercion Concatenation Interpolation Playground file](https://github.com/turingschool-examples/se-mod2-exercises/blob/main/js_party/type_coercion_concatenation_interpolation_playground.js) in the JS Party folder of your SE2 repo to practice working with type coercion, concatenation & interpolation in JavaScript.  Use google, MDN and each other when you get stuck. You're not suppose to know this, so just have a little fun trying to figure it out.  
 
 A few things you might want to google or check out in the MDN docs as you party:  
 [concatenation](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Strings#concatenation_using)  
@@ -149,9 +136,8 @@ You'll eventually need to understand and use both options but don't stress that 
 
 ### 🎉 Functions Party Exercises
 
-Use this repl to practice writing functions in JavaScript.  Use google, MDN and each other when you get stuck. You're not suppose to know this, so just have a little fun trying to figure it out.   Be sure to disable AI Autocomplete at the bottom (towards the left).
+Open the [Functions Playground file](https://github.com/turingschool-examples/se-mod2-exercises/blob/main/js_party/functions_playground.js) in the JS Party folder of your SE2 repo to practice writing functions in JavaScript.  Use google, MDN and each other when you get stuck. You're not suppose to know this, so just have a little fun trying to figure it out.   
 
-[Functions Playground repl](https://replit.com/@replit1369/Functions-Playground)
 
 <br>
 
@@ -201,10 +187,7 @@ findLocation("taco bell");
 
 ### 🎉 Conditionals Party Exercises
 
-Use this repl to practice working with conditionals in JavaScript.  Use google, MDN and each other when you get stuck. You're not suppose to know this, so just have a little fun trying to figure it out.   Be sure to disable AI Autocomplete at the bottom (towards the left).
-
-[Conditionals Playground repl](https://replit.com/@replit1369/Conditionals-Playground#index.js)
-
+Open the [Conditionals Playground file](https://github.com/turingschool-examples/se-mod2-exercises/blob/main/js_party/conditionals_playground.js) in the JS Party folder of your SE2 repo to practice working with conditionals in JavaScript.  Use google, MDN and each other when you get stuck. You're not suppose to know this, so just have a little fun trying to figure it out.   
 
 <br>
 
@@ -232,9 +215,8 @@ Objects in JS can hold any data type within it's key-value pairs.  You can even 
 
 ### 🎉 Object Party Exercises
 
-Use this repl to practice working with objects in JavaScript.  Use google, MDN and each other when you get stuck. You're not suppose to know this, so just have a little fun trying to figure it out.   Be sure to disable AI Autocomplete at the bottom (towards the left).
+Open the [Objects Playground file](https://github.com/turingschool-examples/se-mod2-exercises/blob/main/js_party/objects_playground.js) in the JS Party folder of your SE2 repo to practice working with objects in JavaScript.  Use google, MDN and each other when you get stuck. You're not suppose to know this, so just have a little fun trying to figure it out.   
 
-[Object Playground repl](https://replit.com/@replit1369/Object-Play)
 
 <br>
 
@@ -254,9 +236,8 @@ Arrays in JS can hold any other data type.  You could have an array of strings, 
 
 ### 🎉 Array Party Exercises
 
-Use this repl to practice working with arrays in JavaScript.  Use google, MDN and each other when you get stuck. You're not suppose to know this, so just have a little fun trying to figure it out.    Be sure to disable AI Autocomplete at the bottom (towards the left).
+Open the [Array Playground file](https://github.com/turingschool-examples/se-mod2-exercises/blob/main/js_party/arrays_playground.js) in the JS Party folder of your SE2 repo to practice working with arrays in JavaScript.  Use google, MDN and each other when you get stuck. You're not suppose to know this, so just have a little fun trying to figure it out.    
 
-[Array Playground repl](https://replit.com/@replit1369/Array-playground#index.js)
 
 <br>
 
@@ -291,13 +272,11 @@ for (var i = 0; i < fruits.length; i++) {
 
 ### 🎉 For Loops Party Exercises
 
-Use this repl to practice iterating over arrays with a for loop.  Use google, MDN and each other when you get stuck. You're not suppose to know this, so just have a little fun trying to figure it out.    Be sure to disable AI Autocomplete at the bottom (towards the left).
+Open the [For Loops Playground file](https://github.com/turingschool-examples/se-mod2-exercises/blob/main/js_party/for_loops_playground.js) in the JS Party folder of your SE2 repo to practice iterating over arrays with a for loop.  Use google, MDN and each other when you get stuck. You're not suppose to know this, so just have a little fun trying to figure it out.    
 
-[For Loops Playground repl](https://replit.com/@replit1369/for-loop-Playground#index.js)
+Then, take a sneak peek at another, more sophisticated way to iterate over data in JavaScript - Array Prototype Iterator Methods!
 
-Now lets take a sneak peek at another, more sophisticated way to iterate over data in JavaScript - Array Prototype Iterator Methods!
-
-[Iterators Sneak Peek Playground repl](https://replit.com/@replit1369/Iterators-Sneak-Peek-Playground#index.js)
+Open the [Iterators Sneak Peek Playground file](https://github.com/turingschool-examples/se-mod2-exercises/blob/main/js_party/iterators_playground.js) and work through the exercises.
 
 A few things you might want to google or check out in the docs as you party:    
     *[forEach()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)*  
@@ -314,7 +293,7 @@ You can see that as developers, we will likely want to do similar data manipulat
 
 ## More Practice (optional)
 
-[More Functions Playground](https://replit.com/@replit1369/More-Functions-Playground)
+[More Functions Playground file](https://github.com/turingschool-examples/se-mod2-exercises/blob/main/js_party/more_functions_playground.js)
 
 If you're looking for additional practice and elaboration on these JavaScript topics, you can check out our [legacy Front End curriculum lessons](https://frontend.turing.edu/lessons/) to learn more.
 
