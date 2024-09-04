@@ -60,7 +60,7 @@ You aren’t likely to specifically assign a value of **undefined** so there’s
 
 ### 🎉 Data Types & Variables Party Exercises
 
-Open the [Data Types and Variables Playground file](https://github.com/turingschool-examples/se-mod2-exercises/blob/main/js_party/data_types_and_variables_playground.js) in the JS Party folder of your SE2 repo to practice working with variables and data types in JavaScript.  Use google, MDN and each other when you get stuck. You're not suppose to know this, so just have a little fun trying to figure it out. 
+Use VSCode to open the [Data Types and Variables Playground file](https://github.com/turingschool-examples/se-mod2-exercises/blob/main/js_party/data_types_and_variables_playground.js) in the JS Party folder of your SE2 repo to practice working with variables and data types in JavaScript.  Use google, MDN and each other when you get stuck. You're not suppose to know this, so just have a little fun trying to figure it out. 
 
 A few things you might want to google or check out in the MDN docs as you party:  
 *[concatenation](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Strings#concatenation_using)*  
@@ -75,7 +75,7 @@ JavaScript lets us combines multiples pieces of data into one big string using c
 
 ### 🎉 Type Coercion, Concatenation & Interpolation Party Exercises
 
-Open the [Type Coercion Concatenation Interpolation Playground file](https://github.com/turingschool-examples/se-mod2-exercises/blob/main/js_party/type_coercion_concatenation_interpolation_playground.js) in the JS Party folder of your SE2 repo to practice working with type coercion, concatenation & interpolation in JavaScript.  Use google, MDN and each other when you get stuck. You're not suppose to know this, so just have a little fun trying to figure it out.  
+Use VSCode to open the [Type Coercion Concatenation Interpolation Playground file](https://github.com/turingschool-examples/se-mod2-exercises/blob/main/js_party/type_coercion_concatenation_interpolation_playground.js) in the JS Party folder of your SE2 repo to practice working with type coercion, concatenation & interpolation in JavaScript.  Use google, MDN and each other when you get stuck. You're not suppose to know this, so just have a little fun trying to figure it out.  
 
 A few things you might want to google or check out in the MDN docs as you party:  
 [concatenation](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Strings#concatenation_using)  
@@ -136,7 +136,7 @@ You'll eventually need to understand and use both options but don't stress that 
 
 ### 🎉 Functions Party Exercises
 
-Open the [Functions Playground file](https://github.com/turingschool-examples/se-mod2-exercises/blob/main/js_party/functions_playground.js) in the JS Party folder of your SE2 repo to practice writing functions in JavaScript.  Use google, MDN and each other when you get stuck. You're not suppose to know this, so just have a little fun trying to figure it out.   
+Use VSCode to open the [Functions Playground file](https://github.com/turingschool-examples/se-mod2-exercises/blob/main/js_party/functions_playground.js) in the JS Party folder of your SE2 repo to practice writing functions in JavaScript.  Use google, MDN and each other when you get stuck. You're not suppose to know this, so just have a little fun trying to figure it out.   
 
 
 <br>
@@ -187,7 +187,7 @@ findLocation("taco bell");
 
 ### 🎉 Conditionals Party Exercises
 
-Open the [Conditionals Playground file](https://github.com/turingschool-examples/se-mod2-exercises/blob/main/js_party/conditionals_playground.js) in the JS Party folder of your SE2 repo to practice working with conditionals in JavaScript.  Use google, MDN and each other when you get stuck. You're not suppose to know this, so just have a little fun trying to figure it out.   
+Use VSCode to open the [Conditionals Playground file](https://github.com/turingschool-examples/se-mod2-exercises/blob/main/js_party/conditionals_playground.js) in the JS Party folder of your SE2 repo to practice working with conditionals in JavaScript.  Use google, MDN and each other when you get stuck. You're not suppose to know this, so just have a little fun trying to figure it out.   
 
 <br>
 
@@ -215,7 +215,7 @@ Objects in JS can hold any data type within it's key-value pairs.  You can even 
 
 ### 🎉 Object Party Exercises
 
-Open the [Objects Playground file](https://github.com/turingschool-examples/se-mod2-exercises/blob/main/js_party/objects_playground.js) in the JS Party folder of your SE2 repo to practice working with objects in JavaScript.  Use google, MDN and each other when you get stuck. You're not suppose to know this, so just have a little fun trying to figure it out.   
+Use VSCode to open the [Objects Playground file](https://github.com/turingschool-examples/se-mod2-exercises/blob/main/js_party/objects_playground.js) in the JS Party folder of your SE2 repo to practice working with objects in JavaScript.  Use google, MDN and each other when you get stuck. You're not suppose to know this, so just have a little fun trying to figure it out.   
 
 
 <br>
@@ -236,7 +236,7 @@ Arrays in JS can hold any other data type.  You could have an array of strings, 
 
 ### 🎉 Array Party Exercises
 
-Open the [Array Playground file](https://github.com/turingschool-examples/se-mod2-exercises/blob/main/js_party/arrays_playground.js) in the JS Party folder of your SE2 repo to practice working with arrays in JavaScript.  Use google, MDN and each other when you get stuck. You're not suppose to know this, so just have a little fun trying to figure it out.    
+Use VSCode to open the [Array Playground file](https://github.com/turingschool-examples/se-mod2-exercises/blob/main/js_party/arrays_playground.js) in the JS Party folder of your SE2 repo to practice working with arrays in JavaScript.  Use google, MDN and each other when you get stuck. You're not suppose to know this, so just have a little fun trying to figure it out.    
 
 
 <br>
@@ -272,11 +272,11 @@ for (var i = 0; i < fruits.length; i++) {
 
 ### 🎉 For Loops Party Exercises
 
-Open the [For Loops Playground file](https://github.com/turingschool-examples/se-mod2-exercises/blob/main/js_party/for_loops_playground.js) in the JS Party folder of your SE2 repo to practice iterating over arrays with a for loop.  Use google, MDN and each other when you get stuck. You're not suppose to know this, so just have a little fun trying to figure it out.    
+Use VSCode to open the [For Loops Playground file](https://github.com/turingschool-examples/se-mod2-exercises/blob/main/js_party/for_loops_playground.js) in the JS Party folder of your SE2 repo to practice iterating over arrays with a for loop.  Use google, MDN and each other when you get stuck. You're not suppose to know this, so just have a little fun trying to figure it out.    
 
 Then, take a sneak peek at another, more sophisticated way to iterate over data in JavaScript - Array Prototype Iterator Methods!
 
-Open the [Iterators Sneak Peek Playground file](https://github.com/turingschool-examples/se-mod2-exercises/blob/main/js_party/iterators_playground.js) and work through the exercises.
+Use VSCode to open the [Iterators Sneak Peek Playground file](https://github.com/turingschool-examples/se-mod2-exercises/blob/main/js_party/iterators_playground.js) and work through the exercises.
 
 A few things you might want to google or check out in the docs as you party:    
     *[forEach()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)*  
@@ -293,7 +293,7 @@ You can see that as developers, we will likely want to do similar data manipulat
 
 ## More Practice (optional)
 
-[More Functions Playground file](https://github.com/turingschool-examples/se-mod2-exercises/blob/main/js_party/more_functions_playground.js)
+Use VS Code to practie more functions in the [More Functions Playground file](https://github.com/turingschool-examples/se-mod2-exercises/blob/main/js_party/more_functions_playground.js).
 
 If you're looking for additional practice and elaboration on these JavaScript topics, you can check out our [legacy Front End curriculum lessons](https://frontend.turing.edu/lessons/) to learn more.
 
