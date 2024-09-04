@@ -23,11 +23,15 @@ This project is an extension of the Little Shop group project. You will add func
 
 ## Setup
 
-This project is an extension of Little Shop. **You'll need to start this project with a frontend repo and backend repo.** You have a few options for setup:
+This project is an extension of Little Shop. You'll need to start this project with a frontend repo and backend repo. Read below carefully for the set-up instructions.
 
-1. If your Little Shop project is complete, you can use both the frontend repo and backend repo as your starting points for this project. If you are not the repo owner, fork the project to your account. If you are the repo owner, you can work off the repo without forking, just make sure your teammates have a chance to fork before pushing any commits to either repo.
-1. If your Little Shop backend is _not_ complete, fork **[this backend repo](https://github.com/turingschool-examples/little-shop-be-final-starter)** as a starting point for this project. 
-1. It is okay to work off of an incomplete frontend, as you'll be building new features. That said, if your frontend is buggy, you may choose to restart with the same **[frontend starter repo](https://github.com/turingschool-examples/little-shop-fe-group-starter)** from the last project.
+**Backend Repo**
+- If your Little Shop project is complete, you can use the backend repo as your starting point for this project. If you are not the repo owner, fork the project to your account. If you are the repo owner, you can work off the repo without forking, just make sure your teammates have a chance to fork before pushing any commits to either repo.
+- If your Little Shop backend is _not_ complete, fork **[this backend repo](https://github.com/turingschool-examples/little-shop-be-final-starter)** as a starting point for this project.  
+
+
+**Frontend Repo** 
+- All students must use a forked copy of **[this frontend repo](https://github.com/turingschool-examples/little-shop-fe-final-starter)** for this project. 
 
 
 ## Evaluation
