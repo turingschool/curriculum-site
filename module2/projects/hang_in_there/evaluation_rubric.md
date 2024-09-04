@@ -55,10 +55,11 @@ ON TRACK can look like:
 
 ON TRACK can look like:
 - The main JS file is organized thoughtfully (DOM variables together, event listeners together, functions together)
+- All queried elements are saved to variables at the top of the file. Query selectors are not used throughout the code. 
 - Variable and function naming is meaningful, readable, and follow convention. (Arrays are plural, functions begin with present-tense verb, etc.) 
 - Functions are DRY (Don't Repeat Yourself) and demonstrate SRP (Single Responsibility Principle)
-- Global variables are limited to only those that are necessary.
 - Only semantic/organizational comments remain in file (if any). No console logs remain in any files.
+- Event Listeners cleanly and simply invoke one function.  No logic is present within the event listeners.
 
 ✨WOW✨ can look like:
 
