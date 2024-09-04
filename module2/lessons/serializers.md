@@ -21,7 +21,7 @@ On your own, research serializers. In your notebook, write down the answers to t
 
 ## Serializers
 
-Serializers allow us to mold that data we are returning from our API in an object-oriented fashion. They allow us to present to whomever is consuming our API what we want them to see.
+Serializers allow us to mold the data we are returning from our API in an object-oriented fashion. They allow us to present to whomever is consuming our API what we want them to see.
 
 When we call `render json:`, Rails makes a call to `as_json` under the hood unless we have a serializer set up. Eventually, `as_json` calls `to_json` and our response is generated.
 
@@ -77,7 +77,7 @@ $ bundle
 $ bundle exec rails db:{drop,create,migrate,seed}
 ```
 
-You should then be able to access the databases called set_list_development and set_list_test and have some seed data.
+You should then be able to access the databases called `set_list_development` and `set_list_test` and have some seed data.
 
 You can confirm this worked by opening your rails console and taking a look at the contents of your development database.
 
@@ -90,7 +90,7 @@ Use Postman to view the current responses that your API is providing to the rout
 - api/v1/songs
 - api/v1/songs/:id
 
-So we have our responses from our server, but it isn’t JSON API 1.0 And it has this created at and updated at stuff which we don’t want. So what do we do? We need to use a serializer.
+So we have our responses from our server, but it doesn't adhere to JSON API 1.0 specification. It also has this `created_at` and `updated_at` stuff which we don’t want. So what do we do? We need to use a serializer.
 
 ## Customizing JSON
 
@@ -100,17 +100,18 @@ This is some practice time for you.
 
 ```ruby
 {
-  "data": [
-    {
-      "id": "1",
+  "data": {
+    "id": "1",
+    "type": "song",
+    "attributes": {
       "title": "Legend Has It",
       "length": 2301
     }
-  ]
+  }
 }
 ```
 
-That was a pain in the butt, wasn’t it? Creating serializers by hand that are JSON API 1.0 for everything we want to make an API for can certainly be time consuming. There are better ways.
+That was a pain in the butt, wasn’t it? Creating serializers by hand that follow JSON API 1.0 specification for everything we want to make an API for can certainly be time consuming. There are better ways.
 
 ## Using the jsonapi-serializer gem
 
