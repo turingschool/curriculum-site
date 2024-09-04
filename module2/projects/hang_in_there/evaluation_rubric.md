@@ -116,7 +116,7 @@ When you meet with your instructor, you should be prepared to screenshare your f
   - Save the new poster
 - Show the unmotivational posters
 - Delete a few unmotivational posters 
-  - Show that you can doubleclick anywhere on the poster to delete it (image, background, text)
+  - Show that you can double click anywhere on the poster to delete it (image, background, text)
   - Confirm that they remain deleted if you navigate away then back to that view
 
 Along the way, your instructor may give you specific directions or have you log various parts of the data model in your console to confirm that the data model is aligned with what the UI is showing. 
@@ -128,4 +128,4 @@ Along the way, your instructor may give you specific directions or have you log 
   - How you prevented duplicates
 - Unmotivational posters 
   - How you added the html to the DOM
-  - How you prevented deleted posters from both the DOM and your data model
+  - How you deleted the poster from both the DOM and your data model
