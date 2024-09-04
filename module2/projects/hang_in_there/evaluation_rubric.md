@@ -101,3 +101,30 @@ ON TRACK can look like:
 ✨WOW✨ can look like:
 - All of the expectations of iterations 0-6 and an extension are complete without bugs
 </section>
+
+
+## Live Eval Instructions
+ 
+When you meet with your instructor, you should be prepared to screenshare your front end application (UI) as well as your code.   
+
+**First, you'll walk through the features of your application in the UI as a user:**
+- Show a few random posters
+- Save a few posters 
+  - Try to save a duplicate
+- Make a new poster
+  - Save the new poster
+- Show the unmotivational posters
+- Delete a few unmotivational posters 
+  - Show that you can doubleclick anywhere on the poster to delete it (image, background, text)
+  - Confirm that they remain deleted if you navigate away then back to that view
+
+Along the way, your instructor may give you specific directions or have you log various parts of the data model in your console to confirm that the data model is aligned with what the UI is showing. 
+
+**Then, you'll share your code.  Instructors will direct you to show and speak to various parts of the code. You can expect to show:**
+- Event listeners
+- Save functionality
+  - How you added the html to the DOM
+  - How you prevented duplicates
+- Unmotivational posters 
+  - How you added the html to the DOM
+  - How you prevented deleted posters from both the DOM and your data model
