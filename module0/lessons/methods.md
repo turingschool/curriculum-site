@@ -244,7 +244,7 @@ Take time between now and your next session to self-teach the following section.
 
 <div>
   <h3>Exploration: PART 1</h3> 
-  <p>Fork, then run the code <a href="https://replit.com/@turingschool/m0builtinmethods#main.rb" target="blank">in this replit</a> and observe the output.</p>
+  <p>Find your <a href="https://replit.com/@turingschool/m0lessonsrepl#main.rb" target="blank">Mod 0 Lessons Repl </a> from the Data Types lesson. Comment out the puts/prints code from that previous lesson. Uncomment the Built In Methods Part 1 code and observe the output.</p>
   <p><strong>Think:</strong> How did each line of code, produce each respective line of output? Which parts make sense, and which are confusing?</p>
 </div>
 <br>
