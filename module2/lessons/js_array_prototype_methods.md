@@ -4,6 +4,8 @@ length: 90
 tags: javascript, arrays, prototypes, mutator, accessor, callback functions
 ---
 
+We will use the [array prototype methods file](https://github.com/turingschool-examples/se-mod2-exercises/blob/main/lessons/array_prototype_methods.js) in the lessons folder of your SE-Mod2-exercises repo to work through the examples in this lesson.  Open that file in VS Code now. 
+
 ## Learning Goals
 
 * Be able to describe prototype methods, mutators and accessors
