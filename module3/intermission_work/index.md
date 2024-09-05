@@ -24,7 +24,7 @@ To start your Professional Development work in mod 3, plan to spend 60-90 minute
 
 ### 2. Intro to React
 
-Complete this [IdeaBox tutorial](../lessons/ideabox.md). This tutorial will take you about 4 hours to complete.
+Complete this [IdeaBox tutorial](../lessons/react_ideabox). This tutorial will take you about 4 hours to complete.
 
 ### 3. Consuming APIs with Ruby
 

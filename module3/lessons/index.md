@@ -11,7 +11,7 @@ title: Module 3 - Lessons
 * [Refactoring Patterns for API Consumption](.) -->
 
 ## React
-* [React: Building an Ideabox](./ideabox.md)
+* [React: Our First Ideabox](./react_ideabox)
 <!-- [Intro to React](.) -->
 <!-- * [Network Requests: GET & POST](.) -->
 <!-- * [React: Advanced Data Management](.) -->
@@ -28,7 +28,7 @@ title: Module 3 - Lessons
 
 
 ## Fullstack Web Development
-* [Intro to Service-Oriented Architecture](./intro_to_soa.md)
+* [Intro to Service-Oriented Architecture](./intro_to_soa)
 
 ## Professional Development
 * [Mod 3 PD Curriculum](../pd/)
