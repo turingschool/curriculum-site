@@ -7,7 +7,7 @@ title: Multiple Joins
 For success in this lesson, be sure you have reviewed the [Joins](./joins) lesson first. 
 
 ## Set Up
-Clone and check out the `joins-homework` branch of the [Set List Tutorial](https://github.com/turingschool-examples/set-list-7/tree/joins-homework). Run `bundle install` and `rails db:migrate`.
+Clone and check out the `joins-homework` branch of the [Set List Tutorial](https://github.com/turingschool-examples/set-list-api/blob/joins-homework/README.md). Run `bundle install` and `rails db:migrate`.
 
 ## Joining Multiple Tables
 As you have learned, a Join query is what we use to combine data from at least two tables. If we push that idea further, it is also possible to join *many* tables together in order to gather information from multiple tables. 

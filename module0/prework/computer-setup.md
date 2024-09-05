@@ -72,12 +72,13 @@ To ensure that you are prepared for your first session:
 
 ### Create a Replit Account
 
-[Replit](https://replit.com/~) provides an online platform that allows us to write code and see the results almost immediately - all inside of one browser tab! There are many other similar (and awesome) tools available but replit is used regularly in Mods 1 and 2, so Mod 0 provides an introduction and some exposure.
+[Replit](https://replit.com/~) provides an online platform that allows us to write code and see the results almost immediately - all inside of one browser tab! There are many other similar (and awesome) tools available but replit will be used in Mod 0.
 
 Follow the steps below (if they are not necessary because you have already done them or have experience with replit, you can skip this):
 - Create a free account.
 - [Bookmark this webpage on Chrome](https://support.google.com/chrome/answer/188842?hl=en&co=GENIE.Platform%3DDesktop), so that you can easily find it again later.
 - [Watch this video](https://www.youtube.com/watch?v=cnLE3bH6fHE) to learn how to navigate the interface and create new projects.
+- **Note:** Repl now limits free users to 3 repls.  Once you hit 3 repls, you'll need to delete an older repl before you'll be able to fork or create a new one.
 
 <br>
 

@@ -3,7 +3,8 @@ title: Hang In There - API
 ---
 
 ## Project Description
-Last week you built a front end for your not so motivational posters. This week, you're going to build a database so that posters don't have to be hardcoded into your front end. How cool is that? You are building CRUD functionality in your back end API application. We have provided a front end that you can use to see your work come to life!
+Last week you built a front end for your not so motivational posters. This week, you're going to build a database that a front end could use rather than having to hardcode their poster data. How cool is that? You are building CRUD functionality in your back end API application. 
+<!-- We have provided a front end that you can use to see your work come to life! -->
 
 
 ## Learning Goals

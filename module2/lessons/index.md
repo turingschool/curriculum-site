@@ -16,7 +16,7 @@ title: Module 2 - Lessons
 - [JS: Intro to the DOM](./js_intro_to_dom)
 - [JS: Event Listeners](./js_event_listeners)
 - [JS: Array Prototype Methods](./js_array_prototype_methods)
-- [JS: Approaching Problems Many Ways](./js_approaching_problems_many_ways.md)
+- [JS: Approaching Problems Many Ways](./js_approaching_problems_many_ways)
 
 ## Web Applications
 
@@ -37,6 +37,7 @@ title: Module 2 - Lessons
 - [Model Testing](./model_testing)
 - [Data Validations](./data_validations)
 - [Error Handling](./error_handling)
+- [Error Handling pt 2: DRYing it up](./dry_exception_handling)
 - [Active Record: Class vs Instance Methods](./class_vs_instance_methods)
 
 ## Databases

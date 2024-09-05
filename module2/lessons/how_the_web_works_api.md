@@ -213,8 +213,15 @@ Observe the responses, including status codes, headers, and body content.
 - GET `/pets`
 - GET `/pets/:id`
 - POST `/pets` (with a JSON body)
-- PUT `/pets/:id` (with a JSON body)
+- PATCH `/pets/:id` (with a JSON body)
 - DELETE `/pets/:id`
+
+<section class="note">
+### Note
+
+Be sure to replace `:id` with an actual ID of a pet
+
+</section>
 
 ## Checks for Understanding
 

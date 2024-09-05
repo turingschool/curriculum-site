@@ -491,7 +491,7 @@ Write tests for these validations. You can add the [shoulda-matchers](https://gi
 Right now you are only solving for what happens when everything goes right. We call this the Happy Path. But what about when things go wrong? And what can go wrong here anyways? Think about what your code would do in the following scenarios. Try it out in Postman. Is this what you want to happen?
 * GET `/api/v1/posters/:id`
   * For an ID that doesn't exist
-* POST `/api/v1/posters/:id`
+* POST `/api/v1/posters`
   * When we're missing some attributes
   * If someone tries to create a poster with a duplicate name?
 * PATCH `/api/v1/posters/:id`
@@ -528,11 +528,11 @@ body:
 </section>
 
 <section class="dropdown">
-### POST /api/v1/posters/
+### POST /api/v1/posters
 
 **Request**
 ```bash
-POST /api/v1/posters/
+POST /api/v1/posters
 Content-Type: application/json
 Accept: application/json
 
