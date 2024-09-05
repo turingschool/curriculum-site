@@ -71,7 +71,7 @@ While we've all used Google a time or two, there are ways to make your search mo
 If the solution you're looking for isn't in the first two pages of results, it's probably not there. You might try reframing your search terms or use another resource, like your Turing community!
 
 ## Problem Solving in Action
-Open up a new replit to complete the following challenges. Don't get too caught up in finding the solution - focus instead on your PROCESS. Push yourself to slow down and follow the process outlined above. And remember that you can post questions in Slack if you hit blockers!
+Find and open your <a href="https://replit.com/@turingschool/m0lessonsrepl#main.rb" target="blank">Mod 0 Lessons Repl </a> from previous lessons.  Comment out all the code from previous lessons.  Then, in that repl, complete the challenges below. Don't get too caught up in finding the solution - focus instead on your PROCESS. Push yourself to slow down and follow the process outlined above. And remember that you can post questions in Slack if you hit blockers!
 
 <div>
   <h3>Challenge 1</h3>

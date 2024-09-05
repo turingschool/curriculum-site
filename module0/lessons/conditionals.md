@@ -77,7 +77,7 @@ age > 12
 <br>
 
 <section class="note">
-For the remaining practice activities in this assignment, you can use `irb`, create a Ruby file in your Terminal and edit it in VS Code, or use an online IDE such as <a target="blank" href="https://replit.com/~">replit</a> - it's your preference!
+For the remaining practice activities in this assignment, you can use `irb`, create a Ruby file in your Terminal and edit it in VS Code, or use your <a href="https://replit.com/@turingschool/m0lessonsrepl#main.rb" target="blank">Mod 0 Lessons Repl </a> from previous lessons - it's your preference!
 </section>
 
 ## If Statements
