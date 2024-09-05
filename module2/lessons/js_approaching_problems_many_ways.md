@@ -12,8 +12,8 @@ tags: prototype methods
 ## Activity
 
 ### Set Up
-- Open up a new replit.
-- Here is your starter code for your replit:
+- In VS Code, open up the [approaching problems many ways file](https://github.com/turingschool-examples/se-mod2-exercises/blob/main/lessons/approaching_problems_many_ways.js) in the lessons folder of your SE-Mod2-exercises repo. 
+- You'll see the following data and prompt in the file:
 ```js
 const ninetiesToys = [
     {
@@ -56,7 +56,7 @@ Expected output => `[ 'Tamagotchi', 'Super Soaker', 'Pogs' ]`
 ### Round 1: `forEach`
 - Solve the prompt using a `forEach`. You may not use any other iterator methods. 
 
-<section class="answer">
+<section class="dropdown">
 ### Round 1 Sample Solution (don't peek!)
 
 ```js
@@ -84,7 +84,7 @@ function findCheapToys() {
 ### Round 2: `filter` and `map`
 - Solve the prompt using a `filter` and `map`. You may not use any other iterator methods. 
 
-<section class="answer">
+<section class="dropdown">
 ### Round 2 Sample Solution (don't peek!)
 
 ```js
@@ -107,7 +107,7 @@ function findCheapToys() {
 ### Round 3: `reduce`
 - Solve the prompt using a `reduce`. You may not use any other iterator methods. 
 
-<section class="answer">
+<section class="dropdown">
 ### Round 3 Sample Solution (don't peek!)
 
 ```js
