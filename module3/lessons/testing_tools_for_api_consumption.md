@@ -3,8 +3,6 @@ layout: page
 title: Testing Tools for API Consumption
 ---
 
-# Testing Tools for API Consumption
-
 ## Resources
 
 Past Live Lessons:
@@ -33,7 +31,7 @@ After this class, a student should be able to:
 - In the `testing-setup` branch, run setup steps:
 ```bash
 bundle
-rails db:{create, migrate}
+rails db:{drop,create, migrate}
 ```
 - Verify that you are able to launch VS Code from the command line. `code`
   - If the following steps don't work, you'll need to follow [these 'Launching From the Command Line' steps](https://code.visualstudio.com/docs/setup/mac#:~:text=Keep%20in%20Dock.-,Launching%20from%20the%20command%20line,code) to configure the command
@@ -54,7 +52,7 @@ secret_key_base: ugsdfeadsfg98a7sd987asjkas98asd87asdkdwfdg876fgd
 
 ## Optional Manual Setup
 
-You can start this class from this branch [here](https://github.com/turingschool-examples/set-list-api/tree/testing-setup), or you can follow along these instructions below. Strongly recommend that you start from the branch.
+You can start this class from this branch [here](https://github.com/turingschool-examples/set-list-api/tree/testing-setup).
 
 
 Our `ImagesController` currently looks like this:
@@ -141,7 +139,7 @@ We will be using [WebMock](https://github.com/bblimke/webmock) to mock our HTTP
 
 ## Install the Gem
 
-Looking at the "Installation" section of the docs, we can see we need to `gem install webmock`, but since we're using Bundler we can add it to our Gemfile which handles our gem installation. Add `gem "webmock`" to the `:test` block of your Gemfile. DO NOT add it to the `:development, :test` block (more on that in a second). Run `bundle install`.
+Looking at the "Installation" section of the docs, we can see we need to `gem install webmock`, but since we're using Bundler we can add it to our Gemfile which handles our gem installation. Add `gem "webmock`" to a `:test` block of your Gemfile. DO NOT add it to the `:development, :test` block (more on that in a second). Run `bundle install`.
 
 Finally, we can see a section for "RSpec" in the Installation instructions. This tells us to add `require 'webmock/rspec'` to our `spec/spec_helper`. Do that now.
 
@@ -344,9 +342,10 @@ RSpec.describe "Images Endpoint" do
 end
 ```
 
-The string we passed to `use_cassette` is an identifier for the cassette, so it doesn't really matter what you pass it.
+The string we passed to `use_cassette` is an identifier for the cassette, so it doesn't really matter what you pass it, but this will become the title of the cassette so name it something appropriate to the data it will be holding.
 
-Run your tests and they should be passing. If you look under `spec/fixtures/vcr_cassettes` you should see a `.yml` file that contains your recorded response.
+Run your tests and they should be passing. If you look under `spec/fixtures/vcr_cassettes` you should see a `.yml` file that contains your recorded response. This is now the cassette vcr will use anytime this test runs.
+Notice that we no longer need the `spec/fixtures/beatles_artist_query.json` file since vcr will look at only the recorded cassettes. If vcr does not find a cassette with the title you are requesting, that's when it will make a live API call and then record that response to a cassette. 
 
 ## Filtering Sensitive Data
 
@@ -358,7 +357,7 @@ If you look closely in that `.yml` file you can see our API key in there. We wi
 VCR.configure do |config|
   config.cassette_library_dir = "spec/fixtures/vcr_cassettes"
   config.hook_into :webmock
-  config.filter_sensitive_data('<CONGRESS_API_KEY>') { Rails.application.credentials.congress[:key] }
+  config.filter_sensitive_data('<PEXELS_API_KEY>') { Rails.application.credentials.pexels[:key] }
 end
 ```
 
