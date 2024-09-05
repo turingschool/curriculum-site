@@ -12,10 +12,11 @@ This project is an extension of the Little Shop group project. You will add func
 * Use built-in ActiveRecord methods to join tables of data, make calculations, and group data based on one or more attributes
 * Write model tests that fully cover the data logic of the application
 * Write request tests that fully cover the functionality of the application
+* Display data for users in a frontend application by targeting DOM elements
 
 ## Details
 
-* This is a solo project, to be completed alone without assistance from cohortmates, alumni, mentors, rocks, etc.
+* This is a solo project. All code must be written by you. You should use your resources as needed, but you must be prepared to explain and defend any code you write.
 * Must use Rails 7.1.x and Ruby 3.2.2. 
 * Additional gems to be added to the project must have instructor approval.
   * RSpec, Pry, Simplecov, Shoulda-Matchers, Orderly, jsonapi-serializer (or other serializer gem), HTTParty, Faker, Faraday, and FactoryBot are pre-approved
