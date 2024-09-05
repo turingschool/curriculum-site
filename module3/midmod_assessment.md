@@ -15,3 +15,4 @@ Midmod assessment presentations will be completed in small groups with an instru
 
 - [Presentation Guidelines](./projects/take_home/presentation_guidelines)
 - [Rubric](./projects/take_home/rubric)
+- [Final Assessment Guidelines](./projects/take_home)
