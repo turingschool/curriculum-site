@@ -24,7 +24,7 @@ Read through [Intro to Layout Pre-Work lesson](./css_intro_to_layout) and all li
 <section class="checks-for-understanding">
 ## Warm Up
 
-- With a partner, fork [this codepen](https://codepen.io/kaylaewood/pen/oNBdGEx)
+- With a partner, clone down and open up [this repo](https://github.com/turingschool-examples/css-flexbox)
 - Explore the CSS that's already present. Without googling, what do you think `:nth-child` means?
 - In your CSS, add the property of "display" with a value of "flex" to the `.wrapper` selector. What happened? Which elements visually changed?
 </section>
@@ -37,7 +37,7 @@ Flexbox is a part of CSS that provides an efficient way to lay out, align and di
 
 As we start working with flexbox, a very important distinction should be pointed out. We need to be careful about the CSS rules we apply to a parent element vs. those to a child element. A **parent** element wraps other elements, a **child** is nested inside the parent.
 
-Let's look an some HTML to make sure we are all on the same page. Which element is the parent and which are its children?
+Let's look an some HTML to review the parent <> child relationships. Which element is the parent and which are its children?
 
 ```html
 <section>
@@ -80,8 +80,8 @@ When we use Flexbox, we will make the parent elements `flex containers` and the 
 
 <div class="call-to-action">
 ### Try It 1
-  - Go back to your codepen from the warm up
-  - Experiment adding the `justify-content` property to your `.wrapper`. Add the following values (one at a time), and note what changes:
+  - Go back to your repo from the warm up
+  - Experiment adding the `justify-content` property to your `.wrapper`. Use the browser's dev tools to apply the following values (one at a time), and note what changes:
     - `center`
     - `space-around`
     - `space-between`
@@ -118,7 +118,7 @@ Most flexbox-related properties have _default_ values. We don't see them in our 
 
 <div class="call-to-action">
 ### Try It 2
-  - Go back to your codepen from the warm up
+  - Go back to your repo from the warm up
   - Now add `flex-direction: column;` to your `.wrapper`
   - What happened? How does changing the values for the `justify-content` property affect the boxes?
 </div>
@@ -139,7 +139,7 @@ Another CSS property with flexbox is `flex-direction`. This property takes one o
 
 <div class="call-to-action">
 ### Try It 3
-  - Go back to your codepen from the warm up
+  - Go back to your repo from the warm up
   - Remove the `justify-content` and `flex-direction` properties.
   - Now, add in an `align-items` property and experiment with the following values:
     - `stretch`
@@ -193,7 +193,10 @@ We encourage you to make your CSS changes in your dev tools which will instantly
 
 <div class="call-to-action">
 ### Try It 4
-  - Fork [this NEW codepen](https://codepen.io/kaylaewood/pen/jOyxZWz)
+  - In your repo, switch to the `flexbox-nested-elements` branch by following the steps below:
+    - In your terminal, run `git fetch` to fetch all the remote branches
+    - Then run `git checkout flexbox-nested-elements` to move over to that branch.
+  - Explore the existing code and the UI
   - Complete the 3 challenges listed in the CSS file.
 </div>
 
@@ -211,3 +214,10 @@ We will now continue working on the comp from the CSS Fundamentals lesson. You w
 - [Flexbox Defense Game - more practice!](http://www.flexboxdefense.com/)
 - [Flexbox Zombies Game - leveled up practice!](https://geddski.teachable.com/p/flexbox-zombies)
 - [CSS Diner Game - learn more complex CSS selecting](https://flukeout.github.io/)
+
+
+<!-- NOTE:
+After teaching this to 2407 SE2, Heather changed the code pens to a repo so that students can practice using the dev tools to apply and see these flexbox styles, rather than having to manually edit in the codepens.
+Original Warm Up codepen: https://codepen.io/kaylaewood/pen/oNBdGEx
+Original Try It 4 nested Elements codepen: https://codepen.io/kaylaewood/pen/jOyxZWz
+ -->

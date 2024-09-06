@@ -26,10 +26,10 @@ tags: migrations, databases, relationships, rails, activerecord
 
 ## Setup
 
-This lesson plan starts at the `associations-practice` branch of [this SetList repo](https://github.com/turingschool-examples/set-list-7/). In order to set up the app for this lesson:
+This lesson plan starts at the `serializers-complete` branch of [this SetList repo](https://github.com/turingschool-examples/set-list-api/tree/serializers-complete). In order to set up the app for this lesson:
 
 - Clone the repo
-- Checkout the `associations-practice` branch
+- Checkout the `serializers-complete` branch
 - Run `bundle install`
 - Run `rails db:{drop,create,migrate,seed}`
 
@@ -50,7 +50,7 @@ $ mkdir spec/models
 $ touch spec/models/artist_spec.rb
 ```
 
-We're going to use the handy dandy gem [shoulda-matchers](https://github.com/thoughtbot/shoulda-matchers) to give us some streamlined syntax to use in testing our validations and relationships.
+We're going to use the handy dandy gem [shoulda-matchers](https://github.com/thoughtbot/shoulda-matchers) to give us some streamlined syntax to use in testing our relationships.
 
 - Add `gem "shoulda-matchers"` to `group :development, :test` in your `Gemfile`
 - run `bundle install`
@@ -71,8 +71,8 @@ end
 require 'rails_helper'
 
 describe Artist, type: :model do
-  describe "validations" do
-    it { should validate_presence_of :name }
+  describe "relationships" do
+    it { should have_many :songs }
   end
 end
 ```
@@ -80,13 +80,6 @@ end
 Run `bundle exec rspec` and we should get an error similar to this:
 
 ```bash
-Failure/Error:
-  describe Artist, type: :model do
-    describe "validations" do
-      it { should validate_presence_of :name }
-    end
-  end
-
 NameError:
   uninitialized constant Artist
 ```
@@ -181,59 +174,10 @@ Let's run RSpec again.
 ```bash
 Failures:
 
-  1) Artist validations is expected to validate that :name cannot be empty/falsy
-     Failure/Error: it { should validate_presence_of :name }
-
-       Expected Artist to validate that :name cannot be empty/falsy, but this
-       could not be proved.
-         After setting :name to ‹""›, the matcher expected the Artist to be
-         invalid, but it was valid instead.
-     # ./spec/models/artist_spec.rb:5:in `block (3 levels) in <top (required)>'
-```
-
-The important part to read here is `Expected Artist to validate that :name cannot be empty/falsy`
-
-Let’s add a validation to Artist!
-
-**app/models/artist.rb**
-
-```ruby
-class Artist < ApplicationRecord
-  validates_presence_of :name
-end
-```
-
-Run RSpec again and we get passing tests.
-
-### What about Songs?
-
-What's the relationship between song and artist? Draw this out in a diagram to help visualize the relationship.
-
-Let's create a test to help us drive this out. Add the following to your `artist_spec.rb` within the greater describe Artist block, but outside of the validations block.
-
-**spec/models/artist_spec.rb**
-
-```ruby
-require 'rails_helper'
-
-describe Artist, type: :model do
-  describe "validations" do
-    it { should validate_presence_of :name }
-  end
-
-  describe 'relationships' do
-    it { should have_many :songs }
-  end
-end
-```
-
-When we run this test we get an error something like this:
-
-```bash
-1) Artist relationships is expected to have many songs
      Failure/Error: it { should have_many :songs }
+
        Expected Artist to have a has_many association called songs (no association called songs)
-     # ./spec/models/artist_spec.rb:9:in `block (3 levels) in <top (required)>'
+     # ./spec/models/artist_spec.rb:5:in `block (3 levels) in <top (required)>'
 ```
 
 The important part here is `Expected Artist to have a has_many association called songs (no association called songs)`. This tells us that we are missing a relationship. We need to make one.
@@ -281,8 +225,7 @@ end
 ```ruby
 class Artist < ApplicationRecord
   has_many :songs
-
-  validates_presence_of :name
+  
 end
 ```
 
@@ -424,9 +367,6 @@ And for our next method - a test!
 require 'rails_helper'
 
 RSpec.describe Artist do
-  describe 'validations' do
-    it {should validate_presence_of :name}
-  end
 
   describe 'relationships' do
     it {should have_many :songs}
@@ -446,6 +386,13 @@ end
 
 Use TDD to create an instance method on our `Artist` model that returns the average of a single artist's songs. As you build out this method, remember to use `pry` and `self` to help debug and guide your implementations!
 
+
+## Practice
+
+For additional exercises, check out the `associations-practice-setup` branch of [Set List](https://github.com/turingschool-examples/set-list-api/blob/associations-practice-setup/README.md) and refer to the README for instructions on how to move through the practice. 
+
+Solutions are on the `associations-practice-solutions` branch. 
+
 ## Wrap Up
 
 - What are two different types of table relationships that you might need to implement? In what scenario would you use each?
@@ -455,4 +402,4 @@ Use TDD to create an instance method on our `Artist` model that returns the av
     - Add a reference from one table to another
     
 
-Completed code from this lesson plan can be found on this branch [here](https://github.com/turingschool-examples/set-list-7/tree/associations-practice-solutions\).
+Completed code from this lesson plan can be found on this branch [here](https://github.com/turingschool-examples/set-list-api/tree/associations-practice-solutions).
