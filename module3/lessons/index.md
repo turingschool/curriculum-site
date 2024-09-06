@@ -12,7 +12,7 @@ title: Module 3 - Lessons
 
 ## React
 * [React: Our First Ideabox](./react_ideabox)
-<!-- [Intro to React](.) -->
+* [Intro to React](./intro_to_react)
 <!-- * [Network Requests: GET & POST](.) -->
 <!-- * [React: Advanced Data Management](.) -->
 
