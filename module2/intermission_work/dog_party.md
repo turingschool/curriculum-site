@@ -30,7 +30,7 @@ We’ve provided a design comp and a set of technical specifications. Your chall
 
 - Create a new directory called `dog_party`.
 - In your `dog_party` directory create a new sub-directory called `assets`.
-- You will also need to [download the image assets](https://drive.google.com/drive/folders/0B_lPnjyMN6-CamRRV0xPRmZNOFU?resourcekey=0-T1mx20u-Vop37Sd6LqG9yw&usp=drive_link) and place them into your `assets` directory.
+- You will also need to [download the image assets](https://drive.google.com/drive/folders/1LJFBap5teyi4f9bX78PlYi_RH9a-7YM3?usp=sharing) and place them into your `assets` directory.
 - In the `dog_party` directory, create the following files:
   - `index.html`
   - `style.css`
