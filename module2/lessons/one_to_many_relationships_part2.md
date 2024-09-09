@@ -266,7 +266,8 @@ song = artist.songs.create(title: 'Raspberry Beret', length: 345, play_count: 34
 Since we've added code into our Song model, it would also be a good idea to write a test for this association.
 
 ### Model Testing
-We've talked about Feature Testing already, this is a form of integration test since a single feature relies on many pieces of the application. A Model test will be more of a unit test, where we're testing a specific Model by itself to ensure it works as intended.
+
+We've talked about testing our API endpoints via Request Testing already, this is a form of integration test since a single endpoint relies on many pieces of the application working together (routes, controllers, actions, serializers, etc). A Model test will be more of a unit test, where we're testing a specific Model by itself to ensure it works as intended.
 
 The good news: Model testing in Rails looks almost **exactly** like testing from Mod 1!
 
@@ -326,7 +327,7 @@ lcd.songs.create!(title: 'I Can Change', length: 640, play_count: 100000)
 
 Now that we have our seeds file, we can run it with `rails db:seed`. Additionally, if we check this file into our version control system, other developers working on this app will be able to easily seed their local databases.
 
-Notice that the first two lines of this seeds file will destroy all Songs and Artists from the database. The reason we want to do this is so that we know we are starting with an empty database every time we want to reseed our database. If we did not have these two lines, this script would create duplicate records every time we reran `rails db:seed`.
+Notice that the first two lines of this seeds file will destroy all Songs and Artists from the database. The reason we want to do this is so that we know we are starting with an empty database every time we want to reseed our database. If we did not have these two lines, this script would create duplicate records every time we re-ran `rails db:seed`.
 
 ## Adding Behaviors to Models
 
