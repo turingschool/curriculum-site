@@ -45,9 +45,9 @@ You will need to expose the data through a multitude of API endpoints. All of yo
 
 * All endpoints will expect to return JSON data only
 * All endpoints should be exposed under an `api` and version (`v1`) namespace (e.g. `/api/v1/movies`)
-* API will be compliant to the [JSON API spec](https://jsonapi.org/) and match our requirements below precisely
+* API will be compliant to the [JSON API spec](https://jsonapi.org/) and match our requirements below precisely. You may find that handrolling some serializers will be easier than using the JSON API gem for all of them. However, it is your choice - either strategy is fine.
 * Controller actions should be limited to only the standard Rails actions and follow good RESTful convention.
-* You will decide the most RESTful paths for your endpoints. 
+* You will decide the most RESTful paths for your endpoints. Paths will not be given but must be determined by the student.
 * Your application's README should document the paths and the requirements for each endpoint (i.e. should the API key be passed as a query parameter, or in the header?)
 
 
@@ -61,7 +61,6 @@ This endpoint is NOT authenticated (no API key is required!). This endpoint shou
 * retrieve top-rated movies from [The Movie DB API](https://developers.themoviedb.org/3/getting-started/introduction)
 * retrieve a maximum of 20 results.
 * include the title and the vote average of every movie
-<!-- * Include path for them, or students need to create their own?  -->
 
 Example JSON response:
 
@@ -108,7 +107,6 @@ This endpoint is NOT authenticated (no API key is required!). This endpoint shou
 * require that the search term is passed as a query parameter in the request
 * retrieve a maximum of 20 results.
 * include the title and the vote average of every movie
-<!-- * Include path for them, or students need to create their own?  -->
 
 Example JSON response for search term "Lord of the Rings":
 ```json
@@ -127,7 +125,7 @@ Example JSON response for search term "Lord of the Rings":
       "type": "movie",
       "attributes": {
         "title": "The Lord of the Rings: The Return of the King",
-        "vote_average": 8.698.482
+        "vote_average": 8.698
       }
     },
     {
@@ -160,7 +158,6 @@ This endpoint is NOT authenticated. This endpoint should:
   * Count the total reviews
   * List of first 5 reviews (author and review)
 * Include the movie's ID (in the Movie DB API system, not your application) in the path 
-<!-- TO-DO update if we're giving them the path -->
 * Note: Retrieving this information from the Movie DB API could take up to 3 different network requests (unless you find a shortcut!)
 
 Example JSON response:
@@ -265,6 +262,47 @@ Example JSON response after successfully creating a Viewing Party resource:
 }
 ```
 
+<section class="dropdown">
+#### Relationships vs. Attributes
+
+If you would rather use the JSON API relationships tool to list the invitees rather than listing them as an attribute, you are welcome to do so! If you choose this option, your sample response would follow this format:
+
+```json
+{
+  "data": {
+    "id": "1",
+    "type": "viewing_party",
+    "attributes": {
+      "name": "Juliet's Bday Movie Bash!",
+      "start_time": "2025-02-01 10:00:00",
+      "end_time": "2025-02-01 14:30:00",
+      "movie_id": 278,
+      "movie_title": "The Shawshank Redemption"
+    },
+    "relationships": {
+      "users": {
+        "data": [
+          {
+            "id": "11",
+            "type": "user"
+          },
+          {
+            "id": "7",
+            "type": "user"
+          },
+          {
+            "id": "5",
+            "type": "user"
+          }
+        ]
+      }
+    }
+  }
+}
+```
+
+</section>
+
 Sad Paths to Handle:
 * Request sent without valid API key: unauthorized
 * Request sent with missing required attributes for a viewing party
@@ -290,6 +328,7 @@ This endpoint should:
 * require a valid API key for a given user in order to succeed
 * not make any updates to the viewing party resource, but instead just add more users to the party. Consider: what is the most RESTful path and controller organization for this case?
 * Pass a valid viewing party ID in the path of the request
+* Note: You can either pass the API key in the request (shown here) or as a query parameter. 
 
 Example Request
 ```json
