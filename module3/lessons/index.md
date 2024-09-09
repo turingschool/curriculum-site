@@ -11,8 +11,9 @@ title: Module 3 - Lessons
 <!-- * [Refactoring Patterns for API Consumption](.) -->
 
 ## React
-* [React: Our First Ideabox](./react_ideabox)
-* [Intro to React](./intro_to_react)
+* [Intro to React](./react_intro)
+* [Our First Ideabox](./react_ideabox)
+* [Ideabox Review](./react_ideabox_review)
 <!-- * [Network Requests: GET & POST](.) -->
 <!-- * [React: Advanced Data Management](.) -->
 
