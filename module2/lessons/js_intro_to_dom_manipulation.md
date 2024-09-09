@@ -163,7 +163,7 @@ Fork [this Report Card CodePen](https://codepen.io/turingschool/pen/rNEqEVw).  I
 - Declare a variable `bestGrade` and assign the value of the element with a class of `grade-2` to it
 
 Now that we've queried the elements we need, we're going to change the data being displayed to users.  So we need somewhere to store the new data that we're going to display instead.
-- Declare a variable `newData` to store an object with keys of `studentName` and `bestGrade`.  Make the value of each key be the new name, school, and grade that you'll want to change the display to.   
+- Declare a variable `newData` to store an object with keys of `studentName` and `bestGrade`.  Make the value of each key be the new student name and grade that you'll want to change the display to.   
 
 Now, change the text of each queried element to display the data you saved in your newData object.
 - Change the `innerText` of the `studentName` variable to be the `studentName` value from your `newData` object (use dot notation)
@@ -189,7 +189,35 @@ Let's add an eventListener to our Report Card codepen. We still want to change t
 
 Consider:  
 - Why don't we use `()` to invoke the function within the eventListener?  What happens if we do?
+
 </section>
+
+<section class="dropdown">
+### Possible solution
+
+```js
+const studentName = document.querySelector(".student")
+const bestGrade = document.querySelector(".grade-2")
+const title = document.querySelector("h1")
+
+const newData = {
+  studentName: "Heather",
+  bestGrade: "A+"
+}
+
+title.addEventListener("click", editReportCard)
+
+function editReportCard() {
+  studentName.innerText = newData.studentName;
+  bestGrade.innerText = newData.bestGrade;
+}
+```
+
+Pretty cool how one simple line of code lets us respond to user actions, right?  
+
+`title.addEventListener("click", editReportCard)`
+</section>
+
 
 <section class="call-to-action">
 ### Your Turn
