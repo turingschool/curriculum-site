@@ -13,8 +13,8 @@ title: Module 2 - Lessons
 ## JavaScript
 
 - [JS: Fundamentals](./js_fundamentals)
-- [JS: Intro to the DOM](./js_intro_to_dom)
-- [JS: Event Listeners](./js_event_listeners)
+- [JS: Intro to DOM Manipulation](./js_intro_to_dom_manipulation)
+- [JS: DOM Manipulation II](./js_dom_manipulation_ii)
 - [JS: Array Prototype Methods](./js_array_prototype_methods)
 - [JS: Approaching Problems Many Ways](./js_approaching_problems_many_ways)
 
