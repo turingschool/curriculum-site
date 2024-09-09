@@ -143,19 +143,50 @@ You'll hear the term 'component' used in many different areas of programming, an
 We will be working with functional React components in Mod 3.  On the job, you might run into legacy code that includes React class-based components, which are an extended ES6 class.  We'll touch briefly on those later this inning.
 </section>
 
-```jsx
-const App = () => (
-  <div>
-    Hello World
-  </div>
-);
-
-export default App;
-```
-
 ## Props & State
 
 While React is focused heavily on the UI/visual layer of applications, it does allow for some data management through props and state.
+
+### State
+
+**State** state holds data that represents the actual state of our application. State can be changed and mutated through user interactions, whereas props should remain immutable.
+
+The [React docs](https://react.dev/learn/state-a-components-memory) describe state as a component's memory.  State is how components store, or "remember", the data and current "state" of the application at any given point.
+
+Remember that React components are constantly re-rendering when things are updated as users interact with our application. **Changes to the data held in state are what triggers React to re-render.** Holding the data within state means that the data will be retained and stay up-to-date between those re-renders.  
+
+Let's look at an example. 
+
+<section class="call-to-action">
+### Explore the Effects of State
+
+Look at this first Sandbox (Grocery List - No State). Click the button to add an item to the list.
+
+- What happens?
+- Open up the console. Are the new items there?
+- Why do you think the new items not being shown on the page?
+
+<iframe src="https://codesandbox.io/embed/grocery-list-no-state-s6pjyk?fontsize=14"
+     style="width:100%; height: 500px; border:0; border-radius: 4px; overflow:hidden;"
+     title="grocery list - no state"
+     allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+     sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+   ></iframe>
+
+   Now, look at the next Sandbox (Grocery List - State). Click the button to add an item to the list.
+
+   - What happens?
+   - Why are the items now showing up?
+   - Where in the code are we explicitly telling the page to update with the new item?
+   - Why do we have to use `setItems` instead of just using something like `items.push(newItem)`?
+
+<iframe src="https://codesandbox.io/embed/grocery-list-with-state-7xf63k?fontsize=14"
+     style="width:100%; height: 500px; border:0; border-radius: 4px; overflow:hidden;"
+     title="grocery list - no state"
+     allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+     sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+   ></iframe>
+</section>
 
 ### Props
 
@@ -165,32 +196,32 @@ Props allow us to pass information from parent components to child components. W
 
 When we pass props down to a child component, it comes through as a simple JavaScript object with key value pairs.
 
-#### Grocery List App
-<iframe src="https://codesandbox.io/embed/eloquent-bartik-b2182?fontsize=14" title="eloquent-bartik-b2182" allow="geolocation; microphone; camera; midi; vr; accelerometer; gyroscope; payment; ambient-light-sensor; encrypted-media" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
-
 <section class="call-to-action">
-### Your Turn
+### Explore Props
 
-Imagine if we have 50 different grocery items. That is going to make our code look messy if we have to write the GroceryItem component 50 times. How could we refactor this using an array of data and the `.map()` array prototype method?
+Look at the Sandbox below (Grocery List - Props).
+
+- What do you notice is different compared to the two Sandboxes before this one?
+- What props are being passed into the `Item` component?
+- Take away the `key` prop. What does the console say? (Put it back after you explore!)
+- In this example, we are passing a `string` and a `number`. What other things can we pass as props?
+- What are some benefits of using more components and passing props?
+
+<iframe src="https://codesandbox.io/embed/grocery-list-with-props-l3qwkk?fontsize=14"
+     style="width:100%; height: 500px; border:0; border-radius: 4px; overflow:hidden;"
+     title="grocery list - no state"
+     allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+     sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+   ></iframe>
 </section>
-
-### State
-
-**State** is slightly different than **props**: state holds data that represents the actual state of our application. State can be changed and mutated through user interactions, whereas props should remain immutable.
-
-The [React docs](https://react.dev/learn/state-a-components-memory) describe state as a component's memory.  State is how components store, or "remember", the data and current "state" of the application at any given point.
-
-Remember that React components are constantly re-rendering when things are updated as users interact with our application.   Changes to the data held in state are what triggers React to re-render.  Holding the data within state means that the data will be retained and stay up-to-date between those re-renders.  
-
-#### Read Further
-
-Understanding the difference between props and state can be tricky. Read through the top three answers on this [stackoverflow question](https://stackoverflow.com/questions/27991366/what-is-the-difference-between-state-and-props-in-react), and go through any links or resources provided in the answers. Just because one answer has the most upvotes, doesn't mean it's going to be the one that makes everything click for you. Take your time reading through the explanations here.
 
 <section class="checks-for-understanding">
 ### Checks for Understanding
 
 * How does React improve the process of manipulating the DOM?
 * What is the difference between props and state?
+* When does a React component rerender?
+* What do we mean when we say "state is immutable"?
 </section>
 
 ## Further Reading & Resources
