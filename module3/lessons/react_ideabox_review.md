@@ -6,14 +6,17 @@ module: 3
 ---
 
 ## Learning Goals
-* 
+* Dive into the Ideabox activity to clarify any complex topics and highlight important React concepts
+* Understand how to start a React project by seeing the instructor model the wireframing process
+* Gain comfort in using React's Dev Tools to better support you as you write React code 
+* Explain the importance of controlled forms in React
+* Talk through the topics of anonymous functions, destructuring, and conditional styling
 
 ## Vocab
 * `wireframe` - a wireframe is a visual representation of the basic structure of a page, without worrying too much about specific content or design details
-* `anonymous functions`
-* `destructuring`
-* `controlled form`
-* 
+* `anonymous function` - a function that does not have a name 
+* `destructuring` - a way to unpack values from arrays, or properties from objects, into distinct variables
+* `controlled form` - a form written so that each input's value is stored in a component's state and the value shown on the page is pulled from state
 
 <section class="note">
 ### Set Up
@@ -92,3 +95,67 @@ Consider the following questions:
 
 1. How does using a controlled form help us with form validation as frontend devs?
 
+## Anonymous Functions
+
+Consider this code:
+```jsx
+<button onClick={() => deleteIdea(id)}>🗑</button> 
+```
+Why does `deleteIdea(id)` need to be in an anonymous function? Why not just write this:
+```jsx
+<button onClick={deleteIdea(id)}>🗑</button>
+```
+
+1. What is an anonymous function and when are they useful?
+
+1. Can you think of an example from Mod 2 where we needed to use anonymous functions?
+
+## Destructuring
+What is happening on this line of code:
+
+```jsx
+const Ideas = ({ ideas, deleteIdea }) => {
+```
+
+What changes would need to be made to the rest of the code in this file if we had written that line like this: 
+
+```jsx
+const Ideas = (props) => {
+```
+
+*Destructuring is confusing. Do I have to do it?* Nope! In fact if this is what is making things confusing for you, don't do it (yet). Focus on understanding React and THEN start trying to refactor using destructuring. It'll be important that destructuring makes sense to you by the end of this inning, as it's a common way for code to be written, but it's more important that you understand React right now. If you'd like some practice, check out this [replit](https://replit.com/@kaylaewood/destructuring-1#index.js)!
+
+## Conditional Styling
+The Ideabox you built didn't really have an opportunity for conditional styling. Let's look at the code below:
+
+```js
+// some React component
+
+[status, setStatus] = useState('valid')
+
+//...
+
+<p className={status}>Some text</p>
+
+//...
+```
+
+```css
+/* CSS file */
+
+.valid {
+	color: green;
+}
+
+.invalid {
+  color: red;
+}
+```
+
+1. Explain what is happening here.
+
+1. What happens to the paragraph text if the following code runs: `setStatus('invalid')`
+
+## Questions
+
+Wow! We covered a lot. What other parts of the Ideabox exercise would you like to talk about?
