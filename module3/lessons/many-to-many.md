@@ -26,7 +26,7 @@ tags: database, schema, relationships
 
 TODO: update starter repo branch for song tests with song serializer
 
-You can begin this lesson on the `many-to-many-setup` branch of the Set List Tutorial Repo [here](https://github.com/turingschool-examples/set-list-api/tree/many-to-many-setup).
+You can begin this lesson on the `many-to-many-starter` branch of the Set List Tutorial Repo [here](https://github.com/turingschool-examples/set-list-api/tree/many-to-many-starter).
 
 ## Warm-Up
 
@@ -63,7 +63,7 @@ In SetList:
 <section class="checks-for-understanding">
 ### Independent Practice - Students and Modules
 
-Think about the relationship between students and modules (i.e. "Mod 1: Object Oriented Programming", "Mod 2: Web Applications with Ruby").
+Think about the relationship between students and modules (i.e. "Mod 1: Fundamentals of Programming", "Mod 2: Web Application Development").
 
 Diagram what the database would look like.
 </section>
@@ -581,6 +581,16 @@ end
 ```
 
 This syntax is a bit different from what we are used to. We use `attribute` singular, and then as a symbol we pick the name of what we want our attribute to be. We use a do end block similar to an enumerable with a block parameter. Now the block parameter, object is a lot like `self`. We get to use it for each single thing of a collection we pass to the serializer. We are essentially saying for each thing you serialize, grab the songs and count them too. In this manner we can add a custom generated value for each playlist.
+
+<section class="dropdown">
+
+### What about MVC?
+
+Think about how the current version of our serializer does and does not strictly adhere to MVC design.  
+* Where does this serializer fall in the MVC structure?
+* Are there ways that we could refactor our code to better adhere to MVC?
+
+</section>
 
 <section class="checks-for-understanding">
 **Additional Practice**
