@@ -23,12 +23,19 @@ This lesson is a review session for the [Ideabox Tutorial lesson](./react_ideabo
 Follow the instructions for cloning, installing, and running the app. **You do not need to follow any steps for a running server.**
 </section>
 
+## What's an Ideabox, anyway?
+IdeaBox is a Turing term meant to describe a simple application that allows a user to fill out a form and then display that information. If you think about it, there are LOTS of "IdeaBoxes" out there:
+    - Facebook: users fill out a form and their post appears
+    - Google: users fill out a form and search results appear
+    - Amazon: users search for an item and a list of items appear
+If you can build lots of versions of IdeaBoxes in M3, you'll be well equipped to build pretty much anything you're asked to. You can find inspo for those IdeaBoxes [**here**](../projects/ideabox_practice)!
+
 ## Wireframing + Planning
 Let's go back to the beginning. One of the most important parts of creating a React application is being able to visualize the components on the page. I am going to model for you how I would turn a concept into React components.
 
 ![IdeaBox screenshot](../../../assets/images/lessons/ideaBox/ideabox_screenshot.jpg)
 
-For this process, you may choose to use an iPad, a tool like [Figma](https://www.figma.com/), or paper and pencil. What matters is that you're able to turn a wireframe into a plan for your component architecture. 
+For this process, you may choose to use an iPad, a tool like [Figma](https://www.figma.com/) or [Mockflow](https://mockflow.com/), or [paper and pencil](https://medium.com/@ray_vevaina/wireframing-a-front-end-developers-best-friend-c541df51ea65). What matters is that you're able to turn a wireframe into a plan for your component architecture. 
 
 Let's work out the following:
 - What components should we create?
@@ -49,3 +56,5 @@ Now that we've got a general plan, let's consider these questions:
 - Will we ever pass props to `App`? Why or why not?
 
 - Is there a way to pass a prop directly to the desired child, or do you have to pass to every child component down the tree to get to where you want?
+
+## 
