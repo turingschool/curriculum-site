@@ -19,9 +19,6 @@ Keep in mind that some companies will have their own guidelines on presenting wh
 
 - Have any servers fired up and ready to go.
 
-<!-- Note: Do we want them to demo in postman if there is a frontend? -->
-- Have Postman setup in advance to show your endpoints (BE).
-
 
 ## Suggested steps for presenting your project:
 ### 1. Overview
@@ -31,10 +28,11 @@ Keep in mind that some companies will have their own guidelines on presenting wh
 
 - **Back End**
   - Start with Postman and show how your app works through all your endpoints.
-  - If you have a testing suite, now would be a great time to run it and show your test coverage.
+  - Run your testing suite and show your test coverage.
 
 - **Front End**
   - Run through the app, clicking on all the links, entering text into the fields, show the user experience of the application, any responsive design, etc.
+  - Run your testing suite and show your test coverage.
 
 
 ### 3. Readme & Planning
@@ -50,7 +48,7 @@ Keep in mind that some companies will have their own guidelines on presenting wh
 
 ### 4. Code
 
-  - Highlight 2-3 pieces of code that you are particularly proud of, either because it was a challenge and you figured it out, it’s something new you implemented, or because that piece of code makes you feel like a wizard! No need to walk through the fine-details of how the code is working, you can safely assume your reviewer is familiar with how React or Rails is working. Of course if they ask specific questions, then you can get into the nitty-gritty. 
+  - Highlight 2-3 pieces of code that you are particularly proud of, either because it was a challenge and you figured it out, it’s something new you implemented, or because that piece of code makes you feel like a wizard! No need to walk through the fine-details of how the code is working, you can safely assume your reviewer is familiar with how React or Rails is working. Of course if they ask specific questions, then you can get into the details. 
 
 ### 5. Questions
 
@@ -77,3 +75,4 @@ The above steps are not written in stone and if you prefer to switch up the orde
 
 > - Walk through your code, line by line, explaining what each line does. This takes up a lot of time and often the interviewer understands how it is working. If they need clarification, they will ask.
 - Start your presentation with "What would you like to see?" It's better to be proactive and take them through your code.
+- Expect your interviewer to lead the conversation. Unless it's clear that they want to drive the conversation, don't hesitate to jump in and take the lead! You know your work best, so you know what parts of the project make the most sense to show off.

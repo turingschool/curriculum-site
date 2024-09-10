@@ -46,8 +46,12 @@ The candidate...
 #### Leaning Yes Hire
 The candidate...
 - can describe the tradeoffs inherent in different approaches, and can articulate why a specific data structure is appropriate. 
-- chooses to use standard library functions and is able to describe their behavior when asked (ex: chooses ActiveRecord over plain Ruby). 
+- chooses to use standard library functions and is able to describe their behavior when asked.
+  - examples:
+    - chooses ActiveRecord over plain Ruby 
+    - correctly uses `useEffect` to handle the asynchronous behavior of network requests
 - is able to structure their solution in a way that separates classes appropriately and demonstrates a good understanding of OOP principles (even if they don’t use the specific terms). 
+- makes intentional decisions about their React component structure and utilizes state and props to manage data efficiently.
 
 #### Leaning Don’t Hire
 
@@ -56,6 +60,7 @@ The candidate...
 - re-implements standard library functions, rather than using what is available. 
 - provides a finished output that has the appearance of being bolted together, rather than being coherently designed. 
 - builds abstractions, but are rigid or resistant to change.
+- makes inconsistent decisions in their code (ex: sometimes destructuring props, but not always).
 
 #### Strong Don’t Hire
 
@@ -68,6 +73,7 @@ The candidate...
 
 <section class="dropdown">
 ### 3. Testing and Debugging
+Testing is expected to be present for both the frontend and backend.
 #### Strong Yes Hire
 
 The candidate...
@@ -108,7 +114,7 @@ The candidate...
 #### Leaning Yes Hire
 
 The candidate...
-- describes how their code works, unprompted. 
+- describes how their code works, unprompted, by talking about the purpose of a code snippet or its design 
 - explains their thought processes very clearly using proper technical terms. 
 - clearly imparts knowledge and concepts through appropriate means (ex: diagrams, body movement, writing and speech). 
 - talks at a level appropriate to their audience When explaining something. 
@@ -118,7 +124,7 @@ The candidate...
 The candidate...
 - needs to say things multiple times to get their point across to a good faith listener. 
 - can communicate an idea at a high level, but lacks precision and nuance in the details. 
-- “handwaves” complex parts of code despite being prodded to expound. 
+- reads code line by line
 
 #### Strong Don’t Hire
 
@@ -135,13 +141,14 @@ The candidate...
 #### Strong Yes Hire
 
 The candidate...
-- includes a README with a walkthrough of the FE or Swagger for the BE to run requests. 
+- includes a README with a walkthrough (gif, screenshots, etc.) of the FE or Swagger for the BE to run requests. 
+- include artifacts that demonstrate planning, like: schema, component tree, mock ups/wireframes, etc.
 - effectively utilized a project board with clear labels and each PR references a GH issue.
 
 #### Leaning Yes Hire
 
 The candidate...
-- includes a summary, setup instructions, endpoints/wireframes, testing instructions, etc. in the README. 
+- includes a summary, setup instructions, endpoints, testing instructions, etc. in the README. 
 - built out clear user stories on the project board and there is a clear progression of tickets moved over to the Done column.
 
 #### Leaning Don’t Hire
@@ -156,5 +163,6 @@ The candidate...
 The candidate...
 
 - has little to no documentation or planning documents (ie missing wireframes, schema designs, or use of project board).
+- does not include accurate and clear instructions for running the FE and BE locally.
 
 </section>

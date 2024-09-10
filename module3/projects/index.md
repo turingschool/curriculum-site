@@ -5,7 +5,7 @@ title: Module 3 - Projects
 
 ## Required Projects
 
-The following projects will be assigned and their completion is required to be promoted to module 2.  
+The following projects will be assigned and their completion is required to be promoted to module 4.  
 The project specs will be linked below as each project is assigned.
 
 - Week 1-2 (BE Solo): [Viewing Party](./viewing_party)
