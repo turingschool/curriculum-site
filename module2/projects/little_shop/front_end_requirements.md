@@ -106,6 +106,6 @@ Your front end work will be evaluated alongside your backend work. All of the wo
 
 See the [evaluation spec](evaluation) for more details.
 
-## Deployment (Not Required for FE application)
+<!-- ## Deployment (Not Required for FE application)
 
-You are not required to deploy your FE application. If you do choose to deploy your application, you will want to refactor the base url used for the GET/POST/PATCH/DELETE requests to have your FE fetching data from your deployed backend application, rather than the locally hosted backend.  Without this change, the deployed frontend will only be able to display and manipulate data if the user also has the backend running locally. 
+You are not required to deploy your FE application. If you do choose to deploy your application, you will want to refactor the base url used for the GET/POST/PATCH/DELETE requests to have your FE fetching data from your deployed backend application, rather than the locally hosted backend.  Without this change, the deployed frontend will only be able to display and manipulate data if the user also has the backend running locally.  -->
