@@ -6,13 +6,12 @@ tags: css, box model, syntax
 
 ## Learning Goals
 
-* Implement clean and consistent CSS syntax
 * Use Chrome Dev Tools to debug CSS
-* Demonstrate understanding of the box model by recreating small comps
-
-<!-- ## Pre-Work
-
-Read through [Intro to CSS Pre-Work document](./intro-to-css-prework.html) and all links provided and complete exercises provided in it. Be prepared to demonstrate your understanding of the concepts in that document when you come to this class. -->
+* Demonstrate understanding of:
+  * selectors and specificity
+  * sharing styles across multiple elements
+  * the box model
+* Start to use CSS to match a provided comp
 
 ## Vocabulary
 
@@ -65,8 +64,10 @@ h1 {
   color: darkgrey;
 }
 ```
+<br>
 
-An HTML element can have zero, one, or _multiple_ classes applied to it. Class attributes can help us write cleaner and more DRY (don’t repeat yourself) CSS because we can apply the same class to multiple elements in our HTML that share certain styles. Then, in our CSS, we simply apply all the shared styles to that shared class. We can also apply CSS declarations to multiple elements at once by stacking the selectors. 
+### Sharing styles across multiple elements
+Remember: an HTML element can have zero, one, or _multiple_ classes applied to it. Class attributes can help us write cleaner and more DRY (don’t repeat yourself) CSS **because we can apply the same class to multiple elements in our HTML that share certain styles**. Then, in our CSS, we simply apply all the shared styles to that shared class. We can also apply CSS declarations to multiple elements at once by stacking the selectors. 
 
 For example:
 
@@ -121,6 +122,11 @@ IDs help us accomplish a similar goal as classes do. The difference is that IDs 
 - An individual student has a personal `ID` number, like a drivers license or SSN, etc. that is unique to them.
 </section>
 
+### Specificity
+**CSS Specificity** is a mechanism within the CSS cascade that helps browsers resolve conflicting rules. Suppose you have two (or more) conflicting CSS rules that are being applied to the same element. In that case, the browser follows some rules to determine which one is most specific and that particular CSS declaration will take precedence, with the others being overridden.  
+
+You don't need to memorize the specificity rules, but its worth doing some additional research to wrap your head around the concept. The CodePen below will demonstrate some examples of this.
+
 <p class="codepen" data-height="300" data-theme-id="37918" data-default-tab="html,result" data-user="kaylaewood" data-slug-hash="mdEexwR" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="CSS Rules">
   <span>See the Pen <a href="https://codepen.io/kaylaewood/pen/mdEexwR">
   CSS Rules</a> by Kayla Wood (<a href="https://codepen.io/kaylaewood">@kaylaewood</a>)
@@ -135,6 +141,16 @@ With your partner, use the CodePen above to explore.
 * Uncomment each line in the CSS file at a time (starting at the top). Before you uncomment, make a prediction about what you will see on the page.
 * Do you notice a pattern for what styling is taking precedent?
 * Write down any questions that come up!
+</section>
+
+<section class="dropdown">
+### Key Takeaways - Specificity
+
+- Styles declared with an `.class` selector will override styles declared with the element selector (like `h1`)
+- Styles declared with an `#id` selector will override styles declared with an `.class` selector
+- Styles declared with multiple selector (like `div p` or `#nav li.active`) may override others styles depending on how many and which types of selectors they include
+
+Next we'll see how we can use the browser's dev tools to improve our CSS workflow - included getting visibility into which styles are getting overridden.   
 </section>
 
 ## Dev Tools and CSS
@@ -164,7 +180,7 @@ Discussion Questions:
 * Refresh the page. What happened to your changes? Given that they don't persist, why/when would using the Dev Tools be useful?
 </section>
 
-<section class="answer">
+<section class="dropdown">
 ### Chrome Dev Tools Takeaways
 
 * When a CSS property is crossed out, it means that the style was overridden by another style - either because there is a more specific selector somewhere else in your CSS file or because there is a competing style applied later in your file (Remember: CSS reads top to bottom!)
@@ -180,13 +196,32 @@ This diagram can be found in the CSS Dev Tools and the same color coding is used
 
 # ![Box Model](./assets/images/box-model.jpg)
 
+Tip:  When trying to get more visibility into a specific element, put a border around it.  This is particularly helpful when trying to see the spacial parts of an element like the padding and margins.
+
 ## Recreating Comps
 
 We can apply all the margin and padding we want, but when it comes down to it, many times Front End Developers are tasked with re-creating something a designer has provided them with, commonly called "comps". Let's use our tools to build something professional-grade.  
 
 Throughout both Mod 1 CSS lessons, you are going to work on recreating a piece of the [Imperfect Foods website](https://web.archive.org/web/20220118162321/https://try.imperfectfoods.com/overview).  
 
-You will have one hour to work on `iteration 1` of [this activity](https://github.com/kaylagordon/css-intro-imperfectfoods). You will work on `iteration 2` after you've had the CSS Flexbox lesson.
+Today you will work on `iteration 1` of [this activity](https://github.com/kaylagordon/css-intro-imperfectfoods). You will work on `iteration 2` after you've had the CSS Flexbox lesson.
+
+<section class="dropdown">
+### Just SOME common CSS properties you may reach for
+
+- display (none, inline, block, etc)
+- border
+- border-radius
+- padding
+- margin
+- color (for text)
+- font-size
+- background-color
+- height
+- width
+
+</section>
+
 
 ## Wrap Up
 

@@ -4,15 +4,15 @@ length: 60 minutes
 title: One to Many Relationships
 ---
 
-There are many ways that objects can relate to each other. There can be a *one to one* relationship as in a person and their social security number, or a *one to many* relationship as in an author and their books, or even a *many to many* relationship is in instructors and their students. In this lesson, we will be focusing on the **one to many** relationship and how that relationship is set up in a normalized database.
+There are many ways that objects can relate to each other. There can be a *one-to-one* relationship as in a person and their social security number, or a *one-to-many* relationship as in an author and their books, or even a *many-to-many* relationship as in instructors and their students. In this lesson, we will be focusing on the **one-to-many** relationship and how that relationship is set up in a normalized database.
 
 ## Learning Goals
 * Define Primary Key and Foreign Key
-* Visualize One to Many relationships
+* Visualize One-to-Many relationships
 * Define ORM
 
 ## Vocab
-* One to Many
+* One-to-Many
 * Normalization
 * Primary Key
 * Foreign Key
@@ -20,7 +20,7 @@ There are many ways that objects can relate to each other. There can be a *one 
 
 ## Warmup
 
-* During this week, we will start using an application called Set List in class, which will have a songs database table. The table will store songs' title, length and seconds, and its play count. If we wanted to store and relate songs to an artist (for example, the artist Prince has two songs in our app: 'Purple Rain' and 'Raspberry Beret') how might you try to incorporate that data into the Set List database? Sketch out an example. 
+* Thinking back to the Set List application, the database currently has a single database table called `songs`. This table stores a songs' title, length, and its play count. If we wanted to store and relate songs to an artist (for example, the artist Prince has two songs in our app: 'Purple Rain' and 'Raspberry Beret') how might you try to incorporate that data into the Set List database? Sketch out an example. 
 
 ## What is a database?
 
@@ -38,7 +38,7 @@ But, what if we want to keep track of the artist that wrote each song? We *coul
   <img src='./assets/images/one_to_many/1_to_many_db_image_2.png'>
 </p>
 
-Seems like it works, right? Well... not exactly. What if we wanted to also store information about specific artists, like their hometown or years active. If we imagine what that might look like, we would see more columns on our `songs` table and many of those columns would be storing the exact same information - every Prince song would be storing 'Minneapolis' and '1975-2016':
+Seems like it works, right? Well... not exactly. What if we wanted to also store information about specific artists, like their hometown or years active. If we imagine what that might look like, we would see more columns on our `songs` table and many of those columns would be storing the exact same information - every Prince song would be storing *'Minneapolis'* and *'1975-2016'*:
 
 <p align='center'>
   <img src='./assets/images/one_to_many/1_to_many_db_image_3.png'>
@@ -50,9 +50,9 @@ Let's explore a better way to store this information using **database normalizat
 
 ## Normalizing our Database
 
-In order to cut down on redundant data on a specific table in our database, we can rely on **normalization**. Normalization is a process by which we break down tables in our database so that each table relates only to one resource. In the example we are working with, when we look at our songs table, we are storing information about songs and about artists. Really, we are trying to store information about two resources on one table - let's fix that.
+In order to cut down on redundant data on a specific table in our database, we can rely on **normalization**. Normalization is a process by which we break down tables in our database so that each table relates only to one resource. In the example we are working with, when we look at our `songs` table, we are storing information about songs and about artists. Really, we are trying to store information about two resources on one table - let's fix that.
 
-In a normalized database, we can break this one table into two: songs and artists. Then we can separate the attributes of each resource to their appropriate table:
+In a normalized database, we can break this one table into two: `songs` and `artists`. Then we can separate the attributes of each resource to their appropriate table:
 
 <p align='center'>
   <img src='./assets/images/one_to_many/1_to_many_db_image_4.png'>
@@ -72,12 +72,11 @@ As we build out our databases, we will want them to be as normalized as possible
 
 ## Describing these Relationships
 
-There are a lot of words we could use to describe this relationship between songs and artists, but to stay consistent and follow rails conventions, we will describe this as a **One to Many Relationship**, where a **song belongs to an artist** and an **artist has many songs**. Every database relationship has two sides and it is important to describe both sides of the relationship.
+There are a lot of words we could use to describe this relationship between songs and artists, but to stay consistent and follow Rails conventions, we will describe this as a **One-to-Many Relationship**, where a **song *belongs to* an artist** and an **artist *has many* songs**. Every database relationship has two sides and it is important to describe both sides of the relationship.
 
-It may seem like a small thing, but having consistency with how we describe these relationships will help us as we build our rails apps, and as we describe our database design to other developers.
+It may seem like a small thing, but having consistency with how we describe these relationships will help us as we build our Rails apps, and as we describe our database design to other developers.
 
-Whenever we have a **one to many** relationship, Resource A will always **belong to** Resource B, with the use of a **foreign key**; and, Resource B **has many** Resource A.
-
+Whenever we have a **one-to-many** relationship, Resource A will always **belong to** Resource B, with the use of a **foreign key**; and, Resource B **has many** Resource A.
 
 ## Using Resource Records in our Applications
 
