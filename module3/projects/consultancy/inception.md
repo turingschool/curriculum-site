@@ -25,6 +25,10 @@ These items must be shared with your project manager before you can begin develo
     - Database Schema
 4. User Stories in Project Board
 5. Equity Analysis
+6. Plan for sub-teams for first development sprint
+    - Team rotation is required after sprints
+    - Team is welcome to choose their preferred team breakdown, i.e. splitting by FE/BE, splitting by feature, etc.
+    - **It is essential that every student complete some work on both the FE and BE, but it does not need to be an even 50/50 split**
 
 ## Process
 
@@ -141,7 +145,9 @@ Conflict and tension tends to arise in groups when there are differing expectati
     * For each page, create a [wireframe](https://www.usability.gov/how-to-and-tools/methods/wireframing.html) by sketching out what that user will see when they navigate to that page. Include details such as header text, buttons, drop downs, forms with the specific fields, graphs etc.
     * Do a few pages together as a group, then divide and conquer the remaining pages.
     * [Figma](https://www.figma.com/wireframe-tool/?utm_source=google&utm_medium=cpc&utm_campaign=17340391121&utm_term=free%20wireframe%20tools&utm_content=600487515776&gclid=CjwKCAjw5P2aBhAlEiwAAdY7dLtWlIVK0NWWHUXbjj8KMAaBN8P1lO16khOpesJ63utNI5b-cF1e2xoClmoQAvD_BwE) is a great tool for wireframing
+</section>
 
+<section class="dropdown">
 ## Story Writing (Solve)
 
 * **Objectives**
@@ -165,7 +171,7 @@ Conflict and tension tends to arise in groups when there are differing expectati
             4. Build Cypress tests for the feature
             5. If network call to external API is unsuccessful, display friendly error message to user indicating that no results could be found.
     * **Note:** This user story example doesn't include any BE work, but some user stories might include tasks in both the BE and the FE. These are called "vertically-sliced" user stories, in that they they involve a full vertical slice of every layer of the web application (or, the cake!). While vertically-sliced user stories are a best practice in agile software development, your team might decide that horizontal slicing (i.e. BE-only tasks and FE-only tasks) is your preferred organization method, and that's okay!
-
+</section>
 
 ## Equity Analysis
 
