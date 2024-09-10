@@ -160,17 +160,17 @@ Let's start building out our App component.
 
 Let's figure out what should be a component in our app.
 
-![IdeaBox wireframe](../../../assets/images/lessons/IdeaBox/IdeaBox-Browser.png)
+![IdeaBox wireframe](../../../assets/images/lessons/ideaBox/IdeaBox-Browser.png)
 
 - We have an App component. That should probably hold onto our list of ideas.  
 
-- We need a Form component so we can create new ideas. The Form component will have to be able to add new ideas to App's list of ideas.  
+- We need a Form component so we can create new ideas. The Form component will have to be able to add new ideas to App's list of ideas.  ideabox_
 
 - We need a Card component to display our ideas.  
 
 - We can create an Ideas component to hold all of our Cards.  
 
-![IdeaBox wireframe with component boxes](../../../assets/images/lessons/IdeaBox/IdeaBox-wireframe.png)
+![IdeaBox wireframe with component boxes](../../../assets/images/lessons/ideaBox/IdeaBox-wireframe.png)
 
 ### App.js
 
@@ -340,7 +340,7 @@ export default App;
 
 Open up your React Dev Tools (open your dev tools, then go to the Components tab). You can see that App now has state:
 
-![App component state](../../../assets/images/lessons/IdeaBox/React-dev-tool.png)
+![App component state](../../../assets/images/lessons/ideaBox/React-dev-tool.png)
 
 Neat!
 
@@ -586,7 +586,7 @@ And in your Card css file:
 
 Okay! Hopefully your app looks like this:
 
-![screenshot of IdeaBox so far](../../assets/images/lessons/IdeaBox/IdeaBox-Screenshot.png)
+![screenshot of IdeaBox so far](../../assets/images/lessons/ideaBox/IdeaBox-Screenshot.png)
 
 All right, friends. Let's get to passing some PROPS! Let's go all the way back to our App component and pass our list of ideas to the Ideas container component, so that it can then create Card components out of each individual idea.
 
