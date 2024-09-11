@@ -11,11 +11,10 @@ title: Module 3 - Lessons
 <!-- * [Refactoring Patterns for API Consumption](.) -->
 
 ## React
-* [Intro to React](./react_intro)
 * [Our First Ideabox](./react_ideabox)
+* [Intro to React](./react_intro)
 * [Ideabox Review](./react_ideabox_review)
-<!-- * [Network Requests: GET & POST](.) -->
-<!-- * [React: Advanced Data Management](.) -->
+* [Network Requests](./react_network_requests)
 
 
 ## Advanced JavaScript
