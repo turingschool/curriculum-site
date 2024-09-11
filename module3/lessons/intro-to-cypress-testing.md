@@ -31,32 +31,7 @@ When we start the lesson you should have the Feedback Loop api ready and running
   * Happy and sad path user flows 
 * Understand how acceptance testing & end-to-end testing differ from unit & integration testing
 
-## A little background
 
-So far in your time at Turing, you've learned a lot about unit/integration testing. The paradigm you've learned so far is testing individual functions with unit tests to verify that they produce the same output every time, and testing the interactions between those functions (integration tests).
-
-We haven't tested anything that's on the DOM - our whole testing perspective has been from the point of view of the developer. This makes sense - after all, tests are there to tell us if something in our codebase breaks!
-
-However, because the apps we build are meant to be used by, well, _users_, it's also important that we ensure that our apps work from their perspective!
-
-In this lesson, we're going to learn about **acceptance testing** and **end-to-end testing** (also known as E2E testing).
-
-## What are acceptance tests?
-
-In our User Stories lesson, we learned about describing user flows. We also learned about writing _acceptance criteria_. A user story describes the WHAT of a user flow: what is supposed to happen? Acceptance criteria describes the HOW of a user flow: how is that accomplished?
-
-Acceptance testing ensures that the acceptance criteria were successfully implemented. It doesn't just manually call functions - it runs the actual application and walks through a user flow via the app UI. When we run acceptance tests, we use the client, and stub out (we'll learn about this later) our network requests and other services.
-
-You can think of testing complexity moving from unit testing to integration testing, from integration testing to acceptance testing.
-
-Consider testing a site like Twitter. When the developers build out the login functionality, it's mission critical that it works as expected in all cases, including obscure edge cases. Just testing the functions in isolation wouldn't be enough. For true confidence in an app, we need to test that the user experiences the expected user flow.
-
-Most of the tests we write in Cypress are going to be acceptance tests!
-
-## What are end-to-end tests?
-`End-to-end` ("E2E") tests add another layer of confidence to your testing by running your entire application including the client, API, database, and other services.  This helps boost a developer's confidence with their app ensuring that the **user flow** works correctly in the production environment (or something very similar to the production environment). Although they can be expensive in the initial setup, they test how a user would interact with an application.
-
-This is the final layer that should be added in addition to `unit` and `integration` tests.  While these tests focus more on the code written and help pinpoint potential errors for the developer, `acceptance` and `end-to-end` tests are useful for the end user.  Think about the various happy and sad path user flows your last project encompassed.  This could include the *happy paths* of displaying a list of movies or adding a movie to their favorites.  Maybe the route changes if a user clicks on a button.  There are also the *sad paths* to those user flows.  What if the movie has already been favorited?  What if a route doesn't exist?
 
 ##  What is Cypress?
 
