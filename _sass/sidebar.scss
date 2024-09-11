@@ -8,7 +8,8 @@ nav {
 
 .nav-links {
   display: grid;
-  grid-template-columns: auto 100px 100px 100px 100px 100px 100px 125px 225px;
+  grid-template-columns: auto 100px 100px 100px 100px 100px 100px 125px ;
+  // 225px -- add to end of above line once search bar is added back
   grid-template-rows: 120px;
   align-items: center;
   justify-items: center;
