@@ -14,7 +14,7 @@ tags: rails, errors, rescue, raise, exceptions
 ## Learning Goals
 
 * Understand why we need to plan for errors and how to handle exceptions
-* Learn the difference between an error and an exception, in the technical sense of the two words
+* Implement sad path testing and describe why it's important
 * Use Rails' built-in methods for rescue
 
 ### Error Handling Vs. Debugging
@@ -105,11 +105,6 @@ Run these lines of code in a new Ruby file for this lesson.
 2. “string”.hey_there
 3. [1, 2].first(“one”)
 
-Results:
-
-1.
-2.
-3. 
 
 
 Create a ruby file called `exception_handling.rb` and place the code below in it. Then, let's run that file.
@@ -136,12 +131,12 @@ Most user stories & feature tests (so far) written this way
     * Incorrect usage of our application that has already been solved for
     * Error messages
     * “Gentle guidance” for the user
-    
-❓ Is a sad path the same or different from an edge case?
 
-**Edge case**: Less common input, can sometimes break functionality
+#### Then what are edge cases?
 
-**Sad Path**: Expected, but handled input
+Edge case: Less common input, can sometimes break functionality
+
+Sad Path: Expected, but handled input
 
 **Bottom line**: your tests should include both: happy paths for all, sad paths for inputs, and maybe 1-2 edge cases (if applicable). 
 
@@ -153,12 +148,15 @@ We'll be using the `error-handling-start` branch of the [Set List API](https://g
 
 
 Sad Path User Story
-
+```
 As an API user
 
 When I make a request for a song that doesn't exist
 
 Then I am returned an error message saying "Couldn't find Song with 'id'=1" and a status code of 404
+
+And I do not see the exception stack trace nor any other extraneous information.
+```
 
 Let's run the sad path test from `/spec/requests/api/v1/songs_request_spec.rb` in isolation:
 
@@ -177,7 +175,7 @@ describe "Songs endpoints" do
 
       expect(data[:errors]).to be_a(Array)
       expect(data[:errors].first[:status]).to eq("404")
-      expect(data[:errors].first[:title]).to eq("Couldn't find Song with 'id'=123489846278")
+      expect(data[:errors].first[:message]).to eq("Couldn't find Song with 'id'=123489846278")
     end
   end
 end
@@ -368,25 +366,20 @@ With you partner, discuss the following two questions:
 
 When one of our validations fails, that's one reason for `song.save` to return `False`.
 
-#### Try it out! 
+### Try it out! 
 
-Add a validation to your song model to make sure the title is less than 20 characters.
+In your breakout rooms, add a model validation and implement the sad path for these scenarios. Don't forget to test in the model AND request spec:
+* Songs must be created with a title present
+* Songs must be created with play_count and length, and these attributes must be numerical
+* The above requirements should be true for updating a song record as well. 
 
-[validation helpers](https://edgeguides.rubyonrails.org/active_record_validations.html).
+#### Additional Data Validations Practice
 
-In Postman, send a request with an extra long title and make sure your error handling gracefully handles this sad path.
-
-### Practice
-
-In your breakout rooms complete the following:
-* Add at least two sad path tests for `create`
-* Add sad path tests and error handling for your `update` and `destroy` endpoints.
+Add model tests and validations for:
 
 **Basics**
 - Add a validation that validates the uniqueness of an Artist's name
-- Add a validation that validates the presence of a Song's title
-- Add a validation for the Song's `play_count` column that validates numericality
-- Add a validation to check for the presence of a boolean value for one of your models.
+- Add a boolean column, and then a validation to check for the presence of a boolean value for one of your models.
 
 **Advanced**
 - Add a new column to the songs table that has a validation that only runs on an `update`
