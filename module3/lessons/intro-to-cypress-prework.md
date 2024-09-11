@@ -23,7 +23,7 @@ After, you're going to be working with a new codebase and testing multiple scena
 
 So far in your time at Turing, you've learned a lot about unit testing. The paradigm you've learned so far is testing individual functions with unit tests to verify that they produce the same output every time, and testing the interactions between those functions (integration tests).
 
-We haven't tested anything on the DOM - our whole testing perspective has been from the developer's point of view. This makes sense - after all, tests are there to tell us if something in our codebase breaks!
+We haven't tested anything on the DOM yet. So far, our testing has been from the developer's point of view, focused on ensuring that our codebase functions correctly. However, since our apps are built for users, we also need to verify that they work from their perspective!
 
 However, because the apps we build are meant to be used by, well, _users_, it's also important that we ensure that our apps work from their perspective!
 
@@ -53,8 +53,7 @@ As you've progressed through Turing, you've gained experience with backend testi
 ### The Answer  
 
 1. **Environment**: 
-   - Backend tests run in a controlled server environment.
-   - Frontend tests run in a browser environment, which can introduce variables like different browsers, screen sizes, and user interactions.
+   - Backend tests run in controlled server environments, while frontend tests run in browsers, which introduce variables like screen sizes, browsers, and user interactions.
 
 2. **Focus**:
    - Backend tests typically focus on data processing, database interactions, and API responses.
@@ -88,7 +87,7 @@ As we dive into Cypress for frontend testing, keep these differences in mind. Cy
 
 As you begin writing tests with Cypress, you'll encounter a new syntax for testing in JavaScript. While this may look different from the past tests you're familiar with, the core concepts of testing remain the same. Let's break down the basic structure of a Cypress test and explain its components.
 ```js
-Javascript file
+
     describe('My First Test', () => {
     it('Does not do much!', () => {
     expect(true).to.equal(true)
@@ -263,7 +262,7 @@ As we saw in the demo, the application makes GET requests to the server and disp
 However, these network requests can be expensive and slow down our tests. To keep our tests fast and reliable, we want to avoid making actual network calls during testing. Instead, we'll use a technique called 'stubbing' to simulate these requests with mock data.
 
 Stubbing allows us to control network requests and the data our tests work with. This approach helps ensure our tests are fast, reliable, and isolated from external dependencies like network requests. By using mock data, we can test various scenarios without relying on the actual server responses.
-If you look at the Cypress UI, you see that before adding intercept, the UI for the fetch is showing a filled circle, which means that the request is being made to the server and the data is being displayed on the page. To avoid that, we can add a `cy.intercept` to the test. Here our intercept is simulating the response from our GET request to the server, using a fixture file that we created in the fixture folder.
+If you look at the Cypress UI, you see that before adding intercept, the UI for the fetch is showing a filled circle, which means that the request is being made to the server and the data is being displayed on the page. To avoid making actual network calls, we can use `cy.intercept` to simulate the server response, using a fixture file that contains mock data.
 ```js
 // dashboard_spec.cy.js
 describe('dashboard', () => {
@@ -313,7 +312,7 @@ it('adds a new idea to the list', () => {
    cy.get('form button').click()
 })
 ```
-As you see after adding testing the click we are actually triggering the POST request, and we don't want that to happen. Here is where Cypress comes with a great feature called `cy.intercept` to the rescue us again with our POST request.
+As you see after adding testing the click we are actually triggering the POST request, and we don't want that to happen. Cypress provides a helpful feature called `cy.intercept`, which allows us to handle POST requests without actually sending them.
 However, since post is happening when the user clicks the submit, we don't need to have that intercept in the beforeEach block, since that doesn't need to happen for every test. But instead of adding it in after click we want to add it at the beginning of the test. 
 ```js
 it('adds a new idea to the list', () => {
