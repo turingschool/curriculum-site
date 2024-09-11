@@ -8,7 +8,7 @@ nav {
 
 .nav-links {
   display: grid;
-  grid-template-columns: auto 100px 100px 100px 100px 100px 100px 125px ;
+  grid-template-columns: auto 100px 100px 100px 100px 100px 100px 125px;
   // 225px -- add to end of above line once search bar is added back
   grid-template-rows: 120px;
   align-items: center;
@@ -50,27 +50,18 @@ nav {
   border-bottom: 3px solid lighten($turing-secondary, 25%);
 }
 
-@media (max-width: $tablet-width) {
-  .nav-links {
-    margin: 0 35px;
-    font-size: 0.9rem;
-    grid-template-columns: auto 80px 80px 80px 80px 150px;
-    grid-template-rows: 90px;
-
-    .home-logo-link img {
-      height: 55px;
-      width: 55px;
-    }
-  }
-}
-
-@media (max-width: $phone-width) {
+@media (max-width: 1100px) {
   .nav-links {
     margin: 15px;
     font-size: 1rem;
-    grid-template-columns: auto 200px;
-    grid-template-rows: 35px 35px 35px 35px 55px;
+    grid-template-columns: auto 300px;
+    grid-template-rows: 35px 35px 35px 35px 35px 35px 35px;
+    // 45px -- add to end of above line once search bar is added back
     justify-items: right;
+
+    label > img {
+      width: 25px;
+    }
 
     li {
       grid-column: 2;
