@@ -15,6 +15,9 @@ title: Module 3 - Lessons
 <!-- [Intro to React](.) -->
 <!-- * [Network Requests: GET & POST](.) -->
 <!-- * [React: Advanced Data Management](.) -->
+* [Intro to Cypress Testing](./intro-to-cypress-testing)
+* [Intro to Cypress Prework](./intro-to-cypress-prework)
+
 
 
 ## Advanced JavaScript
