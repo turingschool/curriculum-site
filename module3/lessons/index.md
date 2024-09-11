@@ -14,10 +14,11 @@ title: Module 3 - Lessons
 * [Our First Ideabox](./react_ideabox)
 * [Intro to React](./react_intro)
 * [Ideabox Review](./react_ideabox_review)
-* [Network Requests](./react_network_requests)
-
+* [Component Lifecycle & the useEffect Hook](./react_useeffect)
 
 ## Advanced JavaScript
+* [Network Requests - Fetch](./network_requests)  
+
 <!-- * [Intro To Accessibility](.)
 * [Intro to Cypress Testing](.)
 * [CORS Workshop](.)
@@ -25,7 +26,6 @@ title: Module 3 - Lessons
 * [Responsiveness - Mobile Design using Bootstrap](.)
 * [Async JavaScript](.)
 * [Scope & Scope Chain](.) -->
-
 
 ## Fullstack Web Development
 * [Intro to Service-Oriented Architecture](./intro_to_soa)
