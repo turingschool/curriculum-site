@@ -10,7 +10,8 @@ An Inception is a process used by many companies in the Software Industry to des
 
 Usually this process takes several days involving many stakeholders such as the client(s), team leads, CEOs, operations, etc. We will be doing a simplified version of this process in a few hours between your team and your project manager.
 
-## Inception Deliverables
+<section class="dropdown">
+### Inception Deliverables
 
 These items must be shared with your project manager before you can begin development. They will be reviewed in your first project check-in as well. Please pin or bookmark these in your Slack channel. 
 
@@ -29,6 +30,8 @@ These items must be shared with your project manager before you can begin develo
     - Team rotation is required after sprints
     - Team is welcome to choose their preferred team breakdown, i.e. splitting by FE/BE, splitting by feature, etc.
     - **It is essential that every student complete some work on both the FE and BE, but it does not need to be an even 50/50 split**
+
+</section>
 
 ## Process
 
@@ -145,10 +148,11 @@ Conflict and tension tends to arise in groups when there are differing expectati
     * For each page, create a [wireframe](https://www.usability.gov/how-to-and-tools/methods/wireframing.html) by sketching out what that user will see when they navigate to that page. Include details such as header text, buttons, drop downs, forms with the specific fields, graphs etc.
     * Do a few pages together as a group, then divide and conquer the remaining pages.
     * [Figma](https://www.figma.com/wireframe-tool/?utm_source=google&utm_medium=cpc&utm_campaign=17340391121&utm_term=free%20wireframe%20tools&utm_content=600487515776&gclid=CjwKCAjw5P2aBhAlEiwAAdY7dLtWlIVK0NWWHUXbjj8KMAaBN8P1lO16khOpesJ63utNI5b-cF1e2xoClmoQAvD_BwE) is a great tool for wireframing
+
 </section>
 
 <section class="dropdown">
-## Story Writing (Solve)
+### Story Writing (Solve)
 
 * **Objectives**
     * Document technical requirements for the development team

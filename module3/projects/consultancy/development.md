@@ -74,11 +74,13 @@ Days/times are subject to change due to holidays.
 * Check In 2
     * Monday Week 5
     * During this check in, you will discuss any adjustments you might need to make to your MVP
+    * Review retro notes with your PM
     * You can also use this check in as an opportunity to ask any questions and get help for the final few week of the project.
 
 * Check In 3
     * Review of near-final work, check for MVP
     * Ask questions, discuss blockers
+    * Review 2nd retro notes
     * Discuss presentation details
 
 </section>
@@ -120,3 +122,11 @@ Days/times are subject to change due to holidays.
     * What are you going to be working on?
     * Is anything blocking you?
 * Every weekday you should send your PM a summary of the day's stand up.
+
+#### Retros
+
+* Your team should have at least 2 retros during the course of the project. 
+* One will be scheduled on the calendar for you, and the other you will need to schedule as a team
+* Consult the [Retro Guide](./retro_guide) for more details
+
+</section>
