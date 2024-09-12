@@ -82,7 +82,7 @@ fetch(resourceUrl, {/* object with `method`, `body`, and other optional properti
 - `fetch` will *always* return a promise that either *resolves* or *rejects*.
 </section>
 
-### GET with Fetch
+## GET with Fetch
 
 By default, fetch performs a `GET` request. This means that if we only add a resource url to the fetch call, we'll try and `GET` information from that resource.
 
@@ -113,7 +113,7 @@ A Promise will either be resolved upon completion, or rejected upon failure. We 
 You may see `async/await` syntax when researching online. We know `async/await` is tempting, but it is important that you are able to work with the approaches that pre-date the introduction of `async/await`, like `.then()`. We find that beginning with `.then()` syntax is a much easier way to learn, and a perfectly acceptable way to write code.    
 </section>
 
-## What do I do with this "Promise {<pending>}"?
+### What do I do with this "Promise {<pending>}"?
 
 Diving into the returned promise reveals some information, such as its status and value, but nothing that's too immediately useful. Instead we have to resolve it:
 
@@ -125,7 +125,7 @@ fetch("https://opentdb.com/api.php?amount=1&category=27&type=multiple")
 * What do you get when you log the response object?  Take note of the properties there.
 * There's one problem: we can't seem to get the data we want from the `Response.body`.  How is data sent through requests and responses?
 
-## Parsing Our Response  
+### Parsing Our Response  
 
 Similar to what you did with localStorage, we'll need to parse our response!  We'll need to use the **`Body.json()`** method that comes with fetch to parse it and call another `.then()`.
 
@@ -156,16 +156,6 @@ Using the [Trivia API](https://opentdb.com/api_config.php){:target='blank'}, do 
 - Fetch 20 geography questions and for each trivia object console.log the answer only
 - Fetch 20 geography questions and console.log the response status code.
 </section>
-
-<!-- <section class="call-to-action">
-### Practice with an Application
-
-Head to <a href="https://github.com/turingschool-examples/fe2-fetch-practice" target="\__blank">this repo</a> for some practice with GETting.
-
-Working with a partner, follow the setup instructions to get the server running.  Then follow the steps in order within the `client/index.js` file and test it out by opening the `client/index.html` file.
-
-Note that this repo will be used for the GET and POST lessons. Be careful to only complete the GET practice today. We'll come back to this repo later when we <a href="https://frontend.turing.edu/lessons/module-2/network-requests-posts.html" target="\__blank">learn how to POST</a>!
-</section> -->
 
 ## Common Misconceptions
 
@@ -202,29 +192,14 @@ fetch('some_url')
 })
 ```
 
-<!-- You may want to do some research on [Promise.all()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all) if you are ever wanting to wait for multitple promises to resolve before performing an action! -->
+<section class="note">
+### Promise.all
 
-<!-- Review Session for the following morning:
-
-  Interview-style questions:
-
-  * In as much detail as possible, describe the request-response cycle when attempting to retrieve a network resource from a server.
-  * Describe the difference between synchronous and asynchronous code.
-  * What are 4 different levels of HTTP status codes and what does each level mean?
-
-  Write out another fetch call in Chrome DevTools (Trivia Database API is fine):
-    * Assign the whole fetch call to a variable
-    * Console log the response object in the first .then()
-    * Console log the parsed data in the second .then()
-    * Inspect the response object & the parsed data
-    * Log the variable you created for the entire fetch call to the console, see that it
-      returns a Promise object and inspect it to solidify that Promise syntax
-
--->
-
+You may want to do some research on [Promise.all()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all) if you are ever wanting to wait for multitple promises to resolve before performing an action!
+</section>
 ---
 
-## POST with fetch
+## POST with Fetch
 
 What if we want to add information to a database?
 
@@ -268,41 +243,23 @@ Remember, **fetch still returns a promise**. We've got to resolve it, regardless
 Often times, if a `POST` is successful, you'll see a `201 created` status message in the response
 </section>
 
-<!-- <section class="call-to-action">
+<section class="call-to-action">
 #### Practice
 
-Head to <a href="https://github.com/turingschool-examples/fe2-fetch-practice" target="\__blank">this repo</a> for some practice with GETting and POSTing.
+1. Head to <a href="https://github.com/turingschool-examples/se2-fetch-practice" target="\__blank">this repo</a> for some practice with GETting and POSTing.
 
-Working with a partner, follow the setup instructions to get the server running.  Then follow the steps in order within the `client/index.js` file and test it out by opening the `client/index.html` file.
-</section> -->
+1. Follow the setup instructions to get the server running.  
+
+1. Follow the setup instructions to get the frontend running.
+
+2. Within the `client/index.js` file, follow the steps in order. Test it out by opening the `client/index.html` file.
+
+
+</section>
 
 ---
 
-<!-- ## [Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises)
-
-"A Promise is an object representing the eventual completion or failure of an asynchronous operation"
-
-In our case, we can think of Promises as a placeholder that will do something once it receives a response back from the trivia server.
-
-The great thing about promises is that since they are just objects we can move them around like an object and can return them from functions.
-
-```js
-function getTrivia(number, categoryId) {
-  const root = 'https://opentdb.com/api.php';
-  const url = `${root}?amount=${number}&category=${categoryId}&type=multiple`;
-  const promise = fetch(url)
-                  .then(response => response.json());
-
-  return promise;
-}
-
-getTrivia(10, 27)
-  .then(data => console.log(data))
-  .catch(err => /* do something else */);
-``` -->
----
-
-### What is this asynchronous thing all about?
+## Async JS
 
 Let's say we're at a restaurant for a night out on the town...Here's how the experience would go in each scenario:
 
