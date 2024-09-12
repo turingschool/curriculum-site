@@ -258,7 +258,8 @@ Great, now we have checked the dashboard to see if it contains the title, form, 
 
 ### Testing the GET request
 
-As we saw in the demo, the application makes GET requests to the server and displays the response in the DOM.
+As we saw in the demo image, the application makes GET requests to the server and displays the response in the DOM. There is a filled green circle, next to the GET request in the Cypress UI. This is the indicator that the request is being made to the server.
+
 However, these network requests can be expensive and slow down our tests. To keep our tests fast and reliable, we want to avoid making actual network calls during testing. Instead, we'll use a technique called 'stubbing' to simulate these requests with mock data.
 
 Stubbing allows us to control network requests and the data our tests work with. This approach helps ensure our tests are fast, reliable, and isolated from external dependencies like network requests. By using mock data, we can test various scenarios without relying on the actual server responses.
