@@ -35,8 +35,7 @@ When we start the lesson you should have the Feedback Loop api ready and running
 
 ##  What is Cypress?
 
-Cypress is an automated testing tool used for the functional aspects of web applications.  It's actually built on *Node.js* and allows you to write tests using JavaScript.  It allows you to test a number of aspects of your application including `integration` and `end-to-end` tests.  It's a bit different from how you may have tested in the past because it actually operates directly in the browser.
-
+Cypress is an automated testing tool used for the functional aspects of web applications.  
 <section class="answer">
 ### Major Features of Cypress
 
@@ -82,64 +81,6 @@ Consider the following code and write down your responses to the questions:
 ```
 
 With the two main ways we'll be using Cypress in mind, take some time to play around with the Feedback Loop UI application as a user.  Try to identify and list some user flows within this application - what can a user see and what can they do.  
-
-<!-- <section class="call-to-action">
-### Enough Talk Already!
-Now that we understand the big picture, let's get into the details!
-
-Let's experiment ourselves and see how great Cypress is firsthand.  Using the app provided earlier, **Feedback Loop**, let's experiment testing it with Cypress!
-
-* First use [the Cypress docs](https://docs.cypress.io/guides/getting-started/installing-cypress.html#Installing){:target='blank'} to figure out how to use npm to install Cypress within the Feedback Loop UI repo.
-* There are multiple ways of opening up Cypress.  Use the docs to figure out how to setup a `script` in the `package.json` that you'll be able to use to open up Cypress.  
-* Open Cypress with the script you added. A new window will appear with two testing options.  
-  * Select **E2E Testing**.  
-  * There are some config options on the next window...but for now just select **Continue** at the bottom.  
-    * *Hint: If you see an error that references webpack, you likely chose Component Testing by mistake in the previous step.*
-  * Then select your browser (*Chrome*) and the Start E2E Testing in Chrome button. Pause here for now.  
-
-Having completed these steps, you should notice some new directories and files added to your application.
-</section> -->
-
-<!-- <section class="answer">
-### If you get stuck!  
-
-* Install `cypress` as a dev dependency.
-
-```bash
-  npm i -D cypress
-```
-
-* Add the following to your `package.json`
-
-```js
-{
-  "scripts": {
-    "cypress": "cypress open"
-  }
-}
-```
-
-* Then run `npm run cypress`
-
-Note: This syntax might be slightly different than what you found in the docs. Thats ok! There are many syntax options.
-</section> -->
-
-<!-- ## Writing our first test!
-
-<section class="call-to-action">
-### Creating some test files
-
-You'll notice that there are a few directories including `downloads`, `fixtures`, and `support` inside of a `cypress` directory.  For now, don't worry about these directories and go back to the main window on Cypress and follow the [instructions here](https://docs.cypress.io/guides/end-to-end-testing/writing-your-first-end-to-end-test#What-you-ll-learn){:target="_blank"} for adding your first test file.
-
-As we consider what we will be testing, let's consider a few ways to set up our files.
-
-We could make one giant file and test absolutely everything there: `feedback_loop_spec.cy.js`.  But it's probably more maintainable to group up our related user flows.
-
-Create a few files using the UI in the `e2e` directory (located inside the `cypress` directory):
-- `cypress/e2e/login_spec.cy.js`
-- `cypress/e2e/dashboard_spec.cy.js`
-- `cypress/e2e/form_spec.cy.js`
-</section> -->
 
 ### Enough talk already
 Let's experiment ourselves and see how great Cypress is firsthand.  Your Feedback Loop UI and Feedback Loop Api should already be up and running.  Open cypress from within the FE repo using the command you set up as a script in `package.json`.  *Likely `npm run cypress` or `npm run cypress:open`.*  Select **E2E Testing**, then **Chrome** for your browser, then the **Start E2E Testing in Chrome** button.
@@ -207,7 +148,7 @@ Now that we've identified some user flows, let's get to testing (finally)! First
 * Take note of any errors that you get in the `Test Body` of the **Command Log**.
 
 This test might feel a bit unnecessary and overly simple - but it's valuable.  Thinking about controlled forms, what are we actually testing here?
-<!-- Here is a link to [commonly used assertions](https://docs.cypress.io/guides/references/assertions.html#Common-Assertions) in Cypress! -->
+
 
 <section class="note">
 ### Note - Your React app must be running in order for Cypress to work
@@ -382,7 +323,7 @@ As you can see by digging through `App.js` and `Dashboard.js`, the way this code
 As we saw in our `login_spec.js` file, logging in takes a few steps. We have to find the inputs, type the appropriate data in, and click our login button.
 
 We can actually automate this process by creating a custom [Cypress command](https://docs.cypress.io/api/cypress-api/custom-commands){:target='blank'}.
-
+<!--  This is where I need to move this into a box as this is not required in M3 -->
 <section class="note">
 ### Caution
 
