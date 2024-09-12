@@ -24,18 +24,18 @@ Let's start by reviewing what a network request is and see it in action!
 <section class="call-to-action">
 ### Warmup
 
-Open up your dev tools and navigate to the Network tab. Refresh the page and watch what happens.  You should see something like this:
+Open up your dev tools and navigate to the **Network** tab. Refresh the page and watch what happens.  You should see something like this:
 
-![network dev tool example](https://i.imgur.com/C5brbyU.png)
+![network dev tool example](../../../assets/images/lessons/fe_network_requests/network_tab.png)
 
 * In your notebook, write down what a network request is in your own words.
 * Based on the data that shows up in the Network tab, what are each of the columns referring to?  (totally okay to take an educated guess)
-</section>
 
-<section class="note">
-### What is happening here?
+<section class="dropdown">
+### What's happening here?
 
 Each item listed is a request for a file from some server somewhere. The one on the top is the initial HTML file, and then the link tags in your HTML prompt network requests for the stylesheets and JavaScript files necessary.  Cool!
+</section>
 </section>
 
 ## Making a Request
@@ -53,7 +53,7 @@ Note that there are a few ways to make a request.  One way you might see is thro
 
 Traditionally, AJAX requests have been made via the [XMLHttpRequest](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest){:target='blank'} object. However, the process is a little clunky, with developers transitioning over to a more streamlined way using the **fetch API**.  This is much more commonly used by developers nowadays and will be the primary way we make network requests at Turing.
 
-The great thing about using the fetch API is that we can use it "for free" with ES6 (as opposed to `$.get` which requires us to bring in jQuery or *axios* which is a separate npm package)!
+The great thing about using the fetch API is that we can use it "for free" with ES6 (as opposed to needing a separate npm package)!
 </section>
 
 ## ES6: fetch()
@@ -69,12 +69,6 @@ Using the [fetch API docs](https://developer.mozilla.org/en-US/docs/Web/API/Fetc
 * What does `fetch` always return?  If the term is new to you, read further on what it is.
 </section>
 
-<section class="note">
-### Not All Browsers Support `fetch`
-
-It's important to note that not every browser supports the fetch api; [polyfills](https://developer.mozilla.org/en-US/docs/Glossary/Polyfill) (code used to provide modern functionality to older browsers that do not natively support it) are available, but many legacy codebases use other apis that are supported by older browsers, such as `Axios` or `Superagent`.  You can see what [browsers support fetch here](https://caniuse.com/#search=fetch){:target='blank'}!
-</section>
-
 <section class="answer">
 ### Key Takeaways  
 
@@ -82,8 +76,7 @@ It's important to note that not every browser supports the fetch api; [polyfills
 - It can take an optional options object to get more specific about the `method`, `body`, and `headers`.
 
 ```js
-fetch(resourceUrl, {/*init object with `method`, `body`, and other optional properties*/});
-// Returns a promise
+fetch(resourceUrl, {/* object with `method`, `body`, and other optional properties */});
 ```
 
 - `fetch` will *always* return a promise that either *resolves* or *rejects*.
@@ -109,15 +102,15 @@ fetch("https://opentdb.com/api.php?amount=1&category=27&type=multiple");
 
 A `Promise` is an object that represents the eventual completion of an action.
 
-We don't need to worry too much about them now. Just know that a Promise will either be resolved upon completion, or rejected upon failure. We can use special methods for promises to determine what needs to happen in either of those scenarios:
+A Promise will either be resolved upon completion, or rejected upon failure. We can use special methods for promises to determine what needs to happen in either of those scenarios:
 
-* `.then()` runs upon the resolution of a promise. Returns another promise
-* `.catch()` runs upon the rejection of a failed promise. Used for error handling
+* `.then()` runs upon the resolution of a promise and returns another promise
+* `.catch()` runs upon the rejection of a failed promise and is used for error handling
 
 <section class="note">
-### `async/await`
+### `async/await``
 
-The expectation for Mod 2 is that you will avoid using `async/await`. We know `async/await` is tempting, but it is important that you are able to work with the approaches that pre-date the introduction of `async/await`. Consider doing some research on [Promise.all()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all).
+You may see `async/await` syntax when researching online. We know `async/await` is tempting, but it is important that you are able to work with the approaches that pre-date the introduction of `async/await`, like `.then()`. We find that beginning with `.then()` syntax is a much easier way to learn, and a perfectly acceptable way to write code.    
 </section>
 
 ## What do I do with this "Promise {<pending>}"?
@@ -130,7 +123,7 @@ fetch("https://opentdb.com/api.php?amount=1&category=27&type=multiple")
 ```
 
 * What do you get when you log the response object?  Take note of the properties there.
-* There's one problem: we can't seem to get the data we want from the Response.body.  How is data sent through requests and responses?
+* There's one problem: we can't seem to get the data we want from the `Response.body`.  How is data sent through requests and responses?
 
 ## Parsing Our Response  
 
@@ -154,7 +147,6 @@ fetch("https://opentdb.com/api.php?amount=1&category=27&type=multiple")
   .then(data => console.log(data))
   .catch(err => /* do something else */);
 ```
-
 <section class="call-to-action">
 ### Practice in the Console
 
@@ -165,7 +157,7 @@ Using the [Trivia API](https://opentdb.com/api_config.php){:target='blank'}, do 
 - Fetch 20 geography questions and console.log the response status code.
 </section>
 
-<section class="call-to-action">
+<!-- <section class="call-to-action">
 ### Practice with an Application
 
 Head to <a href="https://github.com/turingschool-examples/fe2-fetch-practice" target="\__blank">this repo</a> for some practice with GETting.
@@ -173,7 +165,7 @@ Head to <a href="https://github.com/turingschool-examples/fe2-fetch-practice" ta
 Working with a partner, follow the setup instructions to get the server running.  Then follow the steps in order within the `client/index.js` file and test it out by opening the `client/index.html` file.
 
 Note that this repo will be used for the GET and POST lessons. Be careful to only complete the GET practice today. We'll come back to this repo later when we <a href="https://frontend.turing.edu/lessons/module-2/network-requests-posts.html" target="\__blank">learn how to POST</a>!
-</section>
+</section> -->
 
 ## Common Misconceptions
 
@@ -210,7 +202,7 @@ fetch('some_url')
 })
 ```
 
-
+<!-- You may want to do some research on [Promise.all()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all) if you are ever wanting to wait for multitple promises to resolve before performing an action! -->
 
 <!-- Review Session for the following morning:
 
@@ -230,7 +222,8 @@ fetch('some_url')
 
 -->
 
-*************
+---
+
 ## POST with fetch
 
 What if we want to add information to a database?
@@ -260,14 +253,14 @@ Here's a typical POST request structure:
 ```js
 fetch(url, {
   method: 'POST',
-  body: JSON.stringify(someDataToSend), // remember how HTTP can only send and receive strings, just like localStorage?
+  body: JSON.stringify(someDataToSend), // HTTP can only send and receive strings
   headers: {
   	'Content-Type': 'application/json'
   }
 })
   .then(response => response.json())
-  .then(json => /*do something with json*/)
-  .catch(err => /*do something with the error*/);
+  .then(data => /* do something with data */)
+  .catch(err => /* do something with the error */);
 ```
 
 Remember, **fetch still returns a promise**. We've got to resolve it, regardless of what request type we're making.
@@ -275,37 +268,17 @@ Remember, **fetch still returns a promise**. We've got to resolve it, regardless
 Often times, if a `POST` is successful, you'll see a `201 created` status message in the response
 </section>
 
-<section class="call-to-action">
+<!-- <section class="call-to-action">
 #### Practice
 
 Head to <a href="https://github.com/turingschool-examples/fe2-fetch-practice" target="\__blank">this repo</a> for some practice with GETting and POSTing.
 
 Working with a partner, follow the setup instructions to get the server running.  Then follow the steps in order within the `client/index.js` file and test it out by opening the `client/index.html` file.
-</section>
-
-<!-- ### Nice to Know: Query Strings / URL Structure
-
-![url anatomy diagram](https://sitechecker.pro/wp-content/uploads/2017/12/url-structure.jpg)
-
-What's all that weird stuff in the URL we're fetching?
-
-Fetch and XMLHttpRequest Objects take the url as one of their arguments. The URL itself can be thought of containing sub-arguments that give these request objects and methods more information. The entire anatomy of a URL can be broken down into a series of informative pieces, but the ones we're focused on today are queries.
-
-Anything coming after the `?` in a url is part of a query. Queries can be broken down into categories and arguments. Each category / argument pair is separated by an `&`.
-
- In the example from above:
-```
-fetch("https://opentdb.com/api.php?amount=1&category=27&type=multiple")
-```
-we're querying information about the `amount`, `category`, and `type` of the trivia we want to receive.
-
-<section class="call-to-action">
-Take a look at the [trivia docs](https://opentdb.com/api_config.php), and figure out what each of the queries in our fetch request mean.
 </section> -->
 
 ---
 
-## [Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises)
+<!-- ## [Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises)
 
 "A Promise is an object representing the eventual completion or failure of an asynchronous operation"
 
@@ -326,7 +299,7 @@ function getTrivia(number, categoryId) {
 getTrivia(10, 27)
   .then(data => console.log(data))
   .catch(err => /* do something else */);
-```
+``` -->
 ---
 
 ### What is this asynchronous thing all about?
