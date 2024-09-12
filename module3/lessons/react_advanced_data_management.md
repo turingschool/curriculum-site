@@ -1,5 +1,5 @@
 ---
-title: "React: Component Lifecycle & the useEffect Hook"
+title: "React: Advanced Data Management"
 length: 3 hours
 module: 3
 tags: react, hooks, useEffect, Network request 
@@ -42,33 +42,39 @@ There are a number of different motivations behind adding hooks to React, which 
 
 ### Review - Fetch
 
-We will be using `fetch` today. Let's review what you already know about `fetch`. Take some time to look into the <a href="https://developer.mozilla.org/en-us/docs/web/api/fetch_api/using_fetch" target="_blank">fetch API documentation</a> and answer the following questions:
-<section class="answer">
+We will be using `fetch` today in the context of React. Let's review what you already know about `fetch`. Take some time to look into the <a href="https://developer.mozilla.org/en-us/docs/web/api/fetch_api/using_fetch" target="_blank">fetch API documentation</a> and answer the following questions:
+<section class="dropdown">
 ### What does `fetch` do?
 `fetch` is a method provided by the Fetch API. It allows us to make a network request.     
 </section>
-<section class="answer">
+<section class="dropdown">
 ### What does `fetch` return?
 `fetch` returns a promise.
 </section>
-<section class="answer">
+<section class="dropdown">
 ### What does `.then()` do? What is the method called on? What does it return?
 `.then()` is a method of the Promise prototype that is called on a promise object. It is used to handle the successful resolution of a promise. When the promise resolves, the code inside the `.then()` block is executed. The `.then()` method itself returns a new promise object, allowing for chaining multiple asynchronous operations together.
 </section>
-<section class="answer">
+<section class="dropdown">
 ### What does `.catch()` do? What is the method called on? What does it return?
 `.catch()` is a method called on a Promise object (aka a Promise prototype method). It runs when the first promise it is chained to fails / rejects. It returns a promise object.
 </section>
 
 ### Set Up
 
-You'll need to clone down two repos for today:
-- [FE Repo](https://github.com/turingschool-examples/advanced-data-management-hooks-fe/tree/main)
-- [BE Repo](https://github.com/turingschool-examples/ideabox-api) - Do NOT clone inside your FE repository!
-
-Follow the steps in each README to get both the FE and BE running on your local machine. Make a tab in Chrome for:
-- `localhost:3000`: You should see the React app up and running here
-- `http://localhost:3001/api/v1/ideas`: You should see your list of ideas here
+You'll need to use two repos for today:
+1. You should already have **[this FE](https://github.com/turingschool-examples/ideabox-api)** repo cloned down.  
+  a. Navigate to that directory  
+  b. Run `git fetch`
+  c. Run `git checkout network-requests`  
+  d. Run `npm start`  
+2. You'll also need to get this **[BE Repo](https://github.com/turingschool-examples/ideabox-api)** up and running.  
+  a. Open a new tab in your terminal and navigate OUT of the FE directory  
+  b. Follow the instructions in the README to get the server running  
+  c. Again -- Do NOT clone inside your FE repository!
+3. Make a tab in Chrome for:  
+  a. `localhost:3000`: You should see the React app up and running here  
+  b. `http://localhost:3001/api/v1/ideas`: You should see your list of ideas here
 
 Our goal is to refactor this codebase so that we are accessing and updating the data from our API!
 
@@ -79,7 +85,7 @@ We are going to start with the `GET` request. Let's start by thinking about a co
 - When do we need to GET that data?
 - What are we going to do with the data we GET?
 
-<section class="answer">
+<section class="dropdown">
 ### Answers  
   
 - What data do we need to GET? **All ideas**
@@ -99,7 +105,7 @@ Notes:
 - For now, let's `console.log` the data that comes back.
 - You're not immediately going to know where/when to invoke this function - that's okay! For now, only define the function, don't invoke it.
 
-<section class="answer">
+<section class="dropdown">
 ### Possible Solution  
 
 ```jsx
@@ -130,7 +136,7 @@ Every component you create goes through several phases of existing:
 
 During which phase of the App component's lifecycle do we want our GET to run?
 
-<section class="answer">
+<section class="dropdown">
 ### Answer  
 
 During the Mounting Phase!
@@ -185,7 +191,7 @@ useEffect(() => {
 })
 ```
 
-Run your app. **What's happening?** :scream:
+Run your app. **What's happening?** 🙀
 
 Oh no! Let's revisit the timing conversation. What we include in that second argument affects the timing like this:
 - `no argument`: The Effect Hook will run for the mounting and updating phases
@@ -198,7 +204,7 @@ Oh no! Let's revisit the timing conversation. What we include in that second arg
 - When is our `useEffect` hook currently firing? What issues is that causing?
 - What should we change to our `useEffect` to get the timing right?
 
-<section class="answer">
+<section class="dropdown">
 ### Answer  
 
 It's currently running when the component is mounted (good) AND when state is changed (not good). Since we are updating state in our `useEffect`, it's causing an infinite loop! We need to add an empty array as a second argument to make it only run during the mounting phase:
@@ -219,7 +225,7 @@ Now, let's talk about the `POST` request. Let's start by thinking about these qu
 - When do we need to run that POST?
 - Will our POST need to happen in a `useEffect`?
 
-<section class="answer">
+<section class="dropdown">
 ### Answers  
 
 - What data do we need to POST? **New idea from form**
@@ -236,10 +242,11 @@ Update `addIdea` in `App` so that a new idea is POSTed to the API.
 
 Notes:
 - Refer to the BE repo's README for endpoints, necessary options, and documentation. 
+- What does the BE send back to us when the POST has resolved successfully?
 - Think about what you want to happen after the POST resolves successfully.
-- You can check that it's successfully being POSTed by going to 'http://localhost:3001/api/v1/ideas' in your browser.
+- You can check that it's successfully being POSTed by going to `http://localhost:3001/api/v1/ideas` in your browser.
 
-<section class="answer">
+<section class="dropdown">
 ### Possible Solution  
 
 ```jsx
@@ -259,15 +266,22 @@ Notes:
   }
 ```
 </section>
+
+- 🌶️ How would our code change if the BE sent back ALL ideas after a successful POST? What if the BE only sent back the ID of the new idea?
 </section>
 
-We will not cover it in this class, but if you'd like an added challenge later - update `deleteIdea` so that it also updates the backend data, too!
+<section class="note">
+### Note
 
-<!-- ## Error Handling & Conditional Rendering
+We will not cover it in this class, but if you'd like an added challenge later - update `deleteIdea` so that it also updates the backend data, too!
+</section>
+
+
+## Error Handling & Conditional Rendering
 
 **Note**: Turn off your server for this section so that we can force some errors!
 
-So far in this lesson (and perhaps in your whole time at Turing), we've been console logging the error messages in our `.catch`es. That's not great because our users can't see that! Let's actually DO something with those error messages!
+So far in this lesson, we've been console logging the error messages in our `.catch`es. That's not great because our users can't see that! Let's actually DO something with those error messages!
 
 There are two things we want to do with errors:
 - capture them somewhere
@@ -282,7 +296,7 @@ State! Great idea! Let's do that.
 
 Update your `.catch`es so that rather than console logging the error, we are capturing the error in our state.
 
-<section class="answer">
+<section class="dropdown">
 ### Possible Solution
 
 ```jsx
@@ -348,8 +362,8 @@ This way, the devs have access to the error via the console, but the users have 
 <section class="note">
 ### Solution - Complete Branch
 
-That was a lot of coding! If you want to see the full completed file, check out [the complete branch](https://github.com/turingschool-examples/advanced-data-management-hooks-fe/blob/complete/src/App.js) in that repo!
-</section> -->
+That was a lot of coding! If you want to see the full completed file, check out the `network-requests-complete` branch in your FE `react-ideabox` repo!
+</section>
 
 ## Closing - Checks for Understanding
 

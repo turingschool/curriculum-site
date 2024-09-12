@@ -14,7 +14,7 @@ title: Module 3 - Lessons
 * [Our First Ideabox](./react_ideabox)
 * [Intro to React](./react_intro)
 * [Ideabox Review](./react_ideabox_review)
-* [Component Lifecycle & the useEffect Hook](./react_useeffect)
+* [Advanced Data Management](./react_advanced_data_management)
 
 ## Advanced JavaScript
 * [Network Requests - Fetch](./network_requests)  
