@@ -33,7 +33,7 @@ Let's start out by seeing what's going on in our database. Navigate to your `db`
 1. A subdirectory called `migrate`. This holds our migrations. Recall, migrations are what allow us to create and change our database tables.
 2. A file called `schema.rb`. This is generated after we run our migrations for the first time and will update with every subsequent migration. It shows us the tables and attributes that exist in our database.
     ```ruby
-      create_table "songs", force: :cascade do |t|
+    create_table "songs", force: :cascade do |t|
       t.string "title"
       t.integer "length"
       t.integer "play_count"
@@ -72,7 +72,7 @@ Next let's check out our `controllers` directory. We also have 3 items in this o
 <section class="call-to-action">
 Think Break
 
-Think back to Mod 1. Do you remember having to `require './lib/filename'` ALL THE TIME? But we didn't have to do that at all in our Task Manager app, and you'll notice we're not doing it here either. Huh? Well, that's the Rails magic. If you stray from the convention that Rails expects, you'll get errors that it can't find your classes (usually as UnitializedConstant errors).
+Think back to Mod 1. Do you remember having to `require './lib/filename'` ALL THE TIME? But we didn't have to do that at all in our Task Manager app, and you'll notice we're not doing it here either. Huh? Well, that's the Rails magic. If you stray from the convention that Rails expects, you'll get errors that it can't find your classes (usually as UninitializedConstant errors).
 </section>
 
 Before we move on, let's dig into our `api/v1` subdirectory. We have a file called `songs_controller.rb` and it looks like this:
@@ -735,7 +735,7 @@ We need a way to calculate popularity so we are going to use a callback on our m
 
 ```ruby
 class Song < ApplicationRecord
-before_save { |song| song.popularity = calculate_popularity }
+  before_save { |song| song.popularity = calculate_popularity }
 
 private
   def calculate_popularity

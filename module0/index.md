@@ -3,6 +3,23 @@ layout: page
 title: Welcome to Module 0
 ---
 
+## Upcoming Mod 0 Start Dates
+
+<table>
+  <tr>
+    <th>Mod 1 Cohort (Start Date)</th>
+    <th>Mod 0 Dates</th>
+  </tr>
+  <tr>
+    <td>2410 (Oct 7)</td>
+    <td>September 16 - September 22</td>
+  </tr>
+  <tr>
+    <td>2412 (Dec 2)</td>
+    <td>November 4 - November 10</td>
+  </tr>
+</table>
+
 Mod 0 is a **required** course for Turing's Software Engineering programs designed to ensure students are ready to begin engaging with technical content on the first day of Mod 1. The course supports students in the following areas:
 * Becoming familiar with the systems and tools we use at Turing.
 * Setting expectations for what engagement, productive struggle, and feedback will be like as a Turing student.

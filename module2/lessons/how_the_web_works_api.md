@@ -61,7 +61,7 @@ When the server or web application is finished processing our request, it will s
 
 2. **Headers**: Similar to request headers, sent as key/value pairs
 
-3. Optional **body**: Contains the requested data (often HTML, JSON, etc.). Almost all responses will contain additional data in the body.
+3. **Body**: Contains the requested data (often HTML, JSON, etc.)
 
 ### Seeing HTTP requests and responses in action
 
@@ -206,15 +206,22 @@ When thinking about the role that APIs play in our web applications, they are an
 
 ## Additional Postman Practice
 
-Endpoint: `https://pets-api.turingschool-examples.com/api/v1`
+Base endpoint: `https://pets-api.turingschool-examples.com/api/v1`
 
 Observe the responses, including status codes, headers, and body content.
 
 - GET `/pets`
 - GET `/pets/:id`
 - POST `/pets` (with a JSON body)
-- PUT `/pets/:id` (with a JSON body)
+- PATCH `/pets/:id` (with a JSON body)
 - DELETE `/pets/:id`
+
+<section class="note">
+### Note
+
+Be sure to replace `:id` with an actual ID of a pet
+
+</section>
 
 ## Checks for Understanding
 

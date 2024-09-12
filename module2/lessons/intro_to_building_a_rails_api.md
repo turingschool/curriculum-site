@@ -108,7 +108,7 @@ Why is it important to version our API?
 ### Using JSON in the Controller
 
 ```ruby
-class MyController << ApplicationController
+class MyController < ApplicationController
   def index
     render json: Item.all
   end
