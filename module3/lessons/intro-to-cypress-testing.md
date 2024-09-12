@@ -36,7 +36,7 @@ When we start the lesson you should have the Feedback Loop api ready and running
 ##  What is Cypress?
 
 Cypress is an automated testing tool used for the functional aspects of web applications.  
-<section class="answer">
+<section class="dropdown">
 ### Major Features of Cypress
 
 Here are a list of major features pulled from the [documentation](https://docs.cypress.io/guides/overview/why-cypress.html#Features){:target='blank'}
@@ -119,7 +119,7 @@ Both the `describe` and `it` blocks come from **Mocha** while the `expect` synta
 This is great and all but let's think about what we actually need to test.  Remember that Cypress is especially useful for testing `user flows` on our applications.  List out a few user flows for the beginning of our application.
 </section>
 
-<section class="answer">
+<section class="dropdown">
 ### Beginning User Flows  
 
 * As a user, I should be able to visit `http://localhost:3000` and see a title & form displayed.
@@ -156,7 +156,7 @@ This test might feel a bit unnecessary and overly simple - but it's valuable.  T
 If your test fails when trying to load your site, this might be because Cypress is actually trying to visit your page, but your server is not running. Make sure your React App server is running in a separate tab on your terminal! You do not need to have the API server running, though.
 </section>
 
-<section class="answer">
+<section class="dropdown">
 ### Possible Solution - challenge yourself to try before looking!
 
 ```js
@@ -183,8 +183,13 @@ Before we continue, let's add in the following block:
     cy.visit('http://localhost:3000');
   });
 ```
+<section class="dropdown">
+### Why use beforeEach? Consider the reasons before reviewing the explanation below.
 
-This helps to ensure that we start anew before each test.  A [best practice](https://docs.cypress.io/guides/references/best-practices.html#Having-tests-rely-on-the-state-of-previous-tests){:target='blank'} is that tests should always be able to run independently from one another and *still pass*.  A **common pitfall** is adding code to the beforeEach that isn't needed by every `it` block.  If it's not used by every single `it` block, it doesn't belong in the beforeEach - put it directly into `it` blocks that needed it instead.
+- This helps to ensure that we start anew before each test.  A [best practice](https://docs.cypress.io/guides/references/best-practices.html#Having-tests-rely-on-the-state-of-previous-tests){:target='blank'} is that tests should always be able to run independently from one another and *still pass*.  
+- A **common pitfall** is adding code to the beforeEach that isn't needed by every `it` block.  If it's not used by every single `it` block, it doesn't belong in the beforeEach - put it directly into `it` blocks that needed it instead.
+</section>
+
 
 <section class="note">
 ### Did You Know?
@@ -206,7 +211,7 @@ Why?  Because to test any user flow, we need to walk Cypress through simulating 
 Here is a link to [commonly used assertions](https://docs.cypress.io/guides/references/assertions.html#Common-Assertions) in Cypress!
 </section>
 
-<section class="answer">
+<section class="dropdown">
 ### Solutions  
 
 ```js
@@ -238,7 +243,7 @@ There are some downsides however:
 For now (and throughout Mod 3), we will instead use [stubbing](https://docs.cypress.io/guides/guides/network-requests.html#Stub-Responses){:target='blank'} and [intercepting](https://docs.cypress.io/api/commands/intercept.html#Comparison-to-cy-route){:target='blank'} to control our network responses. Although both types of tests are important, stubbing is much more common and allows you to control the response body, status, and headers while also making your tests more performant.
 </section>
 
-<section class="answer">
+<section class="dropdown">
 ### Potential Solution  
 
 ```js
@@ -271,7 +276,7 @@ For now, all we are asserting is that our URL has updated to the page we expect 
 
 * Take what you learned from the exercise to **stub** a `401` response if a user fails to login.  Assert that a new error message is displayed.
 
-<section class="answer">
+<section class="dropdown">
 ### Solution  
 
 ```js
@@ -314,11 +319,101 @@ Let's get a little more practice with intercepting network requests, by testing 
 
 In our `dashboard_spec.js` file, let's pseudocode the user flows we should be testing.
 
-- After I login successfully, I should see the dashboard, complete with feedback from my teammates, as well as seeing teammates I have/haven't left feedback for
+- After I login successfully, I should see the dashboard, complete with feedback from my teammates, as well as seeing teammates I have/haven't left feedback for.
 
 As you can see by digging through `App.js` and `Dashboard.js`, the way this code is constructed, there are no error messages when there is no appropriate user data. This is probably something we should fix in the future, but for now, we'll only worry about testing the happy path.
+<section class='dropdown'>
+### Possible Solution
 
-### Automating our login
+**(hint: you only need to run a single spec file at a time)**
+- We need to have our login on the dashboard within our beforeEach, since we are starting a new spec file, and our dashboard spec is dependent on a user being logged in.
+- Our dashboard spec is dependent on our feedback request,teammates request, the user's data and their teammates data so we need to stub those network requests as well.
+- 
+
+```js
+// dashboard_spec.js
+describe('Dashboard view', () => {
+    beforeEach(() => {
+      // Login the user and stub the network requests 
+      cy.intercept('POST', 'http://localhost:3001/api/v1/login', {
+        statusCode: 201,
+        body : {
+          id:2,
+          image: "https://ca.slack-edge.com/T029P2S9M-U37MJAV0T-007ccf2f5eb2-512",
+          email: 'leta@turing.io',
+          password: 'keane20'
+        }
+      })
+      // Stub the network requests for the user's teammates
+      cy.intercept(`http://localhost:3001/api/v1/users/2/teammates`, {
+      "teammates": [
+        {
+          email: "hannah@turing.io",
+          id: 1,
+          image: "https://ca.slack-edge.com/T029P2S9M-UPE0QSWEQ-d4bebe6f4d88-512",
+          name: "Hannah Hudson",
+          delivered: false
+        },
+        {
+          email: "khalid@turing.io",
+          id: 3,
+          image: "https://ca.slack-edge.com/T029P2S9M-UDR1EJKFS-9351230a5443-512",
+          name: "Khalid Williams",
+          delivered: true
+        }
+      ]
+    });
+    // Stub the network requests for the user's feedback
+    cy.intercept(`http://localhost:3001/api/v1/users/2/feedback`, {
+      feedback: [
+        {
+          feedback: "Your feedback game is TOO strong.",
+          senderId: 4,
+          receiverId: 2
+        },
+        {
+          feedback: "I appreciate your positive energy and how hard you work in supporting both students and other instructors alike.",
+          senderId: 11,
+          receiverId: 2
+        }
+      ]
+    });
+    // Stub the network requests for the user's data
+     cy.intercept("GET", "http://localhost:3001/api/v1/users/4", {
+      id: 4,
+      name: "Scott Ertmer",
+      image: "https://ca.slack-edge.com/T029P2S9M-UJ910QEJF-7244f37f7e12-512",
+      email: "scott@turing.io",
+      password: "ertmer20",
+    });
+    cy.intercept("GET", "http://localhost:3001/api/v1/users/11", {
+      id: 11,
+      name: "Travis Rollins",
+      image: "https://ca.slack-edge.com/T029P2S9M-U4R41TZD2-7661f06e8c71-512",
+      email: "travis@turing.io",
+      password: "rollins20",
+    });
+    cy.visit('http://localhost:3000/')
+  })
+})
+```
+**As you see our beforeEach is doing a lot of things, this is a good example of where we would refactor our code to make our tests more performant.**
+- We can create fixtures to help us with this.
+- If you are interested in refactoring this test even further, look into the Want to learn more box at the end of this lesson. 
+</section>
+
+<section class="checks-for-understanding">
+### Exit Ticket
+
+* What is acceptance testing and how is it different from unit and integration tests?
+* What is Cypress and how is it different from other testing frameworks you've used in the past?
+* Should you include tests that utilize the API (end-to-end) or should you stub the network requests?  Is there an argument for both?
+</section>
+
+### Building From Here
+Remember, this lesson and it's activities are just an *introduction* to the world of testing with Cypress.  We've only scratched the surface.  In order to build your knowledge, fluency and skill to the level needed to succeed in Mod 3 and beyond, you will need to spend significant time in the Cypress documentation and getting your hands dirty with practice.  In project-based learning, your projects will be your primary platform for learning.  The feedback you get from that project work is what will help guide you towards further research and really help you level up your skill.
+<section class="dropdown">
+### Want to learn more?
 
 As we saw in our `login_spec.js` file, logging in takes a few steps. We have to find the inputs, type the appropriate data in, and click our login button.
 
@@ -524,16 +619,8 @@ And let's make a list of functionality to test:
 
 The [documentation](https://docs.cypress.io/api/api/table-of-contents.html){:target='blank'} that Cypress offers is a great place to start as you become more and more proficient in testing.  With time, you can even drive your implementation through TDD with Cypress.
 
-<section class="checks-for-understanding">
-### Exit Ticket
 
-* What is acceptance testing and how is it different from unit and integration tests?
-* What is Cypress and how is it different from other testing frameworks you've used in the past?
-* Should you include tests that utilize the API (end-to-end) or should you stub the network requests?  Is there an argument for both?
 </section>
-
-### Building From Here
-Remember, this lesson and it's activities are just an *introduction* to the world of testing with Cypress.  We've only scratched the surface.  In order to build your knowledge, fluency and skill to the level needed to succeed in Mod 3 and beyond, you will need to spend significant time in the Cypress documentation and getting your hands dirty with practice.  In project-based learning, your projects will be your primary platform for learning.  The feedback you get from that project work is what will help guide you towards further research and really help you level up your skill.
 
 ## Resources
 

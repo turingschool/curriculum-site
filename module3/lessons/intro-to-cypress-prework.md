@@ -151,8 +151,8 @@ Frontend applications often involve asynchronous operations (like waiting for da
 
 
 ## IdeaBox practice with Cypress :
-
-We know that in our IdeaBox, we have a page that contains a list of ideas and a form to add new ideas. Let's see how to add a few Cypress test files to test the following user flows:
+<!--  Add link to the ideaBox repo -->
+We know that in our [IdeaBox](https://github.com/turingschool-examples/react-ideabox){:target='blank'} application, we have a page that contains a list of ideas and a form to add new ideas. Let's see how to add a few Cypress test files to test the following **user flows**:
 - As a user, I want to be able to see the title of the application. 
 - As a user, I want to be able to see the form to add a new idea. 
 - As a user, I want to be able to see the list of ideas on the dashboard when I load the page. 
