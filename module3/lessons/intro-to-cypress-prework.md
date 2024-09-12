@@ -89,9 +89,9 @@ As you begin writing tests with Cypress, you'll encounter a new syntax for testi
 ```js
 
     describe('My First Test', () => {
-    it('Does not do much!', () => {
-    expect(true).to.equal(true)
-    })
+      it('Does not do much!', () => {
+      expect(true).to.equal(true)
+      })
     })
 ```
 Let's break this down:
@@ -150,7 +150,7 @@ Frontend applications often involve asynchronous operations (like waiting for da
 
 
 
-## IdeasBox practice with Cypress :
+## IdeaBox practice with Cypress :
 
 We know that in our IdeaBox, we have a page that contains a list of ideas and a form to add new ideas. Let's see how to add a few Cypress test files to test the following user flows:
 - As a user, I want to be able to see the title of the application. 
@@ -165,17 +165,17 @@ npm i -D cypress
 ```
 Next, we need to add a script to our `package.json` file to run Cypress.
 ```js
-{
-  "scripts": {
-    "cypress": "cypress open"
+  {
+    "scripts": {
+      "cypress": "cypress open"
+    }
   }
-}
 ```
 Now it's time to run Cypress. 
 ```bash
 npm run cypress
 ```
-This will open the Cypress Test Runner, a user-friendly interface for managing your tests. Follow these steps to create your first test file:
+**This will open the Cypress Test Runner, a user-friendly interface for managing your tests.** Follow these steps to create your first test file:
 
 1. In the Cypress Test Runner, you'll see a list of browsers. Select "Chrome" (or your preferred browser).
 
@@ -210,7 +210,7 @@ Here is the Cypress UI running our test and opening the application inside the C
 
 As you can see Cypress is running our test and opening the application in the Cypress UI for us to see the results. It looks like our test is also running the fetch call to get the ideas and display them on the page. 
 But before we go on with writing tests for our GET request, let's first go back to our user flow and see what else we need to test. Based on the user flow, we want to make sure the dashboard has a title, a form to add a new idea, and a list of ideas. 
-Let's add our first `it` block test to make sure that the title is displayed on the page.Cypress helps us here by ensuring that our React application is rendering the correct content to the DOM for our end users.
+Let's add our first `it` block test to make sure that the title is displayed on the page. Cypress helps us here by ensuring that our React application is rendering the correct content to the DOM for our end users.
 
 Here is the code for the test: 
 ```js
@@ -222,7 +222,7 @@ It looks like our test is not passing, as the application is only visited in the
 In order to run the visit before every `it` block, we need to add a `beforeEach` hook to our test.
 <section class="note">
 
-`beforeEach` is aCypress test hook that allows you to run a set of commands before each test (it block) in a describe block
+`beforeEach` is a Cypress test hook that allows you to run a set of commands before each test (`it` block) in a `describe` block.
 </section>
 Let's add that to our test.
 
@@ -242,7 +242,7 @@ Now our h1 title test is passing, let's add our second test to check if the form
 ```js
   it('displays the form ', () => {
     cy.get('form').should('exist')
-    cy.get('form input[type="text"]').should('exist')
+    cy.get('form input[name="title"]').should('exist')
     cy.get('form input[name="description"]').should('exist')
     cy.get('form button').should('exist')
   })
@@ -313,7 +313,7 @@ it('adds a new idea to the list', () => {
    cy.get('form button').click()
 })
 ```
-As you see after adding testing the click we are actually triggering the POST request, and we don't want that to happen. Cypress provides a helpful feature called `cy.intercept`, which allows us to handle POST requests without actually sending them.
+As you see after adding testing the click we are actually triggering the POST request, and we don't want that to happen. Cypress provides a helpful feature called `cy.intercept`, which allows us to handle POST requests without actually sending them to the server.
 However, since post is happening when the user clicks the submit, we don't need to have that intercept in the beforeEach block, since that doesn't need to happen for every test. But instead of adding it in after click we want to add it at the beginning of the test. 
 ```js
 it('adds a new idea to the list', () => {
@@ -329,7 +329,7 @@ it('adds a new idea to the list', () => {
     cy.get('form button').click()
 })     
 ```
-Note that we add the `cy.intercept` at the beginning of the test, before any interactions. This ensures that Cypress is ready to intercept the POST request as soon as it's made. If we placed it after the click, we might miss intercepting the request.
+Note that we add the `cy.intercept` at the beginning of the test block, before any interactions. This ensures that Cypress is ready to intercept the POST request as soon as it's made. If we placed it after the click, we might miss intercepting the request.
 
 ```js
 it('adds a new idea to the list', () => {
@@ -356,7 +356,15 @@ This ensures that Cypress is prepared to intercept and mock the response as soon
 
 Remember to place your `cy.intercept()` call at the beginning of your test (`it` block), before any interactions that might trigger the POST request.
 
-<!-- _____________ this is the existing intro that I need to remove some stuff from -->
+After clicking the submit button, we need to add more assertions to verify that the new idea has been successfully added to the list. This is crucial because:
+
+1. It confirms that the UI has been updated correctly after the POST request.
+2. It ensures that the user can see the newly added idea, which is a key part of the user experience.
+3. It verifies that our application is correctly handling the response from the intercepted POST request.
+
+Let's add these assertions:
+
+
 
 
 ## Deliverables : **Clone down the following repos:**
