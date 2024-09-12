@@ -29,6 +29,7 @@ title: Module 3 - Lessons
 
 ## Fullstack Web Development
 * [Intro to Service-Oriented Architecture](./intro_to_soa)
+* [Deployment Guide](./deployment_guide)
 
 ## Professional Development
 * [Mod 3 PD Curriculum](../pd/)

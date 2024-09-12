@@ -19,10 +19,18 @@ Since this project has already been started by another developer, this is consid
 * Explore and build off existing code in a legacy codebase
 * Organize and refactore new code to be more maintainable
 
+## Deployment
+
+To become more familiar with the process of releasing code, deploying this project to the Internet is a requirement. You can use either Render or Heroku, and in both cases deployment can and should be totally free. If you appear to be, or are concerned about getting charged, please reach out to an instructor. 
+
+To use Heroku, follow [these instructions](https://devcenter.heroku.com/articles/getting-started-with-rails7) and don't forget to provision a database! If you're using Render, check out our guide [here](../../lessons/deployment_guide).
+
+We **highly suggest** you set up your deployment before completing any endpoints! Then, throughout the project, you can deploy changes and be able to more effectively troubleshoot deployment issues. 
+
 ## Technical Requirements
 
 The Technical Requirements for this project can be found [here](./requirements)
 
 ## Evaluation
 
-Evaluation and Rubric details can be found [here](./evaluation)
+Instead of a typical evaluation session with an instructor, you will be grouped together with 2-3 other students *and* and instructor, and you will present your applications one by one. Your cohortmates as well as your instructor will provide feedback and ask questions about your code. Evaluation and Rubric details can be found [here](./evaluation)
