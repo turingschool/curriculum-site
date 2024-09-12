@@ -3,12 +3,6 @@ layout: page
 title: Testing Tools for API Consumption
 ---
 
-## Resources
-
-Past Live Lessons:
-- [Josh Mejia walks through WebMock and VCR as testing tools](https://youtu.be/Okck4Fc557o)
-- [Lesson w/ Ian Douglas](https://youtu.be/dlhgKYtXBoY)
-
 ## Learning Goals
 
 After this class, a student should be able to:
@@ -465,3 +459,8 @@ end
 - How are WebMock and VCR similar? different?
 
 You can find this code complete on this branch [here](https://github.com/turingschool-examples/set-list-api/tree/testing-tools-complete).
+
+## Additional Optional Resources
+
+- [Josh Mejia walks through WebMock and VCR as testing tools](https://youtu.be/Okck4Fc557o)
+- [Using Webmock and VCR for API testing Lesson w/ Ian Douglas](https://youtu.be/dlhgKYtXBoY)
