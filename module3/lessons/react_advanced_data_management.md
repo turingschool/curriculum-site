@@ -218,6 +218,12 @@ useEffect(() => {
 
 We did it! We've got our first network request working in a React app! High five!
 
+<section class="note">
+### useEffect Resource
+
+For more notes on `useEffect`, checkout [this Notion page](https://turingschool.notion.site/useEffect-notes-7eee9f3abe2741ba80232e0b38a2e053).
+</section>
+
 ## `POST` Request
 
 Now, let's talk about the `POST` request. Let's start by thinking about these questions:
