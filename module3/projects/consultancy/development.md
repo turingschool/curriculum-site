@@ -31,9 +31,9 @@ Days/times are subject to change due to holidays.
 #### Sprint 0: Inception
 
 - Begin: Monday of Week 4
-- End: Thursday AM of Week 4
+- End: mid-Week 4
 - Deliverables are listed on the [Inception page](./inception)
-
+- Teams are welcome to move to development **only after instructor review of deliverables**, but the green light can be given before an in-person check-in (i.e. before check-in #2)
 
 #### Sprint 1: Development
 
@@ -64,20 +64,27 @@ Days/times are subject to change due to holidays.
 </section>
 
 <section class="dropdown">
-### Project Check In Schedule
+### Project Check-In Schedule
 
-* Check In 1
-    * Wednesday or Thursday of Week 4
-    * During this meeting, you should be prepared to review the artifacts from your inception
+Days/times are subject to change due to holidays. Some check-ins may be async.
+
+* Check-In 1: Speedy Sync
+    * Tuesday afternoon, in the middle of inception
+    * During this meeting, you should be prepared to review your preliminary plans with your project manager
+    * The purpose of this check-in is to highlight potential risks or concerns early on so that teams can pivot quickly
+
+* Check-In 2
+    * Thursday of Week 4
+    * During this meeting, you should be prepared to review the remaining artifacts from your inception
     * During this meeting, your team will draw out the architecture of your application and all should be ready to speak to it
 
-* Check In 2
+* Check In 3
     * Monday Week 5
     * During this check in, you will discuss any adjustments you might need to make to your MVP
     * Review retro notes with your PM
     * You can also use this check in as an opportunity to ask any questions and get help for the final few week of the project.
 
-* Check In 3
+* Check In 4
     * Review of near-final work, check for MVP
     * Ask questions, discuss blockers
     * Review 2nd retro notes
