@@ -229,7 +229,7 @@ It looks like we are returning some HTML! Very easy to read, right?
 
 What we're actually writing here is known as JSX. It's an abstraction that makes React easier to write!  
 
-JSX is "JavaScript and XML" - it's a handy mashup language that allows us to write HTML with a bit of JavaScript injected in. You can read more on it [here](https://reactjs.org/docs/introducing-jsx.html) (and a bit more in depth [here](https://react.dev/learn/writing-markup-with-jsx)). But in the meantime, we'll see how JSX makes our lives easier throughout this lesson!
+JSX is "JavaScript and XML" - it's a handy mashup language that allows us to write HTML with a bit of JavaScript injected in. You can read more on it [here](https://reactjs.org/docs/introducing-jsx.html) (and a bit more in depth [here](https://react.dev/learn/writing-markup-with-jsx)). It's not something you need to be an expert on, but you should know that it's being used in React. In the meantime, we'll see how JSX makes our lives easier throughout this lesson!
 </section>
 
 Okay. Now try to add a paragraph tag. What happened?
