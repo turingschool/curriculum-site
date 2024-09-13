@@ -107,7 +107,8 @@ What happens if you:
 * Change some of the HTML you see in the `App.js` file?
 * Change some of the CSS you see in the `App.css` file?
 
-You'll also notice an `index.js` file. What is going on in there?
+You'll also notice an `index.js` file. What is going on in there?  
+This is a great time to do some googling or ask chatGPT for help understanding.  
 
 ```jsx
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -152,7 +153,9 @@ Look at the console in our dev tools now that we've deleted our `App.js` code, a
 
 "Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: object. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports."
 
-Back in our `index.js` file we're trying to render a React component: App. However, we're no longer exporting a valid React component! The error is trying to be helpful to let us know what's going on.
+Back in our `index.js` file we're trying to render a React component: App. However, we're no longer exporting a valid React component!  
+
+While JavaScript error messages aren't always very clear or helpful, React error messages are much better at telling us what's going on. The often even include a link to the appropriate part of the React docs!  
 
 Let's start building out our App component.
 
