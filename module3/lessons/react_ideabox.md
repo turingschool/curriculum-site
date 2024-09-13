@@ -200,7 +200,7 @@ export default App;
 
 The above code is defining the App functional component in React. 
 
-Any additional JSX code or logic can be added to the component as needed, and the final JSX code is returned by the component's return statement just like a pure function.
+Any additional JSX code or logic can be added to the component as needed, and the final JSX code is returned by the component's return statement just like any ol' function.
 <section class="note">
   It's important to note that this code is using functional components, rather than class components and OOP. This allows us to manage our component in a more concise and streamlined way, without relying on class inheritance and traditional OOP principles.
 </section>
