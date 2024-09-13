@@ -78,11 +78,11 @@ Other new tools/concepts that would be fun but not considered your stretch-tech 
 </section>
 
 <section class="dropdown">
-### Front End
+### Front End Requirements
 
-* Utilizes React Router
+* Multi-page application utilizing React Router
 * Includes at least one POST request to the BE
-* Robust Cypress testing
-<!-- TO-DO: Require intercepts with Cypress tests? -->
+* The application cannot simply be a display of data - there needs to be some way for the user to work with or manipulate the data (favoriting, searching, filtering, commenting, rating, etc)
+* Robust Cypress testing, with all network requests properly intercepted and all user flows tested
 
 </section>

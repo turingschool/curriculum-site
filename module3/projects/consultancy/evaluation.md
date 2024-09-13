@@ -15,8 +15,8 @@ This is an essential expectation and in extenuating circumstances, individuals m
 
 **Meets Expectations:**
 
-* Team holds daily stand ups throughout project
-* Teammates participate in stand ups, project check-ins, and Slack discussions
+* Team holds daily check-ins throughout project
+* Teammates participate in check-ins, project check-ins, and Slack discussions
 * PRs demonstrate thoughtful code review
 * Project board is utilized and up-to-date in every check-in. Board is utilized as a tool for organization and transparency throughout the entire project. 
 * Commits are atomic and frequent, effectively documenting the evolution/progression of the application. There is no more than a 10% disparity in project contributions between teammates.
@@ -70,7 +70,7 @@ This is an essential expectation and in extenuating circumstances, individuals m
   - Model data validations are utilized
   - Most common errors are rescued and serialized in a friendly error response.
 * Front End Expectations
-  - React Router is utilized
+  - The application is multi-page utilizing React Router
   - At least one POST request is used
   - Application properly uses a catch block for network request error handling (if the server is down or if a fetch call fails) and displays helpful information to the user.
   - Frontend state matches the backend data

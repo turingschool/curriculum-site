@@ -10,8 +10,8 @@ We will be using a (somewhat) Agile process during the development of this proje
 * Working in short 3 or 4 day "Sprints"
 * Using GitHub
 * Using a project management tool such as Github Projects
-* Conducting Story Grooming meetings
-* Doing daily Stand Ups
+* Conducting Story Refinement meetings
+* Doing daily check-ins
 * Demoing your project to your Project Manager
 * Holding Team Retros
 
@@ -100,11 +100,11 @@ Days/times are subject to change due to holidays.
     * Tag your Project Manager if you have questions. DM your Project Manager letting them know you have tagged them.
 
 
-#### Story Grooming
+#### Story Refinement
 
 * You should be using a project management tool to keep track of your stories.
-* At a minimum, the beginning of every sprint should include a "Story Grooming" meeting
-* When doing a "Story Grooming" you should:
+* At a minimum, the beginning of every sprint should include a "Story Refinement" meeting
+* When doing a "Story Refinement" you should:
     * Make sure that the project board is up to date
     * Look over the current backlog of stories and decide if you want to make any changes
         * Are there any stories that need to be updated, or require more details in the story card?
@@ -112,16 +112,16 @@ Days/times are subject to change due to holidays.
         * Are there any stories that need to be added?
     * Assign stories to individual team members or pairs
         * Be clear on what it is that everyone should be doing
-* You may need to call additional grooming meetings during a sprint.
+* You may need to call additional refinement meetings during a sprint.
 
-#### Daily Stand Ups
+#### Daily Check-Ins
 
-* A Stand Up is a very brief (hence, physically standing up) meeting for the development team to keep in touch about what everyone is doing.
-* During the stand up, each member of the team will take 1 - 2 minutes to answer these questions:
+* A "daily" (also known as a "stand up") is a very brief meeting for the development team to keep in touch about what everyone is doing.
+* During the daily check-in, each member of the team will take 1 - 2 minutes to answer these questions:
     * What have you been working on?
     * What are you going to be working on?
     * Is anything blocking you?
-* Every weekday you should send your PM a summary of the day's stand up.
+* Every weekday you should send your PM a summary of the day's daily check-in.
 
 #### Retros
 
