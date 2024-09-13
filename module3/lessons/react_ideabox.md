@@ -177,11 +177,11 @@ Let's figure out what should be a component in our app.
 
 ### App.js
 
-Because we want App to hold onto our list of ideas, let's think about how we're going to store that information.
+Because we want App to hold onto our list of ideas, let's think about how we're going to store that information. 
 
-In our first React lesson, we learned about _state_. In order to use component state, we need to import useState hook from React.
+We will use **_state_** to store data, like our list of ideas. We will learn more about the concept of _state_ in Mod 3 but it might be helpful to research a bit now.  ChatGPT and google are great options but you should really make the official [React Documentation](https://react.dev/) your first stop.  
 
-So: let's import useState hook from React, and create our App component!
+In order to use component state, we need to import useState hook from React. So, let's import useState hook from React, and create our App component!
 
 ```jsx
 import { useState } from 'react';
