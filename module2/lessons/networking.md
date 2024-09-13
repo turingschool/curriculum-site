@@ -285,7 +285,7 @@ Sometimes figuring out _who_ to try to reach out to is the scarieset part.  Just
 <!-- We have gathered a list of Mentors that are excited to be your first coffee-chat opportunity.  Your instructor will DM you with your assigned mentor for outreach.   -->
 We would like you to practice these as warm-outreach opportunities, so don't ask for a coffee chat with - "my instructor told me I'm supposed to have a coffee chat".  Use the strategies we outlined in this lesson!
 
-✅ Send the following in a message to @megan.
+✅ Send the following in a message to your instructor(s).
 
 1. The initial message you sent to your interviewee and who you chose to reach out to.
 1. Your answers to the following questions:
