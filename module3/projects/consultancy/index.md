@@ -38,12 +38,12 @@ We'll also examine our end users on a deeper level to instill a strong sense of 
 
 ## Phases
 
-* [Ideation](./ideation)
-* [Inception](./inception)
-* [Development](./development)
-* [Retro](./retro_guide)
-* [Presentation](./presentation)
-* [Evaluation](./evaluation)
+* [Ideation](./ideation): Week 3 - Students optionally pitch ideas
+* [Inception](./inception): Beginning of Week 4 - Completed before development
+* [Development](./development): Weeks 4 + 5
+* [Retro](./retro_guide): Completed twice during Weeks 4 + 5
+* [Video Presentation](./presentation): End of Week 5
+* [Evaluation](./evaluation): End of Week 5
 
 ## Technical Requirements
 

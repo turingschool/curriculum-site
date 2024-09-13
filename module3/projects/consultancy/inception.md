@@ -10,10 +10,9 @@ An Inception is a process used by many companies in the Software Industry to des
 
 Usually this process takes several days involving many stakeholders such as the client(s), team leads, CEOs, operations, etc. We will be doing a simplified version of this process in a few hours between your team and your project manager.
 
-<section class="dropdown">
 ### Inception Deliverables
 
-These items must be shared with your project manager before you can begin development. They will be reviewed in your first project check-in as well. Please pin or bookmark these in your Slack channel. 
+These items must be shared with your project manager before you can begin development. They will be reviewed in your first project check-in as well. Please pin or bookmark these in your Slack channel. The sections below will walk your team through developing these materials.
 
 1. Slack Channel Created
 2. DTR
@@ -31,9 +30,7 @@ These items must be shared with your project manager before you can begin develo
     - Team is welcome to choose their preferred team breakdown, i.e. splitting by FE/BE, splitting by feature, etc.
     - **It is essential that every student complete some work on both the FE and BE, but it does not need to be an even 50/50 split**
 
-</section>
-
-## Process
+### Process
 
 Each of the following meetings has a purpose: Brainstorm, Decide, or Solve. Everyone should try hard to stick to that purpose.
 
@@ -43,14 +40,18 @@ Each of the following meetings has a purpose: Brainstorm, Decide, or Solve. Ever
 
 Conflict and tension tends to arise in groups when there are differing expectations of these meetings. Some want to debate and explore different outcomes while others see that as a waste of time and want to make a decision. The reality is both are important for making sound decisions and the following is a template to do both and get your project off to a strong start.
 
-## Tools
+
+<section class="dropdown">
+### Tools
 
 - [Miro](https://miro.com) is an online team collaboration board. It will be a space where your team can brainstorm using sticky notes, take notes, wireframe, etc. _Note: There is a Slack integration, but please do NOT attempt to add it to Slack. Staff will deny your request._  
 - Other helpful design tools include Figma, Canva, InVision
 - Project Management Tools: GitHub Projects (recommended), Trello, Jira
 
+</section>
 
-## Problem Definition and Idea Sharing (Brainstorm + Decide)
+<section class="dropdown">
+### Step 1: Problem Definition and Idea Sharing (Brainstorm + Decide)
 
 * **Objectives:**
     * Define the problem you are solving in 2-3 sentences. The solution you come up with later should solve the problem directly.
@@ -71,7 +72,7 @@ Conflict and tension tends to arise in groups when there are differing expectati
     * Would you use this product? If not, what is it missing?
 
 <section class="dropdown">
-### Feature Dump (Brainstorm)
+### 1a. Feature Dump (Brainstorm)
 
 * **Objectives**
     * Write out as many potential features as possible
@@ -91,7 +92,7 @@ Conflict and tension tends to arise in groups when there are differing expectati
 </section>
 
 <section class="dropdown">
-### Feature Sharing/Elimination of Duplicates (Decide)
+### 1b. Feature Sharing/Elimination of Duplicates (Decide)
 
 * **Objectives**
     * Share what came out of the feature dump
@@ -106,7 +107,7 @@ Conflict and tension tends to arise in groups when there are differing expectati
 </section>
 
 <section class="dropdown">
-### Feature Prioritization and MVP Definition (Decide)
+### 1c. Feature Prioritization and MVP Definition (Decide)
 
 * **Objectives**
     * Define the features that will make up your [**Minimum Viable Product**](https://www.agilealliance.org/glossary/mvp/#q=~(infinite~false~filters~(tags~(~'mvp))~searchTerm~'~sort~false~sortDirection~'asc~page~1))
@@ -119,8 +120,10 @@ Conflict and tension tends to arise in groups when there are differing expectati
     * **You will be able to adjust your MVP as needed during the first 2 iterations of this project. But once Iteration 3 begins, your MVP cannot be adjusted without being marked down in the feature delivery category of the rubric.**
 
 </section>
+</section>
 
-## Solve: Design and Plan
+<section class="dropdown">
+### Step 2: Application Design and Planning (Solve)
 
 * **Objectives**
     * Based on your MVP and problem definition, create artifacts that will allow you to dive into development with aligned understanding and goals.
@@ -138,7 +141,7 @@ Conflict and tension tends to arise in groups when there are differing expectati
     * JSON Contracts (what will your API responses look like?)
 
 <section class="dropdown">
-### Wireframing (Solve)
+### 2a. Wireframing (Solve)
 
 * **Objectives**
     * Decide how users will interact with your application
@@ -152,7 +155,7 @@ Conflict and tension tends to arise in groups when there are differing expectati
 </section>
 
 <section class="dropdown">
-### Story Writing (Solve)
+### 2b. Story Writing (Solve)
 
 * **Objectives**
     * Document technical requirements for the development team
@@ -176,8 +179,10 @@ Conflict and tension tends to arise in groups when there are differing expectati
             5. If network call to external API is unsuccessful, display friendly error message to user indicating that no results could be found.
     * **Note:** This user story example doesn't include any BE work, but some user stories might include tasks in both the BE and the FE. These are called "vertically-sliced" user stories, in that they they involve a full vertical slice of every layer of the web application (or, the cake!). While vertically-sliced user stories are a best practice in agile software development, your team might decide that horizontal slicing (i.e. BE-only tasks and FE-only tasks) is your preferred organization method, and that's okay!
 </section>
+</section>
 
-## Equity Analysis
+<section class="dropdown">
+### Step 3: Equity Analysis (Brainstorm)
 
 As technologists, it's essential to analyze product plans and processes in order to reduce harm to users, and particularly marginalized identity groups. As part of your inception, please answer these questions as a group, and share your responses with your project manager. 
 
@@ -186,3 +191,4 @@ As technologists, it's essential to analyze product plans and processes in order
 * Which factors may impact any individual or group’s access to the proposed project?
 * If you were given more time to design this product, how would you want to work with your intended users to ensure relevance?
 * What happens if someone uses this product with bad/evil intent in mind?
+</section>
