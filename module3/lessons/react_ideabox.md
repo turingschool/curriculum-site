@@ -16,9 +16,9 @@ module: 3
 ## Before you get started...
 You will complete this lesson on your own. Read each section carefully and completely. Moving quickly through this lesson is **not** the goal. You should move through the lesson at a pace that allows you to take solid notes and fully understand the code you are writing. We will provide lots of code blocks for you.  Resist the temptation to copy and paste the code from those examples. Doing this will only hurt you in the end, as you'll be missing out on a lot, a lot, a lot of learning.    
 
-On Wednesday, your instructors will lead a review session where we will cover the major themes and key points from this lesson. As you are working through it, please write down any questions that pop up for you. We will give lots of time for y'all to ask these questions on Wednesday.  If a blocker pops up outside of office hours, post your question in the cohort's questions slack channel.  Work with your classmates to try to figure it out.
+We will have a review session where we will cover the major themes and key points from this lesson. As you are working through it, please write down any questions that pop up for you. These questions will help drive our review.  If a blocker pops up, post your question in your codehelp slack channel.  Work with your classmates to try to figure it out.
 
-Your goal should be to complete this entire lesson by Wednesday morning. Please keep your instructors in the loop if you find that you're not on track to finish on time.
+DELIVERABLE: **You are expected to complete this entire lesson before Day 1 of Mod 3.**  You will submit your Ideabox project with your intermission deliverables.
 
 ## What You're Building
 Here is a peak at what you're going to build during this lesson:  
