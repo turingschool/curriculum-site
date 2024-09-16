@@ -164,7 +164,7 @@ Look at this first Sandbox (Grocery List - No State). Click the button to add an
 
 - What happens?
 - Open up the console. Are the new items there?
-- Why do you think the new items not being shown on the page?
+- Why do you think the new items are not being shown on the page?
 
 <iframe src="https://codesandbox.io/embed/grocery-list-no-state-s6pjyk?fontsize=14"
      style="width:100%; height: 500px; border:0; border-radius: 4px; overflow:hidden;"
