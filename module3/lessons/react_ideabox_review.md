@@ -30,7 +30,8 @@ Follow the instructions for cloning, installing, and running the app. **You do n
 IdeaBox is a Turing term meant to describe a simple application that allows a user to fill out a form and then display that information. If you think about it, there are LOTS of "IdeaBoxes" out there:
     - Facebook: users fill out a form and their post appears
     - Google: users fill out a form and search results appear
-    - Amazon: users search for an item and a list of items appear
+    - Amazon: users search for an item and a list of items appear  
+    
 If you can build lots of versions of IdeaBoxes in M3, you'll be well equipped to build pretty much anything you're asked to. You can find inspo for those IdeaBoxes [**here**](../projects/ideabox_practice)!
 
 ## Wireframing + Planning
