@@ -313,7 +313,7 @@ States can also be implicit, imagine a checkbox element in html. If you toggle t
 <section class="call-to-action">
 ### Accessibility Style Guide 
 
-Explore w3's style guide on building accessible UI elements. In small groups, choose a UI element and see how it interacts without using your mouse. What are the 'rules' for this UI pattern? What WAI-ARIA attributes are needed?
+Explore [w3's style guide](https://www.w3.org/WAI/ARIA/apg/patterns/){:target='blank'} on building accessible UI elements. In small groups, choose a UI element and see how it interacts without using your mouse. What are the 'rules' for this UI pattern? What WAI-ARIA attributes are needed?
 </section>
 
 <section class="checks-for-understanding">
