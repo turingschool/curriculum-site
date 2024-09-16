@@ -30,8 +30,8 @@ module: 3
 <section class="call-to-action">
 ## What do we already know?
 
-Once you are in your breakout room, check the number of the room you are in, and navigate to the corresponding slide on [this Jamboard](https://jamboard.google.com/d/1gkz6hjViTF2jqJ25XyLCS5QuWVhNSzkzpIzDoG30W2g/viewer?f=8).
-You and your group will pool your existing understanding about React.
+Once you are in your breakout room, you and your group will pool your existing understanding about React. Designate one note-taker who will share your notes document with the class.
+
 Use the following prompts to help guide your discussion.
 - What is React?
 - Why do we use it?
