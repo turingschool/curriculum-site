@@ -1,5 +1,5 @@
 ---
-title: "React: Our First IdeaBox"
+title: "React: IdeaBox Tutorial"
 length: 3 hours
 tags: react, ideabox
 module: 3
