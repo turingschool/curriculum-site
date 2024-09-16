@@ -371,7 +371,9 @@ When one of our validations fails, that's one reason for `song.save` to return `
 In your breakout rooms, add a model validation and implement the sad path for these scenarios. Don't forget to test in the model AND request spec:
 * Songs must be created with a title present
 * Songs must be created with play_count and length, and these attributes must be numerical
-* The above requirements should be true for updating a song record as well. 
+* The above numericality requirements should be true for updating a song record as well. 
+
+**Solutions can be found on the `error-handling-complete` branch of Set List**
 
 #### Additional Data Validations Practice
 

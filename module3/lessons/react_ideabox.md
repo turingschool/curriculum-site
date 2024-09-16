@@ -1,5 +1,5 @@
 ---
-title: "React: Our First IdeaBox"
+title: "React: IdeaBox Tutorial"
 length: 3 hours
 tags: react, ideabox
 module: 3
@@ -16,9 +16,9 @@ module: 3
 ## Before you get started...
 You will complete this lesson on your own. Read each section carefully and completely. Moving quickly through this lesson is **not** the goal. You should move through the lesson at a pace that allows you to take solid notes and fully understand the code you are writing. We will provide lots of code blocks for you.  Resist the temptation to copy and paste the code from those examples. Doing this will only hurt you in the end, as you'll be missing out on a lot, a lot, a lot of learning.    
 
-On Wednesday, your instructors will lead a review session where we will cover the major themes and key points from this lesson. As you are working through it, please write down any questions that pop up for you. We will give lots of time for y'all to ask these questions on Wednesday.  If a blocker pops up outside of office hours, post your question in the cohort's questions slack channel.  Work with your classmates to try to figure it out.
+We will have a review session where we will cover the major themes and key points from this lesson. As you are working through it, please write down any questions that pop up for you. These questions will help drive our review.  If a blocker pops up, post your question in your codehelp slack channel.  Work with your classmates to try to figure it out.
 
-Your goal should be to complete this entire lesson by Wednesday morning. Please keep your instructors in the loop if you find that you're not on track to finish on time.
+DELIVERABLE: **You are expected to complete this entire lesson before Day 1 of Mod 3.**  You will submit your Ideabox project with your intermission deliverables.
 
 ## What You're Building
 Here is a peak at what you're going to build during this lesson:  
@@ -30,6 +30,10 @@ Here is a peak at what you're going to build during this lesson:
 
 How would you build this application using vanilla JS? What functions would need to exist?
 </section>
+
+## React Developer Tools
+
+React has its own set of developer tools that are extremely helpful. [Install the dev tools Chrome extension](https://chromewebstore.google.com/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en). Now, anytime you're looking at a React app, you'll see a "Components" and "Profiler" tab in your dev tools! As you're working through this tutorial, pay attention to those tabs (especially the "Components" tab).
 
 ## Create React App
 
@@ -103,7 +107,8 @@ What happens if you:
 * Change some of the HTML you see in the `App.js` file?
 * Change some of the CSS you see in the `App.css` file?
 
-You'll also notice an `index.js` file. What is going on in there?
+You'll also notice an `index.js` file. What is going on in there?  
+This is a great time to do some googling or ask chatGPT for help understanding.  
 
 ```jsx
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -148,7 +153,9 @@ Look at the console in our dev tools now that we've deleted our `App.js` code, a
 
 "Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: object. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports."
 
-Back in our `index.js` file we're trying to render a React component: App. However, we're no longer exporting a valid React component! The error is trying to be helpful to let us know what's going on.
+Back in our `index.js` file we're trying to render a React component: App. However, we're no longer exporting a valid React component!  
+
+While JavaScript error messages aren't always very clear or helpful, React error messages are much better at telling us what's going on. The often even include a link to the appropriate part of the React docs!  
 
 Let's start building out our App component.
 
@@ -156,25 +163,25 @@ Let's start building out our App component.
 
 Let's figure out what should be a component in our app.
 
-![IdeaBox wireframe](../../../assets/images/lessons/IdeaBox/IdeaBox-Browser.png)
+![IdeaBox wireframe](../../../assets/images/lessons/ideaBox/IdeaBox-Browser.png)
 
 - We have an App component. That should probably hold onto our list of ideas.  
 
-- We need a Form component so we can create new ideas. The Form component will have to be able to add new ideas to App's list of ideas.  
+- We need a Form component so we can create new ideas. The Form component will have to be able to add new ideas to App's list of ideas.  ideabox_
 
 - We need a Card component to display our ideas.  
 
 - We can create an Ideas component to hold all of our Cards.  
 
-![IdeaBox wireframe with component boxes](../../../assets/images/lessons/IdeaBox/IdeaBox-wireframe.png)
+![IdeaBox wireframe with component boxes](../../../assets/images/lessons/ideaBox/IdeaBox-wireframe.png)
 
 ### App.js
 
-Because we want App to hold onto our list of ideas, let's think about how we're going to store that information.
+Because we want App to hold onto our list of ideas, let's think about how we're going to store that information. 
 
-In our first React lesson, we learned about _state_. In order to use component state, we need to import useState hook from React.
+We will use **_state_** to store data, like our list of ideas. We will learn more about the concept of _state_ in Mod 3 but it might be helpful to research a bit now.  ChatGPT and google are great options but you should really make the official [React Documentation](https://react.dev/) your first stop.  
 
-So: let's import useState hook from React, and create our App component!
+In order to use component state, we need to import useState hook from React. So, let's import useState hook from React, and create our App component!
 
 ```jsx
 import { useState } from 'react';
@@ -193,7 +200,7 @@ export default App;
 
 The above code is defining the App functional component in React. 
 
-Any additional JSX code or logic can be added to the component as needed, and the final JSX code is returned by the component's return statement just like a pure function.
+Any additional JSX code or logic can be added to the component as needed, and the final JSX code is returned by the component's return statement just like any ol' function.
 <section class="note">
   It's important to note that this code is using functional components, rather than class components and OOP. This allows us to manage our component in a more concise and streamlined way, without relying on class inheritance and traditional OOP principles.
 </section>
@@ -222,7 +229,7 @@ It looks like we are returning some HTML! Very easy to read, right?
 
 What we're actually writing here is known as JSX. It's an abstraction that makes React easier to write!  
 
-JSX is "JavaScript and XML" - it's a handy mashup language that allows us to write HTML with a bit of JavaScript injected in. You can read more on it [here](https://reactjs.org/docs/introducing-jsx.html) (and a bit more in depth [here](https://react.dev/learn/writing-markup-with-jsx)). But in the meantime, we'll see how JSX makes our lives easier throughout this lesson!
+JSX is "JavaScript and XML" - it's a handy mashup language that allows us to write HTML with a bit of JavaScript injected in. You can read more on it [here](https://reactjs.org/docs/introducing-jsx.html) (and a bit more in depth [here](https://react.dev/learn/writing-markup-with-jsx)). It's not something you need to be an expert on, but you should know that it's being used in React. In the meantime, we'll see how JSX makes our lives easier throughout this lesson!
 </section>
 
 Okay. Now try to add a paragraph tag. What happened?
@@ -336,7 +343,7 @@ export default App;
 
 Open up your React Dev Tools (open your dev tools, then go to the Components tab). You can see that App now has state:
 
-![App component state](../../../assets/images/lessons/IdeaBox/React-dev-tool.png)
+![App component state](../../../assets/images/lessons/ideaBox/React-dev-tool.png)
 
 Neat!
 
@@ -582,7 +589,7 @@ And in your Card css file:
 
 Okay! Hopefully your app looks like this:
 
-![screenshot of IdeaBox so far](../../assets/images/lessons/IdeaBox/IdeaBox-Screenshot.png)
+![screenshot of IdeaBox so far](../../assets/images/lessons/ideaBox/IdeaBox-Screenshot.png)
 
 All right, friends. Let's get to passing some PROPS! Let's go all the way back to our App component and pass our list of ideas to the Ideas container component, so that it can then create Card components out of each individual idea.
 
@@ -976,7 +983,7 @@ Voila! You've created a React application!
 ## Want to dig deeper? 
 *Fully Optional Extensions - Not at all Expected*
 
-* Look ahead to the [React: Advanced Data Management lesson](https://frontend.turing.edu/lessons/module-3/react-3-advanced-data-management.html)
+* Look ahead to the [React: Advanced Data Management lesson](https://curriculum.turing.edu/module3/lessons/react_advanced_data_management)
 * Open a branch.  
   * Refactor to fetch ideas from this [ideabox server](https://github.com/turingschool-examples/ideabox-api) instead of working with the hard coded ideas. *See server README for instructions on running it locally.*
   * Refactor your addIdea functionality to post the newly created idea to the server, then display it on the DOM (if posted successfully)
@@ -994,6 +1001,6 @@ Take a few minutes to journal:
 * What do you know about hooks?
 * What do you know about state?
 * What do you know about passing props?
-* What questions do you have? (bring these to class on Wednesday!)
+* What questions do you have? (bring these to class!)
 
 </section>

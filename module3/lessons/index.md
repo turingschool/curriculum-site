@@ -11,14 +11,14 @@ title: Module 3 - Lessons
 <!-- * [Refactoring Patterns for API Consumption](.) -->
 
 ## React
-* [React: Our First Ideabox](./react_ideabox)
-<!-- [Intro to React](.) -->
-<!-- * [Network Requests: GET & POST](.) -->
-<!-- * [React: Advanced Data Management](.) -->
-
+* [Ideabox Tutorial](./react_ideabox)
+* [Intro to React](./react_intro)
+* [Ideabox Review](./react_ideabox_review)
+* [Advanced Data Management](./react_advanced_data_management)
 
 ## Advanced JavaScript
-[Intro To Accessibility](./intro-to-a11y.md)
+* [Intro To Accessibility](./intro-to-a11y.md)
+* [Network Requests - Fetch](./network_requests)  
 <!-- * [Intro To Accessibility](.)
 * [Intro to Cypress Testing](.)
 * [CORS Workshop](.)
@@ -26,7 +26,6 @@ title: Module 3 - Lessons
 * [Responsiveness - Mobile Design using Bootstrap](.)
 * [Async JavaScript](.)
 * [Scope & Scope Chain](.) -->
-
 
 ## Fullstack Web Development
 * [Intro to Service-Oriented Architecture](./intro_to_soa)
