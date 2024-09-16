@@ -195,7 +195,7 @@ fetch('some_url')
 <section class="note">
 ### Promise.all
 
-You may want to do some research on [Promise.all()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all) if you are ever wanting to wait for multitple promises to resolve before performing an action!
+[Promise.all()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all) is a way to wait for multitple promises to resolve before performing an action.  Not something you need to dig into now, but to be aware of in case you ever need it.  
 </section>
 ---
 
