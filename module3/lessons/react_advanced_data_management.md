@@ -63,18 +63,18 @@ We will be using `fetch` today in the context of React. Let's review what you al
 ### Set Up
 
 You'll need to use two repos for today:
-1. You should already have **[this FE](https://github.com/turingschool-examples/react-ideabox)** repo cloned down.  
+1. Clone down **[this react-ideabox FE](https://github.com/turingschool-examples/react-ideabox)** repo.  
   a. Navigate to that directory  
   b. Run `git fetch`
   c. Run `git checkout network-requests`  
   d. Run `npm start`  
-2. You'll also need to get this **[BE Repo](https://github.com/turingschool-examples/ideabox-api)** up and running.  
+2. You'll also need to get this **[ideabox-api BE Repo](https://github.com/turingschool-examples/ideabox-api)** up and running.  
   a. Open a new tab in your terminal and navigate OUT of the FE directory  
   b. Follow the instructions in the README to get the server running  
   c. Again -- Do NOT clone inside your FE repository!
 3. Make a tab in Chrome for:  
   a. `localhost:3000`: You should see the React app up and running here  
-  b. `http://localhost:3001/api/v1/ideas`: You should see your list of ideas here
+  b. `http://localhost:3001/api/v1/ideas`: You should see your list of ideas here.  An extension like [JSONVue](https://chromewebstore.google.com/detail/jsonvue/chklaanhfefbnpoihckbnefhakgolnmc?hl=en&pli=1) can help make this data more readable for you
 
 Our goal is to refactor this codebase so that we are accessing and updating the data from our API!
 
