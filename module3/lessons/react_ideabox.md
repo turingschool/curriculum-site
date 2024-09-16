@@ -983,7 +983,7 @@ Voila! You've created a React application!
 ## Want to dig deeper? 
 *Fully Optional Extensions - Not at all Expected*
 
-* Look ahead to the [React: Advanced Data Management lesson](https://frontend.turing.edu/lessons/module-3/react-3-advanced-data-management.html)
+* Look ahead to the [React: Advanced Data Management lesson](https://curriculum.turing.edu/module3/lessons/react_advanced_data_management)
 * Open a branch.  
   * Refactor to fetch ideas from this [ideabox server](https://github.com/turingschool-examples/ideabox-api) instead of working with the hard coded ideas. *See server README for instructions on running it locally.*
   * Refactor your addIdea functionality to post the newly created idea to the server, then display it on the DOM (if posted successfully)
@@ -1001,6 +1001,6 @@ Take a few minutes to journal:
 * What do you know about hooks?
 * What do you know about state?
 * What do you know about passing props?
-* What questions do you have? (bring these to class on Wednesday!)
+* What questions do you have? (bring these to class!)
 
 </section>
