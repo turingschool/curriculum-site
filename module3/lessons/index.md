@@ -18,6 +18,7 @@ title: Module 3 - Lessons
 
 
 ## Advanced JavaScript
+[Intro To Accessibility](./intro-to-a11y.md)
 <!-- * [Intro To Accessibility](.)
 * [Intro to Cypress Testing](.)
 * [CORS Workshop](.)
