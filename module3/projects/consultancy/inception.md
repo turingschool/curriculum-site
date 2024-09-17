@@ -26,9 +26,9 @@ These items must be shared with your project manager before you can begin develo
 4. User Stories in Project Board
 5. Equity Analysis
 6. Plan for sub-teams for first development sprint
-    - Team rotation is required after sprints
-    - Team is welcome to choose their preferred team breakdown, i.e. splitting by FE/BE, splitting by feature, etc.
+    - Team is welcome to choose their preferred team breakdown, i.e. splitting by FE/BE, splitting by feature, etc. but we highly recommend organization that allows full-stack work
     - **It is essential that every student complete some work on both the FE and BE, but it does not need to be an even 50/50 split**
+    - Remember that your final solo project will be full-stack. 
 
 ### Process
 
@@ -168,16 +168,16 @@ Conflict and tension tends to arise in groups when there are differing expectati
     * For every user story include a list of subtasks required to complete the user story. This includes developer chores such as database migrations to add tables and columns, exposing API endpoints, creating mock data and fixtures to stub out an API call etc.
     * For every user story, include the wire frame(s) from the associate page(s)
     * An example user story is:
-        - Feature: User can search for dance studios in their area
-        - User story: "As a user, when I visit the search page, I fill in the search bar with my location, so that I can see dance studio results in my area, and each result includes the name, location and a thumbnail photo."
+        - Feature: User can view their saved recipes
+        - User story: "As a user, when I visit my profile, I see a section for Saved Recipes, and each result includes the name, url and a thumbnail photo."
         - Wireframe: `<link to wireframe>`
         - Subtasks:
-            1. Create a search page with a textbox for users to enter location
-            2. Fetch dance studio results from an external API using location query
+            1. Create a section on the profile page for saved recipes.
+            2. Create API endpoint to retrieve saved recipes for a given user (assuming the functionality for saving recipes is already complete)
             3. Display results with appropriate data in a grid according to wireframe
             4. Build Cypress tests for the feature
-            5. If network call to external API is unsuccessful, display friendly error message to user indicating that no results could be found.
-    * **Note:** This user story example doesn't include any BE work, but some user stories might include tasks in both the BE and the FE. These are called "vertically-sliced" user stories, in that they they involve a full vertical slice of every layer of the web application (or, the cake!). While vertically-sliced user stories are a best practice in agile software development, your team might decide that horizontal slicing (i.e. BE-only tasks and FE-only tasks) is your preferred organization method, and that's okay!
+            5. If network call to the BE is unsuccessful, display friendly error message to user indicating that no recipes could be found.
+    * **Note:** Notice that this user story includes both BE and FE work. These are called "vertically-sliced" user stories, in that they they involve a full vertical slice of every layer of the web application (or, the cake!). Vertically-sliced user stories are a best practice in agile software development, and we highly recommend you use them as much as possible. However, for some stories, your team might decide that horizontal slicing (i.e. BE-only tasks and FE-only tasks) is preferred organization method, and that's okay!
 </section>
 </section>
 
