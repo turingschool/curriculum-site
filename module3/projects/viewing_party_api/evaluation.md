@@ -40,7 +40,7 @@ Instead of a traditional eval, you will be meeting in small groups to get feedba
 
 ### Code Quality
 
-- **Exceeds Expectatations:** Student can demonstrate how different portions of the project demonstrate all of the four pillars of OOP: polymorphism, encapsulation, abstraction, inheritance. Student has refactored all API consumption out of controller actions, and utilized components like services, POROs, etc.
-- **Meets Expectations:** Student has refactored at least one instance of API consumption out of the controller, utilizing components like services, POROs, etc. Students can discuss how their refactoring supports MVC, SRP, and OOP principles. Student can identify areas where code can be refactored. Endpoints are RESTfully designed. The many-to-many relationship is implemented using a join table and ActiveRecord is used to query and manipulate relationships.
+- **Exceeds Expectatations:** Student can demonstrate how different portions of the project demonstrate all of the four pillars of OOP: polymorphism, encapsulation, abstraction, inheritance. Student has refactored all API consumption out of controller actions, and utilized components like gateways, POROs, etc.
+- **Meets Expectations:** Student has refactored at least one instance of API consumption out of the controller, utilizing components like gateways, POROs, etc. Students can discuss how their refactoring supports MVC, SRP, and OOP principles. Student can identify areas where code can be refactored. Endpoints are RESTfully designed. The many-to-many relationship is implemented using a join table and ActiveRecord is used to query and manipulate relationships.
 - **Approaching Expectations:** Project demonstrates some gaps in code quality and/or application of MVC principles, REST, and DRY. No API consumption is refactored.
 - **Below Expectations:**  Project demonstrates poor factoring and/or understanding of MVC principles, REST, and DRY.
