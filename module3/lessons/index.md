@@ -17,15 +17,14 @@ title: Module 3 - Lessons
 * [Advanced Data Management](./react_advanced_data_management)
 
 ## Advanced JavaScript
-* [Intro To Accessibility](./intro-to-a11y.md)
+* [Intro To Accessibility](./intro-to-a11y)
 * [Network Requests - Fetch](./network_requests)  
-<!-- * [Intro To Accessibility](.)
-* [Intro to Cypress Testing](.)
-* [CORS Workshop](.)
-* [FE Error Handling](.)
-* [Responsiveness - Mobile Design using Bootstrap](.)
-* [Async JavaScript](.)
-* [Scope & Scope Chain](.) -->
+<!-- * [Intro to Cypress Testing](.) -->
+<!-- * [CORS Workshop](.) -->
+<!-- * [FE Error Handling](.) -->
+<!-- * [Responsiveness - Mobile Design using Bootstrap](.) -->
+<!-- * [Async JavaScript](.) -->
+<!-- * [Scope & Scope Chain](.)  -->
 
 ## Fullstack Web Development
 * [Intro to Service-Oriented Architecture](./intro_to_soa)

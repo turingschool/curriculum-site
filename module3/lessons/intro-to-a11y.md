@@ -319,5 +319,5 @@ Explore [w3's style guide](https://www.w3.org/WAI/ARIA/apg/patterns/){:target='b
 <section class="checks-for-understanding">
 ### Exit Ticket
 
-In your project groups, file issues for all accessibility concerns that need to be fixed 
+In your project, file issues for all accessibility concerns that need to be fixed. 
 </section>
