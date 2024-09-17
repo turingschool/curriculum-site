@@ -74,6 +74,9 @@ Your application **must make good use of at least one external dataset or API**.
 * [Strava](https://www.strava.com/developers)
 * [Google Maps](https://developers.google.com/maps)
 
+<section class="dropdown">
+### RapidAPI options
+
 The following links are catalogs of APIs on rapidapi.com. You will not implement RapidAPI, it's just a great place to find other APIs.
 
 free/discounted apis for students:
@@ -100,6 +103,8 @@ online databases of collections of some sort of data (ie, movies, music, etc):
 alternatives to Google Maps:
 - [https://rapidapi.com/collection/alternatives-to-google-maps-api](https://rapidapi.com/collection/alternatives-to-google-maps-api)
 
+</section>
+
 Other API Sources:
 
 - [https://apilist.fun/](https://apilist.fun/)
@@ -108,8 +113,11 @@ Other API Sources:
 
 However, the list is not limited to these. You can choose to integrate with a service of your choosing, as long as it is approved ahead of time.
 
----
+<br>
 
+
+---
+<br>
 ## Some Project Ideas to get the Creative Process Started
 
 ### Previous Student Pitches
@@ -129,7 +137,7 @@ Instagram type layout, sign up to be a chef, post recipes, link that to a non-pr
 #### The Green Book App
 Green Book in days of segregation, written and maintained to let people know which businesses were allowed to serve BIPOC, businesses can be rated, and if a company gets a bad rating, link them to orgs who help businesses improve that score
 
-
+<br>
 ### Ideas from Instructors
 
 #### License Plate Messenger
