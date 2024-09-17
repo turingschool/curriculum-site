@@ -4,6 +4,8 @@ length: 90
 tags: javascript, arrays, prototypes, mutator, accessor, callback functions
 ---
 
+We will use the [array prototype methods file](https://github.com/turingschool-examples/se-mod2-exercises/blob/main/lessons/array_prototype_methods.js) in the lessons folder of your SE-Mod2-exercises repo to work through the examples in this lesson.  Open that file in VS Code now. 
+
 ## Learning Goals
 
 * Be able to describe prototype methods, mutators and accessors
@@ -179,7 +181,7 @@ const prices = [4.99, 5.50, 7.00, 10.25];
 ```  
 
 #### Example #2
-Using an array of temperature data in Fahrenheit, convert the date to degrees Celsius and store them in a variable called `degreesC`. [Here is the formula](http://www.rapidtables.com/convert/temperature/how-fahrenheit-to-celsius.htm){:target='blank'} to convert from Fahrenheit to Celsius.  
+Using an array of temperature data in Fahrenheit, convert the date to degrees Celsius and store them in a variable called `degreesC`. [Here is the formula](http://www.rapidtables.com/convert/temperature/how-fahrenheit-to-celsius.htm){:target='blank'} to convert from Fahrenheit to Celsius.  *NOTE: dont worry about rounding the decimals, that's not our priority here.
 
 ```js
 const degreesF = [67, 32, 55, 102]
@@ -241,9 +243,11 @@ const adjectives = ['fantastic', 'amazing', 'childish'];
 
 Be sure to include these in your notes, if you haven't already!
 * Useful for turning an array into a single value, be it a number, string, object, or another array.
-* Useful for returning one that is a combination / sum of values from an original array.
+* Useful for returning a value that is a combination / sum of values from an original array.
 * Also useful for converting an array into another data type.
 * REMEMBER...you must always return the *accumulator* in the callback function.
+* The *initialValue* is technically optional but we strongly recommend always explicitly declaring it.  It is the starting value of your accumulator.
+
 </section>
 
 <br>
@@ -450,6 +454,10 @@ const sentences = [
 console.log(splitSentencesIntoWords(sentences));
 // Output: [['This', 'is', 'the', 'first', 'sentence.'], ['The', 'second', 'sentence', 'is', 'here.'], ['And', 'here', 'is', 'the', 'third', 'one.']]
 ```
+</section>
+
+<section class="dropdown">
+
 ### includes(): Check if library has book
 
 Write a function `checkLibrary("Moby Dick")` that takes in a book title and uses the includes() method to check if it's included in the libraryBooks array.  Your function should return `true` when invoked with the argument "Moby Dick" and `false` when invoked with the argument "The Color Purple".
@@ -467,6 +475,9 @@ console.log(checkLibrary("Moby Dick")); //true
 console.log(checkLibrary("The Color Purple")); //false
 
 ```
+</section>
+
+<section class="dropdown">
 
 ### join(): Concatenate Product Names
 

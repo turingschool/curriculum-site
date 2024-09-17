@@ -281,11 +281,13 @@ When you have about 5 minutes left before your meeting is scheduled to end, casu
 As the above Muse article shares, "Always send a thank you note. Always. Your interviewee should never wonder how much you appreciated the time she took to share her hard-earned knowledge with you. Remember, you never know what doors she could open for you one day." The more personalized your message the better. It's best to include some detail from your coffee chat that you found particularly impactful.
 
 ## Coffee Chat Deliverable
-We have gathered a list of Mentors that are excited to be your first coffee-chat opportunity.  Your instructor will DM you with your assigned mentor for outreach.  We would like you to practice these as warm-outreach opportunities, so don't ask for a coffee chat with - "my instructor gave me your name, and I'm supposed to have a coffee chat with you".  Use the strategies we outlined in this lesson!
+Sometimes figuring out _who_ to try to reach out to is the scarieset part.  Just pick someone.  Search in Slack for a company name or specific technology you're interested in.  See if you can find someone in our alumni network who works (or worked) for that company or with that technology.  Reach out to them to see if they're open for a chat.   You can also use mentorloop to find someone to connect with.   Anyone on Mentorloop actively _wants_ to connect - otherwise, they wouldn't be on there!
+<!-- We have gathered a list of Mentors that are excited to be your first coffee-chat opportunity.  Your instructor will DM you with your assigned mentor for outreach.   -->
+We would like you to practice these as warm-outreach opportunities, so don't ask for a coffee chat with - "my instructor told me I'm supposed to have a coffee chat".  Use the strategies we outlined in this lesson!
 
-✅ Send the following in a message to @megan.
+✅ Send the following in a message to your instructor(s).
 
-1. The initial message you sent to your interviewee.
+1. The initial message you sent to your interviewee and who you chose to reach out to.
 1. Your answers to the following questions:
     * What question that you asked led to the most valuable response? What was the question and what did your interviewee say?
     * What do you want to do similarly in your next coffee chat?

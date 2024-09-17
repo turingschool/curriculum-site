@@ -24,6 +24,10 @@ blockquote p {
   font-size: 1em;
 }
 
+blockquote .text {
+  font-size: 16px;
+}
+
 li {
   line-height: 2em;
 }
@@ -157,6 +161,17 @@ header {
       display: none;
     }
   }
+}
+
+/* Tables */
+table {
+  border-collapse: collapse;
+  border: 1px solid black;
+  width: 75%;
+} 
+
+th,td {
+  border: 1px solid black;
 }
 
 
