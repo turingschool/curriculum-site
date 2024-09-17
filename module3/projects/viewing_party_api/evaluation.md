@@ -5,19 +5,22 @@ tags:
 type: project
 ---
 
-## Presentation/Feedback
+## Feedback Session Format
 
-### Presentation Points
+The evaluation for this project is going to be a bit different than other projects in the past. First, you should score yourself for this project. To do that, please fill out [this form](https://forms.gle/h8MhbSR2k4xj5MGs9) indvidually. 
 
-- Demonstration of functionality in Postman (endpoints are already prepared, so this should not take more than 2-3 minutes!)
-- Discussion of API consumption and design
-- Discussion of many-to-many implementation, and how student created the viewing parties and invited users (both for initial creation and subsequent invitations)
-- Discussion of authorization, and any refactoring done to optimize its implementation. 
-- Walkthrough of Testing: Happy & Sad Path, Test Coverage
+### Feedback Session Format
 
-Questions:
-- Live eval or group feedback session?
-  - Leaning towards live eval since this is the only BE-focused project? But could be persuaded!
+Instead of a traditional eval, you will be meeting in small groups to get feedback from your peers as well as an instructor. The format of this session is below.
+
+1. **Highlight Walkthrough**: Do a brief walkthrough (not a line-by-line code read-a-thon) of the following:
+- *one* implementation of API consumption
+- handling viewing party invitations
+- *one* example of mocking and stubbing
+
+2. **Request for Feedback**: Choose at least one part of your project that you’d like specific feedback on. Everyone will be asked to bring this to the feedback session, and you will be able to get feedback from your instructor as well as your peers in the feedback group.
+
+3. **Behavioral Question**: After you’re done getting feedback on your code, your instructor will pull up the [Wheel of Behavioral Interview Questions](https://spinthewheel.io/wheels/oF5ZfO1oCmBmrZCe45Jecz0xJmU9MQ), and spin it to select a question for you to answer. This is meant to emulate an interview experience. So, as funny as it may feel, answer it as if you were talking to an interviewer. After answering, your instructor (and any cohort-mates!) will give you feedback on your answer. Remember, this is a safe place to practice!
 
 ## Rubric
 
@@ -32,19 +35,12 @@ Questions:
 
 - **Exceeds Expectatations:** Project achieves 100% test coverage, stubs all network requests, and includes all expectations below
 - **Meets Expectations:** Project achieves over 95% test coverage. In addition to "happy path" testing, project also tests for "sad path" and edge cases. WebMock or VCR are used in at least 2 tests.
-- **Approaching Expectations:** Project achieves 80-90% test coverage. Project may not include "sad path" or edge case testing. Project may not include stubbing external HTTP requests.
+- **Approaching Expectations:** Project achieves 80-95% test coverage. Project may not include "sad path" or edge case testing. Project may not include stubbing external HTTP requests.
 - **Below Expectations:** Project does not achieve 80% test coverage.
 
 ### Code Quality
 
-- **Exceeds Expectatations:** Student can demonstrate how different portions of the project demonstrate all of the four pillars of OOP: polymorphism, encapsulation, abstraction, inheritance. Student has refactored all API consumption out of controller actions, and utilized components like services, POROs, etc.
-- **Meets Expectations:** Student has refactored at least one instance of API consumption out of the controller, utilizing components like services, POROs, etc. Students can discuss how their refactoring supports MVC, SRP, and OOP principles. Student can identify areas where code can be refactored. Endpoints are RESTfully designed. The many-to-many relationship is implemented using a join table and ActiveRecord is used to query and manipulate relationships.
+- **Exceeds Expectatations:** Student can demonstrate how different portions of the project demonstrate all of the four pillars of OOP: polymorphism, encapsulation, abstraction, inheritance. Student has refactored all API consumption out of controller actions, and utilized components like gateways, POROs, etc.
+- **Meets Expectations:** Student has refactored at least one instance of API consumption out of the controller, utilizing components like gateways, POROs, etc. Students can discuss how their refactoring supports MVC, SRP, and OOP principles. Student can identify areas where code can be refactored. Endpoints are RESTfully designed. The many-to-many relationship is implemented using a join table and ActiveRecord is used to query and manipulate relationships.
 - **Approaching Expectations:** Project demonstrates some gaps in code quality and/or application of MVC principles, REST, and DRY. No API consumption is refactored.
 - **Below Expectations:**  Project demonstrates poor factoring and/or understanding of MVC principles, REST, and DRY.
-
-### Presentation
-
-- **Exceeds Expectatations:** The student has a well organized presentation that addresses each point directly, uses technical vocabulary correctly throughout the presentation, and can speak to the design choices they made around API consumption, implementing authorization, and 
-- **Meets Expectations:** The student has a well organized presentation that addresses each point directly, uses technical vocabulary correctly throughout the presentation, and can speak to the design choices they made around API consumption, implementing authorization, and a many-to-many relationship. Minimal prompting from an instructor is necessary.
-- **Approaching Expectations:** Student can speak to all but one of the presentation points, and/or presentation may be scattered or lack a logical flow.
-- **Below Expectations:** Student is unprepared for the presentation and requires a lot of prompting from an instructor to talk through presentation points.
