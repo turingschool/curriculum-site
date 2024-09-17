@@ -23,14 +23,9 @@ You will be better prepared to hit the ground running in the workplace having wo
   * "It came up in just about every interview I had."
   * "People seemed most excited/interested about working on a larger team project. They asked lots of followup questions about how we handled project management, made decisions, etc. It was really helpful to know how SOA/multi-app systems worked."
   * "They were surprised that we got exposure to SOA and speaking about microservices.
-  It helped to understand and speak to Abstraction and Encapsulation a lot more. Working o
-  n a larger team definitely helped me get started at my job which was a way bigger team t
-  han the 10-person project."
-  * "People seemed most excited/interested about working on a larger team project (10 p
-  eople). They asked lots of followup questions about how we handled project management, m
-  ade decisions, etc. It was really helpful to know how SOA/multi-app systems worked."
-  * "It definitely came up in interviews, especially about microservices, and the trade
-  offs versus monolith apps."
+  It helped to understand and speak to Abstraction and Encapsulation a lot more. Working on a larger team definitely helped me get started at my job which was a way bigger team than the 10-person project."
+  * "People seemed most excited/interested about working on a larger team project (10 people). They asked lots of followup questions about how we handled project management, made decisions, etc. It was really helpful to know how SOA/multi-app systems worked."
+  * "It definitely came up in interviews, especially about microservices, and the trade offs versus monolith apps."
 
 ### User Empathy, Personas, and Equity Analysis
 
@@ -51,7 +46,7 @@ You have a lot of freedom with this project, but there are a few technical requi
 
 1. Includes at least one Rails API and one ReactJS application.
 2. Use one external API, but it can be consumed on the FE or BE. 
-3. Be deployed
+3. Be deployed (BE and FE)
 4. Assume one single user - multiple users with log in and authentication is out of scope.
 5. Implement functionality beyond simply data display - there needs to be some way for the user to work with or manipulate the data (favoriting, searching, filtering, commenting, rating, etc)
 
@@ -82,8 +77,11 @@ Other new tools/concepts that would be fun but not considered your stretch-tech 
 
 * Multi-page application utilizing React Router
 * Includes at least one POST request to the BE
-* The application cannot simply be a display of data - there needs to be some way for the user to work with or manipulate the data (favoriting, searching, filtering, commenting, rating, etc)
-* Includes client-side validations and error-handling
+* The application cannot simply be a display of data - there needs to be at least **one** way for the user to work with or manipulate the data (favoriting, searching, filtering, commenting, rating, etc)
+* Includes thorough client-side validations and error-handling, including error handling for network requests.
 * Implements robust Cypress testing, with all network requests properly intercepted and all user flows tested
+
+Deployment is required for this project. Two popular deployment options for the FE are [Vercel](https://vercel.com/) and [Netlify](https://docs.netlify.com/).  You can research and proceed with whatever deployment platform you choose.  
+
 
 </section>
