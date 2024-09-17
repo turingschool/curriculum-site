@@ -8,7 +8,7 @@ title: Module 3 - Lessons
 * [Many To Many Relationship](./many-to-many) 
 <!-- * [Authorization](.) -->
 * [Testing Tools for API Consumption](./testing_tools_for_api_consumption)
-<!-- * [Refactoring Patterns for API Consumption](.) -->
+* [Refactoring Patterns for API Consumption](./refactoring_api_consumption)
 
 ## React
 * [Ideabox Tutorial](./react_ideabox)
