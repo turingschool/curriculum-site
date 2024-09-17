@@ -14,11 +14,5 @@ The questions below are not the only format a retrospective can take! Check out 
 
 **Note:** Retros are typically not the time to discuss constructive feedback for one individual, but rather to discuss team processes as a whole. Individual feedback is essential, but should be shared privately in direct 1-on-1 conversations instead. However, following the "praise in public" principle, team shout-outs to celebrate an individual's job well done is a great idea in a retro!
 
+<img src="../../../assets/images/projects/consultancy/retro_table.png">
 
-|   |What went well?|What could be improved?|What did not go well?|What feedback do you have for your teammate(s) that might help them in future projects/on the job?|
-|---|---|---|---|---|
-|Process|   |   |   |   |
-|   |   |   |   |   |   |
-|Communication|   |   |   |   |
-|   |   |   |   |   |   |
-|Other|   |   |   |   |   |
