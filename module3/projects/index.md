@@ -14,3 +14,6 @@ The project specs will be linked below as each project is assigned.
 - Week 4-5 (Group): Consultancy
 - Week 6 (Final Solo): TBA
 
+## Additional Practice and Resources
+
+- [Ideabox Ideas & Practice](./ideabox_practice)
