@@ -8,7 +8,7 @@ layout: page
 - Understand what nesting `resources` in `routes.rb` generates for us.
 - Understand the 5 pieces of information `rails routes` gives us.
 - Use route helpers
-- Understand the difference between namespacing and nested `resources``
+- Understand the difference between namespacing and nested `resources`
 
 ## Vocabulary
 
@@ -21,7 +21,7 @@ For part of this lesson we'll use the [`advanced-routing-start`](https://github.
 
 ## Warm Up
 
-In your notebook, without using your computer, fill in the following table for the 5 ReSTful routes for a generic "resource”
+In your notebook, without using your computer, fill in the following table for the 5 RESTful routes for a generic "resource”
 
 Include the following for each:
 
