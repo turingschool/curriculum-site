@@ -83,6 +83,7 @@ Other new tools/concepts that would be fun but not considered your stretch-tech 
 * Multi-page application utilizing React Router
 * Includes at least one POST request to the BE
 * The application cannot simply be a display of data - there needs to be some way for the user to work with or manipulate the data (favoriting, searching, filtering, commenting, rating, etc)
-* Robust Cypress testing, with all network requests properly intercepted and all user flows tested
+* Includes client-side validations and error-handling
+* Implements robust Cypress testing, with all network requests properly intercepted and all user flows tested
 
 </section>

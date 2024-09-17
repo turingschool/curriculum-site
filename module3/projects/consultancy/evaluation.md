@@ -70,9 +70,10 @@ This is an essential expectation and in extenuating circumstances, individuals m
   - Model data validations are utilized
   - Most common errors are rescued and serialized in a friendly error response.
 * Front End Expectations
-  - The application is multi-page utilizing React Router
+  - Application is multi-page utilizing React Router
   - At least one POST request is used
   - Application properly uses a catch block for network request error handling (if the server is down or if a fetch call fails) and displays helpful information to the user.
+  - Application includes client-side validation
   - Frontend state matches the backend data
   - Data and functions are passed as props (only as needed) to effectively organize the application
   - Props are protected via Proptypes or type-checking
