@@ -21,7 +21,7 @@ These items must be shared with your project manager before you can begin develo
     - Wireframes
     - Chosen external API
     - Chosen BE stretch tech
-    <!-- - React Component Architecture DO WE WANT THIS? -->
+    - React Component Architecture Diagram
     - Database Schema
 4. User Stories in Project Board
 5. Equity Analysis
