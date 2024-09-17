@@ -20,7 +20,6 @@ title: Module 3 - Lessons
 * [Intro To Accessibility](./intro-to-a11y)
 * [Network Requests - Fetch](./network_requests)  
 <!-- * [Intro to Cypress Testing](.) -->
-<!-- * [CORS Workshop](.) -->
 <!-- * [FE Error Handling](.) -->
 <!-- * [Responsiveness - Mobile Design using Bootstrap](.) -->
 <!-- * [Async JavaScript](.) -->
@@ -28,6 +27,7 @@ title: Module 3 - Lessons
 
 ## Fullstack Web Development
 * [Intro to Service-Oriented Architecture](./intro_to_soa)
+* [CORS Workshop](https://github.com/turingschool-examples/whats_going_on_with_cors)
 
 ## Professional Development
 * [Mod 3 PD Curriculum](../pd/)
