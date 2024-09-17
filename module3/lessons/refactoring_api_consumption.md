@@ -5,7 +5,7 @@ title: Refactoring Patterns for API Consumption
 
 ## Setup
 
-We will start with the `consuming-apis-complete` branch of the [Set List API](https://github.com/turingschool-examples/set-list-api/tree/consuming-apis-complete) for this lesson. 
+We will start with the `consuming-apis-complete` branch of the [Set List API](https://github.com/turingschool-examples/set-list-api/tree/consuming-apis-complete) for this lesson. We will be looking at the `ImagesController` first. 
 
 Instructions for using Rails Encrypted Credentials can be found in the "Required Setup" section [here](./testing_tools_for_api_consumption).
 
@@ -40,7 +40,8 @@ Instructions for using Rails Encrypted Credentials can be found in the "Required
 
 ### Warm-Up
 
-1. What anti-patterns do you see in the current implementation of API consumption in the `consuming-apis-complete` branch?
+1. What anti-patterns do you see in the current implementation of API consumption in the `consuming-apis-complete` branch, specifically in the `ImagesController`?
+
 2. List out all the responsibilities the controller is handling
 
 <section class="dropdown">
@@ -81,9 +82,9 @@ So far, most of the code we've written in Rails has fit nicely into the MVC stru
 **Brainstorm:** If you were building a vanilla Ruby application, what types of files do you think you would make to extract this logic out of the controller?
 
 <section class="dropdown">
-### Possible Design Pattern #1: Gateways
+### Possible Refactor, Part #1: Gateways
 
-[Gateway classes](https://mattbrictson.com/blog/gateway-pattern) are very common across many frameworks. They are also referred to as a *service* but this is a very overloaded term in Rails and software development as a whole. This section will refer to these classes as *gateways* but you're welcome to name them however you'd prefer.
+[Gateway classes](https://mattbrictson.com/blog/gateway-pattern) are a very common design pattern across many frameworks. They are also referred to as a *service* but this is a very overloaded term in Rails and software development as a whole. This section will refer to these classes as *gateways* but you're welcome to name them however you'd prefer.
 
 Gateways typically encapsulate the logic used for interacting with an external API. Let's refactor our controller to use a gateway. 
 
@@ -135,7 +136,7 @@ If we are making calls to more than one Pexels endpoint in our application, we c
 ```ruby
 class ImageGateway
   def self.get_first_image(query_term)
-    response = connection.get("/v1/search", { query: query_term })
+    response = conn.get("/v1/search", { query: query_term })
 
     json = JSON.parse(response.body, symbolize_names: true)
     json[:photos][0]
@@ -143,7 +144,7 @@ class ImageGateway
 
   private
   
-  def self.connection
+  def self.conn
     Faraday.new(url: "https://api.pexels.com") do |faraday|
       faraday.headers["Authorization"] = Rails.application.credentials.pexels[:key]
     end
@@ -172,9 +173,9 @@ This is a huge improvement!
 </section>
 
 <section class="dropdown">
-### Possible Refactor #2: POROs
+### Possible Refactor, Part 2: POROs
 
-You may have noticed that our mentioned the potential problem with hash keys changing in the "Declarative Programming" section but we haven't really addressed it. If we were to change APIs from Pexels to another service, we would have to change the gateway class and the serializer to makes sure all necessary data can be accessed. This is especially bothersome in a serializer. The presentation layer of our code should not need to know the details about the external API response's data format. 
+You may have noticed that we mentioned the potential problem with hash keys changing in the "Declarative Programming" section but we haven't really addressed it. If we were to change APIs from Pexels to another service, we would have to change the gateway class and the serializer to makes sure all necessary data can be accessed. This is especially bothersome in a serializer. The presentation layer of our code should not need to know the details about the external API response's data format. 
 
 On top of this coupling, our application is also carting around a much larger hash than it really needs to. Our endpoint only needs to expose 4 attributes, but the individual image hash that comes from Pexels is 20 lines long! This is a violation of YAGNI -- we don't need all that data! 
 
@@ -213,7 +214,7 @@ And now we can refactor our `ImageGateway` to parse the JSON response into an `I
 ```ruby
 class ImageGateway
   def self.get_first_image(query_term)
-    response = connection.get("/v1/search", { query: query_term })
+    response = conn.get("/v1/search", { query: query_term })
 
     json = JSON.parse(response.body, symbolize_names: true)
     Image.new(json[:photos][0])
