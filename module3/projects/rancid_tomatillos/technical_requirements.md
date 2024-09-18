@@ -111,6 +111,14 @@ In Motion:
 </section>
 </section>
 
+<section class="note dropdown">
+### A Note About Refactoring
+
+We are about to get into some refactoring iterations. These iterations are designed to require heavy refactoring. It is expected that you will have to re-organize the code you've written. Don't be too attached to the code you have right now - it will need to change! For example, if your goal is to shove Router into your existing code while making as few changes as possible, you're doing it wrong.
+
+If it makes you nervous, remember that you should always be working on a branch. All your previous code is safe and sound on the main branch until you've got your new feature working.  
+</section>
+
 <section class="dropdown">
 ### Iteration 4: Refactor with Network Requests
 
@@ -188,15 +196,7 @@ Implement the following routes:
 - As a user, when I go back to the main page, the URL changes back to `/`
 - I can click the browser forward & back arrows to navigate the application
 
-<section class="note">
-### Refactoring
-
-This iteration is designed to require heavy refactoring. It is expected that you will have to re-organize the code you've written. Don't be too attached to the code you have right now - it will need to change! If your goal is to shove Router into your existing code while making as few changes as possible, you're doing it wrong.
-
-If it makes you nervous, remember that you should be working on a branch. All your previous code is safe and sound on the main branch until you've got Router working.  
-
-Hint - Can we remove the `onClick` event on your movie posters altogether now that we are using `Links` and `Routes`? Yes! Yes, we can!
-</section> 
+💡 Hint - Can we remove the `onClick` event on your movie posters altogether now that we are using `Links` and `Routes`? Yes! Yes, we can!   
 
 As you refactor, continue to rely on your test suite to ensure that no functionality is being lost/destroyed as you add in Router. Look into the [Cypress assertions](https://docs.cypress.io/api/commands/location.html#Syntax) which allow us to view our current URL pathname and add those into your tests!
 </section>
