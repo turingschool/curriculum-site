@@ -1,0 +1,100 @@
+I"� <h2 id="project-description">Project Description</h2>
+
+<p>The goal of this project is to create a successful web application from a student-led project idea. Your team will create an app that will solve a real world problem, but no problem is too small! You don’t need to build an app that will save the world. What about an application that will gamify learning test questions for the written driving exam? Or an application that tells you when to move your car to avoid parking tickets for street sweeping?</p>
+
+<p>Building student-designed projects can help differentiate you as a candidate, but it often comes down more to <em>how</em> you build it than <em>what</em> you build. The learning goals of this project are to expand/deepen your understanding of your learning process &amp; dynamics within a team - NOT to build the flashiest thing ever.</p>
+
+<p>This project will focus heavily on Service-Oriented Architecture (SOA) and will require at least one back end service (likely in Rails) and one React application.</p>
+
+<h2 id="professional-development-benefits">Professional Development Benefits</h2>
+
+<p>You will be better prepared to hit the ground running in the workplace having worked on a larger team, in a much larger application base, with lots of moving pieces. Understanding the deeper impact of how a small change can have a cascading effect on other pieces of a system will be crucial.</p>
+
+<h3 id="feedback-from-previous-students">Feedback from Previous students:</h3>
+
+<ul>
+  <li>“The complexity added value to the interviewing conversations. I got to speak to pros/cons, and I understood the concepts a lot better.”</li>
+  <li>“Exploring different design patterns was great and being able to speak on different ways to build things PLUS being able to compare was helpful.”</li>
+  <li>“Incredibly helpful in interviewing. It was the biggest project on my resume, and was key to my early interviews. It was more important in my interview for my new role than my Mod 4 capstone because of the multi-app architecture. I could speak to decision-making more because I got to work on each piece. My new company said I reset their expectations for what a bootcamp grad could accomplish.”</li>
+  <li>“It came up in just about every interview I had.”</li>
+  <li>“People seemed most excited/interested about working on a larger team project. They asked lots of followup questions about how we handled project management, made decisions, etc. It was really helpful to know how SOA/multi-app systems worked.”</li>
+  <li>“They were surprised that we got exposure to SOA and speaking about microservices.
+  It helped to understand and speak to Abstraction and Encapsulation a lot more. Working on a larger team definitely helped me get started at my job which was a way bigger team than the 10-person project.”</li>
+  <li>“People seemed most excited/interested about working on a larger team project (10 people). They asked lots of followup questions about how we handled project management, made decisions, etc. It was really helpful to know how SOA/multi-app systems worked.”</li>
+  <li>“It definitely came up in interviews, especially about microservices, and the trade offs versus monolith apps.”</li>
+</ul>
+
+<h3 id="user-empathy-personas-and-equity-analysis">User Empathy, Personas, and Equity Analysis</h3>
+
+<p>We’ll also examine our end users on a deeper level to instill a strong sense of developer empathy. We will do this by focusing time on “user personas” to answer questions like “who is our user”, “what age range are we targeting”, “how tech-savvy must the user be to use our app” and so on. As part of this project, groups will also perform an equity analysis in order to interrogate the product they’re building, and reflect on possible changes that could better prioritize inclusion and harm reduction.</p>
+
+<h2 id="phases">Phases</h2>
+
+<ul>
+  <li><a href="./ideation">Ideation</a>: Week 3 - Students optionally pitch ideas</li>
+  <li><a href="./inception">Inception</a>: Beginning of Week 4 - Completed before development</li>
+  <li><a href="./development">Development</a>: Weeks 4 + 5</li>
+  <li><a href="./retro_guide">Retro</a>: Completed twice during Weeks 4 + 5</li>
+  <li><a href="./presentation">Video Presentation</a>: End of Week 5</li>
+  <li><a href="./evaluation">Evaluation</a>: End of Week 5</li>
+</ul>
+
+<h2 id="technical-requirements">Technical Requirements</h2>
+
+<p>You have a lot of freedom with this project, but there are a few technical requirements. Overall, your project must:</p>
+
+<ol>
+  <li>Includes at least one Rails API and one ReactJS application.</li>
+  <li>Use one external API, but it can be consumed on the FE or BE.</li>
+  <li>Be deployed (BE and FE)</li>
+  <li>Assume one single user - multiple users with log in and authentication is out of scope.</li>
+  <li>Implement functionality beyond simply data display - there needs to be some way for the user to work with or manipulate the data (favoriting, searching, filtering, commenting, rating, etc)</li>
+</ol>
+
+<section class="dropdown">
+  <h3 id="back-end-requirements">Back End Requirements</h3>
+
+  <ul>
+    <li>Thorough testing at both the unit and integration level.
+      <ul>
+        <li>Test Coverage tool like SimpleCov is used</li>
+        <li>Happy Path and Sad Path/Edge Case testing is included</li>
+      </ul>
+    </li>
+    <li>One Stretch Tech option (listed below) is implemented
+      <ul>
+        <li><strong>Caching</strong>: Using low-level caching (no FE caching). Team should be able to identify how the points where caching is implemented help to alleviate the main workflow of the application, and ideally show before/after data.</li>
+        <li><strong>Background Jobs</strong>: Consider using Sidekiq with Redis. Team should be able to identify how the background worker(s) alleviate the main workflow of the application, and ideally show before/after data.</li>
+        <li><strong>CirlceCI</strong>: Team should be able to identify the use case of this technology, its pros and cons. In order to receive credit for this stretch tech, teams must not only set it up, but incorporate continuous integration principles into their workflow (i.e. when the build is red, discussion about fixing the build is visible, and commits are not pushed on top of a red build)</li>
+        <li><strong>Rate Limiting</strong>: Consider using the gem called “rack-attack” and test to demonstrate it’s working! Team should be able to discuss why rate limiting is an effective feature. Ideally, be able to demonstrate it live using a small script (either live or in production).</li>
+        <li><strong>Microservice</strong>: Team should create a separate microservice (separate from their BE API app) using Sinatra or a different framework, and be able to speak to the pros/cons of that framework when compared to Rails.</li>
+      </ul>
+    </li>
+  </ul>
+
+  <p>Other new tools/concepts that would be fun but not considered your stretch-tech (think post-project exploration):</p>
+  <ul>
+    <li>Pagination</li>
+    <li><a href="https://github.com/presidentbeef/brakeman">Security Vulnerability Scanner</a></li>
+    <li>OpenAPI Documentation</li>
+    <li><a href="https://makisushi.io/posts/asd">Circuit Breaker Design Pattern</a></li>
+    <li>Observability (i.e. New Relic, Skylight, Honey Badger, Rails Performance)</li>
+  </ul>
+
+</section>
+
+<section class="dropdown">
+  <h3 id="front-end-requirements">Front End Requirements</h3>
+
+  <ul>
+    <li>Multi-page application utilizing React Router</li>
+    <li>Includes at least one POST request to the BE</li>
+    <li>The application cannot simply be a display of data - there needs to be at least <strong>one</strong> way for the user to work with or manipulate the data (favoriting, searching, filtering, commenting, rating, etc)</li>
+    <li>Includes thorough client-side validations and error-handling, including error handling for network requests.</li>
+    <li>Implements robust Cypress testing, with all network requests properly intercepted and all user flows tested</li>
+  </ul>
+
+  <p>Deployment is required for this project. Two popular deployment options for the FE are <a href="https://vercel.com/">Vercel</a> and <a href="https://docs.netlify.com/">Netlify</a>.  You can research and proceed with whatever deployment platform you choose.</p>
+
+</section>
+:ET

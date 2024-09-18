@@ -1,0 +1,276 @@
+I"�A<p><em><a href="./index">Back to Consultancy Home</a></em></p>
+<h2 id="background">Background</h2>
+
+<p>An Inception is a process used by many companies in the Software Industry to design a solution to a problem. It is tempting to take a problem and immediately start coding, however this will often result in an incoherent solution, or even worse, a solution to the <strong>wrong</strong> problem.</p>
+
+<p>Usually this process takes several days involving many stakeholders such as the client(s), team leads, CEOs, operations, etc. We will be doing a simplified version of this process in a few hours between your team and your project manager.</p>
+
+<h3 id="inception-deliverables">Inception Deliverables</h3>
+
+<p>These items must be shared with your project manager before you can begin development. They will be reviewed in your first project check-in as well. Please pin or bookmark these in your Slack channel. The sections below will walk your team through developing these materials.</p>
+
+<ol>
+  <li>Slack Channel Created</li>
+  <li>DTR</li>
+  <li>Miro Board or Planning Tool that includes:
+    <ul>
+      <li>MVP definition</li>
+      <li>Wireframes</li>
+      <li>Chosen external API</li>
+      <li>Chosen BE stretch tech</li>
+      <li>React Component Architecture Diagram</li>
+      <li>Database Schema</li>
+    </ul>
+  </li>
+  <li>User Stories in Project Board</li>
+  <li>Equity Analysis</li>
+  <li>Plan for sub-teams for first development sprint
+    <ul>
+      <li>Team is welcome to choose their preferred team breakdown, i.e. splitting by FE/BE, splitting by feature, etc. but we highly recommend organization that allows full-stack work</li>
+      <li><strong>It is essential that every student complete some work on both the FE and BE, but it does not need to be an even 50/50 split</strong></li>
+      <li>Remember that your final solo project will be full-stack.</li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="process">Process</h3>
+
+<p>Each of the following meetings has a purpose: Brainstorm, Decide, or Solve. Everyone should try hard to stick to that purpose.</p>
+
+<ul>
+  <li>Brainstorm - Explore who the end user(s) is(are) (personas), what is possible (ideas), what can go wrong (risks), what is not possible, debate, share counterpoints etc.</li>
+  <li>Decide - Follows brainstorming and requires the team to put aside their pride and make decisions for the sake of the team.</li>
+  <li>Solve - Follows deciding. This is the execution of what was decided.</li>
+</ul>
+
+<p>Conflict and tension tends to arise in groups when there are differing expectations of these meetings. Some want to debate and explore different outcomes while others see that as a waste of time and want to make a decision. The reality is both are important for making sound decisions and the following is a template to do both and get your project off to a strong start.</p>
+
+<section class="dropdown">
+  <h3 id="tools">Tools</h3>
+
+  <ul>
+    <li><a href="https://miro.com">Miro</a> is an online team collaboration board. It will be a space where your team can brainstorm using sticky notes, take notes, wireframe, etc. <em>Note: There is a Slack integration, but please do NOT attempt to add it to Slack. Staff will deny your request.</em></li>
+    <li>Other helpful design tools include Figma, Canva, InVision</li>
+    <li>Project Management Tools: GitHub Projects (recommended), Trello, Jira</li>
+  </ul>
+
+</section>
+
+<section class="dropdown">
+  <h3 id="step-1-problem-definition-and-idea-sharing-brainstorm--decide">Step 1: Problem Definition and Idea Sharing (Brainstorm + Decide)</h3>
+
+  <ul>
+    <li><strong>Objectives:</strong>
+      <ul>
+        <li>Define the problem you are solving in 2-3 sentences. The solution you come up with later should solve the problem directly.</li>
+        <li>Discuss and debate the technical solution to the problem, thinking through the most important features this application would need in order to solve the problem.</li>
+      </ul>
+    </li>
+    <li><strong>Instructions</strong>
+      <ul>
+        <li>The format of this meeting is an open discussion about the objectives defined above.</li>
+        <li>Don’t spend more than 5 minutes defining the problem.</li>
+        <li>Don’t spend more than 5 minutes on any one feature. Remember, this is just a brainstorming session.</li>
+        <li>Do not eliminate any ideas during this meeting.</li>
+        <li>No decisions are made during this meeting</li>
+        <li>Allow everyone’s voice to be heard and make sure no one is dominating the discussion.</li>
+        <li>Be creative. Share bad ideas as well as good. Sometimes bad ideas lead to good ones.</li>
+        <li>Use the guiding questions below if you get stuck.</li>
+      </ul>
+    </li>
+    <li><strong>Guiding Questions</strong>
+      <ul>
+        <li>What would set you apart during Demo Comp? You’re not required to participate in Demo Comp, but it’s a great goal!</li>
+        <li>What intimidates you but would be amazing to pull off?</li>
+        <li>What features or technology choices would spark interesting discussions during job interviews?</li>
+        <li>Would you use this product? If not, what is it missing?</li>
+      </ul>
+    </li>
+  </ul>
+
+  <section class="dropdown">
+    <h3 id="a-feature-dump-brainstorm">1a. Feature Dump (Brainstorm)</h3>
+
+    <ul>
+      <li><strong>Objectives</strong>
+        <ul>
+          <li>Write out as many potential features as possible</li>
+        </ul>
+      </li>
+      <li><strong>Instructions</strong>
+        <ul>
+          <li>This is an <strong>individual</strong> activity</li>
+          <li>Each person should write out features on Sticky Notes</li>
+          <li>Only 1 feature per sticky note</li>
+          <li>Features should describe user interaction in 3-5 words max.</li>
+          <li>Examples include:
+            <ul>
+              <li>User selects location and sees results</li>
+              <li>User sees stats over time</li>
+              <li>Email notifications</li>
+            </ul>
+          </li>
+          <li><strong>If you cannot fit a feature on a single sticky note you are doing it wrong. You are probably providing implementation details. These feature descriptions should describe user interaction and should not be tied to implementing the feature in a specific way</strong></li>
+          <li>All potential features of the app should be included (we will define the MVP later in the  process)</li>
+          <li>Get creative with potential features. There are no wrong answers.</li>
+        </ul>
+      </li>
+    </ul>
+
+  </section>
+
+  <section class="dropdown">
+    <h3 id="b-feature-sharingelimination-of-duplicates-decide">1b. Feature Sharing/Elimination of Duplicates (Decide)</h3>
+
+    <ul>
+      <li><strong>Objectives</strong>
+        <ul>
+          <li>Share what came out of the feature dump</li>
+          <li>Group related ideas into broad categories (EPICs)</li>
+          <li>Eliminate duplicate ideas</li>
+        </ul>
+      </li>
+      <li><strong>Instructions</strong>
+        <ul>
+          <li>You will be organizing these thoughts as a group in the project’s Miro board</li>
+          <li>Each person should present their features one at a time, giving a <em>brief</em> description of what that feature is, so it is clear for the whole group.</li>
+          <li>After you have described the feature move the sticky note into a category. If it doesn’t fit in an existing category, make one.</li>
+          <li>As each person takes a turn you will notice that some of the features will be duplicates of previously shared features. If this is the case, simple delete that sticky note. <em>Don’t spend time describing a feature if it is a duplicate.</em></li>
+          <li>Come up with a name for each of the categories. These will be referred to as <a href="https://www.yodiz.com/blog/what-is-epic-in-agile-methodology-definition-and-template-of-epic/">EPICs</a> and will be a way to organize your features in your project management tool.</li>
+        </ul>
+      </li>
+    </ul>
+  </section>
+
+  <section class="dropdown">
+    <h3 id="c-feature-prioritization-and-mvp-definition-decide">1c. Feature Prioritization and MVP Definition (Decide)</h3>
+
+    <ul>
+      <li><strong>Objectives</strong>
+        <ul>
+          <li>Define the features that will make up your <a href="https://www.agilealliance.org/glossary/mvp/#q=~(infinite~false~filters~(tags~(~'mvp))~searchTerm~'~sort~false~sortDirection~'asc~page~1)"><strong>Minimum Viable Product</strong></a></li>
+        </ul>
+      </li>
+      <li><strong>Instructions (recommended)</strong>
+        <ul>
+          <li>Use labels/colors in your miro board to determine MVP/extension/unsure stories.</li>
+          <li>If you are unsure about a feature, table the feature and come back to it at the end.</li>
+          <li>Repeat this process until you have gone through all of the stories.</li>
+          <li>Once you are finished, you have your MVP definition.</li>
+          <li>Highlight the features involved in your MVP somewhere on your Miro (or other tool) so that it is <strong>clearly visible to your PM</strong> and easily understood to someone who did not participate in your planning meetings.</li>
+          <li><strong>You will be able to adjust your MVP as needed during the first 2 iterations of this project. But once Iteration 3 begins, your MVP cannot be adjusted without being marked down in the feature delivery category of the rubric.</strong></li>
+        </ul>
+      </li>
+    </ul>
+
+  </section>
+</section>
+
+<section class="dropdown">
+  <h3 id="step-2-application-design-and-planning-solve">Step 2: Application Design and Planning (Solve)</h3>
+
+  <ul>
+    <li><strong>Objectives</strong>
+      <ul>
+        <li>Based on your MVP and problem definition, create artifacts that will allow you to dive into development with aligned understanding and goals.</li>
+        <li>Prioritize chunks of work that, once development begins, should be completed first</li>
+        <li>Identify constraints and risks through time-boxed explorations called <em>spikes</em>
+          <ul>
+            <li>In order to effectively plan, teams often need to experiment and/or do some research about potential integrations, APIs, etc.</li>
+            <li>Spikes are the <em>only time</em> during inception that teams are allowed to code</li>
+            <li>Spikes might look like trying out different API calls in order to verify the data is suitable, or doing some individual research about BE stretch techs in order to choose an option that matches the needs of your application.</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><strong>Relevant Activities</strong>
+      <ul>
+        <li>Wireframes</li>
+        <li>User Story Creation</li>
+        <li><a href="https://dbdiagram.io/home">Database Schema Design</a></li>
+        <li>External API spikes</li>
+        <li>Stretch Tech Research</li>
+        <li>JSON Contracts (what will your API responses look like?)</li>
+      </ul>
+    </li>
+  </ul>
+
+  <section class="dropdown">
+    <h3 id="a-wireframing-solve">2a. Wireframing (Solve)</h3>
+
+    <ul>
+      <li><strong>Objectives</strong>
+        <ul>
+          <li>Decide how users will interact with your application</li>
+        </ul>
+      </li>
+      <li><strong>Instructions (required)</strong>
+        <ul>
+          <li>Create a high level <a href="https://bashooka.com/inspiration/33-excellent-user-flow-examples-for-inspiration/">user flow diagram</a> that lists the steps a user will take when interacting with your application.</li>
+          <li>Make a list of all of the pages required for your application along with what features will exist on each page.</li>
+          <li>For each page, create a <a href="https://www.usability.gov/how-to-and-tools/methods/wireframing.html">wireframe</a> by sketching out what that user will see when they navigate to that page. Include details such as header text, buttons, drop downs, forms with the specific fields, graphs etc.</li>
+          <li>Do a few pages together as a group, then divide and conquer the remaining pages.</li>
+          <li><a href="https://www.figma.com/wireframe-tool/?utm_source=google&amp;utm_medium=cpc&amp;utm_campaign=17340391121&amp;utm_term=free%20wireframe%20tools&amp;utm_content=600487515776&amp;gclid=CjwKCAjw5P2aBhAlEiwAAdY7dLtWlIVK0NWWHUXbjj8KMAaBN8P1lO16khOpesJ63utNI5b-cF1e2xoClmoQAvD_BwE">Figma</a> is a great tool for wireframing</li>
+        </ul>
+      </li>
+    </ul>
+
+  </section>
+
+  <section class="dropdown">
+    <h3 id="b-story-writing-solve">2b. Story Writing (Solve)</h3>
+
+    <ul>
+      <li><strong>Objectives</strong>
+        <ul>
+          <li>Document technical requirements for the development team</li>
+        </ul>
+      </li>
+      <li><strong>Instructions (required)</strong>
+        <ul>
+          <li>Create a project board using Github Projects or Trello.</li>
+          <li>Translate each of the features that were written on sticky notes during the feature dump exercise into a <a href="https://www.atlassian.com/agile/project-management/user-stories">user story</a> in your project management tool.</li>
+          <li>Every user story should be written from the perspective of the end user and should follow this format:
+            <ul>
+              <li><code class="language-plaintext highlighter-rouge">As a ___, when I visit ___, I want to ____ so that I can ____.</code></li>
+            </ul>
+          </li>
+          <li>For every user story include a list of subtasks required to complete the user story. This includes developer chores such as database migrations to add tables and columns, exposing API endpoints, creating mock data and fixtures to stub out an API call etc.</li>
+          <li>For every user story, include the wire frame(s) from the associate page(s)</li>
+          <li>An example user story is:
+            <ul>
+              <li>Feature: User can view their saved recipes</li>
+              <li>User story: “As a user, when I visit my profile, I see a section for Saved Recipes, and each result includes the name, url and a thumbnail photo.”</li>
+              <li>Wireframe: <code class="language-plaintext highlighter-rouge">&lt;link to wireframe&gt;</code></li>
+              <li>Subtasks:
+                <ol>
+                  <li>Create a section on the profile page for saved recipes.</li>
+                  <li>Create API endpoint to retrieve saved recipes for a given user (assuming the functionality for saving recipes is already complete)</li>
+                  <li>Display results with appropriate data in a grid according to wireframe</li>
+                  <li>Build Cypress tests for the feature</li>
+                  <li>If network call to the BE is unsuccessful, display friendly error message to user indicating that no recipes could be found.</li>
+                </ol>
+              </li>
+            </ul>
+          </li>
+          <li><strong>Note:</strong> Notice that this user story includes both BE and FE work. These are called “vertically-sliced” user stories, in that they they involve a full vertical slice of every layer of the web application (or, the cake!). Vertically-sliced user stories are a best practice in agile software development, and we highly recommend you use them as much as possible. However, for some stories, your team might decide that horizontal slicing (i.e. BE-only tasks and FE-only tasks) is preferred organization method, and that’s okay!</li>
+        </ul>
+      </li>
+    </ul>
+  </section>
+</section>
+
+<section class="dropdown">
+  <h3 id="step-3-equity-analysis-brainstorm">Step 3: Equity Analysis (Brainstorm)</h3>
+
+  <p>As technologists, it’s essential to analyze product plans and processes in order to reduce harm to users, and particularly marginalized identity groups. As part of your inception, please answer these questions as a group, and share your responses with your project manager.</p>
+
+  <ul>
+    <li>What features or tools do you plan to build into the project (or would you include if you had more time) to promote inclusion. You may have ideas that are out of scope for your MVP, but those are valuable to share here!</li>
+    <li>Are any of the following marginalized identity groups (or others) likely to experience harm or exclusion as a result of this project:  immigrants, people of color, people with (dis)/Abilities, justice impacted (formerly incarcerated) people, elderly people, women, gender expansive people, people with limited incomes, etc.</li>
+    <li>Which factors may impact any individual or group’s access to the proposed project?</li>
+    <li>If you were given more time to design this product, how would you want to work with your intended users to ensure relevance?</li>
+    <li>What happens if someone uses this product with bad/evil intent in mind?</li>
+  </ul>
+</section>
+:ET

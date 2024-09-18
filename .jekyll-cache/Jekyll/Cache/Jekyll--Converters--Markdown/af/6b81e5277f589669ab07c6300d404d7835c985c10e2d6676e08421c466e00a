@@ -1,0 +1,282 @@
+I"�_<h2 id="setup">Setup</h2>
+
+<p>We will start with the <code class="language-plaintext highlighter-rouge">consuming-apis-complete</code> branch of the <a href="https://github.com/turingschool-examples/set-list-api/tree/consuming-apis-complete">Set List API</a> for this lesson. We will be looking at the <code class="language-plaintext highlighter-rouge">ImagesController</code> first.</p>
+
+<p>Instructions for using Rails Encrypted Credentials can be found in the “Required Setup” section <a href="./testing_tools_for_api_consumption">here</a>.</p>
+
+<h2 id="learning-goals">Learning Goals</h2>
+
+<ul>
+  <li>
+    <p>Identify SRP and MVC violations with implementing API consumption entirely in the controller</p>
+  </li>
+  <li>
+    <p>Refactor code to pull logic out of the controller</p>
+  </li>
+  <li>
+    <p>Identify the purpose of a Gateway/Service and a PORO</p>
+  </li>
+</ul>
+
+<h2 id="vocabulary">Vocabulary</h2>
+
+<p><strong>Refactor</strong> - to change code in a way that the end functionality still works as intended, but reorganizes it in a way to make it easier to maintain, easier to test, etc.</p>
+
+<p><strong>SRP</strong> - Single Responsibility Principle; the ideal that a piece of code should be responsible for one kind of task (this can be at a class level, a method level, etc.).</p>
+
+<p><strong>Design Pattern</strong> - an implementation of code which follows as much “industry standard” as possible to achieve clean organization of our code.</p>
+
+<p><strong>MVC</strong> - “Model, View, Controller” design pattern; a way of organizing our code into logical portions where our “business logic” is managed by the Controller, the “data logic” is managed by the Models, and the “presentation logic” is managed by the Views.</p>
+
+<h2 id="reminders">Reminders</h2>
+
+<ol>
+  <li>
+    <p><strong>There is no one right way</strong> to refactor and structure API consumption in Rails or in any framework. We will introduce you to a few ideas and design patterns but we are not picky about which patterns you use.</p>
+  </li>
+  <li>
+    <p>Before refactoring anything, it is <strong>essential</strong> that robust testing is already in place. See section on “Red, Green, Refactor Below”</p>
+  </li>
+</ol>
+
+<hr />
+
+<h2 id="identifying-candidates-for-refactoring">Identifying Candidates for Refactoring</h2>
+
+<h3 id="warm-up">Warm-Up</h3>
+
+<ol>
+  <li>
+    <p>What anti-patterns do you see in the current implementation of API consumption in the <code class="language-plaintext highlighter-rouge">consuming-apis-complete</code> branch, specifically in the <code class="language-plaintext highlighter-rouge">ImagesController</code>?</p>
+  </li>
+  <li>
+    <p>List out all the responsibilities the controller is handling</p>
+  </li>
+</ol>
+
+<section class="dropdown">
+  <h3 id="possible-answers---no-peeking">Possible Answers - No peeking!</h3>
+
+  <ol>
+    <li>Our controller is handling every step of the process. This is a violation of MVC, as business logic and presentation logic should not live in the controller. Controllers should instead be slim and only direct traffic by delegating to other classes. This is also a violation of abstraction and encapsulation, two principles of Object Oriented Programming.</li>
+    <li>The controller is:
+      <ul>
+        <li>Making a network call to Pexels</li>
+        <li>Parsing the JSON (which includes knowing which response keys are important for our needs)</li>
+        <li>Formatting this endpoint’s response</li>
+      </ul>
+    </li>
+  </ol>
+
+</section>
+
+<h2 id="how-do-we-refactor">How do we refactor?</h2>
+
+<h3 id="1-declarative-programming">1. Declarative Programming</h3>
+
+<p>Throughout this refactor, we will use a technique called <a href="https://vimeo.com/131588133">Declarative Programming</a>. This is also referred to as “dream-driven development”. Simply put, we write the code we <em>wish</em> existed and worry about implementation details later.</p>
+
+<p>We use this strategy in life all the time. A statement such as “I need to travel to New York City.” is an example. There is no mention of <em>how</em> we plan to get there. We could take a train, car, plane, bicycle, or some combination but those are details we will worry about later. Depending on your origin different strategies make more sense than others.</p>
+
+<p>It’s less likely, although perhaps more exciting, to select a means of travel without knowing the final destination. “I’d like to ride a train for 12 hours, a bus for 3 hours, and a boat for 2 hours. Where can I go?” There’s a good chance you won’t end up in NYC.</p>
+
+<p>Writing code this way makes it more likely that we’ll end up with abstractions that aren’t vulnerable to breaking if implementation changes.</p>
+
+<p>For example, currently we are using the Pexels API to retrieve this data. But maybe this data used to be provided by an API called Unsplash. By deciding how we want to interface with these objects and classes (picking our destination) prior to implementing API calls (how we are going to get there), we make this code more robust and less brittle. Imagine if we change APIs, and therefore the response we get back with the image data changes. The keys of that hash would likely change and this endpoint would suddenly stop working. When we refactor, we want to favor designs that minimize the number of layers that need to change if we switch out our API.</p>
+
+<h3 id="2-red-green-refactor">2. Red, Green, Refactor</h3>
+
+<p>We will also be using the Red, Green, Refactor technique. Red refers to a failing test, green refers to a passing test, and refactoring refers to making changes to improve code. We want to start with a failing test and then make it pass (red to green). We already did that step in the previous lesson. Then we make a refactor to improve the code. As we make that refactor, our test will most likely break, so our goal is for that refactor to end with our tests passing again. This way, we can use our tests to check our work every step along the way. We want to try to keep our refactors small and get back to green as often as possible to maintain our functionality.</p>
+
+<hr />
+
+<h2 id="refactoring-our-controller">Refactoring Our Controller</h2>
+
+<p>So far, most of the code we’ve written in Rails has fit nicely into the MVC structure, and we haven’t explored writing files much beyond controllers, models, and serializers. But now with API consumption, we’re handling logic that doesn’t fit squarely into any of these components.</p>
+
+<p><strong>Brainstorm:</strong> If you were building a vanilla Ruby application, what types of files do you think you would make to extract this logic out of the controller?</p>
+
+<section class="dropdown">
+  <h3 id="possible-refactor-part-1-gateways">Possible Refactor, Part #1: Gateways</h3>
+
+  <p><a href="https://mattbrictson.com/blog/gateway-pattern">Gateway classes</a> are a very common design pattern across many frameworks. They are also referred to as a <em>service</em> but this is a very overloaded term in Rails and software development as a whole. This section will refer to these classes as <em>gateways</em> but you’re welcome to name them however you’d prefer.</p>
+
+  <p>Gateways typically encapsulate the logic used for interacting with an external API. Let’s refactor our controller to use a gateway.</p>
+
+  <p><em>app/controllers/images_controller.rb</em></p>
+  <div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Api::V1::ImagesController</span> <span class="o">&lt;</span> <span class="no">ApplicationController</span>
+  <span class="k">def</span> <span class="nf">show</span>
+    <span class="n">artist</span> <span class="o">=</span> <span class="n">params</span><span class="p">[</span><span class="ss">:artist</span><span class="p">]</span>
+
+    <span class="n">first_photo</span> <span class="o">=</span> <span class="no">ImageGateway</span><span class="p">.</span><span class="nf">get_first_image</span><span class="p">(</span><span class="n">artist</span><span class="p">)</span>
+    
+    <span class="n">formatted_json</span> <span class="o">=</span> <span class="p">{</span>
+      <span class="ss">id: </span><span class="kp">nil</span><span class="p">,</span>
+      <span class="ss">type: </span><span class="s2">"image"</span><span class="p">,</span>
+      <span class="ss">attributes: </span><span class="p">{</span>
+        <span class="ss">image_url: </span><span class="n">first_photo</span><span class="p">[</span><span class="ss">:url</span><span class="p">],</span>
+        <span class="ss">photographer: </span><span class="n">first_photo</span><span class="p">[</span><span class="ss">:photographer</span><span class="p">],</span>
+        <span class="ss">photographer_url: </span><span class="n">first_photo</span><span class="p">[</span><span class="ss">:photographer_url</span><span class="p">],</span>
+        <span class="ss">alt_text: </span><span class="n">first_photo</span><span class="p">[</span><span class="ss">:alt</span><span class="p">]</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="n">render</span> <span class="ss">json: </span><span class="p">{</span> <span class="ss">data: </span><span class="n">formatted_json</span> <span class="p">}</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre></div>  </div>
+
+  <p>Now our Gateway class might look like this:</p>
+  <div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">ImageGateway</span>
+  <span class="k">def</span> <span class="nc">self</span><span class="o">.</span><span class="nf">get_first_image</span><span class="p">(</span><span class="n">query_term</span><span class="p">)</span>
+    <span class="n">conn</span> <span class="o">=</span> <span class="no">Faraday</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="ss">url: </span><span class="s2">"https://api.pexels.com"</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">faraday</span><span class="o">|</span>
+      <span class="n">faraday</span><span class="p">.</span><span class="nf">headers</span><span class="p">[</span><span class="s2">"Authorization"</span><span class="p">]</span> <span class="o">=</span> <span class="no">Rails</span><span class="p">.</span><span class="nf">application</span><span class="p">.</span><span class="nf">credentials</span><span class="p">.</span><span class="nf">pexels</span><span class="p">[</span><span class="ss">:key</span><span class="p">]</span>
+    <span class="k">end</span>
+
+    <span class="n">response</span> <span class="o">=</span> <span class="n">conn</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="s2">"/v1/search"</span><span class="p">,</span> <span class="p">{</span> <span class="ss">query: </span><span class="n">query_term</span> <span class="p">})</span>
+    <span class="c1"># OR response = conn.get("/v1/search?query=#{artist})</span>
+
+    <span class="n">json</span> <span class="o">=</span> <span class="no">JSON</span><span class="p">.</span><span class="nf">parse</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="nf">body</span><span class="p">,</span> <span class="ss">symbolize_names: </span><span class="kp">true</span><span class="p">)</span>
+    <span class="n">json</span><span class="p">[</span><span class="ss">:photos</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre></div>  </div>
+
+  <p>Notice how much logic that extracted out of the controller! Hooray!</p>
+
+  <p>If we are making calls to more than one Pexels endpoint in our application, we could also consider adding additional class methods to our Gateway and extacting the Faraday connection set up into a helper method that can be called in each method.</p>
+
+  <div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">ImageGateway</span>
+  <span class="k">def</span> <span class="nc">self</span><span class="o">.</span><span class="nf">get_first_image</span><span class="p">(</span><span class="n">query_term</span><span class="p">)</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="n">conn</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="s2">"/v1/search"</span><span class="p">,</span> <span class="p">{</span> <span class="ss">query: </span><span class="n">query_term</span> <span class="p">})</span>
+
+    <span class="n">json</span> <span class="o">=</span> <span class="no">JSON</span><span class="p">.</span><span class="nf">parse</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="nf">body</span><span class="p">,</span> <span class="ss">symbolize_names: </span><span class="kp">true</span><span class="p">)</span>
+    <span class="n">json</span><span class="p">[</span><span class="ss">:photos</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+  <span class="k">end</span>
+
+  <span class="kp">private</span>
+  
+  <span class="k">def</span> <span class="nc">self</span><span class="o">.</span><span class="nf">conn</span>
+    <span class="no">Faraday</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="ss">url: </span><span class="s2">"https://api.pexels.com"</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">faraday</span><span class="o">|</span>
+      <span class="n">faraday</span><span class="p">.</span><span class="nf">headers</span><span class="p">[</span><span class="s2">"Authorization"</span><span class="p">]</span> <span class="o">=</span> <span class="no">Rails</span><span class="p">.</span><span class="nf">application</span><span class="p">.</span><span class="nf">credentials</span><span class="p">.</span><span class="nf">pexels</span><span class="p">[</span><span class="ss">:key</span><span class="p">]</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre></div>  </div>
+
+  <p>We also know that serializers are a very helpful tool for managing the presentation of our data. Once we extract the JSON response formatting out of the controller, our controller action looks even nicer!</p>
+
+  <p><em>app/controllers/images_controller.rb</em></p>
+  <div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Api::V1::ImagesController</span> <span class="o">&lt;</span> <span class="no">ApplicationController</span>
+  <span class="k">def</span> <span class="nf">show</span>
+    <span class="n">artist</span> <span class="o">=</span> <span class="n">params</span><span class="p">[</span><span class="ss">:artist</span><span class="p">]</span>
+
+    <span class="n">first_photo</span> <span class="o">=</span> <span class="no">ImageGateway</span><span class="p">.</span><span class="nf">get_first_image</span><span class="p">(</span><span class="n">artist</span><span class="p">)</span>
+
+    <span class="n">render</span> <span class="ss">json: </span><span class="no">ImageSerializer</span><span class="p">.</span><span class="nf">format_image_response</span><span class="p">(</span><span class="n">first_photo</span><span class="p">)</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre></div>  </div>
+
+  <p>This is a huge improvement!</p>
+
+</section>
+
+<section class="dropdown">
+  <h3 id="possible-refactor-part-2-poros">Possible Refactor, Part 2: POROs</h3>
+
+  <p>You may have noticed that we mentioned the potential problem with hash keys changing in the “Declarative Programming” section but we haven’t really addressed it. If we were to change APIs from Pexels to another service, we would have to change the gateway class and the serializer to makes sure all necessary data can be accessed. This is especially bothersome in a serializer. The presentation layer of our code should not need to know the details about the external API response’s data format.</p>
+
+  <p>On top of this coupling, our application is also carting around a much larger hash than it really needs to. Our endpoint only needs to expose 4 attributes, but the individual image hash that comes from Pexels is 20 lines long! This is a violation of YAGNI – we don’t need all that data!</p>
+
+  <p>One possible alternative to using transporting a large hash that’s been parsed from the Pexels response is to use a PORO: a plain old Ruby object.</p>
+
+  <p>While the term is new, the concept is not. This is what you built all through Module 1. In this context, and in Mod 1, we used these POROs as <em>domain objects</em>, or objects that represent real things in the world. Some domain objects you might have built before include <code class="language-plaintext highlighter-rouge">Dog</code>, <code class="language-plaintext highlighter-rouge">Vehicle</code>, <code class="language-plaintext highlighter-rouge">Wizard</code>, <code class="language-plaintext highlighter-rouge">Team</code> and <code class="language-plaintext highlighter-rouge">Deck</code>.</p>
+
+  <p>Some benefits of using POROs over a hash here include:</p>
+  <ul>
+    <li>We’re only storing the attributes we need or care about</li>
+    <li>We can name the attributes however we’d like</li>
+    <li>We can use <code class="language-plaintext highlighter-rouge">attr_readers</code> to control access to these attributes and prevent accidental data changes.</li>
+    <li>We can build some lightweight methods for handling these objects, like a method that formats an address or calculates an amount in a different currency.</li>
+  </ul>
+
+  <p>Let’s refactor our logic to use a <code class="language-plaintext highlighter-rouge">Image</code> PORO!</p>
+
+  <p><em>app/poros/image.rb</em></p>
+  <div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Image</span>
+  <span class="nb">attr_reader</span> <span class="ss">:url</span><span class="p">,</span>
+              <span class="ss">:photographer</span><span class="p">,</span>
+              <span class="ss">:photographer_url</span><span class="p">,</span>
+              <span class="ss">:alt_text</span>
+
+  <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+    <span class="vi">@url</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="ss">:url</span><span class="p">]</span>
+    <span class="vi">@photographer</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="ss">:photographer</span><span class="p">]</span>
+    <span class="vi">@photographer_url</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="ss">:photographer_url</span><span class="p">]</span>
+    <span class="vi">@alt_text</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="ss">:alt</span><span class="p">]</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre></div>  </div>
+
+  <p>And now we can refactor our <code class="language-plaintext highlighter-rouge">ImageGateway</code> to parse the JSON response into an <code class="language-plaintext highlighter-rouge">Image</code> object.</p>
+
+  <p><em>app/gateways/image_gateway.rb</em></p>
+  <div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">ImageGateway</span>
+  <span class="k">def</span> <span class="nc">self</span><span class="o">.</span><span class="nf">get_first_image</span><span class="p">(</span><span class="n">query_term</span><span class="p">)</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="n">conn</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="s2">"/v1/search"</span><span class="p">,</span> <span class="p">{</span> <span class="ss">query: </span><span class="n">query_term</span> <span class="p">})</span>
+
+    <span class="n">json</span> <span class="o">=</span> <span class="no">JSON</span><span class="p">.</span><span class="nf">parse</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="nf">body</span><span class="p">,</span> <span class="ss">symbolize_names: </span><span class="kp">true</span><span class="p">)</span>
+    <span class="no">Image</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="n">json</span><span class="p">[</span><span class="ss">:photos</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
+  <span class="k">end</span>
+</code></pre></div>  </div>
+
+  <p>Again, be mindful of continuing to run your tests to make sure nothing we’ve written has broken existing tests. We’ll also want to write <em>unit tests</em> for the new classes we’ve created. Let’s think about what each of these new specs could verify:</p>
+
+  <ul>
+    <li><strong>Gateway Class</strong>: Verify that the method receives a query argument and returns an image object. Optionally stub the response that comes back from the API call.</li>
+    <li><strong>PORO</strong>: Verify that attributes are properly populated from the data passed in. Verify behavior of any methods needed for data cleaning or manipulation.</li>
+  </ul>
+
+  <p><strong>Try writing these tests yourself before you check out implementations on the completed branch from class</strong></p>
+
+</section>
+
+<section class="note">
+  <h3 id="domain-objects-vs-utility-classes">Domain Objects vs Utility Classes</h3>
+
+  <p>You might have noticed that technically, both our <code class="language-plaintext highlighter-rouge">ImageGateway</code> and our <code class="language-plaintext highlighter-rouge">Image</code> class are POROs, in that they are both regular ol’ classes with no special Rails magic involved. However, as we design POROs, it’s important to think about the difference between these 2 types of classes.</p>
+
+  <ul>
+    <li><strong>Domain Objects</strong> represent a “thing” in the real world, and can be instantiated and hold state. We can think of these like a <em>noun</em></li>
+    <li><strong>Utility Classes</strong> perform a certain task, and typically don’t need to be instantiated. They might contain all class methods. We can think of these like a <em>verb</em></li>
+  </ul>
+
+</section>
+
+<section class="dropdown">
+  <h3 id="additional-refactoring-patterns-to-explore">Additional Refactoring Patterns to Explore</h3>
+
+  <p>Interested in checking out other design patterns that could be applied to this context?</p>
+
+  <ul>
+    <li><a href="http://wiki.c2.com/?FacadePattern">Facade Pattern</a></li>
+    <li><a href="https://mattbrictson.com/blog/registry-pattern">Registry Pattern</a></li>
+    <li><a href="https://www.toptal.com/ruby-on-rails/rails-service-objects-tutorial">Service Objects</a></li>
+  </ul>
+
+  <p>Remember - there is no <em>one right way</em> to refactor this code, and the world is full of many opinions on all of these patterns. As you explore refactoring options, observe your own developer intuition and opinions, and be prepared to defend your design choices!</p>
+
+</section>
+
+<h2 id="checks-for-understanding">Checks for Understanding</h2>
+
+<ul>
+  <li>Describe your preferred refactoring workflow (i.e. red-green-refactor, declarative programming, etc.)</li>
+  <li>Describe the code smells from the controller action at the beginning of this lesson (<code class="language-plaintext highlighter-rouge">ImagesController</code>)</li>
+  <li>What is the responsibility of every new file you’ve created today?</li>
+</ul>
+
+<p>You can find a completed implementation that uses a gateway and a PORO domain object <a href="https://github.com/turingschool-examples/set-list-api/tree/refactoring-api-consumption-complete">here</a></p>
+
+:ET
