@@ -57,7 +57,7 @@ Use the data in `src/data/movie_posters.js`. The import is set up for you in `Ap
 ### 👀 Preview
 
 Screenshot:
-![iteration 1 screenshot](../../assets/images/projects/rancid-tomatillos/mainpage.png)
+![iteration 1 screenshot](../../../assets/images/projects/rancid-tomatillos/mainpage.png)
 
 In Motion:
 <div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/e75998c4c30447e08b4d492acf3ba035?sid=d0dc143e-2bfd-4c43-ad5e-d956e0acda73" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
@@ -82,7 +82,7 @@ Again, we will not be making any network requests yet.
 ### 👀 Preview
 
 Screenshot:
-![iteration 2 screenshot](../../assets/images/projects/rancid-tomatillos/voting.png)
+![iteration 2 screenshot](../../../assets/images/projects/rancid-tomatillos/voting.png)
 
 In Motion:
 <div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/4626f40ab216435ca27fe7f70cea386d?sid=6c44835d-3bb7-469c-bc62-fef0c7eda25a" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
@@ -104,7 +104,7 @@ We're still not making a network request! Use the data in `src/data/movie_detail
 ### 👀 Preview
 
 Screenshot:
-![iteration 3 screenshot](../../assets/images/projects/rancid-tomatillos/details_hardcoded.png)
+![iteration 3 screenshot](../../../assets/images/projects/rancid-tomatillos/details_hardcoded.png)
 
 In Motion:
 <div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/72d10684d8d84671baecb864f34b5c3f?sid=fe025c68-5c08-40d6-bf03-ebe63f5e921f" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
@@ -114,7 +114,7 @@ In Motion:
 <section class="dropdown">
 ### Iteration 4: Network Requests
 
-For this iteration, we'll refactor our application to use actual data from a backend instead of our mock data files. 
+For this iteration, we'll finally refactor our application to use actual data from a backend instead of our mock data files. 🥳
 
 **[Here are the API Docs.](./rancid_tomatillos_api_documentation)**
 
@@ -127,7 +127,7 @@ For this iteration, we'll refactor our application to use actual data from a bac
 ### 👀 Preview
 
 Screenshot:
-![iteration 4 screenshot](../../assets/images/projects/rancid-tomatillos/details.png)
+![iteration 4 screenshot](../../../assets/images/projects/rancid-tomatillos/details.png)
 
 In Motion:
 <div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/87f7179a6e8a440b8432e149424e5c8b?sid=f4fa1691-c0ff-4e6d-9796-fafcc456e008" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
@@ -165,8 +165,7 @@ We've also given you some mock data to use for your testing. You can find those 
 
 **2**. To ensure that your network requests have been intercepts correctly, check the 🟢s:  
   
-<img style="width: 400px;" src='../../assets/images/projects/rancid-tomatillos/intercept_example.png'/>
-<!-- ![intercept example]() -->
+<img style="width: 400px;" src='../../../assets/images/projects/rancid-tomatillos/intercept_example.png'/>
 
 </section>
 
@@ -229,7 +228,7 @@ This extension is optional and should only be attempted after all previous itera
 ### 👀 Preview
 
 Screenshot:
-![extension screenshot](../../assets/images/projects/rancid-tomatillos/search.png)
+![extension screenshot](../../../assets/images/projects/rancid-tomatillos/search.png)
 
 In Motion:
 <div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/a46429ca92894ae9b3825879e81ad6ec?sid=46d6b2a4-a13a-4594-9b67-ea18fe64eb1d" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
