@@ -112,7 +112,7 @@ In Motion:
 </section>
 
 <section class="dropdown">
-### Iteration 4: Network Requests
+### Iteration 4: Refactor with Network Requests
 
 For this iteration, we'll finally refactor our application to use actual data from a backend instead of our mock data files. 🥳
 
