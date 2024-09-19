@@ -16,6 +16,7 @@ The front end is built to make network requests to your locally running rails se
 
 Take time to digest the front end code and features.  Then, complete the front end requirements listed below.
 
+---
 
 Now that we have all this coupon data, we can update our frontend to display that, too! Your goal is to complete the following user story:
 
