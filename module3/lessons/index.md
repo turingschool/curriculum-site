@@ -16,12 +16,12 @@ title: Module 3 - Lessons
 * [Ideabox Review](./react_ideabox_review)
 * [Advanced Data Management](./react_advanced_data_management)
 
-## Advanced JavaScript
+## Advanced Frontend Concepts
 * [Intro To Accessibility](./intro-to-a11y)
 * [Network Requests - Fetch](./network_requests)  
 <!-- * [Intro to Cypress Testing](.) -->
 <!-- * [FE Error Handling](.) -->
-<!-- * [Responsiveness - Mobile Design using Bootstrap](.) -->
+* [Responsive Layouts](./css_responsive_layouts)
 <!-- * [Async JavaScript](.) -->
 <!-- * [Scope & Scope Chain](.)  -->
 
