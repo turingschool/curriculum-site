@@ -28,21 +28,21 @@ Try to limit your total time to approximately 8 hours on this portion of the pro
 
 Try to limit your total time to around 8 hours on this portion of the project. Prioritize what is important to get this working and as close to MVP as possible. Please do not attempt to recreate an entire existing entity's website. We're interested in seeing your ability to write clean code to solve a problem with an understanding of basic UX. We're not looking for fancy UI tricks or hacks.
 
+### Prompts
+
 <section class="note">
 ### Note
 
 Your specific prompt will be provided to you during the assessment kickoff.
 </section>
 
-### Prompts
-
-#### Tea Subscription
+<!-- #### Tea Subscription
 - [Part 1: Backend API](./tea_take_home_be)
 - [Part 2: Frontend UI](./tea_take_home_fe)
 
 #### News Reader
 - [Part 1: Backend API](./news_take_home_be)
-- [Part 2: Frontend UI](./news_take_home_fe)
+- [Part 2: Frontend UI](./news_take_home_fe) -->
 
 ### Presentation Guidelines and Rubric
 

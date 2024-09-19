@@ -22,9 +22,9 @@ You will create a tea subscription application that...
 
 At a minimum, you must show:
 
-* A list of teas (name, image, description if present)
-* A "detailed" view for each tea (name, image, price, description, subscription type, and button to subscribe)
-  * Teas in the list must link to a detailed tea view within your app (linking to the source website does not fulfill this requirement)
+* List of teas (name, image)
+* Detailed View (name, image, price, description)
+* The ability to create a tea subscription (for one tea at a time or multiple teas) somewhere in the application
 * Some sort of search, filter, OR sort
 
 Beyond the base requirements, include any additional elements you'd like, just be mindful of your time. You don't need to go overboard, just consider what might be necessary to achieve MVP so that this news feed is easy-to-use, information is clear, and navigation is painless. Put yourself in a user's shoes and think about what you would need (or want). The app should be usable on desktop, tablet, and mobile devices.
