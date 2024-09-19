@@ -37,7 +37,7 @@ In any programming language, variables are what we use to store data values so t
 
 In Ruby, you declare a variable simply by assigning a value to it (`person_age = 21`, `country_name = "Spain"`). In JavaScript, you declare the variable using a keyword of either `var`, `let`, or `const`. You do not specify the data type.
 
-Check out the JS syntax in this [repl](https://replit.com/@replit1369/jsfundamentals#index.js).  Fork the repl so you can play with this code.  Run it, break it, get weird with it.
+Go to the [js_fundamentals file](https://github.com/turingschool-examples/se-mod2-exercises/blob/main/lessons/js_fundamentals.js) of your SE-Mod2-exercises repo. Check out the JS syntax in the code there. Run it, break it, get weird with it.
 <section class="dropdown">
 ### JS Syntax Examples
 
@@ -92,7 +92,7 @@ The complex data types we'll work with are:
 
 We access data in objects and arrays similarly to how we would do so in Ruby - using dot notation or bracket notation.
 
-### Your Turn (in your forked repl)
+### Your Turn (in your js fundamentals file)
 
 * Use console.log and dot notation to print the value "brown" from the policeSketchDescription object
 * Use console.log and dot notation to print # of visible tattoos from the policeSketchDescription object
@@ -112,7 +112,7 @@ We access data in objects and arrays similarly to how we would do so in Ruby - u
 </section>
 
 
-### Your Turn (in your forked repl)
+### Your Turn (in your js fundamentals file)
 
 * Declare 2 variables, one named "quantity" and one named "mythicalCreature".
 * Declare a variable named "creatureCount" but don't assign it a value quite yet.  If you console log it, it should give you "undefined"
@@ -129,7 +129,7 @@ let creatureCount = quantity + mythicalCreature;
 ```
 </section>
 
-In your repl, console log your "creatureCount" variable.  What do you get?  
+In your file, console log your "creatureCount" variable.  What do you get?  
 
 ## Concatenating Variable Values
 
@@ -316,7 +316,7 @@ function logStatement() {
 - You declare a function using the keyword `function`.
 - You name the function based on what it does using a present-tense action verb. Then include a set of parentheses after the name, which can be empty or accept parameters.
 - After the parenthesis you open a set of curly braces, which act as bookends to hold the set of statements you want the function to run when it is called.
-- Calling, or "invoking" the function is quite easy. Simply type the function name with its parenthesis and any associated parameters.
+- Calling, or "invoking" the function is different than how you've called methods in Ruby. In JavaScript you must put **parenthesis after the function name** to invoke it.  Any arguments you're passing to the function will go inside those parenthesis.
 
 ## Call a Function:
 ```javascript
@@ -327,7 +327,9 @@ logStatement();
 logStatement("arg1", "arg2");
 ```
 
-When this code is read, `logStatement()` is "called", all three statements within the function's body (those curly braces) get run.
+When this code is read, `logStatement()` is "called", and all three statements within the function's body (those curly braces) get run.
+
+**In JS, seeing `()` after the function name is how you know it is a function being invoked.**
 
 ### Your Turn
 Let's go ahead and declare `logStatement()` in the console together and then call it. What do you notice about the code as it is being run? What do you notice about the code being run if you swap the 2nd and 3rd statements?
@@ -345,8 +347,8 @@ Create your own functions in the console:
 Functions often need data to do their job. We pass data into function with _parameters and arguments_. You declare your parameters inside the () parenthesis of the function declaration.  Parameters act like variables INSIDE the function. They get their values when you pass _arguments_ in the function invocation and you can use the parameters within the function just like you would use variables.
 
 ### Parameters vs. Arguments
-There's a subtle difference. Parameters are the placeholders declared in the function declaration (similar to declaring a variable).
-Arguments are the assigned values you provide for each parameter/placeholder each time you invoke the function.
+There's a subtle difference. **Parameters** are the **placeholders** declared in the function declaration (similar to declaring a variable).
+**Arguments** are the **assigned values** you provide for each parameter/placeholder each time you invoke the function.
 
 ```javascript
 // parameters named on declaration of function
@@ -372,7 +374,7 @@ For example:
 You will often be invoking functions within other functions and using their return values elsewhere as you build your code. Some functions return something, other functions just do something.  
 
 To get a value back from a function, you have to use the `return` keyword.  
-Let's practice in our repl:
+Let's practice in our file:
 
 ```javascript
 function addTwoNumbers(num1, num2) {
@@ -442,24 +444,28 @@ identifyCookie("oatmeal raisin")
 identifyCookie("sugar")
 ```
 
+### Your Turn
+
+- In your file, copy/paste the function skeleton and invocations below.  
+- Build the "guts" of the function so that it looks at the hoursOfSleep parameter and responds based on the value that is passed as an argument on the invocation.  
+  - Your function should log "I am groggy." for less than 6 hours of sleep.  
+  - Your function should log "I feel fantastic!" for 6 or more hours of sleep.   
+
 ```javascript
 function evaluateSleep(hoursOfSleep) {  
-  if (hoursOfSleep < 6) {
-    console.log('I am groggy.');
-  } else {
-    console.log('I feel fantastic!');
-  }
+  //Add your code here
 }
 
 evaluateSleep(8)
 evaluateSleep(4)
 ```
+<br>
 
 ## for loops
 
 All programming languages have ways to loop (or iterate) through data. JS is no exception. 
 
-Copy/paste this JavaScript for loop into your repl and run it to see how the value of "i" changes on each "loop"
+Copy/paste this JavaScript for loop into your file and run it to see how the value of "i" changes on each "loop"
 ```javascript
 for (let i = 0; i < 10; i++) {
   console.log(i);
@@ -477,7 +483,7 @@ If we break this down, we see that our loop is constructed from the following pa
 
 We can use `for` loops to execute some code a certain number of times, like we're doing above.  More commonly, we can use `for` loops with arrays to access each element in the array one at a time using `i` and bracket notation, and then do something _to_ that element or _with_ that element.
 
-Copy/paste the following examples into your repl and run the code.
+Copy/paste the following examples into your file and run the code.
 ```js
 //Example 1
 let fruits = ['apples', 'oranges', 'bananas'];
@@ -505,9 +511,9 @@ shoutForChildren()
 ```
 
 <section class="call-to-action">
-### In your repl:  
+### In your file:  
 
-Copy/paste the code below into your repl. Finish building the "guts" of the calculateTotalPoint function based on the commented out directions.
+Copy/paste the code below into your file. Finish building the "guts" of the calculateTotalPoint function based on the commented out directions.
 
 ```js
 // Practice 1

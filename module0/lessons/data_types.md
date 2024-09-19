@@ -156,7 +156,9 @@ In an irb session, simply calling a variable returns the value stored in that va
 
 In order to visually see the return value of a variable, we can use the `puts` or `print` command before any variable or even data to see that value printed to the console. 
 
-The difference between the two is that <code>puts</code> will log each statement to the console on a new line, while <code>print</code> will log statements side by side, without any spacing in between. Take a look at <a href="https://replit.com/@turingschool/ruby-puts-print#main.rb" target="blank">this replit</a> to see those commands in action.
+Take a look at <a href="https://replit.com/@turingschool/m0lessonsrepl#main.rb" target="blank">this Mod 0 Lessons Repl</a> to see those commands in action.  _Note: Due to replit's limits, you may need to delete a previous repl in order to fork this one.  You'll use this repl in future Mod 0 lessons as well so bookmark it for easy access._
+
+The difference between the two is that <code>puts</code> will log each statement to the console on a new line, while <code>print</code> will log statements side by side, without any spacing in between. 
 
 ## Practice
 

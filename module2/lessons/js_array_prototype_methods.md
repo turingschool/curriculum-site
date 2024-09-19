@@ -4,6 +4,8 @@ length: 90
 tags: javascript, arrays, prototypes, mutator, accessor, callback functions
 ---
 
+We will use the [array prototype methods file](https://github.com/turingschool-examples/se-mod2-exercises/blob/main/lessons/array_prototype_methods.js) in the lessons folder of your SE-Mod2-exercises repo to work through the examples in this lesson.  Open that file in VS Code now. 
+
 ## Learning Goals
 
 * Be able to describe prototype methods, mutators and accessors
@@ -179,7 +181,7 @@ const prices = [4.99, 5.50, 7.00, 10.25];
 ```  
 
 #### Example #2
-Using an array of temperature data in Fahrenheit, convert the date to degrees Celsius and store them in a variable called `degreesC`. [Here is the formula](http://www.rapidtables.com/convert/temperature/how-fahrenheit-to-celsius.htm){:target='blank'} to convert from Fahrenheit to Celsius.  *NOTE: dont worry about rounding the decimals in repl.it!
+Using an array of temperature data in Fahrenheit, convert the date to degrees Celsius and store them in a variable called `degreesC`. [Here is the formula](http://www.rapidtables.com/convert/temperature/how-fahrenheit-to-celsius.htm){:target='blank'} to convert from Fahrenheit to Celsius.  *NOTE: dont worry about rounding the decimals, that's not our priority here.
 
 ```js
 const degreesF = [67, 32, 55, 102]

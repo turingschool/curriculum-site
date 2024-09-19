@@ -186,10 +186,10 @@ end
 
 Then in your serializer you can make use of that method by adding that attribute
 
-*app/serializers/store_serializer.rb*
+*app/serializers/song_serializer.rb*
 
 ```ruby
-class StoreSerializer
+class SongSerializer
   include JSONAPI::Serializer
   attributes :id, :title, :length, :play_count, :average_plays_per_day
 end

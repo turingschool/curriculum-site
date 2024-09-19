@@ -100,7 +100,7 @@ You are invoking the `upcase` **Method** on the string`"Hello World"`. The **Ret
 <section class="dropdown">
 ### Let's see it in JavaScript
 
-Feel free to copy paste these lines of code into the dev console in your browser or into a repl on replit.com
+Feel free to copy paste these lines of code into the dev console in your browser. You can open the dev console in Chrome with `command+option+i`.
 ```js
 var greeting = "Hello World"
 
@@ -163,7 +163,7 @@ pry(main)> "Hello World".gsub "World", "Turing"
 
 Note: Parenthesis are *not* optional when passing arguments to a method in JavaScript
 
-Feel free to copy paste these lines of code into the dev console in your browser or into a repl on replit.com
+Feel free to copy paste these lines of code into the dev console in your browser. You can open the dev console in Chrome with `command+option+i`.
 ```js
 var greeting = "Hello World"
 
@@ -215,7 +215,7 @@ pry(main)> greeting == "Hello World".downcase
 <section class="dropdown">
 ### Let's see it in JavaScript
 
-Feel free to copy paste these lines of code into the dev console in your browser or into a repl on replit.com
+Feel free to copy paste these lines of code into the dev console in your browser. You can open the dev console in Chrome with `command+option+i`.
 ```js
 var greeting = "Hello World".toLowerCase()
 

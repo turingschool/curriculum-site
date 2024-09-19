@@ -757,11 +757,11 @@ It should not return a 404 if no matches are found.
 </section>
 </section>
 
-<section class="dropdown">
+<!-- <section class="dropdown">
 ### BE Deployment (Required)
 
 Groups are required to deploy this API to the Internet, using either Heroku or Render. To avoid difficult deployment troubleshooting, please deploy early and deploy often! To use Heroku, follow [these instructions](https://devcenter.heroku.com/articles/getting-started-with-rails7) and don't forget to provision a database! If you're using Render, check out our guide [here](https://curriculum.turing.edu/module2/lessons/deployment_guide)
-</section>
+</section> -->
 
 <section class="call-to-action">
 
