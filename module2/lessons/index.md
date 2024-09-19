@@ -17,6 +17,7 @@ title: Module 2 - Lessons
 - [JS: DOM Manipulation II](./js_dom_manipulation_ii)
 - [JS: Array Prototype Methods](./js_array_prototype_methods)
 - [JS: Approaching Problems Many Ways](./js_approaching_problems_many_ways)
+- [Midmods Practice](./midmods_practice)
 
 ## Web Applications
 
