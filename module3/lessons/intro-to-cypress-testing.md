@@ -401,6 +401,61 @@ describe('Dashboard view', () => {
 - We can create fixtures to help us with this.
 - If you are interested in refactoring this test even further, look into the Want to learn more box at the end of this lesson. 
 </section>
+<section class="dropdown">
+### Using Fixtures to Simplify Intercepts
+Fixtures are a great way to manage and reuse static data in your tests. Let's walk through using a fixture for one of the intercepts above.
+First, create a fixture file. In your cypress/fixtures directory, create a file named teammates.json and add the following content:
+First, create a fixture file. In your cypress/fixtures directory, create a file named teammates.json and add the following content:
+
+```json
+{
+  "teammates": [
+    {
+      "email": "hannah@turing.io",
+      "id": 1,
+      "image": "https://ca.slack-edge.com/T029P2S9M-UPE0QSWEQ-d4bebe6f4d88-512",
+      "name": "Hannah Hudson",
+      "delivered": false
+    },
+    {
+      "email": "khalid@turing.io",
+      "id": 3,
+      "image": "https://ca.slack-edge.com/T029P2S9M-UDR1EJKFS-9351230a5443-512",
+      "name": "Khalid Williams",
+      "delivered": true
+    }
+  ]
+}
+```
+Next, update your test to use this fixture:
+
+```js
+cy.intercept(`http://localhost:3001/api/v1/users/2/teammates`, {
+  statusCode: 200,
+  fixture: 'teammates' // <<< Name of your fixture file 
+});
+```
+
+</section>
+<section class="dropdown">
+### Using body to pass in mock data
+
+You can also pass in mock data using the `body` argument. This is when you have smaller mock data that you want to pass in. 
+Choosing between using `fixture` or `body` is dependent on what you are working with, but both are good to know and use. 
+
+```js
+cy.intercept("GET", "http://localhost:3001/api/v1/users/11", {
+  statusCode: 200,
+  body: {
+    id: 11,
+    name: "Travis Rollins",
+    image: "https://ca.slack-edge.com/T029P2S9M-U4R41TZD2-7661f06e8c71-512",
+    email: "travis@turing.io",
+    password: "rollins20",
+  }
+}
+```
+</section>
 
 <section class="checks-for-understanding">
 ### Exit Ticket

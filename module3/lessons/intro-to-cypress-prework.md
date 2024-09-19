@@ -1,20 +1,11 @@
 ---
-title: Intro to Cypress Testing
+title: Intro to Cypress Prework
 length: 1 hour
 tags: Cypress, testing
 module: 3
 ---
-<!-- Keep the pre-work separated from the lesson 
-Pre-work needs to be moved to the new curriculum site 
-- I think we make this lesson too long, and pin pointed, part of the pre-work, small react app 
-- ideabox repo few test files and written out and then after they look through the item, this is how we do E2E testing, let us show them 
-look how to typing in the value and look how the post works, and corresponding test suits. 
-before feedback - section some other application and something similar and has the test suit and make sense of it
-now download these 2 repos and setup the cypress and see functional test suits. 
-What si on the page load.
 
- -->
-## Prework:
+***As prework for the Intro to Cypress lesson, complete this entire Prework lesson. Submit the deliverable, write down any questions you have, and bring them to the Intro to Cypress class.***
 In this lesson, we will first walk through how to set up Cypress and create a test suite for our IdeaBox application. 
 
 After, you're going to be working with a new codebase and testing multiple scenarios to explore the power of end-to-end tests and the tools **Cypress** provides.  
@@ -383,7 +374,7 @@ it('adds a new idea to the list', () => {
 ## Deliverables : **Clone down the following repos:**
 <section class="note">
 
-Deliverable: After setting up Cypress in the Feedback Loop UI repo, create a simple test that visits the homepage and verifies the presence of the login form. Submit a screenshot of your passing test in the Cypress Test Runner.
+Deliverable: After setting up Cypress in the Feedback Loop UI repo, ensure that you have Cypress installed and the three files created in the `e2e` directory. Submit a screenshot of your `e2e` directory showing the files.
 </section>
 
 **[UI](https://github.com/turingschool-examples/feedback-loop-ui){:target='blank'}**
