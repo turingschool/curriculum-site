@@ -8,32 +8,30 @@ title: Module 3 - Lessons
 * [Many To Many Relationship](./many-to-many) 
 <!-- * [Authorization](.) -->
 * [Testing Tools for API Consumption](./testing_tools_for_api_consumption)
-<!-- * [Refactoring Patterns for API Consumption](.) -->
+* [Refactoring Patterns for API Consumption](./refactoring_api_consumption)
 
 ## React
-* [React: Our First Ideabox](./react_ideabox)
-<!-- [Intro to React](.) -->
-<!-- * [Network Requests: GET & POST](.) -->
-<!-- * [React: Advanced Data Management](.) -->
+* [Ideabox Tutorial](./react_ideabox)
+* [Intro to React](./react_intro)
+* [Ideabox Review](./react_ideabox_review)
+* [Advanced Data Management](./react_advanced_data_management)
 * [Intro to Cypress Testing](./intro-to-cypress-testing)
 * [Intro to Cypress Prework](./intro-to-cypress-prework)
 
 
-
-
-
 ## Advanced JavaScript
-<!-- * [Intro To Accessibility](.)
-* [Intro to Cypress Testing](.)
-* [CORS Workshop](.)
-* [FE Error Handling](.)
-* [Responsiveness - Mobile Design using Bootstrap](.)
-* [Async JavaScript](.)
-* [Scope & Scope Chain](.) -->
-
+* [Intro To Accessibility](./intro-to-a11y)
+* [Network Requests - Fetch](./network_requests)  
+<!-- * [Intro to Cypress Testing](.) -->
+<!-- * [FE Error Handling](.) -->
+<!-- * [Responsiveness - Mobile Design using Bootstrap](.) -->
+<!-- * [Async JavaScript](.) -->
+<!-- * [Scope & Scope Chain](.)  -->
 
 ## Fullstack Web Development
 * [Intro to Service-Oriented Architecture](./intro_to_soa)
+* [Deployment Guide](./deployment_guide)
+* [CORS Workshop](https://github.com/turingschool-examples/whats_going_on_with_cors)
 
 ## Professional Development
 * [Mod 3 PD Curriculum](../pd/)

@@ -18,6 +18,13 @@ Versions:
 
 If you need help updating Ruby or Rails versions, check out [this page](https://backend.turing.edu/module3/misc/ruby_and_rails_versions). If you need to revisit Node installation, check out [this page](https://mod0.turing.edu/computer-setup#install-node). 
 
+### 1. Getting Deployment-Ready
+
+Sign up for the [GitHub Student Developer Pack](https://education.github.com/pack), using your `@turing.edu` email address.
+   - This step sometimes takes a few days for GitHub to complete, but once you sign up for your credits you'll be able to take advantage of their benefits!
+   - Follow [these instructions](https://mod4.turing.edu/lessons/intermission/gh-student-instructions.html) to get the info you require to complete registration. You'll need to wait (a few days) to be approved. 
+   - Once you're accepted, you should be able to sign up for Heroku Student. - Ask in #codehelp if you get stuck on any of these steps
+
 ### 1. Technical Resume
 
 To start your Professional Development work in mod 3, plan to spend 60-90 minutes completing [this async lesson on crafting your Resume](https://docs.google.com/presentation/d/1HDtaMhRxM226YZWQqe93ILUpBIzDLzXFMEKOmjT1yUc/edit#slide=id.p1). 

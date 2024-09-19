@@ -33,6 +33,25 @@
     letter-spacing: -5px;
   }
 
+  span {
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 1.1em;
+  }
+
+  div {
+    margin: 0px 0px 0px 90px;
+  }
+
+  a {
+    color: white;
+    border-color: white;
+  }
+
+  a:hover {
+    color: #F9AE04;
+    border-color: #F9AE04;
+  }
+  
   p {
     font-family: 'Helvetica Neue', sans-serif;
     font-size: 1.1em;

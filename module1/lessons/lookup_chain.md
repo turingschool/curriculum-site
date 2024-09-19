@@ -162,9 +162,9 @@ JavaScript does not have native support for mixins within its class system.
 
 ## Chart Exercise
 
-Break into small groups.
-
 Using `.class`, `.ancestors`, `.included_modules`, and `.superclass`, diagram the Object Model of these several commonly-used Ruby classes: Hash, Array, String, Integer, and Float.
+
+Feel free to collaborate with cohort mates!
 
 # The Lookup Chain and Polymorphism
 
@@ -208,7 +208,7 @@ Once you have finished the activity, write out the order of the Lookup Chain as 
 * `Modules`
   * Can be mixed-in to multiple classes (mixins)
 
-## WrapUp
+## Wrap Up
 
 * How does Ruby's lookup chain work? What is the order it checks things?
 * What are three methods you can use to learn about where a built-in Ruby method gets its components?

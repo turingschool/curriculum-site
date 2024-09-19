@@ -4,6 +4,12 @@ title: Coupon Codes
 
 This project is an extension of the Little Shop group project. You will add functionality for merchants to create coupons for their shop. 
 
+<section class="note">
+### Important Note 
+
+This is a solo project. All code must be written by you. You should use your resources as needed, but you must be prepared to explain and defend any code you write. Failure to be able to do so would indicate a lack of technical readiness for the next mod and result in a repeat.
+</section>
+
 ## Learning Goals
 
 * Write migrations to create tables and relationships between tables
@@ -16,7 +22,6 @@ This project is an extension of the Little Shop group project. You will add func
 
 ## Details
 
-* This is a solo project. All code must be written by you. You should use your resources as needed, but you must be prepared to explain and defend any code you write.
 * Must use Rails 7.1.x and Ruby 3.2.2. 
 * Additional gems to be added to the project must have instructor approval.
   * RSpec, Pry, Simplecov, Shoulda-Matchers, Orderly, jsonapi-serializer (or other serializer gem), HTTParty, Faker, Faraday, and FactoryBot are pre-approved

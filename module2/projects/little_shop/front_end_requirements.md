@@ -14,9 +14,9 @@ _[Back to Little Shop Home](./index)_
 
 Upon successful completion of the backend requirements, groups will be able to see their endpoint data within [this front end boilerplate repo](https://github.com/turingschool-examples/little-shop-fe-group-starter).  This front end repo uses vanilla JavaScript, CSS and HTML and was built with Vite - a fast and modern development build tool. You can (and should) learn more about Vite's features [here](https://vitejs.dev/).
 
-Follow the directions in repo's README to fork, clone, install and run the front end.  
+Follow the directions in repo's README to fork, clone, install and run the front end.  Do **not** clone the FE repo into your BE repo.  Keep these two repos separate - you will submit a link to each.
 
-The front end is built to make network requests to your locally running rails server using the endpoints at localhost:3000.   
+The front end is built to make network requests to your locally running rails server using the endpoints at localhost:3000. In order for the FE to function and display data successfully, you need to have your Rails API running on localhost:3000.  If your Rails API is not running, you will see fetch errors, and no data, in the FE application.
 
 Take time to digest the front end code and features.  Then, complete the front end requirements listed below.
 
@@ -43,7 +43,9 @@ As a developer, explore the code under the hood.  Take time to look through the 
 
 After confirming that your forked FE repo successfully consumes data from your BE rails application, your group will need to complete 3 additional tasks in the FE repo.  Styling, refactoring to use prototype methods, and your choice of an added feature. See below.
 
-Each requirement below asks you to complete a specific task/feature in your front end application.  Remember that you may need to refactor the code in several different areas in order to accomplish any given task, even a small-ish feature add.  The tasks below will likely have you making edits across all 3 main files - html, css and javascript.
+Each requirement below asks you to complete a specific task/feature in your front end application.  Remember that you may need to refactor the code in several different areas in order to accomplish any given task, even a small-ish feature add.  The tasks below may have you making edits across all 3 main files - html, css and javascript.  
+
+When you are finished with the FE requirements, update your FE repo's README using the template found in the README.  
 
 <section class="dropdown">
 ### Style it (Required)
