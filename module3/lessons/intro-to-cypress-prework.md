@@ -363,10 +363,23 @@ After clicking the submit button, we need to add more assertions to verify that 
 3. It verifies that our application is correctly handling the response from the intercepted POST request.
 
 Let's add these assertions:
-
-
-
-
+```js
+it('adds a new idea to the list', () => {
+    cy.intercept("POST", "http://localhost:3001/ideas", {
+      statusCode: 201,
+      body: {
+        title: "newIdeaTitle",
+        description: "newIdeaDescription"
+      }
+    }) 
+    cy.get('form input[name="title"]').type('newIdeaTitle')
+    cy.get('form input[name="description"]').type('newIdeaDescription')
+    cy.get('form button').click()
+      // Assertions to confirm the UI has been updated correctly
+    cy.get('.ideas-container > :nth-child(4)').should('contain', 'Test new idea')
+    cy.get('.ideas-container > :nth-child(4)').should('contain', 'Test new idea')
+})
+```
 ## Deliverables : **Clone down the following repos:**
 <section class="note">
 
