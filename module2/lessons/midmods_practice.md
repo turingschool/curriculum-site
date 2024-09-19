@@ -13,11 +13,15 @@ tags: javascript, assessment
 ### Assign Roles
 
 Before you go any further, determine who will be the `Student` and who will play the `Instructor` for the first round. (You will switch later.)
+
+If you have a group of 3, that's okay! Add an `Observer` role who will watch and provide feedback. There are 3 practice prompts so you'll each get a chance to be the `Student`!
 </section>
 
 ## Screen Set Up
 
 **Both people should follow these steps:**
+- Call each other on Slack. We will use Slack to talk to each other for assessments. 
+
 - Clone **[this repo](https://github.com/turingschool-examples/se2-midmods-practice/tree/main)**.
 
 **Instructor, follow these steps:**
@@ -99,10 +103,10 @@ findModernBooks = (year) => {
   const filteredBooks = books.filter(book => book.year >= year);
   const filteredBookTitles = filteredBooks.map(book => book.title);
 
-  return filteredBookTitles
+  return filteredBookTitles;
 }
 
-console.log(findModernBooks(2010))
+console.log(findModernBooks(2010));
 ```
 </section>
 
@@ -130,15 +134,38 @@ const groupByColor = () => {
       groupings[person.favoriteColor] = [];
     }
 
-    groupings[person.favoriteColor].push(person.name)
+    groupings[person.favoriteColor].push(person.name);
     
     return groupings;
   }, {})
 }
 
-console.log(groupByColor())
+console.log(groupByColor());
 ```
 </section>
+
+## Groups of 3 Only! Practice Round 3
+
+If you have a group of 3, make a final switch and have the final `Student` complete Practice #3.
+
+<section class="dropdown">
+### Don't peek until you're done! Practice #2 Possible Solution
+
+```js
+const calculateCost = (name) => {
+  let cost = 0;
+
+  orders[name].items.forEach(item => {
+    cost += item.price * item.quantity
+  })
+
+  return `$${cost}`;
+}
+
+console.log(calculateCost('marta'));
+```
+</section>
+
 
 ## Closing 
 
