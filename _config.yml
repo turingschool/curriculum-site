@@ -55,3 +55,6 @@ algolia:
     - assets
     - public
     - stylesheets
+
+sass:
+  quiet_deps: true
