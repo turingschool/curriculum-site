@@ -37,7 +37,7 @@ In any programming language, variables are what we use to store data values so t
 
 In Ruby, you declare a variable simply by assigning a value to it (`person_age = 21`, `country_name = "Spain"`). In JavaScript, you declare the variable using a keyword of either `var`, `let`, or `const`. You do not specify the data type.
 
-Go to the [js_fundamentals file](https://github.com/turingschool-examples/se-mod2-exercises/blob/main/lessons/js_fundamentals.js) of your SE-Mod2-exercises repo. Check out the JS syntax in the code there. Run it, break it, get weird with it.
+Go to the [js_fundamentals file](https://github.com/turingschool-examples/mod2-sandbox/blob/main/lessons/js_fundamentals.js) of your Mod 2 Sandbox repo. Check out the JS syntax in the code there. Run it, break it, get weird with it.
 <section class="dropdown">
 ### JS Syntax Examples
 
