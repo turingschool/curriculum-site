@@ -12,7 +12,7 @@ tags: prototype methods
 ## Activity
 
 ### Set Up
-- In VS Code, open up the [approaching problems many ways file](https://github.com/turingschool-examples/se-mod2-exercises/blob/main/lessons/approaching_problems_many_ways.js) in the lessons folder of your SE-Mod2-exercises repo. 
+- In VS Code, open up the [approaching problems many ways file](https://github.com/turingschool-examples/mod2-sandbox/blob/main/lessons/approaching_problems_many_ways.js) in the lessons folder of your Mod2 Sandbox repo. 
 - You'll see the following data and prompt in the file:
 ```js
 const ninetiesToys = [
