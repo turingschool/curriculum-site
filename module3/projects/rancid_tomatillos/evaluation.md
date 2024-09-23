@@ -8,7 +8,9 @@ _[Back to Rancid Tomatillos Home](./index)_
 
 ## Video Submission
 
-For the project evaluation, each project team should prepare a **10 minute** video presentation. Presentations longer than 10 minutes will not be reviewed and sent back for revision. You can use whatever tool you'd like, but we recommend [Loom](https://www.loom.com/) as a solid, free option. 
+For the project evaluation, each project team should prepare a **10 minute** video presentation. Presentations longer than 10 minutes will not be reviewed and sent back for revision. 
+
+We do not expect anything fancy - we will only be evaluating you on the content, not the quality of your video. We recommend simply getting onto a Zoom call together and recording via Zoom's tools. 
 
 All team members are expected to participate equally in the presentation. Students should focus on practicing technical communication that is succinct and utilizes appropriate technical vocabulary.
 
