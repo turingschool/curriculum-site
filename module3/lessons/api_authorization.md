@@ -482,5 +482,12 @@ Think about the responsibility of your SongsController.  Are there any responsib
 
 </section>
 
-
-
+## Checks for Understanding (aka possible interview questions!)
+* Describe the difference between authentication and authorization.
+* Outline the design of an ebay copycat application:
+    * what resources might exist?
+    * what routes might exist?
+    * How many roles would you need?
+    * what endpoints would be useful?
+    * how might name-spacing be used to structure the design?
+* Define what a 'callback' is in rails; and provide examples of when one would be used.
