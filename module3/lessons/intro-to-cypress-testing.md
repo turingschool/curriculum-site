@@ -4,23 +4,12 @@ length: 3 hours
 tags: Cypress, testing
 module: 3
 ---
-<!-- Keep the pre-work seperated from the lesson 
-Pre-work needs to be moved to the new curriculum site 
-- I think we make this lesson too long, and pin pointed, part of the pre-work, small react app 
-- ideabox repo few test files and written out and then after they look through the item, this is how we do E2E testing, let us show them 
-look how to typing in the value and look how the post works, and corresponding test suits. 
-before feedback - section some other application and something similar and has the test suit and make sense of it
-now download these 2 repos and setup the cypress and see functional test suits. 
-What si on the page load.
 
- -->
 <section class="call-to-action">
 ### Prework:
-Before this lesson, be sure you have worked through [this prework](https://frontend.turing.edu/lessons/module-3/intro-to-cypress-prework.html) to complete the necessary set-up steps.
+Before this lesson, be sure you have worked through [this prework](./intro-to-cypress-prework) to complete the necessary set-up steps.
 
 When we start the lesson you should have the Feedback Loop api ready and running and the Feedback Loop UI ready and running - with Cypress installed and the 3 specific spec files set up in your e2e directory.  
-
-<!--  Tweak that, and move it to pre-work, check out let us see how cypress, is testing, and tie it to the example they are looking at  -->
 </section>
 
 ## Learning Goals:
@@ -30,8 +19,6 @@ When we start the lesson you should have the Feedback Loop api ready and running
   * Intercepting and stubbing network requests
   * Happy and sad path user flows 
 * Understand how acceptance testing & end-to-end testing differ from unit & integration testing
-
-
 
 ##  What is Cypress?
 
