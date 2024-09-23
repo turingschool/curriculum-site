@@ -142,9 +142,9 @@ Frontend applications often involve asynchronous operations (like waiting for da
 
 
 
-## IdeaBox practice with Cypress:
+## Cypress Walkthrough with Ideabox:
 
-We are going to use our [IdeaBox repo](https://github.com/turingschool-examples/react-ideabox){:target='blank'} to practice some Cypress testing. Let's see how to add a few Cypress test files to test the following **user flows**:
+We are going to use our [IdeaBox repo](https://github.com/turingschool-examples/react-ideabox){:target='blank'} to practice some Cypress testing. We will test the following **user flows**:
 - As a user, I want to be able to see the title of the application. 
 - As a user, I want to be able to see the form to add a new idea. 
 - As a user, I want to be able to see the list of ideas on the dashboard when I load the page. 
@@ -152,6 +152,12 @@ We are going to use our [IdeaBox repo](https://github.com/turingschool-examples/
 
 
 ### Step 1: Installing Cypress
+
+First, we need to switch to the correct branch:
+```bash
+git fetch
+git checkout cypress-testing
+```
 We need to set up the Cypress testing framework in our application.
 Let's add the Cypress npm package to our application. 
 ```bash
@@ -186,13 +192,11 @@ npm run cypress
 
 4. Click "Create spec" to generate the new test file, then "Okay, run the spec" to run the tests.
 
-5. Cypress will create the file and show it in the list of specs.
+5. Cypress will create some files and run the sample test.
 
-6. Go back to your text editor and open the `dashboard_spec.cy.js` file. You can see the file structure in the IDE.and the code that was generated for us. 
-
-This process creates a new test file specifically for testing your dashboard functionality. As you become more familiar with Cypress, you'll find this interface makes it easy to organize and manage your test suite.
+6. Go back to your text editor and notice the new `cypress` directory. You can see there are many files there for us. We'll explore them as we go.
   
-Here is the code that was generated for us:
+Here is the code that was generated for us in the `cypress/e2e/dashboard_spec.cy.js` file:
 ```js
 describe('template spec', () => {
   it('passes', () => {
@@ -228,12 +232,16 @@ In order to run the visit before every `it` block, we need to add a `beforeEach`
 
 `beforeEach` is a Cypress test hook that allows you to run a set of commands before each test (`it` block) in a `describe` block.
 </section>
-Let's add that to our test.
+Let's add that to our test change that first test to include a `beforeEach`:
 
 ```js
 describe('Dashboard', () => {
   beforeEach(() => {
     cy.visit('http://localhost:3000')
+  })
+
+  it('displays the application title', () => {
+    cy.get('h1').should('contain', 'IdeaBox')
   })
 })
 ```
