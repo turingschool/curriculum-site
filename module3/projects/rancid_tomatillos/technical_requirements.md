@@ -17,6 +17,9 @@ You do not have to match our styling for this project. That said, we want you to
 
 You will be starting with this boilerplate repo: **[https://github.com/turingschool-examples/rancid-tomatillos-starter](https://github.com/turingschool-examples/rancid-tomatillos-starter)**. Follow the steps in the README carefully.
 
+<section class="note">
+### Turn in all deliverables via [this google sheet](https://docs.google.com/spreadsheets/d/1YDI4TAFdkOhpcFatdGONR7QtlDZVOpsvJVimtX77M6I/edit?usp=sharing).
+</section>
 
 **By the end of the day, Day 1:**
 * The link to your forked repo (should be renamed to NOT include "starter" in the name)
@@ -34,10 +37,6 @@ You will be starting with this boilerplate repo: **[https://github.com/turingsch
   - What components do you envision needing? What is the relationship between these components (parents, siblings, etc)?
   - Where will data be stored? Which components will need **state**?
   - How will information be passed around? What **props** will be necessary? 
-
-<section class="note">
-### Turn in all deliverables via [this google sheet](https://docs.google.com/spreadsheets/d/1YDI4TAFdkOhpcFatdGONR7QtlDZVOpsvJVimtX77M6I/edit?usp=sharing).
-</section>
 </section>
 
 <section class="dropdown">
