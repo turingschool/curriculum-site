@@ -24,7 +24,7 @@ title: Module 3 - Professional Development
 
 ### Week 4: 
   * [The Application Process](https://docs.google.com/presentation/d/e/2PACX-1vQQb_NqtACy5ea-EbE8KJX7QA62bpOC_YMB6tzsyL_dRuZqyVLKfAIZkFcLRj9MefGUuvT-WbRUzTQS/pub?start=false&loop=false&delayms=3000)
-  * [Behavioral Interview Preparation](./lessons/behavioral_interview_preparation) - paired with Front-end cohort
+  * [Behavioral Interview Preparation](./lessons/behavioral_interview_preparation)
  
 ### Week 5:
   * Review Roundtable of Career Materials 
