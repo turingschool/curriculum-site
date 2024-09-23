@@ -140,8 +140,6 @@ These commands simulate user actions in the browser, which is a core part of fro
 
 Frontend applications often involve asynchronous operations (like waiting for data to load). Cypress can handle this for us. We'll talk more about this in the next chapter, where we'll cover the Cypress tests for our IdeaBox application.
 
-
-
 ## Cypress Walkthrough with Ideabox:
 
 We are going to use our [IdeaBox repo](https://github.com/turingschool-examples/react-ideabox){:target='blank'} to practice some Cypress testing. We will test the following **user flows**:
@@ -150,14 +148,34 @@ We are going to use our [IdeaBox repo](https://github.com/turingschool-examples/
 - As a user, I want to be able to see the list of ideas on the dashboard when I load the page. 
 - As a user, I want to be able to add a new idea to the list.  
 
+### Step 0: Set Up
 
-### Step 1: Installing Cypress
+Navigate to your [IdeaBox repo](https://github.com/turingschool-examples/react-ideabox) directory (which you should have from other lessons).  
+  
+Switch to the correct branch:  
 
-First, we need to switch to the correct branch:
 ```bash
+# In the react-ideabox directory:
+
 git fetch
 git checkout cypress-testing
 ```
+Run the app:  
+
+```bash
+npm start
+```
+Get the [Ideabox API](https://github.com/turingschool-examples/ideabox-api) up and running (again, you should already have this one cloned down):  
+
+```bash
+# In the ideabox-api directory:
+
+node server.js
+```
+Check that it's working by going to `localhost:3000` in your browswer. You should see your Ideabox app running, with 3 cards on the page. 
+
+### Step 1: Installing Cypress
+
 We need to set up the Cypress testing framework in our application.
 Let's add the Cypress npm package to our application. 
 ```bash
@@ -178,7 +196,7 @@ Now it's time to run Cypress.
 ```bash
 npm run cypress
 ```
-**This will open the Cypress Test Runner, a user-friendly interface for managing your tests.** Follow these steps to create your first test file:
+This will open the Cypress Test Runner, a user-friendly interface for managing your tests. Follow these steps to create your first test file:
 
 1. In the Cypress Test Runner, select "E2E Testing".
 
@@ -186,24 +204,22 @@ npm run cypress
 
 1. Next, you'll see a list of browsers. Select "Chrome" and press "Start E2E Testing in Chrome".
 
-2. Select "Create new spec".
+1. Select "Create new spec".
 
-3. A dialog will appear. Enter `cypress/e2e/dashboard_spec.cy.js` as the file name.
+1. A dialog will appear. Enter `cypress/e2e/dashboard_spec.cy.js` as the file name.
 
-4. Click "Create spec" to generate the new test file, then "Okay, run the spec" to run the tests.
+1. Click "Create spec" to generate the new test file, then "Okay, run the spec" to run the tests.
 
-5. Cypress will create some files and run the sample test.
+1. Cypress will create some files and run the sample test.
 
-6. Go back to your text editor and notice the new `cypress` directory. You can see there are many files there for us. We'll explore them as we go.
-  
-Here is the code that was generated for us in the `cypress/e2e/dashboard_spec.cy.js` file:
+1. Go back to your text editor and notice the new `cypress` directory. You can see there are many files there for us. We'll explore them as we go. Let's start by focusing on the `cypress/e2e/dashboard_spec.cy.js` file, which has some code in there already:  
+
 ```js
 describe('template spec', () => {
   it('passes', () => {
     cy.visit('https://example.cypress.io')
   })
 })
-
 ```
 
 ### Step 2: Writing your first tests
@@ -250,7 +266,7 @@ Now before each test, Cypress will visit the application and run the test.
 - This approach more closely mimics actual user interactions.
 - Also, it's a good practice to have a fresh page load so each test is independent and does not rely on the results of another test.
 
-Now our h1 title test is passing, let's add our second test to check if the form is displayed on the page. 
+Now our h1 title test is passing, let's add our second test to check if the form is displayed on the page. Remember, all of these `it` blocks should be INSIDE of your `describe` block.
 ```js
   it('displays the form ', () => {
     cy.get('form').should('exist')
@@ -263,12 +279,28 @@ Next we want to check if the list of ideas is displayed on the page.
 ```js
   it('displays the list of ideas', () => {
     cy.get('.ideas-container').should('exist')
-    cy.get('.ideas-container').should('have.length.at.least', 1)
+    cy.get('.card').should('have.length', 3)
   })
 ```
-Great, now we have checked the dashboard to see if it contains the title, form, and list of ideas, let's move on to write tests for our GET request and POST request. 
 
-### Step 3: Testing the GET request
+Let's be more specific in that last test, though. It's not enough to just check that there are 3 idea cards. We want to actually check the contents of those card. Let's change that last test to look like this:
+```js
+  it('displays the list of ideas', () => {
+    cy.get('.ideas-container').should('exist')
+    cy.get('.card').should('have.length', 3)
+    cy.get('.card').first().find('h3').should('have.text', 'Sweaters for pugs')
+    cy.get('.card').first().find('p').should('have.text', 'To keep them warm')
+    cy.get('.card').first().find('button').should('exist')
+    cy.get('.card').last().find('h3').should('have.text', 'A game show called Ether/Or')
+    cy.get('.card').last().find('p').should('have.text', 'When you lose you get an un-potty trained puppy')
+    cy.get('.card').first().find('button').should('exist')
+  })
+```
+Whenever we are rendering many copies of the same component, we want to confirm that:
+- There are the number of components we expect to see (i.e. 3 cards)
+- All of the content is correct for the first AND last card (i.e. `h3`, `p`, and `button`)
+
+### Step 3: Intercept the GET request
 
 As we saw in the demo image, the application makes GET requests to the server and displays the response in the DOM. There is a filled green circle, next to the GET request in the Cypress UI. This is the indicator that the request is being made to the server.
 
