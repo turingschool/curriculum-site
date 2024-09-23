@@ -28,7 +28,7 @@ title: Module 3 - Lessons
 ## Fullstack Web Development
 * [Intro to Service-Oriented Architecture](./intro_to_soa)
 * [Deployment Guide](./deployment_guide)
-* [CORS Workshop](https://github.com/turingschool-examples/whats_going_on_with_cors
+* [CORS Workshop](https://github.com/turingschool-examples/whats_going_on_with_cors)
 * [README Workshop](./readme_workshop)
 
 ## Professional Development
