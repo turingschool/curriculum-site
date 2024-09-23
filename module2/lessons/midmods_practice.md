@@ -149,7 +149,7 @@ console.log(groupByColor());
 If you have a group of 3, make a final switch and have the final `Student` complete Practice #3.
 
 <section class="dropdown">
-### Don't peek until you're done! Practice #2 Possible Solution
+### Don't peek until you're done! Practice #3 Possible Solution
 
 ```js
 const calculateCost = (name) => {
