@@ -52,11 +52,6 @@
   background-color: lighten($turing-primary, 40%);
 }
 
-.note {
-  @extend %call-to-action-shared;
-  border-left: 8px solid lighten($back-end-secondary, 25%);
-  background-color: lighten($back-end-primary, 40%);
-}
 
 .google-form {
   border: none;
@@ -65,10 +60,16 @@
 .dropdown {
   @extend %call-to-action-shared;
   border-left: 8px solid #CCC;
-
+  
   h3 {
     cursor: pointer;
   }
+}
+
+.note {
+  @extend %call-to-action-shared;
+  border-left: 8px solid lighten($back-end-secondary, 25%);
+  background-color: lighten($back-end-primary, 40%);
 }
 
 .expander-arrow {
