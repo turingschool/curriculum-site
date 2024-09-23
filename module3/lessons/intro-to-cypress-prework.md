@@ -5,7 +5,8 @@ tags: Cypress, testing
 module: 3
 ---
 
-***As prework for the Intro to Cypress lesson, complete this entire Prework lesson. Submit the deliverable, write down any questions you have, and bring them to the Intro to Cypress class.***
+***As prework for the Intro to Cypress lesson, complete this entire Prework activity. Submit the deliverable, write down any questions you have, and bring them to the Intro to Cypress class.***
+  
 In this lesson, we will first walk through how to set up Cypress and create a test suite for our IdeaBox application. 
 
 After, you're going to be working with a new codebase and testing multiple scenarios to explore the power of end-to-end tests and the tools **Cypress** provides.  
@@ -141,14 +142,16 @@ Frontend applications often involve asynchronous operations (like waiting for da
 
 
 
-## IdeaBox practice with Cypress :
-<!--  Add link to the ideaBox repo -->
-We know that in our [IdeaBox](https://github.com/turingschool-examples/react-ideabox){:target='blank'} application, we have a page that contains a list of ideas and a form to add new ideas. Let's see how to add a few Cypress test files to test the following **user flows**:
+## IdeaBox practice with Cypress:
+
+We are going to use our [IdeaBox repo](https://github.com/turingschool-examples/react-ideabox){:target='blank'} to practice some Cypress testing. Let's see how to add a few Cypress test files to test the following **user flows**:
 - As a user, I want to be able to see the title of the application. 
 - As a user, I want to be able to see the form to add a new idea. 
 - As a user, I want to be able to see the list of ideas on the dashboard when I load the page. 
-- As a user, I want to be able to add a new idea to the list.
-### Step 1
+- As a user, I want to be able to add a new idea to the list.  
+
+
+### Step 1: Installing Cypress
 We need to set up the Cypress testing framework in our application.
 Let's add the Cypress npm package to our application. 
 ```bash
@@ -158,7 +161,10 @@ Next, we need to add a script to our `package.json` file to run Cypress.
 ```js
   {
     "scripts": {
-      "cypress": "cypress open"
+      "start": "react-scripts start",
+      "build": "react-scripts build",
+      // ...
+      "cypress": "cypress open" /* <----- Add this line */
     }
   }
 ```
@@ -168,18 +174,24 @@ npm run cypress
 ```
 **This will open the Cypress Test Runner, a user-friendly interface for managing your tests.** Follow these steps to create your first test file:
 
-1. In the Cypress Test Runner, you'll see a list of browsers. Select "Chrome" (or your preferred browser).
+1. In the Cypress Test Runner, select "E2E Testing".
 
-2. Click the "Create new spec" button in the top right corner.
+1. Keep everything checked ✅ and press "Continue".
 
-3. A dialog will appear. Enter `dashboard_spec.cy.js` as the file name.
+1. Next, you'll see a list of browsers. Select "Chrome" and press "Start E2E Testing in Chrome".
 
-4. Click "Create spec" to generate the new test file.
+2. Select "Create new spec".
+
+3. A dialog will appear. Enter `cypress/e2e/dashboard_spec.cy.js` as the file name.
+
+4. Click "Create spec" to generate the new test file, then "Okay, run the spec" to run the tests.
 
 5. Cypress will create the file and show it in the list of specs.
+
 6. Go back to your text editor and open the `dashboard_spec.cy.js` file. You can see the file structure in the IDE.and the code that was generated for us. 
 
 This process creates a new test file specifically for testing your dashboard functionality. As you become more familiar with Cypress, you'll find this interface makes it easy to organize and manage your test suite.
+  
 Here is the code that was generated for us:
 ```js
 describe('template spec', () => {
@@ -189,7 +201,8 @@ describe('template spec', () => {
 })
 
 ```
-### Step 2: Writing your first test
+
+### Step 2: Writing your first tests
 
 Ok now we have the file structure lets tweak the test to see how it works. 
 First, let's make sure that our application is running and we can navigate to it in the browser.
@@ -245,9 +258,9 @@ Next we want to check if the list of ideas is displayed on the page.
     cy.get('.ideas-container').should('have.length.at.least', 1)
   })
 ```
-Great, now we have checked the dashboard to see if it contains the title, form, and list of ideas, let's move on to write tests for our GET request and Post request. 
+Great, now we have checked the dashboard to see if it contains the title, form, and list of ideas, let's move on to write tests for our GET request and POST request. 
 
-### Testing the GET request
+### Step 3: Testing the GET request
 
 As we saw in the demo image, the application makes GET requests to the server and displays the response in the DOM. There is a filled green circle, next to the GET request in the Cypress UI. This is the indicator that the request is being made to the server.
 
@@ -291,7 +304,7 @@ describe('dashboard', () => {
 ```
 ![Cypress UI](./assets/cypress-ui-2.png)
 
-### Testing the POST request
+### Step 4: Testing the POST request
 
 Now let's test adding a new idea to the list. This involves interacting with the form and verifying that the new idea appears in the list.
 
@@ -335,7 +348,6 @@ it('adds a new idea to the list', () => {
     cy.get('form input[name="description"]').type('newIdeaDescription')
     cy.get('form button').click()
     cy.get('.ideas-container > :nth-child(4)').should('contain', 'Test new idea')
-    cy.get('.ideas-container > :nth-child(4)').should('contain', 'Test new idea')
 })
 ```
 When testing POST requests, it's crucial to set up the interception before any user actions that trigger the request.
@@ -367,7 +379,6 @@ it('adds a new idea to the list', () => {
     cy.get('form input[name="description"]').type('newIdeaDescription')
     cy.get('form button').click()
       // Assertions to confirm the UI has been updated correctly
-    cy.get('.ideas-container > :nth-child(4)').should('contain', 'Test new idea')
     cy.get('.ideas-container > :nth-child(4)').should('contain', 'Test new idea')
 })
 ```
