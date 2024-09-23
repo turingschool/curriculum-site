@@ -6,7 +6,7 @@ title: Module 3 - Lessons
 
 ## Consuming APIs
 * [Many To Many Relationship](./many-to-many) 
-<!-- * [Authorization](.) -->
+* [Authorization](./api_authorization)
 * [Testing Tools for API Consumption](./testing_tools_for_api_consumption)
 * [Refactoring Patterns for API Consumption](./refactoring_api_consumption)
 
