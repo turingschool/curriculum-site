@@ -14,8 +14,6 @@ You've done the groundwork to prepare for your job search: refining your story, 
 * Ideate and try out solutions to improve your current interviewing strategy
 * Understand how to answer interview questions through specific strategies
 
-[Slides for this lesson](https://docs.google.com/presentation/d/19v08-f77qv6HTMR3teiuv_SmXMHzpydHrdo144WYG_8/edit?usp=sharing)
-
 
 #### Starting off Strong: Tell me about Yourself
 This request for information is typically at the very beginning of an interview. It's an opportunity to provide the interviewer with insights into your qualifications and fit for the role.
