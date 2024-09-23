@@ -33,7 +33,7 @@ This project is an extension of Little Shop. You'll need to start this project w
 
 **Backend Repo**
 - If your Little Shop project is complete, you can use the backend repo as your starting point for this project. If you are not the repo owner, fork the project to your account. If you are the repo owner, you can work off the repo without forking, just make sure your teammates have a chance to fork before pushing any commits to either repo.
-- If your Little Shop backend is _not_ complete, fork **[this backend repo](https://github.com/turingschool-examples/little-shop-be-final-starter)** as a starting point for this project.  
+- If your Little Shop backend is _not_ complete, fork **[this backend repo](https://github.com/turingschool-examples/little-shop-be-final-starter)** as a starting point for this project.  Do not clone it into the BE directory - keep them separate.  
 
 
 **Frontend Repo** 

@@ -6,6 +6,17 @@ type: project
 
 _[Back to Coupon Codes Home](./index)_
 
+## Connecting to the FE
+
+Upon successful completion of the backend requirements, groups will be able to see their endpoint data within [this front end repo](https://github.com/turingschool-examples/little-shop-fe-final-starter).  This front end repo uses vanilla JavaScript, CSS and HTML and was built with [Vite](https://vitejs.dev/).
+
+Follow the directions in repo's README to fork, clone, install and run the front end.  Do **not** clone the FE repo into your BE repo.  Keep these two repos separate - you will submit a link to each.
+
+The front end is built to make network requests to your locally running rails server using the endpoints at localhost:3000. In order for the FE to function and display data successfully, you need to have your Rails API running on localhost:3000.  If your Rails API is not running, you will see fetch errors, and no data, in the FE application.
+
+Take time to digest the front end code and features.  Then, complete the front end requirements listed below.
+
+---
 
 Now that we have all this coupon data, we can update our frontend to display that, too! Your goal is to complete the following user story:
 

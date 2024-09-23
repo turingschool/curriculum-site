@@ -9,7 +9,7 @@ _[Back to Coupon Codes Home](./index)_
 ## Presentation
 For the project evaluation, you will meet with an instructor for a 20 minute session. You should prepare a presentation that covers the following:
 
-* Demonstration of backend functionality via Postman suites
+* Demonstration of backend functionality via a Postman collection
 * Demonstration of frontend functionality via running app in Browser
 * Discussion of technical quality and organization of the code, identifying code that should be refactored and how it would be refactored
 * Running your application's test suite and a discussion of test coverage (happy/sad paths and any edge cases)
@@ -28,7 +28,7 @@ Your project will be evaluated based on the following rubric:
 ### Feature Delivery
 
 * Exceeds Expectations: Project completes all requirements and at least one extension.
-* Meets Expectations: Project completes all requirements. Postman tests pass, and FE functions correctly when wired up to API. 
+* Meets Expectations: Project completes all requirements. Postman collect demonstrates endpoint functionality and FE functions correctly when wired up to API. 
 * Approaching Expectations: Project fails to complete 1 - 2 required endpoints
 * Below Expectations: Project fails to complete 3 or more endpoints
 

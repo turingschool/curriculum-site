@@ -195,7 +195,7 @@ When passed a query param, returns coupons sorted by active or inactive
 <section class="dropdown">
 ### 7. Merchant Invoice
 
-Return a merchant's invoice and include the id of the coupon used (if one was used)
+Return a merchant's invoices and include the id of the coupon used (if one was used)
 
 **Request**
 ```bash
