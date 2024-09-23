@@ -94,18 +94,10 @@ describe('Feedback Loop login flows', () => {
 
 Move over to the [Cypress Test Runner](https://docs.cypress.io/guides/core-concepts/test-runner.html#Overview){:target='blank'} and click on the `login_spec.js` and prepare to be amazed!  Did it pass?  Look at the [Command Log](https://docs.cypress.io/guides/core-concepts/test-runner.html#Command-Log){:target='blank'} and notice the assertion being made.  Then try changing `true` to `false` and see if it fails.
 
-<section class="note">
-### Note the Similarities
-
-Both the `describe` and `it` blocks come from **Mocha** while the `expect` syntax comes from **Chai**.  We're just building off from what you've learned previously!
-</section>
-
 <section class="call-to-action">
-### Simple enough.  Now what?
+### User Flows
 
-This is great and all but let's think about what we actually need to test.  Remember that Cypress is especially useful for testing `user flows` on our applications.  List out a few user flows for the beginning of our application.
-</section>
-
+This is great and all but let's think about what we actually need to test.  Remember that Cypress is especially useful for testing `user flows` on our applications.  List out a few user flows for the beginning of our application. (Hint: Refer to the user flows you brainstormed in the pre-work!)
 <section class="dropdown">
 ### Beginning User Flows  
 
@@ -115,6 +107,8 @@ This is great and all but let's think about what we actually need to test.  Reme
 * As a user, I can fill out the `email` and `password` inputs and click the Submit button and be directed to a different URL.  **Happy Path**
 * As a user, I will receive an error message that my email and password don't match if I submit incorrect `email` and `password` inputs.  **Sad Path**
 </section>
+</section>
+
 
 ### Testing Our First User Flow
 
@@ -388,7 +382,7 @@ describe('Dashboard view', () => {
 - We can create fixtures to help us with this.
 - If you are interested in refactoring this test even further, look into the Want to learn more box at the end of this lesson. 
 </section>
-<section class="dropdown">
+
 ### Using Fixtures to Simplify Intercepts
 Fixtures are a great way to manage and reuse static data in your tests. Let's walk through using a fixture for one of the intercepts above.
 First, create a fixture file. In your cypress/fixtures directory, create a file named teammates.json and add the following content:
@@ -423,8 +417,6 @@ cy.intercept(`http://localhost:3001/api/v1/users/2/teammates`, {
 });
 ```
 
-</section>
-<section class="dropdown">
 ### Using body to pass in mock data
 
 You can also pass in mock data using the `body` argument. This is when you have smaller mock data that you want to pass in. 
@@ -442,7 +434,6 @@ cy.intercept("GET", "http://localhost:3001/api/v1/users/11", {
   }
 }
 ```
-</section>
 
 <section class="checks-for-understanding">
 ### Exit Ticket
