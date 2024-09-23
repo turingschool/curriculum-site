@@ -7,7 +7,8 @@ module: 3
 
 <section class="call-to-action">
 ### Prework:
-Before this lesson, be sure you have worked through [this prework](./intro-to-cypress-prework) to complete the necessary set-up steps.
+
+Before this lesson, be sure you have worked through **[this prework](./intro_to_cypress_prework){:target='blank'}** to complete the necessary set-up steps.
 
 When we start the lesson you should have the Feedback Loop api ready and running and the Feedback Loop UI ready and running - with Cypress installed and the 3 specific spec files set up in your e2e directory.  
 </section>

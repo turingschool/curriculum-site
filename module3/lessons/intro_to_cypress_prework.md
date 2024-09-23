@@ -5,8 +5,10 @@ tags: Cypress, testing
 module: 3
 ---
 
-***As prework for the Intro to Cypress lesson, complete this entire Prework activity. Submit the deliverable, write down any questions you have, and bring them to the Intro to Cypress class.***
-  
+<section class="note">
+### As prework for the [Intro to Cypress lesson](./intro_to_cypress_testing){:target='blank'}, complete this entire Prework activity. Submit the deliverable, write down any questions you have, and bring them to the Intro to Cypress class.
+</section>
+
 In this lesson, we will first walk through how to set up Cypress and create a test suite for our IdeaBox application. 
 
 After, you're going to be working with a new codebase and testing multiple scenarios to explore the power of end-to-end tests and the tools **Cypress** provides.  
@@ -434,7 +436,7 @@ git checkout cypress-testing-complete
 
 ## Deliverables
 
-In order to be ready for the **[live Cypress Lesson](./intro-to-cypress-testing){:target='blank'}**, we need you to follow the instructions below carefully. You will not be writing any tests yet - You're just getting prepared for the live lesson. **There are deliverables to turn in.** 
+In order to be ready for the **[live Cypress Lesson](./intro_to_cypress_testing){:target='blank'}**, we need you to follow the instructions below carefully. You will not be writing any tests yet - You're just getting prepared for the live lesson. **There are deliverables to turn in.** 
 
 **1. Get the frontend running.** Clone the **[frontend Feedback Loop repo](https://github.com/turingschool-examples/feedback-loop-ui){:target='blank'}**:
 ```bash

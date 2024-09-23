@@ -15,8 +15,8 @@ title: Module 3 - Lessons
 * [Intro to React](./react_intro)
 * [Ideabox Review](./react_ideabox_review)
 * [Advanced Data Management](./react_advanced_data_management)
-* [Intro to Cypress Testing (Prework)](./intro-to-cypress-prework)
-* [Intro to Cypress Testing (Lesson)](./intro-to-cypress-testing)
+* [Intro to Cypress Testing (Prework)](./intro_to_cypress_prework)
+* [Intro to Cypress Testing (Lesson)](./intro_to_cypress_testing)
 
 ## Advanced JavaScript
 * [Intro To Accessibility](./intro-to-a11y)
