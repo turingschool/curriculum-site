@@ -6,6 +6,8 @@ module: 3
 
 ## Pre-Work
 
+Make sure you have read about [Authentication, Authorization, and Sessions](./authentication_and_authorization) _before_ you start this lesson!
+
 
 <section class="call-to-action">
 ## Warmup
@@ -481,6 +483,11 @@ Think about the responsibility of your SongsController.  Are there any responsib
 </section>
 
 </section>
+
+## What About Sessions?
+In the pre-work for this lesson, you learned about sessions - they help an application maintain state for a user by passing session information back and forth in the request and response headers.  This allows us to **stay logged in** on websites like Amazon, Gmail, etc...
+
+But, for API consumption, the session is largely irrelevant because we expect the consumers of our APIs (whether human or application) to tell us who they are with **each request**.  
 
 ## Checks for Understanding (aka possible interview questions!)
 * Describe the difference between authentication and authorization.
