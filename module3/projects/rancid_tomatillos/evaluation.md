@@ -39,7 +39,7 @@ We expect all teammates to:
 * Make atomic and frequent commits, effectively documenting the evolution/progression of the application. There is no more than a 10% disparity in project contributions between teammates.
 * Use a project board (and update it throughout the project) with Github issues and labels.
 * Use branches/PRs and do consistent, thorough, meaningful code reviews of PRs, which prompt updates and changes made to that PR before merging.
-* Create a complete README ithat s formatted well and at minimum contains:
+* Create a complete README that is formatted well and at minimum contains:
   * Overview of project and goals
   * Overview of technologies used, challenges, wins, and any other reflections
   * Link to deployed site
