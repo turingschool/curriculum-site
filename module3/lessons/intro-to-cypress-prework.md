@@ -142,7 +142,7 @@ Frontend applications often involve asynchronous operations (like waiting for da
 
 ## Cypress Walkthrough with Ideabox:
 
-We are going to use our [IdeaBox repo](https://github.com/turingschool-examples/react-ideabox){:target='blank'} to practice some Cypress testing. We will test the following **user flows**:
+We are going to use our **[IdeaBox repo](https://github.com/turingschool-examples/react-ideabox){:target='blank'}** to practice some Cypress testing. We will test the following user flows:
 - As a user, I want to be able to see the title of the application. 
 - As a user, I want to be able to see the form to add a new idea. 
 - As a user, I want to be able to see the list of ideas on the dashboard when I load the page. 
@@ -150,7 +150,7 @@ We are going to use our [IdeaBox repo](https://github.com/turingschool-examples/
 
 ### Step 0: Set Up
 
-Navigate to your [IdeaBox repo](https://github.com/turingschool-examples/react-ideabox) directory (which you should have from other lessons).  
+Navigate to your **[IdeaBox repo](https://github.com/turingschool-examples/react-ideabox){:target='blank'}** directory (which you should have from other lessons).  
   
 Switch to the correct branch:  
 
@@ -165,7 +165,7 @@ Run the app:
 ```bash
 npm start
 ```
-Get the [Ideabox API](https://github.com/turingschool-examples/ideabox-api) up and running (again, you should already have this one cloned down):  
+Get the **[Ideabox API](https://github.com/turingschool-examples/ideabox-api){:target='blank'}** up and running (again, you should already have this one cloned down):  
 
 ```bash
 # In the ideabox-api directory:
@@ -230,7 +230,7 @@ Now let's go back to our test file and make sure that we can navigate to the das
 
 Here is the Cypress UI running our test and opening the application inside the Cypress UI.
 
-![Cypress UI](./assets/cypress-ui.png)
+![Cypress UI](../../assets/images/lessons/cypress/cypress-ui.png)
 
 As you can see Cypress is running our test and opening the application in the Cypress UI for us to see the results. It looks like our test is also running the fetch call to get the ideas and display them on the page. 
 But before we go on with writing tests for our GET request, let's first go back to our user flow and see what else we need to test. Based on the user flow, we want to make sure the dashboard has a title, a form to add a new idea, and a list of ideas. 
@@ -268,51 +268,55 @@ Now before each test, Cypress will visit the application and run the test.
 
 Now our h1 title test is passing, let's add our second test to check if the form is displayed on the page. Remember, all of these `it` blocks should be INSIDE of your `describe` block.
 ```js
-  it('displays the form ', () => {
-    cy.get('form').should('exist')
-    cy.get('form input[name="title"]').should('exist')
-    cy.get('form input[name="description"]').should('exist')
-    cy.get('form button').should('exist')
-  })
+it('displays the form ', () => {
+  cy.get('form').should('exist')
+  cy.get('form input[name="title"]').should('exist')
+  cy.get('form input[name="description"]').should('exist')
+  cy.get('form button').should('exist')
+})
 ```
 Next we want to check if the list of ideas is displayed on the page. 
 ```js
-  it('displays the list of ideas', () => {
-    cy.get('.ideas-container').should('exist')
-    cy.get('.card').should('have.length', 3)
-  })
+it('displays the list of ideas', () => {
+  cy.get('.ideas-container').should('exist')
+  cy.get('.card').should('have.length', 3)
+})
 ```
 
 Let's be more specific in that last test, though. It's not enough to just check that there are 3 idea cards. We want to actually check the contents of those card. Let's change that last test to look like this:
 ```js
-  it('displays the list of ideas', () => {
-    cy.get('.ideas-container').should('exist')
-    cy.get('.card').should('have.length', 3)
-    cy.get('.card').first().find('h3').should('have.text', 'Sweaters for pugs')
-    cy.get('.card').first().find('p').should('have.text', 'To keep them warm')
-    cy.get('.card').first().find('button').should('exist')
-    cy.get('.card').last().find('h3').should('have.text', 'A game show called Ether/Or')
-    cy.get('.card').last().find('p').should('have.text', 'When you lose you get an un-potty trained puppy')
-    cy.get('.card').first().find('button').should('exist')
-  })
+it('displays the list of ideas', () => {
+  cy.get('.ideas-container').should('exist')
+  cy.get('.card').should('have.length', 3)
+  cy.get('.card').first().find('h3').should('have.text', 'Sweaters for pugs')
+  cy.get('.card').first().find('p').should('have.text', 'To keep them warm')
+  cy.get('.card').first().find('button').should('exist')
+  cy.get('.card').last().find('h3').should('have.text', 'A game show called Ether/Or')
+  cy.get('.card').last().find('p').should('have.text', 'When you lose you get an un-potty trained puppy')
+  cy.get('.card').first().find('button').should('exist')
+})
 ```
 Whenever we are rendering many copies of the same component, we want to confirm that:
 - There are the number of components we expect to see (i.e. 3 cards)
 - All of the content is correct for the first AND last card (i.e. `h3`, `p`, and `button`)
 
-### Step 3: Intercept the GET request
+### Step 3: Intercepting the GET request
 
-As we saw in the demo image, the application makes GET requests to the server and displays the response in the DOM. There is a filled green circle, next to the GET request in the Cypress UI. This is the indicator that the request is being made to the server.
+As we know, our Ideabox is making GET requests to the server. Right now, our Cypress testing is actually causing those requests to be made - we want to avoid that.
 
-However, these network requests can be expensive and slow down our tests. To keep our tests fast and reliable, we want to avoid making actual network calls during testing. Instead, we'll use a technique called 'stubbing' to simulate these requests with mock data.
+Network requests can be expensive and slow down our tests. To keep our tests fast and reliable, we want to avoid making actual network calls during testing. Instead, we'll use a technique called 'stubbing' to simulate these requests with mock data.
 
-Stubbing allows us to control network requests and the data our tests work with. This approach helps ensure our tests are fast, reliable, and isolated from external dependencies like network requests. By using mock data, we can test various scenarios without relying on the actual server responses.
-If you look at the Cypress UI, you see that before adding intercept, the UI for the fetch is showing a filled circle, which means that the request is being made to the server and the data is being displayed on the page. To avoid making actual network calls, we can use `cy.intercept` to simulate the server response, using a fixture file that contains mock data.
+Stubbing allows us to control network requests and the data our tests work with. This approach helps ensure our tests are fast, reliable, and isolated from external dependencies like network requests. By using mock data, we can test various scenarios without relying on the actual server responses.  
+
+If you look at the Cypress UI, you see that before adding intercept, the UI for the fetch is showing a filled circle, which means that the request is being made to the server and the data is being displayed on the page. After we successfully intercept this request, we should see an empty circle:    
+![itercept circles](../../assets/images/lessons/cypress/intercept_example.png)
+
+To avoid making actual network calls, we can use `cy.intercept` to simulate the server response, using a fixture file that contains mock data.
 ```js
 // dashboard_spec.cy.js
 describe('dashboard', () => {
   beforeEach(() => {
-    cy.intercept("GET", "http://localhost:3001/ideas", {
+    cy.intercept("GET", "http://localhost:3001/api/v1/ideas", {
       statusCode: 200,
       fixture: "ideas" // here is where we are referencing the fixture file name
     })
@@ -321,9 +325,8 @@ describe('dashboard', () => {
   })
 })
 ```
+We will use a fixtures file to store our mock data. Create a `fixtures/ideas.json` file and add this mock data:
 ```json
-
-//fixtures/ideas.json We are storing our mock data in ideas.json fixture file. 
 [
   {
   "id": 1,
@@ -340,103 +343,108 @@ describe('dashboard', () => {
   "title": "Waterproof books",
   "description": "For reading in a pool/ocean/bathtub"
   }
-  ]
+]
 ```
-![Cypress UI](./assets/cypress-ui-2.png)
 
-### Step 4: Testing the POST request
+Okay now we have good news and bad news. Good news is that our GET request is being intercepted (notice the open green circles). Bad news is that now we are failing a previous test. No problem - we just need to update that test to be looking for the mock data, not the data from the server since we aren't actually hitting the API in our tests anymore.  
+
+```js
+it('displays the list of ideas', () => {
+  cy.get('.ideas-container').should('exist')
+  cy.get('.card').should('have.length', 3)
+  cy.get('.card').first().find('h3').should('have.text', 'Bluetooth rotary phone')
+  cy.get('.card').first().find('p').should('have.text', 'Because it\'s cool as heck and who wants a landline these days')
+  cy.get('.card').first().find('button').should('exist')
+  cy.get('.card').last().find('h3').should('have.text', 'Waterproof books')
+  cy.get('.card').last().find('p').should('have.text', 'For reading in a pool/ocean/bathtub')
+  cy.get('.card').first().find('button').should('exist')
+})
+```
+Boom! We're passing AND we're not actually hitting the API 🥳 
+  
+![Cypress UI](../../assets/images/lessons/cypress/cypress-ui-2.png)
+
+### Step 4: Intercepting and testing the POST request
 
 Now let's test adding a new idea to the list. This involves interacting with the form and verifying that the new idea appears in the list.
 
 Here is the code for the test:
 ```js
 it('adds a new idea to the list', () => {
-    cy.get('form input[name="title"]').type('newIdeaTitle')
-    cy.get('form input[name="description"]').type('newIdeaDescription')
-    //After typing in the form, we need to click the submit button but wait isn't this going to trigger the POST request? 
-   cy.get('form button').click()
+  cy.get('form input[name="title"]').type('Remote Finder')
+  cy.get('form input[name="description"]').type('A button on your couch that makes your TV remote beep')
+  cy.get('form button').click()
+  cy.get('.card').last().find('h3').should('have.text', 'Remote Finder')
+  cy.get('.card').last().find('p').should('have.text', 'A button on your couch that makes your TV remote beep')
 })
 ```
-As you see after adding testing the click we are actually triggering the POST request, and we don't want that to happen. Cypress provides a helpful feature called `cy.intercept`, which allows us to handle POST requests without actually sending them to the server.
-However, since post is happening when the user clicks the submit, we don't need to have that intercept in the beforeEach block, since that doesn't need to happen for every test. But instead of adding it in after click we want to add it at the beginning of the test. 
+If you look at the Cypress testing UI, you'll notice that the green cirlce next to the POST is filled in - we're actually sending a POST request to our API.  
+
+You may also notice in your actual React App on `http://localhost:3000/`, that the tests are actually making new cards 😱 Uh oh! We need to intercept that POST.  
+
+The POST is happening when the user clicks the submit, so we don't need to have that intercept in the `beforeEach` block, since that doesn't need to happen for every test. We need to make sure that the intercept is written BEFORE the request is triggered (button click), so let's put that intercept at the top of that test block:  
+
 ```js
 it('adds a new idea to the list', () => {
-    cy.intercept("POST", "http://localhost:3001/ideas", {
-      statusCode: 201,
-      body: {
-        title: "newIdeaTitle",
-        description: "newIdeaDescription"
-      }
-    }) 
-    cy.get('form input[name="title"]').type('newIdeaTitle')
-    cy.get('form input[name="description"]').type('newIdeaDescription')
-    cy.get('form button').click()
+  cy.intercept("POST", "http://localhost:3001/api/v1/ideas", {
+    statusCode: 201,
+    body: {
+      title: "Remote Finder",
+      description: "A button on your couch that makes your TV remote beep"
+    }
+  }) 
+
+  cy.get('form input[name="title"]').type('Remote Finder')
+  cy.get('form input[name="description"]').type('A button on your couch that makes your TV remote beep')
+  cy.get('form button').click()
+  cy.get('.card').last().find('h3').should('have.text', 'Remote Finder')
+  cy.get('.card').last().find('p').should('have.text', 'A button on your couch that makes your TV remote beep')
 })     
 ```
-Note that we add the `cy.intercept` at the beginning of the test block, before any interactions. This ensures that Cypress is ready to intercept the POST request as soon as it's made. If we placed it after the click, we might miss intercepting the request.
+Note that we add the `cy.intercept` at the beginning of the test block, before any interactions. This ensures that Cypress is ready to intercept the POST request as soon as it's made. If we placed it after the click, we would miss intercepting the request.
 
-```js
-it('adds a new idea to the list', () => {
-    cy.intercept("POST", "http://localhost:3001/ideas", {
-      statusCode: 201,
-      body: {
-        title: "newIdeaTitle",
-        description: "newIdeaDescription"
-      }
-    }) 
-    cy.get('form input[name="title"]').type('newIdeaTitle')
-    cy.get('form input[name="description"]').type('newIdeaDescription')
-    cy.get('form button').click()
-    cy.get('.ideas-container > :nth-child(4)').should('contain', 'Test new idea')
-})
-```
-When testing POST requests, it's crucial to set up the interception before any user actions that trigger the request.
-This ensures that Cypress is prepared to intercept and mock the response as soon as the request is made. Here's why this approach is important:
+<section class="call-to-action">
+### Why we intercept network requests
 
-1. It allows us to control the response data, enabling consistent and predictable tests.
-2. It prevents actual network requests during testing, which can make tests faster and more reliable.
-3. It enables us to test various scenarios, including error states, without modifying the server." to "It enables us to test various scenarios, including error states, without modifying the server.
-
-Remember to place your `cy.intercept()` call at the beginning of your test (`it` block), before any interactions that might trigger the POST request.
-
-After clicking the submit button, we need to add more assertions to verify that the new idea has been successfully added to the list. This is crucial because:
-
-1. It confirms that the UI has been updated correctly after the POST request.
-2. It ensures that the user can see the newly added idea, which is a key part of the user experience.
-3. It verifies that our application is correctly handling the response from the intercepted POST request.
-
-Let's add these assertions:
-```js
-it('adds a new idea to the list', () => {
-    cy.intercept("POST", "http://localhost:3001/ideas", {
-      statusCode: 201,
-      body: {
-        title: "newIdeaTitle",
-        description: "newIdeaDescription"
-      }
-    }) 
-    cy.get('form input[name="title"]').type('newIdeaTitle')
-    cy.get('form input[name="description"]').type('newIdeaDescription')
-    cy.get('form button').click()
-      // Assertions to confirm the UI has been updated correctly
-    cy.get('.ideas-container > :nth-child(4)').should('contain', 'Test new idea')
-})
-```
-## Deliverables : **Clone down the following repos:**
-<section class="note">
-
-Deliverable: After setting up Cypress in the Feedback Loop UI repo, ensure that you have Cypress installed and the three files created in the `e2e` directory. Submit a screenshot of your `e2e` directory showing the files.
+This is a common interview question!  
+1. Intercepting allows us to control the response data, enabling consistent and predictable tests.
+2. Intercepting prevents actual network requests during testing, which can make tests faster and more reliable and keeps us from modifying the API data with mock data.
+3. Intercepting enables us to test various scenarios, including error states, without modifying the server.
 </section>
 
-**[UI](https://github.com/turingschool-examples/feedback-loop-ui){:target='blank'}**
+### Step 5: Challenge! Testing the DELETE
+
+Our app is almost fully tested! We still need to write the test for the delete functionality. Go ahead and try to do it on your own. Notice that the DELETE does send a network request, so we're going to need to intercept it! You got this!  
+
+Consider:
+- What actions does the user take to delete a card?  
+- What should happen when that action occurs?  
+- What can I check on the page to make sure the correct things have occurred?  
+
+<section class="dropdown">
+### Solution
+
+If you'd like to see an example of this completed test suite, checkout to the `cypress-testing-complete` branch:
+```bash
+git fetch
+git checkout cypress-testing-complete
+```
+</section>
+
+
+## Deliverables
+
+In order to be ready for the **[live Cypress Lesson](./intro-to-cypress-testing){:target='blank'}**, we need you to follow the instructions below carefully. You will not be writing any tests yet - You're just getting prepared for the live lesson. **There are deliverables to turn in.** 
+
+**1. Get the frontend running.** Clone the **[frontend Feedback Loop repo](https://github.com/turingschool-examples/feedback-loop-ui){:target='blank'}**:
 ```bash
 git clone https://github.com/turingschool-examples/feedback-loop-ui.git
 cd feedback-loop-ui
 npm i
 npm start
-```
+```  
 
-**[API](https://github.com/turingschool-examples/feedback-loop-api){:target='blank'}**
+**2. Get the backend running.** Clone the **[backend Feedback Loop repo](https://github.com/turingschool-examples/feedback-loop-ui){:target='blank'}**:
 ```bash
 git clone https://github.com/turingschool-examples/feedback-loop-api.git
 cd feedback-loop-api
@@ -444,49 +452,28 @@ npm i
 npm start
 ```
 
-Once you have the application running, spend 15 minutes using the application and examining the FE code to see how the application runs. *The fake log-in information is located in [this file](https://github.com/turingschool-examples/feedback-loop-api/blob/main/mockData/users.js){:target='blank'}.* It's not important to understand every line of code, but take note of the various user flows and how the various API calls work.
+**3. Explore.** Once you have the application running, spend 15 minutes using the application and examining the FE code to see how the application runs. *The fake log-in information is located in **[this file](https://github.com/turingschool-examples/feedback-loop-api/blob/main/mockData/users.js){:target='blank'}**.*  
 
-For example, you don't need to know how Router works. Instead, use the application and see how the URL changes as you navigate through the website.
+Note: It's not important to understand every line of code, but take note of the various user flows and how the various API calls work. For example, you don't need to know how Router works. Instead, use the application and see how the URL changes as you navigate through the website.
 
-### Setting Up Cypress
-You'll need to use the Cypress docs to figure out how to get it set up in your repo.  This might feel uncomfortable and unfamiliar, thats ok - these docs ARE unfamiliar to you right now. Take your time working through them.  Ask questions in your cohort channel if you get stuck - but only ***after*** doing some research and troubleshooting to try to get yourself unstuck first.
+**4. Brainstorm.** Now that you've explored the functionality of this app, write down at least 4 user flows that you will want to test using Cypress. Which of those user flows will require an intercept? Keep these notes handy for your live lesson.  
 
-* First use [the Cypress docs](https://docs.cypress.io/guides/getting-started/installing-cypress.html#Installing){:target='blank'} to figure out how to use npm to install Cypress within the Feedback Loop UI repo.
-* There are multiple ways of opening up Cypress.  Use the docs to figure out how to setup a `script` in the `package.json` that you'll be able to use to open up Cypress.  
-* Open Cypress with the script you added. A new window will appear with two testing options.  
-  * Select **E2E Testing**.  
-  * There are some config options on the next window...but for now just select **Continue** at the bottom.  
-    * *Hint: If you see an error that references webpack, you likely chose Component Testing by mistake in the previous step.*
-  * Then select your browser (*Chrome*) and the **Start E2E Testing in Chrome** button. *Pause here for now and keep working thru this prework lesson.*  
+**5. Set up Cypress.** Go back to `Step 1: Installing Cypress` from the Ideabox activity and get Cypress set up in the frontend repo. You don't need to write tests, but make sure:  
+- Cypress is installed
+- The command `npm run cypress` works as expected
+- The sample test is passing
 
-Having completed these steps, you should notice some new directories and files added to your application.
-
-
-<section class="dropdown">
-### The Answer
-
-If you get stuck!  Look at the Cypress docs or our IdeaBox example.
-</section>
-
-
-### Writing your first test!
-You'll notice in your code that there are a few directories including `downloads`, `fixtures`, and `support` inside of a `cypress` directory.  Make note of these directories and go back to the main window on Cypress, then follow the [instructions here](https://docs.cypress.io/guides/end-to-end-testing/writing-your-first-end-to-end-test#What-you-ll-learn){:target="_blank"} for adding your first test file.
-
-### Creating some test files
-As we consider what we will be testing, let's consider a few ways to set up our files.
-
-We could make one giant file and test absolutely everything there: `feedback_loop_spec.cy.js`.  But it's probably more maintainable to group up our related user flows.
-
-**Create a few files in the `e2e` directory (located inside the `cypress` directory) using the Cypress UI** (do not add them manually within your repo):
+**6. Create the test files.** As we consider what we will be testing, let's consider a few ways to set up our files. We could make one giant file and test absolutely everything there: `feedback_loop_spec.cy.js`. But it's probably more maintainable to group up our related user flows. Create a few files in the `e2e` directory (located inside the `cypress` directory) using the Cypress UI:
 - `cypress/e2e/login_spec.cy.js`
 - `cypress/e2e/dashboard_spec.cy.js`
 - `cypress/e2e/form_spec.cy.js`
 
-<section class="note">
-
-
 Notice that each of these describes actions tied to our data/server/network requests. When viewing feedback from coworkers, there are several different user flows. But they all involve GETTING feedback data from the back end.
 
 Figuring out how to group user flows/stories can be tricky, and ultimately there are no hard-and-fast rules about how to do so. Over time, you'll develop a sense of what to put together, just like how you are learning what to break out into a React component and what to leave as is. And, of course, these conventions change from team to team.
-</section>
 
+**7. Turn in your deliverable.** Take a screenshot of your `e2e` files (there should be 3). Follow your instructor's instructions on how to submit your screenshot. Most likely the instructions will be in the calendar event for this pre-work and/or on Slack.
+
+<section class="note">
+### You will want the Feedback Loop repos up and running for your live Cypress lesson. 
+</section>
