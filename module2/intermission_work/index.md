@@ -10,10 +10,7 @@ layout: page
 - Explore and sharpen JavaScript fundamentals
 - Understand what a relational database is
 - Interact with a relational database by writing SQL
-- Explore the basics of Web Development
-  - Understand and Implement CRUD functionality
-  - Understand and implement the MVC design pattern
-- Begin learning the conventions of a Rails app
+- Begin learning the conventions of the frontend by building a FE app
 
 ## Deliverables:
 
