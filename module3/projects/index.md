@@ -11,8 +11,11 @@ The project specs will be linked below as each project is assigned.
 - Week 1-2 (BE Solo): [Viewing Party API](./viewing_party_api)
 - Week 2-3 (Paired): [Rancid Tomatillos](./rancid_tomatillos)
 - Week 4-5 (Group): [Consultancy](./consultancy)
-- Week 6 (Final Solo): TBA
+- Week 6 (Solo Final Project): [Mock Take Home Challenge](./take_home)
 
-## Additional Practice and Resources
+## Additional Projects and Resources
 
+- [PR Template](./pr_template)
+- [jsFUNk:](./js_funk) Daily assessment prep with JS data manipulation exercises
 - [Ideabox Ideas & Practice](./ideabox_practice)
+
