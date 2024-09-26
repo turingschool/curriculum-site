@@ -419,8 +419,6 @@ Take a few minutes to jot down notes (again) or a create a visual for the iterat
 - What does the method (really the callback function) return?
 - What are the mandatory parameters? Optional parameters?
 - What are common use cases? When would I use this method?
-
-<!-- As a class, let's go through these questions together in this [JamBoard](https://jamboard.google.com/d/1dMlfYlFx5alIyANQMLM8roC-cTy038c1iVfkg1o0hSk/edit?usp=sharing){:target='blank'}. -->
 </section>
 
 ## Practice
