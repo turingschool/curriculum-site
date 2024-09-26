@@ -82,9 +82,58 @@ If you find yourself with:
 **Deliverable for Cover Letter Lesson:** 
 1. Look for a job description that interests you.
 2. Create a cover letter based on a job description. 
-3. Format, structure, and create your cover letter using the [Cover letter guide and template](https://docs.google.com/document/d/1ctPSIEcZ5nrnfD4y0HlTUH9tdYRscbIjXhMQLjMPzPA/edit)
-4. It's optional to complete the [cover letter exit ticket](https://docs.google.com/forms/d/e/1FAIpQLSfPkAkTdqtehtWydhdTP8RwEm7t-huLwQs8U201r92rDuRsfw/viewform) but it is recommended as a check for understanding. 
+3. Format, structure, and create your cover letter using the [Cover letter guide and template](https://docs.google.com/document/d/1gM3Ww2G3rHBnk8tetTIO2h0rxg2KnW5ISr6wvjYbyQU/edit?usp=drive_web&ouid=108460185564793326892)
+
  
 
-### Resources:
-* Here are [additional resources](https://careerdev.turing.edu/resources/cover_letter_resources) and a general checklist to guide your draft. 
+### Additional Resources:
+* [Another Cover Letter Template](https://docs.google.com/document/d/1hoHtRVuPZBJOEfc0h9J2BU09Oq3xm-QWZQJdjJWCgsM/edit)
+* [Ask a Manager: Examples of Great Cover Letters](https://www.askamanager.org/category/cover-letters)
+* [The Muse: All-Time Best Tips for Writing Cover Letters](https://www.themuse.com/advice/how-to-write-a-cover-letter-31-tips-you-need-to-know)
+* [The Muse: Cover Letter Examples for Every Type of Job Seeker](https://www.themuse.com/advice/cover-letter-examples-every-type-job-seeker)
+* [The Muse: 12 Great Resources if Writing a Cover Letter Fills You With Dread](https://www.themuse.com/advice/12-great-resources-if-writing-a-cover-letter-fills-you-with-dread)
+* [How to Write the Ultimate Tech Cover Letter (with examples)](https://docs.google.com/document/d/1u0HDGdncaJF-Z41wvsisn5UEdhyr1-wI-Lu0c7RexBk/edit?usp=sharing)
+* [How to Start a Cover Letter](https://www.thebalancecareers.com/cover-letter-opening-sentences-examples-2061030)
+
+## General Checklist
+Use this checklist to make sure your cover letters have all the necessary components. 
+
+### Layout
+- [ ] Clean, easy-to-follow
+- [ ] No more than one page
+- [ ] Paragraphs spaced apart
+
+### Heading & Contact Info
+- [ ] Name: stand outs, easy to read
+- [ ] Title: "software developer/front end engineer/back end engineer," stand outs, easy to read, comparable in size to name (optional)
+- [ ] Email address
+- [ ] Phone number
+- [ ] GitHub link 
+- [ ] LinkedIn link 
+- [ ] Personal website (optional)
+
+### Opening & Closing
+- [ ] Opening: addressed to either a specific person or a specific team
+- [ ] Closing: Uses a closing phrase like "looking forward to hearing from you," etc. and name is included
+- [ ] Clear and concise
+- [ ] No grammatical or spelling errors
+
+### Paragraph #1 
+- [ ] Opening sentence makes it clear what position is being applied for
+- [ ] Provides a brief description of the job seeker's career trajectory and how it connects to the company's mission, product, user experience, customers, etc, 
+- [ ] If applicable: references a contact at the company that they've spoken with 
+- [ ] Clear and concise
+- [ ] No grammatical or spelling errors
+
+### Paragraph #2
+- [ ] Expands on why they're qualified (going in-depth on skills/experience)
+- [ ] Describes a project/experience in which they demonstrate how they can do the job
+- [ ] Clear and concise
+- [ ] No grammatical or spelling errors
+
+### Paragraph #3
+- [ ] Makes a connection back to the company: how the job seeker can bring value to the company, passion about the product, what they hope to help the company achieve, etc.
+- [ ] Clear and concise
+- [ ] No grammatical or spelling errors
+
+

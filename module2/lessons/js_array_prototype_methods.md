@@ -4,7 +4,7 @@ length: 90
 tags: javascript, arrays, prototypes, mutator, accessor, callback functions
 ---
 
-We will use the [array prototype methods file](https://github.com/turingschool-examples/se-mod2-exercises/blob/main/lessons/array_prototype_methods.js) in the lessons folder of your SE-Mod2-exercises repo to work through the examples in this lesson.  Open that file in VS Code now. 
+We will use the [array prototype methods file](https://github.com/turingschool-examples/mod2-sandbox/blob/main/lessons/array_prototype_methods.js) in the lessons folder of your Mod2 Sandbox repo to work through the examples in this lesson.  Open that file in VS Code now. 
 
 ## Learning Goals
 
@@ -419,8 +419,6 @@ Take a few minutes to jot down notes (again) or a create a visual for the iterat
 - What does the method (really the callback function) return?
 - What are the mandatory parameters? Optional parameters?
 - What are common use cases? When would I use this method?
-
-<!-- As a class, let's go through these questions together in this [JamBoard](https://jamboard.google.com/d/1dMlfYlFx5alIyANQMLM8roC-cTy038c1iVfkg1o0hSk/edit?usp=sharing){:target='blank'}. -->
 </section>
 
 ## Practice
