@@ -10,14 +10,11 @@ layout: page
 - Explore and sharpen JavaScript fundamentals
 - Understand what a relational database is
 - Interact with a relational database by writing SQL
-- Explore the basics of Web Development
-  - Understand and Implement CRUD functionality
-  - Understand and implement the MVC design pattern
-- Begin learning the conventions of a Rails app
+- Begin learning the conventions of the frontend by building a FE app
 
 ## Deliverables:
 
-First, create a new [Gist on Github](https://gist.github.com/). Copy and paste the markdown from [this template](https://gist.github.com/mikedao/cf0f63490a0ef91ac7d251e95fc410f7) into your gist.
+First, create a new [Gist on Github](https://gist.github.com/). Copy and paste the markdown from [this template](https://gist.github.com/abdulredd/11e6dd967af11617f7a7f8c527b5fb76.js) into your gist.
 
 This Gist will be your submission for your intermission work. Each of the assignments includes a Check for Understanding that you must complete in your Gist. Some of the assignments will also ask you to include a link to a GitHub repo.
 
