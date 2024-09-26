@@ -35,7 +35,7 @@ That's where **sessions** come in.
 #### How sessions work:
 - When a user logs in (authentication), the server creates a **session**.
 - The session typically stores the user's ID and any other information needed to identify them.
-- The session ID is stored in a cookie on the user's browser.
+- Different web frameworks have different strategies for storing the session. In Rails, the session is stored in a cookie on the user's browser.
 - For each new request, the browser sends this cookie back to the server, allowing the server to remember the user’s session.
 
 This mechanism helps the server keep track of who the user is across multiple requests. Instead of asking for a password every time you visit a new page, the session keeps track of your identity. **This is how HTTP becomes "stateful"** for a logged-in user.

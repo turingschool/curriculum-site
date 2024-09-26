@@ -11,7 +11,7 @@ Make sure you have read about [Authentication, Authorization, and Sessions](./au
 
 <section class="call-to-action">
 ## Warmup
-In small groups, discussi the following:
+In small groups, discuss the following:
 * What is the difference between Authentication and Authorization?
 * Describe the user flow that you experienced when signing up for an API key with pexels.com
     * How do you retrieve your API key?
