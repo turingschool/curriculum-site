@@ -16,7 +16,7 @@ Try to limit your total time to around 8 hours on this portion of the project. P
 
 ## Tea Subscription
 
-You will create a tea subscription application that...
+You will create a tea subscription application.
 
 ### Requirements:
 
