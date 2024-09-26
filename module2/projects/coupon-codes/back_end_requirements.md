@@ -186,9 +186,9 @@ body:
 ## 2) Iterating on Existing Endpoints
 
 <section class="dropdown">
-### 6. Merchant Coupon Index Sorted
+### 6. Merchant Coupon Index Filtered
 
-When passed a query param, returns coupons sorted by active or inactive
+When passed a query param, returns coupons filtered by active or inactive
 
 </section>
 
@@ -199,7 +199,7 @@ Return a merchant's invoices and include the id of the coupon used (if one was u
 
 **Request**
 ```bash
-GET /api/v1/merchants/:merchant_id/invoices/:id
+GET /api/v1/merchants/:merchant_id/invoices
 Content-Type: application/json
 Accept: application/json
 ```
