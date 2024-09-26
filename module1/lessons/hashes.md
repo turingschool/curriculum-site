@@ -64,9 +64,7 @@ Resources to use while working through the exercises:
 
 ## Part 2: Discussion
 
-Take a minute to look through your notes about Hashes. Add your key takeaways (or AHA! moments) to page 1 of [this Jamboard](https://jamboard.google.com/d/1gTGQjw3TpdqQImTqSJtWE25Z9W00I2xIagwHLFSSpN0/viewer) 
-
-Take a minute to look through the questions you still have about Hashes. Add them to page 2 of the same Jamboard.
+Take a minute to look through your notes about Hashes. Let's discuss the following key points.
 
 ###  Discussion Questions
 
