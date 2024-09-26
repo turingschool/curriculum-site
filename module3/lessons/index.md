@@ -5,7 +5,6 @@ title: Module 3 - Lessons
 <!-- Comment the following lessons in as they are updated and deemed ready to go! -->
 
 ## Consuming APIs
-* [Many To Many Relationship](./many-to-many) 
 <!-- * [Authorization](.) -->
 * [Testing Tools for API Consumption](./testing_tools_for_api_consumption)
 * [Refactoring Patterns for API Consumption](./refactoring_api_consumption)
@@ -32,6 +31,11 @@ title: Module 3 - Lessons
 * [Deployment Guide](./deployment_guide)
 * [CORS Workshop](https://github.com/turingschool-examples/whats_going_on_with_cors)
 * [README Workshop](./readme_workshop)
+
+## Intermediate Database Concepts
+* [Many To Many Relationships](./many-to-many) 
+* [Intermediate SQL Workshop](./intermediate_sql_workshop)
+* [Intermediate ActiveRecord Workshop](https://github.com/turingschool-examples/student_enrollments_ar)
 
 ## Professional Development
 * [Mod 3 PD Curriculum](../pd/)
