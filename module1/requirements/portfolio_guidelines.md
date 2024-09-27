@@ -17,9 +17,9 @@ We believe that portfolio sessions are important opportunities for three areas o
 
 Students will give a 10 minute presentation on the reflections prompts in the dropdowns below. Students will create a visual presentation with Google Slides, PowerPoint, Prezi, etc, your choice.  
 
-Your presentation should not be a series of slides that simply restate the prompt then directly answer it. Instead, it should follow a narrative format – this is an opportunity to fine tune your story and how you speak about your work. Slides/visuals should flow naturally from one to the next.
+Your presentation should not be a series of slides that simply restate the prompt then directly answer it. Instead, it should follow a narrative format. This is an opportunity to fine tune your story and how you speak about your work. Slides/visuals should flow naturally from one to the next.
 
-Your slides should not be full of text.  You should have 2-4 bullet points max on each slide.  The narrative you want to speak to for each slide needs to be saved in the notes for that slide.  Instructors should be able to look at your presentation slide deck and know what you've said in the presentation. 
+Your slides should not be full of text.  You should have 2 - 4 bullet points max on each slide.  The narrative you want to speak to for each slide needs to be saved in the notes for that slide.  Instructors should be able to look at your presentation slide deck and know what you've said in the presentation. 
 
 Your presentation slides will be submitted as a deliverable at the beginning of the portfolio session.  Then you will be sent to breakout rooms in pairs to present to each other. 
 
