@@ -163,7 +163,8 @@ Let's start building out our App component.
 
 Let's figure out what should be a component in our app.
 
-![IdeaBox wireframe](../../../assets/images/lessons/ideaBox/IdeaBox-Browser.png)
+<img src="../../assets/images/lessons/ideabox/IdeaBox-wireframe.png">
+<!-- ![IdeaBox wireframe](../../../assets/images/lessons/ideaBox/IdeaBox-Browser.png) -->
 
 - We have an App component. That should probably hold onto our list of ideas.  
 
