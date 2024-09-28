@@ -7,7 +7,7 @@ title: Mod 0 - Lessons
 **The prework linked below must be completed BEFORE your first session!** Reach out via Slack if you have any questions.
 
 * [Mod 0 Prework]( {{ site.baseurl }}/module0/prework)
-* Before session 1, your Mod 0 Gist should contain sections for `About Me` and `Intro Video Link`.
+* Before session 1, your Mod 0 Gist should exist and contain an `About Me` section.
 
 ## Session 1
 ### Live Sessions
@@ -16,33 +16,41 @@ title: Mod 0 - Lessons
 
 ### Assignment - Complete Before Session 2
 * [Asking Technical Questions]({{ site.url }}/module0/lessons/asking_qs) 
-* [Git Workflow]({{ site.url }}/module0/lessons/git)
-* Before session 2, your Mod 0 Gist should contain sections for `Data Types`, `Arrays`, `Asking Technical Questions`, and `Git Workflow`.
+* [DTR Prep]({{ site.url}}/module0/lessons/dtr)
+* Before session 2, your Mod 0 Gist should contain sections and CFU answers for `Data Types`, `Arrays`, `Asking Technical Questions`, and `DTR Prep`.
 
 ## Session 2
-### Live Sessions
-* [GitHub]({{ site.url }}/module0/lessons/github)
-
-### Assignment - Complete Before Session 3
-* [DTR Prep]({{ site.url}}/module0/lessons/dtr)
-* [Calendaring & Time Management]({{ site.url }}/module0/lessons/calendaring)
-* Before session 3, your Mod 0 Gist should contain sections for `GitHub`, `DTR Prep`, and `Calendaring & Time Management`.
-
-## Session 3
 ### Live Sessions
 * [Conditionals]({{ site.url }}/module0/lessons/conditionals)
 * [Methods]({{ site.url }}/module0/lessons/methods)
 
-### Assignment - Complete by Sunday Evening
+### Assignment - Complete Before Session 3
+
+* [Calendaring & Time Management]({{ site.url }}/module0/lessons/calendaring)
+* [Git Workflow]({{ site.url }}/module0/lessons/git)
 * [Problem Solving]({{ site.url }}/module0/lessons/problem-solving)
+* Before session 3, your Mod 0 Gist should contain sections and CFU answers for `Data Types`, `Arrays`, `Asking Technical Questions`, `DTR Prep`, `Calendaring & Time Management`, `Git Workflow`, and `Problem Solving`.
+
+
+
+## Session 3
+### Live Sessions
+* [GitHub]({{ site.url }}/module0/lessons/github)
+
+### Assignment - Complete Before Saturday
+* [Conditionals repository](https://github.com/turingschool/m0_be_conditionals) (Use the Conditionals lesson and follow the instructions in the README to complete this asignment)
+* [Methods repository](https://github.com/turingschool/methods_cfu_am0) (Use the Methods lesson Follow the instructions in the README to complete this asignment)
 * [Beyond Mod 0 Plan]({{ site.url }}/module0/lessons/plan)
 * [Final Reflections]({{ site.url }}/module0/lessons/final-reflections)
-* By the end of the day Sunday, your Mod 0 Gist should contain sections for `Conditionals`, `Methods`, `Problem Solving`, `Beyond Mod 0 Plan`, and `Final Reflections`.
+* By the end of the day Saturday, your Mod 0 Gist should contain all CFU answers and assignments including sections for `Data Types`, `Arrays`, `Asking Technical Questions`, `DTR Prep`, `Calendaring & Time Management`, `Git Workflow`, `Problem Solving`, `GitHub` `Conditionals`, `Methods`, `Beyond Mod 0 Plan`, and `Final Reflections`.
 
+<!--
+Put this section back in for traditional mod 0 (non intermission Mod 0)
 ## Complete Before Mod 1
 Note: You are not expected to be experts on these topics, but you should come to Mod 1 ready to ask questions about the topics covered in these lessons.
 * Pre-teach this [Testing]({{ site.url }}/module0/lessons/testing) lesson.
 * Complete some [Programming Exercises](https://github.com/turingschool-examples/se-mod1-exercises). We'd like you to focus on the `data-types`, `ints-and-floats`, and `strings` folders.
+-->
 
 ## Important Note
 On the first day of Mod1, you we will be introducing you to all of the instructors at **8:30 AM MT**.  Make sure to note this early start on your calendar!!

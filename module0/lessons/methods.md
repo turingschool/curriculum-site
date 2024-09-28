@@ -270,7 +270,7 @@ In this particular example, the utility of the `odd?` method is to determine if 
 <br>
 <div>
   <h3>Exploration: PART 2</h3> 
-  <p>In the same Mod 0 Lessons Repl</a>, comment <em>out</em> the code from Part 1, and <em>uncomment</em> the code under Part 2.</p>
+  <p>In the same <a href="https://replit.com/@turingschool/m0lessonsrepl#main.rb" target="blank">Mod 0 Lessons Repl </a>, comment <em>out</em> the code from Part 1, and <em>uncomment</em> the code under Part 2.</p>
   <ul>
     <li>Run the code.</li>
     <li><strong>Think:</strong> What is different about this from the first set of method calls? How did each line of code, produce each respective line of output? Which parts make sense, and which are confusing?</li>
@@ -292,7 +292,7 @@ To describe the code snippet in English, one could say, "the first line declares
 <br>
 <div>
   <h3>Exploration: PART 3</h3> 
-  <p>In the same Mod 0 Lessons Repl</a>, comment <em>out</em> the code from Part 2, and <em>uncomment</em> the variable declarations and first method call under Part 3.</p>
+  <p>In the same <a href="https://replit.com/@turingschool/m0lessonsrepl#main.rb" target="blank">Mod 0 Lessons Repl </a>, comment <em>out</em> the code from Part 2, and <em>uncomment</em> the variable declarations and first method call under Part 3.</p>
   <ul>
     <li>Run the code and read the error message carefully. Work to make sense of what the problem is.</li>
     <li>Comment out that method call, and uncomment the next one. Run the code and read the error message carefully. Work to make sense of what the problem is.</li>
