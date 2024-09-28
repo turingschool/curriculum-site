@@ -12,7 +12,7 @@ title: Welcome to Module 0
   </tr>
   <tr>
     <td>2410 (Oct 7)</td>
-    <td>September 16 - September 22</td>
+    <td>September 30 - October 6</td>
   </tr>
   <tr>
     <td>2412 (Dec 2)</td>
