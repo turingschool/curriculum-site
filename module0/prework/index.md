@@ -13,14 +13,14 @@ title: Mod 0 - Prework
 * [Markdown]({{ site.url }}/module0/prework/markdown)
 * [Terminal]({{ site.url }}/module0/prework/terminal)
 * [VS Code]({{ site.url }}/module0/prework/vs-code)
-* [Introduction Video]({{ site.url }}/module0/prework/intro-video)
+<!-- * [Introduction Video]({{ site.url }}/module0/prework/intro-video) -->
 
 ## Prework Submission
 Once you have completed all your prework items, please create a new Github Gist that includes the following:
 1. A header that says "Mod 0 Gist - [Your Name]"
 1. A subheader with your pronouns and cohort (ex: she/her 2407)
 1. An "About Me" section with an introduction about who you are and why you decided to come to Turing.
-1. A link to your slack thread post of your loom Intro Video. (You can find this link by hovering over your slack thread post, clicking the three dots, then selecting _Copy Link_)
+<!-- 1. A link to your slack thread post of your loom Intro Video. (You can find this link by hovering over your slack thread post, clicking the three dots, then selecting _Copy Link_) -->
 1. Be sure to save the file as a markdown file by using a `.md` file type. For example, you might name the file `kaylagordon_mod0gist.md`.
 1. Check that you save this as a secret gist, not a public one.
 1. Bookmark this Gist - you will be adding to it in the future (read the Notes below)!
@@ -38,10 +38,10 @@ Here is a sample of how you might structure your Mod 0 Gist file:
 
 ## About Me
 I am a former educator who loves my dog. I'm excited to join Turing because...
-
-## Intro Video Link
-[Link](URL to slack thread here...)
 ```
+<!-- ## Intro Video Link
+[Link](URL to slack thread here...) -->
+
 
 You cannot begin Mod 0 until this prework is submitted. Reach out via Slack early if you have any questions or concerns!
 
