@@ -167,7 +167,7 @@ Let's figure out what should be a component in our app.
 
 - We have an App component. That should probably hold onto our list of ideas.  
 
-- We need a Form component so we can create new ideas. The Form component will have to be able to add new ideas to App's list of ideas.  ideabox_
+- We need a Form component so we can create new ideas. The Form component will have to be able to add new ideas to App's list of ideas.  
 
 - We need a Card component to display our ideas.  
 
@@ -780,7 +780,23 @@ function Form(){
 export default Form;
 ```
 
-But we need to write some functions. Let's start by making sure that when we type into our inputs, they update the Form's state.
+Now that we have our Form files started, we can connect our Form to our App component so it will render.  
+First, import the Form in App.js.  
+```jsx
+import Form from './Form';
+```
+Then, render the Form in App's return.
+```jsx
+  return(
+    <main className='App'>
+      <h1>IdeaBox</h1>
+      <Form/>
+      <Ideas ideas={ideas} />
+    </main>
+  )
+```
+
+But we also need to write some functions. Let's go back to our Form and make sure that when we type into our inputs, they update the Form's state.
 
 ```jsx
 // Form.js
