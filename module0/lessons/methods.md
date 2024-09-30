@@ -313,10 +313,10 @@ To describe the code snippet in English, one could say, "the first line declares
 </div>
 <br>
 
-## Check For Understanding
+<!-- ## Check For Understanding
 
 - Complete the tasks in <a href="https://github.com/turingschool/methods_cfu_am0" target="blank">this repository</a>. 
-- Add a link to your respository under a new section of your Mod 0 Gist called `Methods`.
+- Add a link to your respository under a new section of your Mod 0 Gist called `Methods`. -->
 
 
 <br>

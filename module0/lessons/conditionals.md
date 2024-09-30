@@ -247,12 +247,12 @@ Now that you know about logical operators and `if statements`, let's combine tha
   </ul>
 </div>
 
-## Check For Understanding
+<!-- ## Check For Understanding
 
 - <a href="https://github.com/turingschool/m0_be_conditionals" target="_blank">Follow the directions in the README of this GitHub repository</a>.
 - Add the link to your repository to your Mod 0 Gist in a section called `Conditionals`.
 
-<br><br><br>
+<br><br><br> -->
 
 <section class="dropdown">
 
