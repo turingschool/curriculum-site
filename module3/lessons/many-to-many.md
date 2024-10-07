@@ -24,8 +24,6 @@ tags: database, schema, relationships
 
 ## Setup
 
-TODO: update starter repo branch for song tests with song serializer
-
 You can begin this lesson on the `many-to-many-starter` branch of the Set List Tutorial Repo [here](https://github.com/turingschool-examples/set-list-api/tree/many-to-many-starter).
 
 ## Warm-Up
@@ -106,7 +104,7 @@ One solution that might come to mind is, instead of our foreign keys storing a s
 But what about strings? They can vary in length. The Database handles strings by giving them a maximum length, which is 255 bytes by default. If we tried to do the same thing with arrays, we would be limiting how many relationships we could create, which is a bigger problem than limiting how long a string can be.
 
 <section class="note">
-The key takeaway here is **a database can't store an array of ids**, so we're going to need something else.
+The key takeaway here is **a database shouldn't store an array of ids**, so we're going to need something else.
 </section>
 
 ## Join Tables
