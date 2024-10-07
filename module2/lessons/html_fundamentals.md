@@ -205,6 +205,22 @@ Take some time to notice the differences between these two codepens:
 - [Semantic Page](https://codepen.io/kaylaewood/pen/NWrGqmv)
 </section>
 
+<section class="dropdown">
+### Common Semantic Elements
+
+<header>
+<footer>
+<nav>
+<main>
+<section>
+<article>
+<aside>
+
+Check out [this MDN page](https://developer.mozilla.org/en-US/docs/Web/HTML/Element) for all HTML elements.
+
+</section>
+
+
 ## Refactoring Some HTML
 
 Now that you know what clean, correctly indented HTML looks like, and some of the semantic tags that are available to you, let's take some time to practice.
