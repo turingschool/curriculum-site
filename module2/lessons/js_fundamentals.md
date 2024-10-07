@@ -280,18 +280,6 @@ Expressions rely on operators to calculate their single value. There are 5 basic
 4. [Comparison operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Comparison_operators) compare two values and return a __true__ or __false__. `var buy = 3 > 5; // Value of buy is false`
 5. [Logical operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Logical_operators) combine __expressions__ and return a Boolean value of true or false. `var buy = (5 > 3) && (2 < 4);`
 
-# Statements
-
-A script is a series of instructions that a computer can follow one by one. Each individual instruction is known as a statement. Every line of code we've seen and written today is a statement.  
-
-Each statement in JavaScript is followed by a semicolon....sometimes.  In JS, the semicolon is often optional and has no impact on the functionality of your code.  Some devs love this "freedom", some hate this "inconsistency".
-
-Example statements:
-
-```javascript
-console.log('BOOM');
-alert('POW');
-```
 
 # Functions
 Just like methods in Ruby, in JS functions are reusable blocks of code that group statements together to perform a specific task. To create a function, you must give it a name and then write the statements required for the function to achieve its task inside the function's curly braces. Let's work through the pieces and parts of a function.
@@ -621,6 +609,7 @@ Expressions are parts of our code that get _evaluated_ down to a single value.
 <section class="dropdown">
 ### The "return" keyword lets us get a value from a function when we invoke it.
 
+* Only one value can be returned from a function on any given invocation.
 * Once JS runs the `return` statement, the function execution stops and no more code is executed.  
 * If no return value is specified in a function, it returns "undefined" by default.
 
