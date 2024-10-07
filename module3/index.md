@@ -10,6 +10,6 @@ subheading: Building and Consuming APIs
 - [Intermission Pre-Work](./intermission_work)
 - [Lessons](./lessons)
 - [Projects](./projects)
-
+- [Midmod Assessment](./midmod_assessment)
 
 ## Other Resources
