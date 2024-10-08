@@ -151,6 +151,9 @@ In our codepen let's:
 How would we change the elephant image to a different image?  Hmm...   
 We've seen from the console log that we won't be able to use `innerText` property for the image.  
 Looking at the `<img>` in the html, is there a different property we might be able to manipulate?
+
+*Psst...here is a short link for a hedgehog image if you want to use it.*
+https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Igel.JPG/440px-Igel.JPG
 </section>
 
 
@@ -230,6 +233,9 @@ In the codepen from the Warm Up, follow the bullets below to add in an Event Lis
   - We want the eventListener to listen for a "click" event that happens on that button. 
   - When the "click" happens on the button, invoke a function that does all the things we want to do. Call that function `changePageContent`.
 - You've already written the code to change the title, fact and image.  Move this code into the `changePageContent` function that is being invoked by the eventListener.
+
+Psst...here is a short link for a hedgehog image if you want to use it.
+https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Igel.JPG/440px-Igel.JPG
 </section>
 
 ### Explore
@@ -319,7 +325,7 @@ We can use dot notation to call the `.style` property on an element, then refere
 <section id="change-my-border-box" class="call-to-action">
 ### Change My Border!
 
-We'll use inline styling to change the border of this box to blue.   
+We'll use inline styling to change the border of this box to purple.   
 Type or copy/paste the code snippet below into the dev tools to see it change!
 </section>
 
@@ -350,11 +356,11 @@ Fork [this Color Box CodePen](https://codepen.io/turingschool/pen/yLdRWxY) and f
 - Read through the code that is currently written, and observe the result in the mini-browser
 - Un-comment line 3. What changed about the box? What remained the same?
 - Un-comment line 4. What changed about the box? What remained the same?
+
+- Read up on [this documentation](https://developer.mozilla.org/en-US/docs/Web/API/Element/classList) to learn how to **remove** a class from an elements classList! _Hint: `toggle` may soon be a friend of yours, as well!_
 </section>
 
-Read up on [this documentation](https://developer.mozilla.org/en-US/docs/Web/API/Element/classList) to learn how to **remove** a class from an elements classList! Hint: `toggle` may soon be a friend of yours, as well!
-
-In summary, in your CSS file you can apply styles to a specific class selector - like a "pink" class.  Then, in your JS file, you can use `button.classList.add('pink')` to apply all those styles at once by adding that "pink" class to the specified button.  
+In summary, in your CSS file you can **apply styles to a specific class selector - like a "pink" class.  Then, in your JS file, you can use `button.classList.add('pink')` to apply all those styles at once by adding that "pink" class to the specified button.  **
 
 Note that if you are going to add/remove a class via JavaScript, that class should be declared **below** the original styling for the given element in the CSS file. This is because of the cascading nature of CSS; any time rules conflict, the rule declared lower on the sheet will take precedence.
 
