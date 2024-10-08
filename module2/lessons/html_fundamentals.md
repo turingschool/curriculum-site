@@ -27,7 +27,7 @@ Spend 15-20 minutes reading, watching, and completing the content in the [Chrome
 <section class="call-to-action">
 ### Warm Up
 
-Go to the [Turing Home Page](https://turing.edu/) and open up your Dev Tools.
+On this lesson page, open up your Dev Tools.
 - Click on the "Elements" tab. Stay in the "Elements" tab throughout this Warm Up.
 - Dig into the `<body>`. What are some things you see nested inside of this element? Can you associate any of the things you see in the code to what you see on the page?
 - In many of the elements, you'll notice a `class`. What do you think those are used for?
@@ -204,6 +204,24 @@ Take some time to notice the differences between these two codepens:
 - [Non-Semantic Page](https://codepen.io/kaylaewood/pen/QWEjbZM)
 - [Semantic Page](https://codepen.io/kaylaewood/pen/NWrGqmv)
 </section>
+
+<section class="dropdown">
+### Common Semantic Elements
+
+```
+<header>
+<footer>
+<nav>
+<main>
+<section>
+<article>
+<aside>
+```
+
+Check out [this MDN page](https://developer.mozilla.org/en-US/docs/Web/HTML/Element) for all HTML elements.
+
+</section>
+
 
 ## Refactoring Some HTML
 

@@ -12,7 +12,7 @@ _[Back to Requirements](./requirements)_
 
 Right now, we're hardcoding the cards into our runner. Wouldn't it be nice to have file of card information to use?
 
-Let's build an object that will read in a text file and generate cards. Remember to using TDD for this iteration!
+Let's build an object that will read in a text file and generate cards. Remember to use TDD for this iteration!
 
 Assuming we have a text file `cards.txt` that looks like this (but with all 52 cards):
 

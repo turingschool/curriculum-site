@@ -6,7 +6,7 @@ title: War or Peace - Setup
 _[Back to Project Home](./index)_
 
 
-* Fork [this repository](https://github.com/turingschool-examples/war_or_peace)
+* Fork <a href="https://github.com/turingschool-examples/war_or_peace" target="_blank">this repository</a>
 * Clone YOUR fork to your computer
 * Make sure you don't clone the turingschool-examples repository
   * You can confirm that you have cloned the correct repository by running `git remote -v`. You should see something like this:
