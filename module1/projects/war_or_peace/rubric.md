@@ -35,4 +35,4 @@ Each student will have a live evaluation with an instructor, and should come pre
 **Testing** | All methods that do not require command line input/output are accurately tested. Best use assertions are made. | Each class has its own test file. Every method listed on the specification is tested. Most tests are written to accurately verify expected behavior. | Tests are written for most methods listed on the specification, but the tests may be in an incorrect location or the tests may not accurately verify the expected behavior | Fewer than 7 tests written (in addition to the card tests provided) |
 
 ## Version Control
-Code is required to be hosted on a GitHub repository, and will have at least 20 commits and one pull request.
+Code is required to be hosted on a GitHub repository, and will have at least 10 commits and one pull request.
