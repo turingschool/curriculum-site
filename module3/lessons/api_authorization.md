@@ -511,6 +511,7 @@ But, for API consumption, the session is largely irrelevant because we expect th
     * How many roles would you need?
     * what endpoints would be useful?
     * how might name-spacing be used to structure the design?
-* Define what a 'callback' is in rails; and provide examples of when one would be used.
+    * How might you implement authorization to prevent unauthorized users from performing certain operations?
+
 
 <small>Completed code for this lesson can be found on the auth-complete branch of the [SetListAPI](https://github.com/turingschool-examples/set-list-api/) repo </small>
