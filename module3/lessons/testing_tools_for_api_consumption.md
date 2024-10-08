@@ -450,6 +450,16 @@ VCR.configure do |config|
 end
 ```
 
+### Fixtures Encoding in Binary?
+
+Sometimes, VCR cassettes record the response body encoded in binary so it's not human-readable. In order to force VCR to record the body in a string that you can read, you can add this block to your config:
+
+```ruby
+  config.before_record do |i|
+    i.response.body.force_encoding('UTF-8')
+  end
+```
+
 ## Checks for Understanding
 
 - What are some reasons we don't want our tests to make real API calls?

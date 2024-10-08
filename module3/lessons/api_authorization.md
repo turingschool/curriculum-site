@@ -43,11 +43,11 @@ Checkout the `auth-starter` branch from the [SetListAPI repo](https://github.com
 
 </section>
 
-## Token Generation
+## Common API Authentication Strategies
 
-In the past, you have used athentication tokens in your API requests to places like [pexels.com](https://www.pexels.com/api/key/) (though they use the term 'key').  Now, we are going to update our API to require a token to gain access to our data.
+In the past, you have used keys in your API requests to places like [pexels.com](https://www.pexels.com/api/key/).  Now, we are going to update our API to require a key to gain access to our data.
 
-We are using ruby's [SecureRandom](https://ruby-doc.org/stdlib-3.1.1/libdoc/securerandom/rdoc/SecureRandom.html) module to generate individual authentication tokens that are tied to specific users.  This is not the *only* way to generate authentication tokens - can you imagine a few other ways that we might generate tokens?
+We are using ruby's [SecureRandom](https://ruby-doc.org/stdlib-3.1.1/libdoc/securerandom/rdoc/SecureRandom.html) module to generate individual keys that are tied to specific users.  This is not the *only* way to implement authorization with our APIs. Can you imagine a few other ways?
 
 <section class='dropdown'>
 ### 3 common strategies
@@ -63,6 +63,7 @@ token = SecureRandom.hex(20)
 Advantages:
 * Simple to implement.
 * Tokens are unique and can have a long enough length to ensure security.
+
 Drawbacks:
 * Tokens don’t expire unless explicitly set to do so.
 * If a token is compromised, it remains valid until revoked manually or through the system.
@@ -80,6 +81,7 @@ Advantages:
 * Stateless authentication (no need to store tokens in the database).
 * Built-in support for expiration (exp claim) and can carry user data.
 * Easily decodable for quick verification of claims.
+
 Drawbacks:
 * If not handled securely, the payload can be tampered with (though the signature protects this).
 * Cannot be revoked easily since tokens are not stored in the database.
@@ -93,6 +95,7 @@ Advantages:
 * Token expiration and refresh mechanisms are built-in.
 * Secure for third-party access delegation.
 * Standardized and well-supported in libraries.
+
 Drawbacks:
 * More complex to set up than random tokens or JWTs.
 * Tokens can expire frequently, requiring refresh logic.
@@ -100,40 +103,48 @@ Drawbacks:
 
 </section>
 
+<section class="call-to-action">
+  **Token vs. Key**
+
+  These terms are often used interchangeably, which is okay! Both are generally unique, hard-to-guess (or maybe encrypted) codes that can be used to authenticate users and authorize certain operations. The main difference is around *time* - **while tokens are generally short-lived** and could expire after a short period of time or a logout, **keys often are long-lived** unless the server regenerates or revokes them. 
+  
+</section>
+
 ## User Roles
 
 Let's use TDD to drive the implementation of authenticating api requests, and controlling for specific user-roles.  By the end of this lesson, our application will adhere to the following user-stories:
 
 ```
-As an visitor
-When I make an api request (without an auth token)
-Then I am directed to register as a user
+As an API consumer
+When I make an api request without an API key in the header,
+Then I am sent an error code and message, 
+And I am directed to register as a user
 ```
 
 ```
-As a registered user
-When I make an api request (with my auth token) to
+As a registered API consumper
+When I make an api request with an API key in the header to
   GET "/api/v1/songs"
 Then I see a json response will all songs
 ```
 
 ```
-As a registered user
-When I make an api request (with my auth token) to
+As a registered API consumer
+When I make an API request with an API key in the header to
   GET "/api/v1/songs/1"
 Then I see a json response with 1 song
 ```
 
 ```
-As a registered user
-When I make an api request (with my auth token) to
+As a registered API consumer
+When I make an api request with an API key in the header to
   POST "/api/v1/songs/"
 Then I see a json response with a 405 status
 ```
 
 ```
 As an admin user
-When I make an api request (with my auth token) to
+When I make an API request with an API key in the header to
   POST "/api/v1/songs/" {'title':'Happy', 'length':'325', 'play_count':'3'}
 Then I see a json response with my created song
   And the song is saved in the database
@@ -162,7 +173,7 @@ describe "Songs API" do
       body = JSON.parse(response.body, symbolize_names:true)
 
       expect(response).to_not be_successful
-      expect(body[:error]).to eq("Unathorized, please register as a user")
+      expect(body[:error]).to eq("Unauthorized, please register as a user")
     end
 
     it "songs show" do
@@ -171,7 +182,7 @@ describe "Songs API" do
       body = JSON.parse(response.body, symbolize_names:true)
 
       expect(response).to_not be_successful
-      expect(body[:error]).to eq("Unathorized, please register as a user")
+      expect(body[:error]).to eq("Unauthorized, please register as a user")
     end
 
     it "songs create" do
@@ -187,7 +198,7 @@ describe "Songs API" do
       body = JSON.parse(response.body, symbolize_names:true)
 
       expect(response).to_not be_successful
-      expect(body[:error]).to eq("Unathorized, please register as a user")
+      expect(body[:error]).to eq("Unauthorized, please register as a user")
     end
 
     it "songs update" do
@@ -200,7 +211,7 @@ describe "Songs API" do
       body = JSON.parse(response.body, symbolize_names:true)
 
       expect(response).to_not be_successful
-      expect(body[:error]).to eq("Unathorized, please register as a user")
+      expect(body[:error]).to eq("Unauthorized, please register as a user")
     end
 
     it "songs delete" do
@@ -213,7 +224,7 @@ describe "Songs API" do
       body = JSON.parse(response.body, symbolize_names:true)
 
       expect(response).to_not be_successful
-      expect(body[:error]).to eq("Unathorized, please register as a user")
+      expect(body[:error]).to eq("Unauthorized, please register as a user")
     end
 
   end
@@ -302,6 +313,9 @@ describe "Songs API" do
   end
 end
 ```
+
+You've probably noticed that we're sending the API key in an Authorization header in the request. Even though we're using this API key to *authenticate* the request (verify that we are the user we say we are), it's conventional to use this type of header. It's not technically being used for authorization, but it's often used for this type of key. It's a bit confusing, we know! 
+
 </section>
 
 ### Control for Authorized Users
@@ -323,7 +337,7 @@ class Api::V1::SongsController < ApplicationController
     @current_user = User.find_by(api_token: token)
     
     if @current_user.nil?
-      render json: { error: 'Unathorized, please register as a user' }, status: :unauthorized
+      render json: { error: 'Unauthorized, please register as a user' }, status: :unauthorized
     end
   end
 end
