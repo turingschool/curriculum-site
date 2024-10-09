@@ -191,7 +191,7 @@ Complete this Scavenger Hunt, jotting the answers in your notes:
   - What is the target's nextElementSibling?
   - Add another console log that prints the `event.target`
 
-Now that we know about `event.target`, we can use that to access whichever box was clicked on.
+Now that we know about `event.target`, we can use that to access whichever box was clicked on.  
 </section>
 
 <section class="dropdown">
@@ -207,6 +207,28 @@ Every box has the class "box".  Maybe we can use code to say: "if the element th
 
 </section>
 
+<section class="dropdown">
+### Possible Solution:
+
+```js
+let addBoxButton = document.querySelector('#addBoxButton')
+let boxSection = document.querySelector('#boxSection')
+
+addBoxButton.addEventListener('click', addBox)
+boxSection.addEventListener('click', changeColor)
+
+function addBox() {
+  boxSection.innerHTML += "<div class='box'></div>"
+}
+
+function changeColor() {
+  console.log('event: ', event)
+  if (event.target.classList.contains('box')) {
+    event.target.classList.add('purple')
+  }
+}
+```
+</section>
 
 <section class="dropdown">
 ### More Practice - Get Weird
@@ -224,6 +246,8 @@ Every box has the class "box".  Maybe we can use code to say: "if the element th
 - We can use dot notation to access these properties and run the built in methods.
 - Each DOM element has a classList with methods for .add(), .remove(), .contains(), .toggle()
 - When a user takes an action, that action is an "event" and the "target" of that event is whatever element it happened on. We can access it via `event.target`.
+- querySelectors run on page load so you can't just use document.querySelector to grab an element that is programmatically added to the DOM. Because it isn't part of the initial HTML and doesn't exist yet on page load.
+- Instead, you'll add an event listener to it's parent container then use logic to execute your desired code if the event.target is one of the element you care about.
 - This is all related to the concepts of event delegation and event bubbling.  Not essential to dig into now but something you'll want to google and learn about down the road. Maybe as interview prep.
 
 ### Circling Back:
