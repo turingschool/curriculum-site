@@ -97,7 +97,7 @@ For example:
 
 //individually apply styles that are not shared
 .nav-button {
-  background-color: black;
+  background-color: lightblue;
 }
 
 .submit-button {

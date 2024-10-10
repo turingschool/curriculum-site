@@ -130,14 +130,13 @@ Result after clicking Show My Poster button:
 ![result](../../../assets/images/projects/hang-in-there/form-result.png)
 
 - On the new poster form view, users should be able to fill out the three input fields and then hit the Show My Poster button
+  - _Hint:
+Notice something weird happening when you click the button to submit the form? Try googling `event.preventDefault()`!_
 - When the Show My Poster button is clicked, several things will happen:
   - First, use the values from the inputs to create a new, unique poster object and save it as the value of the `currentPoster` global variable (part of your data model)
   - Save the submitted data into the respective arrays (image URL into the images array, etc - all part of your data model) so that future random posters can use the user-created data
   - Change back to the main poster view (hiding the form view again)
   - Use the new, unique poster object (which should be saved in the `currentPoster` variable - part of your data model) to display the newly created poster image, title, and quote in the main view on the DOM
-
-_Hint:
-Notice something weird happening when you click the button to submit the form? Try googling `event.preventDefault()`!_
 </section>
 
 <section class="dropdown">
