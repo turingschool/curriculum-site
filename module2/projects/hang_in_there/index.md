@@ -22,20 +22,6 @@ Sometimes you need a pick me up. Remember those motivational posters that were a
 ### Helpful Hints
 
 <section class="dropdown">
-### What's the deal with deploying?
-
-Deploying your repos allows you to have a live site for your application. You'll be able to share this link with friends and family to show off what you're learning! You will also include deploy links on your resume so potential employers can see what you've built! 
-
-Deploying takes time, so it's not a good idea to use your deployed site as your point of reference while building your app. While you're coding, you'll want to run `open index.html` in your terminal to see the current local version of your app. You need to refresh the browser each time you make an update to your code. Once you've pushed up your code and merged into the main branch, the deployed site should update within an hour. 
-
-Below are instructions for deploying to GH Pages:  
-
-    - Repo Settings » Pages » Select the main branch as your Source branch » Save. Then, wait up to an hour, hit refresh, and your deployed link should appear at the top of the screen.  
-
-    - If you don't want to wait, your GH pages URL will follow this format: "https://username.github.io/hang-in-there/". Replace "username" with the repo owner's GH username and "hang-in-there" with your repo's name (if different). The URL will not work right away - that's ok! Add it to the Project Submission form anyway. 
-</section>
-
-<section class="dropdown">
 ### Why are our PRs pushing to the Turing repo?
 
 Forks are typically used to let someone propose changes to your project, that would eventually be merged back into the original repo you forked from. So a fork will always remain connected to the original repo.
@@ -50,6 +36,24 @@ If you want to change the default, follow the steps [here](https://stackoverflow
 
 If you console log something in your project, you’ll see it in the dev tools console when you open the page in your browser (`open index.html`). Nothing will appear in your terminal. Remember, you need to refresh the browser each time you make an update to your code.
 </section>
+
+
+<section class="dropdown">
+### Deploying - Deployment is optional and not expected for this project
+
+Deploying your repos allows you to have a live site for your application. You'll be able to share this link with friends and family to show off what you're learning! You will also include deploy links on your resume so potential employers can see what you've built! 
+
+Deploying takes time, so it's not a good idea to use your deployed site as your point of reference while building your app. While you're coding, you'll want to run `open index.html` in your terminal to see the current local version of your app. You need to refresh the browser each time you make an update to your code. Once you've pushed up your code and merged into the main branch, the deployed site should update within an hour. 
+
+**Deployment is optional and not expected for this project.**  If you do want to deploy, GH Pages is a good option for simple FE application like this one.  
+
+Below are instructions for deploying to GH Pages:  
+
+    - Repo Settings » Pages » Select the main branch as your Source branch » Save. Then, wait up to an hour, hit refresh, and your deployed link should appear at the top of the screen.  
+
+    - If you don't want to wait, your GH pages URL will follow this format: "https://username.github.io/hang-in-there/". Replace "username" with the repo owner's GH username and "hang-in-there" with your repo's name (if different). The URL will not work right away - that's ok! Add it to the Project Submission form anyway. 
+</section>
+
 </section>
 
 <section class="dropdown">
@@ -65,6 +69,8 @@ Here are some ideas of what to look for:
 - Is any of our JS code too repetitive? Could we make any reusable functions with parameters and arguments?
 
 Remember - shorter code isn't always better! 
+
+Refactoring is valuable, but you shouldn't spend so much time trying to perfect your code that it prevents you from working through the iterations.
 </section>
 
 ## Progression
@@ -130,14 +136,13 @@ Result after clicking Show My Poster button:
 ![result](../../../assets/images/projects/hang-in-there/form-result.png)
 
 - On the new poster form view, users should be able to fill out the three input fields and then hit the Show My Poster button
+  - _Hint:
+Notice something weird happening when you click the button to submit the form? Try googling `event.preventDefault()`!_
 - When the Show My Poster button is clicked, several things will happen:
   - First, use the values from the inputs to create a new, unique poster object and save it as the value of the `currentPoster` global variable (part of your data model)
   - Save the submitted data into the respective arrays (image URL into the images array, etc - all part of your data model) so that future random posters can use the user-created data
   - Change back to the main poster view (hiding the form view again)
   - Use the new, unique poster object (which should be saved in the `currentPoster` variable - part of your data model) to display the newly created poster image, title, and quote in the main view on the DOM
-
-_Hint:
-Notice something weird happening when you click the button to submit the form? Try googling `event.preventDefault()`!_
 </section>
 
 <section class="dropdown">

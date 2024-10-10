@@ -69,7 +69,12 @@ h1 {
 ### Sharing styles across multiple elements
 Remember: an HTML element can have zero, one, or _multiple_ classes applied to it. Class attributes can help us write cleaner and more DRY (don’t repeat yourself) CSS **because we can apply the same class to multiple elements in our HTML that share certain styles**. Then, in our CSS, we simply apply all the shared styles to that shared class. We can also apply CSS declarations to multiple elements at once by stacking the selectors. 
 
-For example:
+Open up this [CSS: Sharing Styles Across Multiple Elements Codepen](https://codepen.io/turingschool/pen/LYwbaZJ?editors=1100).  Look at the HTML and CSS closely.  Digest which styles are being applied to which elements and how.  Ignore the commented out CSS styles at the bottom of the file for now.  Together we will learn how to make this CSS more DRY.
+
+<section class="dropdown">
+### DRY solution options 
+
+We can keep things DRY in CSS by stacking selectors and/or applying shared styles to a single class then applying that class to multiple elements.
 
 ```html
 <h1 class="italic">Hello, World!</h1>
@@ -97,7 +102,7 @@ For example:
 
 //individually apply styles that are not shared
 .nav-button {
-  background-color: black;
+  background-color: lightblue;
 }
 
 .submit-button {
@@ -113,6 +118,8 @@ For example:
   font-style: italic;
 }
 ```
+</section>
+
 
 <section class="note">
 ### Unique IDs
