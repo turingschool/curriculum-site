@@ -26,7 +26,7 @@ tags: css, box model, syntax
 - `rule` selector(s) and a declaration block come together to create a rule
 
 ## What is CSS?
-CSS can do SO MUCH more than just add color or make things pretty. CSS can be used to create artwork like [this project](https://www.cssartist.com/inprogress) by Kassandra Sanchez. CSS can also make complex processes more intuitive and accessible users, like [TurboTax](https://turbotax.intuit.com/personal-taxes/online/) and [airbnb](https://www.airbnb.com/). CSS is a powerful tool for frontend developers. Let's jump in to see how it works!  
+CSS can do SO MUCH more than just add color or make things pretty. CSS can be used to create artwork like [this project](https://www.cssartist.com/inprogress) by Kassandra Sanchez. CSS can also make complex processes more intuitive and accessible users, like [TurboTax](https://turbotax.intuit.com/personal-taxes/online/) and [airbnb](https://www.airbnb.com/). CSS is a powerful tool for frontend developers. This [CSS Zen Garden](https://csszengarden.com/) demonstrates just how powerful it can be.
 
 It’s a “style sheet language” that lets you style the HTML elements on your page. CSS works _with_ HTML and controls the positioning, sizing, colors, and specific fonts on your page.  
 

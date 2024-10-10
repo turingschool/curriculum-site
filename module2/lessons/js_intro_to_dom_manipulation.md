@@ -78,7 +78,7 @@ title;
 //=> <h1>JS: Intro to DOM Manipulation</h1>
 ```
 
-<section id="explore" class="call-to-action">
+<section id="explore-querySelector" class="call-to-action">
 ### Explore
 
 Open the Dev Tools while you are looking at this lesson. In the console, paste this in:
@@ -98,7 +98,7 @@ Then, call the `box` variable (by typing in `box`, then hitting `return`).
 We've already seen three of the different selector options we can use in our query:
 - by html element tag: `document.querySelector('h1')`
 - by class: `document.querySelector('.call-to-action')`
-- by id: : `document.querySelector('#explore')`
+- by id: : `document.querySelector('#explore-querySelector')`
 
 Take Note:
 - selectors must always be in quotation marks (single or double)
