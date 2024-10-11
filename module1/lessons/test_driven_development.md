@@ -93,7 +93,7 @@ end
 ```
 
 <section class="call-to-action">
-### What might be the pitfalls in a test like this?  How could we improve the test (and thus the behavior of our calculator?)
+### What might be the pitfalls in a test like this?  How could we improve the test (and thus the behavior of our Round?)
 
 - We only have one card in our `cards` array, so even if the logic of this method didn't work, we wouldn't know because we don't have enough data in our setup to accurately test the logic. *The Fix:* adding more card objects to our `cards` array.
 - The test is testing for `deck.cards.first`, but this is the same logic in the method, which can result in a false positive. Instead, we can test this more explictly and write `expect(round.current_card.name).to eq "2 of Hearts"` (this assumes a method in the Card class called #name that would string together the value and suit).
