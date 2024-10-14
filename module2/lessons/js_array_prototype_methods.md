@@ -161,7 +161,7 @@ Be sure to include these in your notes, if you haven't already!
 * Useful for when you need to find a subset of elements in an array that matches a given condition.
 * The callback needs to return an expression that evaluates to a **boolean** value of true or false. 
 * The matching elements are returned as they are. You cannot modify the element(s) you're filtering for within the filtering function.
-* `filter` has the conditional logic built in (thats the point). You shouldn't need to write an if/else within a filter.
+* `filter` has the conditional logic built in (that's the point). You shouldn't need to write an if/else within a filter.
 </section>
 
 Note that depending on the syntax you use for your callback function, you may not need to explicitly write the `return` keyword.  You can leverage the *implicit return* available in certain arrow function syntax.
