@@ -159,7 +159,7 @@ Create another array of beatles that play the guitar using the `filter` method a
 Be sure to include these in your notes, if you haven't already!
 * `filter` will return a new **array** with all elements that match a condition.
 * Useful for when you need to find a subset of elements in an array that matches a given condition.
-* The callback needs to return an express that evaluates to a **boolean** value of true or false. 
+* The callback needs to return an expression that evaluates to a **boolean** value of true or false. 
 * The matching elements are returned as they are. You cannot modify the element(s) you're filtering for within the filtering function.
 * `filter` has the conditional logic built in (thats the point). You shouldn't need to write an if/else within a filter.
 </section>
