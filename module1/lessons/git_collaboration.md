@@ -17,7 +17,7 @@ Oftentimes, we start a project by forking or cloning a pre-existing repository f
 
 Pick one person to create the repo. The other person should be watching and advising!
 
-**Command Line**
+**Command Line (Terminal)**
 - Use the command line to make a new directory called "git-collaboration-practice"
 - Add a `README.md` file to your directory
 - Open up your directory in your text editor and add some text to that README
@@ -64,11 +64,12 @@ Then you have to tell git what the default branch should be. You can run this co
 ### Partner Two
 
 **Getting Started**
-- Get the link to your partner's repo
+- Get the link to your partner's Github repo
 - Accept the collaborator invitation (you'll probably get an email)
 - Clone it down to your machine
+  - Do NOT fork; **clone your partner's repo!!**
 
-**Working on the App**
+**Command Line & Text Editor**
 - Create a new branch (what name makes the most sense here?)
 - Open up the repo in your text editor and add some text to that README
 - Add, commit and push that code to your branch
@@ -123,6 +124,7 @@ Examples of good commit messages:
 
 **Reviewing Code Locally**
 - Checkout your partner's branch
+  - You will need to fetch existing branches first 😉
 - Look at their code in your text editor
   - In a real application, you might be opening it up in the browser, checking for errors, running tests, etc.
 
@@ -181,7 +183,10 @@ Yes! As long as a branch is pushed up to GitHub, _anyone_ can pull it down and w
 
 <section class="dropdown">
 ### Other Git Tips & Infos 
- 
+- `git status`
+  - DOES nothing
+  - SHOWS what branch you are on, and if you have any changes to commit
+  
 - `git branch`  
   - DOES nothing   
   - SHOWS you what branches you have, and which branch you are currently on   
