@@ -13,3 +13,4 @@ subheading: Finding Your Specialty
 
 
 ## Other Resources
+- [Interview Resources](./interview_resources)
