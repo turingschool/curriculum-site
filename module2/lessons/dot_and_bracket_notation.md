@@ -24,7 +24,7 @@ Watch the first 7 minutes of [this video](https://www.youtube.com/watch?v=DJ0dey
 
 <!-- This video is from Pam Lovett, covering bracket and dot notation and dives into details around using strings and or variables in bracket notation  -->
 
-- Independently, complete the exercise found on [this repl](https://repl.it/@kaylaewood/bracketVsDotTryIt1#main.js).
+- Independently, complete the exercise found on [this repl](https://repl.it/@kaylaewood/bracketVsDotTryIt1#index.js).
 
 <section class="checks-for-understanding">
 
