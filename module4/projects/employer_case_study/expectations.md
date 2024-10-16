@@ -32,6 +32,8 @@ layout: page
 - Apply from the hiring manager's viewpoint, explaining why the role is crucial for the company.
 - Perform a [SWOT analysis](./swot_analysis.html) of the role, considering its strengths, weaknesses, opportunities, and threats.
   - [SWOT Analysis Example](./swot_analysis.pdf)
+- Example answer to _Why this Role?_
+  - "This company needs an associate who has foundational experience in Rails and is an advocate for TDD because they are overhauling their test strategy and would like developers with experience analyzing test coverage and championing TDD"
 
 <section class="note">
 #### Important
