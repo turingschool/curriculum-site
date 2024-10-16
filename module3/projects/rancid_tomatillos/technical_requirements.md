@@ -33,7 +33,7 @@ You will be starting with this boilerplate repo: **[https://github.com/turingsch
     - A **[label](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/managing-labels)** that indicates the associated iteration (i.e. `iteration 1`)
     - Some details in the description (a ticket's content should not just be the title)
     - At least 2 tickets should be **[assigned](https://docs.github.com/en/issues/tracking-your-work-with-issues/assigning-issues-and-pull-requests-to-other-github-users)** to a person
-    - Ideally, all tickets should be converted to **[issues](https://docs.github.com/en/issues)** in your repo
+    - (optional) Ideally, all tickets should be converted to **[issues](https://docs.github.com/en/issues)** in your repo
       - By default, when you fork a repository, Issues are disabled. To enable them go to Settings in the upper right corner, then scroll down to the Features section. Check the Issues box to enable them.
       - Bonus: Remember that **[you can close your issues directly from a PR](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/linking-a-pull-request-to-an-issue)**!
 * An initial plan for your component architecture. Any format is fine, though you might find something like **[excalidraw](https://excalidraw.com/)** to be helpful. You should answer the following questions:
