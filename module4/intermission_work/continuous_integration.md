@@ -13,6 +13,8 @@ By the end of this lesson, you will:
 - Be familiar with a typical deployment flow for agile teams
 - Be able to set up CircleCI for continuous integration and automatic deployments for front-end or back-end applications. 
 
+**You are required to fill out this [exit ticket](https://forms.gle/M2xom7asi4BF79Ay8) at the end of the lesson**
+
 ## Important Vocabulary
 
 - **local environment**: A version of an application that a developer can edit and run on their own machine (i.e. an application run on localhost). 
@@ -316,3 +318,7 @@ You may be interested in trying one of the following tools instead of the tools 
 - [Jenkins](https://www.jenkins.io/)
 
 </section>
+
+## Checks for Understanding
+
+Fill out this [form](https://forms.gle/M2xom7asi4BF79Ay8)!
