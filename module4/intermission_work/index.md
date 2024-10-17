@@ -16,6 +16,7 @@ If you are planning to demo a project at Demo Comp in week 1 of Mod 4, you MUST 
 1. [Open-Source Exploration](./open_source): Complete exercise. Timebox: 1-2 hours. 
 2. [Continuous Integration](./continuous_integration): Review Lesson and submit [exit ticket](https://forms.gle/M2xom7asi4BF79Ay8). Timebox: 2-3 hours.
 3. [Personal Portfolio](../projects/personal_portfolio): Work through the setup and begin customizing your site. Timebox: 5-6 hours
+4. Job Hunting! Spend 8-10 hours networking, refining documents and applying to jobs. You will be asked how you spent your time in the survey below. 
 
 All deliverables must be submitted by Saturday at 5pm MT through [this survey](https://forms.gle/Nz6FJwQZLSHZU2yu9)
 
