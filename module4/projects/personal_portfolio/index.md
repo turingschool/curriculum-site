@@ -67,7 +67,7 @@ Show readers who you are by telling a story of your journey into tech. Share eno
 ### Projects
 The main recommendation here is to remember that you are speaking to potential employers, not investors. These project descriptions should briefly describe the project, and then quickly pivot to describing your primary contributions and the things you learned. **This is an advertisement for you, not the project.**
 
-Be consistent in your project descriptions. Too often students use different formats and headings for each of their project descriptions. It can help your audience of potential employers to quickly digest this information if you are even consistent between projects in the order in which you provide information.
+Be consistent in your project descriptions. Too often students use different formats and headings for each of their project descriptions. It can help your audience of potential employers to quickly digest this information if you are consistent across projects in the order in which you provide information.
 
 A good format to follow is:
   * First sentence: name of project, number of collaborators, primary technologies used, what it does.
