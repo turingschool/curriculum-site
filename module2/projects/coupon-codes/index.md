@@ -37,7 +37,7 @@ This project is an extension of Little Shop. You'll need to start this project w
 
 
 **Frontend Repo** 
-- All students must use a forked copy of **[this frontend repo](https://github.com/turingschool-examples/little-shop-fe-final-starter)** for this project. 
+- All students must use a forked copy of **[this frontend repo](https://github.com/turingschool-examples/little-shop-fe-final-starter)** for this project. Keep this repo separate from your BE repo when you fork and clone it down. They will be separate repos, do not nest one in the other.
 
 
 ## Evaluation

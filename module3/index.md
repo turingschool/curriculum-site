@@ -13,3 +13,4 @@ subheading: Building and Consuming APIs
 - [Midmod Assessment](./midmod_assessment)
 
 ## Other Resources
+- [Rails Practice](./rails_practice)
