@@ -71,7 +71,7 @@ Be consistent in your project descriptions. Too often students use different for
 
 A good format to follow is:
   * First sentence: name of project, number of collaborators, primary technologies used, what it does.
-  * Second sentence: main learning goals of the project/the things you were doing for the first time in this project (if you don’t know, ask your instructors).
+  * Second sentence: main learning goals of the project & the things you were doing for the first time in this project (if you don’t know, ask your instructors).
   * Third sentence: any stretch goals you were able to achieve.
   * Fourth sentence: anything you specifically focused on in the project.
 
