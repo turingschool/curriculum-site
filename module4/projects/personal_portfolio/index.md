@@ -45,7 +45,7 @@ When you are finished, submit the URL to your portfolio using this [submission f
 ### About Me
 What do you want your profile to say about you? Write out a rough draft of your professional story considering using this framework:
   * What is your career story about your past, present, and future that you want to share with employers?
-  * What prior experiences are relevant and transferrabe to the tech industry?
+  * What prior experiences are relevant and transferable to the tech industry?
   * What impact you want to have in software development?
   * What kind of company and culture are you passionate about adding value for?
 
