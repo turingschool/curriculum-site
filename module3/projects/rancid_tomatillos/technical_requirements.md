@@ -126,7 +126,7 @@ If it makes you nervous, remember that you should always be working on a branch.
 
 For this iteration, we'll finally refactor our application to use actual data from a backend instead of our mock data files. 🥳
 
-**[Here are the API Docs.](../api_documentation)**
+**[Here are the API Docs.](./api_documentation)**
 
 **User Stories**
 - After deleting the entire `data` folder and fetching instead, all prior user stories still work as expected.
