@@ -9,13 +9,13 @@ This prework should take no longer than 20 hours to complete the Deliverables. I
 
 ### Demo Competition
 
-If you are planning to demo a project at Demo Comp in week 1 of Mod 4, you MUST timebox your time over intermission and in week 1 to ensure you are meeting module expectations. We recommend setting aside specific times to work with your demo team over intermission to finish your demo BEFORE week 1 begins. You are responsible for balancing your time between working on the demo project and the tasks below.
+If you are planning to demo a project at Demo Comp in week 1 of Mod 4, you MUST timebox your time over intermission and in weeks 1 and 2 to ensure you are meeting module expectations. We recommend setting aside specific times to work with your demo team over intermission to finish your demo BEFORE week 1 begins. You are responsible for balancing your time between working on the demo project and the tasks below.
 
 ## Deliverables
 
 1. [Open-Source Exploration](./open_source): Complete exercise. Timebox: 1-2 hours. 
 2. [Continuous Integration](./continuous_integration): Review Lesson and submit [exit ticket](https://forms.gle/M2xom7asi4BF79Ay8). Timebox: 2-3 hours.
-3. [Personal Portfolio](https://github.com/turingschool/portfolio-template): Work through the setup and begin customizing your site. Timebox: 5-6 hours
+3. [Personal Portfolio](../projects/personal_portfolio): Work through the setup and begin customizing your site. Timebox: 5-6 hours
 
 All deliverables must be submitted by Saturday at 5pm MT through [this survey](https://forms.gle/Nz6FJwQZLSHZU2yu9)
 
@@ -24,8 +24,6 @@ All deliverables must be submitted by Saturday at 5pm MT through [this survey](h
 1. Refamiliarize yourself with the basics of [reading and evaluating technical documentation](./reading_documentation)
 
 2. Watch [this video](https://www.youtube.com/watch?v=eesqK59rhGA) about the HTTP request-response cycle. 
-
-3. Explore the git rebase workflow with [this article](https://www.atlassian.com/git/tutorials/rewriting-history/git-rebase) and [this one, too!](https://www.atlassian.com/git/tutorials/merging-vs-rebasing)
 
 4. Review [this lesson](https://careerdev.turing.edu/module_four/negotiations) on salary negotiations.
 
