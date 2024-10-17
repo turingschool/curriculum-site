@@ -65,7 +65,7 @@ We will be using `fetch` today in the context of React. Let's review what you al
 You'll need to use two repos for today:
 1. Clone down **[this react-ideabox FE](https://github.com/turingschool-examples/react-ideabox)** repo.  
   a. Navigate to that directory  
-  b. Run `git fetch`
+  b. Run `git fetch`  
   c. Run `git checkout network-requests`  
   d. Run `npm start`  
 2. You'll also need to get this **[ideabox-api BE Repo](https://github.com/turingschool-examples/ideabox-api)** up and running.  
