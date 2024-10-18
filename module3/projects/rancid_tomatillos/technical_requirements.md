@@ -31,6 +31,7 @@ You will be starting with this boilerplate repo: **[https://github.com/turingsch
   - At least 6 tickets, with each ticket including:
     - The associated user story from this project spec
     - A **[label](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/managing-labels)** that indicates the associated iteration (i.e. `iteration 1`)
+      - To view labels on the project board, click the down carrot on the tab (top left of page) > Fields > ✔️ Labels.
     - Some details in the description (a ticket's content should not just be the title)
     - At least 2 tickets should be **[assigned](https://docs.github.com/en/issues/tracking-your-work-with-issues/assigning-issues-and-pull-requests-to-other-github-users)** to a person
     - (optional) Ideally, all tickets should be converted to **[issues](https://docs.github.com/en/issues)** in your repo
