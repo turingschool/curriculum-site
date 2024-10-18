@@ -31,6 +31,7 @@ You will be starting with this boilerplate repo: **[https://github.com/turingsch
   - At least 6 tickets, with each ticket including:
     - The associated user story from this project spec
     - A **[label](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/managing-labels)** that indicates the associated iteration (i.e. `iteration 1`)
+      - To view labels on the project board, click the down carrot on the View tab (top left of page) > Fields > ✔️ Labels.
     - Some details in the description (a ticket's content should not just be the title)
     - At least 2 tickets should be **[assigned](https://docs.github.com/en/issues/tracking-your-work-with-issues/assigning-issues-and-pull-requests-to-other-github-users)** to a person
     - (optional) Ideally, all tickets should be converted to **[issues](https://docs.github.com/en/issues)** in your repo
@@ -79,6 +80,7 @@ Again, we will not be making any network requests yet.
 - When I click the down arrow...
   - The data should be updated so that the movie I clicked on has one less vote (state AND the mock data!).
   - I should see the vote decrease by one on the movie card.
+- The updated vote counts do not need to persist on page refresh.
 
 <section class="dropdown">
 ### 👀 Preview
@@ -126,12 +128,13 @@ If it makes you nervous, remember that you should always be working on a branch.
 
 For this iteration, we'll finally refactor our application to use actual data from a backend instead of our mock data files. 🥳
 
-**[Here are the API Docs.](../rancid_tomatillos_api_documentation)**
+**[Here are the API Docs.](./api_documentation)**
 
 **User Stories**
 - After deleting the entire `data` folder and fetching instead, all prior user stories still work as expected.
 - When you click on a movie, you should see that movie's details (no longer always showing "Spirited Away").
 - When a user votes, a `PATCH` request is sent so the backend data is updated.
+- Updated vote counts should persist on page refresh.
 
 <section class="dropdown">
 ### 👀 Preview
