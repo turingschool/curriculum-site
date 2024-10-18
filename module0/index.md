@@ -16,7 +16,7 @@ title: Welcome to Module 0
   </tr>
   <tr>
     <td>2412 (Dec 2)</td>
-    <td>November 4 - November 10</td>
+    <td>November 11 - November 15</td>
   </tr>
 </table>
 
