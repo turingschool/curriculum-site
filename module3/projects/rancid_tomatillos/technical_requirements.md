@@ -79,6 +79,7 @@ Again, we will not be making any network requests yet.
 - When I click the down arrow...
   - The data should be updated so that the movie I clicked on has one less vote (state AND the mock data!).
   - I should see the vote decrease by one on the movie card.
+- The updated vote counts do not need to persist on page refresh.
 
 <section class="dropdown">
 ### 👀 Preview
@@ -132,6 +133,7 @@ For this iteration, we'll finally refactor our application to use actual data fr
 - After deleting the entire `data` folder and fetching instead, all prior user stories still work as expected.
 - When you click on a movie, you should see that movie's details (no longer always showing "Spirited Away").
 - When a user votes, a `PATCH` request is sent so the backend data is updated.
+- Updated vote counts should persist on page refresh.
 
 <section class="dropdown">
 ### 👀 Preview
