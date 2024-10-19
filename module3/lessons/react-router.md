@@ -23,14 +23,14 @@ module: 3
 <section class="checks-for-understanding">
 ## Prework  
 
-Before the lesson, complete the [prework](https://frontend.turing.edu/lessons/module-3/intro-to-router-self-study-lesson.html){:target='blank'}.
+Before the lesson, complete the [prework](./react-router-prework){:target='blank'}.
 
 You might also find it helpful to watch [this video walkthrough](https://www.youtube.com/watch?v=Ul3y1LXxzdU) before the lesson, but it's not required.
 </section>
 
 <section class="call-to-action">
 ### Prework Review
-In small groups, discuss the following questions via [this Jamboard](https://jamboard.google.com/d/1IEbM9Gi7LLiVBOnx-9L_XjI2lVpi3ik86BtN-_ArNXg/edit?usp=sharing):
+In small groups, discuss the following questions:
 1. Why use Router?
 2. Describe the high-level process of setting up Router in a project (packages to install, basic component needed)
 3. Describe the following components:
