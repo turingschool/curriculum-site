@@ -19,21 +19,21 @@ What can we do to feel prepared going into the interview? Think about what you w
 #### Much Before
   * Reviewing fundamentals, especially if there are fundamentals specific for that position
   * What can you assume or find out about the type of problem you might get for a particular interview? Ask connections that you might have at that company.
+  * Record yourself talking through a practice tech challenge
+  * Practice with a mentor or classmate
 
 #### Right Before
   * Practice some wellness exercises before the interview - whatever you need to help yourself relax a bit
-  * Get a good night's sleep
+  * Get a good night's sleep, hydrate, eat something, resist the urge to over-caffeinate
 
 #### During
   * Restate the problem/challenge (writing it down on paper, typing it out) in your owns words, make a drawing/diagram if that helps
-  * Ask clarifying questions as soon as you have them
   * Pseudocode
-  * COMMUNICATION
-  * Record yourself talking through a practice tech challenge
-  * Practice with a mentor or classmate
+  * COMMUNICATE
+  * Ask clarifying questions to ensure you understand what is being asked of you
   * Talk through your process
   * Ask questions along the way - they will give you hints and help more than you would think
-  * It’s ok if you don’t finish the problem
+  * Remember, it’s ok if you don’t finish the problem
 
 #### After
   * Ask for feedback when it’s done (you can tell them how you felt about the problem, doing a quick self reflection)
