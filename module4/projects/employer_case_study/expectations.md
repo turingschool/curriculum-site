@@ -63,7 +63,7 @@ The purpose of this question is NOT to answer why YOU want this role, but to con
 The next step of the employer case study is to apply to your chosen job opportunity. 
 
 <section class="note">
-**IMPORTANT:** You do NOT need to wait until after your interview simulation to complete these steps or apply to the job. If you'd like feedback on your materials sooner than the interview simulation, you can schedule a check-in with your instructor.
+**IMPORTANT:** You do NOT need to wait until after your interview simulation to apply to the job. If you'd like feedback on your materials sooner than the interview simulation, you can schedule a check-in with your instructor.
 </section>
 
 ### Application Process
