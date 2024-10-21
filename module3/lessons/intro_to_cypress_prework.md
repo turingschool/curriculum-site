@@ -446,7 +446,7 @@ npm i
 npm start
 ```  
 
-**2. Get the backend running.** Clone the **[backend Feedback Loop repo](https://github.com/turingschool-examples/feedback-loop-ui){:target='blank'}**:
+**2. Get the backend running.** Clone the **[backend Feedback Loop repo](https://github.com/turingschool-examples/feedback-loop-api){:target='blank'}**:
 ```bash
 git clone https://github.com/turingschool-examples/feedback-loop-api.git
 cd feedback-loop-api
