@@ -27,12 +27,12 @@ What can we do to feel prepared going into the interview? Think about what you w
   * Get a good night's sleep, hydrate, eat something, resist the urge to over-caffeinate
 
 #### During
-  * Restate the problem/challenge (writing it down on paper, typing it out) in your owns words, make a drawing/diagram if that helps
-  * Pseudocode
   * COMMUNICATE
+  * Restate the problem/challenge (writing it down on paper, typing it out) in your owns words, make a drawing/diagram if that helps
   * Ask clarifying questions to ensure you understand what is being asked of you
   * Talk through your process
   * Ask questions along the way - they will give you hints and help more than you would think
+  * Pseudocode
   * Remember, it’s ok if you don’t finish the problem
 
 #### After
@@ -60,10 +60,10 @@ Putting yourself in the interviewer’s shoes – what would you notice? What wo
 
 ## What are they looking for?
 ### Reaction
-Your interviewer will be looking for your initial reaction to the problem itself, e.g. do you comprehend the question? Ask clarifying questions - they are probably expecting you to!
+Your interviewer will be looking for your initial reaction to the problem itself, e.g. do you comprehend the question? Ask clarifying questions - they are expecting you to! In fact, it can be a red flag to them if you **don't**.
 
 ### Thought Processes
-How do you break down this problem? Have you considered edge cases? 
+How do you break down this problem? Have you considered edge cases? Interviewers are usually **more** interested in your ability to **break down the problem** than they are in your ability to _solve_ it in the time given.
 
 ### Passion
 Are you energized by this kind of thing?
@@ -104,6 +104,7 @@ Ask questions to make sure you understand the challenge, and its edge cases. Rea
 * Does capitalization matter? Do spaces matter? 
 * Will there be more data to test? Will it include any nesting? Will there be any other data types as inputs (this is rare)? 
 * Will there be negative numbers? What about 0?   
+* From my understanding of the prompt, I'm being asked to XYZ, is that correct?
 </section>
 
 
@@ -140,7 +141,7 @@ Code out your solution. If the only ideas that are coming to mind are the “bru
 Talk through an example out loud to validate that your code will do what you think it should.
 
 ### 6. Evaluate
-Evaluate the time complexity of your solution (Big O) and any ways you might optimize your solution further.
+Evaluate any ways you might optimize your solution further. For example, consider the time complexity of your solution (Big O) and how it could be improved.
 
 
 <section class="call-to-action">
@@ -160,10 +161,10 @@ Evaluate the time complexity of your solution (Big O) and any ways you might opt
 ### Instructions
 You will be given a technical challenge and asked to analyze it in your breakout room.
 
-1. Understand: brainstorm edge cases & alternative inputs
+1. Understand: Brainstorm edge cases & alternative inputs
 2. Match: Identify the type of problem
 3. Break the problem down into small steps
-4. Plan: Write out some pseudo code
+4. Plan: Write out some pseudo code 
 
 
 
@@ -241,7 +242,7 @@ Write some code that could tell me the best profit possible if I had bought and 
 
 `stock_prices_yesterday = [10, 7, 5, 8, 11, 9, 4]`
 
-the function should return 6 (Buy: $5, Sell: $11, Profit: $11 - $5 = $6)
+The function should return 6 (Buy: $5, Sell: $11, Profit: $11 - $5 = $6)
 
 </section>
 
