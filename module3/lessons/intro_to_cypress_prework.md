@@ -25,7 +25,7 @@ In this lesson, we're going to learn about **acceptance testing** and **end-to-e
 
 ## What are acceptance tests?
 
-In our User Stories lesson, we learned about describing user flows. We also learned about writing _acceptance criteria_. A user story describes the WHAT of a user flow: what is supposed to happen? Acceptance criteria describes the HOW of a user flow: how is that accomplished?
+A user story describes the WHAT of a user flow: what is supposed to happen? Acceptance criteria describes the HOW of a user flow: how is that accomplished? [Learn more about user stories here!](https://frontend.turing.edu/lessons/module-3/user-stories)
 
 Acceptance testing ensures that the acceptance criteria were successfully implemented. It doesn't just manually call functions; it runs the actual application and walks through a user flow via the app UI. When we run acceptance tests, we use the client, and stub out (we'll learn about this later) our network requests and other services.
 
