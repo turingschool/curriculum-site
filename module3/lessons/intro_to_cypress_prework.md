@@ -195,16 +195,23 @@ Next, we need to add a script to our `package.json` file to run Cypress.
   }
 ```
 
-**Important!** You'll need three tabs open:  
-1. A tab with your react app running (react-ideabox: `npm start`)  
-2. A tab with your backend running (ideabox-api: `node server.js`)  
-3. A tab with cypress running (react-ideabox: `npm run cypress`)  
-ALL THREE TABS NEED TO BE ACTIVE FOR CYPRESS TO WORK!
-
 Now it's time to run Cypress. 
 ```bash
 npm run cypress
 ```
+
+<section class="note">
+### Important Note!
+
+You'll need three tabs open:  
+1. A tab with your react app running (react-ideabox: `npm start`)  
+2. A tab with your backend running (ideabox-api: `node server.js`)  
+3. A tab with cypress running (react-ideabox: `npm run cypress`)  
+  
+ALL THREE TABS NEED TO BE ACTIVE FOR CYPRESS TO WORK!
+</section>
+
+
 This will open the Cypress Test Runner, a user-friendly interface for managing your tests. Follow these steps to create your first test file:
 
 1. In the Cypress Test Runner, select "E2E Testing".
