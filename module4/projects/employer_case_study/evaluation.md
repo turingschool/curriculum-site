@@ -82,8 +82,8 @@ Students are expected to score in the "Meets Expectations" category. If any cate
   * A copy of the job description
   * SWOT analysis
   * Answers to the "Three Whys"
-  * Tailored resume
-  * Tailored Cover letter
+  * Tailored Resume
+  * Tailored Cover Letter
 * Due to instructor during your interview simulation
   * Document summarizing your application process
 </section>
