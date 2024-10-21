@@ -376,7 +376,8 @@ it('displays the list of ideas', () => {
   cy.get('.card').first().find('button').should('exist')
 })
 ```
-Boom! We're passing AND we're not actually hitting the API 🥳 
+Boom! We're passing AND we're not actually hitting the API 🥳  
+Note: Click on the text with the green checkmark to open up a more detailed view.
   
 ![Cypress UI](../../assets/images/lessons/cypress/cypress-ui-2.png)
 
