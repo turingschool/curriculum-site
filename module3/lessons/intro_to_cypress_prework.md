@@ -203,7 +203,7 @@ npm run cypress
 <section class="note">
 ### Important Note!
 
-You'll need three tabs open:  
+You'll need three tabs open in your **terminal** (use `command + T` to open a new terminal tab):  
 1. A tab with your react app running (react-ideabox: `npm start`)  
 2. A tab with your backend running (ideabox-api: `node server.js`)  
 3. A tab with cypress running (react-ideabox: `npm run cypress`)  
