@@ -317,9 +317,6 @@ Network requests can be expensive and slow down our tests. To keep our tests fas
 
 Stubbing allows us to control network requests and the data our tests work with. This approach helps ensure our tests are fast, reliable, and isolated from external dependencies like network requests. By using mock data, we can test various scenarios without relying on the actual server responses.  
 
-If you look at the Cypress UI, you see that before adding intercept, the UI for the fetch is showing a filled circle, which means that the request is being made to the server and the data is being displayed on the page. After we successfully intercept this request, we should see an empty circle:    
-![itercept circles](../../assets/images/lessons/cypress/intercept_example.png)
-
 To avoid making actual network calls, we can use `cy.intercept` to simulate the server response, using a fixture file that contains mock data.
 ```js
 // dashboard_spec.cy.js
@@ -354,6 +351,9 @@ We will use a fixtures file to store our mock data. Create a `fixtures/ideas.jso
   }
 ]
 ```
+
+If you look at the Cypress UI, you see that before adding intercept, the UI for the fetch is showing a filled circle, which means that the request is being made to the server and the data is being displayed on the page. After we successfully intercept this request, we should see an empty circle:    
+![itercept circles](../../assets/images/lessons/cypress/intercept_example.png)
 
 Okay now we have good news and bad news. Good news is that our GET request is being intercepted (notice the open green circles). Bad news is that now we are failing a previous test. No problem - we just need to update that test to be looking for the mock data, not the data from the server since we aren't actually hitting the API in our tests anymore.  
 
