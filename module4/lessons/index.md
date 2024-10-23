@@ -5,6 +5,8 @@ title: Module 4 - Lessons
 
 
 ### Technical Lessons
+- [JS: Execution Contexts & Scope](./js_execution_contexts_and_scope)
+- [JS: Asynchronous JavaScript](./async_js)
 
 ### Career and Professional Development Lessons
 - [Analyzing Tech Challenges](./analyzing_tech_challenges)
