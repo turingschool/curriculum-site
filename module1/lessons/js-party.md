@@ -62,11 +62,6 @@ You aren’t likely to specifically assign a value of **undefined** so there’s
 
 Use VSCode to open the [Data Types and Variables Playground file](https://github.com/turingschool-examples/mod2-sandbox/blob/main/js_party/data_types_and_variables_playground.js) in the JS Party folder of your SE2 repo to practice working with variables and data types in JavaScript.  Use google, MDN and each other when you get stuck. You're not suppose to know this, so just have a little fun trying to figure it out. 
 
-A few things you might want to google or check out in the MDN docs as you party:  
-*[concatenation](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Strings#concatenation_using)*  
-*[string interpolation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals#string_interpolation)*  
-*[type coercion](https://developer.mozilla.org/en-US/docs/Glossary/Type_coercion)*
-
 <br>
 
 ## Type Coercion, Concatenation, Interpolation
@@ -81,6 +76,7 @@ A few things you might want to google or check out in the MDN docs as you party:
 [concatenation](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Strings#concatenation_using)  
 [string interpolation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals#string_interpolation)  
 [type coercion](https://developer.mozilla.org/en-US/docs/Glossary/Type_coercion)
+
 <br>
 
 ## Functions
@@ -119,6 +115,13 @@ var supGreeting = captureGreeting('sup')
 var fancyGreeting = captureGreeting('oh hello there darling!')
 //  nothing prints to the console but 'oh hello there darling!' is stored in the variable
 ```
+
+<section class="note">
+### JS vs Ruby - Key Differences
+
+- To invoke a JS function, you write the function name followed by `()`.  You _must_ put the `()` to invoke the function.
+- In Ruby, you have to pass data into the method as an argument in order to access that data in the method.  In JS, you can access data that is stored in a global variable even if you don't pass it into the function as an argument.
+</section>
 
 The syntax above is from ES5, a version of JavaScript that uses the "function" keyword.  It's very common and you will see and use this syntax.  An update to JavaScript (ES6) provided a new syntax option for writing functions.  We often call this syntax "arrow functions".  See the captureGreeting function written in ES6 arrow function syntax below. 
 
@@ -212,6 +215,33 @@ var student = {
 ```
 
 Objects in JS can hold any data type within it's key-value pairs.  You can even declare methods within an object in JS (without having to build an entire Class). 
+
+<section class="note">
+### JS vs Ruby - Key Differences
+
+- To access data from within an object in JS, you can use dot or bracket notation.
+
+Using the student object above, I can access the age value by:  
+
+`student.age`  
+
+`student['age']`
+
+A common use case for using bracket notation to access data with a JS object is when the data point you care about is being passed into a function as an argument. You would then use the function's parameter within the bracket notation to access whichever data point is passed.
+
+```js
+function getStudentData(datapoint) {
+  return student[datapoint]
+}
+
+getStudentData('age')  
+  // passing 'age' as the arg means the bracket notation will be pulling the 'age' value from the object  
+
+
+getStudentData('name')  
+  // passing 'name' as the arg means the bracket notation will be pulling the 'name' value from the object
+```
+</section>
 
 ### 🎉 Object Party Exercises
 
