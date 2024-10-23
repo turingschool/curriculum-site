@@ -124,12 +124,14 @@ Using the policeSketchDescription object above, I can access the hair property's
 
 </section>
 
+<section class="call-to-action">
 ### Your Turn (in your js fundamentals file)
 
 * Use console.log and dot notation to print the value "brown" from the policeSketchDescription object
 * Use console.log and dot notation to print # of visible tattoos from the policeSketchDescription object
 * Use console.log and bracket notation to print first element in the favoriteFoods array - 'pizza'
 * Use console.log and bracket notation to print last element in the favoriteFoods array - 'sushi'
+</section>
 
 ### Dot or Bracket? 
 
@@ -155,20 +157,20 @@ console.log( getData('isTall') )
 
 ## Using Variables Together
 
+<section class="call-to-action">
 ### Your Turn (in your js fundamentals file)
 
 * Declare 2 variables, one named "quantity" and one named "mythicalCreature".
 * Declare a variable named "creatureCount" but don't assign it a value quite yet.  If you console log it, it should give you "undefined"
+</section>
 
 Let's make the value to our "creatureCount" variable be our "quantity" `+` our "mythicalCreature".
-<section class="dropdown">
 
 ```javascript
 let quantity = 3;
 let mythicalCreature = " unicorns";
 let creatureCount = quantity + mythicalCreature;
 ```
-</section>
 
 In your file, console log your "creatureCount" variable.  What do you get?  
 
@@ -504,13 +506,17 @@ identifyCookie("chocolate chip")
 identifyCookie("oatmeal raisin")
 identifyCookie("sugar")
 ```
+<section class="call-to-action">
+### Your Turn 
 
-### Your Turn
+<section class="answer">
 
-- In your file, copy/paste the function skeleton and invocations below.  
-- Build the "guts" of the function so that it looks at the hoursOfSleep parameter and responds based on the value that is passed as an argument on the invocation.  
-  - Your function should log "I am groggy." for less than 6 hours of sleep.  
-  - Your function should log "I feel fantastic!" for 6 or more hours of sleep.   
+### Exercise 1
+
+In your file, copy/paste the function skeleton and invocations below.  
+  - Build the "guts" of the function so that it looks at the hoursOfSleep parameter and responds based on the value that is passed as an argument on the invocation.  
+    - Your function should log "I am groggy." for less than 6 hours of sleep.  
+    - Your function should log "I feel fantastic!" for 6 or more hours of sleep.   
 
 ```javascript
 function evaluateSleep(hoursOfSleep) {  
@@ -520,6 +526,24 @@ function evaluateSleep(hoursOfSleep) {
 evaluateSleep(8)
 evaluateSleep(4)
 ```
+</section>
+
+<section class="answer">
+
+### Exercise 3
+
+Imagine you're a developer for AAA. Your website needs to provide different information to users based on their age.
+
+In your file, create a function called "checkAge" that takes in an age as an argument.
+  - The function should print a different message depending on the age passed in.
+    - If the user's age is under 18, reply with "Unfortunately, you do not meet our age requirements."
+    - If the user's age is between 18 - 64, reply with "Welcome to AAA!"
+    - If the user's age is 65 or older, reply with "Welcome to AAA! You're eligible for our senior discount!"
+</section>
+
+</section>
+
+
 <br>
 
 ## for loops
@@ -572,7 +596,7 @@ shoutForChildren()
 ```
 
 <section class="call-to-action">
-### In your file:  
+### Your turn  
 
 Copy/paste the code below into your file. Finish building the "guts" of the calculateTotalPoint function based on the commented out directions.
 
