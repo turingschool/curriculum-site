@@ -247,7 +247,7 @@ const getSum = nums => {
 
 The best way to start understanding recursion is to just try doing it!  Feel free to work through these problems in either JavaScript or Ruby.
 
-<section class="answer">
+<section class="call-to-action">
 ### Exercise 1
 
 **Factorial**
@@ -272,7 +272,7 @@ const factorial = num => {
 
 </section>
 
-<section class="answer">
+<section class="call-to-action">
 ### Exercise 2
 
 **Reverse a string.**
@@ -313,7 +313,7 @@ const reverse = word => {
 
 </section>
 
-<section class="answer">
+<section class="call-to-action">
 
 ### Exercise 3
 
@@ -342,7 +342,7 @@ const power = (base, exponent) => {
 
 </section>
 
-<section class="answer">
+<section class="call-to-action">
 
 ### Exercise 4
 
@@ -400,7 +400,9 @@ const isPalindrome = string => {
 <br>
 <br>
 
-### Tail Call Optimization
+## Tail Call Optimization
+
+We won't work through this section in the lesson today. Tail Call Optimization is something to dig into yourself if you're curious.  Note that neither Ruby nor JavaScript natively supports tail call optimization (TCO) out of the box so this may be a nice-to-know more than something you'll actually be able to implement depending on the environment you're working in.
 
 Great work on writing some recursive functions! As you read earlier, recursion isn't really optimized for JS or Ruby. By adding to the call stack with each recursive call, this can become too much to handle for recursive functions using large datasets! To get around the stack overflow issue, one can use *tail call optimization*.  A tail call refers to the last action that is **executed**. In this scenario, the recursive call must be the *last statement* of the recursive function.
 
