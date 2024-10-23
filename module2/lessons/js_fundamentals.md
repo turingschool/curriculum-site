@@ -35,7 +35,10 @@ _Note_: ES6 is the most current version of the ECMA Script Spec. We will be usin
 
 In any programming language, variables are what we use to store data values so that we can access and reuse those values throughout our code.  The name "variables" drives home the point that the stored data can change (or *vary*) along the way.  Variables can start off holding one value and later be reassigned to hold a different value.  
 
-In Ruby, you declare a variable simply by assigning a value to it (`person_age = 21`, `country_name = "Spain"`). In JavaScript, you declare the variable using a keyword of either `var`, `let`, or `const`. You do not specify the data type.
+<section class="note">
+In Ruby, you declare a variable simply by assigning a value to it (`person_age = 21`, `country_name = "Spain"`).  
+In JavaScript, you must declare the variable using a keyword of either `var`, `let`, or `const`. 
+</section>
 
 Go to the [js_fundamentals file](https://github.com/turingschool-examples/mod2-sandbox/blob/main/lessons/js_fundamentals.js) of your Mod 2 Sandbox repo. Check out the JS syntax in the code there. Run it, break it, get weird with it.
 <section class="dropdown">
@@ -64,8 +67,9 @@ let jobTitle;
 ### Data Types
 
 We can see each of the 7 data types we'll be working with in JavaScript in the syntax examples above. Let's identify each as we go through them.   
-  
-The basic (primitive) data types we'll work with are BUNNS:  
+
+<section class="dropdown">
+### JS Basic (primitive) Data Types - BUNNS:  
 * **Boolean**
   * a `true` or `false` value (*not* in quotation marks)
 
@@ -83,23 +87,16 @@ The basic (primitive) data types we'll work with are BUNNS:
 * **String**
   * text data - any characters wrapped in quotation marks (including letters, numbers, symbols, spaces)
   * in JS you can use 'single quotes' or "double quotes"
+</section>
 
-The complex data types we'll work with are:
+<section class="dropdown">
+### JS Complex Data Types:
+
 * **Objects** 
   * like hashes in Ruby - groupings of related data in key-value pairs
 * **Arrays**
   * like, well, arrays in Ruby  
-
-We access data in objects and arrays similarly to how we would do so in Ruby - using dot notation or bracket notation.
-
-### Your Turn (in your js fundamentals file)
-
-* Use console.log and dot notation to print the value "brown" from the policeSketchDescription object
-* Use console.log and dot notation to print # of visible tattoos from the policeSketchDescription object
-* Use console.log and bracket notation to print first element in the favoriteFoods array - 'pizza'
-* Use console.log and bracket notation to print last element in the favoriteFoods array - 'sushi'
-
-<section class="call-to-action">
+</section>
 
 ### Rules for Naming Variables
 - Variables must begin with a letter, dollar sign, or an underscore. They cannot begin with a number.
@@ -109,15 +106,59 @@ We access data in objects and arrays similarly to how we would do so in Ruby - u
 - Use names that describe the kind of information you plan to assign the variable.
 - If your variable is made up of more than one word, then use camelCase. Capitalize every word AFTER the first word, which is lower case: `thisIsMyVariableName`.
 
+<!-- </section> -->
+
+## Accessing Data Within an Object - JS
+
+<section class="note">
+### JS vs Ruby - Key Differences
+
+- In Ruby, you use bracket notation to access data within a hash.
+- In JS, you can bracket notation. But you can also use **dot notation**.
+
+Using the policeSketchDescription object above, I can access the hair property's value two different ways:  
+
+`policeSketchDescription.hair`  
+
+`policeSketchDescription["hair"]`
+
 </section>
 
+### Your Turn (in your js fundamentals file)
+
+* Use console.log and dot notation to print the value "brown" from the policeSketchDescription object
+* Use console.log and dot notation to print # of visible tattoos from the policeSketchDescription object
+* Use console.log and bracket notation to print first element in the favoriteFoods array - 'pizza'
+* Use console.log and bracket notation to print last element in the favoriteFoods array - 'sushi'
+
+### Dot or Bracket? 
+
+Dot notation is simple and clean.  We use it when we are typing the exact property we want to access.
+
+A common use case for using bracket notation to access data with a JS object is when the data point you care about is being passed into a function as an argument. You would then use the function's **parameter** within the bracket notation to access whichever data point is passed.  This makes it dynamic, it can access a different value each time depending what is passed as the argument.
+
+```js
+function getData(datapoint) {
+  return policeSketchDescription[datapoint]
+}
+
+console.log( getData('hair') )
+  // passing 'hair' as the arg means the bracket notation will be pulling the 'hair' value from the object  
+
+
+console.log( getData('isTall') )
+  // passing 'isTall' as the arg means the bracket notation will be pulling the 'isTall' value from the object
+```
+
+<br>
+
+
+## Using Variables Together
 
 ### Your Turn (in your js fundamentals file)
 
 * Declare 2 variables, one named "quantity" and one named "mythicalCreature".
 * Declare a variable named "creatureCount" but don't assign it a value quite yet.  If you console log it, it should give you "undefined"
-
-## Using Variables Together
 
 Let's make the value to our "creatureCount" variable be our "quantity" `+` our "mythicalCreature".
 <section class="dropdown">
@@ -157,7 +198,7 @@ let creatureCount = `<p>I have ${quantity} very fancy ${mythicalCreature}</p>`
 <section class="dropdown">
 ### Key Points So Far
 
-That was a lot of information. Let's go over the most important things we need to know.  
+That was a lot of information. Here's a recap of the most important things we need to know.  
 
 <section class="dropdown">
 ### What are JavaScript's primitive data types? Complex data types?
