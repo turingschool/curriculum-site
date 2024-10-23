@@ -345,7 +345,12 @@ function logStatement() {
 - You declare a function using the keyword `function`.
 - You name the function based on what it does using a present-tense action verb. Then include a set of parentheses after the name, which can be empty or accept parameters.
 - After the parenthesis you open a set of curly braces, which act as bookends to hold the set of statements you want the function to run when it is called.
-- Calling, or "invoking" the function is different than how you've called methods in Ruby. In JavaScript you must put **parenthesis after the function name** to invoke it.  Any arguments you're passing to the function will go inside those parenthesis.
+
+<section class="note">
+### JS vs Ruby - Invoking functions
+
+Remember - calling, or "invoking" a function in JS is different than how you've called methods in Ruby. In JavaScript you must put **parenthesis after the function name** to invoke it.  Any arguments you're passing to the function will go inside those parenthesis.
+</section>
 
 ## Call a Function:
 ```javascript
@@ -360,17 +365,17 @@ When this code is read, `logStatement()` is "called", and all three statements w
 
 **In JS, seeing `()` after the function name is how you know it is a function being invoked.**
 
-### Your Turn
+<!-- ### Your Turn -->
 Let's go ahead and declare `logStatement()` in the console together and then call it. What do you notice about the code as it is being run? What do you notice about the code being run if you swap the 2nd and 3rd statements?
 
-Create your own functions in the console:
+<!-- Create your own functions in the console:
 
 - Write a function called "greetPerson" that declares a `firstName` variable and a `lastName` variable, then prints a greeting message that incorporates the full name, and then prints a random number just for fun.
 - Write a function that assigns three different math equations to three different variables:  
   - an "addition" variable with a simple addition equation  
   - a "subtraction" variable with a simple subtraction equation
   - a "multiplication" variable with a simple multiplication equation
-  - then, add up the values of all three variables and log it to the console
+  - then, add up the values of all three variables and log it to the console -->
 
 ## Pass Information to a Function:
 Functions often need data to do their job. We pass data into function with _parameters and arguments_. You declare your parameters inside the () parenthesis of the function declaration.  Parameters act like variables INSIDE the function. They get their values when you pass _arguments_ in the function invocation and you can use the parameters within the function just like you would use variables.
@@ -389,9 +394,20 @@ function myDreamCar(make, model) {
 myDreamCar("Audi", "R8");
 ```
 
+<section class="call-to-action">
+
+### Your turn
+
+Declare and invoke your own functions in your Mod 2 sandbox:
+
+- Write a function called "greetPerson" that takes in 2 arguments: a `firstName` and a `lastName`. Then prints a greeting message that incorporates the full name.  
+- Write an "addNumbers" function that takes in 4 different numbers as 4 different arguments, add them all up, and prints the total.
+- Write an "applyDiscount" function that takes in 2 arguments: a price and a discountAmount.  Then prints the new sale price by subtracting the discount amount from the price.
+</section>
+
 ## Getting A Value from Functions  
 
-Sometimes we have functions that need to do some sort of calculation or data manipulation, then give us back the result so that we can use that value elsewhere in our code. Often, we will take that returned value and use it to update what is being displayed to our user in an application.
+Sometimes we have functions that need to do some sort of calculation or data manipulation, then give us back the result so that we can use that value elsewhere in our code. Often, we will take that returned value and use it elsewhere in our application - for example: to update what is being displayed to our user.
 
 For example:
 
@@ -434,6 +450,22 @@ return x + y / 3;
 ```
 </section>
 
+<section class="call-to-action">
+
+### Your turn
+
+Refactor the 3 functions you wrote previously - greetPerson(), addNumbers() & applyDiscount() so that _in addition to_ printing the value, they also `return` that value.  
+  - Invoke each function and save the result in a varable.  
+  - Console log that variable to ensure the correct value is being returned out of the function.  
+
+<br>
+
+Declare a new "incrementByOne" function that takes in a number as an argument, then returns that number incremented by one.  
+  - For example, `incrementByOne(11)` --> should return 12  
+  - To check your work you can either:
+    - Save the invocation of your function to a variable, then console log that variable. 
+    - Or, invoke your function _within_ a console log so that the return value is printed.
+</section>
 
 ## Conditionals
 
