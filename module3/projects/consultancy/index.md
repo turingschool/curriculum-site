@@ -56,14 +56,16 @@ You have a lot of freedom with this project, but there are a few technical requi
 * Thorough testing at both the unit and integration level.
   * Test Coverage tool like SimpleCov is used
   * Happy Path and Sad Path/Edge Case testing is included
-* One Stretch Tech option (listed below) is implemented
+* Well factored code that adheres to MVC
+  * Any API consumption is refactored out of the controller.
+* Database has at least one relationship between tables **unless permission is granted from PM**
+
+Optional Stretch Tech:
   * **Caching**: Using low-level caching (no FE caching). Team should be able to identify how the points where caching is implemented help to alleviate the main workflow of the application, and ideally show before/after data. 
   * **Background Jobs**: Consider using Sidekiq with Redis. Team should be able to identify how the background worker(s) alleviate the main workflow of the application, and ideally show before/after data. 
   * **CirlceCI**: Team should be able to identify the use case of this technology, its pros and cons. In order to receive credit for this stretch tech, teams must not only set it up, but incorporate continuous integration principles into their workflow (i.e. when the build is red, discussion about fixing the build is visible, and commits are not pushed on top of a red build)
   * **Rate Limiting**: Consider using the gem called "rack-attack" and test to demonstrate it's working! Team should be able to discuss why rate limiting is an effective feature. Ideally, be able to demonstrate it live using a small script (either live or in production). 
   * **Microservice**: Team should create a separate microservice (separate from their BE API app) using Sinatra or a different framework, and be able to speak to the pros/cons of that framework when compared to Rails. 
-
-Other new tools/concepts that would be fun but not considered your stretch-tech (think post-project exploration):
 * Pagination
 * [Security Vulnerability Scanner](https://github.com/presidentbeef/brakeman)
 * OpenAPI Documentation
