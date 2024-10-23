@@ -15,18 +15,15 @@ title: Module 3 - Lessons
 * [Intro to React](./react_intro)
 * [Ideabox Review](./react_ideabox_review)
 * [Advanced Data Management](./react_advanced_data_management)
-* [Intro to Cypress Testing (Prework)](./intro_to_cypress_prework)
-* [Intro to Cypress Testing (Lesson)](./intro_to_cypress_testing)
 * [React Router](./react-router)
 
 ## Advanced Frontend Concepts
-* [Intro To Accessibility](./intro-to-a11y)
 * [Network Requests - Fetch](./network_requests)  
-<!-- * [Intro to Cypress Testing](.) -->
+* [Intro to Cypress Testing (Prework)](./intro_to_cypress_prework)
+* [Intro to Cypress Testing (Lesson)](./intro_to_cypress_testing)
+* [Intro To Accessibility](./intro-to-a11y)
 * [FE Error Handling](.fe_error_handling)
 * [Responsive Layouts](./css_responsive_layouts)
-<!-- * [Async JavaScript](.) -->
-<!-- * [Scope & Scope Chain](.)  -->
 
 ## Fullstack Web Development
 * [Intro to Service-Oriented Architecture](./intro_to_soa)
