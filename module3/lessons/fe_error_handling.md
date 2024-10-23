@@ -46,9 +46,6 @@ There are four codepens in **[this collection](https://codepen.io/collection/Exq
 
 ## Handling Fetch Errors
 
-<!-- ### The challenge
-
-Visit [this repo](https://github.com/turingschool-examples/Error-handling-js) and ***follow the directions in the readme carefully*** to get some practice in gracefully handling errors and presenting them to the end user. -->
 ### Set Up
 We're going to use the same Ideabox FE and BE that we've used several times in previous lessons.
 
