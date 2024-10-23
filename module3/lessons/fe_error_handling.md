@@ -141,6 +141,12 @@ Do we think we could use any of these properties to check if the network request
 
 By using the line `throw New Error()`, we are able to manually trigger the `catch`. Now, that error handling in our `catch` is firing for a 422 error! Yay! 
 
+<section class="call-to-action">
+### Discuss
+
+Do you think we should send a POST request to the backend that has missing fields? What could we do to prevent this from happening?
+</section>
+
 ## Handling Fetch Errors - Key Points
 
 **We should add error handling to the `catch`.**
