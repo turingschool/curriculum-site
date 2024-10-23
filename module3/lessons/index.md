@@ -23,7 +23,7 @@ title: Module 3 - Lessons
 * [Intro To Accessibility](./intro-to-a11y)
 * [Network Requests - Fetch](./network_requests)  
 <!-- * [Intro to Cypress Testing](.) -->
-<!-- * [FE Error Handling](.) -->
+* [FE Error Handling](.fe_error_handling)
 * [Responsive Layouts](./css_responsive_layouts)
 <!-- * [Async JavaScript](.) -->
 <!-- * [Scope & Scope Chain](.)  -->
