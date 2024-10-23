@@ -35,7 +35,10 @@ _Note_: ES6 is the most current version of the ECMA Script Spec. We will be usin
 
 In any programming language, variables are what we use to store data values so that we can access and reuse those values throughout our code.  The name "variables" drives home the point that the stored data can change (or *vary*) along the way.  Variables can start off holding one value and later be reassigned to hold a different value.  
 
-In Ruby, you declare a variable simply by assigning a value to it (`person_age = 21`, `country_name = "Spain"`). In JavaScript, you declare the variable using a keyword of either `var`, `let`, or `const`. You do not specify the data type.
+<section class="note">
+In Ruby, you declare a variable simply by assigning a value to it (`person_age = 21`, `country_name = "Spain"`).  
+In JavaScript, you must declare the variable using a keyword of either `var`, `let`, or `const`. 
+</section>
 
 Go to the [js_fundamentals file](https://github.com/turingschool-examples/mod2-sandbox/blob/main/lessons/js_fundamentals.js) of your Mod 2 Sandbox repo. Check out the JS syntax in the code there. Run it, break it, get weird with it.
 <section class="dropdown">
@@ -64,8 +67,9 @@ let jobTitle;
 ### Data Types
 
 We can see each of the 7 data types we'll be working with in JavaScript in the syntax examples above. Let's identify each as we go through them.   
-  
-The basic (primitive) data types we'll work with are BUNNS:  
+
+<section class="dropdown">
+### JS Basic (primitive) Data Types - BUNNS:  
 * **Boolean**
   * a `true` or `false` value (*not* in quotation marks)
 
@@ -83,23 +87,16 @@ The basic (primitive) data types we'll work with are BUNNS:
 * **String**
   * text data - any characters wrapped in quotation marks (including letters, numbers, symbols, spaces)
   * in JS you can use 'single quotes' or "double quotes"
+</section>
 
-The complex data types we'll work with are:
+<section class="dropdown">
+### JS Complex Data Types:
+
 * **Objects** 
   * like hashes in Ruby - groupings of related data in key-value pairs
 * **Arrays**
   * like, well, arrays in Ruby  
-
-We access data in objects and arrays similarly to how we would do so in Ruby - using dot notation or bracket notation.
-
-### Your Turn (in your js fundamentals file)
-
-* Use console.log and dot notation to print the value "brown" from the policeSketchDescription object
-* Use console.log and dot notation to print # of visible tattoos from the policeSketchDescription object
-* Use console.log and bracket notation to print first element in the favoriteFoods array - 'pizza'
-* Use console.log and bracket notation to print last element in the favoriteFoods array - 'sushi'
-
-<section class="call-to-action">
+</section>
 
 ### Rules for Naming Variables
 - Variables must begin with a letter, dollar sign, or an underscore. They cannot begin with a number.
@@ -109,25 +106,71 @@ We access data in objects and arrays similarly to how we would do so in Ruby - u
 - Use names that describe the kind of information you plan to assign the variable.
 - If your variable is made up of more than one word, then use camelCase. Capitalize every word AFTER the first word, which is lower case: `thisIsMyVariableName`.
 
+<!-- </section> -->
+
+## Accessing Data Within an Object - JS
+
+<section class="note">
+### JS vs Ruby - Key Differences
+
+- In Ruby, you use bracket notation to access data within a hash.
+- In JS, you can bracket notation. But you can also use **dot notation**.
+
+Using the policeSketchDescription object above, I can access the hair property's value two different ways:  
+
+`policeSketchDescription.hair`  
+
+`policeSketchDescription["hair"]`
+
 </section>
 
+<section class="call-to-action">
+### Your Turn (in your js fundamentals file)
 
+* Use console.log and dot notation to print the value "brown" from the policeSketchDescription object
+* Use console.log and dot notation to print # of visible tattoos from the policeSketchDescription object
+* Use console.log and bracket notation to print first element in the favoriteFoods array - 'pizza'
+* Use console.log and bracket notation to print last element in the favoriteFoods array - 'sushi'
+</section>
+
+### Dot or Bracket? 
+
+Dot notation is simple and clean.  We use it when we are typing the exact property we want to access.
+
+A common use case for using bracket notation to access data with a JS object is when the data point you care about is being passed into a function as an argument. You would then use the function's **parameter** within the bracket notation to access whichever data point is passed.  This makes it dynamic, it can access a different value each time depending what is passed as the argument.
+
+```js
+function getData(datapoint) {
+  return policeSketchDescription[datapoint]
+}
+
+console.log( getData('hair') )
+  // passing 'hair' as the arg means the bracket notation will be pulling the 'hair' value from the object  
+
+
+console.log( getData('isTall') )
+  // passing 'isTall' as the arg means the bracket notation will be pulling the 'isTall' value from the object
+```
+
+<br>
+
+
+## Using Variables Together
+
+<section class="call-to-action">
 ### Your Turn (in your js fundamentals file)
 
 * Declare 2 variables, one named "quantity" and one named "mythicalCreature".
 * Declare a variable named "creatureCount" but don't assign it a value quite yet.  If you console log it, it should give you "undefined"
-
-## Using Variables Together
+</section>
 
 Let's make the value to our "creatureCount" variable be our "quantity" `+` our "mythicalCreature".
-<section class="dropdown">
 
 ```javascript
 let quantity = 3;
 let mythicalCreature = " unicorns";
 let creatureCount = quantity + mythicalCreature;
 ```
-</section>
 
 In your file, console log your "creatureCount" variable.  What do you get?  
 
@@ -157,7 +200,7 @@ let creatureCount = `<p>I have ${quantity} very fancy ${mythicalCreature}</p>`
 <section class="dropdown">
 ### Key Points So Far
 
-That was a lot of information. Let's go over the most important things we need to know.  
+That was a lot of information. Here's a recap of the most important things we need to know.  
 
 <section class="dropdown">
 ### What are JavaScript's primitive data types? Complex data types?
@@ -304,7 +347,12 @@ function logStatement() {
 - You declare a function using the keyword `function`.
 - You name the function based on what it does using a present-tense action verb. Then include a set of parentheses after the name, which can be empty or accept parameters.
 - After the parenthesis you open a set of curly braces, which act as bookends to hold the set of statements you want the function to run when it is called.
-- Calling, or "invoking" the function is different than how you've called methods in Ruby. In JavaScript you must put **parenthesis after the function name** to invoke it.  Any arguments you're passing to the function will go inside those parenthesis.
+
+<section class="note">
+### JS vs Ruby - Invoking functions
+
+Remember - calling, or "invoking" a function in JS is different than how you've called methods in Ruby. In JavaScript you must put **parenthesis after the function name** to invoke it.  Any arguments you're passing to the function will go inside those parenthesis.
+</section>
 
 ## Call a Function:
 ```javascript
@@ -319,17 +367,17 @@ When this code is read, `logStatement()` is "called", and all three statements w
 
 **In JS, seeing `()` after the function name is how you know it is a function being invoked.**
 
-### Your Turn
+<!-- ### Your Turn -->
 Let's go ahead and declare `logStatement()` in the console together and then call it. What do you notice about the code as it is being run? What do you notice about the code being run if you swap the 2nd and 3rd statements?
 
-Create your own functions in the console:
+<!-- Create your own functions in the console:
 
 - Write a function called "greetPerson" that declares a `firstName` variable and a `lastName` variable, then prints a greeting message that incorporates the full name, and then prints a random number just for fun.
 - Write a function that assigns three different math equations to three different variables:  
   - an "addition" variable with a simple addition equation  
   - a "subtraction" variable with a simple subtraction equation
   - a "multiplication" variable with a simple multiplication equation
-  - then, add up the values of all three variables and log it to the console
+  - then, add up the values of all three variables and log it to the console -->
 
 ## Pass Information to a Function:
 Functions often need data to do their job. We pass data into function with _parameters and arguments_. You declare your parameters inside the () parenthesis of the function declaration.  Parameters act like variables INSIDE the function. They get their values when you pass _arguments_ in the function invocation and you can use the parameters within the function just like you would use variables.
@@ -348,9 +396,20 @@ function myDreamCar(make, model) {
 myDreamCar("Audi", "R8");
 ```
 
+<section class="call-to-action">
+
+### Your turn
+
+Declare and invoke your own functions in your Mod 2 sandbox:
+
+- Write a function called "greetPerson" that takes in 2 arguments: a `firstName` and a `lastName`. Then prints a greeting message that incorporates the full name.  
+- Write an "addNumbers" function that takes in 4 different numbers as 4 different arguments, add them all up, and prints the total.
+- Write an "applyDiscount" function that takes in 2 arguments: a price and a discountAmount.  Then prints the new sale price by subtracting the discount amount from the price.
+</section>
+
 ## Getting A Value from Functions  
 
-Sometimes we have functions that need to do some sort of calculation or data manipulation, then give us back the result so that we can use that value elsewhere in our code. Often, we will take that returned value and use it to update what is being displayed to our user in an application.
+Sometimes we have functions that need to do some sort of calculation or data manipulation, then give us back the result so that we can use that value elsewhere in our code. Often, we will take that returned value and use it elsewhere in our application - for example: to update what is being displayed to our user.
 
 For example:
 
@@ -393,6 +452,22 @@ return x + y / 3;
 ```
 </section>
 
+<section class="call-to-action">
+
+### Your turn
+
+Refactor the 3 functions you wrote previously - greetPerson(), addNumbers() & applyDiscount() so that _in addition to_ printing the value, they also `return` that value.  
+  - Invoke each function and save the result in a varable.  
+  - Console log that variable to ensure the correct value is being returned out of the function.  
+
+<br>
+
+Declare a new "incrementByOne" function that takes in a number as an argument, then returns that number incremented by one.  
+  - For example, `incrementByOne(11)` --> should return 12  
+  - To check your work you can either:
+    - Save the invocation of your function to a variable, then console log that variable. 
+    - Or, invoke your function _within_ a console log so that the return value is printed.
+</section>
 
 ## Conditionals
 
@@ -431,13 +506,17 @@ identifyCookie("chocolate chip")
 identifyCookie("oatmeal raisin")
 identifyCookie("sugar")
 ```
+<section class="call-to-action">
+### Your Turn 
 
-### Your Turn
+<section class="answer">
 
-- In your file, copy/paste the function skeleton and invocations below.  
-- Build the "guts" of the function so that it looks at the hoursOfSleep parameter and responds based on the value that is passed as an argument on the invocation.  
-  - Your function should log "I am groggy." for less than 6 hours of sleep.  
-  - Your function should log "I feel fantastic!" for 6 or more hours of sleep.   
+### Exercise 1
+
+In your file, copy/paste the function skeleton and invocations below.  
+  - Build the "guts" of the function so that it looks at the hoursOfSleep parameter and responds based on the value that is passed as an argument on the invocation.  
+    - Your function should log "I am groggy." for less than 6 hours of sleep.  
+    - Your function should log "I feel fantastic!" for 6 or more hours of sleep.   
 
 ```javascript
 function evaluateSleep(hoursOfSleep) {  
@@ -447,6 +526,24 @@ function evaluateSleep(hoursOfSleep) {
 evaluateSleep(8)
 evaluateSleep(4)
 ```
+</section>
+
+<section class="answer">
+
+### Exercise 3
+
+Imagine you're a developer for AAA. Your website needs to provide different information to users based on their age.
+
+In your file, create a function called "checkAge" that takes in an age as an argument.
+  - The function should print a different message depending on the age passed in.
+    - If the user's age is under 18, reply with "Unfortunately, you do not meet our age requirements."
+    - If the user's age is between 18 - 64, reply with "Welcome to AAA!"
+    - If the user's age is 65 or older, reply with "Welcome to AAA! You're eligible for our senior discount!"
+</section>
+
+</section>
+
+
 <br>
 
 ## for loops
@@ -499,7 +596,7 @@ shoutForChildren()
 ```
 
 <section class="call-to-action">
-### In your file:  
+### Your turn  
 
 Copy/paste the code below into your file. Finish building the "guts" of the calculateTotalPoint function based on the commented out directions.
 

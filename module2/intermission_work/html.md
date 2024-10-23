@@ -24,6 +24,10 @@ First, read through these questions so that you know what you are expected to kn
   * `<ul>`, `<ol>`, and `<li>`
   * `<form>`
   * `<input>`
+  * `<main>`
+  * `<header>`
+  * `<footer>`
+  * `<article>`
 
 ## W3Schools HTML Tutorial
 

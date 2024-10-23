@@ -67,13 +67,23 @@ Type both opening and closing tags before typing content to avoid making silly m
 
 ## Elements & Tags Example
 
-Let's start by looking at this page:
+Let's start by looking at this page.  We can "wireframe" a plan for which HTML elements we will use to build this page.  
+- What are the general sections/areas that make up this page?  
+- What are all the individual pieces of content within those areas?  
+- What are the most semantic elements we can choose for each?  
+  
+
 ![unmarked page](./assets/images/html/unmarked_html.png)
 
-Notice all of the HTML elements that exist on the page:
-![annotated page](./assets/images/html/annotated_html.png)
+<section class="dropdown">
+### Possible WireFrame Solution
 
-Now, let's look at what that HTML looks like:
+![annotated page](./assets/images/html/annotated_html.png)
+</section>
+
+<section class="dropdown">
+### Possible HTML Solution
+
 ```html
 <nav>
   <img src="./turing-school-logo" alt="Turing School logo" />
@@ -95,6 +105,8 @@ Now, let's look at what that HTML looks like:
   <button type="button" name="browse-button">BROWSE GRADS FOR HIRE</button>
 </main>
 ```
+</section>
+
 <section class="call-to-action">
 ### Partner Practice
 
@@ -206,7 +218,7 @@ Take some time to notice the differences between these two codepens:
 </section>
 
 <section class="dropdown">
-### Common Semantic Elements
+### Common Semantic "Container" Elements
 
 ```
 <header>
