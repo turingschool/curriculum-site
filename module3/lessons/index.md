@@ -22,7 +22,7 @@ title: Module 3 - Lessons
 * [Intro to Cypress Testing (Prework)](./intro_to_cypress_prework)
 * [Intro to Cypress Testing (Lesson)](./intro_to_cypress_testing)
 * [Intro To Accessibility](./intro-to-a11y)
-* [FE Error Handling](.fe_error_handling)
+* [FE Error Handling](./fe_error_handling)
 * [Responsive Layouts](./css_responsive_layouts)
 
 ## Fullstack Web Development

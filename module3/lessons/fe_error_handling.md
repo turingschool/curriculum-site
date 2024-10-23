@@ -23,7 +23,7 @@ There are four codepens in **[this collection](https://codepen.io/collection/Exq
 </section>
 
 
-### Preventing Errors - Key Points
+## Preventing Errors - Key Points
 **Whenever possible, we should prevent users from being able to make mistakes in the first place.**
   - We should make it as easy as possible for users to do the right thing. Here are some tips:
     - Use input types (like [date](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/date) and [number](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/number)) to restrict the user's input.
@@ -49,15 +49,99 @@ There are four codepens in **[this collection](https://codepen.io/collection/Exq
 <!-- ### The challenge
 
 Visit [this repo](https://github.com/turingschool-examples/Error-handling-js) and ***follow the directions in the readme carefully*** to get some practice in gracefully handling errors and presenting them to the end user. -->
+### Set Up
+We're going to use the same Ideabox FE and BE that we've used several times in previous lessons.
 
+1. Re-open **[this react-ideabox FE](https://github.com/turingschool-examples/react-ideabox)** repo.  
+  a. Navigate to that directory  
+  b. Run `git fetch`  
+  c. Run `git checkout error-handling`  
+  d. Run `npm start`  
+2. You'll also need the **[ideabox-api BE Repo](https://github.com/turingschool-examples/ideabox-api)** up and running.  
+  a. Navigate to that directory 
+  b. Run `node server.js`
+3. Make a tab in Chrome for:  
+  a. `localhost:3000`: You should see the React app up and running here  
+  b. `http://localhost:3001/api/v1/ideas`: You should see your list of ideas here
 
 <section class="call-to-action">
-### Activity
+### Explore
 
+1. First, turn off the server. You should see a user-friendly error message in your Ideabox. Explore the React code and find the code that is responsible for making this happen.
+2. Now, turn the server back on. The error message should disappear and the cards should correctly populate. Now, try to submit an idea with a missing field (leave either the title or description blank). Pay attention to the following:
+  - What does the user see?
+  - Look at the console. Is there an error there? What is the status code?
+  - Go to `http://localhost:3001/api/v1/ideas`. Was that data POSTed?
 
+Discuss: Do you think the `.catch()` was fired in the second scenario? What is your evidence? Why do you think this is happening?
 </section>
 
-### Handling Fetch Errors - Key Points
+### Triggering the catch
+
+Hmm...it seems like not all errors trigger the `catch`. Which means we can't rely on the `catch` to let the user know if things have gone wrong. Let's dig into the response object. Let's add a console.log:
+
+```js
+  .then(response => {
+    console.log(response)
+    return response.json()
+  })
+```
+
+Now, let's compare that response object in two scenarios:
+
+1. The user fills everything out correctly:
+```js
+{
+  type: 'cors', 
+  url: 'http://localhost:3001/api/v1/ideas', 
+  redirected: false, 
+  status: 201, 
+  ok: true, 
+}
+```
+
+2. The user misses a field:
+```js
+{
+  type: 'cors', 
+  url: 'http://localhost:3001/api/v1/ideas', 
+  redirected: false, 
+  status: 422, 
+  ok: false, 
+}
+```
+
+Do we think we could use any of these properties to check if the network request was successful?
+
+<section class="dropdown">
+### Possible Solution
+
+```js
+  function addIdea(newIdea) {
+    fetch('http://localhost:3001/api/v1/ideas', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(newIdea), 
+    })
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(response.status); 
+      }
+      return response.json()
+    })
+    .then(data => setIdeas([...ideas, data]))
+    .catch(error => {
+      console.log(error)
+      setError('Oops! Something went wrong! Please try again in a couple minutes.')
+    })
+```
+</section>
+
+By using the line `throw New Error()`, we are able to manually trigger the `catch`. Now, that error handling in our `catch` is firing for a 422 error! Yay! 
+
+## Handling Fetch Errors - Key Points
 
 **We should add error handling to the `catch`.**
   - The `catch` will fire if the server is completely down. Users need to know that their action was not completed in this scenario.
