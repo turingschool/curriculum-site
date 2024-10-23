@@ -31,7 +31,7 @@ Use an enumerable to
 
 ## Practice
 
-We will be using the tools we have already learned (`.each`, `.map`, `pry`, etc...) to tackle some more complex iterations. Up to now we have focused on iterating over a single collection to get some information, but you will often need to look at multiple collections to get the desired information. To help us practice, clone [this repo](https://github.com/turingschool-examples/mod-1-be-exercises/tree/main/lessons/nested_iteration). Follow the instructions in the README. 
+We will be using the tools we have already learned (`.each`, `.map`, `pry`, etc...) to tackle some more complex iterations. Up to now we have focused on iterating over a single collection to get some information, but you will often need to look at multiple collections to get the desired information. To help us practice, clone [this repo](https://github.com/turingschool-examples/se-mod1-exercises/tree/main/lessons/nested_iteration). Follow the instructions in the README. 
 
 
 ## More Practice
