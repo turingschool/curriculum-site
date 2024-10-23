@@ -218,7 +218,7 @@ Take some time to notice the differences between these two codepens:
 </section>
 
 <section class="dropdown">
-### Common Semantic Elements
+### Common Semantic "Container" Elements
 
 ```
 <header>
