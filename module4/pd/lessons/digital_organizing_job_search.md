@@ -3,12 +3,12 @@ layout: page
 title: Digital Organizing For Your Job Search
 module: 4
 ---
-
-## Starting Strong
+<!-- 
+## Starting Strong -->
 
 Digital organizing and decluttering can reduce stress and feelings of overwhelm that can block our success, enhancing our productivity and overall well-being. Let's begin Mod 4 by organizing and decluttering our digital files, inboxes, resources, and other digital assets! 
 
-### Digital Organization - Learn
+## Digital Organization - Learn
 
 What does digital organization look like? How can I get started?  
 
@@ -17,7 +17,7 @@ Use these video resources:
 - [Digital Minimalism by Cal Newport, a Visual Summary](https://www.youtube.com/watch?v=sJdZ7kmA2QQ) (11 mins)
 - [21 Step Guide to Organizing Your Digital Life](https://www.youtube.com/watch?v=fUZxNKTsBy8) (14 mins)
 
-### Digital Organization - Implement
+## Digital Organization - Implement
 
 Use these prompts and tasks to guide your digital organization and decluttering process:  
 
