@@ -1,6 +1,7 @@
 ---
 title: Big O Notation
 tags: big-o
+module: 4
 ---
 
 ## Learning Goals
@@ -36,7 +37,7 @@ There are a couple of solutions to the problem above that have various pros and 
 
 
 
-<section class="answer">
+<section class="dropdown">
 ### Potential Solution A  
 
 **Sort/Compare**
@@ -49,7 +50,7 @@ There are a couple of solutions to the problem above that have various pros and 
 One potential solution is to sort the array of numbers and then iterate over the numbers again, comparing each value to it's neighbor to see if they are the same.
 </section>
 
-<section class="answer">
+<section class="dropdown">
 ### Potential Solution B  
 
 **Nested Lookup**
@@ -62,7 +63,7 @@ One potential solution is to sort the array of numbers and then iterate over the
 Another potential solution is to iterate over the array of numbers, and for each iteration, compare it to the rest of the array to see if a duplicate is found.
 </section>
 
-<section class="answer">
+<section class="dropdown">
 ### Potential Solution C  
 
 **Hash/Obj Tracker**
@@ -85,7 +86,7 @@ Although it is very possible that you may never get asked about Big O Notation i
 ## Okay, so what is Big O?
 Big O notation is used in Computer Science to describe the performance or complexity of an algorithm. Big O specifically describes the **worst-case scenario**, and can be used to describe the execution time required or the space used (e.g. in memory or on disk) by an algorithm.
 
-<section class="answer">
+<section class="dropdown">
 ### Another way of saying that is:
 
 We're describing the **time complexity** and **space complexity** of an algorithm.
@@ -123,7 +124,7 @@ The notation for time complexity is written as a math formula.  `"n"` is typical
 
 We'll discuss each of these in order from least complex (best performance) to most complex (worst performance).
 
-<section class="answer">
+<section class="dropdown">
 ### Constant Time - O(1)
 
 **Description:**
@@ -136,7 +137,7 @@ We'll discuss each of these in order from least complex (best performance) to mo
 - Accessing a property in an object/hash by its attribute/key
 </section>
 
-<section class="answer">
+<section class="dropdown">
 ### Logarithmic Time - O(log n)
 
 **Description:**
@@ -146,7 +147,7 @@ We'll discuss each of these in order from least complex (best performance) to mo
 - "Binary search" using a binary tree.  An example of doing this might include looking up a word in a dictionary.
 </section>
 
-<section class="answer">
+<section class="dropdown">
 ### Linear Time - O(n)
 
 **Description:**
@@ -158,7 +159,7 @@ We'll discuss each of these in order from least complex (best performance) to mo
 - Anything that looks at, or processes, every element in a data structure.
 </section>
 
-<section class="answer">
+<section class="dropdown">
 ### Linearithmic Time - O(n log n)
 
 **Description:**
@@ -169,7 +170,7 @@ We'll discuss each of these in order from least complex (best performance) to mo
 - Some searching algorithms
 </section>
 
-<section class="answer">
+<section class="dropdown">
 ### Quadratic Time - O(n^2)
 
 **Description:**
@@ -225,7 +226,7 @@ Taking a look at our previous solutions, as a group let's calculate the Big O fo
 ```
 
 </section>
-<section class="answer">
+<section class="dropdown">
 ### Performing the Calculation
 
 Looking at our cheat sheet above, we can see that efficient sorting algorithms have `n log n` complexity. We can also see that iterating over the data set adds `n` complexity.
@@ -265,7 +266,7 @@ What about space complexity? We didn't create any additional data structures, so
 
 In breakout groups, try calculating the Big O for the **Nested Lookup** and **Hash/Obj Tracker** solutions.
 
-<section class="answer">
+<section class="dropdown">
 ### No Peeking Until Afterwards!
 
 **Nested Lookup**

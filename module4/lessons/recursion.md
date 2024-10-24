@@ -1,6 +1,7 @@
 ---
 title: Recursion
 layout: page
+tags: recursion, tail call optimization
 module: 4
 ---
 
