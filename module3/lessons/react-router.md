@@ -20,7 +20,8 @@ module: 3
 * `Outlet` A component that renders the next match in a set of matches. it must exist in the parent component when nesting routes
 * `useParams` A hook that allows us to gain access to a Route's params
 
-<section class="checks-for-understanding">
+<!-- COMMENTING OUT THE PREWORK AS IT'S BEEN DEEMED UNNECCESARY AT THIS TIME -->
+<!-- <section class="checks-for-understanding">
 ## Prework  
 
 Before the lesson, complete the [prework](./react-router-prework){:target='blank'}.
@@ -39,14 +40,14 @@ In small groups, discuss the following questions:
 - Link
 - NavLink
 - Outlet
-</section>
+</section> -->
 
 ## Why Routing?
 
 **Routing** refers to keeping a webpage up to date with the current url, and vice-versa.
 
 Most of the apps you've written so far have been single-page applications. One HTML page whose content is updated through user interactions and JS. These DO NOT use routing. They work fine, but put some limits on the user experience of our applications.
-<section class="answer">
+<section class="dropdown">
 ### Here  are some advantages routing can provide:
 - Users can use urls to bookmark pages.
 - Users can use the back or forward button.
@@ -69,7 +70,7 @@ npm i
 npm start
 
 ```
-The App is not fully put together. It has a series of components that will serve as building blocks of the final component. You won't be building out new components, but you will be editing existing ones. Get oriented with the application. Check out all the components, try and write a short summary of what each is doing.
+The App is not fully put together. It has a series of components that will serve as building blocks of the final component. You won't be building out new components, but you will be editing existing ones. Get oriented with the application. Check out all the components. Make some written notes about what you think each is doing.
 
 
 
@@ -106,9 +107,11 @@ root.render(
 
 ```
 
+<br>
+
 ## Rendering the Home component
 
-<section class="answer">
+<!-- <section class="dropdown"> -->
 ### 3. Now, let's tell React Router what to render at the base URL ('/')
 
 ```jsx
@@ -142,13 +145,14 @@ export default App;
 2. What happens if you remove the `Routes` component? What does the error message say?
 </section>
 We picked `/` for the path in the route because it designates that there won't be anything after the URL's domain name. This represents the base URL.  
-</section>
+<!-- </section> -->
 
+<br>
 
-## Exercise # 1: Render Puppies
+## Rendering Puppies
 Your goal is click on the word Puppies and see a grid of 9 puppies on the DOM. The page should look something like the picture on the lesson plan. ***While you may change components*** as needed, you shouldn't outright delete content from the page to achieve this.
 
-<section class="call-to-action">
+<!-- <section class="call-to-action"> -->
 ### Take 10 minutes in pairs to get the puppies rendering
 
 #### Hints:
@@ -156,7 +160,7 @@ Your goal is click on the word Puppies and see a grid of 9 puppies on the DOM. T
 - What additional react-router components should you use? Do any current components need to change?
 - How do you pass props into a component rendered by a `<Route />` ?
 
-<section class="answer">
+<section class="dropdown">
 ### 4. First, let's update the links to NavLink components
 
 ```jsx
@@ -193,7 +197,7 @@ export default App;
 
 </section>
 
-<section class="answer">
+<section class="dropdown">
 ### 5. Now, let's tell Router what to do at '/puppies'
 
 ```jsx
@@ -233,7 +237,7 @@ export default App;
 
 </section>
 
-<section class="answer">
+<section class="dropdown">
 ### 6. Let's update the Creatures component so it actually shows puppies
 
 ```jsx
@@ -260,9 +264,11 @@ export default Creatures;
 ```
 </section>
 
+<br>
+
 ## Rendering the Sharks
 
-<section class="answer">
+<section class="dropdown">
 ### 7. On your own, make the Sharks button render sharks
 
 ```jsx
@@ -301,9 +307,11 @@ Hmmm...two of those `<Route />` components are looking quite similar. I wonder i
 
 </section>
 
+<br>
+
 ## Dynamic Routing
 In this exercise, we'll explore two ways to achieve dynamic routing in order to obtain an animal and its ID from the route: first, we'll use the `Outlet`, and then we'll show you how to implement a dynamic route without using an outlet.
-<section class="answer">
+<section class="dropdown">
 ### 8. Let's start by making a dynamic path
 
 ```jsx
@@ -343,7 +351,7 @@ export default App;
 
 </section>
 
-<section class="answer">
+<section class="dropdown">
 ### 9. Let's console.log some stuff:
 
 ```jsx
@@ -382,7 +390,7 @@ export default Creatures;
 
 </section>
 
-<section class="answer">
+<section class="dropdown">
 ### 10. Let's use useParams to render the correct animal
 
 ```jsx
@@ -412,7 +420,7 @@ export default Creatures;
 ```
 </section>
 
-<section class="answer">
+<section class="dropdown">
 ### 11. Notice that Creatures isn't using props anymore. Let's remove those from App.js:
 
 ```jsx
@@ -443,9 +451,11 @@ export default App;
 ```
 </section>
 
+<br>
+
 ## Rendering the CreatureDetails component
 
-<section class="answer">
+<section class="dropdown">
 ### 12. Let's make the images link to our new URL
 
 ```jsx
@@ -487,7 +497,7 @@ export default Creatures;
 
 </section>
 
-<section class="answer">
+<section class="dropdown">
 ### 13. Let's tell Router what to do with this new path
 
 ```jsx
@@ -530,7 +540,7 @@ export default App;
 
 </section>
 
-<section class="answer">
+<section class="dropdown">
 ### 14. One more step to getting CreatureDetails to appear
 
 ```jsx
@@ -577,7 +587,7 @@ The Outlet component serves as a placeholder for rendering nested route content 
 Imagine a scenario similar to the Twitter inbox. When you access your inbox, you see a list of message previews on the left side of the screen, but the right side remains blank until you select a specific conversation. This structure is where the Outlet comes into play.
 </section>
 
-<section class="answer">
+<section class="dropdown">
 ### 15. Now let's make CreatureDetails show the animal's info (hint: look at animalData.js!)
 
 ```jsx
@@ -609,7 +619,9 @@ export default CreatureDetails;
 Now that you know how to use Outlet, let's explore other ways we can achieve dynamic routing without it.
 We are going to remove our nested route and define a new separate route for `/:animal/:id` which is not directly nested within the first route `/`. Each route has it's own component. 
 You would use this approach when you have distinct pages or components that should be displayed separately based on the URL. 
-<section class="answer">
+<section class="dropdown">
+
+### Defining a new separate route for `/:animal/:id`
 
 ```jsx
 import './App.css';
@@ -641,6 +653,8 @@ export default App;
 ```
 Now it's time to remove `Outlet` from our `Creature.js` file since we don't have nested routes and we don't need `Outlet` anymore
 </section>
+
+<br>
 
 <section class="call-to-action">
 ### Final Reflections
