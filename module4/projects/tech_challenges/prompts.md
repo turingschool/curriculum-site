@@ -6,11 +6,10 @@ layout: page
 
 ### Bracket Matcher
 
-<section class="call-to-action">
-<details>
-<summary>
-#### Prompt &#9759;
-</summary>
+<section class="dropdown">
+
+### Prompt &#9759;
+
 <img src="https://media.giphy.com/media/DPhxnGZ9pIUAo/giphy.gif" width="200" alt="matcher">
 
 #### Instructions
@@ -33,17 +32,16 @@ Create a method/function that will intake a set of brackets <b>[ { (</b> as a st
         
         bracket(']')
         // => false
-</details>
+
 
 </section>
 
 
 ### Flattener
-<section class="call-to-action">
-<details>
-<summary>
-#### Prompt &#9759;
-</summary>
+<section class="dropdown">
+
+### Prompt &#9759;
+
 
 <img src="https://media.giphy.com/media/68yBjfxSpUpUY/giphy.gif" width="200" alt="flatten">
 
@@ -67,17 +65,13 @@ Your goal is to recreate this functionality without using the built in method/fu
 
 The contents of the array are not significant. Your method/function should take an input of a multi-dimensional array and output a one-dimensional array. More simply put, remove the deeply nested brackets to return a single array.
        
-</details>
+
 </section>
 
 ### Millions of Numbers
-<section class="call-to-action">
-<details>
-<summary>
-#### Prompt &#9759;
-</summary>
+<section class="dropdown">
 
-<img src="https://camo.githubusercontent.com/ee6e8a5db5912f913d8e76f8706c040297bd89f71ea0579aeb61821bfe5d2514/68747470733a2f2f6d656469612e67697068792e636f6d2f6d656469612f683132687a794869434e4752472f67697068792e676966" width="200" alt="numbers">
+### Prompt &#9759;
 
 #### Instructions
 You are given three arrays of __equal__ size. Each array has 1 million __RANDOM__ integer values.
@@ -103,16 +97,15 @@ Small Scale Example Below
         nums3 = [1, 2, 5, 8, 9]
         findMatches(nums1, nums2, nums3)
         => [2, 5]
-</details>
+
 </section>
 
 ### Next Palindrome
 
-<section class="call-to-action">
-<details>
-<summary>
-#### Prompt &#9759;
-</summary>
+<section class="dropdown">
+
+### Prompt &#9759;
+
 
 <img src="https://media.giphy.com/media/VVQSePMuomVgA4H7BN/giphy.gif" width="200" alt="next">
 
@@ -138,15 +131,14 @@ Example
 
         findNextPalindrome(101)
         => 111
-</details>
+
 </section>
 
 ### Palindromic Sum
-<section class="call-to-action">
-<details>
-<summary>
-#### Prompt &#9759;
-</summary>
+<section class="dropdown">
+
+### Prompt &#9759;
+
 
 <img src="https://media.giphy.com/media/l1KcPomNdcKbXgV7q/giphy.gif" width="200" alt="">
 
@@ -162,15 +154,14 @@ Collect the twenty-five numbers in an array as the return value. Be sure to coll
 
 _Bonus: Once you've found a working solution, see if you can create a solution without converting the numbers to strings/arrays._
 
-</details>
+
 </section>
 
 ### Pascal's Triangle
-<section class="call-to-action">
-<details>
-<summary>
-#### Prompt &#9759;
-</summary>
+<section class="dropdown">
+
+### Prompt &#9759;
+
 
 <img src="https://media.giphy.com/media/eB5WYVSaOT0qUmHOWA/giphy.gif" width="200" alt="triangle">
 
@@ -187,15 +178,14 @@ Your goal is to write a method/function that, given a depth (n), returns an arra
        #JavaScript
        calculatePascalsTriangle(3)
        => [1, 1, 1, 1, 2, 1]
-</details>
+
 </section>
 
 ### Robot
-<section class="call-to-action">
-<details>
-<summary>
-#### Prompt &#9759;
-</summary>
+<section class="dropdown">
+
+### Prompt &#9759;
+
 
 <img src="https://media.giphy.com/media/tczJoRU7XwBS8/giphy.gif" width="200" alt="robot">
 
@@ -217,15 +207,14 @@ The robot CANNOT go backwards - poor robot. After running all of the movement co
         returnToOrigin("GRGL")
         => false
 
-</details>
+
 </section>
 
 ### Roman Numerals
-<section class="call-to-action">
-<details>
-<summary>
-#### Prompt &#9759;
-</summary>
+<section class="dropdown">
+
+### Prompt &#9759;
+
 
 <img src="https://media.giphy.com/media/xT5LMNd1ieywmnI3Qc/giphy.gif" width="200" alt="roman numerals">
 
@@ -269,15 +258,14 @@ Example
         toRoman(1999)
         => "MCMXCIX"
 
-</details>
+
 </section>
 
 ### Snail
-<section class="call-to-action">
-<details>
-<summary>
-#### Prompt &#9759;
-</summary>
+<section class="dropdown">
+
+### Prompt &#9759;
+
 
 <img src="https://media.giphy.com/media/RCBQSWiMPTQly/giphy.gif" width="200" alt="snail">
 
@@ -307,15 +295,14 @@ Example
         ];
         snail(arrayMatrix) 
         => [9, 8, 7, 4, 1, 2, 3, 6, 5]
-</details>
+
 </section>
 
 ### Target & Payload
-<section class="call-to-action">
-<details>
-<summary>
-#### Prompt &#9759;
-</summary>
+<section class="dropdown">
+
+### Prompt &#9759;
+
 
 <img src="https://media.giphy.com/media/10iFFpLLpsDm0/giphy.gif" width="200" alt="target">
 
@@ -345,15 +332,14 @@ Example
         => []
 
 _Bonus: Once you've found a working solution, try to optimize to run in O(n) time and 1x space complexity._
-</details>
+
 </section>
 
 ### Merge Linked Lists
-<section class="call-to-action">
-<details>
-<summary>
-#### Prompt &#9759;
-</summary>
+<section class="dropdown">
+
+### Prompt &#9759;
+
 
 <img src="https://media.giphy.com/media/YWUpVw86AtIbe/giphy.gif" width="200" alt="link">
 
@@ -369,11 +355,10 @@ Each linked list:
 
 Your goal is to write a method/function that will merge all data into a single linked list, which should also be sorted in ascending order. The method/function should return an __array__ of all the elements of the merged linked list.
 
-<section class="note">
-<details>
-<summary>
- <b>Ruby Starter Code</b>  &#9759;
-</summary>
+<section class="dropdown">
+
+### Ruby Starter Code  &#9759;
+
 
         class ListNode
           attr_accessor :val, :next
@@ -422,14 +407,13 @@ Your goal is to write a method/function that will merge all data into a single l
         puts 'test case 3 failed' if merge_two_sorted_linked_lists(list1, list2) != [0, 10, 20, 40]
 
         puts 'all done!'
-</details>
+
 </section>
 
-<section class="note">
-<details>
-<summary>
- <b>JavaScript Starter Code</b>  &#9759;
-</summary>
+<section class="dropdown">
+
+### JavaScript Starter Code  &#9759;
+
 
         class ListNode {
           constructor(data) {
@@ -483,18 +467,17 @@ Your goal is to write a method/function that will merge all data into a single l
 
         console.log("all done!");
 
-</details>
+
 </section>
 
-</details>
+
 </section>
 
 ### Subsets
-<section class="call-to-action">
-<details>
-<summary>
-#### Prompt &#9759;
-</summary>
+<section class="dropdown">
+
+### Prompt &#9759;
+
 
 #### Instructions
 In this challenge you are given an array of unique integers. Your job is to return all the possible combinations of unique pairs (2 integers only). No duplicate pairs are allowed. Below are some examples:
@@ -518,15 +501,14 @@ If you successfully complete the challenge above, consider refactoring your solu
         Input: [1, 2, 3, 4]
         Output: [[],[1],[2],[3],[4],[1,2],[1,3],[1,4],[2,3],[2,4],[3,4],[1,2,3],[1,2,4],[1,3,4],[2,3,4],[1,2,3,4]]
  
-</details>
+
 </section>
 
 ### What Did I Order?
-<section class="call-to-action">
-<details>
-<summary>
-#### Prompt &#9759;
-</summary>
+<section class="dropdown">
+
+### Prompt &#9759;
+
 
 <img src="https://media.giphy.com/media/3ogwG6s8q7AudVxce4/giphy.gif" width="200" alt="cash register">
 
@@ -552,11 +534,10 @@ Tip:
 - Doing subtraction and addition on money values CAN lead to “floating point precision” problems. For example, `4.85 - 1.25` might give you `3.599999996`. Round values to two decimal places to make sure you’re finding answers.
 
 
-<section class="note">
-<details>
-<summary>
- <b>Ruby Starter Code</b>  &#9759;
-</summary>
+<section class="dropdown">
+
+### Ruby Starter Code  &#9759;
+
 
 
         menu = {
@@ -572,14 +553,13 @@ Tip:
 
         receipts = [4.85, 11.05, 13.75, 17.75, 18.25, 19.40, 28.25, 40.30, 75.00]
 
-</details>
+
 </section>
 
-<section class="note">
-<details>
-<summary>
- <b>JavaScript Starter Code</b>  &#9759;
-</summary>
+<section class="dropdown">
+
+### JavaScript Starter Code  &#9759;
+
 
         let menuItems = {
           "veggie sandwich": 6.85,
@@ -593,8 +573,8 @@ Tip:
         };
 
         const receipts = [4.85, 11.05, 13.75, 17.75, 18.25, 19.40, 28.25, 40.30, 75.00];
-</details>
+
 </section>
 
-</details>
+
 </section>
