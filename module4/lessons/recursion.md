@@ -1,6 +1,7 @@
 ---
 title: Recursion
 layout: page
+module: 4
 ---
 
 ## Learning Goals
@@ -45,7 +46,7 @@ Every recursive function (reminder, just a function that calls itself) must have
 
 2. A **recursive case**: A set of instructions, moving closer towards the base case, that ends in a call to the same function
 
-Let's see this in action with a function that takes a number as an argument and counts down to zero.
+Let's see this in action with a function that takes a number as an argument and counts down to zero.  You can clone down this [js repo](https://github.com/turingschool-examples/recursion_exercises_js) and this [ruby repo](https://github.com/turingschool-examples/recursion_exercises_rb) to use as sandboxes for the practice exercises found throughout this lesson.
 
 
 **Javascript Prompt**
