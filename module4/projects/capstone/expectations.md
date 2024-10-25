@@ -5,49 +5,21 @@ layout: page
 
 [Back to Capstone Project Overview](./index.html)
 
-## Structure and Rituals of Agile Development (and thus this project)
-* Every day you will have a check-in with your project manager where we will discuss your progress, any blockers, and your plan for the day. Usually this will be scheduled in the morning following the Warm Up, but depending on your lessons and the project manager's schedule, it may be scheduled at a different time. Occassionally, these will happen on Slack instead.
-* You will be assigned issues on the project board and your project manager will expect you to update the issue as you work on it.
-* You are expected to create new issues for your features as needed and to update the project board with new issues in the backlog as you discover them.
-* Retros will be held 2-3 times over the course of the project
-
-<section class="note">
-Work should generally be limited to the scheduled work time hours on the calendar between 9am-4pm MT, Monday through Friday just like a real job.
-</section>
-
-### What is a...
-* **Check-In/Standup**: A brief daily meeting with your project manager where we will discuss your progress, any blockers, and your plan for the day
-* **Issue**: A task or unit of work that needs to be completed
-* **Blocker**: A problem that is preventing you from completing your work or moving forward
-* **Backlog**: A list of issues that need to be completed but not yet scheduled
-* **Retro(spective)**: A meeting where we will discuss what went well, what didn't go well, and how we can improve
-* **Project Board**: A place to track the status of your issues
-
-<section class="dropdown">
-### Wait, tell me more about the project board
-
-The project board is where we will track the status of your issues. It is a place to plan your work and track your progress.
-
-Our Project Board will have the following status columns:
-* **Backlog**: Issues that are not yet scheduled
-* **To Do**: Issues that are scheduled to be worked on soon
-* **In Progress**: Issues that are currently being worked on
-* **Review**: Issues that are complete and ready for code review
-* **Done**: Issues that have been reviewed and merged
-</section>
-
 ## Onboarding
-After Kickoff, you'll be assigned to a project.
+Everyone will be assigned to an application at the start of the project. You might all be assigned to the same application or you might be assigned to different applications. It will be your project manager's job to make sure you have a good mix of people to work with. We will do our best to match you to a project that is a good fit for your skills and interests. Some projects will be new and some will be existing applications. Most typically, students will be assigned to an existing application so that is where this guide will focus.
+
+This project will span 4 weeks. Although you are working as a team, you will be assessed individually.
 
 **If it is a new application,** you will be given a project brief with a list of features to implement. Your first several days will be spent planning and designing the technical aspects of the application.
 
-**If it is an existing application,** follow the project's documentation and setup your development environment. This might include setting up mutliple apps or services. If anything about the setup instructions are unclear or incorrect, take notes, ask questions, and then update the README with the correct information if applicable. **Plan to spend at least a whole day on setup and getting familiar with the project.**
+**If it is an existing application,** follow the project's documentation and set up your development environment. This might include setting up multiple apps or services. If anything about the setup instructions are unclear or incorrect, take notes, ask questions, and then update the README with the correct information if applicable. **Plan to spend at least a whole day on setup and getting familiar with the project.**
 
 <section class="call-to-action">
 Pro-Tip: Updating the README is a great way to get familiar with the project and make a first contribution on the job, too! 
 </section>
 
 ### Guide for Navigating a Legacy Codebase
+As you are getting familiar with the codebase, consider the following questions:
 
 * Where will you start in the codebase, and why did you decide to start there?
 * What is familiar to you about the codebase?
@@ -56,12 +28,12 @@ Pro-Tip: Updating the README is a great way to get familiar with the project and
 * What is the data flow in the application?
 * What is unfamiliar? (different file structures, new packages or gems, etc.)
 
-**Take notes on your findings and questions. This will help you as you begin to work on your project as well as be a great resource to come back to when you start your first job.**
+Take notes on your findings and questions. This will help you as you begin to work on your project as well as be a great resource to come back to when you start your first job.
 
 ## Working Like a Developer
-After the setup period, you will be assigned your first feature. Some features will be small and others will be large enough that you will need to break them into multiple issues. You should ask clarifying questions with your project manager as needed. There will be daily opportunities to do this synchronously in the daily check in, otherwise you can use Slack to communicate with your project manager or ask to schedule a call. Your project manager will be the final decision maker on the scope of the feature, but you are encouraged to ask questions and provide input.
+After the onboarding and setup period, you will be assigned your first feature. Some features will be small and others will be large enough that you will need to break them into multiple issues. You should ask clarifying questions with your project manager as needed. There will be daily opportunities to do this synchronously in the daily check in, otherwise you can use Slack to communicate with your project manager or ask to schedule a call. Your project manager will be the final decision maker on the scope of the feature, but you are encouraged to ask questions and provide input.
 
-As the developer, you will be responsible for:
+As the developer, you are responsible for:
 * Planning the feature (see below)
 * Writing the code to implement the feature
 * Testing the feature to verify it works as expected
@@ -89,27 +61,104 @@ You might break it down into the following issues after clarifying requirements 
 * Create a new route for sign up
 * Add validations to the form
 * Add backend validations to ensure the email is not already in use
+
+Each of these issues should be added to the project board. The issue details should include a description of the feature, any acceptance criteria, and any additional information that will help you complete the feature such as:
+* Links to documentation or code
+* Dependencies (ex: gems or packages)
+* Potential blockers (ex: decisions or issues that need to be completed before this one can be started)
+
+They should be given a status of **Backlog** and the Project Manager will move them to **To Do** when they have been scheduled to be worked on.
+
+**For the example "Create a back end endpoint for sign up":**
+* Description: Create a back end endpoint for sign up
+* Acceptance Criteria: The endpoint should be created, new user saved to the database, and return a 200 status code with the correct response body
+* Dependencies: None
+* Blockers: Requires `User` model and table to be created
+* Additional Information:
+  * Request:
+    ```
+    POST /api/v1/users
+
+    {
+      "email": "test@test.com",
+      "password": "password",
+      "password_confirmation": "password"
+    }
+    ```
+  * Response body:
+    ```json
+    "data": {
+      "type": "user",
+      "id": "1",
+      "attributes": {
+        "email": "test@test.com",
+        "password": "password",
+        "password_confirmation": "password"
+      }
+    }
+  ```
 </section>
 
+
+## Structure and Rituals of Agile Development (and thus this project)
+* Every day you will have a check-in with your project manager where we will discuss your progress, any blockers, and your plan for the day. Usually this will be scheduled in the morning following the Warm Up or immediately after lunch, but depending on your lessons and the project manager's schedule, it may be scheduled at a different time. Occassionally, these will happen on Slack instead.
+* You will be assigned issues on the project board and your project manager will expect you to update the issue as you work on it.
+  * If your tasks aren't being updated, your project manager will assume you are not working on them which will result in a failing grade.
+* You are expected to create new issues for your features as needed and to update the project board with new issues in the backlog as you discover them.
+* Retros will be held 2-3 times over the course of the project.
+* Backlog Refinement sessions will be held 2-3 times over the course of the project.
+
+<section class="note">
+Work should generally be limited to the scheduled work time hours on the calendar between 9am-4pm MT, Monday through Friday just like a real job.
+</section>
+
+### What is a...
+* **Check-In/Standup**: A brief daily meeting with your project manager where we will discuss your progress, any blockers, and your plan for the day
+* **Issue**: A task or unit of work that needs to be completed
+* **Blocker**: A problem that is preventing you from completing your work or moving forward
+* **Backlog**: A list of issues that need to be completed but not yet scheduled
+* **Retro(spective)**: A meeting where we will discuss what went well, what didn't go well, and how we can improve
+* **Backlog Refinement**: A meeting where we will discuss the issues in the backlog and decide which ones to work on next
+* **Project Board**: A place to track the status of your issues
+
+<section class="dropdown">
+### Wait, tell me more about the project board
+
+The project board is where we will track the status of your issues. It is a place to plan your work and track your progress. As a rule of thumb, you should never have more than 2 issues in flight at any given time. If you are blocked on an issue, you should raise the concern with your project manager so that we can help you get unblocked.
+
+Our Project Board will have the following status columns:
+* **Backlog**: Issues that are not yet scheduled
+* **To Do**: Issues that are scheduled to be worked on soon
+* **In Progress**: Issues that are currently being worked on
+* **Review**: Issues that are complete and ready for code review
+* **Done**: Issues that have been reviewed and merged
+</section>
+
+
 ## Git Workflow and Technical Expectations
+### Code Quality
 * Test your code thoroughly
   * This includes both unit tests and integration tests
   * Nothing should be merged to main without tests
 * Write code that is clean and easy to understand
   * Follow the conventions of the language and framework
+  * Variables, methods, and functions have helpful names
+  * Use consistent formatting (line breaks, indentation, etc.)
+* Unused code and unnecessary comments and logging should be removed before opening a PR
 * Keep the README up to date (database schema, screenshots, endpoint documentation, changes to setup instructions or testing etc.)
-* Create a new branch for each feature
+
+### Git Workflow
+* Create a new branch for each issue
 * Write helpful [commit messages](https://cbea.ms/git-commit/)
 * Keep your branches focused in scope (avoid large PRs that include many features)
-  * If you are working on a large feature, break it into smaller pieces and submit them as separate PRs.
+  * If you are working on a large feature, that is a sign to break it into smaller issues and submit them as separate PRs.
 * Code should be reviewed and approved by at least one other person before merging
   * Reviews should include comments and suggestions for changes. Just saying "Nice work" is not helpful. See below for more details.
   * Each team member is expected to provide at least three detailed and feedback-rich reviews over the course of the project
 * PRs should be reviewed within 24 hours, Monday through Friday, or acknowledged in Slack if and why there will be a delay on the review
 * Deploy your code immediately after merging your approved pull requests to main **and then visit the production application to ensure your deployed changes are functioning as expected**
-* Create and use pull request templates that document and create discussion for finished features
-* Regularly update your assigned tasks on the project board
-  * If your tasks aren't being updated, your project manager will assume you are not working on them which will result in a failing grade
+* Use pull request templates that document and create discussion for finished features
+
 
 <section class="dropdown">
 ### Pull Request Review Tips
@@ -128,3 +177,4 @@ Helpful things to look for in a review might include:
 * Did this change break anything?
 </section>
 
+[Capstone Project Evaluation](./evaluation.html)
