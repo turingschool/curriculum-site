@@ -82,6 +82,7 @@ Optional Stretch Tech:
 * The application cannot simply be a display of data - there needs to be at least **one** way for the user to work with or manipulate the data (favoriting, searching, filtering, commenting, rating, etc)
 * Includes thorough client-side validations and error-handling, including error handling for network requests.
 * Implements robust Cypress testing, with all network requests properly intercepted and all user flows tested
+* Responsive across screensizes, avoiding any awkward styling as you change screen size
 
 Deployment is required for this project. Two popular deployment options for the FE are [Vercel](https://vercel.com/) and [Netlify](https://docs.netlify.com/).  You can research and proceed with whatever deployment platform you choose.  
 
