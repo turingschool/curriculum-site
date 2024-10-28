@@ -1,7 +1,9 @@
 ---
 layout: page
-title: Module 3 - Midmod Assessment
+title: M3 Midmod Assessment
 ---
+
+_[Back to Assessments Home](./index)_
 
 The midmod assessment is an opportunity for students to demonstrate their understanding of the concepts covered in the module so far. It also mimics the final assessment presentation format and thus is a great way to prepare for the final assessment.
 
@@ -13,6 +15,5 @@ Midmod assessment presentations will be completed in small groups with an instru
 
 ### Resources
 
-- [Presentation Guidelines](./projects/take_home/presentation_guidelines)
-- [Rubric](./projects/take_home/rubric)
-- [Final Assessment Guidelines](./projects/take_home)
+- [Presentation Guidelines](./presentation_guidelines)
+- [Rubric](./rubric)

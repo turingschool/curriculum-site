@@ -1,12 +1,14 @@
 ---
-title: Take-Home Rubric
+title: M3 Assessment Rubric
 layout: page
 ---
+
+_[Back to Assessments Home](./index)_
 
 In order for a candidate to pass this challenge, **_they must score "Leaning Yes Hire" or "Strong Yes Hire" in every category._**
 
 <section class="dropdown">
-### 1. Problem Solving and Task Completion
+### 1. Problem Solving and Task Completion (Take Home Only)
 #### Strong Yes Hire
 
 The candidate...

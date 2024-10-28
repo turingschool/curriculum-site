@@ -1,8 +1,10 @@
 ---
-title: Mock Take-Home Challenge
+title: M3 Final Assessment - Mock Take-Home Challenge
 subtitle: Mod 3 Final Assessment
 layout: page
 ---
+
+_[Back to Assessments Home](./index)_
 
 Your final project is a Take-Home Challenge meant to simulate a task that you might receive during an interview process. The scope is smaller scale and more open ended than other projects you've been assigned. The goal is to complete each part in 8 hours or less for a total of 16 hours or fewer over the course of 2 days. Since there is a time limit and due to the tasks' open ended nature, you should manage your time and plan appropriately. Not only is completing the take-home necessary, but also explaining your process and reasoning behind your decisions are equally important. Use this challenge to practice speaking about your planning and decision making processes around the code you write.
 
@@ -47,7 +49,6 @@ Your specific prompt will be provided to you during the assessment kickoff.
 ### Presentation Guidelines and Rubric
 
 - [Presentation Guidelines](./presentation_guidelines)
-
 - [Rubric](./rubric)
 
 _As you are working, if you have questions, please reach out to your instructors as if they are a potential employer. This is a great opportunity for you to practice your written communication too._

@@ -10,7 +10,7 @@ subheading: Building and Consuming APIs
 - [Intermission Pre-Work](./intermission_work)
 - [Lessons](./lessons)
 - [Projects](./projects)
-- [Midmod Assessment](./midmod_assessment)
+- [Assessments](./assessments)
 
 ## Other Resources
 - [Rails Practice](./rails_practice)
