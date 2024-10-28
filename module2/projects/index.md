@@ -11,8 +11,8 @@ The project specs will be linked below as each project is assigned.
 - Week 1-2 (FE Solo): [Hang In There (FE)](./hang_in_there)
 <!-- - Week 3 (Paired): TBA -->
 - Week 3 (Paired): [Hang In There API](./hang_in_there_api/)
-- Week 4-5 (Group): TBA
-<!-- - Week 4-5 (Group): [Little Shop](./little_shop/) -->
+<!-- - Week 4-5 (Group): TBA -->
+- Week 4-5 (Group): [Little Shop](./little_shop/)
 - Week 5-6 (Final Solo): TBA
 <!-- - Week 5-6 (Final Solo): [Coupon Codes](./coupon-codes/) -->
 
