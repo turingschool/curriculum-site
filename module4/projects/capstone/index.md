@@ -21,5 +21,5 @@ The Capstone Project is an opportunity to practice working like a developer in a
 
 
 ## Evaluation Details
-* [Evaluation](./evaluation)
+* [Performance Review and Rubric](./evaluation)
 

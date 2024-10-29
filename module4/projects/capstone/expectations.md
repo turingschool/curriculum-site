@@ -55,23 +55,35 @@ As the developer, you are responsible for:
 
 If the assigned feature is **Users can sign up for a new account**
 
-You might break it down into the following issues after clarifying requirements with the project manager:
+You might break it down into the following tasks after clarifying requirements with the project manager:
 * Create a back end endpoint for sign up
 * Create a front end component for sign up
 * Create a new route for sign up
 * Add validations to the form
 * Add backend validations to ensure the email is not already in use
 
-Each of these issues should be added to the project board. The issue details should include a description of the feature, any acceptance criteria, and any additional information that will help you complete the feature such as:
+Each of these tasks should be added to the issue as a checklist item. The issue details should include a description of the feature, any acceptance criteria (that's your checklist), and any additional information that will help you complete the feature such as:
 * Links to documentation or code
 * Dependencies (ex: gems or packages)
 * Potential blockers (ex: decisions or issues that need to be completed before this one can be started)
 
-They should be given a status of **Backlog** and the Project Manager will move them to **To Do** when they have been scheduled to be worked on.
+Any new issues should be given a status of **Backlog** and the Project Manager will move them to **To Do** when they have been scheduled to be worked on.
 
-**For the example "Create a back end endpoint for sign up":**
+<section class="call-to-action">
+A good rule of thumb for breaking down a feature is to think about the happy path and the sad path. The happy path is what should happen when the feature is working as expected. The sad path is what should happen if something goes wrong. Generally, an issue should be small enough to be completed in about a single day of work. Larger than that and you should consider breaking it into smaller issues. Additionally, if the work cannot all be completed by one person, you should break it into smaller issues. An example of this would be if you are working as separate front end and back end teams.
+</section>
+
+**For the example "Users Can Sign Up for a New Account":**
 * Description: Create a back end endpoint for sign up
-* Acceptance Criteria: The endpoint should be created, new user saved to the database, and return a 200 status code with the correct response body
+* Acceptance Criteria: 
+  * Create a back end endpoint for sign up
+  * Create a front end component for sign up
+  * Create a new route for sign up
+  * Add validations to the form
+  * Add backend validations to ensure the email is not already in use
+  * New user saved to the database
+  * Return a 200 status code with the correct response body
+  * Return a 400 status code with an appropriate error message if the form is invalid
 * Dependencies: None
 * Blockers: Requires `User` model and table to be created
 * Additional Information:
@@ -177,4 +189,4 @@ Helpful things to look for in a review might include:
 * Did this change break anything?
 </section>
 
-[Capstone Project Evaluation](./evaluation.html)
+[Performance Review and Rubric](./evaluation.html)

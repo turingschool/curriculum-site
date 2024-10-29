@@ -1,5 +1,5 @@
 ---
-title: Capstone Project Evaluation and Rubric
+title: Capstone Performance Review and Rubric
 layout: page
 ---
 
@@ -14,8 +14,7 @@ You will notice that much of the rubric asseses:
 * Your ability to collaborate with your team
 * Your ability to implement features and solve problems while adhering to the project's conventions
 
-As such, you will be graded throughout the duration of the project rather that during one final evaluation session at the end. Just like on the job, you are expected to perform at a high level consistently and not just on the days when you are undergoing review.
-
+As such, you will be assessed throughout the duration of the project rather that during one final evaluation session at the end. Just like on the job, you are expected to perform at a high level consistently and not just on the days when you are undergoing review.
 
 ## Self Assessment
 
@@ -86,10 +85,11 @@ Students are expected to score in the **Meets Expectations** category. If any on
   * Seeks clarification when requirements or tasks are unclear
   * Demonstrates active listening skills during team discussions and meetings
   * Shows willingness to help team members when they encounter difficulties
+  * Transparently communicates blockers and seeks help when appropriate
 - **Approaching Expectations:**
   * Updates the project board about once per day
   * Provides constructive and actionable feedback on at least 2 pull requests
-  * Ineffective time boxing: Spends too much time trying to figure things out on their own before asking for help
+  * Ineffective time boxing: Spends too much time trying to figure things out on their own before asking for help or struggles to communicate blockers and seek help in a timely manner
 - **Below Expectations:**
   * Updates project board less than once per day
   * Provides constructive and actionable feedback on 1 or fewer pull requests
