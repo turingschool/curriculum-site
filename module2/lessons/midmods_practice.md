@@ -54,6 +54,7 @@ You’ll now notice this button on your left side bar:
 - Click on the link the host sent you. You may have to sign into an account (i.e. GitHub) to move forward.
 - Open up the `practice1.js` file.
 - Open up VS Code’s terminal with the control + backtick buttons. Be sure you’re on the TERMINAL tab.
+- Open the LiveShare navbar (same button as shown above) and "unfollow" the instructor. This stops your screen from jumping around to follow _their_ cursor.
 - Your screen should now look like the screenshot toward the top of this lesson.
 
 **To test that it's working:**
