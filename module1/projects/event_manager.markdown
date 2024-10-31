@@ -8,7 +8,7 @@ topics: files, CSV, String, Sunlight API, ERB
 ### Prerequisites
 
 Before starting this tutorial, you should have a basic understanding of topics
-covered in [Ruby in 100 Minutes](http://tutorials.jumpstartlab.com/projects/ruby_in_100_minutes.html).
+covered in [Ruby in 100 Minutes](https://gist.github.com/beneggett/6633512).
 
 You should also be comfortable with:
 
