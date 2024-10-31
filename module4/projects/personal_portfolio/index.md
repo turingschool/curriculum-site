@@ -10,7 +10,7 @@ Your personal portfolio is a place to highlight your work and skills. It can be 
 ## Setup and Submission
 You can either use this provided [template](https://github.com/turingschool/portfolio-template) or create your own portfolio from scratch. You should include all content listed below regardless of which route you choose.
 
-When you are finished, submit the URL to your portfolio using this [submission form](https://forms.gle/3WiWnpZEKu2oUAaJ7).
+When you are finished, submit the URL to your portfolio using this [submission form](https://turingschool.notion.site/1300ef3570788015b235e18a411dfa66?pvs=105).
 
 <section class="note">
   This is due by EOD Friday of week 4. You are welcome and encouraged to submit earlier for feedback.
