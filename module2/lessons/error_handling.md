@@ -43,9 +43,9 @@ Lets talk about some of the common errors you've seen thus far in your developme
 ### Exceptions, and how to handle them
 
 * Error
-    * Something bad that happened during normal operation of a program
+    * Something bad that happened during normal operation of a program.
 * Exception
-    How our program (Ruby) handles an error, in an object-oriented way. Exceptions are simply classes that the Ruby library has predefined for us.
+    * How our program (Ruby) handles an error, in an object-oriented way. * Exceptions are simply classes that the Ruby library has predefined for us.
 
 Ruby comes with a big list of Exceptions: see this list of classes.
 
