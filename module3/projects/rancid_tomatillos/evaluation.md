@@ -78,11 +78,11 @@ We expect all teammates to:
   - Tests make specific assertions about the content DOM elements contain
   - Network requests are properly stubbed (intercepted)
   - Happy path async functionality is stubbed and tested
+  - Sad path functionality is stubbed and tested
 
 **Exceeds Expectations** can look like:
-  - Sad path async functionality is stubbed and tested
-  - Implements Cypress `alias` and `wait()` 
   - Implements Cypress `fixture` 
+  - Implements Cypress `alias` and `wait()` 
   - Implements Cypress `command` 
   
 </section>
@@ -94,7 +94,5 @@ We expect all teammates to:
   - Application uses Router to display appropriate components based on URL
   - The user has access to previous routes via the back/forward buttons
   - Code was refactored to remove unnecessary or old code artifacts
-
-**Exceeds Expectations** can look like:
   - A 404 page handles unknown routes.  *You can check this by going to localhost:3000/nonsense*
 </section>
