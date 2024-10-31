@@ -31,8 +31,8 @@ Your presentation should cover the following points:
 ## Rubric
 
 <section class="dropdown">
-### Collaboration and Professionalism
-While this is not a scored rubric section, every team member is expected to fully participate, contribute, communicate, and collaborate with the team throughout the entirety of this project. **Failure to do so can result in an individual failing the project, even if the group/project is otherwise passing.**
+### Collaboration, Professionalism & Presentation
+Every team member is expected to fully participate, contribute, communicate, and collaborate with the team throughout the entirety of this project. **Failure to do so can result in an individual failing the project, even if the group/project is otherwise passing.**
 
 We expect all teammates to:
 * Hold daily standups throughout project.
@@ -46,6 +46,14 @@ We expect all teammates to:
   * Screenshots/gifs of your app
   * Links to contributors' GitHub profiless
 * Collaborate effectively to accomplish the shared goal.  Team productively and professionally works through challenges and conflicts to ensure all team members are able to be heard and contribute throughout the project. Instructors are available to offer support and guidance but conversations around what *is* and what *is not* working are expected to be led by the team members themselves.
+
+We expect your video presentation to:
+* Cover all the required presentation points
+* Clearly and concisely present technical topics
+* Use professional and technically accurate vocabulary 
+* Demonstrate competency and professionalism for each team member
+
+Note: You will not be graded on how high quality or well-edited your video is, only the content and delivery of your presentation.
 </section>
 
 <section class="dropdown">
