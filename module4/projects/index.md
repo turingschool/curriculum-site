@@ -13,3 +13,6 @@ The following projects will be assigned and their completion is required to grad
 ## Professional Development Projects
 - Weeks 1-4 (Solo): [Personal Portfolio](./personal_portfolio/)
 - Weeks 4-5 (Solo): [Employer Case Study](./employer_case_study/)
+
+## Technical Challenges
+- [Technical Challenges](./tech_challenges/)
