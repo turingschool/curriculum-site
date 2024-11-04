@@ -38,6 +38,7 @@ You can't possibly predict all of the questions that you may get asked in an int
 Let's consider an example. Take a moment to think about all of the different ways an interviewer might ask about your collaboration style. Make a list of at least 5 questions someone might ask you that would get you to talk about how you collaborate.  
 
 <section class="dropdown">
+
 ### Some examples:
 
 - What role do you tend to take on a team?
@@ -54,17 +55,30 @@ Notice that many of those questions are extremely similar, just worded different
 We are going to work through some activities to solidify this concept.
 
 <section class="call-to-action">
+
 ### Activity 1: Categorizing Questions
 
 First, you'll complete part A of [this activity](https://docs.google.com/spreadsheets/d/1BPEh6LlYjq2KcndN3Fsi86g1Hw0YvBpcmzrsOQdTH2U/copy) in breakout rooms. Note that you will all want to have your own copy of this document.
 
 Next, we'll give you some time to complete part B of the same activity independently.  As you jot down tangible examples, remember to leverage the STAR method
+
+<section class="dropdown">
+
+### STAR Method
+
+- **Situation:** Set the scene and give the necessary details of your example.
+- **Task:** Describe what your responsibility was in that situation.
+- **Action:** Explain exactly what steps you took to address it.
+- **Result:** Share what outcomes your actions achieved.
+</section>
+
 </section>
 
 <section class="call-to-action">
 ### Activity 2: Mini Mock Interview
 
 <section class="dropdown">
+
 ### Solo Reflection  
 
 Consider the following questions about your group project from mod 2 (or another project if you prefer).
@@ -78,6 +92,7 @@ Now, think about the themes from the questions in the previous activity.
 </section>
 
 <section class="dropdown">
+
 ### In Breakout Rooms
 
 In pairs, you'll practice answering one question by using that group project from mod 2. Determine who is taking the hot seat first and follow these steps:
