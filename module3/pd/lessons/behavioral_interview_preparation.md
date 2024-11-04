@@ -133,4 +133,4 @@ At the end of almost every interview, you'll be given an opportunity to ask ques
   * Eval notes
 
 ## Check for Understanding
-After you've completed this lesson, submit this [exit ticket](https://forms.gle/1WHVG6iiHX6bkfS97), due by Wednesday of Week 2 EOD.
+After you've completed this lesson, submit this [exit ticket](https://docs.google.com/forms/d/e/1FAIpQLScuRyLSHOFeEt5ktBXZ6MwSNnQmI5mkVv-uBBPXFriTrUHGXg/viewform?usp=sf_link), due by Wednesday of Week 2 EOD.
