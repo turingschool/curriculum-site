@@ -58,9 +58,9 @@ We are going to work through some activities to solidify this concept.
 
 ### Activity 1: Categorizing Questions
 
-First, you'll complete part A of [this activity](https://docs.google.com/spreadsheets/d/1BPEh6LlYjq2KcndN3Fsi86g1Hw0YvBpcmzrsOQdTH2U/copy) in breakout rooms. Note that you will all want to have your own copy of this document.
+**Part A:** First, you'll complete part A of [this activity](https://docs.google.com/spreadsheets/d/1BPEh6LlYjq2KcndN3Fsi86g1Hw0YvBpcmzrsOQdTH2U/copy) in breakout rooms. Note that you will all want to have your own copy of this document.
 
-Next, we'll give you some time to complete part B of the same activity independently.  As you jot down tangible examples, remember to leverage the STAR method
+**Part B:** Next, we'll give you some time to complete part B of the same activity independently.  As you jot down tangible examples, remember to leverage the STAR method
 
 <section class="dropdown">
 
