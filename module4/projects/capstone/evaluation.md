@@ -112,7 +112,7 @@ Students are expected to score in the **Meets Expectations** category. If any on
   * Effectively addresses feedback from code reviews
   * At least 90% of code is well tested, including sad paths and edge cases
   * Implements proper error handling
-  * Demonstrates understanding of code organization principles (e.g., separation of concerns, DRY)
+  * Demonstrates understanding of code organization principles (e.g., separation of concerns, SRP, DRY)
   * Maintains a clean and organized codebase, following agreed-upon coding standards
 - **Approaching Expectations:**
   * Usually demonstrates a strong understanding of the primary programming language and framework used in the project though occassionally strays from conventions or the project's coding standards
@@ -134,9 +134,9 @@ Students are expected to score in the **Meets Expectations** category. If any on
   * Assists teammates as needed in debugging and problem solving
   * Regularly seeks out, applies, and offers feedback to improve problem-solving approaches
 - **Meets Expectations:**
-  * Consistently breaking down complex issues into manageable components
+  * Consistently breaks down complex issues into manageable components
   * Identifies potential problems before they become critical issues
-  * Shows the ability to adapt existing knowledge to new situations and technologies
+  * Shows the ability to apply existing knowledge to new situations and technologies
   * Effectively uses debugging tools and techniques to isolate and resolve issues
   * Regularly applies feedback to improve problem-solving approaches
 - **Approaching Expectations:**
@@ -155,26 +155,26 @@ Students are expected to score in the **Meets Expectations** category. If any on
 <section class="dropdown">
 ### Git Workflow and Deployment
 - **Exceeds Expectations:**
-  * Uses Pull Request templates and at least four PRs include specific questions or asks of the code reviewer
+  * Uses Pull Request templates and at least four PRs include specific questions/asks of the code reviewer
   * Always creates focused, small pull requests that are easy to review
   * Rebases before merging
   * Deletes branches after merging
   * App has passing CI and is deployed successfully after every PR is merged
 - **Meets Expectations:**
-  * Uses Pull Request templates and at least three PRs include specific questions or asks of the code reviewer
+  * Uses Pull Request templates and at least three PRs include specific questions/asks of the code reviewer
   * Writes clear and descriptive commit messages following a consistent convention
   * Creates focused, small pull requests that are easy to review, but one may be larger than expected
   * Regularly pushes code and keeps the remote repository up-to-date
   * Uses a new branch for each issue and each Pull Request; Never reuses a branch
   * App has passing CI and is deployed successfully after almost every PR is merged, with few exceptions (misses no more than twice)
 - **Approaching Expectations:**
-  * Uses Pull Request templates and at least two PRs include specific questions or asks of the code reviewer
+  * Uses Pull Request templates and at least two PRs include specific questions/asks of the code reviewer
   * Creates focused, small pull requests that are easy to review, but up to two may be larger than expected
   * Commit messages are usually clear and always professional, but don't always follow a consistent convention
   * Uses a new branch for each issue and each Pull Request but may accidentally reuse a branch once or twice
   * App usually has passing CI and is usually deployed successfully after a PR is merged, with some exceptions (misses no more than 3 times)
 - **Below Expectations:**
-  * Uses PR templates but fewer than two PRs include specific questions or asks of the code reviewer
+  * Uses PR templates but fewer than two PRs include specific questions/asks of the code reviewer
   * Commit messages are often unclear, sometimes unprofessional, and don't always follow a consistent convention
   * Creates focused, small pull requests that are easy to review, but more than two may be larger than expected
   * Inconsistently pushes code or pushes directly to `main`
