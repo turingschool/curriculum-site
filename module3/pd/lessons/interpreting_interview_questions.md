@@ -56,7 +56,7 @@ We are going to work through some activities to solidify this concept.
 <section class="call-to-action">
 ### Activity 1: Categorizing Questions
 
-First, take 15 minutes to complete part A of [this activity](https://docs.google.com/spreadsheets/d/1UzP9XHcbKWSSG7S49VPCcJyijd9u6FwrJGdaYgI4Z20/edit?usp=sharing) in breakout rooms. Note that you will all want to have your own copy of this document.
+First, take 15 minutes to complete part A of [this activity](https://docs.google.com/spreadsheets/d/1BPEh6LlYjq2KcndN3Fsi86g1Hw0YvBpcmzrsOQdTH2U/edit?gid=1313471816#gid=1313471816) in breakout rooms. Note that you will all want to have your own copy of this document.
 
 Next, take 15 minutes to complete part B of the same activity independently.  As you jot down tangible examples, remember to leverage the STAR method
 </section>
