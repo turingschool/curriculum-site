@@ -9,7 +9,7 @@ layout: page
 
 ## Overview
 
-You will notice that much of the rubric asseses:
+You will notice that much of the rubric assesses:
 * Your regular, continual, and active participation in the project
 * Your ability to collaborate with your team
 * Your ability to implement features and solve problems while adhering to the project's conventions
@@ -18,7 +18,7 @@ As such, you will be assessed throughout the duration of the project rather that
 
 ## Self Assessment
 
-Self assessment is a required part of the project. Failure to submit the self-assessment will result in a failure for the project. It is an opportunity for you to reflect on your work, identify areas for improvement, share your successes, and celebrate your accomplishments. Self Evaluation is also common in professional environments. Typically this happens during your annual review (or whatever cadence your company uses). 
+Self assessment is a required part of the project. Failure to submit the self-assessment will result in a failure for the project. It is an opportunity for you to reflect on your work, identify areas for improvement, share your successes, and celebrate your accomplishments. Self evaluation is also common in professional environments. Typically this happens during your annual review (or whatever cadence your company uses). 
 
 You should include the following in your self assessment:
 * Share feedback you have received from at least two teammates
