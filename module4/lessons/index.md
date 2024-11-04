@@ -9,6 +9,7 @@ title: Module 4 - Lessons
 - [JS: Asynchronous JavaScript](./async_js)
 - [Recursion](./recursion)
 - [Big O Notation](./big_o)
+- [Background Workers](./intro_to_background_workers)
 
 ### Career and Professional Development Lessons
 - [Analyzing Tech Challenges](./analyzing_tech_challenges)
