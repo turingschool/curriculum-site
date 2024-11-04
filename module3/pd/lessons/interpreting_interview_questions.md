@@ -37,7 +37,7 @@ You can't possibly predict all of the questions that you may get asked in an int
 
 Let's consider an example. Take a moment to think about all of the different ways an interviewer might ask about your collaboration style. Make a list of at least 5 questions someone might ask you that would get you to talk about how you collaborate.  
 
-<section class="answer">
+<section class="dropdown">
 ### Some examples:
 
 - What role do you tend to take on a team?
@@ -56,18 +56,18 @@ We are going to work through some activities to solidify this concept.
 <section class="call-to-action">
 ### Activity 1: Categorizing Questions
 
-First, take 15 minutes to complete part A of [this activity](https://docs.google.com/spreadsheets/d/1BPEh6LlYjq2KcndN3Fsi86g1Hw0YvBpcmzrsOQdTH2U/copy) in breakout rooms. Note that you will all want to have your own copy of this document.
+First, you'll complete part A of [this activity](https://docs.google.com/spreadsheets/d/1BPEh6LlYjq2KcndN3Fsi86g1Hw0YvBpcmzrsOQdTH2U/copy) in breakout rooms. Note that you will all want to have your own copy of this document.
 
-Next, take 15 minutes to complete part B of the same activity independently.  As you jot down tangible examples, remember to leverage the STAR method
+Next, we'll give you some time to complete part B of the same activity independently.  As you jot down tangible examples, remember to leverage the STAR method
 </section>
 
 <section class="call-to-action">
 ### Activity 2: Mini Mock Interview
 
-<section class="answer">
+<section class="dropdown">
 ### Solo Reflection  
 
-Consider the following questions about your group project from mod 2.
+Consider the following questions about your group project from mod 2 (or another project if you prefer).
 - What about that project sticks out to you the most?
 - What was the most memorable moment from that project?
 - What is something you did well during that project?
@@ -77,7 +77,7 @@ Now, think about the themes from the questions in the previous activity.
 - Which theme do you think you could speak to best using that group project from mod 2 as your tangible example?
 </section>
 
-<section class="answer">
+<section class="dropdown">
 ### In Breakout Rooms
 
 In pairs, you'll practice answering one question by using that group project from mod 2. Determine who is taking the hot seat first and follow these steps:
@@ -89,7 +89,7 @@ In pairs, you'll practice answering one question by using that group project fro
   - Your feedback should focus on Applicant's ability to convey the skills the question is assessing and Applicant's ability to anchor their answer in the tangible project example.
 - Switch roles and repeat!
 
-You will have 20 minutes total, so be sure to watch the clock and switch roles after 10 minutes.
+Be sure to watch the clock and switch roles halfway through.
 </section>
 
 </section>
