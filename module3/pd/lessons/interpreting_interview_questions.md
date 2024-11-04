@@ -1,5 +1,5 @@
 ---
-title: Behavioral Interview Preparation
+title: Interpreting Interview Questions
 length: 120 minutes
 tags: professional development, pd, interview prep
 module: 3
