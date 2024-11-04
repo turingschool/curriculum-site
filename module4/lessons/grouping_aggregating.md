@@ -33,7 +33,7 @@ While we are talking about functions built in to Postgresql, it is important to 
 
 ### SQL Aggregates
 
-We'll be working with Set List on the `many-to-many-complete` branch.  Let's run `rails dbconsole` in SetList to open up a connection to our Postgres Database. Let's find the average length of all songs:
+We'll be working with [Set List](https://github.com/turingschool-examples/set-list-api/tree/many-to-many-complete) on the `many-to-many-complete` branch.  Let's run `rails dbconsole` in SetList to open up a connection to our Postgres Database. Let's find the average length of all songs:
 
 ```sql
 select avg(length) from songs;
@@ -63,7 +63,7 @@ select max(length) from songs;
 
 ActiveRecord gives us corresponding "calculations" for those aggregate functions. Take a minute to look through the [ActiveRecord Calculations Docs](https://api.rubyonrails.org/classes/ActiveRecord/Calculations.html) to see what calculations are available.
 
-Let's open up a Rails console and look at the ActiveRecord syntax for the above examples:
+Let's open up Rails console with `$ rails console` and look at the ActiveRecord syntax for the above examples:
 
 ```ruby
 Song.average(:length)
