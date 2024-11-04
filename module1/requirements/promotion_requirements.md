@@ -22,19 +22,14 @@ You will complete four [projects](../projects/) throughout Module 1, each of whi
 
 ## Assessments and Independent Challenges
 
-You will complete two assessments and three weekly Independent Challenges in Module 1, each of which will be assesed on a scale of Below Expectations, Approaching Expectations, Meets Expectations, and Exceeds Expectations. Meets Expectations is considered a passing score.
-
 ### Assessments
-1. Mid Module Assessment (aka "Mid Mod")
-  * The Mid Mod is evaluated, but does not count toward promotion
-
-1. Final Independent Challenge (aka "Final IC", Week 6)
+* Final Independent Challenge (aka "Final IC", Week 6)
   In order to be promoted to Module 2:
   * You must earn a _Meets Expectations_ on the Week 6 Final IC to be promoted to Module 2. Students who do not will be offered a re-take.
 
 ### Independent Challenges
 * Independent Challenges (ICs)
-  * Week 3, Week 4 (optional), and Week 5 
+  * Week 3, Week 4, and Week 5 
   * The weekly IC's are evaluated, but do not count toward promotion. They are practice for the final Week 6 IC.
 
 Student can find independent challenges to practice [here](https://github.com/turingschool-examples/se-mod1-exercises/blob/main/practice_independent_challenges/README.md). 
