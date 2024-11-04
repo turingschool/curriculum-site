@@ -110,6 +110,19 @@ Now, let's compare that response object in two scenarios:
 
 Do we think we could use any of these properties to check if the network request was successful?
 
+<section class="call-to-action">
+### Research
+
+Let's spend a little time looking through these docs:
+- [Response: ok Property](https://developer.mozilla.org/en-US/docs/Web/API/Response/ok)
+  - Q: What is the `ok` property?
+  - Q: When will `ok` resolve to `true`? `false`?
+- [Throw](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/throw)
+  - Q: Where does `throw` send you in the code?
+- [Error](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error#throwing_a_generic_error)
+  - Q: What does `throw new Error('some message here')` do?
+</section>
+
 <section class="dropdown">
 ### Possible Solution
 
