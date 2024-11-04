@@ -114,7 +114,7 @@ A good rule of thumb for breaking down a feature is to think about the happy pat
 
 ## Structure and Rituals of Agile Development (and thus this project)
 * Every day you will have a check-in with your project manager where we will discuss your progress, any blockers, and your plan for the day. 
-  * Usuallyin the morning following the Warm Up or immediately after lunch. Occasionally, these will happen at an off time or on Slack instead.  
+  * Usually in the morning following the Warm Up or immediately after lunch. Occasionally, these will happen at an off time or on Slack instead.  
 * You will be assigned issues on the project board and be expected to update the issue as you work on it.
   * If your tasks aren't being updated, your project manager will assume you are not working on them which will result in a failing grade.
 * You are expected to create new issues for your features as needed and to update the project board's backlog with new issues as you discover them.
