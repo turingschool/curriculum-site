@@ -25,7 +25,7 @@ You will complete four [projects](../projects/) throughout Module 1, each of whi
 ### Assessments
 * Final Independent Challenge (aka "Final IC", Week 6)
   In order to be promoted to Module 2:
-  * You must earn a _Meets Expectations_ on the Week 6 Final IC to be promoted to Module 2. Students who do not will be offered a re-take.
+  * You must complete iteration 3 on the Week 6 Final IC to be promoted to Module 2. Students who do not will be offered a re-take.
 
 ### Independent Challenges
 * Independent Challenges (ICs)
