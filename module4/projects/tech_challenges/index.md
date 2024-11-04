@@ -3,9 +3,9 @@ title: Technical Challenges
 layout: page
 ---
 
-Technical challenges may be given as part of the interview process to help assess candidates on how they break down problems, communicate their logic and reasoning, demonstrate their technical knowledge, and implement a working solution. Our goal is to provide you with the opportunity to practice these skills and develop a good process. Over the course of 1 week, students will complete daily timed technical challenges and reflect on their approach to these problems.
+Technical challenges may be given as part of the interview process to help assess candidates on how they break down problems, communicate their logic and reasoning, demonstrate their technical knowledge, and implement a working solution. Our goal is to provide you with the opportunity to practice these skills and develop a good process. Students will complete timed technical challenges and reflect on their approach to these problems.
 
-These scenarios are focused on helping you develop a good approach and do not always allow enough time to complete the challenge. Do not be discouraged if you are unable to implement a solution in the alotted time. Some of the challenges are very difficult and assigned intentionally to emphasize process over results.
+These scenarios are focused on helping you develop a good approach and do not always allow enough time to complete the challenge. Do not be discouraged if you are unable to implement a solution in the alotted time. Some of the challenges are very difficult and are assigned **intentionally to emphasize process over results**.
 
 <section class="call-to-action">
 
@@ -19,7 +19,7 @@ We will use these [Technical Prompts](./prompts) for our practice throughout Mod
 
 Technical challenges will either be solo or paired.
 
-After each challenge, students should track their reflections in a [GitHub Gist](https://gist.github.com/) that they will submit at the end of the week.
+After each challenge, students should track their reflections with their preferred note taking tool.
 
 <!-- COMMENTING OUT UNTIL WE DECIDED IF WE WANT TO KEEP DOING THIS SURVEY AND HOW OFTEN -->
 <!-- Students will also complete the [Technical Challenge Confidence Check](https://forms.gle/M24x2XisnkNGe35g8) survey at the beginning of the week and retake the survey at the end of the week to measure their progress. -->
@@ -30,7 +30,7 @@ For solo challenges, you will be given a technical challenge and a designated am
 
 After the time is up, talk through your process with a peer. Share your solutions, compare approaches, and ask questions to help one another see the same problem from a new perspective. _If you want to take it a step further, talk about the Big O complexity of your solution._  
 
-Once you've finished your discussions with a peer, take time to add your personal reflection on the process to your GitHub Gist.
+Once you've finished your discussions with a peer, take time to add your personal reflection on the process to your notes.
 
 <section class="call-to-action">
 #### Reflection Questions
@@ -46,7 +46,9 @@ If this isn't your first technical challenge:
 
 ### Paired Challenges
 
-You will be assigned either a partner or a small group. Start by coordinating who will be the problem solver and who will be the observer first. The problem solver will then work through the challenge in the designated amount of time. The observer should be participating and taking notes for feedback. Once the time is completed, the observer should share feedback. Switch roles and repeat with a new problem.
+You will be assigned either a partner or a small group. Start by coordinating who will be the problem solver and who will be the observer first. The problem solver will then work through the challenge in the designated amount of time. The observer should be participating and taking notes for feedback. Once the time is completed, the observer should share feedback. Switch roles and repeat with a new problem.  
+
+Be sure to add any reflections to your notes.  
 
 <section class="call-to-action">
 #### Problem Solver Outline
