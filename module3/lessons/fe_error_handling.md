@@ -149,7 +149,7 @@ Let's spend a little time looking through these docs:
 ```
 </section>
 
-By using the line `throw New Error()`, we are able to manually trigger the `catch`. Now, that error handling in our `catch` is firing for a 422 error! Yay! 
+By using the line `throw new Error()`, we are able to manually trigger the `catch`. Now, that error handling in our `catch` is firing for a 422 error! Yay! 
 
 <section class="call-to-action">
 ### Discuss
