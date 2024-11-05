@@ -121,7 +121,7 @@ Try the following prompts:
 - Can you show me how you would solve the first prompt you wrote?
 
 **Stop and Reflect:**   
-- What ChatGPT able to create a useful data set for you to practice with?  
+- Was ChatGPT able to create a useful data set for you to practice with?  
 - What did you think of the prompts it came up with?  
 - When might you use this in the future?
 

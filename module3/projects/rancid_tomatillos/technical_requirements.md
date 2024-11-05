@@ -169,8 +169,8 @@ We've also given you some mock data to use for your testing. You can find those 
   - As a user, when I load the application, I see a collection of movies.
     - Note: When testing a collection of elements, it's good practice to check that...  
       - The number of elements we expect to be there are there (i.e. there are 4 movie posters)  
-      - The first element contains all the information we'd epect (i.e. correct image and vote count)  
-      - The last element contains all the information we'd epect (i.e. correct image and vote count)  
+      - The first element contains all the specific data details we'd expect (correct image, vote count, etc)  
+      - The last element contains all the specific data details we'd expect (correct image, vote count, etc)  
   - As a user, when I click on a movie, I'm shown additional details about that movie.  
     - Note: We want to check ALL details. Just checking Title is not enough.  
   - As a user, when I upvote a movie, I see the movie's votes increase by one.  
