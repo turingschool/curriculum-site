@@ -43,6 +43,19 @@ There are four codepens in **[this collection](https://codepen.io/collection/Exq
   - Users should know if something went wrong (whether it was user error or not).
   - We should wait until after the Promise has successfully resolved from a fetch to confirm the outcome with the user. This is what we will talk about next!
 
+<section class="call-to-action">
+### Project Brainstorm
+
+Let's spend 10 minutes in your project teams to brainstorm what error prevention you'd like to add to your projects. It might be helpful to think through these questions:  
+- What ways can the user currently break things?  
+- What else could go wrong?  
+- How can we prevent errors from happening?  
+- How can we respond to errors after they happen?  
+- What should the user see when things go right?  
+- What should the user see when things go wrong?  
+
+**At the end of the 10 minutes, please have one person from your team DM your instructor on Slack with a list of what error handling you'd like to add to your project.** This list can include FE and BE error handling. 
+</section>
 
 ## Handling Fetch Errors
 
