@@ -12,7 +12,6 @@ layout: page
 We'll be using the `sql_ar_workshop_m4` branch of the [Set List API](https://github.com/turingschool-examples/set-list-api/tree/sql_ar_workshop_m4). The instructions for this class are also listed on this branch in the README.
 
 ## Warm Up
-## Warm Up
 
 Write a method that will return all Artists with Songs with at least 1,000,000 plays.
 
