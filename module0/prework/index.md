@@ -29,7 +29,7 @@ Once you have completed all your prework items, please create a new Github Gist 
 ## Important Notes
 Throughout Mod 0 you will have many opportunities to practice the information you learn. One of the ways we have you reflect on your learnings is by answering CFU (Check For Understanding) questions. At the end of each live lesson and homework lesson, there will be a set of CFUs for you to respond to. To track these responses, we will have you use the same Mod 0 Gist you submit as your prework. You will be able to add to this gist throughout Mod 0 and instructors will be able to see those updates and provide feedback. 
 
-If you get stuck when creating this Gist, refer back to the [Markdown lesson]({{ site.url }}/prework/markdown).
+If you get stuck when creating this Gist, refer back to the [Markdown lesson]({{ site.url }}/module0/prework/markdown).
 
 Here is a sample of how you might structure your Mod 0 Gist file:
 ```markdown
