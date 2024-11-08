@@ -68,6 +68,9 @@ Returns all of a merchant's coupons
 **Response**
 
 ```json
+status: 200
+body:
+
 {
   "data": [
     {
@@ -207,6 +210,9 @@ Accept: application/json
 **Response**
 
 ```json
+status: 200
+body:
+
 {
   "data": [
     {
@@ -260,6 +266,9 @@ Accept: application/json
 **Response**
 
 ```json
+status: 200
+body:
+
 {
   "data": [
     {

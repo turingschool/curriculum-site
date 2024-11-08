@@ -9,7 +9,7 @@ This prework should take no longer than 20 hours to complete the Deliverables. I
 
 ### Demo Competition
 
-If you are planning to demo a project at Demo Comp in week 1 of Mod 4, you MUST timebox your time over intermission and in weeks 1 and 2 to ensure you are meeting module expectations. We recommend setting aside specific times to work with your demo team over intermission to finish your demo BEFORE week 1 begins. You are responsible for balancing your time between working on the demo project and the tasks below.
+If you are planning to demo a project at Demo Comp in week 2 of Mod 4, you MUST timebox your time over intermission and in weeks 1 and 2 to ensure you are meeting module expectations. We recommend setting aside specific times to work with your demo team over intermission to finish your demo BEFORE week 1 begins. You are responsible for balancing your time between working on the demo project and the tasks below.
 
 ## Deliverables
 
