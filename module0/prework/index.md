@@ -38,9 +38,10 @@ Here is a sample of how you might structure your Mod 0 Gist file:
 
 ## About Me
 I am a former educator who loves my dog. I'm excited to join Turing because...
-```
+
 ## Intro Video Link
 [Link](URL to slack thread here...)
+```
 
 
 You cannot begin Mod 0 until this prework is submitted. Reach out via Slack early if you have any questions or concerns!
