@@ -8,6 +8,7 @@ title: Module 4 - Lessons
 - [JS: Execution Contexts & Scope](./js_execution_contexts_and_scope)
 - [JS: Asynchronous JavaScript](./async_js)
 - [AR/SQL: Grouping & Aggregating](./grouping_aggregating)
+- [AR/SQL: Workshop](./sql_ar_workshop)
 - [Recursion](./recursion)
 - [Big O Notation](./big_o)
 - [Background Workers](./intro_to_background_workers)
