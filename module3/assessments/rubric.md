@@ -75,7 +75,7 @@ The candidate...
 
 <section class="dropdown">
 ### 3. Testing and Debugging
-Testing is expected to be present for both the frontend and backend.
+Note: Testing is expected to be present for the backend and is considered "extra" for frontend.
 #### Strong Yes Hire
 
 The candidate...
