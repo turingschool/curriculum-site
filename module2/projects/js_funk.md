@@ -6,7 +6,7 @@ length: 5 weeks
 
 ## Abstract
 
-jsFUNk will focus on practicing complex problem solving, data manipulation and prototype methods.  
+jsFunk will focus on practicing complex problem solving, data manipulation and prototype methods.  
 
 As you are practicing, stay focused on breaking down and working through each problem step-by-step. You are defining a strong problem solving process that you will be able to apply to any code challenge placed in front of you, even if its unfamiliar.
 
@@ -30,7 +30,7 @@ Object.keys() **will not** be needed for your midmod or final assessments.
 
 ## Set Up
 
-**Fork** this [jsFUNk repo](https://github.com/turingschool-examples/jsFUNk) of practice exercises.  
+**Fork** this [jsFunk repo](https://github.com/turingschool-examples/jsFunk) of practice exercises.  
 
 Read through the entire **README** for details and set up instructions.  
 
@@ -62,7 +62,7 @@ In order to be successful when working with prototype methods, you'll need to ha
 ### Notes
 
 - This requires **consistent daily practice**. These are not skills you can cram for before the assessment.
-- jsFun problems are ***not*** in order of difficulty.  If one feels way too hard, try it, but know when to pause, post a question in codehelp and move onto a different problem in the meantime.  Come back to it as your skills and confidence improve.
+- jsFunk problems are ***not*** in order of difficulty.  If one feels way too hard, try it, but know when to pause, post a question in codehelp and move onto a different problem in the meantime.  Come back to it as your skills and confidence improve.
 - Do not stress about completing *all* of the problems. Focus more on being able to thoroughly understand and articulate the process and solution to the problems you do make it through.  
 - After you solve each problem, **pause and add an annotation** for how you would walk someone through arriving at that solution. It will help you more deeply understand your solution as well as help with your articulation during assessments (and future interviews).
 - We recommend spending some time solving the same problem using different iterators. For example, if you first solve a problem using a `filter` and `map`, try solving it again with a `forEach` and then again with a `reduce`. This will deepen your skillset greatly. 
