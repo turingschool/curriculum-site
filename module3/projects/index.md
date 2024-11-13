@@ -15,6 +15,6 @@ The project specs will be linked below as each project is assigned.
 ## Additional Projects and Resources
 
 - [PR Template](./pr_template)
-- [jsFUNk:](./js_funk) Daily assessment prep with JS data manipulation exercises
+- [jsFunk:](./js_funk) Daily assessment prep with JS data manipulation exercises
 - [Ideabox Ideas & Practice](./ideabox_practice)
 
