@@ -11,12 +11,12 @@ title: Welcome to Module 0
     <th>Mod 0 Dates</th>
   </tr>
   <tr>
-    <td>2410 (Oct 7)</td>
-    <td>September 30 - October 6</td>
-  </tr>
-  <tr>
     <td>2412 (Dec 2)</td>
     <td>November 11 - November 15</td>
+  </tr>
+  <tr>
+    <td>2502 (Feb 3)</td>
+    <td>January 13 - January 17</td>
   </tr>
 </table>
 
