@@ -1,0 +1,281 @@
+# Intro to Caching in Rails
+
+## Learning Goals
+
+- Understand caching as a performance optimization tool
+- Practice analyzing our applications to identify performance problems
+- Practice using Rails' built-in caching facilities to implement low-level caching
+
+## Discussion — What is Caching?
+
+Frequently as developers we'll run into situations when we need to make something in our programs faster.
+
+With user-facing web applications in particular, we're constrained by a request/response cycle that needs to be kept fast -- anything over about 200ms starts to feel slow and clunky to the user.
+
+So we need to make something faster. We have a couple of choices:
+
+- **1:** Speed up the underlying process
+- **2:** Figure out a way to get rid of the underlying process (at least some of the time)
+
+When looking at the list it seems like a no-brainer -- just choose number 1, make your things fast, and then the problems go away!
+
+Unfortunately it turns out that #1 is often pretty hard. In fact in some situations it may be actually impossible (see [NP-Completeness](https://en.wikipedia.org/wiki/NP-complete)).
+
+So often in application development we turn to choice 2 -- caching.
+
+## Ok, but what actually is caching
+
+In short, caching is an optimization technique focusing on saving the results of a computation so that we can retrieve it again later without having to re-do the original calculation.
+
+To a certain extent, caching is a "non-optimizing optimization" -- we don't actually make the underlying pieces any faster, but we make the application **seem** faster by limiting our usage of the slow pieces.
+
+Let's look at a simple example in ruby using a hypothetical pizza store. We are using the sleep to simulate that it takes a while to make a tasty pizza.
+
+```ruby
+class PizzaShop
+  def make_me_a_pizza(type)
+    puts "cooking up your #{type} pizza"
+    sleep(3)
+    puts "One tasty #{type} pizza"
+  end
+end
+
+PizzaShop.new.make_me_a_pizza("anchovy")
+cooking up your anchovy pizza
+# (dramatic pause)
+=> "One tasty anchovy pizza"
+```
+
+As we can see, the pizza production process is currently pretty slow. Perhaps our pizza chefs are napping on the job. Let's see if we can speed it up with a cache:
+
+```ruby
+class PizzaShop
+
+  def pizza_cache
+    @pizza_cache ||= {}
+  end
+
+  def make_me_a_pizza(type)
+    puts "cooking up your #{type} pizza"
+    #first, check if this type of za is in the cache:
+    if pizza_cache[type]
+      pizza_cache[type]
+    else
+      sleep(3)
+      cooked_pizza = "One tasty #{type} pizza"
+      pizza_cache[type] = cooked_pizza
+      cooked_pizza
+    end
+  end
+end
+
+shop = PizzaShop.new
+shop.make_me_a_pizza("anchovy")
+cooking up your anchovy pizza
+# (dramatic pause)
+=> "One tasty anchovy pizza"
+shop.make_me_a_pizza("anchovy")
+cooking up your anchovy pizza
+# (instantaneous)
+=> "One tasty anchovy pizza"
+```
+
+Let's talk through it. We've inserted a cache in the pizza-production-pathway. The first time someone requests a pizza of a specific type, we still have the same 3-second delay. But after we make that pizza the first time, we store it.
+
+After that, subsequent requests for the same pizza type can be served instantly.
+
+### Caching Limitations
+
+Let's think about some of the limitations of our trivial cache example:
+
+- What happens if we request a different pizza type?
+- What happens if we make a new pizza shop?
+- What happens if we change the underlying technique of making a pizza?
+
+It's important to remember that while caching is a very useful technique, it does have limitations.
+
+### Discussion - Caching in Rails?
+
+What sorts of things might we want to cache in a Rails app? (try to list at least 4 common sources of performance problems in a typical web app)
+
+Fortunately this is such a common use-case that Rails includes built-in support for it via the cache helper. Let's take a look.
+
+## Workshop — Caching in Rails pt. 1
+
+For this exercise we'll use
+
+```bash
+$ git clone https://github.com/turingschool-examples/storedom-7 caching_strategies
+$ cd caching_strategies
+$ bundle
+$ bundle exec rake db:{drop,setup}
+```
+
+*Demo -- looking for performance bottlenecks*
+
+*Observe while I run through the app and talk about looking for problems*
+
+
+### Step 1 -- enable caching in development
+
+(by default rails turns off caching in development, so let's turn that on)
+
+```bash
+$ rails dev:cache
+```
+What this does, is that it creates an empty file called `caching-dev.txt` and puts it in your `tmp/` directory.
+
+So let’s look at `config/environments/development.rb` and look for this section in particular.
+
+```ruby
+if Rails.root.join('tmp/caching-dev.txt').exist?
+    config.action_controller.perform_caching = true
+
+    config.cache_store = :memory_store
+    config.public_file_server.headers = {
+      'Cache-Control' => "public, max-age=#{2.days.seconds.to_i}"
+    }
+  else
+    config.action_controller.perform_caching = false
+
+    config.cache_store = :null_store
+  end
+```
+
+In our development environment, this means what rails will look to see if there is a caching-dev.txt file in our tmp/ directory. If that file exists, it will enable caching. If it does not, no caching. So you can turn off caching either by running rails dev:cache again or you can just delete the file. 
+
+What does `'Cache-Control' => "public, max-age=#{2.days.seconds.to_i}"` do?
+
+(Don't forget to restart your server after making this change)
+
+Why do you need to restart your server?
+
+## Step 2 — cache 'em all!
+
+
+*Cache Keys*
+
+We'll talk more about cache keys in a future lesson, but for now, think back to the `PizzaShop` example from above.
+
+In that case the "pizza type" we were providing was serving as a "key" -- a way of matching the specific piece of information we requested with what had already been stored in the cache.
+
+If we didn't use pizza types to label the data in the cache, a user might come in asking for "pepperoni" pizza and get back "anchovy and blue cheese". Which is effectively what's happening in our current example.
+
+## Step 4 — Differentiating Cached Data with Keys
+
+
+## Step 6 — Cache Invalidation: A Better Way
+
+
+**Discussion** - Let's think about what information might be useful for generating a cache key for our list of items.
+
+Ultimately we can infer whether there have been any item updates based on these pieces of information:
+
+- The maximum "updated_at" timestamp across all items
+- The count of all items
+
+Let's change our the caching implementations in our view templates to use this approach:
+
+
+**Discussion** -- Talk about explicit/manual cache keys.
+
+Are there any tradeoffs involved in this approach? What are the potential downsides?
+
+- We're incurring a higher cost now whenever we want to check the cache key (since we have to first check the count and max timestamp of the items)
+- In exchange for this penalty, we get more accurate cache updating without having to include manual expiration callbacks elsewhere in our code.
+- On the other hand, the manual expiration approach allows us to achieve faster *reads* in exchange for clunkier *writes*
+
+As with everything in software development, we simply have to weigh these pros and cons to decide which tradeoff is more worthwhile.
+
+In some situations, it may be perfectly fine to *not explicitly update the cache at all*. Instead, we might simply say "let this cache expire after 30 minutes", regardless of what data changes may have taken place.
+
+## Optional — Refactoring With A Cache Key Helper
+
+It's kind of a drag to have this string interpolation for generating the cache keys just hanging out in our templates. Let's use a helper to pull it out:
+
+*app/helpers/application_helper.rb*
+
+```ruby
+module ApplicationHelper
+  def cache_key_for(model_class, label = "")
+    prefix = model_class.to_s.downcase.pluralize
+    count = model_class.count
+    max_updated = model_class.maximum(:updated_at)
+    [prefix, label, count, max_updated].join("-")
+  end
+end
+```
+
+*app/views/items/index.html.erb*
+
+```html
+	<div class="container">
+  <% cache cache_key_for(Item, "count") do %>
+    <div class="row">
+      <div class="col-sm-12">
+        <h1><%= @items.count %> Items</h1>
+      </div>
+    </div>
+  <% end %>
+  <div class="row"></div>
+  <% cache cache_key_for(Item, "list") do %>
+    <% @items.each do |item| %>
+      <div class="col-sm-3">
+        <h5><%= item.name %></h5>
+        <%= link_to(image_tag(item.image_url), item_path(item)) %>
+        <p>
+          <%= item.description %>
+        </p>
+      </div>
+    <% end %>
+  <% end %>
+</div>
+```
+
+## Step 7 - Let Rails Do It For You
+
+*app/views/items/index.html.erb* 
+```html
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <% cache @items.count do %>
+        <h1><%= @items.count %> Items</h1>
+      <% end %>
+    </div>
+  </div>
+  <div class="row"></div>
+  <% cache @items do %>
+    <% @items.each do |item| %>
+      <% cache item do %>
+        <div class="col-sm-3">
+          <h5><%= item.name %></h5>
+          <%= link_to(image_tag(item.image_url), item_path(item)) %>
+          <p>
+            <%= item.description %>
+          </p>
+        </div>
+      <% end %>
+    <% end %>
+  <% end %>
+</div>
+```
+
+Note here that on our first load, we are writing all of these fragments, and that when are refreshing, we are doing a much smaller hit to the database.
+
+## Caching in Rails pt 2: Low-Level Caching
+
+Rails also has some built in methods for caching in other parts of an application besides the view. Low-level caching is a great option for caching data that comes from an external API. 
+
+### Low-Level Caching Challenge
+
+With a pair, read through this section of the [docs](https://guides.rubyonrails.org/caching_with_rails.html#low-level-caching) about low-level caching, and see if you can implement it in the IpLocationService class. If you get stuck, check out the `caching-complete` branch of the Storedom repo. 
+
+
+## Next Steps — If you finish all of the steps above, consider the following challenges
+
+- Russian-doll caching: Currently we're caching all of the items and orders as a single blob. Can you update your solution to cache the records as a group *as well as* each individual record by itself? Refer to [this section of the Rails guides](http://guides.rubyonrails.org/caching_with_rails.html#fragment-caching) to get started.
+- Dependent update -- Currently we're expiring the order display when an order is updated, but what would happen if an item associated with an order was updated (perhaps it changes its name)? At that point the order listing would be incorrect. Fortunately ActiveRecord gives us a `touch` option on `belongs_to` associations to help in this situation. Consult [this section](http://guides.rubyonrails.org/association_basics.html#touch) of the Rails Guides to see how it works. Add this to your Item<->Order association to get order display to update when a relevant item is updated.
+- A different storage mechanism: We haven't really touched on the question of where the cached data is stored. By default rails actually uses the file system to store cached data. Can you update it to use Memcached instead? You'll want to use [this section](http://guides.rubyonrails.org/caching_with_rails.html#activesupport-cache-memcachestore) of the Rails guides as well as some googling to get started. Some of the issues you'll need to address include: installing memcached (via brew); using the dalli gem to access it; configuring rails to use memcached as its cache store.
+
+A completed repo for this lesson plan can be found on this branch [here](https://github.com/turingschool-examples/storedom-7/tree/caching-complete).

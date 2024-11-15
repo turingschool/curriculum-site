@@ -11,6 +11,7 @@ title: Module 4 - Lessons
 - [Recursion](./recursion)
 - [Big O Notation](./big_o)
 - [Background Workers](./intro_to_background_workers)
+- [Intro to Caching in Rails](./intro_to_caching)
 
 ### Career and Professional Development Lessons
 - [Analyzing Tech Challenges](./analyzing_tech_challenges)
