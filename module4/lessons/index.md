@@ -19,7 +19,7 @@ title: Module 4 - Lessons
 - [Digital Organizing For Your Job Search](../pd/lessons/digital_organizing_job_search)
 - [Getting Visible on Social Media](../pd/lessons/getting_visible_social_media)
 - [LinkedIn Challenge](../pd/lessons/linkedin_challenge)
-
+- [Interview Questions - Gathering Stories](../lessons/gathering_stories)
 
 ### Additional Lesson Resources
 - [Rebase Workflow](./rebase_workflow)
