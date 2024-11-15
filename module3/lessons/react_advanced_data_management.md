@@ -282,6 +282,11 @@ Notes:
 We will not cover it in this class, but if you'd like an added challenge later - update `deleteIdea` so that it also updates the backend data, too!
 </section>
 
+<section class="note">
+### Self-Teach
+
+We have a lesson later this module about how to handle errors in the frontend. If you'd like to pre-teach a bit of that content, you can complete the rest of this lesson on your own. 
+</section>
 
 ## Error Handling & Conditional Rendering
 

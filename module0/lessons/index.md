@@ -31,8 +31,6 @@ title: Mod 0 - Lessons
 * [Problem Solving]({{ site.url }}/module0/lessons/problem-solving)
 * Before session 3, your Mod 0 Gist should contain sections and CFU answers for `Data Types`, `Arrays`, `Asking Technical Questions`, `DTR Prep`, `Calendaring & Time Management`, `Git Workflow`, and `Problem Solving`.
 
-
-
 ## Session 3
 ### Live Sessions
 * [GitHub]({{ site.url }}/module0/lessons/github)
@@ -44,13 +42,11 @@ title: Mod 0 - Lessons
 * [Final Reflections]({{ site.url }}/module0/lessons/final-reflections)
 * By the end of the day Saturday, your Mod 0 Gist should contain all CFU answers and assignments including sections for `Data Types`, `Arrays`, `Asking Technical Questions`, `DTR Prep`, `Calendaring & Time Management`, `Git Workflow`, `Problem Solving`, `GitHub` `Conditionals`, `Methods`, `Beyond Mod 0 Plan`, and `Final Reflections`.
 
-<!--
-Put this section back in for traditional mod 0 (non intermission Mod 0)
+
 ## Complete Before Mod 1
 Note: You are not expected to be experts on these topics, but you should come to Mod 1 ready to ask questions about the topics covered in these lessons.
 * Pre-teach this [Testing]({{ site.url }}/module0/lessons/testing) lesson.
 * Complete some [Programming Exercises](https://github.com/turingschool-examples/se-mod1-exercises). We'd like you to focus on the `data-types`, `ints-and-floats`, and `strings` folders.
--->
 
 ## Important Note
 On the first day of Mod1, you we will be introducing you to all of the instructors at **8:30 AM MT**.  Make sure to note this early start on your calendar!!
