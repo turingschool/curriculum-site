@@ -6,7 +6,7 @@ title: Module 4 - Lessons
 
 ### Technical Lessons
 - [Intro to TypeScript](./intro-to-typescript)
-- [TypeScript with React](./typescript-with-react)
+- [TypeScript Workshop](./typescript-workshop)
 - [JS: Execution Contexts & Scope](./js_execution_contexts_and_scope)
 - [JS: Asynchronous JavaScript](./async_js)
 - [AR/SQL: Grouping & Aggregating](./grouping_aggregating)

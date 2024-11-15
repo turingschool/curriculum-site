@@ -101,10 +101,9 @@ let isComplete = false;
 let score: number = "high";
 ```
 * What error will the above TypeScript code produce?
-</section>
+<section class="dropdown">
+### Potential Solution
 
-<section class="answer">
-### Solution
 1. The solution to converting the variables would look like:
 ```ts
 let title: string = "TypeScript Basics";
@@ -113,6 +112,8 @@ let isComplete: boolean = false;
 ```
 2. The error will be a compile-time error because the type of the variable `score` is not a number.
 </section>
+</section>
+
 
 <section class="note">
 ### A Note about `any`
@@ -151,38 +152,29 @@ let result = add("5", 10); // Error: Argument of type 'string' is not assignable
 
 Note that in the above TypeScript function add, we are defining a function that takes two parameters, `a` and `b`, both of which are of type number. The function is also specified to return a value of type number. If we try to pass in a string for the second parameter, TypeScript will throw an error.
 
-<section class="note">
-### Note: Default Values
-
-TypeScript also supports default values for parameters.  Let's take a look at an example:
-
-```ts
-function greet(name: string, greeting: string = "Hello"): string {
-  return `${greeting}, ${name}!`;
-}
-
-console.log(greet("Alice"));
-console.log(greet("Bob", "Hi"));
-```
-
-1. What do you expect the output to be for `console.log(greet("Alice"));`?
-2. Similarly, what do you expect the output to be for `console.log(greet("Bob", "Hi"));`?
-</section>
-
 <section class="call-to-action">
-### Checks for Understanding
+### Your Turn
 
 1. Define a function in TypeScript that takes two numbers as arguments and returns the product. (*the returned value should be a number*).  
 2. Now modify to the function to return a message instead: `The product of 2 and 3 is 6`. *Note the difference in output compared to the previous iteration. Did you get an error after having changed the return type?  If so, make sure to update the type annotation for the function to match the new return type.*
-3. Modify the following function to include default parameter values for `taxRate` and `discount`:
+
+<section class="dropdown">
+### Potential Solution
+
+1.
 ```ts
-function calculateTotalPrice(price: number, taxRate: number, discount: number): number {
-  const taxAmount = price * taxRate;
-  const discountAmount = price * discount;
-  const totalPrice = price + taxAmount - discountAmount;
-  return totalPrice;
+function multiply(num1: number, num2: number): number {
+  return num1*num2;
 }
 ```
+
+2.
+```ts
+function multiply(num1: number, num2: number): string {
+  return `The product of ${num1} and ${num2} is ${num1*num2}`;
+}
+```
+</section>
 </section>
 
 ## Interfaces
@@ -200,7 +192,6 @@ let student: Person = {
   age: 21
 };
 ```
-
 
 ### Complex Interface Example
 
@@ -242,9 +233,7 @@ The above example is a simple example of an interface. In a real-world applicati
 1. Define an interface for a `Student` object that includes the student's name and the courses they are enrolled in.
 2. Define an interface for a `Instructor` object that includes the instructor's name and the courses they teach.
 3. Then define objects that implement both interfaces.
-</section>
-
-<section class="answer">
+<section class="dropdown">
 ### Potential Solution
 
 ```ts
@@ -271,9 +260,10 @@ let instructor: Instructor = {
 };
 ```
 </section>
+</section>
 
-<section class="note">
-### Extending Interfaces
+<section class="dropdown">
+### Advanced: Extending Interfaces
 
 TypeScript allows you to extend interfaces using the `extends` keyword. This is useful when you want to add new properties to an existing interface.
 
@@ -312,32 +302,45 @@ In this example, we've extended the `Course` interface to include a new property
 2. Can you think of another use case for extending an interface?
 </section>
 
-<section class="checks-for-understanding">
-### Additional Practice
+## Reviewing What We've Learned 
 
-1. Create an interface for a `Car` that includes properties for `make`, `model`, and `year`.
-2. Extend the `Car` interface to create a `ElectricCar` interface that also includes a property for `batteryCapacity`.
-3. Define an object that implements the `ElectricCar` interface.
+<section class="call-to-action">
+### Practice
+
+Open up this [sandbox](https://www.typescriptlang.org/play/?#code/PTAEEYDpQNQQwE4Es4CMA2BTUATTBjdROAFyQHsA7AZ1Dkp1AHcALU0JE0AW03tpLlQAIiSUAZpgTCAUDKxduATwBicAG7lkJTADkArt1RSAXKEqHjCUAF4IAJgDcchaHyldcXmeolklAHNbEQBxBEwA4Wd5TC4LbmozeKsAbQBdYJTwABp7bIBmbIAWbIBWNOjXFiQAa0wzAG8ZUFwkX3p8evNLKWzm0EwsdVIKShC4MSSehD6W3yUsHz8xAJkAX2CGnDaSDq7S7IGhkapxyYcABgvD+cWRdHJyAAdhNeiQUAB1Ni42J6fMDQOOJmNhwtxyOpsCQWNClADcAQiAgTkC0JDMAB+ORyD72aAAFXhmAAyvhkE8uO5KHR0NQhGJJNY4KAHlxyCDWOw2qAAuQVqAqMxOCxQCRibQxKAlOR9NZyDCpG5yHg5PgqL5QADnlhMv0GuYvF1hABRbhIdBKUAAKSomGowkOcACXXsB0F+Hw+ieqLMwgAIpgoQ8AdJQGtZqADZQjX6ADIWq0AIQQ5CYlEddBdZnyeQ9Xp9ZCofsD1CQAUoUmE4cj0djIjN3BZ-o0bUzztdAA5DuRPd7fSJA8HnlWa-rDd4RABBYY28gsGhUdvZ0D2Er5-tFyh+gCyiDqZEC1Yj45jk+EAHl0Eh1ChQABpJDcZddfLu3sFgfCPcxl1hk8tHW54ks81QsnGmCYC+OY5BuhajLu9Adv+MgVLiYDfOwfwAkCSCctCCBWoIdA4IwLKVkwWpSPSNLEYqdAICiVpMCKdCtOITKAlw1B-FiOIyB8+TQCo+iUPgW60AAZKAAAKxC8DoCDUOhXw-AMjFaBwtAEiSvI3gK+i0MYDxMNiMjiKJ4mjLysSeLw1AqFoF59vBVAABQfpuowAJRRv04QkHKNLak8WCQOIFqKW5oY0bYAB8fktC0AVBVRSlUJAnmuTSNi5XBqLOC0azeZATZPNF1FCjYCVNEloApQgwWVZQkBnpghXht5zhrGqGrkGFDwBG5LokHZ9qOQgzmflubkAOQ-shs3eV1-EfEU0AAJKUIp4hwJ0ykCWAAASaZuPQoKIu44RirCYrEqA4iafRMVCj6KIKUqxlpmZ6o0FwcBEDliUTsaU6A6ABJyisjr9ACJCJKAKTCCoKKUDUmbCCEUgAzgwhpJGLDkKgqBIPaZhI-ecBKHANTQ4cwgkpQaaoOQiDbEeaTrNEFliVuvLhLEMnNRV6WUL5tX1bEqUAAZHYMDyHAAJA0L0tW1azS91q1gKU0AGOg6B0LQ51iJwKCG8M6D6JgKmYVweEXUw9BcMRbBQmxwzIGgurGAEUosTCoCW9bgoghYBt0AwrKkJ9YJ8NQZYVpgOBma4hlSG1wTh+g0Tp41RrBLNgUICQWDUAASuq-XgPY+SzY4QA), and let's explore TS more.
+</section>
+
+## TypeScript with React
+
+In this section, we'll work on a very small TS React app that has some functionality already built and add to it. It's a trivia app that uses the [Open Trivia Database](https://opentdb.com/api_config.php) for the dataset.
+
+<section class="call-to-action">
+### More Exploration!
+
+Open up this [Trivia Repo](https://github.com/turingschool-examples/trivia-typescript), set it up, and explore some TS within React.
+</section>
+
+<section class="note">
+### Creating a React App with TypeScript
+
+If you're creating a TS React app from scratch, [this doc page](https://create-react-app.dev/docs/adding-typescript/) on starting TS with Create React App is very useful. It's more difficult to add in TS after the fact than to start fresh with TS from the start, but it can be done, of course.
 </section>
 
 ## Conclusion
 
 TypeScript offers powerful tools to write safer and more robust code compared to JavaScript. By understanding and using its type system, interfaces, and advanced features like generics, developers can catch errors early, improve code readability, and manage large codebases more effectively.
 
-<section class="note">
-### Incorporating TypeScript in Future Projects
-
-Implementing TypeScript in an application that interacts with the DOM will require some extra research on your part.  We suggest starting your research by looking into how TypeScript can handle the `event` object.  Setup instructions to add TypeScript into your group project are already included in the `README.md` file.  We'll also have an opportunity to practice TypeScript in a coding challenge this Friday!
-</section>
-
 <section class="checks-for-understanding">
-### Final Checks for Understanding
+### Practice Interview Questions
 
-Using your journal, take a few minutes to answer the following questions:
+* What is TypeScript, and how does it differ from JavaScript?
+* Why would a development team want to use TypeScript?
+* What does it mean for TS to infer a type?
+* How would you handle defining your own object shapes in TypeScript?
+* Describe the use of "generics" in TypeScript and provide an example.
+* What is the "any" type in TS, and should you use it?
 
-1. What are the benefits of using TypeScript over JavaScript?
-2. How do type annotations help prevent errors in your code?
-3. What are interfaces in TypeScript and how do they improve code quality?
+(ChatGPT is a great resource for obtaining possible interview questions.)
 </section>
 
 <section class="call-to-action">
@@ -347,7 +350,12 @@ You can continue to get extra practice converting JavaScript into Typescript wit
 
 Once you have finished the exercise, you can compare your solution to the solution in the `ts-solution` branch.
 </section>
+
+### Additiona Resources
+* [TS Docs](https://www.typescriptlang.org/){:target="_blank"}
+* [TS Quick References](https://www.typescriptlang.org/cheatsheets){:target="_blank"}
 - [TypeScript Handbook](https://www.typescriptlang.org/docs/handbook/intro.html){:target="_blank"}
 - [TypeScript Playground](https://www.typescriptlang.org/playground/){:target="_blank"}
 - [TypeScript for Beginners](https://www.typescriptlang.org/docs/handbook/typescript-from-scratch.html){:target="_blank"}
+* There are tons of "Intro to TS" videos out there on YouTube
 
