@@ -19,7 +19,47 @@ module: 4
 - `Interface`: A TypeScript structure that defines the shape of an object, specifying its properties and their types.
 
 ## Introduction to TypeScript
+TypeScript (TS) is really just JavaScript (JS) with some added syntax! Everything you know about JavaScript still applies, but there are features of TypeScript added in. What are those added features? They all revolve around the idea that of a **typed** language, hence the name.  
+
 TypeScript is a superset of JavaScript that introduces static type definitions. This means that TypeScript code must be transpiled into JavaScript before it can be executed by a browser or Node.js. TypeScript provides all the features of JavaScript but adds optional static typing, which can help catch errors early in the development process.
+
+## JavaScript vs TypeScript
+What does it mean for a language to be typed? Let's review the basic set of types available to us in JS: number, bigint, string, boolean, null, undefined, symbol, and object.
+
+In JS, we can take a variable that holds one type and change it to another type. This is called **dynamic** typing because it can change.
+
+```js
+var user = "Alex";
+
+user = 10; // This is ok to do with JS, but not TS
+
+// TS will say "Type 'number' is not assignable to type 'string'."
+```
+
+TS will not allow this to happen. If a variable begins its life as one type, then it must remain that type. This is called **static** typing.
+
+Similarly, we can and should declare function parameters and return values to be of a certain type in TS. Why is this useful?
+
+```js
+// How we might write it in JS
+function addFive(num) {
+  return num + 5;
+}
+
+// How TS wants us to be specific with parameters AND return value
+function addFive(num: number): number {
+  return num + 5;
+}
+```
+
+TS prevents developers on your team accidentally passing in something other than a number into the `addFive` function. Declaring the return type also gives other developers more awareness of what the function will return. If we were to call `addFive` with a string in TS like this:
+
+```js
+addFive('5')
+
+// We would see an error:
+// "Argument of type 'string' is not assignable to parameter of type 'number'."
+```
 
 ### Why Use TypeScript?
 1. **Type Safety**: TypeScript's type system helps catch type-related errors at compile time, rather than at runtime.
@@ -27,32 +67,9 @@ TypeScript is a superset of JavaScript that introduces static type definitions. 
 3. **Better Documentation**: Types serve as documentation, making it easier to understand and use code written by others.
 4. **Scalability**: TypeScript is particularly useful for large codebases, where it can help manage complexity.
 
-## Comparing JavaScript and TypeScript
-JavaScript is dynamically typed, meaning variable types are determined at runtime. TypeScript, on the other hand, allows for static type checking, where types are checked at compile-time.
+Overall, TS is useful for us as developers. There aren't big benefits in terms of performance for the user. It's a **development tool** that helps us predict errors before the code gets run (it helps to prevent "runtime errors").
 
-<section class="call-to-action">
-### Example of JavaScript vs TypeScript
-
-**Note:** *For all of today's exercises, we'll use [TypeScript Playground](https://www.typescriptlang.org/playground/){:target="_blank"}.  This has TypeScript already incorporated into it and runs significantly better than using Repl.*
-
-
-**JavaScript:**
-```js
-let greeting = "Hello, world!";
-greeting = 42; // No error in JavaScript, but might cause issues later
-console.log(greeting); // Outputs: 42
-```
-
-**TypeScript:**
-```ts
-let greeting: string = "Hello, world!";
-greeting = 42; // Error in TypeScript
-console.log(greeting); // Outputs: 42
-```
-
-1. What potential issues might arise from the JavaScript example where `greeting` is reassigned to a number? How does TypeScript help prevent these issues?
-2. Consider a large codebase with multiple developers. How might TypeScript's type system improve collaboration and code maintenance compared to JavaScript?
-</section>
+At first, writing TS will be much slower than writing the same thing in JS. You'll have to look up how to define types and learn a whole new set of error messages. However, it will get faster, and the time saved not debugging as much will be worth it!
 
 ## Type Annotations
 TypeScript allows you to annotate variables with types including all of the standard data types you have used in JavaScript like strings, numbers, booleans, arrays, and objects. This helps catch type errors at compile time.

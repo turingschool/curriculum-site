@@ -3,52 +3,7 @@ title: TypeScript with React
 tags: JavaScript, JS, TypeScript, TS, React
 ---
 
-The intent for this session is to give someone who has never seen TypeScript a brief introduction and give enough information that they can run with.
 
-## What is TypeScript
-
-TypeScript (TS) is really just JavaScript (JS) with some added syntax! Everything you know about JavaScript still applies, but there are features of TypeScript added in. What are those added features? They all revolve around the idea that of a **typed** language, hence the name.
-
-What does it mean for a language to be typed? Let's review the basic set of types available to us in JS: number, bigint, string, boolean, null, undefined, symbol, and object.
-
-In JS, we can take a variable that holds one type and change it to another type. This is called **dynamic** typing because it can change.
-
-```js
-var user = "Alex";
-
-user = 10; // This is ok to do with JS, but not TS
-
-// TS will say "Type 'number' is not assignable to type 'string'."
-```
-
-TS will not allow this to happen. If a variable begins its life as one type, then it must remain that type. This is called **static** typing.
-
-Similarly, we can and should declare function parameters and return values to be of a certain type in TS. Why is this useful?
-
-```js
-// How we might write it in JS
-function addFive(num) {
-  return num + 5;
-}
-
-// How TS wants us to be specific with parameters AND return value
-function addFive(num: number): number {
-  return num + 5;
-}
-```
-
-TS prevents developers on your team accidentally passing in something other than a number into the `addFive` function. Declaring the return type also gives other developers more awareness of what the function will return. If we were to call `addFive` with a string in TS like this:
-
-```js
-addFive('5')
-
-// We would see an error:
-// "Argument of type 'string' is not assignable to parameter of type 'number'."
-```
-
-Overall, TS is useful for us as developers. There aren't big benefits in terms of performance for the user. It's a **development tool** that helps us predict errors before the code gets run (it helps to prevent "runtime errors").
-
-At first, writing TS will be much slower than writing the same thing in JS. You'll have to look up how to define types and learn a whole new set of error messages. However, it will get faster, and the time saved not debugging as much will be worth it!
 
 ## TypeScript Workshop
 
