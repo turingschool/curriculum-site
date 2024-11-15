@@ -23,6 +23,12 @@ TypeScript (TS) is really just JavaScript (JS) with some added syntax! Everythin
 
 TypeScript is a superset of JavaScript that introduces static type definitions. This means that TypeScript code must be transpiled into JavaScript before it can be executed by a browser or Node.js. TypeScript provides all the features of JavaScript but adds optional static typing, which can help catch errors early in the development process.
 
+<section class="note">
+### TypeScript Playground
+
+As we are working through code samples today, you may find it useful to use this [TypeScript Playground](https://www.typescriptlang.org/playground) to run your code.
+</section>
+
 ## JavaScript vs TypeScript
 What does it mean for a language to be typed? Let's review the basic set of types available to us in JS: number, bigint, string, boolean, null, undefined, symbol, and object.
 
@@ -307,7 +313,7 @@ In this example, we've extended the `Course` interface to include a new property
 <section class="call-to-action">
 ### Practice
 
-Open up this [sandbox](https://www.typescriptlang.org/play/?#code/PTAEEYDpQNQQwE4Es4CMA2BTUATTBjdROAFyQHsA7AZ1Dkp1AHcALU0JE0AW03tpLlQAIiSUAZpgTCAUDKxduATwBicAG7lkJTADkArt1RSAXKEqHjCUAF4IAJgDcchaHyldcXmeolklAHNbEQBxBEwA4Wd5TC4LbmozeKsAbQBdYJTwABp7bIBmbIAWbIBWNOjXFiQAa0wzAG8ZUFwkX3p8evNLKWzm0EwsdVIKShC4MSSehD6W3yUsHz8xAJkAX2CGnDaSDq7S7IGhkapxyYcABgvD+cWRdHJyAAdhNeiQUAB1Ni42J6fMDQOOJmNhwtxyOpsCQWNClADcAQiAgTkC0JDMAB+ORyD72aAAFXhmAAyvhkE8uO5KHR0NQhGJJNY4KAHlxyCDWOw2qAAuQVqAqMxOCxQCRibQxKAlOR9NZyDCpG5yHg5PgqL5QADnlhMv0GuYvF1hABRbhIdBKUAAKSomGowkOcACXXsB0F+Hw+ieqLMwgAIpgoQ8AdJQGtZqADZQjX6ADIWq0AIQQ5CYlEddBdZnyeQ9Xp9ZCofsD1CQAUoUmE4cj0djIjN3BZ-o0bUzztdAA5DuRPd7fSJA8HnlWa-rDd4RABBYY28gsGhUdvZ0D2Er5-tFyh+gCyiDqZEC1Yj45jk+EAHl0Eh1ChQABpJDcZddfLu3sFgfCPcxl1hk8tHW54ks81QsnGmCYC+OY5BuhajLu9Adv+MgVLiYDfOwfwAkCSCctCCBWoIdA4IwLKVkwWpSPSNLEYqdAICiVpMCKdCtOITKAlw1B-FiOIyB8+TQCo+iUPgW60AAZKAAAKxC8DoCDUOhXw-AMjFaBwtAEiSvI3gK+i0MYDxMNiMjiKJ4mjLysSeLw1AqFoF59vBVAABQfpuowAJRRv04QkHKNLak8WCQOIFqKW5oY0bYAB8fktC0AVBVRSlUJAnmuTSNi5XBqLOC0azeZATZPNF1FCjYCVNEloApQgwWVZQkBnpghXht5zhrGqGrkGFDwBG5LokHZ9qOQgzmflubkAOQ-shs3eV1-EfEU0AAJKUIp4hwJ0ykCWAAASaZuPQoKIu44RirCYrEqA4iafRMVCj6KIKUqxlpmZ6o0FwcBEDliUTsaU6A6ABJyisjr9ACJCJKAKTCCoKKUDUmbCCEUgAzgwhpJGLDkKgqBIPaZhI-ecBKHANTQ4cwgkpQaaoOQiDbEeaTrNEFliVuvLhLEMnNRV6WUL5tX1bEqUAAZHYMDyHAAJA0L0tW1azS91q1gKU0AGOg6B0LQ51iJwKCG8M6D6JgKmYVweEXUw9BcMRbBQmxwzIGgurGAEUosTCoCW9bgoghYBt0AwrKkJ9YJ8NQZYVpgOBma4hlSG1wTh+g0Tp41RrBLNgUICQWDUAASuq-XgPY+SzY4QA), and let's explore TS more.
+Open up this [playground](https://www.typescriptlang.org/play/?#code/PTAEEYDpQNQQwE4Es4CMA2BTUATTBjdROAFyQHsA7AZ1Dkp1AHcALU0JE0AW03tpLlQAIiSUAZpgTCAUDKxduATwBicAG7lkJTADkArt1RSAXKEqHjCUAF4IAJgDcchaHyldcXmeolklAHNbEQBxBEwA4Wd5TC4LbmozeKsAbQBdYJTwABp7bIBmbIAWbIBWNOjXFiQAa0wzAG8ZUFwkX3p8evNLKWzm0EwsdVIKShC4MSSehD6W3yUsHz8xAJkAX2CGnDaSDq7S7IGhkapxyYcABgvD+cWRdHJyAAdhNeiQUAB1Ni42J6fMDQOOJmNhwtxyOpsCQWNClADcAQiAgTkC0JDMAB+ORyD72aAAFXhmAAyvhkE8uO5KHR0NQhGJJNY4KAHlxyCDWOw2qAAuQVqAqMxOCxQCRibQxKAlOR9NZyDCpG5yHg5PgqL5QADnlhMv0GuYvF1hABRbhIdBKUAAKSomGowkOcACXXsB0F+Hw+ieqLMwgAIpgoQ8AdJQGtZqADZQjX6ADIWq0AIQQ5CYlEddBdZnyeQ9Xp9ZCofsD1CQAUoUmE4cj0djIjN3BZ-o0bUzztdAA5DuRPd7fSJA8HnlWa-rDd4RABBYY28gsGhUdvZ0D2Er5-tFyh+gCyiDqZEC1Yj45jk+EAHl0Eh1ChQABpJDcZddfLu3sFgfCPcxl1hk8tHW54ks81QsnGmCYC+OY5BuhajLu9Adv+MgVLiYDfOwfwAkCSCctCCBWoIdA4IwLKVkwWpSPSNLEYqdAICiVpMCKdCtOITKAlw1B-FiOIyB8+TQCo+iUPgW60AAZKAAAKxC8DoCDUOhXw-AMjFaBwtAEiSvI3gK+i0MYDxMNiMjiKJ4mjLysSeLw1AqFoF59vBVAABQfpuowAJRRv04QkHKNLak8WCQOIFqKW5oY0bYAB8fktC0AVBVRSlUJAnmuTSNi5XBqLOC0azeZATZPNF1FCjYCVNEloApQgwWVZQkBnpghXht5zhrGqGrkGFDwBG5LokHZ9qOQgzmflubkAOQ-shs3eV1-EfEU0AAJKUIp4hwJ0ykCWAAASaZuPQoKIu44RirCYrEqA4iafRMVCj6KIKUqxlpmZ6o0FwcBEDliUTsaU6A6ABJyisjr9ACJCJKAKTCCoKKUDUmbCCEUgAzgwhpJGLDkKgqBIPaZhI-ecBKHANTQ4cwgkpQaaoOQiDbEeaTrNEFliVuvLhLEMnNRV6WUL5tX1bEqUAAZHYMDyHAAJA0L0tW1azS91q1gKU0AGOg6B0LQ51iJwKCG8M6D6JgKmYVweEXUw9BcMRbBQmxwzIGgurGAEUosTCoCW9bgoghYBt0AwrKkJ9YJ8NQZYVpgOBma4hlSG1wTh+g0Tp41RrBLNgUICQWDUAASuq-XgPY+SzY4QA), and let's explore TS more.
 </section>
 
 ## TypeScript with React
@@ -354,8 +360,8 @@ Once you have finished the exercise, you can compare your solution to the soluti
 ### Additiona Resources
 * [TS Docs](https://www.typescriptlang.org/){:target="_blank"}
 * [TS Quick References](https://www.typescriptlang.org/cheatsheets){:target="_blank"}
-- [TypeScript Handbook](https://www.typescriptlang.org/docs/handbook/intro.html){:target="_blank"}
-- [TypeScript Playground](https://www.typescriptlang.org/playground/){:target="_blank"}
-- [TypeScript for Beginners](https://www.typescriptlang.org/docs/handbook/typescript-from-scratch.html){:target="_blank"}
+* [TypeScript Handbook](https://www.typescriptlang.org/docs/handbook/intro.html){:target="_blank"}
+* [TypeScript Playground](https://www.typescriptlang.org/playground/){:target="_blank"}
+* [TypeScript for Beginners](https://www.typescriptlang.org/docs/handbook/typescript-from-scratch.html){:target="_blank"}
 * There are tons of "Intro to TS" videos out there on YouTube
 
