@@ -5,6 +5,8 @@ title: Module 4 - Lessons
 
 
 ### Technical Lessons
+- [Intro to TypeScript](./intro-to-typescript)
+- [TypeScript with React](./typescript-with-react)
 - [JS: Execution Contexts & Scope](./js_execution_contexts_and_scope)
 - [JS: Asynchronous JavaScript](./async_js)
 - [AR/SQL: Grouping & Aggregating](./grouping_aggregating)
@@ -19,7 +21,6 @@ title: Module 4 - Lessons
 - [Digital Organizing For Your Job Search](../pd/lessons/digital_organizing_job_search)
 - [Getting Visible on Social Media](../pd/lessons/getting_visible_social_media)
 - [LinkedIn Challenge](../pd/lessons/linkedin_challenge)
-
 
 ### Additional Lesson Resources
 - [Rebase Workflow](./rebase_workflow)
