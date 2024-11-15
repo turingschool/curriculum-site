@@ -57,6 +57,8 @@ We're going to get into breakout rooms to practice answering interview questions
 - Did they provide enough context to help you understand their story?
 - Did their example help answer the interview question?
 
+<section class="dropdown">
+
 ### Sample Interview Questions
 
 - What is your 100% ideal role for your first web development job?
@@ -73,6 +75,7 @@ We're going to get into breakout rooms to practice answering interview questions
 - Describe your strengths. How have you seen these in practice as a developer?
 
 You can also find more interview questions in [this technical interview questions bank](https://curriculum.turing.edu/module4/interview_resources/technical_interview_questions) and in [this behavioral interview questions bank](https://curriculum.turing.edu/module4/interview_resources/behavioral_interview_questions).  ChatGPT can be a great resources for drafting additional questions tailored to specific job descriptions and your resume.
+</section>
 
 ## Wrap Up
 
