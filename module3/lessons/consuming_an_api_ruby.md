@@ -124,6 +124,10 @@ First, we will need to add gem "faraday" to our Gemfile. We don't want to add to
 
 Now that we have it installed, lets use Faraday to make the API call. Rather than memorizing the syntax we use in this tutorial, make sure you get used to referencing documentation.
 
+If you look at the [Faraday website](https://lostisland.github.io/faraday/#/) in the Quick Start section, you'll see there is some simple syntax we can use to make this GET request: `response = Faraday.get('https://api.pexels.com/v1/search?query=The%20Beatles')`
+
+This is a fine option, but when we use multiple API endpoints with a single API, it's sometimes a better choice to set up what is called a Faraday connection in order to keep the HTTP connection with the API alive. After creating the connection with the base URL for Pexels, we can simple use a `.get` method invocation in order to make the GET request to the endpoint we've identified. Check out this example implementation below:
+
 *app/controllers/api/v1/images_controller.rb*
 ```
 class Api::V1::ImagesController < ApplicationController
@@ -149,7 +153,7 @@ Make sure you replace `<YOUR KEY HERE>` with your new Pexels API key!
 Let's take a closer look at what we're doing:
 
 1. We grab the artist's name from the query parameter and save it as a variable
-2. We set up a Faraday connection. What does this do? Does this make a network request? Check out the documentation if you're not sure.
+2. We set up a Faraday connection. What does this do? Does this make a network request? Check out the documentation if you're not sure, and revisit the paragraph before the above example.
 3. We add headers to this Faraday connection, and the headers exist as key/value pairs. The documentation asks clients to pass an `Authorization` key with the API key as the value. 
 4. We make a get request! Here is where we indicate the path of the endpoint we want (`"/v1/search"`) and add the query parameter. There are a couple different ways to add query parameters, so we have 2 different options shown here. 
 
