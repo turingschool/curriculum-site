@@ -15,7 +15,6 @@ Since this project has already been started by another developer, this is consid
 * Consume an API that requires authentication
 * Build some CRUD functionality for a many-to-many relationship
 * Utilize at least one mocking tool for testing API consumption
-* Implement authorization for endpoints
 * Explore and build off existing code in a legacy codebase
 * Organize and refactore new code to be more maintainable
 

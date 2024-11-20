@@ -16,13 +16,13 @@ _[Back to Viewing Party API Home](./index)_
 <section class="dropdown">
 ### Summary of Existing Functionality
 
-This application has already implemented basic authentication for users, and the user creation and login endpoints are complete. Take a look at the user database schema and model. There's quite a lot of Rails magic going on! It's not important to understand it all deeply - you will interact with the User model a bit but will not need to manipulate anythind around authentication. 
+This application has already implemented basic authentication for users, and the user creation and login endpoints are complete. Take a look at the user database schema and model. There's quite a lot of Rails magic going on! It's not important to understand it all deeply - you will interact with the User model a bit but will not need to manipulate anythind around authentication.
 
 #### Basic Authentication with BCrypt
 
 This application uses a gem called [BCrypt](https://github.com/bcrypt-ruby/bcrypt-ruby) to encrypt user passwords. In the User model, you'll see `has_secure_password` which does a lot of heavy lifting for us. It will allow us to create a user with a `password` (passed in as a string) and optionally a `password_confirmation` (to allow the user to type it in again), and from there BCrypt will transform that plaintext string into an encrypted string that will live in the database in the `password_digest` column. Check it out for yourself. Our `db/seeds.rb` file creates a few users, and if you go into Rails console, you can look at these users' attributes. There is no plaintext password anywhere to be seen, and the `password_digest` is filtered until you call it explicitly: `User.last.password_digest` should show you an example of an encrypted password. 
 
-You'll also see `has_secure_token` in the User model, and an `api_key` attribute in the database. This is built-in Rails functionality that will generate a unique API key for each user before saving it in the database. We can use this API key later to ensure users have permission to see certain data. 
+You'll also see `has_secure_token` in the User model, and an `api_key` attribute in the database. This is built-in Rails functionality that will generate a unique API key for each user before saving it in the database. You will not need to use this API key at all unless you tackle one of the extensions for this project. Again, learning about this implementation is valuable for exposure and the confidence that you can build on top of code that 1) you didn't write and 2) you don't necessarily need to understand deeply.
 
 #### Existing Authentication Endpoints
 
@@ -36,7 +36,7 @@ This endpoint will return all users in the database, but without any of the sens
 
 - Sessions Create
 
-This endpoint is the back end to a "login" endpoint. When the client passes a correct username and password combination, the response will return that user's API key. This API key will be necessary for making any requests to authenticated endpoints. 
+This endpoint is the back end to a "login" endpoint. When the client passes a correct username and password combination, the response will return that user's API key. This API key will be necessary for making any requests to authenticated endpoints (which won't exist in this project, but could be added as an extension). 
 </section>
 
 ## API Endpoints to Build
@@ -48,7 +48,7 @@ You will need to expose the data through a multitude of API endpoints. All of yo
 * API will be compliant to the [JSON API spec](https://jsonapi.org/) and match our requirements below precisely. You may find that handrolling some serializers will be easier than using the JSON API gem for all of them. However, it is your choice - either strategy is fine.
 * Controller actions should be limited to only the standard Rails actions and follow good RESTful convention.
 * You will decide the most RESTful paths for your endpoints. Paths will not be given but must be determined by the student.
-* Your application's README should document the paths and the requirements for each endpoint (i.e. should the API key be passed as a query parameter, or in the header?)
+* Your application's README should document the paths and the requirements for each endpoint (i.e. should the data be passed as a body or a query parameter?)
 
 
 You will need to expose the following RESTful API endpoints for the following:
@@ -56,7 +56,7 @@ You will need to expose the following RESTful API endpoints for the following:
 <section class="dropdown">
 ### 1. Top Rated Movies
 
-This endpoint is NOT authenticated (no API key is required!). This endpoint should:
+This endpoint should:
 
 * retrieve top-rated movies from [The Movie DB API](https://developers.themoviedb.org/3/getting-started/introduction)
 * retrieve a maximum of 20 results.
@@ -101,7 +101,7 @@ Example JSON response:
 <section class="dropdown">
 ### 2. Movie Search
 
-This endpoint is NOT authenticated (no API key is required!). This endpoint should:
+This endpoint should:
 
 * retrieve movies from [The Movie DB API](https://developers.themoviedb.org/3/getting-started/introduction) based on a search query from the request
 * require that the search term is passed as a query parameter in the request
@@ -142,78 +142,16 @@ Example JSON response for search term "Lord of the Rings":
 ```
 </section>
 
-<section class="dropdown">
-### 3. Movie Details
-
-This endpoint is NOT authenticated. This endpoint should:
-
-* Return details about a movie's
-  * Title
-  * Release year
-  * Vote average
-  * Runtime in hours & minutes
-  * Genre(s) associated to movie
-  * Summary description
-  * List the first 10 cast members (characters & actors)
-  * Count the total reviews
-  * List of first 5 reviews (author and review)
-* Include the movie's ID (in the Movie DB API system, not your application) in the path 
-* Note: Retrieving this information from the Movie DB API could take up to 3 different network requests (unless you find a shortcut!)
-
-Example JSON response:
-
-```json
-{
-  "data": {
-      "id": "278",
-      "type": "movie",
-      "attributes": {
-        "title": "The Shawshank Redemption",
-        "release_year": 1994,
-        "vote_average": 8.706,
-        "runtime": "2 hours, 22 minutes",
-        "genres": ["Drama", "Crime"],
-        "summary": "Imprisoned in the 1940s for the double murder of his wife and her lover, upstanding banker Andy Dufresne begins a new life at the Shawshank prison, where he puts his accounting skills to work for an amoral warden. During his long stretch in prison, Dufresne comes to be admired by the other inmates -- including an older prisoner named Red -- for his integrity and unquenchable sense of hope.",
-        "cast": [
-          {
-            "character": "Andy Dufresne",
-            "actor": "Tim Robbins"
-          },
-          {
-            "character": "Ellis Boyd 'Red' Redding",
-            "actor": "Morgan Freeman"
-          } 
-          // ... 10 of these! (max)
-        ],
-        "total_reviews": 14,
-        "reviews": [
-          {
-            "author": "elshaarawy",
-            "review": "very good movie 9.5/10 محمد الشعراوى"
-          },
-          {
-            "author": "John Chard",
-            "review": "Some birds aren't meant to be caged.\r\n\r\nThe Shawshank Redemption is written and directed by Frank Darabont. It is an adaptation of the Stephen King novella Rita Hayworth and Shawshank Redemption..."
-          }
-          // ... 5 of these (max)
-        ]
-      }
-    }
-}
-```
-
-</section>
-
 
 <section class="dropdown">
-### 4. Create a Viewing Party
+### 3. Create a Viewing Party
 
 This endpoint should:
 
 * create a Viewing Party record and create the necessary joins records to invite all the indicated users
   * Note: The DB should be able to keep track of which user is the host of the party
-* require a valid API key be sent with the request
 * ignore any parameters in the request that are not allowed
+* send specific error messaging back to the client if required data is not sent in the request.
 
 Example Request
 ```json
@@ -223,7 +161,6 @@ Example Request
   "end_time": "2025-02-01 14:30:00",
   "movie_id": 278,
   "movie_title": "The Shawshank Redemption",
-  "api_key": "e1An2gAidDbWtJuhbHFKryjU", // must be valid API key for host
   "invitees": [11, 7, 5] // must be valid user IDs in the system
 }
 ```
@@ -304,7 +241,6 @@ If you would rather use the JSON API relationships tool to list the invitees rat
 </section>
 
 Sad Paths to Handle:
-* Request sent without valid API key: unauthorized
 * Request sent with missing required attributes for a viewing party
 * Request sent with party duration *less than*  movie runtime
 * Request sent with end time before start time
@@ -321,19 +257,16 @@ Sample Error Response
 </section>
 
 <section class="dropdown">
-### 5. Add Another User to Existing Viewing Party
+### 4. Add Another User to Existing Viewing Party
 
 This endpoint should:
 
-* require a valid API key for a given user in order to succeed
 * not make any updates to the viewing party resource, but instead just add more users to the party. Consider: what is the most RESTful path and controller organization for this case?
 * Pass a valid viewing party ID in the path of the request
-* Note: You can either pass the API key in the request (shown here) or as a query parameter. 
 
 Example Request
 ```json
 {
-  "api_key": "e1An2gAidDbWtJuhbHFKryjU", // must be valid API key for host
   "invitees_user_id": 14 // must be valid user ID in the system
 }
 ```
@@ -379,8 +312,70 @@ Example JSON response after successfully inviting another user (same response as
 
 Sad Paths to Handle
 * Invalid viewing party ID
-* Invalid API key
 * Invalid user ID
+
+</section>
+
+
+<section class="dropdown">
+### 5. Movie Details
+
+This endpoint should:
+
+* Return details about a movie's
+  * Title
+  * Release year
+  * Vote average
+  * Runtime in hours & minutes
+  * Genre(s) associated to movie
+  * Summary description
+  * List the first 10 cast members (characters & actors)
+  * Count the total reviews
+  * List of first 5 reviews (author and review)
+* Include the movie's ID (in the Movie DB API system, not your application) in the path 
+* Note: Retrieving this information from the Movie DB API could take up to 3 different network requests (unless you find a shortcut!)
+
+Example JSON response:
+
+```json
+{
+  "data": {
+      "id": "278",
+      "type": "movie",
+      "attributes": {
+        "title": "The Shawshank Redemption",
+        "release_year": 1994,
+        "vote_average": 8.706,
+        "runtime": "2 hours, 22 minutes",
+        "genres": ["Drama", "Crime"],
+        "summary": "Imprisoned in the 1940s for the double murder of his wife and her lover, upstanding banker Andy Dufresne begins a new life at the Shawshank prison, where he puts his accounting skills to work for an amoral warden. During his long stretch in prison, Dufresne comes to be admired by the other inmates -- including an older prisoner named Red -- for his integrity and unquenchable sense of hope.",
+        "cast": [
+          {
+            "character": "Andy Dufresne",
+            "actor": "Tim Robbins"
+          },
+          {
+            "character": "Ellis Boyd 'Red' Redding",
+            "actor": "Morgan Freeman"
+          } 
+          // ... 10 of these! (max)
+        ],
+        "total_reviews": 14,
+        "reviews": [
+          {
+            "author": "elshaarawy",
+            "review": "very good movie 9.5/10 محمد الشعراوى"
+          },
+          {
+            "author": "John Chard",
+            "review": "Some birds aren't meant to be caged.\r\n\r\nThe Shawshank Redemption is written and directed by Frank Darabont. It is an adaptation of the Stephen King novella Rita Hayworth and Shawshank Redemption..."
+          }
+          // ... 5 of these (max)
+        ]
+      }
+    }
+}
+```
 
 </section>
 
@@ -389,7 +384,6 @@ Sad Paths to Handle
 
 This endpoint should:
 
-* require a valid API key for a given user in order to succeed (you can decide how the client should send the key in the request, just make sure your documentation indicates the preferred method, i.e. in query paramters, in a request body, in a header, etc.)
 * render a JSON representation of users's basic attributes as well as the viewing parties they are hosting and attending
 * require the user ID for the given user in the path
 * return an empty collection of viewing parties if the given user has not hosted or been invited to any parties.
@@ -449,14 +443,13 @@ Example JSON response for the a user's full profile:
 Note: The host ID for any viewing parties that the user has created should be the same as this user's ID. 
 
 Sad Paths to Handle:
-* API key sent is invalid or belongs to a different user ID: unauthorized
 * invalid user ID sent
 
 Example Error Response
 ```json
 {
-  "message": "Invalid API key",
-  "status": 401
+  "message": "Invalid User ID",
+  "status": 404
 }
 ```
 
@@ -466,6 +459,21 @@ Example Error Response
 ---
 
 ## Extensions and Explorations
+
+<section class="dropdown">
+### Add Authorization
+
+We have these api keys in the users table for a reason. Let's use them! 
+
+Add the following functionality to your API:
+* Require requests to create a viewing party **to include the valid API key for the host user**. If the request to create a viewing party is sent without the host's API key in the body, the API should respond with a 401 (Unauthorized). 
+* Require the host's API key for requests to add additional users to an invitation. If a request to invite additional users doesn't include an API key in the body or a as a query parameter, the API should return with a 401.
+* Require the user's valid API key in the request for endpoint #6, so that a user needs to provide their key to get their specific profile data returned. If no key is provided, return a 401.  
+
+Check out [this lesson](https://curriculum.turing.edu/module3/lessons/api_authorization) as a resource for implementing authorization.
+
+</section>
+
 
 <section class="dropdown">
 ### Similar Movies

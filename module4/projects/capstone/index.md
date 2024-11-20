@@ -5,11 +5,11 @@ layout: page
 ---
 
 ## Objective
-The overall objective of the Capstone Project is to demonstrate your ability to apply the skills you've learned in this program to solve technical problems in the context of a real project and following professional software development practices.
+The overall objective of the Capstone Project is to demonstrate your ability to apply the skills you've learned in this program to solve technical problems in the context of a real project and to follow professional software development practices.
 
 ## Learning Goals
 * Strengthen your ability to apply the skills you've learned in this program to solve technical problems
-* Work in a full stack, agile, production or production-like environment
+* Work in a full stack, agile production or production-like environment
 * Research and implement solutions that you have not been explicitly taught
 * Practice an advanced, professional git workflow
 

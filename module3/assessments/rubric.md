@@ -75,7 +75,7 @@ The candidate...
 
 <section class="dropdown">
 ### 3. Testing and Debugging
-Testing is expected to be present for both the frontend and backend.
+Note: Testing is expected to be present for the backend and is considered "extra" for frontend.
 #### Strong Yes Hire
 
 The candidate...
@@ -145,13 +145,13 @@ The candidate...
 The candidate...
 - includes a README with a walkthrough (gif, screenshots, etc.) of the FE or Swagger for the BE to run requests. 
 - include artifacts that demonstrate planning, like: schema, component tree, mock ups/wireframes, etc.
-- effectively utilized a project board with clear labels and each PR references a GH issue.
+- effectively utilized a project board with clear user stories and there is a clear progression of tickets moved over to the Done column.
 
 #### Leaning Yes Hire
 
 The candidate...
-- includes a summary, setup instructions, endpoints, testing instructions, etc. in the README. 
-- built out clear user stories on the project board and there is a clear progression of tickets moved over to the Done column.
+- includes a summary, setup instructions, endpoints, instructions, etc. in the README. 
+- can speak to their planning process and demonstrate they used some sort of artifact(s) to plan their solution, such as a component architecture diagram, wireframes, a minimal project board, a database schema diagram, etc. 
 
 #### Leaning Don’t Hire
 
