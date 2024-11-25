@@ -40,7 +40,7 @@ title: Mod 0 - Lessons
 * [Methods repository](https://github.com/turingschool/methods_cfu_am0) (Use the Methods lesson Follow the instructions in the README to complete this asignment)
 * [Beyond Mod 0 Plan]({{ site.url }}/module0/lessons/plan)
 * [Final Reflections]({{ site.url }}/module0/lessons/final-reflections)
-* By the end of the day Saturday, your Mod 0 Gist should contain all CFU answers and assignments including sections for `Data Types`, `Arrays`, `Asking Technical Questions`, `DTR Prep`, `Calendaring & Time Management`, `Git Workflow`, `Problem Solving`, `GitHub` `Conditionals`, `Methods`, `Beyond Mod 0 Plan`, and `Final Reflections`.
+* By the end of the day Sunday, your Mod 0 Gist should contain all CFU answers and assignments including sections for `Data Types`, `Arrays`, `Asking Technical Questions`, `DTR Prep`, `Calendaring & Time Management`, `Git Workflow`, `Problem Solving`, `GitHub` `Conditionals`, `Methods`, `Beyond Mod 0 Plan`, and `Final Reflections`.
 
 
 ## Complete Before Mod 1
