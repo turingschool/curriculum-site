@@ -34,15 +34,25 @@ Questions to consider. Take a minute to think to yourself before checking out th
 
 We'll be returning to our beloved [Set List API](https://github.com/turingschool-examples/set-list-api/tree/consuming-apis-start), and starting from the `consuming-apis-start` branch. 
 
-This branch has added an additional incomplete endpoint, which takes a query parameter of an artist name and should return an image of that artist. Right now, there is a test set up to verify the endpoint returns an image url, the photographer's info, and some alt text for the image. But, our database doesn't store that information, and we don't want to have to store it. Instead, there's a great API we can use to retrieve photos of these artists: [Pexels!](https://www.pexels.com/api/)
+This branch has added an additional incomplete endpoint, which takes a query parameter of an artist name and should return an image of that artist. Right now, there is a test set up to verify the endpoint returns an image url, the photographer's info, and some alt text for the image. But, our database doesn't store that information, and we don't want to have to store it. Instead, there are TWO great APIs we can use to retrieve photos of these artists: [Pexels!](https://www.pexels.com/api/) and [Unsplash](https://unsplash.com/developers). This tutorial includes both in case Pexels is not working (cough cough: right now!).
 
-### Setup
+<section class="dropdown">
+### Setup with Pexels
 
 You'll first need to make an account with Pexels in order to use the API. Once you have an account, you should be able to view your API key. This key is like your password for accessing these API endpoints. Let's use it to try out some API calls in Postman. Copy it to your clipboard now!
+</section>
+
+<section class="dropdown">
+### Setup with Unsplash
+
+You'll need to make an account with [Unsplash](https://unsplash.com/developers), and once you do you'll be given an access key. This key is like your password for accessing these API endpoints. Let's use it to try out some API calls in Postman. Copy it to your clipboard now!
+
+</section>
+
 
 ### Trying Out Requests in Postman
 
-Before we write any code to make an API call, it's important to read the documentation and make sure a request or two work in Postman. Take a look at the [Pexels documentation](https://www.pexels.com/api/documentation/) and try to find the items below in order to get a request working. Don't peek at the answer until you've read the docs!
+Before we write any code to make an API call, it's important to read the documentation and make sure a request or two work in Postman. Take a look at the [Pexels documentation](https://www.pexels.com/api/documentation/) or the [Unsplash documentation](https://unsplash.com/documentation) and try to find the items below in order to get a request working. Don't peek at the answer until you've read the docs!
 
 Look for:
 * The base url for this API
@@ -54,6 +64,7 @@ Look for:
 <section class="dropdown">
 ### Answers - No peeking!
 
+#### Pexels
 When put all together, these answers should lead you to the following request. Try it out in Postman to make sure it works! Here, we're using The Beatles as an example.
 
 ```bash
@@ -65,6 +76,15 @@ Authorization: <YOUR KEY HERE>
 * We're passing a query parameter, and when we add this key/value pair to Postman, you should see it populate the path after the `?`. Because "The Beatles" has a space in it, the space might be encoded to `%20` in the URL, or there might just be a space.
 * We're passing an authorization header. Sometimes, keys are passed as a query parameter, or in a different location. It's essential that we read documentation to figure out how to pass keys in a request. Note: If you remove this header in your request, what happens?
 
+#### Unsplash
+
+```bash
+GET https://api.unsplash.com/search/photos?client_id=<YOUR_ACCESS_KEY_HERE>&query=The%20Beatles
+```
+* The base url is `https://api.unsplash.com`
+* The specific endpoint we're using is `/search/photos`
+* We're passing a few query parameters, and when we add these key/value pairs to Postman, you should see them populate the path after the `?`. Because "The Beatles" has a space in it, the space might be encoded to `%20` in the URL, or there might just be a space.
+* We're passing our access code as a query parameter and, per the documentation, we're referring to it as a `client_id`. Unsplash also allows you to pass the key as a header. Check out the documentation to learn more about this option! It's important to always refer to documentation to determine what the API expects in terms of authentication.
 
 </section>
 
@@ -129,7 +149,8 @@ If you look at the [Faraday website](https://lostisland.github.io/faraday/#/) in
 This is a fine option, but when we use multiple API endpoints with a single API, it's sometimes a better choice to set up what is called a Faraday connection in order to keep the HTTP connection with the API alive. After creating the connection with the base URL for Pexels, we can simple use a `.get` method invocation in order to make the GET request to the endpoint we've identified. Check out this example implementation below:
 
 *app/controllers/api/v1/images_controller.rb*
-```
+
+``` ruby
 class Api::V1::ImagesController < ApplicationController
   def show
     artist = params[:artist]
@@ -137,9 +158,12 @@ class Api::V1::ImagesController < ApplicationController
     conn = Faraday.new(url: "https://api.pexels.com") do |faraday|
       faraday.headers["Authorization"] = "<YOUR KEY HERE>"
     end
+    # UNSPLASH update: change base url and skip the block. Just: conn = Faraday.new(url: "https://api.unsplash.com") 
 
     response = conn.get("/v1/search", { query: artist })
     # OR response = conn.get("/v1/search?query=#{artist})
+
+    # UNSPLASH update: response = conn.get("/v1/search/photos", { query: artist, client_id: "YOUR_KEY_HERE" })
 
     require 'pry'; binding.pry
 
@@ -154,8 +178,9 @@ Let's take a closer look at what we're doing:
 
 1. We grab the artist's name from the query parameter and save it as a variable
 2. We set up a Faraday connection. What does this do? Does this make a network request? Check out the documentation if you're not sure, and revisit the paragraph before the above example.
-3. We add headers to this Faraday connection, and the headers exist as key/value pairs. The documentation asks clients to pass an `Authorization` key with the API key as the value. 
-4. We make a get request! Here is where we indicate the path of the endpoint we want (`"/v1/search"`) and add the query parameter. There are a couple different ways to add query parameters, so we have 2 different options shown here. 
+3. PEXELS ONLY: We add headers to this Faraday connection, and the headers exist as key/value pairs. The documentation asks clients to pass an `Authorization` key with the API key as the value. 
+4. UNSPLASH ONLY: We add the access key as a query parameter (key for this parameter is `client_id`, and value is your access key from Unsplash)
+4. We make a get request! Here is where we indicate the path of the endpoint we want and add the query parameter(s). There are a couple different ways to add query parameters, so we have 2 different options shown here. 
 
 When we run our test and hit this pry, check out the `response` object. It's a Faraday Response object! Take a look at all the attributes available here. Some particularly useful ones are `status` and `body`. Make sure that your request status is 200 and your body returns image data. 
 
@@ -164,7 +189,7 @@ The response's body, though, is a JSON string. It's a bit clunky to manipulate o
 Can you massage this response data into the format we're looking for? The solution is in the dropdown below. For simplicity, the JSON response format is just added to the same controller action, but you'll want to refactor and use a serializer instead of formatting presentation logic in your controller!
 
 <section class="dropdown">
-### Controller Action: Complete
+### Controller Action: Complete for Pexels
 
 ```ruby
 class Api::V1::ImagesController < ApplicationController
@@ -197,6 +222,38 @@ class Api::V1::ImagesController < ApplicationController
 end
 ```
 </section>
+
+<section class="dropdown">
+### Controller Action: Complete for Unsplash
+
+```ruby
+class Api::V1::ImagesController < ApplicationController
+  def show
+    artist = params[:artist]
+    conn = Faraday.new(url: "https://api.unsplash.com") 
+    
+    response = conn.get("/search/photos", { query: artist, client_id: "YOUR_ACCESS_KEY_HERE" })
+
+    json = JSON.parse(response.body, symbolize_names: true)
+    first_photo = json[:results][0]
+
+    formatted_json = {
+      id: nil,
+      type: "image",
+      attributes: {
+        image_url: first_photo[:urls][:raw],
+        photographer: first_photo[:user][:name],
+        photographer_url: first_photo[:user][:links][:self],
+        alt_text: first_photo[:alt_description]
+      }
+    }
+    require 'pry'; binding.pry
+    render json: { data: formatted_json }
+  end 
+end
+```
+</section>
+
 
 ## Environment Variables
 
@@ -233,11 +290,19 @@ secret_key_base: asdfdsafdexamplekeybaseasdfasdfasdf
 
 Next, you’ll have to replace the hardcoded key in your controller.
 
+Pexels Version:
+
 ```ruby
     conn = Faraday.new(url: "https://api.pexels.com") do |faraday|
       faraday.headers["Authorization"] = Rails.application.credentials.pexels[:key]
     end
 
+```
+
+Unsplash Version:
+
+```ruby
+    response = conn.get("/search/photos", { query: artist, client_id: Rails.application.credentials.unsplash[:key] })
 ```
 
 Run your tests again to verify they still pass!
@@ -247,6 +312,6 @@ Run your tests again to verify they still pass!
 * What does Faraday do for us?
 * What is an API key?
 * Name 2 common places an API key is passed in a request
-* What's wrong with leaving all of our Pexels network call logic in the controller?
+* What's wrong with leaving all of our external API call logic in the controller?
 * What ideas do you have about how we could clean this code up?
 * Why do we need an environment variable here?
