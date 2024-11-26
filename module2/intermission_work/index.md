@@ -49,7 +49,8 @@ Time-box recommendations are in each section's instructions, and also included h
 Do a modified version of the assignments above:
 
 - [Intro to SQL](./sql) (1-2 hrs total)
-  - You can skip the Jumpstart Lab tutorial if you like. You can use the Checks for Understanding as a gauge of whether you need to review it or not.
+  <!-- - You can skip the Jumpstart Lab tutorial if you like. You can use the Checks for Understanding as a gauge of whether you need to review it or not. -->
+  - You can skip the SQLBolt tutorial if you like. You can use the Checks for Understanding as a gauge of whether you need to review it or not.
   - Work on the SQL exercises. Spend at least 1 hour in all three sections.
   - Complete the Checks for Understanding
 - [Task Manager](https://github.com/turingschool-examples/task_manager_rails)
