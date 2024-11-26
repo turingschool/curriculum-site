@@ -163,7 +163,7 @@ class Api::V1::ImagesController < ApplicationController
     response = conn.get("/v1/search", { query: artist })
     # OR response = conn.get("/v1/search?query=#{artist})
 
-    # UNSPLASH update: response = conn.get("/v1/search/photos", { query: artist, client_id: "YOUR_KEY_HERE" })
+    # UNSPLASH update: response = conn.get("/search/photos", { query: artist, client_id: "YOUR_KEY_HERE" })
 
     require 'pry'; binding.pry
 
