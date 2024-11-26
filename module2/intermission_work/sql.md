@@ -7,9 +7,13 @@ SQL is a programming language used to interact with a database. Learning to inte
 
 For your SQl intermission work, you will complete an introductory tutorial, and then will complete some exercises to help you practice the most important SQL concepts. This assignment is meant as an introduction to sql, so don't be alarmed if you don't feel like you have mastered these concepts. Use the accompanying Checks for Understanding to assess yourself.
 
-## Jumpstart Lab Tutorial
+<!-- ## Jumpstart Lab Tutorial
 
-Work through the [Jumpstart Lab SQL Tutorial](http://tutorials.jumpstartlab.com/topics/sql/fundamental_sql.html), **but you don't need to read past the "Adding Columns to the Table" section** Then complete the Checks for Understanding.
+Work through the [Jumpstart Lab SQL Tutorial](http://tutorials.jumpstartlab.com/topics/sql/fundamental_sql.html), **but you don't need to read past the "Adding Columns to the Table" section** Then complete the Checks for Understanding. -->
+
+## SQLBolt Introduction to SQL Tutorial
+
+Work through the [SQLBolt Intro to SQL Tutorial](https://sqlbolt.com/), **but you don't need to complete anything under the "Additional Topics" section.** Then complete the Checks for Understanding below, followed by the SQL exercises underneath.
 
 ### Checks for Understanding
 
@@ -19,10 +23,10 @@ Work through the [Jumpstart Lab SQL Tutorial](http://tutorials.jumpstartlab.com/
 1. What is a Table?
 1. What is a primary key?
 1. Explain what each of the following SQL commands do:
-  * insert
-  * select
-  * where
-  * order by
+    * insert
+    * select
+    * where
+    * order by
 
 ## SQL Exercises
 
