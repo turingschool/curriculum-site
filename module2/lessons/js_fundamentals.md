@@ -530,7 +530,7 @@ evaluateSleep(4)
 
 <section class="answer">
 
-### Exercise 3
+### Exercise 2
 
 Imagine you're a developer for AAA. Your website needs to provide different information to users based on their age.
 
