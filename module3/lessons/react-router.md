@@ -17,7 +17,6 @@ module: 3
 * `NavLink` A special version of the \<Link\> that will add styling attributes to the rendered element when it matches the current URL.
 * `Route` Its most basic responsibility is to render some UI when a location matches the route’s path
 * `Routes` A component that wraps your Route components that selects the best path match
-* `Outlet` A component that renders the next match in a set of matches. it must exist in the parent component when nesting routes
 * `useParams` A hook that allows us to gain access to a Route's params
 
 <!-- COMMENTING OUT THE PREWORK AS IT'S BEEN DEEMED UNNECCESARY AT THIS TIME -->
@@ -39,7 +38,6 @@ In small groups, discuss the following questions:
 - Routes
 - Link
 - NavLink
-- Outlet
 </section> -->
 
 ## Why Routing?
@@ -498,7 +496,76 @@ export default Creatures;
 </section>
 
 <section class="dropdown">
-### 13. Let's tell Router what to do with this new path
+
+### 13. Let's define a new separate route for `/:animal/:id`
+
+```jsx
+import './App.css';
+import './App.css';
+import { Routes, Route, NavLink } from 'react-router-dom';
+import Home from '../Home/Home';
+import Creatures from '../Creatures/Creatures';
+import CreatureDetails from '../CreatureDetails/CreatureDetails';
+
+function App() {
+  return (
+    <main className="App">
+      <nav>
+        <NavLink to="/puppies" className="nav">Puppies</NavLink>
+        <NavLink to="/sharks" className="nav">Sharks</NavLink>
+      </nav>
+      <h1>Puppies or Sharks?</h1>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path=":animal" element={<Creatures />} />
+        <Route path="/:animal/:id" element={<CreatureDetails />} />
+      </Routes>
+    </main>
+  );
+}
+
+export default App;
+
+```
+</section>
+
+<section class="dropdown">
+### 14. Now let's make CreatureDetails show the animal's info (hint: look at animalData.js!)
+
+```jsx
+// CreatureDetails.js
+
+import './CreatureDetails.css';
+import { useParams } from 'react-router-dom';
+import { getCreatureDetails } from '../../data/animalData';
+
+const CreatureDetails = () => {
+  const creatureType = useParams().animal;
+  const creatureId = useParams().id;
+
+  const creatureStats = getCreatureDetails(creatureType, creatureId);
+
+  return (
+    <div>
+      <h1>{creatureStats.name}</h1>
+      <img src={creatureStats.image} className='app-img-no-hover'/>
+      <p className='creature-bio'>{creatureStats.bio}</p>
+    </div>
+  )
+}
+
+export default CreatureDetails;
+```
+</section>
+
+<br>
+
+## Self-Guided Exploration: Outlet
+
+An `Outlet` is a special component used for rendering child routes in nested routing setups. It acts as a placeholder where the content of child routes will be displayed. The `Outlet` component specifies where child route components will be rendered within a parent route's component.
+
+<section class="dropdown">
+### 15. Let's update our routes to use nested routes instead
 
 ```jsx
 // App.js
@@ -533,15 +600,15 @@ export default App;
 <section class="call-to-action">
 ### Let's explore
 
-1. Why did we nest the routes?
-2. Why don't I have a '/' in front of ":id"? (Note: You can include the '/', if you also include the rest of the path. Meaning, you could do `:/id` OR `/:animal/:id`)
+1. Why might we choose to nest the routes?
+2. What is the full URL that would render CreatureDetails?
 3. Is it working? Is CreatureDetails rendering to the page?
 </section>
 
 </section>
 
 <section class="dropdown">
-### 14. One more step to getting CreatureDetails to appear
+### 16. One more step to getting CreatureDetails to appear
 
 ```jsx
 // Creatures.js
@@ -580,81 +647,13 @@ export default Creatures;
 2. Why is the `<Creatures />` component still showing?
 3. What would you have to change if you didn't want the `<Creatures />` component to render at this path?
 </section>
+</section>
+
 ***Why Use the `Outlet`*** ?  
 The Outlet component serves as a placeholder for rendering nested route content within a parent component. It's a fundamental tool that allows you to seamlessly integrate child components' content into a parent's layout while maintaining UI coherence.
 
 ***Real-World Analogy: Twitter Inbox*** <br/>
 Imagine a scenario similar to the Twitter inbox. When you access your inbox, you see a list of message previews on the left side of the screen, but the right side remains blank until you select a specific conversation. This structure is where the Outlet comes into play.
-</section>
-
-<section class="dropdown">
-### 15. Now let's make CreatureDetails show the animal's info (hint: look at animalData.js!)
-
-```jsx
-// CreatureDetails.js
-
-import './CreatureDetails.css';
-import { useParams } from 'react-router-dom';
-import { getCreatureDetails } from '../../data/animalData';
-
-const CreatureDetails = () => {
-  const creatureType = useParams().animal;
-  const creatureId = useParams().id;
-
-  const creatureStats = getCreatureDetails(creatureType, creatureId);
-
-  return (
-    <div>
-      <h1>{creatureStats.name}</h1>
-      <img src={creatureStats.image} className='app-img-no-hover'/>
-      <p className='creature-bio'>{creatureStats.bio}</p>
-    </div>
-  )
-}
-
-export default CreatureDetails;
-```
-</section>
-
-Now that you know how to use Outlet, let's explore other ways we can achieve dynamic routing without it.
-We are going to remove our nested route and define a new separate route for `/:animal/:id` which is not directly nested within the first route `/`. Each route has it's own component. 
-You would use this approach when you have distinct pages or components that should be displayed separately based on the URL. 
-<section class="dropdown">
-
-### Defining a new separate route for `/:animal/:id`
-
-```jsx
-import './App.css';
-import './App.css';
-import { Routes, Route, NavLink } from 'react-router-dom';
-import Home from '../Home/Home';
-import Creatures from '../Creatures/Creatures';
-import CreatureDetails from '../CreatureDetails/CreatureDetails';
-
-function App() {
-  return (
-    <main className="App">
-      <nav>
-        <NavLink to="/puppies" className="nav">Puppies</NavLink>
-        <NavLink to="/sharks" className="nav">Sharks</NavLink>
-      </nav>
-      <h1>Puppies or Sharks?</h1>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path=":animal" element={<Creatures />} />
-        <Route path="/:animal/:id" element={<CreatureDetails />} />
-      </Routes>
-    </main>
-  );
-}
-
-export default App;
-
-```
-Now it's time to remove `Outlet` from our `Creature.js` file since we don't have nested routes and we don't need `Outlet` anymore
-</section>
-
-<br>
 
 <section class="call-to-action">
 ### Final Reflections
@@ -665,8 +664,9 @@ Now it's time to remove `Outlet` from our `Creature.js` file since we don't have
 - `Routes`
 - `Link`
 - `NavLink`
-- `Outlet`
 - `useParams`
+- `Outlet`
+
 </section>
 
 ## Extra Resources:
