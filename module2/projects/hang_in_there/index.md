@@ -318,7 +318,7 @@ _Note: Don't worry about the layout or styling of your unmotivational posters qu
 </section>
 
 <section class="dropdown">
-### Iteration 5 - Deleting Saved Posters
+### Iteration 5 - Deleting Unmotivational Posters
 
 Our product team realizes that some users will love the Unmotivational Posters feature while others might feel like it harshes the positive vibe of the application. They'd like us to add functionality so that users will be able to delete an unmotivational poster by double clicking on it.
 
