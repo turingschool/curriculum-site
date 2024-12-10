@@ -349,7 +349,6 @@ Let's follow our process again. First, the `select` statement. In this case, our
 
 | artist_id | id | title  | length  | play_count  | artist_id |
 |---|---|---|---|---|
-| id | title | length | play_count | artist_id |
 | --- | --- | --- | --- | --- |
 | 1 | 1 | Raspberry Beret | 345 | 34 | 1 |
 | 1 | 2 | Purple Rain | 524 | 19 | 1 |
@@ -580,7 +579,7 @@ Will produce:
 ActiveRecord::StatementInvalid: PG::UndefinedColumn: ERROR:  column artists.avg_length does not exist
 ```
 
-Whenever you use symbol notation, ActiveRecord assumes that you are referring to a colum of the table that corresponds to the Model you started the query with (in this case `Artist` relates to the `artists` table). We need to use string notation to tell ActiveRecord to insert the string `"avg_length"` as-is into our group statement, rather than look for an attribute on our model.
+Whenever you use symbol notation, ActiveRecord assumes that you are referring to a column of the table that corresponds to the Model you started the query with (in this case `Artist` relates to the `artists` table). We need to use string notation to tell ActiveRecord to insert the string `"avg_length"` as-is into our group statement, rather than look for an attribute on our model.
 
 You may also think to group on the `artist_id`:
 
