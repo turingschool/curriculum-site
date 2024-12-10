@@ -9,7 +9,7 @@ module: 4
 In small groups, discuss the following:
 
 - At first glance, what are the responsibilities of someone in Support Engineering?
-- What are other job titles that fit under Support? Hint: Who do you support? Customers!
+- What are other job titles that fit under Support? _Hint: Who do you support? Customers!_
 - What do you think are the key responsibilities of someone within these roles?
 
 ## Customer Support and Success
@@ -18,9 +18,9 @@ Customer Support, or Customer Success, can be considered the go-to fix-it team�
 
 <section class="checks-for-understanding">
 
-Customer 😞 = Bad 
+Customer 😞 == Bad 
 
-Customer 😊 = Good
+Customer 😊 == Good
 </section>
 
 ### Ok, cool. I’m supportive and an engineer… what’s my job?
@@ -37,28 +37,28 @@ Kayla also points how after discovering the role she was able to utilize her bac
 
 ***video - kayla previous background***
 
-To watch the full video with Kayla and learn more about her time as a Support Engineer, like day to day tasks, challenges, and some good piece of advice! Check out the full video below.
+To watch the full video with Kayla and learn more about her time as a Support Engineer, like day to day tasks, challenges, and some good pieces of advice, check out the full video below.
 
 ***video - full ep***
 
 ## Solutions Architect
 
-We also spoke with Dan Halverson 2006 BE who has experience in CSM (Customer Success Manager), Customer Support, and has recently changed titles to Solutions Architect at Attentive. So instead of taking on a ticket of something not working, Dan works on a team that collaborates with clients to build solutions to work with their customer data platforms, email platforms, and metrics. 
+We also spoke with Dan Halverson, 2006 BE, who has experience as a CSM (Customer Success Manager), Customer Support, and has recently changed titles to Solutions Architect at Attentive. Instead of taking on a ticket of something not working, Dan works on a team that collaborates with clients to build solutions to work with their customer data platforms, email platforms, and metrics. 
 
 <section class="call-to-action">
 ***"We spend a lot of our time working with clients development team and tools to integrate with our software, tools, and options.”***
 </section>
 
-The typical day for a Solutions Architect is similar to a Developers. You have standup, discuss blockers, learn new technologies, and read good ol fashioned emails.
+The typical day for a Solutions Architect is similar to a Developer's. You have standup, discuss blockers, learn new technologies, and read good ol fashioned emails.
 
 <section class="call-to-action">
 ***"We have lots of client meetings, so I do a recurring weekly or bi-weekly meeting just for them to give me updates on what they're working on. If they're having some issues or they wanna explore some of our new features, we'll go over that…And then we'll do things like workshops or sessions where we go over new tooling, changes to how something works, or just some time for us to kind of chat and learn. But I would say a majority of my time is working independently on deliverables to clients and then the other half of the week is meetings, calls, and workshops."***
 </section>
 
-Initially Dan was hesitant to apply to roles that didn’t say “engineer” in the name but has found success in a “untraditional” path. What stood out to him was how similar job postings for tech adjacent roles like Solutions Architect were to “software developer.” Some similarities mentioned were: CSM account management, SQL, AWS, payloads, and RESTful APIs. He realized these job postings, despite having a different title, were seeking the expertise he had.  He mentions that this “non software engineering” role has been a much better fit for him that his previous engineering role ever was.
+Initially Dan was hesitant to apply to roles that didn’t say “engineer” in the name, but has found success in a “untraditional” path. What stood out to him was how similar job postings for tech adjacent roles like Solutions Architect were to “software developer.” Some similarities mentioned were: CSM account management, SQL, AWS, payloads, and RESTful APIs. He realized these job postings, despite having a different title, were seeking the expertise he had.  He mentions that this “non software engineering” role has been a much better fit for him than his previous engineering role ever was.
 
 <section class="call-to-action">
-***"I think it's important for students to know that just because you spent eight months of your life and thousands of hours on projects software engineering might not be a good fit for you. And, that's not necessarily a bad thing, even though it's kind of hard for me even say that because it still feels bad some days, but, other technical roles are still a great option."***
+***"I think it's important for students to know that just because you spent eight months of your life and thousands of hours on projects, software engineering might not be a good fit for you. And that's not necessarily a bad thing...other technical roles are still a great option."***
 </section>
 
 <section class="dropdown">
@@ -92,12 +92,12 @@ Initially Dan was hesitant to apply to roles that didn’t say “engineer” in
 ## Wrap up
 
 <section class="checks-for-understanding">
-#### In your notebook take some time to reflect on your experience before Turing, the new skillset you’ve acquired, and how they can apply to Solutions Engineering.
+#### In your notebook take some time to reflect on your experiences before Turing, the new skillset you’ve acquired, and how those can be applied to Solutions Engineering.
 
-- Describe some similarities and differences between a traditional Software Engineering role and someone under Support Engineering?
-- In what ways does your background fit into the Support Engineering role? What part of your story can be altered or highlighted.
+- Describe some similarities and differences between a traditional Software Engineering role and someone under Support Engineering.
+- In what ways does your background fit into the Support Engineering role? What part of your story can be altered or highlighted?
 - Is there alignment between these roles and your previous experience / skillset? Begin to search job postings with these titles. Find 3 - 5 job postings that align with what you’re looking for.
-- What are some further questions you’d ask someone in roles within Support Engineering?
+- What are some additional questions you’d ask someone in Support Engineering roles?
 
 </section>
 

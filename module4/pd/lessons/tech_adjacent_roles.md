@@ -8,15 +8,15 @@ module: 4
 
 Tech adjacent roles are positions that support or interact with technology teams but are not strictly technical or engineering-based. These roles can be great opportunity to leverage your new educations and skills while building a foundation in the tech industry. Despite different titles and responsibilities people still find success and benefit from understanding technical concepts and having a problem-solving mindset. Examples include Customer Support/ Success, Technical Writing, Operations, and Community, where you’ll utilize your knowledge with a focus on different responsibilities. 
 
-Tech companies often have different names for for similar roles for a variety of factors. Trends, recruitment strategy, competitive difference are just to name a few. By the end of these lessons you will have a deeper understanding of the variety of roles you have access to during your job hunt.
+Tech companies often have different names for similar roles for a variety of factors: trends, recruitment strategy, competitive difference just to name a few. By the end of these lessons you will have a deeper understanding of the variety of roles you have access to during your job hunt.
 
 ## Learning Goals
 
-- Understand different tech adjacent career pathways.
-- Identify which roles you are interested in / qualified for.
-- Break down your strengths and highlight areas of improvement for roles you're interested in.
-- Pull from previous work experience to create new narratives that showcase your ability and strengths for other roles outside of the 'software developer' job title.
-- Research other roles in the job market that fit the new criteria you’ve learned.
+- Understand different tech adjacent career pathways
+- Identify which roles you are interested in / qualified for
+- Break down your strengths and highlight areas of improvement for roles you're interested in
+- Pull from previous work experience to create new narratives that showcase your ability and strengths for other roles outside of the 'software developer' job title
+- Research other roles in the job market that fit the new criteria you’ve learned
 
 <section class="checks-for-understanding">
 ### Questions to Consider
