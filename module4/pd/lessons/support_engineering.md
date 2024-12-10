@@ -29,17 +29,18 @@ Support Engineering is another way of saying Customer Support or Customer Succes
 
 Lets hear from our very own Kayla Gordon about what it was like to be a Support Engineer.
 
-***video - kayla support engineering***
+<iframe width="560" height="315" src="https://www.youtube.com/embed/pb_tXzlNrHI?si=aJ3EpnjHyzqJhnNA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 
 If you were someone who found themselves in the weeds of the codebase helping out your fellow cohort-mates debug and enjoyed breaking down technical concepts Support Engineering could be a potential fit. 
 
 Kayla also points how after discovering the role she was able to utilize her background in education to break down complex concepts for customers once she got the job.
 
-***video - kayla previous background***
+<iframe width="560" height="315" src="https://www.youtube.com/embed/70OByRxYkPU?si=Sv1MQ0yV3HNrY3Yp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 To watch the full video with Kayla and learn more about her time as a Support Engineer, like day to day tasks, challenges, and some good pieces of advice, check out the full video below.
 
-***video - full ep***
+<iframe width="560" height="315" src="https://www.youtube.com/embed/9Up4yKQfjUg?si=0ZNUgaiDCRzzFEqz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## Solutions Architect
 
