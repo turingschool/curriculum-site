@@ -21,6 +21,21 @@ Then start writing your test. Call the method defined in `spec/helper_methods.rb
 
 Once you have your test, start writing the method.
 
+<section class="dropdown">
+### Framework for Approaching Complex Query Problems?
+
+1. What tables do we need?
+  - If I need more than one, I need to use a `join`
+2. What columns do I need (thing: `select`)
+3. What rows do I need
+  - Filtering often uses a `where` clause, or when dealing with filtering using an aggregate function, a `having` clause
+4. Do I need to make a calculation? (aggregate functions)
+  - Before making that calculation, do I need to consolidate the data into any groups with a `group by` statement?
+  - Using `group by` is not always necessary when doing a simple calculation like "what is the total number of plays of all songs in our database?"
+5.  Do we need to format the output? (think: `order`, `distinct`, `limit`)
+
+</section>
+
 
 ## Practice Problems
 
