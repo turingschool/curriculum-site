@@ -22,6 +22,7 @@ title: Module 4 - Lessons
 - [Getting Visible on Social Media](../pd/lessons/getting_visible_social_media)
 - [LinkedIn Challenge](../pd/lessons/linkedin_challenge)
 - [Interview Questions - Gathering Stories](../lessons/gathering_stories)
+- [Tech Adjacent Roles](../pd/lessons/tech_adjacent_roles)
 
 
 ### Additional Lesson Resources
