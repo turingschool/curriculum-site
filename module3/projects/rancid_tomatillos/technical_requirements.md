@@ -212,7 +212,7 @@ As you refactor, continue to rely on your test suite to ensure that no functiona
 
 Let's deploy your application so you can share it with friends and family! And, you can share the deployed URL on your portfolio or resume to make it easier for employers to see your work in action 🔥
 
-Note: If you've been running the API locally, be sure to update your network requests to point to the Heroku URL. Otherwise, the app won't work properly without locally running the backend - which defeats the whole purpose of deploying!
+Note: If you've been running the API locally, be sure to update your network requests to point to the deployed Render URL. Otherwise, the app won't work properly without locally running the backend - which defeats the whole purpose of deploying!
 
 We don't care how you deploy, but we do recommend using either **[Netlify](https://www.netlify.com/)** or **[Vercel](https://vercel.com/)**. You may need to do some research and googlin' to get it working - you got this!
 
