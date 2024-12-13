@@ -53,9 +53,10 @@ Do a modified version of the assignments above:
   - You can skip the SQLBolt tutorial if you like. You can use the Checks for Understanding as a gauge of whether you need to review it or not.
   - Work on the SQL exercises. Spend at least 1 hour in all three sections.
   - Complete the Checks for Understanding
-- [Task Manager](https://github.com/turingschool-examples/task_manager_rails)
-  - Review your code. If you do not have a copy, use the completed repo linked at the bottom of the README.
+- [Task Manager](https://github.com/turingschool-examples/se_task_manager_rails)
+  - Try to build the application by referencing the README only when you get stuck.
   - Answer the Checks for Understanding at the end of the README.
+  - **BONUS!** Add another table (i.e. `users`) and create a one-to-many relationship between `tasks` and the additional table. You should also add the ability to CRUD this additional data as well. (i.e. View all users, View a user, Delete a user, etc.)
 - Complete a timed [Dog Party](./dog_party)
   - As you work, reference the [W3Schools HTML5 Tutorial](https://www.w3schools.com/html/default.asp) and [W3Schools CSS Tutorial](https://www.w3schools.com/css/default.asp)
 
