@@ -103,5 +103,37 @@ At the end of the days listed below, you will need to turn in certain deliverabl
 </section>
 
 ## Presentation Details
-calendar
-Reflections on how you will talk about this project in a job interview (sample questions)
+
+### Purpose
+Your presentation will highlight your progress on theis project and your plans for your job search moving forward. It’s an opportunity to reflect on your experiences and demonstrate how you’ve grown and learned throughout the process.
+
+### Structure
+- Student-directed presentation (~10-15 minutes)
+  - Develop an organized slide deck or Google document to present your progress and plan moving forward.
+  - Include visual aids, such as charts or graphs, to enhance your presentation.
+- Instructor feedback (~5 minutes)
+
+### Potential Outcomes
+- If everything goes according to plan: good luck in the future!
+- If a student fails to present (due to illness, etc), please arrange an alternate time to present to instructors.
+- If a student delivers an exceptionally poor presentation: instructors will determine the next steps.
+
+### Format
+Each student will deliver a slide presentation in front of your instructor. The presentation will include the following sections:
+
+1. Progress on the project so far 
+  - What have you accomplished so far? 
+  - How will you talk about this project in your job hunt? 
+2. Reflections on your stretch techs
+  - How have you approached learning these new technologies? How does this relate to learning things on the job?  
+  - What has been challenging?  
+2. Plan for the project moving forward
+  - How will you continue to be motivated to work on this? 
+3. Reflections on job search so far
+  - What has your job hunt strategy been so far?
+  - How have you been networking? 
+  - What is working? What isn't?
+4. Plan for job searching moving forward
+  - What is your strategy in the coming weeks to secure a job?
+5. Organizing your post-grad time
+  - Show us your calendar for the first 2 weeks post-graduation.
