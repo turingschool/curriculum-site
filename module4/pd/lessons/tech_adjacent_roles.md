@@ -32,7 +32,7 @@ Tech companies often have different names for similar roles for a variety of fac
 
 Lesson 1: [Support Engineering](./support_engineering)
 
-Lesson 2: Technical Writing and Quality Assurance
+Lesson 2: [Technical Writing and Quality Assurance](./technical_writing_and_QA)
 
 Lesson 3: Operations and Reliability
 
