@@ -4,16 +4,28 @@ layout: page
 ---
 
 ## Overview + Learning Goals
+
 In this project, students will create a roadmap for and begin a 10-week-long project. That’s right - 10 weeks! 
 
 Turing grads often struggle post-graduation with establishing solid routines, keeping their technical skills sharp, and upskilling in new technical areas. The goals of this project are meant to directly address these areas:
 - Students will solidify a plan for the first 8 weeks of post-graduate life.
 - Students will create a project that they are enthusiastic about, giving them a strong story for interviews.
-- Students will choose 1-2 stretch technologies to implement in the project.
+- Students will continue to solidify programming concepts and add more skills to their resume.
 
-## MVP
+For the most part, you will spend the next 2 weeks planning and getting your project set up so that you have something tangible to work on after graduation. You will only contribute a little bit of code to this project before graduation.  
+
+## MVP (Minimum Viable Product)
+
+You will be designing this application from the ground up. For the most part, you have control over what you build, but we want to help set you up for success by defining a few requirements for the product. We don't want you choosing a project that is too small to last over the next 10 weeks and we don't want you starting to code when you haven't done your due diligence planning. For your MVP, we expect:
+- A clearly defined app idea with a specific audience
+- A large enough scope to take 10+ weeks
+- Two stretch technologies (1 BE and 1 FE) implemented
+- The frontend and backend should "talk" at least 3 different places in the app, with at least one request mutating the data (POST, PATCH, PUT, DELETE)
 
 ## Stretch Technologies
+
+**We expect you to implement 1 stretch tech from each menu below (2 total).** If you would like to add more, you can, but be careful not to bite off too much. If there is a technology you're interested in using that is not on these lists, let your instructor know and we'll do our best to make it work.
+
 <section class="dropdown">
 ### Frontend Menu
 
@@ -42,23 +54,54 @@ Turing grads often struggle post-graduation with establishing solid routines, ke
 - **Observability:** Integrate an observability tool (e.g., New Relic, Skylight, Honeybadger) to monitor and analyze the application’s performance, errors, and resource usage. Students should configure the tool to track response times, database queries, and bottlenecks.
 </section>
 
-## Deliverables
-In your Final Presentation in week 6, you will submit:
-A MVP plan
-2-3 Stretch Techs
-A repo with 2 user stories completed 
-A project board with X tickets
-A calendar
+## Timeline + Deliverables
+
+At the end of the days listed below, you will need to turn in certain deliverables. Your cohort calendar specifies the day of the stretch project so you can easily align when each set of deliverables are due. If you fall behind, talk to your instructor as soon as possible. We want to mimic what communication would look like on the job if you needed more time to complete your assigned tasks.
+
+<section class="note">
+### All deliverables will be turned in via **[this google sheet](https://docs.google.com/spreadsheets/d/1dkhqQctc_6nylYyQII22zLU0He_P1k_xfaJOFngV7dM/edit?usp=sharing)**.
+</section>
+
+<section class="dropdown">
+### Day 2
+- Project Proposal: Make a copy of [this document](https://docs.google.com/document/d/1xUWFfFzSJ09GlWi-55942H2RgDJ8GZN-dTMhNsgakig/edit?usp=sharing) and fill it out. Add the link to your proposal to the google sheet. An instructor will review your proposal. You should not move forward until your proposal has been approved. 
+- Stretch Techs: List the stretch techs you have chosen for your project. 
+</section>
+
+<section class="dropdown">
+### Day 4
+
+- FE Design: We expect to see a thought-out design for your frontend before you start coding. Use any tool you'd like (Canva, Figma, Excalidraw, etc) to create a solid wireframe for your app. If you struggle with design, keep it simple. Less is more when it comes to FE design! Look at similar apps out there and take note of what you like about them. Use those features as inspiration.
+- BE Planning Docs: We also expect to see a strong schema design before you start coding. Use any tool you'd like for this. We want to see what data you plan to manage, how it will be organized, and what the relationships between the data will be. 
+- Stretch Tech Learning Resources: Please find at least 2 resources per stretch tech (4 total) that you will use for learning. This could be the official docs, a tutorial, a YouTube series, etc. 
+</section>
+
+<section class="dropdown">
+### Day 7
+
+- Repo(s): Please create your repo(s) and link them in the google sheet. You don't need to have any code in there yet.
+- Project Board: You will link your project board, which should include:
+  - At least 4 columns, i.e. `To Do`, `In Progress`, `In Review`, `Merged/Done`
+  - At least 6 tickets, with each ticket including a user story
+  - All tickets should be converted to **[issues](https://docs.github.com/en/issues)** in your repo
+      - Issues are sometimes disabled. To enable them go to Settings in the upper right corner, then scroll down to the Features section. Check the Issues box to enable them.
+  - (optional) The use of **[labels](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/managing-labels)** could be very helpful in organizing your Project Board
+    - To view labels on the project board, click the down carrot on the View tab (top left of page) > Fields > ✔️ Labels.
+</section>
+
+<section class="dropdown">
+### Day 9
+
+- First PR: We'd love to (finally) see some code! Choose any ticket from your project board and get it done! Push up a PR and drop the link in the google sheet. This can be BE or FE code. Your PR should [close the associated ticket by referencing the issue](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/linking-a-pull-request-to-an-issue). You can merge this PR anytime, we will not be doing a code review.
+</section>
+
+
+<section class="dropdown">
+### Day 10
+
+- Presentation Slides: Link your presentation slides here. More details in the "Presentation Details" section.
+</section>
+
+## Presentation Details
+calendar
 Reflections on how you will talk about this project in a job interview (sample questions)
-
-
-## Suggested Timeline
-EOD Day 2 - MVP proposal, 2 stretch techs
-EOD Day 3 - 2 learning resources per stretch tech
-EOD Day 5 - repo(s), project board (w/ Xdrive tickets)
-EOD Day 7 - 1 user story done
-EOD Day 8 - Another user story done
-EOD Day 9 - Calendar, more tickets, presentation
-Day 10 - Final Presentations
-
-## Evaluation Details
