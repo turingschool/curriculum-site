@@ -64,7 +64,7 @@ What would it be like if we _didn't_ have a way to run code asychronously?  What
 <section class="call-to-action">
 ### With A Partner
 
-<!-- We've used promises as a way to deal with asynchronous JavaScript when using `fetch`. -->
+We've used .then and promises as a way to deal with asynchronous JavaScript when using `fetch`.
 
 Given the following code snippet:
 ```javascript
