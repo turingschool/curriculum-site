@@ -81,6 +81,7 @@ console.log('burrito');
 * How does `fetch` fit in with the code above and below it?
 * What order will the console logs show up in and why?
 * Using terms like the call stack, Web API, & callback queue, explain this is working behind the scenes.
+* How are promises being utilized in this code?
 </section>
 
 
