@@ -64,7 +64,7 @@ What would it be like if we _didn't_ have a way to run code asychronously?  What
 <section class="call-to-action">
 ### With A Partner
 
-We've used promises as a way to deal with asynchronous JavaScript when using `fetch`.
+<!-- We've used promises as a way to deal with asynchronous JavaScript when using `fetch`. -->
 
 Given the following code snippet:
 ```javascript
@@ -91,7 +91,7 @@ How can JavaScript keep track of what code or function is running at any given t
 <section class="call-to-action">
 ### Video Time
 
-Let's revist the [video from the prework](https://www.youtube.com/watch?v=8aGhZQkoFbQ){:target='blank'} which has some great visualizations for the call stack, event loop, and queue. Pay close attention during the following points:
+The [video from the prework](https://www.youtube.com/watch?v=8aGhZQkoFbQ){:target='blank'} has some great visualizations for the call stack, event loop, and queue. Pay close attention during the following points:
 
 * ***4:15-6:00*** (call stack with synchronous functions)
 * ***6:40*** (stack overflow example)
