@@ -97,8 +97,8 @@ In order to fix it, you need to change the text of the file to include only the 
 * Add collaborator on github
 
 * Check out new branch (`git checkout -b new_feature`)
-* Changes the existing file (the name of the class and some of the attributes - don't change the filename)
-* Commits and pushes to branch
+* Change the existing file (the name of the class and some of the attributes - don't change the filename)
+* Commit and push to branch
   - `git status`
   - `git add filename.rb`
   - `git status`
@@ -107,18 +107,18 @@ In order to fix it, you need to change the text of the file to include only the 
   - Do NOT do anything on GitHub, switch to Person B
 
 #### Person B
-* accepts invitation
-* clones repo (`git clone <ssh key to repo>`)
-* cds into cloned repo
-* checks out a new branch (`git checkout -b add_content`)
-* changes the existing file (change class name and the attributes to something different than person A did)
-* commits and pushes to branch
+* accept invitation
+* clone repo (`git clone <ssh key to repo>`)
+* cd into cloned repo
+* check out a new branch (`git checkout -b add_content`)
+* change the existing file (change class name and the attributes to something different than person A did)
+* commit and push to branch
   - `git status`
   - `git add filename.rb`
   - `git status`
   - `git commit -m "changes first line"`
   - `git push origin add_content`
-* Creates a Pull Request on Github
+* Create a Pull Request on Github
 
  -**Stop Here until your next break out room session**-
 
@@ -128,12 +128,12 @@ In order to fix it, you need to change the text of the file to include only the 
 
 Remote main is now updated.
 
-From `new_feature` branch (should already be on this): 
-* pulls origin main into `new_feature`
+From `new_feature` branch (you should already be on this): 
+* pull origin main into `new_feature` branch
   - `git pull origin main`
-* fixes merge conflict
-* commits and pushes to remote `new_feature`
-* creates pull request on Github
+* fix merge conflict
+* commit and push to remote `new_feature` branch
+* create pull request on Github
 
 #### Person B
 * Review and comment on Person A's Pull Request
@@ -143,6 +143,8 @@ From `new_feature` branch (should already be on this):
 * Checkout local main and pull from main
   * `git checkout main`
   * `git pull origin main`
+ 
+-**Close**-
 
 
 ## Checks for Understanding
