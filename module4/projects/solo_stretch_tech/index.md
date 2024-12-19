@@ -69,7 +69,7 @@ At the end of the days listed below, you will need to turn in certain deliverabl
 </section>
 
 <section class="dropdown">
-### Day 4
+### Day 5
 
 - FE Design: We expect to see a thought-out design for your frontend before you start coding. Use any tool you'd like (Canva, Figma, Excalidraw, etc) to create a solid wireframe for your app. If you struggle with design, keep it simple. Less is more when it comes to FE design! Look at similar apps out there and take note of what you like about them. Use those features as inspiration.
 - BE Planning Docs: We also expect to see a strong schema design before you start coding. Use any tool you'd like for this. We want to see what data you plan to manage, how it will be organized, and what the relationships between the data will be. 
