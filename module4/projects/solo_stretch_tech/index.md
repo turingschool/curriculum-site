@@ -34,7 +34,10 @@ You will be designing this application from the ground up. For the most part, yo
 - **Unit Testing:** In addition to using Cypress for end-to-end testing, implement unit testing in your app using React Testing Library or Jest. 
 - **Progressive Web App:** Create a PWA that (at minimum) uses caching to maintain some offline functionality and fast loading, is fully responsive to screen size, and has an app-like feel for users. 
 - **CSS Technologies:** Up your CSS game with GSAP Animations, WebGL Animations, Bootstrap, Styled Components, or something else you find interesting. If you choose this stretch tech, we'd expect your app design to be extremely strong. 
-- **Mobile Development**: Create an app that uses a frontend mobile language like React Native or Swift. 
+- **Mobile Development:** Create an app that uses a frontend mobile language like React Native or Swift. 
+- **Server-Side Rendering (SSR):** Use a framework like Next.js or Nuxt.js to implement SSR. Students should explain how SSR improves performance and SEO compared to client-side rendering.
+- **Data Visualization:** Implement a robust data visualization library like D3.js, Chart.js, or ECharts to display complex datasets effectively.
+- **WebSockets:** Implement real-time updates or communication using WebSockets, e.g., for a chat feature or live data feed.
 </section>
 
 <section class="dropdown">
@@ -45,7 +48,6 @@ You will be designing this application from the ground up. For the most part, yo
 - **Rate Limiting:** Consider using the gem called “rack-attack” and test to demonstrate it’s working! Students should be able to discuss why rate limiting is an effective feature. Ideally, be able to demonstrate it live using a small script (either live or in production).
 - **Microservice:** Students should create a separate microservice (separate from their BE API app) using Sinatra or a different framework, and be able to speak to the pros/cons of that framework when compared to Rails.
 - **JWT (JSON Web Tokens):** Use the jwt gem for stateless authentication alongside username/password login. Students should explain its benefits and show token expiration and verification
-<!-- **I used chatGPT for the following list items, please change as needed** -->
 - **GraphQL:** Use GraphQL for querying and mutating data. Students should be able to explain the differences between GraphQL and REST. (This would lead to some changes to how you make requests from the frontend, too!)
 - **Pagination:** Implement pagination to limit the amount of data returned in API responses. Students can use strategies like cursor-based pagination or offset-based pagination. They should discuss why pagination is important for performance and scalability.
 - **[Security Vulnerability Scanner](https://github.com/presidentbeef/brakeman):** Use Brakeman, a static analysis tool, to scan the Rails application for potential security vulnerabilities. Students should be able to explain what Brakeman does, why it’s useful, and how it integrates into the development workflow. 
