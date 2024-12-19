@@ -141,7 +141,7 @@ Each student will deliver a slide presentation in front of your instructor. The 
 
 ## Rubric
 
-Passing this project is a requirement for graduation. A student must pass **all three** rubric sections to pass this project. If a student fails to meet expecations for one or more of the rubric sections, instructors will determine next steps.
+Passing this project is a requirement for graduation. A student must pass **all three** rubric sections to pass this project. If a student fails to meet expectations for one or more of the rubric sections, instructors will determine next steps.
 
 ### Work Ethic
 A student passes this section by:
@@ -149,7 +149,7 @@ A student passes this section by:
 - Communicating proactively and professionally when questions and challenges pop up
 - Demonstrating consistent engagement and effort throughout the project
 
-## Work Quality
+### Work Quality
 A student passes this section by:
 - Delivering work that is thoughtful and complete
 - Ensuring that code is well-documented and adheres to best practices
