@@ -102,7 +102,7 @@ At the end of the days listed below, you will need to turn in certain deliverabl
 - Presentation Slides: Link your presentation slides here. More details in the "Presentation Details" section.
 </section>
 
-## Presentation Details
+## Presentation and Evaluation Details
 
 ### Purpose
 Your presentation will highlight your progress on theis project and your plans for your job search moving forward. It’s an opportunity to reflect on your experiences and demonstrate how you’ve grown and learned throughout the process.
