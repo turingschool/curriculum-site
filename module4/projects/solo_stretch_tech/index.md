@@ -18,6 +18,7 @@ For the most part, you will spend the next 2 weeks planning and getting your pro
 
 You will be designing this application from the ground up. For the most part, you have control over what you build, but we want to help set you up for success by defining a few requirements for the product. We don't want you choosing a project that is too small to last over the next 10 weeks and we don't want you starting to code when you haven't done your due diligence planning. For your MVP, we expect:
 - A clearly defined app idea with a specific audience
+  - ex. "A budget management app for freelancers to track income, expenses, and tax deductions."
 - A large enough scope to take 10+ weeks
 - Two stretch technologies (1 BE and 1 FE) implemented
 - The frontend and backend should "talk" at least 3 different places in the app, with at least one request mutating the data (POST, PATCH, PUT, DELETE)
@@ -74,7 +75,7 @@ At the end of the days listed below, you will need to turn in certain deliverabl
 ### Day 5
 
 - FE Design: We expect to see a thought-out design for your frontend before you start coding. Use any tool you'd like (Canva, Figma, Excalidraw, etc) to create a solid wireframe for your app. If you struggle with design, keep it simple. Less is more when it comes to FE design! Look at similar apps out there and take note of what you like about them. Use those features as inspiration.
-- BE Planning Docs: We also expect to see a strong schema design before you start coding. Use any tool you'd like for this. We want to see what data you plan to manage, how it will be organized, and what the relationships between the data will be. 
+- BE Planning Docs: We also expect to see a strong schema design before you start coding. Use any tool you'd like for this (dbdiagram.io, Lucidchart, etc). We want to see what data you plan to manage, how it will be organized, and what the relationships between the data will be. 
 - Stretch Tech Learning Resources: Please find at least 2 resources per stretch tech (4 total) that you will use for learning. This could be the official docs, a tutorial, a YouTube series, etc. 
 </section>
 
