@@ -110,7 +110,7 @@ Your first PR will be pushed up by EOD Day 9. This PR will close one of your iss
 - Presentation Slides: Link your presentation slides here. More details in the "Presentation Details" section.
 </section>
 
-## Presentation and Evaluation Details
+## Presentation Guidelines
 
 ### Purpose
 Your presentation will highlight your progress on this project and your plans for your job search moving forward. It’s an opportunity to reflect on your experiences and demonstrate how you’ve grown and learned throughout the process.
@@ -120,11 +120,6 @@ Your presentation will highlight your progress on this project and your plans fo
   - Develop an organized slide deck or Google document to present your progress and plan moving forward.
   - Include visual aids, such as charts or graphs, to enhance your presentation.
 - Instructor feedback (~5 minutes)
-
-### Potential Outcomes
-- If everything goes according to plan: good luck in the future!
-- If a student fails to present (due to illness, etc), please arrange an alternate time to present to instructors.
-- If a student delivers an exceptionally poor presentation: instructors will determine the next steps.
 
 ### Format
 Each student will deliver a slide presentation in front of your instructor. The presentation will include the following sections:
@@ -140,3 +135,28 @@ Each student will deliver a slide presentation in front of your instructor. The 
   - How will you continue to be motivated to work on this? 
 4. Organizing your post-grad time
   - Show us your calendar for the first 2 weeks post-graduation. This should include time for working on your Stretch Tech project AND job hunt activities/networking.
+
+## Rubric
+
+Passing this project is a requirement for graduation. A student must pass **all three** rubric sections to pass this project. If a student fails to meet expecations for one or more of the rubric sections, instructors will determine next steps.
+
+### Work Ethic
+A student passes this section by:
+- Meeting all deadlines for deliverables
+- Communicating proactively and professionally when questions and challenges pop up
+- Demonstrating consistent engagement and effort throughout the project
+
+## Work Quality
+A student passes this section by:
+- Delivering work that is thoughtful and complete
+- Ensuring that code is well-documented and adheres to best practices
+- Showing clear evidence of understanding of both frontend and backend code
+- Implementing and integrating stretch technologies effectively
+
+### Presentation
+A student passes this section by:
+- Following all instructions carefully from the Presentation Guidelines section
+- Presenting with clarity and confidence, showcasing a strong understanding of their project
+- Effectively using visual aids to enhance the presentation
+- Reflecting thoughtfully on both challenges and successes encountered during the project
+- Presenting a clear plan for after graduation
