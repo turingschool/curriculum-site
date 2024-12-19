@@ -88,6 +88,13 @@ At the end of the days listed below, you will need to turn in certain deliverabl
       - Issues are sometimes disabled. To enable them go to Settings in the upper right corner, then scroll down to the Features section. Check the Issues box to enable them.
   - (optional) The use of **[labels](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/managing-labels)** could be very helpful in organizing your Project Board
     - To view labels on the project board, click the down carrot on the View tab (top left of page) > Fields > ✔️ Labels.
+
+</section>
+
+<section class="note">
+### It's time to start coding!
+
+Your first PR will be pushed up by EOD Day 9. This PR will close one of your issues/tickets. Pick any user story from your project board and start working. If you're finding it hard to close an issue in 2 days, the issue is too big. Revisit your project board and break your tickets into smaller chunks.
 </section>
 
 <section class="dropdown">
