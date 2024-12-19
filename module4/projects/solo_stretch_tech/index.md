@@ -131,17 +131,12 @@ Each student will deliver a slide presentation in front of your instructor. The 
 
 1. Progress on the project so far 
   - What have you accomplished so far? 
+  - What did you learn from spending ~a week on planning before jumping into the code?
   - How will you talk about this project in your job hunt? 
 2. Reflections on your stretch techs
   - How have you approached learning these new technologies? How does this relate to learning things on the job?  
   - What has been challenging?  
-2. Plan for the project moving forward
+3. Plan for the project moving forward
   - How will you continue to be motivated to work on this? 
-3. Reflections on job search so far
-  - What has your job hunt strategy been so far?
-  - How have you been networking? 
-  - What is working? What isn't?
-4. Plan for job searching moving forward
-  - What is your strategy in the coming weeks to secure a job?
-5. Organizing your post-grad time
-  - Show us your calendar for the first 2 weeks post-graduation. This should include time for working on your Stretch Tech project AND job hunt activities.
+4. Organizing your post-grad time
+  - Show us your calendar for the first 2 weeks post-graduation. This should include time for working on your Stretch Tech project AND job hunt activities/networking.
