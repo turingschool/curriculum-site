@@ -80,6 +80,7 @@ At the end of the days listed below, you will need to turn in certain deliverabl
 ### Day 7
 
 - Repo(s): Please create your repo(s) and link them in the google sheet. You don't need to have any code in there yet.
+- CI/CD: Set up continuous integration on both repos. We recommend using Github actions or CircleCI for this
 - Project Board: You will link your project board, which should include:
   - At least 4 columns, i.e. `To Do`, `In Progress`, `In Review`, `Merged/Done`
   - At least 6 tickets, with each ticket including a user story
