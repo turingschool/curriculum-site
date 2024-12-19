@@ -136,4 +136,4 @@ Each student will deliver a slide presentation in front of your instructor. The 
 4. Plan for job searching moving forward
   - What is your strategy in the coming weeks to secure a job?
 5. Organizing your post-grad time
-  - Show us your calendar for the first 2 weeks post-graduation.
+  - Show us your calendar for the first 2 weeks post-graduation. This should include time for working on your Stretch Tech project AND job hunt activities.
