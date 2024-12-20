@@ -81,7 +81,6 @@ Students are expected to score in the **Meets Expectations** category. If any on
   * Moves tasks along on the project board in real time (or close to it)
   * Communicates effectively with team members and project manager through appropriate channels
   * Collaborates well on pair programming tasks, showing both the ability to lead and follow
-  * Provides constructive and actionable feedback on at least 3 pull requests
   * Seeks clarification when requirements or tasks are unclear
   * Demonstrates active listening skills during team discussions and meetings
   * Shows willingness to help team members when they encounter difficulties
@@ -162,6 +161,7 @@ Students are expected to score in the **Meets Expectations** category. If any on
   * App has passing CI and is deployed successfully after every PR is merged
 - **Meets Expectations:**
   * Uses Pull Request templates and at least three PRs include specific questions/asks of the code reviewer
+  * Provides constructive and actionable feedback on at least 3 pull requests
   * Writes clear and descriptive commit messages following a consistent convention
   * Creates focused, small pull requests that are easy to review, but one may be larger than expected
   * Regularly pushes code and keeps the remote repository up-to-date
