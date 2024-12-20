@@ -74,7 +74,6 @@ Students are expected to score in the **Meets Expectations** category. If any on
 ### Collaborative Workflow
 - **Exceeds Expectations:**
   * Consistently updates project board and includes progress and blockers
-  * Provides constructive and actionable feedback on 4 or more pull requests
   * Uses co-authored commits on paired pull requests
   * Solicits project ideas and feedback from quieter teammates
 - **Meets Expectations:**
@@ -87,11 +86,9 @@ Students are expected to score in the **Meets Expectations** category. If any on
   * Transparently communicates blockers and seeks help when appropriate
 - **Approaching Expectations:**
   * Updates the project board about once per day
-  * Provides constructive and actionable feedback on at least 2 pull requests
   * Ineffective time boxing: Spends too much time trying to figure things out on their own before asking for help or struggles to communicate blockers and seek help in a timely manner
 - **Below Expectations:**
   * Updates project board less than once per day
-  * Provides constructive and actionable feedback on 1 or fewer pull requests
   * Behaving in an anti-collaborative way. This might look like:
     * Not contributing to project planning or decision making discussions
     * Disappearing for 24 hours or more (Monday-Friday) without notice or explanation
@@ -155,6 +152,7 @@ Students are expected to score in the **Meets Expectations** category. If any on
 ### Git Workflow and Deployment
 - **Exceeds Expectations:**
   * Uses Pull Request templates and at least four PRs include specific questions/asks of the code reviewer
+  * Provides constructive and actionable feedback on 4 or more pull requests  
   * Always creates focused, small pull requests that are easy to review
   * Rebases before merging
   * Deletes branches after merging
@@ -169,12 +167,14 @@ Students are expected to score in the **Meets Expectations** category. If any on
   * App has passing CI and is deployed successfully after almost every PR is merged, with few exceptions (misses no more than twice)
 - **Approaching Expectations:**
   * Uses Pull Request templates and at least two PRs include specific questions/asks of the code reviewer
+  * Provides constructive and actionable feedback on at least 2 pull requests
   * Creates focused, small pull requests that are easy to review, but up to two may be larger than expected
   * Commit messages are usually clear and always professional, but don't always follow a consistent convention
   * Uses a new branch for each issue and each Pull Request but may accidentally reuse a branch once or twice
   * App usually has passing CI and is usually deployed successfully after a PR is merged, with some exceptions (misses no more than 3 times)
 - **Below Expectations:**
   * Uses PR templates but fewer than two PRs include specific questions/asks of the code reviewer
+  * Provides constructive and actionable feedback on 1 or fewer pull requests
   * Commit messages are often unclear, sometimes unprofessional, and don't always follow a consistent convention
   * Creates focused, small pull requests that are easy to review, but more than two may be larger than expected
   * Inconsistently pushes code or pushes directly to `main`
