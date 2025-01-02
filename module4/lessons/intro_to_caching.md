@@ -1,4 +1,10 @@
-# Intro to Caching in Rails
+---
+title: Intro to Caching
+layout: page
+tags: caching
+module: 4
+---
+
 
 ## Learning Goals
 
@@ -102,7 +108,7 @@ Fortunately this is such a common use-case that Rails includes built-in support 
 
 ## Workshop — Caching in Rails
 
-For this exercise we'll use our beloved [Set List API](https://github.com/turingschool-examples/set-list-api). We'll be using the `caching_start` branch. Be sure to run the step up steps in the README, with a special eye on the Rails credentials set up so that our API can reach the external Pexels API.  
+For this exercise we'll use our beloved [Set List API](https://github.com/turingschool-examples/set-list-api/tree/caching_start). We'll be using the `caching_start` branch. Be sure to run the step up steps in the README, with a special eye on the Rails credentials set up so that our API can reach the external Pexels API.  
 
 ```bash
 bundle install
@@ -110,9 +116,8 @@ rails db:{drop,create,migrate,seed}
 EDITOR="code --wait" rails credentials:edit
 ```
 
-*Demo -- looking for performance bottlenecks*
 
-*Observe while I run through the app and talk about looking for problems*
+*Try to send some requests, particuarly to retrieve images, and identify potential bottlenecks*
 
 
 ### Step 1 -- enable caching in development
