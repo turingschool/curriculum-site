@@ -6,7 +6,7 @@ title: FlashCards - Setup
 _[Back to FlashCards Home](./index)_
 
 
-* Fork [this repository](https://github.com/turingschool-examples/flash_cards)
+* Fork <a href="https://github.com/turingschool-examples/flash_cards" target="_blank">this repository</a>
 * Clone YOUR fork to your computer
 * Make sure you don't clone the turingschool-examples repository
   * You can confirm that you have cloned the correct repository by running `git remote -v`. You should see something like this:

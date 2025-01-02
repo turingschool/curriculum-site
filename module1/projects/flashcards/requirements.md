@@ -18,6 +18,6 @@ In addition to the functionality outlined in these iterations, we will expect th
 * write tests for each class
 * write readable code
 * make frequent commits
-* use pull requests
+* submit via pull request
 
 For more detailed information about what we expect, please review the [rubric](./rubric) before starting this project!

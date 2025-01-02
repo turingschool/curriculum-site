@@ -235,7 +235,7 @@ Today you will work on `iteration 1` of [this activity](https://github.com/kayla
 <section class="call-to-action">
 ### Solo Journaling
 
-- How does CSS differ from HTML?
+- How does CSS get applied to HTML elements?
 - Explain the Box Model
 - What questions do you still have about CSS?
 

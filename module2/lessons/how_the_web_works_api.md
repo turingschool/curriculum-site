@@ -201,7 +201,8 @@ When thinking about the role that APIs play in our web applications, they are an
 - **Rate Limiting:** Many APIs restrict the number of requests you can make in a given time period.
 - **Cost:** Some APIs charge for usage, which can become expensive as your application scales.
 - **Versioning Issues:** API providers may update their services, potentially breaking your integration if you don't keep up.
-- **Limited Conrol:** You're bound by the API's functionality and can't easily modify it to suit your specific needs.
+- **Limited Control:** You're bound by the API's functionality and can't easily modify it to suit your specific needs.
+
 </section>
 
 ## Additional Postman Practice

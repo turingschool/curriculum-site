@@ -19,9 +19,9 @@ In Module 2, students will be introduced to HTML, CSS, and JavaScript while also
 - [Lessons](./lessons)
 - [Projects](./projects)
 
-<!-- ## Other Resources
+## Other Resources
 
-- Coming Soon! -->
+- [Active Record Obstacle Course](https://github.com/turingschool-projects/activerecord-obstacle-course)
 
 ## Requirements
 

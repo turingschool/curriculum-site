@@ -7,7 +7,7 @@ _[Back to FlashCards Home](./index)_
 
 ## Peer Code Review
 
-With your partner, please answer the following questions.  Take notes and share those notes with your partner.
+With your partner, please answer the following questions.
 
 1. Review the `number_correct` method on the Round class:
     * Discuss the decisions you made to either store this information as an instance variable, or calculate the number any time the method is called.

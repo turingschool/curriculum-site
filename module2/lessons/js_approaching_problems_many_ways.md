@@ -322,4 +322,4 @@ Steps in the solution:
 
 
 ## Looking Ahead
-While you are working on jsFUNk, **take the time to solve the same problem multiple ways**. This will reduce the likelihood that you become too attached or too afraid of an iterator method. It can also help to understand each method better if you are comparing them to each other. Remember that jsFUNk is there to help you learn - finishing the problems as fast as you can is not the goal!
+While you are working on jsFunk, **take the time to solve the same problem multiple ways**. This will reduce the likelihood that you become too attached or too afraid of an iterator method. It can also help to understand each method better if you are comparing them to each other. Remember that jsFunk is there to help you learn - finishing the problems as fast as you can is not the goal!

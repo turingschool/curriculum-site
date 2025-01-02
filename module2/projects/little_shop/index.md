@@ -20,7 +20,7 @@ Your job is to expose the data that powers the site through an API that a front 
 - Expose API endpoints to CRUD database resources
 - Validate models and handle sad paths for invalid data input
 - Test both happy and sad path functionality based on JSON contracts
-- Use MVC to organize code effectively, lmiting data logic in controllers and serializers
+- Use MVC to organize code effectively, limiting data logic in controllers and serializers
 - Track user stories with GitHub Projects
 <!-- * Deploy your application to the internet -->
 - Improve an existing FE application by:

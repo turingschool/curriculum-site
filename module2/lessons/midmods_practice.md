@@ -170,4 +170,4 @@ console.log(calculateCost('marta'));
 
 ## Closing 
 
-You're ready for midmods! If anything weird happened with VS Code Live Share, let your instructors know right away. Remember that working through **[your jsFUNk repo](https://github.com/turingschool-examples/jsFUNk)** is the best way to technically prepare for M2 assessments. You got this!
+You're ready for midmods! If anything weird happened with VS Code Live Share, let your instructors know right away. Remember that working through **[your jsFunk repo](https://github.com/turingschool-examples/jsFunk)** is the best way to technically prepare for M2 assessments. You got this!

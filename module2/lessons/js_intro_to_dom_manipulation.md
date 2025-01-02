@@ -369,7 +369,7 @@ Note that if you are going to add/remove a class via JavaScript, that class shou
 ### Key Takeaways
 - In your CSS file you can apply styles to specific class selectors.  Then you can use JS to add/remove/toggle that class to specified elements so that it will/will not have those styles applied.
 - If you're going to add/remove a class with JavaScript, the styling for that class should be declared **below** the original styling for the given element in the CSS file. 
-- We _can_ apply styles to an element directly with JavaScript but manipulating the `.style` property - but we do not want to do this.
+- We _can_ apply styles to an element directly with JavaScript by manipulating the `.style` property - but we do not want to do this.
 
 
 </section>

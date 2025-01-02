@@ -35,7 +35,6 @@ Any code that uses a React-Router-provided component must be wrapped in a _route
 #### Route Matchers
 2. What does the `<Route />` component do? 
 3. What does the `<Routes />` component do?
-4. What does the `<Outlet />` component do?
 
 #### Route Changers
 9. What does the `<Link />` component do? How does a user interact with it?
