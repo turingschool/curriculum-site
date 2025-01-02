@@ -100,15 +100,14 @@ What sorts of things might we want to cache in a Rails app? (try to list at leas
 
 Fortunately this is such a common use-case that Rails includes built-in support for it via the cache helper. Let's take a look.
 
-## Workshop — Caching in Rails pt. 1
+## Workshop — Caching in Rails
 
-For this exercise we'll use
+For this exercise we'll use our beloved [Set List API](https://github.com/turingschool-examples/set-list-api). We'll be using the `caching_start` branch. Be sure to run the step up steps in the README, with a special eye on the Rails credentials set up so that our API can reach the external Pexels API.  
 
 ```bash
-$ git clone https://github.com/turingschool-examples/storedom-7 caching_strategies
-$ cd caching_strategies
-$ bundle
-$ bundle exec rake db:{drop,setup}
+bundle install
+rails db:{drop,create,migrate,seed}
+EDITOR="code --wait" rails credentials:edit
 ```
 
 *Demo -- looking for performance bottlenecks*
@@ -152,130 +151,119 @@ Why do you need to restart your server?
 
 ## Step 2 — cache 'em all!
 
+By now you've probably noticed that our API call to get image data for a given artist is taking forever! If you take a look at the `ImageGateway`, you might notice why:
 
-*Cache Keys*
+```ruby
+  def self.get_images_for_artist(artist)
+    sleep(3)
+    response = conn.get("/v1/search", { query: artist })
 
-We'll talk more about cache keys in a future lesson, but for now, think back to the `PizzaShop` example from above.
+    json = JSON.parse(response.body, symbolize_names: true)
+    json[:photos][0]
+  end
+```
+
+This API call isn't actually very slow, but this `sleep(3)` is simulating an operation that might not be very performant, and therefore might be a great candidate for caching. Sometimes, API calls *can* actually be this slow, or they might require authentication flows that include multiple requests. In any case, slow or complex network calls are a great place to put caching to use. 
+
+### Low-Level Caching
+
+Take a look at the [Rails docs section on caching](https://guides.rubyonrails.org/caching_with_rails.html#low-level-caching-using-rails-cache) and try to play around with caching this request. Don't check out the drop-down below until you've tried this implementation solo or with a partner!
+
+<section class="dropdown">
+### Possible Implementation - Part I
+
+**app/controllers/api/v1/images_controller.rb**
+```ruby
+class Api::V1::ImagesController < ApplicationController
+  def show
+    first_photo = Rails.cache.fetch("image_data", expires_in: 12.hours) do
+      ImageGateway.get_images_for_artist(params[:artist])
+    end
+
+    render json: ImageSerializer.format_image(first_photo)
+  end
+end
+```
+
+</section>
+
+At this point, our single image request can be done again and again and completed in no time. When testing this request out in Postman, you should be able to detect the difference between a response that calls out to the API, and a response that fetches from the cache. 
+
+If we change the artist we're querying for, though, you might notice something off...
+
+Why is nothing in the response changing?
+
+### Cache Keys
+
+Let's think back to the `PizzaShop` example from above.
 
 In that case the "pizza type" we were providing was serving as a "key" -- a way of matching the specific piece of information we requested with what had already been stored in the cache.
 
 If we didn't use pizza types to label the data in the cache, a user might come in asking for "pepperoni" pizza and get back "anchovy and blue cheese". Which is effectively what's happening in our current example.
 
-## Step 4 — Differentiating Cached Data with Keys
+We need our cache to hold different values based on the input coming in the request - in this case the artist parameter. Based on the Rails docs and your own ideas, what sort of solution can you come up with? Once you have a solution in place, take a look at the dropdown below. 
 
+<section class="dropdown">
+### Possible Implementation - Part II
 
-## Step 6 — Cache Invalidation: A Better Way
-
-
-**Discussion** - Let's think about what information might be useful for generating a cache key for our list of items.
-
-Ultimately we can infer whether there have been any item updates based on these pieces of information:
-
-- The maximum "updated_at" timestamp across all items
-- The count of all items
-
-Let's change our the caching implementations in our view templates to use this approach:
-
-
-**Discussion** -- Talk about explicit/manual cache keys.
-
-Are there any tradeoffs involved in this approach? What are the potential downsides?
-
-- We're incurring a higher cost now whenever we want to check the cache key (since we have to first check the count and max timestamp of the items)
-- In exchange for this penalty, we get more accurate cache updating without having to include manual expiration callbacks elsewhere in our code.
-- On the other hand, the manual expiration approach allows us to achieve faster *reads* in exchange for clunkier *writes*
-
-As with everything in software development, we simply have to weigh these pros and cons to decide which tradeoff is more worthwhile.
-
-In some situations, it may be perfectly fine to *not explicitly update the cache at all*. Instead, we might simply say "let this cache expire after 30 minutes", regardless of what data changes may have taken place.
-
-## Optional — Refactoring With A Cache Key Helper
-
-It's kind of a drag to have this string interpolation for generating the cache keys just hanging out in our templates. Let's use a helper to pull it out:
-
-*app/helpers/application_helper.rb*
-
+**app/controllers/api/v1/images_controller.rb**
 ```ruby
-module ApplicationHelper
-  def cache_key_for(model_class, label = "")
-    prefix = model_class.to_s.downcase.pluralize
-    count = model_class.count
-    max_updated = model_class.maximum(:updated_at)
-    [prefix, label, count, max_updated].join("-")
+class Api::V1::ImagesController < ApplicationController
+  def show
+    first_photo = Rails.cache.fetch("image_data_#{params[:artist]}", expires_in: 12.hours) do
+      ImageGateway.get_images_for_artist(params[:artist])
+    end
+
+    render json: ImageSerializer.format_image(first_photo)
   end
 end
 ```
 
-*app/views/items/index.html.erb*
+</section>
 
-```html
-	<div class="container">
-  <% cache cache_key_for(Item, "count") do %>
-    <div class="row">
-      <div class="col-sm-12">
-        <h1><%= @items.count %> Items</h1>
-      </div>
-    </div>
-  <% end %>
-  <div class="row"></div>
-  <% cache cache_key_for(Item, "list") do %>
-    <% @items.each do |item| %>
-      <div class="col-sm-3">
-        <h5><%= item.name %></h5>
-        <%= link_to(image_tag(item.image_url), item_path(item)) %>
-        <p>
-          <%= item.description %>
-        </p>
-      </div>
-    <% end %>
-  <% end %>
-</div>
-```
+## Step 3 - Cache Invalidation - A Tricky Question
 
-## Step 7 - Let Rails Do It For You
+Low-level caching in Rails is pretty straightforward! But how do we decide when cached data is 
+no longer relevant? 
 
-*app/views/items/index.html.erb* 
-```html
-<div class="container">
-  <div class="row">
-    <div class="col-sm-12">
-      <% cache @items.count do %>
-        <h1><%= @items.count %> Items</h1>
-      <% end %>
-    </div>
-  </div>
-  <div class="row"></div>
-  <% cache @items do %>
-    <% @items.each do |item| %>
-      <% cache item do %>
-        <div class="col-sm-3">
-          <h5><%= item.name %></h5>
-          <%= link_to(image_tag(item.image_url), item_path(item)) %>
-          <p>
-            <%= item.description %>
-          </p>
-        </div>
-      <% end %>
-    <% end %>
-  <% end %>
-</div>
-```
+Can you identify a use case where cached data...
+* might need to update within the hour?
+* might need to be updated when a given event triggers it?
+* might not need to be updated for several days?
 
-Note here that on our first load, we are writing all of these fragments, and that when are refreshing, we are doing a much smaller hit to the database.
+<section class="dropdown">
 
-## Caching in Rails pt 2: Low-Level Caching
+### Possible Use Cases
 
-Rails also has some built in methods for caching in other parts of an application besides the view. Low-level caching is a great option for caching data that comes from an external API. 
+* Within an hour: weather data
+* Event-based: until a database operation updates the corresponding record
+  * Keep in mind that Rails encourages caching only IDs or other identifying primitive data,
+  rather than an ActiveRecord instance itself. Can you guess why?
+* (Relatively) Longer-term caching: data pertaining to government officials retrieved from an external API
+</section>
 
-### Low-Level Caching Challenge
-
-With a pair, read through this section of the [docs](https://guides.rubyonrails.org/caching_with_rails.html#low-level-caching) about low-level caching, and see if you can implement it in the IpLocationService class. If you get stuck, check out the `caching-complete` branch of the Storedom repo. 
+Deciding how to invalidate your cache can be one of the trickiest parts of caching. Performance and data 
+integrity can seem at odds, and striking the right (or close-enough) balance is the key. 
 
 
-## Next Steps — If you finish all of the steps above, consider the following challenges
+### Further Exploration
 
-- Russian-doll caching: Currently we're caching all of the items and orders as a single blob. Can you update your solution to cache the records as a group *as well as* each individual record by itself? Refer to [this section of the Rails guides](http://guides.rubyonrails.org/caching_with_rails.html#fragment-caching) to get started.
-- Dependent update -- Currently we're expiring the order display when an order is updated, but what would happen if an item associated with an order was updated (perhaps it changes its name)? At that point the order listing would be incorrect. Fortunately ActiveRecord gives us a `touch` option on `belongs_to` associations to help in this situation. Consult [this section](http://guides.rubyonrails.org/association_basics.html#touch) of the Rails Guides to see how it works. Add this to your Item<->Order association to get order display to update when a relevant item is updated.
+- [AWS: Caching Challenges and Strategies](https://aws.amazon.com/builders-library/caching-challenges-and-strategies/)
 - A different storage mechanism: We haven't really touched on the question of where the cached data is stored. By default rails actually uses the file system to store cached data. Can you update it to use Memcached instead? You'll want to use [this section](http://guides.rubyonrails.org/caching_with_rails.html#activesupport-cache-memcachestore) of the Rails guides as well as some googling to get started. Some of the issues you'll need to address include: installing memcached (via brew); using the dalli gem to access it; configuring rails to use memcached as its cache store.
+- [Redis to a Ruby on Rails Application](https://yaasir007.medium.com/redis-to-a-ruby-on-rails-application-21c3105219a3)
 
-A completed repo for this lesson plan can be found on this branch [here](https://github.com/turingschool-examples/storedom-7/tree/caching-complete).
+## Checks for Understanding
+
+Categorize each of these use cases as a case for caching, or a database.
+
+* Storing the product list for fast rendering of the homepage of an online boutique.
+* Storing long-living data about users and their accounts
+* Storing results of expensive database queries for popular searches.
+* Storing HTML fragments for quicker rendering
+* Storing data with complex relationships, like a many-to-many relationship between a user and their environments
+* Storing data that needs to reliably update, like a comment that a user created, and sees again when they return to the page weeks later
+* Storing E-commerce inventory management data where stock levels are updated frequently.
+* Tracking request counts for a user or IP to enforce limits.
+* Storing an enormous volume of data
+
+
