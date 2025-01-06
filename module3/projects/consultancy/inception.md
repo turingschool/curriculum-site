@@ -20,7 +20,6 @@ These items must be shared with your project manager before you can begin develo
     - MVP definition
     - Wireframes
     - Chosen external API
-    - Chosen BE stretch tech
     - React Component Architecture Diagram
     - Database Schema
 4. User Stories in Project Board
