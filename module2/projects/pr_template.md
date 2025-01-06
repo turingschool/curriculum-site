@@ -43,6 +43,10 @@ Checklist:
   - [ ] I have commented my code, particularly in hard-to-understand areas
   - [ ] I have fully tested my code
 
+(Optional) What questions do you have? Anything specific you want feedback on?
+
+  * 
+
 (For Fun!) Please include a link to a gif [or add an emoji] of your feelings about this branch.
 
 Link:
