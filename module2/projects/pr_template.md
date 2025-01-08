@@ -8,40 +8,39 @@ title: Pull Request Template Info
 Example PR Template
 
 ```plaintext
-- [ ] Wrote tests? - [ ] Implemented the code? - [ ] Reviewed my code?
-
-Necessary check marks:
-
-  - [ ] All Tests are Passing
-  - [ ] The code will run locally
-
 Type of change
 
   - [ ] New feature
   - [ ] Bug Fix
 
-Implements/Fixes:
-
-  # Description of work...
-
 Check the correct boxes
 
-  - [ ] This broke nothing
-  - [ ] This broke some stuff
-  - [ ] This broke everything
+  - [ ] This code broke nothing
+  - [ ] This code broke some stuff
+  - [ ] This code broke everything
 
-Testing Changes
+Implements/Fixes:
 
-  - [ ] No Tests have been changed
-  - [ ] Some Tests have been changed
-  - [ ] All of the Tests have been changed(Please describe what in the world happened)
+  - Description of work...
+
+Testing Changes:
+
+  - [ ] I have fully tested my code 
+  - [ ] All tests are passing
+  - [ ] Some tests are failing
+  - [ ] All tests are failing
+
+  - [ ] No previous tests have been changed
+  - [ ] Some previous tests have been changed
+  - [ ] All of the previous tests have been changed (Please describe what in the world happened that all of the previous tests needed changing.)
+
 
 Checklist:
 
-  - [ ] My code has no unused/commented out code
   - [ ] I have reviewed my code
+  - [ ] The code will run locally
+  - [ ] My code has no unused/commented out code
   - [ ] I have commented my code, particularly in hard-to-understand areas
-  - [ ] I have fully tested my code
 
 (Optional) What questions do you have? Anything specific you want feedback on?
 
