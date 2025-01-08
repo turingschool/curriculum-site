@@ -34,7 +34,6 @@ Testing Changes:
   - [ ] Some previous tests have been changed
   - [ ] All of the previous tests have been changed (Please describe what in the world happened that all of the previous tests needed changing.)
 
-
 Checklist:
 
   - [ ] I have reviewed my code
