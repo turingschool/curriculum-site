@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Error Handling in Rails Application
+message: Error Handling in Rails Application
 length: 150
 tags: rails, errors, rescue, raise, exceptions
 ---
@@ -226,7 +226,7 @@ def show
       errors: [
         {
           status: "404",
-          title: exception.message
+          message: exception.message
         }
       ]
     }, status: :not_found
@@ -307,7 +307,7 @@ def create
       errors: [
         {
           status: "422",
-          title: exception.message
+          message: exception.message
         }
       ]
     }, status: :unprocessable_entity
@@ -342,7 +342,7 @@ def create
         errors: [
           {
             status: "422",
-            title: song.errors.full_messages
+            message: song.errors.full_messages
           }
         ]
       }, status: :unprocessable_entity
