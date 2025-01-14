@@ -610,8 +610,8 @@ This endpoint should:
       "id": "86",
         "type": "invoice",
         "attributes": {
-          "customer_id": "17",
-          "merchant_id": "3",
+          "customer_id": 17,
+          "merchant_id": 3,
           "status": "shipped"
         }
     },
@@ -619,8 +619,8 @@ This endpoint should:
       "id": "186",
         "type": "invoice",
         "attributes": {
-          "customer_id": "39",
-          "merchant_id": "3",
+          "customer_id": 39,
+          "merchant_id": 3,
           "status": "shipped"
         }
     },
@@ -628,8 +628,8 @@ This endpoint should:
       "id": "318",
         "type": "invoice",
         "attributes": {
-          "customer_id": "67",
-          "merchant_id": "3",
+          "customer_id": 67,
+          "merchant_id": 3,
           "status": "shipped"
         }
     }
@@ -662,6 +662,16 @@ Once you choose the group you are implementing, you will build the corresponding
 * `GET /api/vi/items/find_all`, find all items which match a search term
 * `GET /api/vi/merchants/find`, find a single merchant which matches a search term
 * `GET /api/vi/merchants/find_all`, find all merchants which match a search term
+
+<section class="call-to-action">
+#### Route Ordering
+
+Rails reads our routes top-to-bottom. When we get into creating non-RESTful routes, we run the risk of having Rails interpret a string in our routes as a dynamic variable. For example, if we have both of the routes below:
+* `/api/v1/merchants/find`
+* `/api/v1/merchants/:id`
+There is a possibility that, depending on which route is defined first, the `find` string in the path can be incorrectly interpreted by Rails as the value of the dynamic `:id` segment. So, if you are working on these routes and find that your `find` request is ending up hitting a different controller action that what you expected, expermient with playing around with route ordering!
+
+</section>
 
 These endpoints will make use of query parameters as described below:
 <section class="dropdown">
