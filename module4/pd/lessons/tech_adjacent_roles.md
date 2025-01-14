@@ -34,6 +34,6 @@ Lesson 1: [Support Engineering](./support_engineering)
 
 Lesson 2: [Technical Writing and Quality Assurance](./technical_writing_and_QA)
 
-Lesson 3: Operations and Reliability
+Lesson 3: [Operations and Reliability](./operations_and_reliability)
 
 Lesson4: Education and Community Content
