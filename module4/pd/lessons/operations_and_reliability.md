@@ -38,7 +38,7 @@ Since starting at Turing, how many times have family members come to you with �
     
 4. **Training & Documentation**
     
-    Develop and lead staff training, workshops, and coaching. Create and maintain SOPs, training materials, and documentation to support processes, procedures, and security measures.
+    Develop and lead staff training, workshops, and coaching. Create and maintain SOPs (standard operating procedures), training materials, and documentation to support processes, procedures, and security measures.
     
 5. **Hardware, Software & Telecommunications**
     
@@ -55,7 +55,7 @@ Click to 20:36 to be all kinds of inspired, but when asked if he could give any 
 </section>
 
 <section class="dropdown">
-### Lets Try it! 
+### Let's Try it! 
 
 **Technology Problem-Solving**
     
@@ -76,7 +76,7 @@ Alternative job titles with similar responsibilities:
 </section>
 
 ## Site Reliability Engineer (SRE)
-Similarly, Brennan Ayers 1903 found himself searching for a new job and was “willing to take anything." He came across a Site Reliability Engineering (SRE) Role and decided to pivot from devopment. A Site Reliability Engineer ensures that software systems are reliable, scalable, and efficient. They blend software engineering and operations to automate tasks like deployments, monitor system performance, and quickly resolve incidents. Their main goal is to maintain uptime while improving systems through automation and optimization.
+Similarly, Brennan Ayers 1903 found himself searching for a new job and was “willing to take anything." He came across a Site Reliability Engineering (SRE) Role and decided to pivot from development. A Site Reliability Engineer ensures that software systems are reliable, scalable, and efficient. They blend software engineering and operations to automate tasks like deployments, monitor system performance, and quickly resolve incidents. Their main goal is to maintain uptime while improving systems through automation and optimization.
 
 ### Key Responsibilities:
 
@@ -101,7 +101,7 @@ We had the chance to chat with Brennan, who transitioned from a traditional engi
 <iframe width="560" height="315" src="https://www.youtube.com/embed/9gh2dUtmSSs?si=Zqq78dZi9egcS10A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 <section class="dropdown">
-### Lets Try it! 
+### Let's Try it! 
 
 **🚨 Keep the System Running! 🚨**
     
@@ -122,7 +122,7 @@ We had the chance to chat with Brennan, who transitioned from a traditional engi
 ## Wrap up
 
 <section class="checks-for-understanding">
-  #### In your notebook take some time to reflect on your experiences before Turing, the new skillset you’ve acquired, and how those can be applied to Tech Manager and a SRE.
+  In your notebook take some time to reflect on your experiences before Turing, the new skillset you’ve acquired, and how those can be applied to Tech Manager and a SRE.
 
   - Describe some similarities and differences between a traditional Software Engineering role and someone who is a IT Generalist? SRE?
   - What are examples in your previous work experience where you leveraged your education/skillset to grow within your role?
