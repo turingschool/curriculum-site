@@ -121,7 +121,16 @@ Now, let's compare that response object in two scenarios:
 }
 ```
 
-Do we think we could use any of these properties to check if the network request was successful?
+<br>
+
+### Consider  
+Do we think we could use any of these properties to check if the network request was successful?  
+
+What triggers a catch block?
+
+How can we write code to trigger the catch block if our network request is not successful?  
+
+<br>
 
 <section class="call-to-action">
 ### Research
@@ -135,6 +144,9 @@ Let's spend a little time looking through these docs:
 - [Error](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error#throwing_a_generic_error)
   - Q: What does `throw new Error('some message here')` do?
 </section>
+
+
+### Try It!
 
 <section class="dropdown">
 ### Possible Solution

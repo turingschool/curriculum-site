@@ -16,7 +16,7 @@ title: Welcome to Module 0
   </tr>
   <tr>
     <td>2502 (Feb 3)</td>
-    <td>January 13 - January 17</td>
+    <td>January 27 - February 2</td>
   </tr>
 </table>
 

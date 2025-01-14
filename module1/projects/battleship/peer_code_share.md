@@ -19,4 +19,4 @@ Then, with your project partner, take 25 minutes to review the other team's code
 1. What other feedback do you have for the other team?
 1. What other questions do you have for the other team?
 
-Once both teams have finished reviewing code, set up a 40 meeting with the other team. During that meeting, both teams should share their answers to the questions above.
+Once both teams have finished reviewing code, set up a meeting with the other team. During that meeting, both teams should share their answers to the questions above.
