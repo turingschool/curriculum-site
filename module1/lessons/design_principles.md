@@ -33,7 +33,7 @@ If you haven't noticed yet, developers (and people in tech in general) have __lo
 
 No one is coming to put you in "developer jail" if you don't follow these principles! But remember, you may be asked to improve your code or you may also ask others to improve their code (we call this a _code review_ and it is a standard practice). Just as "driving with both hands" and "don't run with scissors" aren't _the law_ doesn't mean they're not good ideas to still follow! 
 
-## Part 1: Research
+### Part 1: Research
 
 In small groups, research each of the following topics:
 
@@ -45,16 +45,26 @@ In small groups, research each of the following topics:
 6. DRY vs. WET
 7. YAGNI (You Ain't Gonna Need It)
 
-## Part 2: Solidify & Communicate 
+### Part 2: Solidify & Communicate 
 
 In your group, take your research of each above topic and summarize why it's important, including examples, and optionally including analogies and/or diagrams. 
 
-## Part 3: Share
+### Part 3: Share
 
-After your group has a summarization of each topic, come back together to discuss each topic individually, using some of the following guidelines: 
+After your group has a summarization of each topic, join a new group to share what you learned: 
 
 1. What is it?
 2. Why is it important?
 3. Have you seen this used in your coding journey so far?
    - Or, do you have an example of how this principle _could_ be used? 
 4. Do you have any remaining questions about this design principle? 
+
+
+## Additional Thoughts
+
+Learning about new design principles can be challenging!  Remember to use the resources available to you as you dive into new topics:
+* Mentors
+* Upper Mod Students
+* AI Tools
+   - Take a look at [this example](https://chatgpt.com/share/672ce86f-9424-8010-ac4f-dee390dbe713) of how you could use an LLM like ChatGPT to learn about a new concept.
+   - AI tools often work best when you really treat those interactions like a conversation; if something new is presented, dive into that topic!  If you want simpler examples, ask for them!
