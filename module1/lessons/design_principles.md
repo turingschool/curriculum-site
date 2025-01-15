@@ -10,7 +10,7 @@ Students will:
 * Be able to define and discuss common programming principles.
 * Research common programming principles and synthesize how they've been used in their programming studies so far. 
 
-## Warm Up
+### Warm Up
 
 Think about the industry or career you have the most experience in. Are there any "right ways" of doing something that basically _everyone_ agrees on? What about basic safety guidelines? 
 
@@ -33,6 +33,8 @@ If you haven't noticed yet, developers (and people in tech in general) have __lo
 
 No one is coming to put you in "developer jail" if you don't follow these principles! But remember, you may be asked to improve your code or you may also ask others to improve their code (we call this a _code review_ and it is a standard practice). Just as "driving with both hands" and "don't run with scissors" aren't _the law_ doesn't mean they're not good ideas to still follow! 
 
+
+## Learning New Design Principles
 ### Part 1: Research
 
 In small groups, research each of the following topics:
