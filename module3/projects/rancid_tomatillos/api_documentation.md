@@ -8,13 +8,13 @@ _[Back to Rancid Tomatillos Home](./index)_
 
 ## Overview
 
-You can view the data in your browser at **[https://rancid-tomatillos-api.onrender.com/api/v1/movies](https://rancid-tomatillos-api.onrender.com/api/v1/movies)**
+You can view the data in your browser at **[https://rancid-tomatillos-api-ce4a3879078e.herokuapp.com/api/v1/movies](https://rancid-tomatillos-api-ce4a3879078e.herokuapp.com/api/v1/movies)**
 
 Pro Tip: Install this **[JSON Formatter Chrome Extension](https://chromewebstore.google.com/detail/bcjindcccaagfpapjjmafapmmgkkhgoa?hl=en)** to make the data easier to read!
 
 ## Endpoints
 
-All API endpoints are prefixed with `https://rancid-tomatillos-api.onrender.com`.
+All API endpoints are prefixed with `https://rancid-tomatillos-api-ce4a3879078e.herokuapp.com/`.
 
 | Purpose | URL Path | Verb | Data to Send | Sample Sucessful Response | Sample Unsuccessful Response |
 |:-:|-----|:-:|--------------|------------------------------|
@@ -30,4 +30,4 @@ If you are sending information in the body of a request (like the `PATCH`), you 
 
 ## Collaboration Notes
 
-Please note that all students in your cohort will be using the same endpoint. This means that when you are sending a `PATCH`, you are updating the data for ALL students. If the numbers seem to be acting weird, it's probably because several of you are updating the vote count of the same movie at the same time. If you'd rather run the API locally to avoid this, you can - **[Here is the repo](https://github.com/turingschool-examples/rancid-tomatillos-api/)**. Just note that when it's time to deploy your application, you'll want to point your network rquests back to the deployed Render URL.
+Please note that all students in your cohort will be using the same endpoint. This means that when you are sending a `PATCH`, you are updating the data for ALL students. If the numbers seem to be acting weird, it's probably because several of you are updating the vote count of the same movie at the same time. If you'd rather run the API locally to avoid this, you can - **[Here is the repo](https://github.com/turingschool-examples/rancid-tomatillos-api/)**. Just note that when it's time to deploy your application, you'll want to point your network rquests back to the deployed Heroku URL.
