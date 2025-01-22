@@ -15,27 +15,30 @@ rails db:{drop,create}
 rails runner ActiveRecord::Tasks::DatabaseTasks.load_seed
 rails db:migrate
 ```
+
 -----
 
 ## Functionality Overview
 
 * A Coupon belongs to a Merchant
-* An Invoice optionally belongs to a Coupon. An invoice may only have one coupon.
+* An Invoice **optionally** belongs to a Coupon. An Invoice may only have **one** coupon.
   * Note: When creating this new association on Invoice, your existing tests will fail unless the association is optional. Use [these guides](https://guides.rubyonrails.org/association_basics.html#optional) as a reference.
-  * You are not required to build functionality for a user applying a coupon to an invoice, but can instead use test data, Rails console or seed data to add coupons to existing invoices to verify behavior.
+  * You are **not** required to build functionality for a user applying a Coupon to an Invoice, but can instead use test data, Rails Console or seed data to add Coupons to existing invoices to verify behavior.
 * You should build full CRUD functionality for coupons with criteria/restrictions defined below:
-   - A merchant can have a maximum of 5 activated coupons in the system at one time.
-   - A merchant cannot delete a coupon, rather they can activate/deactivate them.
-   - A Coupon has a name, unique code (e.g. "BOGO50"), and either percent-off or dollar-off value. The coupon's code must be unique in the whole database.
+  * A Merchant can have any number of Coupons in the system.
+  * A Merchant can only have a maximum of 5 activated Coupons in the system at one time.
+  * A Merchant cannot delete a Coupon, rather they can only activate/deactivate them.
+  * At minimum a Coupon:
+    * Has a name
+    * Has a unique code (e.g. "BOGO50"). This code must be unique in the whole database.
+    * Can be either percent-off or dollar-off value. Your database table must be able to store both types.
 
-
-​
 ## 1) CRUD Endpoints
 
-Below is the expected JSON response for each request. We have also outlined a few examples of Sad Paths you may consider adding in. In your project, you should take time to implement at least 2 sad paths total, but you are not limited to the examples we provide. 
+Below is the expected JSON response for each request. We have also outlined a few examples of Sad Paths you may consider adding in. In your project, you should take time to implement at least 2 sad paths total, but you are not limited to the examples we provide.
 
 <section class="dropdown">
-### 1. Merchant Coupon Show 
+### 1. Merchant Coupon Show
 
 Returns a specific coupon and shows a count of how many times that coupon has been used.
 
@@ -57,10 +60,11 @@ body:
 }
 
 ```
+
 </section>
 
 <section class="dropdown">
-### 2. Merchant Coupons Index 
+### 2. Merchant Coupons Index
 
 Returns all of a merchant's coupons
 
@@ -99,10 +103,11 @@ body:
   ]
 }
 ```
+
 </section>
 
 <section class="dropdown">
-### 3. Merchant Coupon Create 
+### 3. Merchant Coupon Create
 
 Create a new coupon for a merchant
 
@@ -124,8 +129,8 @@ body:
 }
 ```
 
-
 **Sad Paths to consider:**
+
 1. This Merchant already has 5 active coupons
 2. Coupon code entered is NOT unique
 
@@ -135,7 +140,6 @@ body:
 ### 4. Merchant Coupon Deactivate
 
 Updates a coupon from active to inactive
-
 
 **Response**
 
@@ -156,7 +160,9 @@ body:
 ```
 
 **Sad Paths to consider:**
+
 1. A coupon cannot be deactivated if there are any pending invoices with that coupon.
+
 </section>
 
 <section class="dropdown">
@@ -181,9 +187,10 @@ body:
   }
 }
 ```
+
 </section>
 
-----
+-----
 
 ## 2) Iterating on Existing Endpoints
 
@@ -200,6 +207,7 @@ When passed a query param, returns coupons filtered by active or inactive
 Return a merchant's invoices and include the id of the coupon used (if one was used)
 
 **Request**
+
 ```bash
 GET /api/v1/merchants/:merchant_id/invoices
 Content-Type: application/json
@@ -256,6 +264,7 @@ body:
 Update the merchants index endpoint to include a count of coupons for each merchant and a count of invoices with coupons applied for each merchant.
 
 **Request**
+
 ```bash
 GET /api/v1/merchants
 Content-Type: application/json
@@ -299,11 +308,8 @@ body:
     }
   ]
 }
-  
 ```
 
 </section>
 
-
-
-----
+-----
