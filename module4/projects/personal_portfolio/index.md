@@ -31,11 +31,10 @@ When you are finished, submit the URL to your portfolio using this [submission f
 5. GitHub profile link
 6. LinkedIn profile link
 7. Polished copy of resume
-8. Preferred Locations
-9. Previous Industries
+8. Previous Industries
   * Limit to 5 previous industries. If you are concerned about this, please reach out to your Career Specialists.
-10. Skills
-11. At least 2 projects
+9. Skills
+10. At least 2 projects
   * Show variety: paired, team, individual
   * Include screenshots for any project with a frontend
   * Tools Used
@@ -94,6 +93,6 @@ Nice to have but not required:
 
 ## Evaluation Details
 Your portfolio is due by EOD Friday of week 4 via the submission form above.
-**A passing portfolio will include all 11 of the required pieces of information listed above.** If any are missing or incomplete, the project will not be considered passing until those sections are completed.
+**A passing portfolio will include all 10 of the required pieces of information listed above.** If any are missing or incomplete, the project will not be considered passing until those sections are completed.
 
 Completion of your portfolio is a graduation requirement.

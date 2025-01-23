@@ -9,7 +9,7 @@ Mod 4 is focused on helping students develop good habits and processes for the j
 
 ## Instructors
 * Erin Pintozzi (Mod 4 Lead) - she/her
-* Kayla Gordon (Supporting Instructor) - she/her
+* Heather Faerber (Supporting Instructor) - she/her
 
 ## Curriculum
 - [Intermission Pre-Work](./intermission_work)
@@ -26,11 +26,10 @@ Students are expected to pass all 4 projects and maintain above 80% attendance i
 
 <section class="dropdown">
 ### Early Graduation Requirements
-For students that have signed a job offer and still want to receive a graduation certificate, please reach out to your instructors to follow up on next steps. The below is provided as a general outline of expectations.
+For students that have signed a job offer and still want to receive a graduation certificate, please reach out to your instructors to follow up on next steps. You must complete at least 3 weeks of the modules to be eligible for early graduation. The below is provided as a general outline of expectations.
 
-* Attend and maintain above 80% attendance for the first 3 weeks of classes
-* Successfully complete the first 3 weeks of the Capstone project
-* Publish a Personal Portfolio
+* Attend and maintain above 80% attendance for the duration of your time in Mod 4
+* Successfully complete all project work assigned and due during your time in Mod 4
 * Complete a 30/60/90 day plan outlining your professional development goals. [This article](https://www.themuse.com/advice/30-60-90-day-plan-instructions-template-example) may be helpful as a guide. You can use a copy of [this template](https://docs.google.com/document/d/1Ak0aP-b8D99cD_uYNaw4Ojo7A8HaJnaTso_U1ooTCfo/edit?usp=sharing) for your submission.
 * Complete the [Employment Survey](https://airtable.com/shrPoZOiVZuRH9wJf)
 * Complete the [End of Program Survey](https://forms.gle/aHxzbvo6KosVhSU57)

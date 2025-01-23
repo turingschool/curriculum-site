@@ -18,10 +18,12 @@ As such, you will be assessed throughout the duration of the project rather that
 
 ## Self Assessment
 
-Self assessment is a required part of the project. Failure to submit the self-assessment will result in a failure for the project. It is an opportunity for you to reflect on your work, identify areas for improvement, share your successes, and celebrate your accomplishments. Self evaluation is also common in professional environments. Typically this happens during your annual review (or whatever cadence your company uses). 
+Self assessment is a required part of the project. **Failure to submit the self-assessment will result in a failure for the project.** It is an opportunity for you to reflect on your work, identify areas for improvement, share your successes, and celebrate your accomplishments. Self evaluation is also common in professional environments. Typically this happens during your annual review (or whatever cadence your company uses). 
 
 You should include the following in your self assessment:
-* Share feedback you have received from at least two teammates
+* Share feedback you gave to at least two teammates. _Remember, feedback is a kindess and helps us grow. Feedback should be specific, actionable, and kind._
+  * You can copy and paste feedback from Slack if written or summarize if verbal
+* Share feedback you received from at least two teammates
   * You can copy and paste feedback from Slack if written or summarize if verbal
 * List your contributions to the project
   * Can be submitted as issues you completed or as a list of tasks/features you implemented
@@ -30,9 +32,74 @@ You should include the following in your self assessment:
 * Discuss 2-3 areas of improvement for yourself as a developer and team member
 * Assign yourself a score in each category
 
+<section class="dropdown">
+### Example Self Assessment
+This example below is considered meeting expectations.
+
+#### Feedback given to teammates
+1) _Name_ is an excellent person to work with, especially when we have complimentary desires. (He enjoys front end development, I enjoy back end development). We have worked together multiple times over the course of this project and others, each time he pushes for the understanding of the core concepts of what it is we're working on and not simply just to get something to work.
+
+Any time we've been in a larger group, he makes it a priority to know that everyone is tracking with whats happening in the group, even when it requires going over something multiple times to verify that everyone feels comfortable with their knowledge of the task.
+
+Something to be aware of, particularly in a large group project is his strong desire to continue learning new things and trying to get the whole group to learn with him could come across as overwhelming or potentially discouraging for others in the group if a pulse check isn’t done first. In the group we had some who were very comfortable with all the topics we’ve learned so far, some who were mildly comfortable, and some who felt like they were just barely scraping by. Trying to push for more from a position of extreme comfort sounds like a good idea, but the ones who feel like they’re barely scraping by suddenly feel the goal line get pushed out of reach. The desire to learn is not a bad thing by any means, but remembering that others in the group may not learn as easily or as eagerly is something to keep in mind.
+
+Though if _Name_ is able to be put into a group of similarly impassioned and knowledgeable people, the kind of work that could be developed is sure to be impressive to see as some of his side projects show.
+
+2) _Name's_ code is high quality, demonstrating a thorough understanding of principles of good design in both FE and BE. _Name's_ strengths as a coder and his independent nature lead to _Name_ taking an active role in fixing bugs, accounting for edge cases, and revising code and file structure to be better organized. His independent nature can lead to his contributions to be overlooked or neglected unfortunately. When _Name_ utilized a new pattern in his api calls. Some group members did not know to do the same, leading to inconsistencies that needed to be addressed down the line. Even though _Name_'s idea was good, the inconsistent implementation by others led to issues. _Name_ created a new file in the FE repo called `fileName.tsx` to store api calls. This was a convention worth implementing into our FE repo, however the previous file for making calls to the BE continued to be used by some group members because this change was not adequately communicated to all group members. The discrepancy caused issues that needed to be rectified after the fact. _Name_'s contributions are hindered by the lack of communication to the group. I believe that _Name_'s contributions would have more positive impact on the group if there was more effort put into communicating his ideas with the group, everyone would benefit from hearing _Name_'s good ideas. 
+
+
+#### Feedback received from teammates
+1) Working with you is always a pleasure. You're ability to know when to ask questions and when to let the other person to continue with their thought is something that may be overlooked by others, but it's a great skill in working well with others.
+
+It's a testament to you as a person that it's very difficult to point to anything that really needs addressing. And if I have to think that hard about it, it feels more like it's nitpicking than actually helpful. You've got a solid foundation of knowledge, you know how to keep a conversation moving forward well, you know when to ask probing question, and you've got the where-with-all to know when to ask for help.
+
+2) _Name_ set a good example for what an ideal teammate would look like in a project. His coding ability is as impressive as his interpersonal skills. When my goals for this project overlapped with _Name_'s, communication was clear and effective. From my perspective _Name_ tackled many big picture issues throughout this project including deployment and integration of Tailwind and Typescript. What stood out to me was the example _Name_ set for handling new integrations that not everyone was fully familiar with. Not only did _Name_ advocate for smart design decisions, he was able to assist others when they had confusion or questions about those decisions. _Name_ excels at leading by example. I think this strength has a potential drawback. Anyone's capabilities are finite, for _Name_ to be an effective leader and teammate he will have to make decisions about how much effort he can afford to spend on implementing new ideas. _Name_'s ability as a coder is not the limiting factor, his capacity to help others could be a bottleneck for production if too much is added too quickly. In this project _Name_ seemed to navigate this appropriately, but moving forward it is something for _Name_ to keep in mind to continue to grow as a developer, and as a leader.
+
+#### Contributions to the project
+* Ticket 60, refactoring of Contact Serializer and added tests, created nested contact routes
+* Ticket 61, added support for creating contacts with optional company info
+* Ticket 14, add contacts feature with model/controller and tests
+* Ticket 1, create new contacts BE
+* Ticket 19, set up contacts table with tests.
+* Ticket 33, menu bar refinements, Cypress testing, fixed tests in other test files, CI green
+* Ticket 47, create contacts model unique name fix
+* Ticket 36, contacts controller
+* Ticket 8, create all contacts FE
+* Assisted with companies team to decide on nested contacts routes under companies so that contacts can be optional and companies can be optional/contacts and companies can be created with or without one another.
+* Assisted with show contacts page bug
+* Assisted with debugging and fixing broken tests in Cypress that was not a part of my tickets but improved the CI/CD process
+* Assisted with create new job application Cypress testing and development of new application page error handling
+* Created ticket #58 to refactor ContactsController for later
+* Created ticket #62 to move FE contacts fetch calls to separate API call file
+* Worked with and had discussions with design team members to ward off or fix issues related to design elements
+
+#### Technical Areas of Strength
+Rails, react, tailwind, and to some extent cypress. This project made me more comfortable with get/post requests.
+
+#### 2-3 Areas of Improvement
+1) As a team member definitely communication. I am still not used how much communication is needed for this type of environment. From my personal style of communicating and my previous experience I’ve always taken the route of "communicate when you have something to communicate" but, I’ve learned that’s not how any of this works in development.
+
+2) As a dev I need to study more about code construction. After doing projects with others seeing the ways other people are able to design stuff that’s light and powerful, I don't yet truly utilize the power of these tools.
+
+3) I also need to figure out how to walk away and come back later. I’m still not the best when it comes to that and it really does effect the quality of what you’re able to do.
+
+#### Scores
+* **Work Ethic and Attitude:** Meets Expectations
+  * I would say I am somewhere between meets and exceeds expectation. I attended every check-in and bring ideas and questions. I actively participating in all stand-ups. I am very urgent to respond on slack. I demonstrate a positive attitude and willingness to learn. I could take more initiative to research and propose solutions to bigger problems. I am completing this self assessment with thoughtful reflection and clear action items.
+* **Collaborative Workflow:** Exceeds Expectations
+  * I consistently updated project board and includes progress and blockers. I used co-authored commits on paired pull requests. I could solicit project ideas and feedback from quieter teammates more often. I communicated effectively with team members and project manager through appropriate channels. I collaborated well on pair programming tasks, showing both the ability to lead and follow. Melchor and I worked very together in this way. I sought clarification when requirements or tasks are unclear. I demonstrated active listening skills during team discussions and meetings - evident in building off their conversations with comments on their tickets and responses in chat. Showed willingness to help team members when they encounter difficulties. Transparently communicates blockers and seeks help when appropriate - this happened a number of times.
+* **Code Quality:** Meets Expectations
+  * I think I have a solid understanding of Ruby on Rails and React. I learned Tailwind pretty well and incorporated it into two other solo projects (portfolio and chess war). I effectively addressed feedback from code reviews. Got 100% tests passing with sad paths included. I have good error handling for the different states (empty states, loading states, error states) Wrote SRP and DRY code I was extremely active in the review and support of others' code giving quality feedback. Shows a keen interest in learning about tools and architecture solutions outside of the scope of lessons taught at Turing - this I demonstrated by learning VueJS over break and making an application of my own design from scratch. Proactively seeks to understand and improve code performance by asking questions and researching solutions
+* **Technical Problem Solving:** Meets Expectations
+  * I think I was able to demonstrate my ability to break down issues into smaller components. I raised concerns about potential oversights and discrepancies. I was available to help my teammates debug issues they were encountering. I think I handled my initial technical research spike in a very proactive way where I was not just acknowledging concerns, but offering potential solutions to them.
+* **Git Workflow and Deployment:** Meets Expectations
+  * I helped set up the PR template and took time to help be know how to use it better. There is still more learning to be done, but the effort was there. I gave constructive feedback on many PRs - more than 4. I made focused PRs, but sometimes they were not super small (not sure what counts as small) but they were always related to a single issue. I didn't delete branches after merging - this is a to-do moving forward. It would probably be good to set as a group's intention, especially since the way we set up the PR merging, we would be deleting someone else's branch. Once CI was implemented, everything was passing before merging. 
+</section>
+
 <section class="call-to-action">
 **<a href="https://forms.gle/Z3WYHp1VcCndJ3MT7" target="_blank">Self Assessment Form</a>**
 </section>
+
 
 ## Rubric
 <section class="note">
