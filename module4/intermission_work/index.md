@@ -26,7 +26,7 @@ All deliverables must be submitted by Saturday at 5pm MT through [this survey](h
 <section class="dropdown">
 ### Demo Showcase Prep Guidelines
 
-All incoming Mod 4students are required to demo their Mod 3 consultancy projects at the Demo Showcase on Wednesday of Week 1.
+All incoming Mod 4 students are required to demo their Mod 3 consultancy projects at the Demo Showcase on Wednesday of Week 1.
 
 Presentations should be 8-10 minutes long and include the following:
 - Introduce your team and your project
