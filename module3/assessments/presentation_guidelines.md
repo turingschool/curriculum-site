@@ -12,7 +12,7 @@ This guide will serve as a general outline for how students can present their co
 <section class="note">
 ### Note
 
-Keep in mind that some companies will have their own guidelines on presenting which takes precenedence over this guideline.
+Keep in mind that some companies will have their own guidelines on presenting which takes precedence over this guideline.
 </section>
 
 **Prior to the presentation:**
