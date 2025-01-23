@@ -56,7 +56,7 @@ The purpose of this question is NOT to answer why YOU want this role, but to con
 5. Cover letter tailored to the role and company
   * A strong cover letter will include your answers to the the "why" questions above.
 
-**Use [this form](https://forms.gle/fMMj4bhJoNqn7NLY7) to submit your deliverables at least 24 hours before your interview. Please ensure the links you submit are accessible to your instructor.**
+**Use [this form](https://turingschool.notion.site/17b0ef3570788034983ef99ababa3f1c?pvs=105) to submit your deliverables by 12pm MT on Monday of Week 5. The document should be in the form of a public google doc that allows your instructor to view and comment on it.**
 </section>
 
 ## Part 2: The Job Application
@@ -93,8 +93,7 @@ This comprehensive job search process allows you to take the knowledge and skill
 <!-- For additional information and resources on how to find job opportunities and contacts, see the [4-Step Job Application Process Document](https://docs.google.com/document/d/1B39ViRamGHNVLzelnlEIhzLWNwsrPvf1J8MjtxDKgsc/edit#heading=h.ncblao9s0orb). -->
 <section class="call-to-action">
 ### Part 2 Deliverables
-<!-- NOTE: Or would we rather receive this via a form some other time? Previously this was discussed as a part of the final presentation. -->
-1. Create a document outlining your application process, network efforts, and the outcomes for each step and submit it to your instructor during your interview simulation time. The document should include the following:
+1. Create a document outlining your application process, network efforts, and the outcomes for each step and submit it via a DM to your instructor by 4pm MT on Thursday of Week 5. The document should include the following:
   * Share Networking Efforts:
         * Explain how you've networked within the company, whether through LinkedIn, professional events, or other platforms.
         * Describe your interactions and connections within the organization.
@@ -111,6 +110,8 @@ This comprehensive job search process allows you to take the knowledge and skill
         * Discuss the outcomes of your outreach, networking, and meetings.
         * Share key learnings, including what went well and what challenges you faced.
         * Address how you plan to deal with these challenges in future job search efforts.
+
+**Note: Your answers to the above questions should tell me what you actually did and not simply a description of what you _would_ do. You are expected to do the outreach and meeting preparation and then document it. The document should be in the form of a public google doc that allows your instructor to view and comment on it.**
 </section>
 
 ## Part 3: Interview Simulation
