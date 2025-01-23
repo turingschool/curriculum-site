@@ -42,7 +42,7 @@ The candidate...
 
 The candidate...
 - chooses to use standard library functions and is able to describe their behavior when asked. 
-- is able to break down a complex system into elegantly structured components, and thoroughly describe the interaction model, the interface and the behavior Abstractions are clear and clean, given the problem definition, and keep open the possibility of future needs without significant refactoring.
+- is able to break down a complex system into elegantly structured components, and thoroughly describe the interaction model, the interface and the behavior. Abstractions are clear and clean, given the problem definition, and keep open the possibility of future needs without significant refactoring.
 - understands time and space complexity (even if they don’t use those terms) and can describe the characteristics of their implemented code if appropriate.
 
 #### Leaning Yes Hire
@@ -87,12 +87,12 @@ The candidate...
 The candidate...
 - tests all sad paths but may have missed some edge cases. 
 - tests all happy paths and feature work. 
-- begins a debugging process and posits some reasonable solutions to the problem if any unexpected bugs appear during the interview.
+- begins a debugging process and poses some reasonable solutions to the problem if any unexpected bugs appear during the interview.
 
 #### Leaning Don’t Hire
 
 The candidate...
-- tests happy paths but missed, or inffecetively tested, some sad paths. 
+- tests happy paths but misses, or inffectively tests, some sad paths. 
 - could not identify edge cases. 
 - begins a basic debugging process but is not able to come up with any solutions to the problem if any unexpected bugs appear during the interview.
 
@@ -119,7 +119,7 @@ The candidate...
 - describes how their code works, unprompted, by talking about the purpose of a code snippet or its design 
 - explains their thought processes very clearly using proper technical terms. 
 - clearly imparts knowledge and concepts through appropriate means (ex: diagrams, body movement, writing and speech). 
-- talks at a level appropriate to their audience When explaining something. 
+- talks at a level appropriate to their audience when explaining something. 
 
 #### Leaning Don’t Hire
 
