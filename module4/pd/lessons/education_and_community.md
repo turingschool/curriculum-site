@@ -43,13 +43,17 @@ This clip is Danny interviewing his high school friend, Eddie Neira on his story
 <iframe width="560" height="315" src="https://www.youtube.com/embed/UCErM3hca_w?si=k_fCGUcvG1Ol6Iy2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 <section class="checks-for-understanding">
-### Note
 Check out Eddie’s website here: [Slumber Star Land](https://slumberstar.land/) 
 </section>
 
 Before conferences were back in full swing a lot of community education and content was done online. Nearly everyone had their own podcast, blog, youtube channel, etc., so you could stay pretty busy if you were in DevRel. And that was the goal: be an active community member and foster relations, and then people are saying to themselves, “Hmm, so-and-so seems cool and they work at blah-blah company. I should check it out.” Here is a video of Danny being interview by bdougie who at the time as the Director of Developer Advocacy at GitHub. 
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/KH7X7NFrBJ0?si=2FKmnAXrEhnc2U4n" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<section class="checks-for-understanding">
+Here is another interview Danny did with Chloe Condon at Microsoft (now at Google): [8 Bits](https://www.youtube.com/watch?v=OURqZIk2pgI) 
+</section>
+
 
 ### Product Focused DevRel
 A year into Danny’s time at New Relic the director of the Developer Relations team changed and there for so did the direction. There is a debate in the DevRel space on how to best measure success. C suite doesn’t necessarily take “I made 5 great genuine connections at a conference, and now we’re going to co-write a blog” as a big impact to the business. This can inevitably make the DevRel team become a glorified sales and marketing team that only talks about the product. There can be a happy medium. Danny found himself somewhere in that area.
