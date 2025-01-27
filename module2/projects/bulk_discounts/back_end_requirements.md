@@ -50,9 +50,9 @@ body:
     "id": "1",
     "type": "bulk_discount",
     "attributes": {
-      "percentage": 20,
+      "name": "Buy 10 Get 20% Off",
       "quantity_threshold": 10,
-      "merchant_id": 3
+      ... remaining attributes go here ...
     }
   }
 }
@@ -76,20 +76,21 @@ body:
       "id": "1",
       "type": "bulk_discount",
       "attributes": {
-        "percentage": 20,
+        "name": "Buy 10 Get 20% Off",
         "quantity_threshold": 10,
-        "merchant_id": 3
+        ... remaining attributes go here ...
       }
     },
     {
       "id": "2",
       "type": "bulk_discount",
       "attributes": {
-        "percentage": 30,
+        "name": "Buy 15 Get $15 Off",
         "quantity_threshold": 15,
-        "merchant_id": 3
+        ... remaining attributes go here ...
       }
     }
+    ... remaining merchant discounts go here ...
   ]
 }
 ```
@@ -111,9 +112,9 @@ body:
     "id": "1",
     "type": "bulk_discount",
     "attributes": {
-      "percentage": 25,
-      "quantity_threshold": 12,
-      "merchant_id": 3
+      "name": "Buy 10 Get 20% Off",
+      "quantity_threshold": 10,
+      ... remaining attributes go here ...
     }
   }
 }
@@ -122,7 +123,9 @@ body:
 **Sad Paths to consider**:
 
 * The percentage exceeds 100 or is below 0.
-* The quantity threshold is invalid (e.g., less than 1).
+* The quantity threshold is invalid (i.e., less than 1).
+* Merchant already has 5 active discounts
+* Discount code entered is NOT unique
 
 </section>
 
@@ -135,10 +138,12 @@ Deletes a bulk discount, if eligible.
 
 ```json
 status: 204
+body: *No Content*
 ```
 
 **Sad Paths to consider**:
-- The bulk discount cannot be deleted if it is tied to pending invoices.
+
+* The bulk discount cannot be deleted if it is tied to pending invoices.
 
 </section>
 
@@ -147,14 +152,14 @@ status: 204
 <section class="dropdown">
 ### 5. Merchant Bulk Discounts Index Filtered
 
-When passed a query parameter, returns bulk discounts filtered by criteria (e.g., by percentage or quantity).
+When passed a query parameter, returns bulk discounts filtered by that criteria (i.e., by discount amount, discount type, or quantity threshold).
 
 </section>
 
 <section class="dropdown">
 ### 6. Merchant Invoice Show Page: Discounted Revenue
 
-Returns the total revenue for a merchant on an invoice (before and after discounts).
+Returns the total revenue and discounted revenue for a merchant on an invoice.
 
 **Request**
 
@@ -163,6 +168,15 @@ GET /api/v1/merchants/:merchant_id/invoices/:invoice_id
 Content-Type: application/json
 Accept: application/json
 ```
+
+#### Solution Example:
+
+* For each `InvoiceItem`, use ActiveRecord to:
+  1. Fetch the `unit_price` and `quantity`.
+  2. Query for the highest applicable `BulkDiscount` using `.where` and `.order`.
+  3. Apply the discount directly in SQL. (See: [COALESCE](https://www.w3schools.com/sql/func_sqlserver_coalesce.asp))
+
+Use separate ActiveRecord queries for each operation without iterating in Ruby.
 
 **Response**
 
@@ -188,6 +202,12 @@ body:
 ### 7. Merchant Invoice Items
 
 Returns all invoice items for a merchant and indicates which bulk discounts were applied.
+
+#### Solution Example:
+
+* Use `.joins` to connect `InvoiceItem` to `BulkDiscount` via `Item`.
+* Filter applicable discounts using `.where`.
+* Return `InvoiceItem` details, including the applied discount (if any), using `.select`.
 
 **Request**
 
@@ -229,6 +249,7 @@ body:
     }
   ]
 }
+
 ```
 
 </section>
@@ -236,7 +257,12 @@ body:
 <section class="dropdown">
 ### 8. Merchants
 
-Update the merchants index endpoint to include the total number of discounts and invoices with discounts applied.
+Update the merchants index endpoint to include the total number of bulk discounts for each merchant.
+
+#### Solution Example:
+
+* For each `Merchant`, fetch the count of associated discounts using `.where`.
+* Return each merchant's attributes along with the count of discounts directly.
 
 **Request**
 
