@@ -11,12 +11,12 @@ title: Welcome to Module 0
     <th>Mod 0 Dates</th>
   </tr>
   <tr>
-    <td>2412 (Dec 2)</td>
-    <td>November 11 - November 15</td>
-  </tr>
-  <tr>
     <td>2502 (Feb 3)</td>
     <td>January 27 - February 2</td>
+  </tr>
+  <tr>
+    <td>2503 (Mar 24)</td>
+    <td>March 10 - March 16</td>
   </tr>
 </table>
 
