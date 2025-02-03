@@ -331,16 +331,14 @@ Just like methods in Ruby, in JS functions are reusable blocks of code that grou
 ```javascript
 // ES 5 syntax for declaring a function
 function logStatement() {
-  let myFirstStatement = "Assigning a string to a variable called 'myFirstStatement'";
-  alert('This is my second statement!');
-  console.log(myFirstStatement);
+  let myStatement = "Assigning a string to a variable called 'myStatement'";
+  console.log(myStatement);
 }
 
 // ES6 syntax for declaring a function (arrow function)
 // const logStatement = () => {
-//   let myFirstStatement = "Assigning a string to a variable called 'myFirstStatement'";
-//   alert('This is my second statement!');
-//   console.log(myFirstStatement);
+//   let myStatement = "Assigning a string to a variable called 'myStatement'";
+//   console.log(myStatement);
 // }
 ```
 
