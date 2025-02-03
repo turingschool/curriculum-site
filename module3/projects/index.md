@@ -9,8 +9,8 @@ The following projects will be assigned and their completion is required to be p
 The project specs will be linked below as each project is assigned.
 
 - Week 1-2 (BE Solo): [Viewing Party API](./viewing_party_api)
-<!-- - Week 2-3 (FE Paired) -->
-- Week 2-3 (FE Paired): [Rancid Tomatillos](./rancid_tomatillos)
+- Week 2-3 (FE Paired)
+<!-- - Week 2-3 (FE Paired): [Rancid Tomatillos](./rancid_tomatillos) -->
 - Week 4-5 (Group): [Consultancy](./consultancy)
 
 ## Additional Projects and Resources

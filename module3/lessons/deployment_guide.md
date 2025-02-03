@@ -18,8 +18,11 @@ summary:hover {
 ## Deplying an API written in Rails
 
 <details><summary><h3>Guide to Heroku</h3></summary>
- Docs are [here](https://devcenter.heroku.com/articles/getting-started-with-rails7). Don't forget to provision a database.
- <!-- TO-DO add more detail -->
+ Docs are [here](https://devcenter.heroku.com/articles/getting-started-with-rails7). 
+
+ Follow these docs starting at the "Create a Heroku App" section. You do **not** need to start at the beginning because it details creating an app from scratch (not necessary).
+
+ Note: for applications in this module, you do not need to create a Procfile because the default start up command that Heroku will use will work just fine.
 <hr/>
 </details>
 
@@ -27,7 +30,7 @@ summary:hover {
 <details><summary><h3>Guide to Render</h3></summary>
 
 <section class="note">
-<p>These instructions were compiled from <a href="https://render.com/docs/deploy-rails" target="_blank">Render.com</a>'s existing documentation and resources. You are free to ignore this page and follow directions on Render's website to deploy your application, if you wish. The instructions and links below have been tested as of March 2023.</p>
+<p>Follow the docs here on <a href="https://render.com/docs/deploy-rails" target="_blank">Render.com</a>'s existing documentation and resources. You are free to ignore this page and follow directions on Render's website to deploy your application, if you wish. You can skip to the 3rd step - "Update your app for Render".</p>
 
 <p>Turing is not associated or affiliated with Render.com in any way; this page was created as a reference for students to deploy their applications for the first time. 
 </p>
@@ -57,12 +60,20 @@ summary:hover {
 ### Create Web Service
 1. Click the button to Create a New __Web Service__. If you've connected your GitHub account, it will display some of your repositories that you can connect to for this web service. Click `Connect` next to the repo you'd like to deploy. 
 1.  Give the service a name (anything, you can use the same name as the repo)
-1.  In the **Build Command** step, add `rails db:{migrate,seed}` to the end of the string. 
-   - Note that this command will be run each time your application is deployed. As such, your `seeds.rb` file should contain `{Model}.destroy_all` lines at the top so that running the `seed` command in production does not cause duplicate data.
-2.  Make sure your **Instance Type** is **Free**, then click the `Create Web Service` button. 
-3. On the next screen, you'll need to add 2 Environment Variables, so click **Environment**. 
+1.  Follow instructions from the Docs in the "Create a build script" section to create your **render-build.sh** file and push it to main, but **remove the below lines as they are not needed for APIs** and then add `rails db:{migrate,seed}` below `bundle install`.
+```bash
+# REMOVE THESE BELOW LINES
+bundle exec rails assets:precompile
+bundle exec rails assets:clean
+```
+2. Set the following properties:
+   - Build Command: `./bin/render-build.sh`
+   - Start Command: `./buin/rails server`
+3.  Make sure your **Instance Type** is **Free**, then click the `Create Web Service` button. 
+4. On the next screen, you'll need to add 2 Environment Variables, so click **Environment**. 
    1. Key = `DATABASE_URL` , Value = your PostgreSQL service's Internal Database URL, from the previous step. 
-   2. Key = `RAILS_MASTER_KEY`, Value = your repo's local `master.key` file. 
+   2. Key = `RAILS_MASTER_KEY`, Value = your repo's local `master.key` file.
+
 
 If the steps are all working, it will then attempt to build your application and copy it to its container, this will take several minutes. You can watch the service's terminal for updates. If the build is successful, it will display `==> Build successful 🎉` then `==> Deploying...`. When this step finishes, you can click the URL of the application displayed at the top of the page to visit your site. 
 

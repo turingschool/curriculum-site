@@ -26,6 +26,13 @@ To use Heroku, follow [these instructions](https://devcenter.heroku.com/articles
 
 We **highly suggest** you set up your deployment before completing any endpoints! Then, throughout the project, you can deploy changes and be able to more effectively troubleshoot deployment issues. 
 
+## Tips for Navigating TMDB Documentation
+
+When you're on the "Getting Started" page linked above, and have already signed up for your API key:
+- Click the "Finding Data" Section on the left-side navigation bar
+- Check out both the `/search` and `/discover` sections and the endpoints available there. For top-rated movies, you *don't* need to do any logic with movie scores. There is an endpoint that is perfect for this use case. Hint: check the `Movie Lists` section on nav bar once you're on the page with all the endpoints. 
+
+
 ## Technical Requirements
 
 The Technical Requirements for this project can be found [here](./requirements)
