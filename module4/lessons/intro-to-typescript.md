@@ -26,7 +26,7 @@ TypeScript is a superset of JavaScript that introduces static type definitions. 
 <section class="note">
 ### TypeScript Playground
 
-As we are working through code samples today, you may find it useful to use this [TypeScript Playground](https://www.typescriptlang.org/playground) to run your code.
+As we are working through code samples today, you may find it useful to use this [TypeScript Playground site](https://www.typescriptlang.org) to create a playground to run your code.
 </section>
 
 ## JavaScript vs TypeScript
