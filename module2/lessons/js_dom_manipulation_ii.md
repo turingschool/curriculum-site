@@ -61,10 +61,10 @@ Everyone pseudocodes a little differently.  Here's one example of what that thou
 // add event listener for "click" on button
 // event listener will invoke addBox function
 // addBox function should add a new box to the DOM.  
-// Can i copy the html for the box from the html file??
-// innerText?  innerHTML?  insertAdjacentHTML? *maybe i need to check MDN
-// wait, where on the dom am i adding the boxes??  *check html
-// i can add the boxes to the <section>. i'll need to query that too...
+// which part of HTML is the actual box?  Oh, its the <div>, i want to add another <div>
+// wait, where on the dom am i adding the div/box??  *check html
+// i want to add the div/box to the <section>. i'll need to query that too...
+// how do I add a piece of html to the dom?  check the <p>pepperoni</p> example from yesterday's lesson
 ```
 </section>
 
