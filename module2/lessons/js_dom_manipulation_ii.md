@@ -358,6 +358,6 @@ function changeColor() {
 ## Suggested re-teaching practice
 
 - Work through the exercises in [this legacy front end lesson](https://frontend.turing.edu/lessons/module-1/js-event-bubbling-and-delegation.html) on Event Bubbling and Event Delegation
-- Create a codepen with an HTML form that collects to-do list info:  task, priority level, description. When the user enters info and submits the form, create a litte "card" of that info and display it on the DOM. For an added challenge, add functionality to delete the task card if the user double clicks it.
+- Create a codepen with an HTML form that collects to-do list info:  task, priority level, description. When the user enters info and submits the form, create a little "card" of that info and display it on the DOM. For an added challenge, add functionality to delete the task card if the user double clicks it.
 - Read up on the [event listener documentation](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener)
 
