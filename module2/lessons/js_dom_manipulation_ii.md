@@ -115,6 +115,60 @@ Take a few minutes to ask yourself and pseudocode out:
 Now code it out.  One person should screen share and drive, the other should navigate.  Navigator can also be coding along on their machine.
 </section>
 
+<section class="dropdown">
+### Pseudocode example
+
+```js
+/* Goal: 
+  User types in inputs then clicks Make Dinner.  Values from the inputs display as the new main dish, side dish and dessert text shown on the page.
+
+Queries:
+  main input bc i need the value
+  side input bc i need the value
+  dessert input bc i need the value
+
+  make dinner button bc user will click it
+
+  main text bc i want to change it
+  side text bc i want to change it
+  dessert text bc i want to change it
+
+Event Listener:
+  button - add event listener - click - displayDinner function
+
+Function:
+  displayDinner
+  change .innerText of main to be the .value of the main input
+  same for side and dessert
+*/
+```
+</section>
+
+<section class="dropdown">
+### Possible Solution - Dont Peek!
+
+```js
+let mainInput = document.querySelector('#main-dish-input')
+let sideInput = document.querySelector('#side-input')
+let dessertInput = document.querySelector('#dessert-input')
+
+let makeDinnerButton = document.querySelector('#make-dinner-btn')
+
+let mainText = document.querySelector('#main-dish')
+let sideText = document.querySelector('#side-dish')
+let dessertText = document.querySelector('#dessert')
+
+makeDinnerButton.addEventListener("click", displayDinner)
+
+function displayDinner() {
+  // take innerText of mainText and make it the .value of the mainInput
+  mainText.innerText = mainInput.value
+  sideText.innerText = sideInput.value
+  dessertText.innerText = dessertInput.value
+}
+```
+</section>
+
 <section class="note">
 One of the top misconceptions/mistakes we see students make is attempting to capture the value of an input while the input is empty. If you want to get a user's input, we have to get the value *after* the user has entered it.  We do this by accessing the `.value` property **via some event listener** - on an event that happens *after* the user has typed into the input field - like clicking Submit after filling out a form. 
 </section>
