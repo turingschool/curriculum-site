@@ -68,6 +68,20 @@ Everyone pseudocodes a little differently.  Here's one example of what that thou
 ```
 </section>
 
+<section class="dropdown">
+### Possible Solution - Don't Peek!
+
+```js
+let button = document.querySelector('#addBoxButton')
+let section = document.querySelector('#boxSection')
+
+button.addEventListener("click", addBox)
+
+function addBox() {
+  section.innerHTML += `<div class="box"></div>`  
+}
+```
+</section>
 
 </section>
 
