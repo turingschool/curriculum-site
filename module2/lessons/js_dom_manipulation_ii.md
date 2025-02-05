@@ -185,6 +185,29 @@ One of the top misconceptions/mistakes we see students make is attempting to cap
 - Why should we save our queried elements to variables?  Why don't we just type out the query selector when we need to access that variable?  
 <!-- Keeping them neatly stored in variables at the top of our file keeps our code readable and maintainable.  Plus it ensure we are repetitively querying the same element. -->
 
+<section class="dropdown">
+
+### Thinking Ahead Answers
+- What if you wanted to invoke 3 functions in a row on button click?  
+  - Create a handler function that invokes all 3 functions, then invoke the handler in your event listener
+- What if you need to use logic to determine which function should be invoked on an event?  
+  - Put that logic in the event handler function so that it invokes the desired functions
+- Is it ok to have logic written out within our event listeners? Why? Why not?  
+  - Not ideal, we want event listeners to simply and cleanly invoke one function.  This keeps our code readable and maintainable by following SRP (Single Responsibility Principle) - each well named function has a single responsibility.
+- What if we need to pass an argument to the function we're invoking in our event listeners?  
+  - We can open an anonymous function that invokes our event handler function and passes it an argument
+- Why should we save our queried elements to variables?  Why don't we just type out the query selector when we need to access that variable?  
+  - Keeping them neatly stored in variables at the top of our file keeps our code readable and maintainable.  Plus it ensure we are repetitively querying the same element.
+
+```js
+// Anonymous function in an event listener syntax example
+makeDinnerButton.addEventListener("click", function() {
+  displayDinner('beans')
+})
+// The anonymous function doesn't get invoked until the click happens at which time it runs the displayDinner function invocation
+```
+
+</section>
 
 
 <br>
