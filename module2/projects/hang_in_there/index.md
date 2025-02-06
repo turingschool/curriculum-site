@@ -118,6 +118,8 @@ Form view:
 Saved posters view:
 ![saved posters](../../../assets/images/projects/hang-in-there/saved.png)
 
+<p style="color: red">NOTE: We are NOT working on the new poster form in this iteration! We're only changing views with the main page buttons and the back buttons.  The new poster form is iteration 2, dont work ahead.</p>
+
 - When a user clicks the "Make Your Own Poster" button, we should see the form, and the main poster should be hidden
 - When a user clicks the "Show Saved Posters" button, we should see the saved posters area, and the main poster should be hidden
 - When a user clicks the "Nevermind, take me back!" or "Back to Main" buttons, we should only see the main poster section
@@ -138,6 +140,7 @@ Result after clicking Show My Poster button:
 - On the new poster form view, users should be able to fill out the three input fields and then hit the Show My Poster button
   - _Hint:
 Notice something weird happening when you click the button to submit the form? Try googling `event.preventDefault()`!_
+<p style="color: red">NOTE: Work through these bullet points in order. They'll have you update the data model first, then use that updated data model to change what is showing to the user.</p>
 - When the Show My Poster button is clicked, several things will happen:
   - First, use the values from the inputs to create a new, unique poster object and save it as the value of the `currentPoster` global variable (part of your data model)
   - Save the submitted data into the respective arrays (image URL into the images array, etc - all part of your data model) so that future random posters can use the user-created data
