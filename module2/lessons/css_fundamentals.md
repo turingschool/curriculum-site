@@ -209,7 +209,7 @@ Tip:  When trying to get more visibility into a specific element, put a border a
 
 We can apply all the margin and padding we want, but when it comes down to it, many times Front End Developers are tasked with re-creating something a designer has provided them with, commonly called "comps". Let's use our tools to build something professional-grade.  
 
-Throughout both Mod 1 CSS lessons, you are going to work on recreating a comp.  
+Throughout both Mod 2 CSS lessons, you are going to work on recreating a comp.  
 
 Today you will work on `iteration 1` of [this activity](https://github.com/kaylagordon/css-intro-imperfectfoods). You will work on `iteration 2` after you've had the CSS Flexbox lesson.
 
