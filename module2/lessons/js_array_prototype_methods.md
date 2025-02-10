@@ -310,6 +310,70 @@ console.log(result);
 
 <br>
 
+## How to use `Array.forEach(callbackFunction)`
+
+`forEach` is the prototype method that is most similar to a `for` loop.  It simply iterates. It doesn't have additional built in functionality like some others (filter, map, etc).  
+
+There are _occasional_ times when it makes more sense to use a for loop over something like a forEach. For example:
+
+- If you need to run something a specific number of times, you would want to use a `for` loop.  `forEach` always iterates over every element in an array.
+- If you want to stop (`break`) a `for` loop, you can do that.  There is no way to stop a `forEach` loop. 
+
+
+<section class="call-to-action">
+### Exercises
+
+#### Example #1
+Using `forEach`, iterate over the array of prices, increase the price by $1, and add new increased prices to the `increasedPrices` array.
+
+```js
+const prices = [4.99, 5.50, 7.00, 10.25];
+const increasedPrices = [];
+```
+
+#### Example #2
+- Using the dogs array above, log the dog's name and how many legs it has.  
+
+```js
+const dogs = [
+  {name: "Fido", numLegs: 4},
+  {name: "Greg", numLegs: 5}
+];
+
+// console output
+=> 'Fido has 4 legs.'
+   'Greg has 5 legs.'
+```  
+
+</section>  
+
+<section class="dropdown">
+### Important Takeaways
+
+Be sure to include these in your notes, if you haven't already!
+* `forEach` is useful when you want to perform an operation on every element in an array.
+* It is the prototype method that is most similar to a `for` loop and doesn't have additional built in functionality like some others (filter, map, etc)
+* `forEach` does **NOT** return anything (even if you have a return statement).  You can store element data into a variable, but the variable MUST exist outside of the `forEach`.
+</section>  
+
+<section class="dropdown">
+### forEach: Syntax Example
+
+```js
+const numbers = [1, 2, 3, 4];
+
+let sum = 0;
+
+numbers.forEach((num) => {
+  sum += num
+})
+
+console.log(sum);
+// Expected output: 10
+```
+</section>
+
+
 ## How to use `Array.sort(callbackFunction)`
 
 <section class="note dropdown">
@@ -413,74 +477,9 @@ Be sure to include these in your notes, if you haven't already!
 
 <br>
 
-## How to use `Array.forEach(callbackFunction)`
-
-`forEach` is the prototype method that is most similar to a `for` loop.  It simply iterates. It doesn't have additional built in functionality like some others (filter, map, etc).  
-
-There are _occasional_ times when it makes more sense to use a for loop over something like a forEach. For example:
-
-- If you need to run something a specific number of times, you would want to use a `for` loop.  `forEach` always iterates over every element in an array.
-- If you want to stop (`break`) a `for` loop, you can do that.  There is no way to stop a `forEach` loop. 
-
-
-<section class="call-to-action">
-### Exercises
-
-#### Example #1
-Using `forEach`, iterate over the array of prices, increase the price by $1, and add new increased prices to the `increasedPrices` array.
-
-```js
-const prices = [4.99, 5.50, 7.00, 10.25];
-const increasedPrices = [];
-```
-
-#### Example #2
-- Using the dogs array above, log the dog's name and how many legs it has.  
-
-```js
-const dogs = [
-  {name: "Fido", numLegs: 4},
-  {name: "Greg", numLegs: 5}
-];
-
-// console output
-=> 'Fido has 4 legs.'
-   'Greg has 5 legs.'
-```  
-
-</section>  
-
-<section class="dropdown">
-### Important Takeaways
-
-Be sure to include these in your notes, if you haven't already!
-* `forEach` is useful when you want to perform an operation on every element in an array.
-* It is the prototype method that is most similar to a `for` loop and doesn't have additional built in functionality like some others (filter, map, etc)
-* `forEach` does **NOT** return anything (even if you have a return statement).  You can store element data into a variable, but the variable MUST exist outside of the `forEach`.
-</section>  
-
-<section class="dropdown">
-### forEach: Syntax Example
-
-```js
-const numbers = [1, 2, 3, 4];
-
-let sum = 0;
-
-numbers.forEach((num) => {
-  sum += num
-})
-
-console.log(sum);
-// Expected output: 10
-```
-</section>
-
 
 <section class="note">
-### Before we close out today...
-
-Take some time this afternoon to review what some of the highlights were for each prototype method.  Often when trying to solve a problem, there isn't just one answer.  Sometimes problems can be solved through a combination of prototype methods!  We'll review these more tomorrow and continue working through a few more examples then!
+Take some time to review what some of the highlights were for each prototype method.  Often when trying to solve a problem, there isn't just one answer.  Sometimes problems can be solved through a combination of prototype methods!  We'll review these more tomorrow and continue working through a few more examples then!
 </section>
 
 <br>
