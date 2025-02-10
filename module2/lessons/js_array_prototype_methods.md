@@ -249,7 +249,7 @@ _Initial Value_ - The initial value to be used as the accumulator (the first arg
 ### Exercises
 
 #### Example #1
-Using `reduce`, sum up all of the numbers.  
+Using `reduce`, get the sum by adding up all of the numbers.  
 
 ```js
 const numbers = [1, 2, 3, 4, 5];
@@ -259,6 +259,16 @@ const numbers = [1, 2, 3, 4, 5];
 ```  
 
 #### Example #2
+Using `reduce`, get the product of multiplying all of the numbers. Consider what your acc's initalValue needs to be.
+
+```js
+const numbers = [1, 2, 3, 4, 5];
+
+// console output
+=> 120
+```   
+
+#### Example #3
 Using `reduce`, create a new object the stores the lengths of each word.  
 
 ```js
