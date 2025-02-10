@@ -32,14 +32,14 @@ Pick one person to create the repo. The other person should be watching and advi
 </section>
 
 <section class="dropdown">
-### Git Commands
+### Helpful Git and Terminal Commands
 - **Make a new directory**
   - `mkdir [name-of-directory]`
 - **Change directories**
   - `cd [name-of-directory]`
 - **Create a new file**
   - `touch README.md`
-  - `touch main.js`
+  - `touch runner.rb`
   - //etc.
 </section>
 
@@ -55,6 +55,9 @@ To make your local machine’s git default to branch main, you’ll first need 
 Then you have to tell git what the default branch should be. You can run this command in your terminal to do that:
 
 `git config --global init.defaultBranch main`
+
+You can confirm this (or any other git config settings) by listing them all with: 
+`git config --list`
 </section>
 
 
@@ -81,18 +84,18 @@ Then you have to tell git what the default branch should be. You can run this co
 </section>
 
 <section class="dropdown">
-### Git Commands
+### Helpful Git Commands
 - **Clone a repo**
   - `git clone git@github.com:username/repo-name.git`
-  - This link is found on the repo page under the green "Code" button
+  - This SSH link is found on the repo page under the green "Code" button
 - **Create a new branch**
-  - `git checkout -b feature/name-of-feature-branch`
+  - `git checkout -b name-of-feature-branch`
 - **Add a file to staging**
   - `git add README.md`
 - **Commit a file (with a message)**
   - `git commit -m "description of work here"`
 - **Push changes**
-  - `git push origin feature/name-of-feature-branch`
+  - `git push origin name-of-feature-branch`
 </section>
 
 <section class="note">
