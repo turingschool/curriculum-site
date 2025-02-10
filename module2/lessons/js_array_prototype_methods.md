@@ -124,7 +124,7 @@ We are going to focus on:
 
 ## How to use `Array.filter(callbackFunction)`
 
-First, let's do `filter` together. The instructor will model how they would use documentation to research.
+First, let's do `filter` together. The instructor will model how they would use documentation to research.  Note that MDN's syntax uses some shortcuts that we do NOT recommend you use at this time.  Write it out long hand until you're very comfortable with using these methods effectively (post-Mod 2)
 
 <section class="call-to-action">
 ### Exercises
@@ -166,6 +166,22 @@ Be sure to include these in your notes, if you haven't already!
 
 Note that depending on the syntax you use for your callback function, you may not need to explicitly write the `return` keyword.  You can leverage the *implicit return* available in certain arrow function syntax.
 
+<section class="dropdown">
+### Filter: Syntax Example
+
+```js
+const words = ['spray', 'elite', 'exuberant', 'destruction', 'present']
+
+const result = words.filter((word) => {
+  return word.length > 6
+})
+
+console.log(result)
+// Expected output: ["exuberant", "destruction", "present"]
+```
+</section>
+
+
 <br>
 
 ## How to use `Array.map(callbackFunction)`
@@ -198,6 +214,21 @@ Be sure to include these in your notes, if you haven't already!
 * Use `map` when you want a new array based on your original, with some modification to each item.
 * Although similar to `forEach`, each time the callback is executed in `map`, whatever is returned from the callback is added to the new array
 * `map` will *ALWAYS* return a **new array of the same length** as the original array.
+</section>
+
+<section class="dropdown">
+### Map: Syntax Example
+
+```js
+const numbers = [1, 4, 9, 16];
+
+const result = numbers.map((num) => {
+  return num * 2
+})
+
+console.log(result) 
+// Expected output: [2, 8, 18, 32]
+```
 </section>
 
 <br>
@@ -247,6 +278,23 @@ Be sure to include these in your notes, if you haven't already!
 * Also useful for converting an array into another data type.
 * REMEMBER...you must always return the *accumulator* in the callback function.
 * The *initialValue* is technically optional but we strongly recommend always explicitly declaring it.  It is the starting value of your accumulator.
+
+</section>
+
+<section class="dropdown">
+### Reduce: Syntax Example
+
+```js
+const numbers = [1, 2, 3, 4];
+
+const result = numbers.reduce((acc, num) => {
+  acc += num
+  return acc
+}, 0)
+
+console.log(result);
+// Expected output: 10
+```
 
 </section>
 
@@ -347,6 +395,12 @@ Be sure to include these in your notes, if you haven't already!
 
 </section>
 
+<!-- <section class="call-to-action">
+### Sort: Syntax Example
+
+
+</section> -->
+
 <br>
 
 ## How to use `Array.forEach(callbackFunction)`
@@ -394,6 +448,23 @@ Be sure to include these in your notes, if you haven't already!
 * It is the prototype method that is most similar to a `for` loop and doesn't have additional built in functionality like some others (filter, map, etc)
 * `forEach` does **NOT** return anything (even if you have a return statement).  You can store element data into a variable, but the variable MUST exist outside of the `forEach`.
 </section>  
+
+<section class="dropdown">
+### forEach: Syntax Example
+
+```js
+const numbers = [1, 2, 3, 4];
+
+let sum = 0;
+
+numbers.forEach((num) => {
+  sum += num
+})
+
+console.log(sum);
+// Expected output: 10
+```
+</section>
 
 
 <section class="note">
@@ -508,7 +579,68 @@ To be prepared for final assessments (and interview code challenges), you should
 * **filter()** - iterates over each element in an array and returns a new array of only the elements that match the specified condition
 * **map()** - iterates over each element in an array and returns a new array of the same length with the modified elements
 * **reduce()** - iterates over each element in an array and returns a single value (the accumulator) of your specifications
-* **sort()** - iterates over each element in an array and sorts the elements (in place) based on your specified sorting 
+
+You will not be expect to use sort in your final assessment.
+
+<section class="dropdown">
+### Syntax Examples: join, split, includes
+
+Join: 
+```js
+const elements = ['Fire', 'Air', 'Water'];
+
+console.log(elements.join());
+// Expected output: "Fire,Air,Water"
+
+console.log(elements.join(''));
+// Expected output: "FireAirWater"
+
+console.log(elements.join('-'));
+// Expected output: "Fire-Air-Water"
+```
+
+
+Split: 
+```js
+const str = 'The quick brown fox jumps over the lazy dog.';
+
+const words = str.split(' ');
+console.log(words);
+// Expected output: ["The", "quick", "brown", "fox", "jumps", "over", "the", "lazy", "dog."]
+
+const chars = str.split('');
+console.log(chars);
+// Expected output: ["T", "h", "e", " ", "q", "u", "i", "c", "k", " ", "b", "r", ...etc]
+```
+
+Includes: 
+```js
+// Array prototype method includes():
+	const numbers = [1, 2, 3];
+	
+	console.log(numbers.includes(2));
+	// Expected output: true
+	
+	const pets = ['cat', 'dog', 'bat'];
+	
+	console.log(pets.includes('cat'));
+	// Expected output: true
+	
+	console.log(pets.includes('at'));
+	// Expected output: false
+
+
+// String prototype method includes():
+	const sentence = 'The quick brown fox jumps over the lazy dog.';
+	
+	console.log(sentence.includes('fox'))
+	// Expected output: true
+	console.log(sentence.includes('potato'))
+	// Expected output: false
+```
+
+</section>
+
 
 <section class="checks-for-understanding">
 ### Checks for Understanding
