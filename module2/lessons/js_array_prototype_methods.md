@@ -124,7 +124,7 @@ We are going to focus on:
 
 ## How to use `Array.filter(callbackFunction)`
 
-First, let's do `filter` together. The instructor will model how they would use documentation to research.
+First, let's do `filter` together. The instructor will model how they would use documentation to research.  Note that MDN's syntax uses some shortcuts that we do NOT recommend you use at this time.  Write it out long hand until you're very comfortable with using these methods effectively (post-Mod 2)
 
 <section class="call-to-action">
 ### Exercises
@@ -166,6 +166,22 @@ Be sure to include these in your notes, if you haven't already!
 
 Note that depending on the syntax you use for your callback function, you may not need to explicitly write the `return` keyword.  You can leverage the *implicit return* available in certain arrow function syntax.
 
+<section class="dropdown">
+### Filter: Syntax Example
+
+```js
+const words = ['spray', 'elite', 'exuberant', 'destruction', 'present']
+
+const result = words.filter((word) => {
+  return word.length > 6
+})
+
+console.log(result)
+// Expected output: ["exuberant", "destruction", "present"]
+```
+</section>
+
+
 <br>
 
 ## How to use `Array.map(callbackFunction)`
@@ -200,6 +216,21 @@ Be sure to include these in your notes, if you haven't already!
 * `map` will *ALWAYS* return a **new array of the same length** as the original array.
 </section>
 
+<section class="dropdown">
+### Map: Syntax Example
+
+```js
+const numbers = [1, 4, 9, 16];
+
+const result = numbers.map((num) => {
+  return num * 2
+})
+
+console.log(result) 
+// Expected output: [2, 8, 18, 32]
+```
+</section>
+
 <br>
 
 ## How to use `Array.reduce(callbackFunction)`
@@ -218,7 +249,7 @@ _Initial Value_ - The initial value to be used as the accumulator (the first arg
 ### Exercises
 
 #### Example #1
-Using `reduce`, sum up all of the numbers.  
+Using `reduce`, get the sum by adding up all of the numbers.  
 
 ```js
 const numbers = [1, 2, 3, 4, 5];
@@ -228,6 +259,16 @@ const numbers = [1, 2, 3, 4, 5];
 ```  
 
 #### Example #2
+Using `reduce`, get the product of multiplying all of the numbers. Consider what your acc's initalValue needs to be.
+
+```js
+const numbers = [1, 2, 3, 4, 5];
+
+// console output
+=> 120
+```   
+
+#### Example #3
 Using `reduce`, create a new object the stores the lengths of each word.  
 
 ```js
@@ -250,7 +291,88 @@ Be sure to include these in your notes, if you haven't already!
 
 </section>
 
+<section class="dropdown">
+### Reduce: Syntax Example
+
+```js
+const numbers = [1, 2, 3, 4];
+
+const result = numbers.reduce((acc, num) => {
+  acc += num
+  return acc
+}, 0)
+
+console.log(result);
+// Expected output: 10
+```
+
+</section>
+
 <br>
+
+## How to use `Array.forEach(callbackFunction)`
+
+`forEach` is the prototype method that is most similar to a `for` loop.  It simply iterates. It doesn't have additional built in functionality like some others (filter, map, etc).  
+
+There are _occasional_ times when it makes more sense to use a for loop over something like a forEach. For example:
+
+- If you need to run something a specific number of times, you would want to use a `for` loop.  `forEach` always iterates over every element in an array.
+- If you want to stop (`break`) a `for` loop, you can do that.  There is no way to stop a `forEach` loop. 
+
+
+<section class="call-to-action">
+### Exercises
+
+#### Example #1
+Using `forEach`, iterate over the array of prices, increase the price by $1, and add new increased prices to the `increasedPrices` array.
+
+```js
+const prices = [4.99, 5.50, 7.00, 10.25];
+const increasedPrices = [];
+```
+
+#### Example #2
+- Using the dogs array above, log the dog's name and how many legs it has.  
+
+```js
+const dogs = [
+  {name: "Fido", numLegs: 4},
+  {name: "Greg", numLegs: 5}
+];
+
+// console output
+=> 'Fido has 4 legs.'
+   'Greg has 5 legs.'
+```  
+
+</section>  
+
+<section class="dropdown">
+### Important Takeaways
+
+Be sure to include these in your notes, if you haven't already!
+* `forEach` is useful when you want to perform an operation on every element in an array.
+* It is the prototype method that is most similar to a `for` loop and doesn't have additional built in functionality like some others (filter, map, etc)
+* `forEach` does **NOT** return anything (even if you have a return statement).  You can store element data into a variable, but the variable MUST exist outside of the `forEach`.
+</section>  
+
+<section class="dropdown">
+### forEach: Syntax Example
+
+```js
+const numbers = [1, 2, 3, 4];
+
+let sum = 0;
+
+numbers.forEach((num) => {
+  sum += num
+})
+
+console.log(sum);
+// Expected output: 10
+```
+</section>
+
 
 ## How to use `Array.sort(callbackFunction)`
 
@@ -347,59 +469,17 @@ Be sure to include these in your notes, if you haven't already!
 
 </section>
 
+<!-- <section class="call-to-action">
+### Sort: Syntax Example
+
+
+</section> -->
+
 <br>
-
-## How to use `Array.forEach(callbackFunction)`
-
-`forEach` is the prototype method that is most similar to a `for` loop.  It simply iterates. It doesn't have additional built in functionality like some others (filter, map, etc).  
-
-There are _occasional_ times when it makes more sense to use a for loop over something like a forEach. For example:
-
-- If you need to run something a specific number of times, you would want to use a `for` loop.  `forEach` always iterates over every element in an array.
-- If you want to stop (`break`) a `for` loop, you can do that.  There is no way to stop a `forEach` loop. 
-
-
-<section class="call-to-action">
-### Exercises
-
-#### Example #1
-Using `forEach`, iterate over the array of prices, increase the price by $1, and add new increased prices to the `increasedPrices` array.
-
-```js
-const prices = [4.99, 5.50, 7.00, 10.25];
-const increasedPrices = [];
-```
-
-#### Example #2
-- Using the dogs array above, log the dog's name and how many legs it has.  
-
-```js
-const dogs = [
-  {name: "Fido", numLegs: 4},
-  {name: "Greg", numLegs: 5}
-];
-
-// console output
-=> 'Fido has 4 legs.'
-   'Greg has 5 legs.'
-```  
-
-</section>  
-
-<section class="dropdown">
-### Important Takeaways
-
-Be sure to include these in your notes, if you haven't already!
-* `forEach` is useful when you want to perform an operation on every element in an array.
-* It is the prototype method that is most similar to a `for` loop and doesn't have additional built in functionality like some others (filter, map, etc)
-* `forEach` does **NOT** return anything (even if you have a return statement).  You can store element data into a variable, but the variable MUST exist outside of the `forEach`.
-</section>  
 
 
 <section class="note">
-### Before we close out today...
-
-Take some time this afternoon to review what some of the highlights were for each prototype method.  Often when trying to solve a problem, there isn't just one answer.  Sometimes problems can be solved through a combination of prototype methods!  We'll review these more tomorrow and continue working through a few more examples then!
+Take some time to review what some of the highlights were for each prototype method.  Often when trying to solve a problem, there isn't just one answer.  Sometimes problems can be solved through a combination of prototype methods!  We'll review these more tomorrow and continue working through a few more examples then!
 </section>
 
 <br>
@@ -508,7 +588,68 @@ To be prepared for final assessments (and interview code challenges), you should
 * **filter()** - iterates over each element in an array and returns a new array of only the elements that match the specified condition
 * **map()** - iterates over each element in an array and returns a new array of the same length with the modified elements
 * **reduce()** - iterates over each element in an array and returns a single value (the accumulator) of your specifications
-* **sort()** - iterates over each element in an array and sorts the elements (in place) based on your specified sorting 
+
+You will not be expect to use sort in your final assessment.
+
+<section class="dropdown">
+### Syntax Examples: join, split, includes
+
+Join: 
+```js
+const elements = ['Fire', 'Air', 'Water'];
+
+console.log(elements.join());
+// Expected output: "Fire,Air,Water"
+
+console.log(elements.join(''));
+// Expected output: "FireAirWater"
+
+console.log(elements.join('-'));
+// Expected output: "Fire-Air-Water"
+```
+
+
+Split: 
+```js
+const str = 'The quick brown fox jumps over the lazy dog.';
+
+const words = str.split(' ');
+console.log(words);
+// Expected output: ["The", "quick", "brown", "fox", "jumps", "over", "the", "lazy", "dog."]
+
+const chars = str.split('');
+console.log(chars);
+// Expected output: ["T", "h", "e", " ", "q", "u", "i", "c", "k", " ", "b", "r", ...etc]
+```
+
+Includes: 
+```js
+// Array prototype method includes():
+	const numbers = [1, 2, 3];
+	
+	console.log(numbers.includes(2));
+	// Expected output: true
+	
+	const pets = ['cat', 'dog', 'bat'];
+	
+	console.log(pets.includes('cat'));
+	// Expected output: true
+	
+	console.log(pets.includes('at'));
+	// Expected output: false
+
+
+// String prototype method includes():
+	const sentence = 'The quick brown fox jumps over the lazy dog.';
+	
+	console.log(sentence.includes('fox'))
+	// Expected output: true
+	console.log(sentence.includes('potato'))
+	// Expected output: false
+```
+
+</section>
+
 
 <section class="checks-for-understanding">
 ### Checks for Understanding
