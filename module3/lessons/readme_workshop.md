@@ -43,7 +43,6 @@ Some examples include:
 * [https://dbader.org/blog/write-a-great-readme-for-your-github-project](https://dbader.org/blog/write-a-great-readme-for-your-github-project)
 * [https://www.giacomodebidda.com/posts/how-to-write-a-killer-readme/](https://www.giacomodebidda.com/posts/how-to-write-a-killer-readme/)
 * [https://tom.preston-werner.com/2010/08/23/readme-driven-development.html](https://tom.preston-werner.com/2010/08/23/readme-driven-development.html)
-* [https://ponyfoo.com/articles/readme-driven-development](https://ponyfoo.com/articles/readme-driven-development)
 * [https://thejunkland.com/blog/how-to-write-good-readme.html](https://thejunkland.com/blog/how-to-write-good-readme.html)
 * [https://github.com/PurpleBooth/a-good-readme-template](https://github.com/PurpleBooth/a-good-readme-template)
 * [Mod 1 Lesson on Readmes](../../module1/lessons/writing_a_readme)
