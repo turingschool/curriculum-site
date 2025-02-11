@@ -219,7 +219,7 @@ Look at the Sandbox below (Grocery List - Props).
 ### Checks for Understanding
 
 * How does React improve the process of manipulating the DOM?
-* What is the difference between props and state?
+* What is state and what are props?
 * When does a React component rerender?
 * What do we mean when we say "state is immutable"?
 </section>
