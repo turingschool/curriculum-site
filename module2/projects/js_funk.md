@@ -20,12 +20,11 @@ There are two ways we'd like you to demonstrate mastery. Both are essential for 
 - filter
 - reduce
 - map
-- sort
 - includes
 - split 
 - join
 
-Object.keys() **will not** be needed for your midmod or final assessments.
+Object.keys() and sort() **will not** be needed for your midmod or final assessments.
 
 
 ## Set Up
