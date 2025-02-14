@@ -140,7 +140,7 @@ Result after clicking Show My Poster button:
 - On the new poster form view, users should be able to fill out the three input fields and then hit the Show My Poster button
   - _Hint:
 Notice something weird happening when you click the button to submit the form? Try googling `event.preventDefault()`!_
-<p style="color: red">NOTE: Work through these bullet points in order. They'll have you update the data model first, then use that updated data model to change what is showing to the user.</p>
+<p style="color: red">NOTE: Work through these bullet points in order. They'll have you update the data model first, then ***use*** that updated data model to change what is showing to the user on the DOM. </p>
 - When the Show My Poster button is clicked, several things will happen:
   - First, use the values from the inputs to create a new, unique poster object and save it as the value of the `currentPoster` global variable (part of your data model)
   - Save the submitted data into the respective arrays (image URL into the images array, etc - all part of your data model) so that future random posters can use the user-created data
@@ -326,10 +326,27 @@ _Note: Don't worry about the layout or styling of your unmotivational posters qu
 Our product team realizes that some users will love the Unmotivational Posters feature while others might feel like it harshes the positive vibe of the application. They'd like us to add functionality so that users will be able to delete an unmotivational poster by double clicking on it.
 
 - From the unmotivational posters view, if a user double clicks a poster, it will be deleted
-  -  Users should be able to double click _anywhere_ on the poster to delete it - on the image, text or background.
-  -  HTML `onclick` attributes should not be used in any HTML code - all functionality should be through JavaScript.  
-  -  The poster should be removed from your cleaned unmotivational posters data set **_and_** should no longer be displayed on the DOM. 
   -  If the user navigates away from the Unmotivational Posters view after deleting some posters, those posters should still be gone when they navigate back to that view.  _Note: However, because we aren't implementing local storage, if a user refreshes the app, everything will be reset including deleted unmotivational posters and saved motivational posters. That's ok._
+
+<section class="note">
+### Do's and Dont's
+
+In FE development, the approach we want to follow is updating the data model (like your array) first, then ***using*** the updated data model to update what the user can see on the DOM.  
+
+You'll need to follow the same approach we used in the [DOM Manipulation II lesson](https://curriculum.turing.edu/module2/lessons/js_dom_manipulation_ii) to accomplish this delete functionality.  You'll add your event listener to the entire parent container, then use logic to isolate the specific poster that was clicked on, remove it from the data model, ***then*** use the updated data model to change what is showing on the DOM. 
+
+Don't: 
+- Don't use HTML `onclick` attributes in any code - all functionality should be through JavaScript.  
+- Don't use `.remove()` to forcibly remove the deleted poster off the DOM.
+- Don't add eventListeners to each unmotivational poster as you render them.  All eventListeners should be in one section toward the top of your file, not included in dynamically added elements. Use the approach outlined above instead.
+- Don't use querySelector to grab the poster to be deleted.  All querySelectors should be in one section at the top of your file, not sprinkled throughout your code in functions. 
+
+Do:
+- Ensure users can double click _anywhere_ on the poster to delete it - on the image, text or background.  
+  - Look into `.closest()` *hint, hint*
+- Ensure the poster is removed from your cleaned unmotivational posters data array first, **_and then_** update the DOM so that deleted poster is longer displayed.
+- Remember that you should already have a function whose job it is to simply render all the cleaned unmotivational posters from your array onto the DOM. And the point of functions is to be reusable. *hint, hint*
+</section>
 
 
 </section>
