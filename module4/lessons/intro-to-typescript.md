@@ -329,7 +329,7 @@ Open up this [Trivia Repo](https://github.com/turingschool-examples/trivia-types
 <section class="note">
 ### Spinning up a React App with TypeScript Using Vite
 
-If you're creating a TS React app from scratch, [this doc page](https://vite.dev/guide/#scaffolding-your-first-vite-project) for starting up a TS React App using Vite will be very useful. It's more difficult to add in TS after the fact than to start fresh with TS from the start, but it can be done, of course.
+If you're creating a TS React app from scratch, [this Vite doc page](https://vite.dev/guide/#scaffolding-your-first-vite-project) for starting up a TS React App using Vite will be very useful. It's more difficult to add in TS after the fact than to start fresh with TS from the start, but it can be done, of course.
 
 [Create React App](https://create-react-app.dev/) used to be a common way to build a new create app but has since been deprecated.  Vite is the modern preferred option. 
 </section>
