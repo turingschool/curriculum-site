@@ -37,7 +37,8 @@ React has its own set of developer tools that are extremely helpful. [Install th
 
 ## Creating a new React app with Vite
 
-For this lesson, we will be using [Vite](https://vite.dev/guide/) to spin up a React application. [`create-react-app`](https://facebook.github.io/create-react-app/) used to be a good option but is no longer maintained.
+For this lesson, we will be using [Vite](https://vite.dev/guide/) to spin up a React application.  
+❌ [`create-react-app`](https://facebook.github.io/create-react-app/) used to be a good option but is no longer maintained.
 
 Many of the dependencies and configuration files will be obscured, since we won't need to worry about them. This is a fast way to set up a React application so we can concentrate on building out the app, instead of spending our time and energy on tooling.
 

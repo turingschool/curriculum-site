@@ -106,7 +106,7 @@ Because API keys and database connections can contain sesitive data, you don’t
 
 The way you create environment variables can change depending on the framework you're using. For example:
 
-* **React**: You will need to create a .env file in the root of your project. Instructions [here](https://create-react-app.dev/docs/adding-custom-environment-variables/)
+* **React**: You will need to create a .env file in the root of your project. The [Vite docs](https://vite.dev/guide/env-and-mode#env-variables) might be helpful.
 * **Rails**: We've seen sensitive variables (like API keys) be stored in encrypted credential files. There are also configuration files and initializers available for other variables. Instructions [here](https://guides.rubyonrails.org/v5.1/configuring.html)
 
 </section>
