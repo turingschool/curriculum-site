@@ -35,67 +35,62 @@ How would you build this application using vanilla JS? What functions would need
 
 React has its own set of developer tools that are extremely helpful. [Install the dev tools Chrome extension](https://chromewebstore.google.com/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en). Now, anytime you're looking at a React app, you'll see a "Components" and "Profiler" tab in your dev tools! As you're working through this tutorial, pay attention to those tabs (especially the "Components" tab).
 
-## Create React App
+## Creating a new React app with Vite
 
-For this lesson, we will be using [`create-react-app`](https://facebook.github.io/create-react-app/). This is a single command line that sets up a boilerplate React application for us. Out of the box, it comes with some handy scripts (such as `start` and `test`).
+For this lesson, we will be using [Vite](https://vite.dev/guide/) to spin up a React application. [`create-react-app`](https://facebook.github.io/create-react-app/) used to be a good option but is no longer maintained.
 
 Many of the dependencies and configuration files will be obscured, since we won't need to worry about them. This is a fast way to set up a React application so we can concentrate on building out the app, instead of spending our time and energy on tooling.
 
 _Note_: A good intermission or post-graduation project is to learn how to configure React. Hand-rolling a React application will make you more familiar with how React works.
 
-### Get started with Create React App
+### Get started with Vite
 
-To set up a new react application, simply open your terminal and run the command:
+#### Prerequisites:
+Vite requires Node.js version 18+ or 20+.   Let's use nvm (node version manager) to install the latest version of Node.js.
+
+Run:
+```bash
+nvm install 22
+```
+You can confirm you have Node version 22 by running `node -v`.
+If you have trouble with the nvm command, ensure you have `nvm` installed by running `nvm -v`.
+
+To set up a new react application, run the command:
 
 ```bash
-$ npx create-react-app NAMEOFYOURAPP
+$ npm create vite@latest ideabox --template react
 ```
 
-For this lesson, we'll be rebuilding a Mod 1 project in React! Let's run the following script:
+You will see something like this run in your terminal:
+Select `y` to proceed then select `React` and `JavaScript`
 
 ```bash
-$ npx create-react-app ideabox
-```
+Need to install the following packages:
+  create-vite@latest
+Ok to proceed? (y) y
+npm WARN EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: 'create-vite@6.2.0',
+npm WARN EBADENGINE   required: { node: '^18.0.0 || ^20.0.0 || >=22.0.0' },
+npm WARN EBADENGINE   current: { node: 'v16.14.2', npm: '8.5.0' }
+npm WARN EBADENGINE }
+✔ Select a framework: › React
+✔ Select a variant: › JavaScript
 
-You will see something like this start to run in your terminal:
+Scaffolding project in /Users/heatherf/Turing/se-modules/se3/react-prep/ideabox-vite...
 
-```bash
-Creating a new React app in /Users/yourname/mod3/ideabox.
-
-Installing packages. This might take a couple of minutes.
-Installing react, react-dom, and react-scripts...
-
-⸨  ░░░░░░░░░░░░░░░░⸩ ⠸ fetchMetadata: sill resolveWithNewModule pify@4.0.1 chec...
-```
-
-When the script is finished running, you will see the following message in your terminal:
-
-```bash
-Success! Created ideabox at /Users/yourname/Turing/TA/MOD3/m3curriculum/ideabox
-Inside that directory, you can run several commands:
-
-  npm start
-    Starts the development server.
-
-  npm run build
-    Bundles the app into static files for production.
-
-  npm test
-    Starts the test runner.
-
-  npm run eject
-    Removes this tool and copies build dependencies, configuration files
-    and scripts into the app directory. If you do this, you can’t go back!
-
-We suggest that you begin by typing:
+Done. Now run:
 
   cd ideabox
-  npm start
+  npm install
+  npm run dev
 
-Happy hacking!
 ```
 
-As the instructions say, let's change directories into our new ideabox application and run `npm start` to see our new boilerplate application!
+As the instructions say, let's change directories `cd` into our new ideabox application and install dependencies by running `npm install`. 
+
+Open the repo in VS Code with `code .`
+
+Finally run `npm run dev` to see our new boilerplate application displayed at <a href="http://localhost:5173/">http://localhost:5173/</a>
 
 <section class="call-to-action">
 ### Explore
@@ -104,56 +99,51 @@ Take a few minutes and look around the boilerplate. Hint: start at the `src/` fo
 
 What happens if you:
 
-* Change some of the HTML you see in the `App.js` file?
+* Change some of the HTML you see in the `App.jsx` file?
 * Change some of the CSS you see in the `App.css` file?
 
-You'll also notice an `index.js` file. What is going on in there?  
+You'll also notice an `main.jsx` file. What is going on in there?  
 This is a great time to do some googling or ask chatGPT for help understanding.  
 
 ```jsx
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
+createRoot(document.getElementById('root')).render(
+  <StrictMode>
     <App />
-  </React.StrictMode>
-);
+  </StrictMode>,
+)
 ```
 </section>
 
 ## Modular File Structure
 
-We've talked about React being modular many times, but what does it look like to have our code and project files be modular?
+React lets us keep our code modular, but what does it look like to have our code and project files be modular?
 
-One small example is to keep a modular file structure. This means that any and all files related to a particular component live in the same directory! This is pretty common in React projects, so we recommend setting up your file structure like this each time you build a new project. Here's an example :)
+One small example is to keep a modular file structure. Any and all files related to a particular component live in the same directory! We recommend setting up your file structure like the example below each time you build a new project. 
+
+Take a moment now to create a `components` directory within your `src` directory. Create a directory for `App` within that `components` directory.  Move the 2 `App` files into the `App` directory.  Create a directory for Form, Ideas and Card - we'll add files to them later.
 
 src 📁
 - components 📁
     - App 📁
-        - App.js
+        - App.jsx
         - App.css
-        - App.test.js
     - Form 📁
-        - Form.js
-        - Form.css
-        - Form.test.js
     - Ideas 📁
-        - Ideas.js
-        - Ideas.css
-        - Ideas.test.js
-    - Etc
+    - Card 📁
 
+Uh-oh!  Changing the file structure will impact our imports.  VS Code will offer to update App imports.  But we'll still need to update the reactLogo import in App.jsx.  That import would now be `import reactLogo from '../../assets/react.svg'`
 
 ## Ideabox
 
-Let's get rid of all the boilerplate inside the `App.js` file. Yep. Just ERASE THAT CODE!
+Let's get rid of all the boilerplate inside the `App.jsx` file. Yep. Just ERASE THAT CODE - including the imports!
 
-You'll notice that as soon as we save our changes, the browser re-renders. Look into the terminal, and you'll see another build kick off. This is because `create-react-app` gives us hot-reloading. Any time we make a change, the browser will update to show our changes.
+You'll notice that as soon as we save our changes, the browser re-renders. Look into the terminal, and you'll see another build kick off. This is because Vite gives us hot-reloading. Any time we make a change, the browser will update to show our changes.  However, sometimes if we hit a significant error, **we may still have to refresh the page or re-run `npm run dev` to get things going again after implementing the fix.**  You may need to refresh your browser after deleting the code in App in order to see the error outlined below.
 
-Look at the console in our dev tools now that we've deleted our `App.js` code, and you'll see an error that reads:
+Look at the console in our dev tools now that we've deleted our `App.jsx` code, and you'll see an error that reads:
 
-"Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: object. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports."
+*"Uncaught SyntaxError: The requested module '/src/components/App/App.jsx?t=1739225023971' does not provide an export named 'default' (at main.jsx:4:8)"*
 
-Back in our `index.js` file we're trying to render a React component: App. However, we're no longer exporting a valid React component!  
+Back in our `main.jsx` file we're trying to render a React component: App. However, we're no longer exporting a valid React component!  
 
 While JavaScript error messages aren't always very clear or helpful, React error messages are much better at telling us what's going on. The often even include a link to the appropriate part of the React docs!  
 
@@ -175,7 +165,7 @@ Let's figure out what should be a component in our app.
 
 ![IdeaBox wireframe with component boxes](../../assets/images/lessons/ideabox/IdeaBox-wireframe.png)
 
-### App.js
+### App.jsx
 
 Because we want App to hold onto our list of ideas, let's think about how we're going to store that information. 
 
@@ -198,9 +188,8 @@ function App() {
 export default App;
 ```
 
-The above code is defining the App functional component in React. 
+The above code is defining the App functional component in React.  App returns JSX code via the `return` keyword just like any ol' function. 
 
-Any additional JSX code or logic can be added to the component as needed, and the final JSX code is returned by the component's return statement just like any ol' function.
 <section class="note">
   It's important to note that this code is using functional components, rather than class components and OOP. This allows us to manage our component in a more concise and streamlined way, without relying on class inheritance and traditional OOP principles.
 </section>
@@ -232,23 +221,22 @@ What we're actually writing here is known as JSX. It's an abstraction that makes
 JSX is "JavaScript and XML" - it's a handy mashup language that allows us to write HTML with a bit of JavaScript injected in. You can read more on it [here](https://reactjs.org/docs/introducing-jsx.html) (and a bit more in depth [here](https://react.dev/learn/writing-markup-with-jsx)). It's not something you need to be an expert on, but you should know that it's being used in React. In the meantime, we'll see how JSX makes our lives easier throughout this lesson!
 </section>
 
-Okay. Now try to add a paragraph tag. What happened?
+Okay. Now try to add a paragraph tag after your `<h1>` tag. What happened?
 
 
 You should receive this error:
 ```
 Failed to compile.
 
-./src/App.js
-  Line 12:  Parsing error: Adjacent JSX elements must be wrapped in an enclosing tag. Did you want a JSX fragment <>...</>?
+...src/components/App/App.jsx: Adjacent JSX elements must be wrapped in an enclosing tag. Did you want a JSX fragment <>...</>? (6:4)
 
-  12 |     return(
-  13 |       <h1>IdeaBox</h1>
-> 14 |       <p>Hi!</p>
-     |       ^
-  16 |     )
-  17 |   
-  18 |
+  4 |     return(
+  5 |       <h1>IdeaBox</h1>
+> 6 |       <p>Hi!</p>
+    |       ^
+  7 |     )
+  8 |   }
+
 ```
 
 Let's figure out what this error is saying. "Adjacent JSX elements must be wrapped in an enclosing tag."
@@ -262,6 +250,9 @@ Since this is our App component, let's wrap everything in a `<main>` tag!
 
 If you're just looking for an unflavored container for your elements (aka they are not semantically related to one another, and the best element to use would be a `<div>`), then instead, use a `<React.Fragment>`! You can read more about Fragments [here](https://react.dev/reference/react/Fragment).
 </section>
+
+We'll also import our App.css file.  And give our <main> element a class of 'App' like so:
+
 
 ```jsx
 import  { useState } from 'react';
@@ -283,9 +274,9 @@ export default App;
 
 You'll notice that instead of "`class`", we're using a "`className`" attribute on our `<main>` element. Why do you think this is?
 
-### App.js state
+### App.jsx state
 
-Okay. Let's come back to our App component and create state.
+Okay. Let's come back to our App component and create state - our "source of truth" for the data the app will be using.
 
 ```jsx
 import { useState } from 'react'
@@ -296,11 +287,13 @@ function App(){
 
   return (
     <main className='App'>
-        <h1>IdeaBox</h1>
-        <p>Hi!</p>
-      </main>
+      <h1>IdeaBox</h1>
+      <p>Hi!</p>
+    </main>
   )
 }
+
+export default App;
 ```
 
 <section class="call-to-action">
@@ -343,26 +336,25 @@ export default App;
 
 Open up your React Dev Tools (open your dev tools, then go to the Components tab). You can see that App now has state:
 
-![App component state](../../assets/images/lessons/ideabox/React-dev-tool.png)
+![App component state](../../assets/images/lessons/ideabox/React-dev-tools.png)
 
 Neat!
 
 **Consider the following...**
 
-Okay. Let's pause for a second. `App.js` is a functional component, and we used useState to setup a state for our component.
+Okay. Let's pause for a second. `App.jsx` is a functional component, and we used useState to setup a state for our component.
 
 ### State
 
 **State** holds data that represents the actual state of our application. State can be changed and mutated through user interactions.
 
 React Hooks is a feature that was introduced at the end of 2018. It allows functional components to access and manipulate state. In future lessons, we'll learn about other types of components as well. However, for now, it's essential to understand functional components and how React Hooks enable them to manage state in a more concise and streamlined way.
-<!-- This is where I have stopped March 30th -->
-<!-- -------------------------- -->
-## Ideas.js
+
+## Ideas.jsx
 
 Next, let's focus on getting our two ideas to render!
 
-We already said that we want to have a container for all of our idea Cards. So let's create that component! In your terminal, touch two new files: `$ touch src/Ideas.js src/Ideas.css`.
+We already said that we want to have a container for all of our idea Cards. So let's create that component! In your VS Code, within the `src/components/Ideas` directory, create two new files: `Ideas.jsx` and `Ideas.css`.
 
 <section class="note">
 ### Note
@@ -376,10 +368,10 @@ Will this Ideas component need to have state? What do you think?
 
 Since the Ideas component will just be rendering Card components, it will not need to have its own state.
 
-let's create a function called Ideas that returns an h2 that reads "Ideas go here!"
+Let's create a function called Ideas that returns an h2 that reads "Ideas go here!"
 
 ```jsx
-// Ideas.js
+// Ideas.jsx
 
 import './Ideas.css';
 
@@ -392,14 +384,14 @@ function Ideas(){
 export default Ideas;
 ```
 
-Then, back in our `App.js`, we can import our shiny new Ideas component and add it to our render!
+Then, back in our `App.jsx`, we can import our shiny new Ideas component and add it to our return so it will render!
 
 ```jsx
-// App.js
+// App.jsx
 
-import './App.css';
-import Ideas from './Ideas';
 import { useState } from 'react'
+import './App.css';
+import Ideas from '../Ideas/Ideas'
 
 function App(){
   const dummyIdeas = [
@@ -438,25 +430,24 @@ When we pass props down to a child component, it comes through as a simple JavaS
 
 Let's start with an example, just to keep things simple. For now, since our Ideas component just contains an h2, let's make that h2 say something different than "Ideas go here!"
 
-In our App component, let's render the Ideas component by adding it to our return.
+In our App component's return statement, let's get rid of our <p> tag and pass some data as a prop when rendering our Ideas component.
 
 ```jsx
-// App.js
+// App.jsx
 // ...
   return(
     <main className='App'>
         <h1>IdeaBox</h1>
-        <p>Hi!</p>
         <Ideas name='Travis'/>
     </main>
   )
-
+// ....
 ```
 
-Now, let's adjust our Ideas component.
+Now, let's adjust our Ideas component so it can receive and use that data coming in as props.
 
 ```jsx
-// Ideas.js
+// Ideas.jsx
 
 function Ideas(props){
 
@@ -468,18 +459,18 @@ function Ideas(props){
 
 What are those curly brackets doing? In JSX, whenever we're writing something that is JavaScript (aka "not HTML"), we have to wrap it in curly brackets. In this case, "name" acts like a variable. It's not a string that reads "name" - it's a placeholder that represents the value of the property (in this case, "Travis")! Because it's a variable, we have to surround it in curly brackets to tell the JSX to treat the contents like JavaScript.
 
-In your browser, you should see "Hello, Travis!" In `App.js`, add another Ideas component to the `App.js` `return()` , but pass in a different name. What do you see in the browser? Try creating new props to use!
+In your browser, you should see "Hello, Travis!" In `App.jsx`, add another Ideas component to the `App.jsx` `return()` , but pass in a different name. What do you see in the browser? Try creating new props to use!
 
 Okay, so just WHAT exactly is going on here?
 
  **props** is the name of an object that contains key-value pairs. From our above example, the key is "name", and the value is "Travis". So, in our Ideas component, we can access the value by writing `props.name` (which gives us a string of "Travis"). This is the same dot notation we learned in Mods 1 and 2 to access data stored in objects.
 
-If, in the `return` of our App component, we called the property "potato" instead of "name", we would have to access it by (inside the Ideas component) writing `props.potato`.
+If, in the `return` of our App component, we called the property "potato" instead of "name", we would have to access it by (inside the Ideas component) writing `props.potato`. This is the same dot notation we learned in Mod 2 to access data stored in objects.
 
 We can even destructure the props object, because it's just a regular object!
 
 ```jsx
-// Ideas.js
+// Ideas.jsx
 
 function Ideas(props){
   const { name } = props;
@@ -495,7 +486,7 @@ In _this_ example, destructuring is a bit over-engineered, yes. However, we'll s
 And here's YET ANOTHER super-fancy way to destructure:
 
 ```jsx
-// Ideas.js
+// Ideas.jsx
 
 function Ideas({ name }){
   return (
@@ -504,7 +495,7 @@ function Ideas({ name }){
 }
 ```
 
-We can destructure props ON THE WAY IN. Whoa! It's accomplishing the same thing as destructuring on a separate line, like in the previous example.
+We can destructure props ON THE WAY IN. Whoa! It's accomplishing the same thing as destructuring on a separate line, like in the previous example.  Be aware of destructuring but don't stress it at this time.
 
 
 <section class="note">
@@ -519,10 +510,10 @@ All right. We don't actually want to render an h2 in our Ideas component. We wan
 
 Let's create a Card component to use.
 
-Create your files: `$ touch src/Card.js src/Card.css`
+In the `Card` directory we created earlier, create the `Card.jsx` and `Card.css` files. 
 
 ```jsx
-// Card.js
+// Card.jsx
 
 
 import './Card.css';
@@ -541,10 +532,10 @@ export default Card;
 Then, in your Ideas component, let's just try to get these hooked up properly.
 
 ```jsx
-// Ideas.js
+// Ideas.jsx
 
 
-import Card from './Card';
+import Card from '../Card/Card';
 import './Ideas.css';
 
 function Ideas(props){
@@ -594,7 +585,7 @@ Okay! Hopefully your app looks like this:
 All right, friends. Let's get to passing some PROPS! Let's go all the way back to our App component and pass our list of ideas to the Ideas container component, so that it can then create Card components out of each individual idea.
 
 ```jsx
-// App.js
+// App.jsx
 
 
   return(
@@ -612,7 +603,9 @@ Go look at the Ideas component in your React dev tools in the browser. You shoul
 We now want to iterate through our array and create a Card component, passing it the information it needs to display the proper information!
 
 ```js
-// Ideas.js
+// Ideas.jsx
+import Card from '../Card/Card';
+import './Ideas.css';
 
 function Ideas({ ideas }){
 
@@ -633,6 +626,9 @@ function Ideas({ ideas }){
     </div>
   )
 }
+
+export default Ideas;
+
 ```
 
 Okay - we've made a few changes! You'll notice that we're now destructuring the props _as we pass them in_! W H A T. I know. Then, we're mapping over the ideas array and creating a new array of Card components, each with props of `title` and `name`. The `key` property is something that React requires when using `map()` to create elements. In this case, I'm just using the unique id that each idea has.
@@ -640,7 +636,8 @@ Okay - we've made a few changes! You'll notice that we're now destructuring the 
 If you look in your React dev tools, you'll see that both Card components now has props of "title" and "description"! Go ahead a change Card so we display that information.
 
 ```js
-// Card.js
+// Card.jsx
+import './Card.css';
 
 function Card({ title, description, id }){
   return (
@@ -651,6 +648,9 @@ function Card({ title, description, id }){
     </div>
   )
 }
+
+export default Card;
+
 ```
 
 I created a button to delete the Card, but we'll get to that later. For now, let's celebrate, because we just got this sucker to display some ideas!!
@@ -662,7 +662,8 @@ Before me move on, lets tighten up the UX here a bit.
 <section class="call-to-action">
 ### Explore  
 
-* Try assigning  an empty array to the state of our App data .
+* What if we didn't have any dummyIdeas to start?
+  * In your useState line of code, replace the dummyIdeas with an empty array so that our ideas state starts as an empty array.
 * What happens? Why?
 * What would make for a better user experience?
 </section>
@@ -674,7 +675,7 @@ Conditional rendering is exactly what it sounds like: telling a component to ren
 Currently our App looks like this:
 
 ```jsx
-// App.js
+// App.jsx
 
 function App () {
     const [ideas,setIdeas] = useState([])
@@ -689,19 +690,21 @@ function App () {
 
 ```
 
+We want to add conditional logic that essentially says, *if there aren't any ideas to display, display an `<h2>` inviting users to add some ideas.*
+
 <section class="answer">
 ### In plain JS, what could this conditional look like?
 ```javascript
-if (!data.length) {
+if (!ideas.length) {
   // return an h2 saying to add some ideas
 }
 ```
 </section>
 
-We can use curly braces to inject JS into our JSX. However, we need whatever is inside of our curlies to _evaluate_ to the HTML we want rendered, so we'll use some syntax like this:
+We can use curly braces to inject JS into our JSX. However, we need whatever is inside of our curlies to _evaluate_ to the HTML we want rendered, so we'll use React's conditional rendering syntax like this:
 
 ```jsx
-// App.js
+// App.jsx
 
  return ( 
   <main className="App">
@@ -720,13 +723,15 @@ We can use curly braces to inject JS into our JSX. However, we need whatever is 
 What does the operator return?
 </section>
 
-The code above says that, if the expression on the left side of the `&&` is true, return the expression on the right side. So if there are no ideas in state, return our h2!
+The code above says that, if the expression on the left side of the `&&` is true, return the expression on the right side. So if there are no ideas in state, return (aka render) our h2!
 
-## Form.js
+Go ahead and pass your dummyIdeas back into your useState hook.  Later, when we set up the ability to delete ideas, we should see our `<h2>` anytime there are no ideas in the ideas array in state.
+
+## Form.jsx
 
 Let's move on to our Form component. We're going to create what is known as a controlled form.
 
-Create the Form component files: `$ touch src/Form.js src/Form.css`
+In the Form directory we created earlier, create the `Form.jsx` and `Form.css` files.
 
 ```css
 /* Form.css */
@@ -747,7 +752,7 @@ input, button {
 Our Form will start like this:
 
 ```jsx
-// Form.js
+// Form.jsx
 
 import { useState } from 'react';
 import './Form.css';
@@ -781,25 +786,26 @@ export default Form;
 ```
 
 Now that we have our Form files started, we can connect our Form to our App component so it will render.  
-First, import the Form in App.js.  
+First, import the Form in App.jsx.  
 ```jsx
-import Form from './Form';
+import Form from '../Form/Form';
 ```
 Then, render the Form in App's return.
 ```jsx
-  return(
-    <main className='App'>
+  return ( 
+    <main className="App">
       <h1>IdeaBox</h1>
+      {!ideas.length && <h2>No ideas yet -- add some!</h2> }
       <Form/>
       <Ideas ideas={ideas} />
     </main>
-  )
+   )
 ```
 
 But we also need to write some functions. Let's go back to our Form and make sure that when we type into our inputs, they update the Form's state.
 
 ```jsx
-// Form.js
+// Form.jsx
 
     return (
       <form>
@@ -825,20 +831,23 @@ But we also need to write some functions. Let's go back to our Form and make sur
 
 ```
 
-What is this `setTitle` business? It's a function created using useState hook to manage the state of the title. The useState hook returns an array with two elements. The current state value in this case an empty string and a function to update the state in this case `setTitle`. 
+What is this `setTitle` business?  
+It's a function created using useState hook to manage the state of the title.  
+The useState hook returns an array with two elements. The current state value in this case an empty string and a function to update the state in this case `setTitle`.  
+   
 OK let's go back to `setTitle` and what is happening in the `onChange`. So when the `onChange` event listener is triggered by the user typing something into the input field, the `setTitle` function is called with the new value of the input as an argument. This updates the state of the title variable with the new value, causing a re-render of the component with the updated state.
-
 
 Take a look at your React dev tools - is the state updating as you type into the inputs?
 
-When we click the submit button, what do we want to happen? We want to create an object out of the new idea and add it to the list of ideas that App is holding onto in state. How do we access App's state from inside our Form component?
+When we click the submit button, what do we want to happen?  
+We want to create an object out of the new idea and add it to the list of ideas that App is holding onto in state. How do we access App's state from inside our Form component?
 
 ### Passing functions
 
-In App, we're going to have to create a function that updates App's state:
+In App, we're going to have to create an `addIdea` function that updates App's state.  Then we'll pass that function into our Form as a prop.
 
 ```jsx
-// App.js
+// App.jsx
 
   function addIdea (newIdea) {
     setIdeas([...ideas, newIdea])
@@ -847,6 +856,7 @@ In App, we're going to have to create a function that updates App's state:
     return(
       <main className='App'>
         <h1>IdeaBox</h1>
+        {!ideas.length && <h2>No ideas yet -- add some!</h2> }
         <Form addIdea={addIdea} />
         <Ideas ideas={ideas} />
       </main>
@@ -854,52 +864,64 @@ In App, we're going to have to create a function that updates App's state:
 
 ```
 
-This is a callback function that takes a new idea object as an argument, and adds it to the existing ideas array by creating a new array using the spread operator ... to copy the existing ideas array and adding the new idea to the end of it.
+This is a callback function that takes a new idea object as an argument, and adds it to the existing ideas array by creating a new array using the **spread operator** ... to copy the existing ideas array and adding the new idea to the end of it.
 This updated array is then set as the new state of `ideas` using `setIdeas` function which is the state updater function created by useState hook. 
 
 This is good, because we're passing it down as a prop to the Form component!
 
 Now, in the Form component, let's make use of the `addIdea` function we passed as a prop. To access `addIdea` we'll need to declare 'props' as a parameter in our functional Form component then use dot notation to access `props.addIdea`. Or, we could use destructuring to allow us to directly reference `addIdea` without having to use dot notation.
 
+We're also creating a submitIdeas function in the Form component that will format the newIdea to be passed into the invocation of the addIdea prop.  The submitIdeas function will be invoked on the Form's button click.
+
 ```jsx
-// Form.js
+// Form.jsx
+import { useState } from 'react';
+import './Form.css';
+
+function Form({addIdea}){
+  const [title, setTitle] = useState("");
+  const [description, setDescription] = useState("");
 
   function submitIdeas(event) {
-        event.preventDefault()
-        const newIdea = {
-            id: Date.now(),
-            title,
-            description
-        }
-        addIdea(newIdea)
-        clearInput()
+    event.preventDefault()
+    const newIdea = {
+        id: Date.now(),
+        title,
+        description
+    }
+    addIdea(newIdea)
+    clearInput()
   }
   function clearInput(){
-        setTitle("")
-        setDescription("")
+      setTitle("")
+      setDescription("")
   }
-    
-    return (
-        <form>
-          <input
-            type='text'
-            placeholder='Title'
-            name='title'
-            value={title}
-            onChange={event => setTitle(event.target.value)}
-          />
-  
-          <input
-            type='text'
-            placeholder='Description'
-            name='description'
-            value={description}
-            onChange={event => setDescription(event.target.value)}
-          />
-  
-          <button onClick = { event => submitIdeas(event)}>SUBMIT</button>
-        </form>
-      )
+
+  return (
+    <form>
+      <input
+        type='text'
+        placeholder='Title'
+        name='title'
+        value={title}
+        onChange={event => setTitle(event.target.value)}
+      />
+
+      <input
+        type='text'
+        placeholder='Description'
+        name='description'
+        value={description}
+        onChange={event => setDescription(event.target.value)}
+      />
+
+      <button onClick = { event => submitIdeas(event)}>SUBMIT</button>
+    </form>
+  )
+}
+
+export default Form;
+
 ```
 
 ### Deleting a Card
@@ -909,11 +931,11 @@ Now that you know how to use a function and props to allow a different component
 First, write the App function to delete an idea from state and pass it to the Ideas component:
 
 ```jsx
-// App.js
+// App.jsx
 
 import './App.css';
-import Form from './Form';
-import Ideas from './Ideas';
+import Ideas from '../Ideas/Ideas';
+import Form from '../Form/Form';
 import { useState } from 'react'
 
 function App(){
@@ -936,7 +958,7 @@ function App(){
   return(
     <main className='App'>
         <h1>IdeaBox</h1>
-        <p>Hi!</p>
+        {!ideas.length && <h2>No ideas yet -- add some!</h2> }
         <Form addIdea={addIdea}/>
         <Ideas ideas={ideas} deleteIdea={deleteIdea}/>
     </main>
@@ -951,7 +973,8 @@ Second, pass the `deleteIdea` function to each Card that the Ideas component cre
 
 ```jsx
 import './Ideas.css';
-import Card from "./Card"
+import Card from '../Card/Card';
+
 function Ideas({ ideas, deleteIdea }){
 
   const ideaCards = ideas.map(idea => {
