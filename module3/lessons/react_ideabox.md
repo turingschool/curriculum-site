@@ -80,7 +80,7 @@ Scaffolding project in /Users/heatherf/Turing/se-modules/se3/react-prep/ideabox-
 
 Done. Now run:
 
-  cd ideabox-vite
+  cd ideabox
   npm install
   npm run dev
 
@@ -120,7 +120,7 @@ React lets us keep our code modular, but what does it look like to have our code
 
 One small example is to keep a modular file structure. Any and all files related to a particular component live in the same directory! We recommend setting up your file structure like the example below each time you build a new project. 
 
-Take a moment now to create a `components` directory within your `src` directory. Create a directory for `App` within that `components` directory.  Move the 2 `App` files into the `App` directory.  We'll build directories and files for Form, Ideas, etc later.
+Take a moment now to create a `components` directory within your `src` directory. Create a directory for `App` within that `components` directory.  Move the 2 `App` files into the `App` directory.  Create a directory for Form, Ideas and Card - we'll add files to them later.
 
 src 📁
 - components 📁
@@ -129,7 +129,7 @@ src 📁
         - App.css
     - Form 📁
     - Ideas 📁
-    - Etc
+    - Card 📁
 
 Uh-oh!  Changing the file structure will impact our imports.  VS Code will offer to update App imports.  But we'll still need to update the reactLogo import in App.jsx.  That import would now be `import reactLogo from '../../assets/react.svg'`
 
@@ -137,7 +137,7 @@ Uh-oh!  Changing the file structure will impact our imports.  VS Code will offer
 
 Let's get rid of all the boilerplate inside the `App.jsx` file. Yep. Just ERASE THAT CODE - including the imports!
 
-You'll notice that as soon as we save our changes, the browser re-renders. Look into the terminal, and you'll see another build kick off. This is because Vite gives us hot-reloading. Any time we make a change, the browser will update to show our changes.  However, sometimes if we hit a significant error, **we may still have to refresh the page or re-run `npm run dev` to get things going again after implementing the fix.**
+You'll notice that as soon as we save our changes, the browser re-renders. Look into the terminal, and you'll see another build kick off. This is because Vite gives us hot-reloading. Any time we make a change, the browser will update to show our changes.  However, sometimes if we hit a significant error, **we may still have to refresh the page or re-run `npm run dev` to get things going again after implementing the fix.**  You may need to refresh your browser after deleting the code in App in order to see the error outlined below.
 
 Look at the console in our dev tools now that we've deleted our `App.jsx` code, and you'll see an error that reads:
 
@@ -221,7 +221,7 @@ What we're actually writing here is known as JSX. It's an abstraction that makes
 JSX is "JavaScript and XML" - it's a handy mashup language that allows us to write HTML with a bit of JavaScript injected in. You can read more on it [here](https://reactjs.org/docs/introducing-jsx.html) (and a bit more in depth [here](https://react.dev/learn/writing-markup-with-jsx)). It's not something you need to be an expert on, but you should know that it's being used in React. In the meantime, we'll see how JSX makes our lives easier throughout this lesson!
 </section>
 
-Okay. Now try to add a paragraph tag after your <h1> tag. What happened?
+Okay. Now try to add a paragraph tag after your `<h1>` tag. What happened?
 
 
 You should receive this error:
@@ -287,9 +287,9 @@ function App(){
 
   return (
     <main className='App'>
-        <h1>IdeaBox</h1>
-        <p>Hi!</p>
-      </main>
+      <h1>IdeaBox</h1>
+      <p>Hi!</p>
+    </main>
   )
 }
 
@@ -354,7 +354,7 @@ React Hooks is a feature that was introduced at the end of 2018. It allows funct
 
 Next, let's focus on getting our two ideas to render!
 
-We already said that we want to have a container for all of our idea Cards. So let's create that component! In your VS Code, make an `Ideas` directory within the `components` directory and give it two new files: `Ideas.jsx` and `Ideas.css`.
+We already said that we want to have a container for all of our idea Cards. So let's create that component! In your VS Code, within the `src/components/Ideas` directory, create two new files: `Ideas.jsx` and `Ideas.css`.
 
 <section class="note">
 ### Note
@@ -465,7 +465,7 @@ Okay, so just WHAT exactly is going on here?
 
  **props** is the name of an object that contains key-value pairs. From our above example, the key is "name", and the value is "Travis". So, in our Ideas component, we can access the value by writing `props.name` (which gives us a string of "Travis"). This is the same dot notation we learned in Mods 1 and 2 to access data stored in objects.
 
-If, in the `return` of our App component, we called the property "potato" instead of "name", we would have to access it by (inside the Ideas component) writing `props.potato`.
+If, in the `return` of our App component, we called the property "potato" instead of "name", we would have to access it by (inside the Ideas component) writing `props.potato`. This is the same dot notation we learned in Mod 2 to access data stored in objects.
 
 We can even destructure the props object, because it's just a regular object!
 
@@ -510,7 +510,7 @@ All right. We don't actually want to render an h2 in our Ideas component. We wan
 
 Let's create a Card component to use.
 
-Create a `Card` directory and put a `Card.jsx` and `Card.css` file in it. 
+In the `Card` directory we created earlier, create the `Card.jsx` and `Card.css` files. 
 
 ```jsx
 // Card.jsx
@@ -662,7 +662,8 @@ Before me move on, lets tighten up the UX here a bit.
 <section class="call-to-action">
 ### Explore  
 
-* Try assigning  an empty array to the state of our App data .
+* What if we didn't have any dummyIdeas to start?
+  * In your useState line of code, replace the dummyIdeas with an empty array so that our ideas state starts as an empty array.
 * What happens? Why?
 * What would make for a better user experience?
 </section>
@@ -689,7 +690,7 @@ function App () {
 
 ```
 
-We want to add conditional logic that essentially says, *if there aren't any ideas to display, display an <h2> inviting users to add some ideas.*
+We want to add conditional logic that essentially says, *if there aren't any ideas to display, display an `<h2>` inviting users to add some ideas.*
 
 <section class="answer">
 ### In plain JS, what could this conditional look like?
@@ -722,13 +723,15 @@ We can use curly braces to inject JS into our JSX. However, we need whatever is 
 What does the operator return?
 </section>
 
-The code above says that, if the expression on the left side of the `&&` is true, return the expression on the right side. So if there are no ideas in state, return our h2!
+The code above says that, if the expression on the left side of the `&&` is true, return the expression on the right side. So if there are no ideas in state, return (aka render) our h2!
+
+Go ahead and pass your dummyIdeas back into your useState hook.  Later, when we set up the ability to delete ideas, we should see our `<h2>` anytime there are no ideas in the ideas array in state.
 
 ## Form.jsx
 
 Let's move on to our Form component. We're going to create what is known as a controlled form.
 
-Create the Form directory and the `Form.jsx` and `Form.css` files.
+In the Form directory we created earlier, create the `Form.jsx` and `Form.css` files.
 
 ```css
 /* Form.css */
