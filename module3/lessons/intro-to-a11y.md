@@ -250,7 +250,7 @@ A form element has a role of 'form' by default. We can override that role using 
 ```
 
 <section class="call-to-action">
-### In Groups
+### Check It Out
 - Use the [Table of elements and their implicit roles](https://www.w3.org/TR/html-aria/#docconformance){:target='blank'} and look up the following elements and their implicit roles
   - `<div>`
   - `<form>`
@@ -313,7 +313,7 @@ States can also be implicit, imagine a checkbox element in html. If you toggle t
 <section class="call-to-action">
 ### Accessibility Style Guide 
 
-Explore [w3's style guide](https://www.w3.org/WAI/ARIA/apg/patterns/){:target='blank'} on building accessible UI elements. In small groups, choose a UI element and see how it interacts without using your mouse. What are the 'rules' for this UI pattern? What WAI-ARIA attributes are needed?
+Explore [w3's style guide](https://www.w3.org/WAI/ARIA/apg/patterns/){:target='blank'} on building accessible UI elements. Choose a UI element and see how it interacts without using your mouse. What are the 'rules' for this UI pattern? What WAI-ARIA attributes are needed?
 </section>
 
 <section class="checks-for-understanding">
