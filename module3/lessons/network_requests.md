@@ -69,7 +69,7 @@ Using the [fetch API docs](https://developer.mozilla.org/en-US/docs/Web/API/Fetc
 * What does `fetch` always return?  If the term is new to you, read further on what it is.
 </section>
 
-<section class="answer">
+<section class="dropdown">
 ### Key Takeaways  
 
 - The `fetch()` method takes one mandatory argument, the path to the resource you want to fetch.
@@ -168,12 +168,12 @@ fetch('some_url')
 ```
 
 Let's think about these questions:  
-<section class="answer">
+<section class="dropdown">
 ### Why doesn't data in line 4 refer to the same data in line 3?
 
 Explanation: Parameters are scoped to their function, so you cannot reference a parameter from one function in another. Each callback function defines their own scope (i.e. creates their own execution context).
 </section>
-<section class="answer">
+<section class="dropdown">
 ### Why is data in line 4 undefined?
 
 Explanation: `.then` always returns a Promise, and when that promise resolves, it evaluates to whatever the callback returns and hands it off to the next `.then`. The callback function on line 3 does not return anything, so `undefined` is the value handed off to the `.then` in line 4, stored in the `data` parameter.

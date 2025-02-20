@@ -214,7 +214,7 @@ Let's deploy your application so you can share it with friends and family! And, 
 
 Note: If you've been running the API locally, be sure to update your network requests to point to the deployed Heroku URL. Otherwise, the app won't work properly without locally running the backend - which defeats the whole purpose of deploying!
 
-We don't care how you deploy, but we do recommend using either **[Netlify](https://www.netlify.com/)** or **[Vercel](https://vercel.com/)**. You may need to do some research and googlin' to get it working - you got this!
+We don't care how you deploy, but we do recommend using **[Render](https://render.com/docs/free)**, **[Netlify](https://www.netlify.com/)** or **[Vercel](https://vercel.com/)**. You may need to do some research and googlin' to get it working - you got this!
 
 **To complete this iteration, please add your deployed URL link to your README.**
 </section>

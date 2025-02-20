@@ -222,6 +222,7 @@ Look at the Sandbox below (Grocery List - Props).
 * What is state and what are props?
 * When does a React component rerender?
 * What do we mean when we say "props should be immutable"?
+* What are the specific ways we should and shouldn't mutate state?
 </section>
 
 ## Further Reading & Resources
