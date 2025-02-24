@@ -16,7 +16,7 @@ title: Welcome to Module 0
   </tr>
   <tr>
     <td>2503 (Mar 24)</td>
-    <td>March 10 - March 16</td>
+    <td>March 17 - March 23</td>
   </tr>
 </table>
 
