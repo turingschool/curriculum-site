@@ -52,7 +52,7 @@ system(cmd)
   * run `Customer.last` to see the object: `#<Customer id: 1000, first_name: "Shawn", last_name: "Langworth", created_at: "2012-03-27 14:58:15", updated_at: "2012-03-27 14:58:15">`
   * If this all checks out you should be good to go.
 
-7. Use a tool like Postico to examine the 6 tables that were created. Pay careful attention to the merchants, items, invoices and customers table. It's a good idea to use a database visualizer like [DBDesigner](https://www.dbdesigner.net/) to create a visual schema for your team. Be mindful of the data types of each field:
+7. Use a tool like Postico to examine the 6 tables that were created. Pay careful attention to the merchants, items, invoices and customers table. It's a good idea to use a database visualizer like [DBDiagram.io](https://dbdiagram.io/) to create a visual schema for your team. Be mindful of the data types of each field:
   * merchants
   * items
   * customers
