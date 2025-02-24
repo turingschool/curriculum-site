@@ -78,13 +78,13 @@ Students are expected to score in the "Meets Expectations" category. If any cate
 
 <section class="call-to-action">
 ### Summary of ALL Deliverables (6 total)
-* Due at least 24 hours before your interview simulation
+* Due at 12pm MT on Monday of Week 5
   * A copy of the job description
   * SWOT analysis
   * Answers to the "Three Whys"
   * Tailored Resume
   * Tailored Cover Letter
-* Due to instructor during your interview simulation
+* Due to instructor via DM at 4pm MT on Thursday of Week 5
   * Document summarizing your application process
 </section>
 
