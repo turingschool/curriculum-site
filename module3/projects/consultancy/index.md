@@ -44,7 +44,7 @@ We'll also examine our end users on a deeper level to instill a strong sense of 
 
 You have a lot of freedom with this project, but there are a few technical requirements. Overall, your project must:
 
-1. Includes at least one Rails API and one ReactJS application.
+1. Includes at least one Rails API and one ReactJS (using Vite) application.
 2. Use one external API, but it can be consumed on the FE or BE. 
 3. Be deployed (BE and FE)
 4. Assume one single user - multiple users with log in and authentication is out of scope.
@@ -77,6 +77,7 @@ Optional Stretch Tech:
 <section class="dropdown">
 ### Front End Requirements
 
+* Uses (Vite)[https://vite.dev/guide/] to create an application from scratch!
 * Multi-page application utilizing React Router
 * Includes at least one POST request to the BE
 * The application cannot simply be a display of data - there needs to be at least **one** way for the user to work with or manipulate the data (favoriting, searching, filtering, commenting, rating, etc)
