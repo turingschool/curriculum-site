@@ -93,7 +93,8 @@ Then:
 **By EOD on Kick Off Day:** 
 
 * Read the entire project spec and rubric.  Post questions in slack.
-* Add your project manager as a collaborator to your forked repository.
+* Add your Instructor as a collaborator to your forked repository.
+
 </section>
 
 <section class="dropdown">
@@ -420,4 +421,3 @@ button:hover {
   align-items: center;
   flex-direction: column;
 } -->
-
