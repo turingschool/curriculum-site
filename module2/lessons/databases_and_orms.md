@@ -20,6 +20,8 @@ You should have installed Postico as part of the [mod 2 intermission work](../i
 
 Setup instructions for Postico can be found [here](./setting_up_postico).
 
+We will be using Task Manager to explore the concept of databases. To avoid having you rush through the Task Manager tutorial, trying to get it is ready for class, please clone down this [Task Manager repo](https://github.com/turingschool-examples/task-manager-7-complete).
+
 ## Database Exploration
 
 ### Part 1: Migrations
