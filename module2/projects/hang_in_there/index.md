@@ -93,7 +93,7 @@ Then:
 **By EOD on Kick Off Day:** 
 
 * Read the entire project spec and rubric.  Post questions in slack.
-* Add your Instructor as a collaborator to your forked repository.
+* Add the Instructors as a collaborator to your forked repository.
 
 </section>
 
