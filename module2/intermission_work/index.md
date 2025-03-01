@@ -18,11 +18,11 @@ First, create a new [Gist on Github](https://gist.github.com/). Copy and paste t
 
 This Gist will be your submission for your intermission work. Each of the assignments includes a Check for Understanding that you must complete in your Gist. Some of the assignments will also ask you to include a link to a GitHub repo.
 
-**Deliverables are due 5:00 pm the Saturday before the module begins. Prework must be completed in its entirety in order to be successful in Mod 2.**
+**Deliverables are due 5:00 pm the Saturday before the module begins. Pre-work must be completed in its entirety in order to be successful in Mod 2.**
 
 ## Assignments
 
-Work on the following assignments in order. Each assignment will assume that you have completed the previous one and the accompanying Checks for Understanding. **Ruby 3.2.2 and Rails 7.1.3 are required.**
+Work on the following assignments in order. Each assignment will assume that you have completed the previous one and the accompanying Checks for Understanding. **Ruby 3.2.2 and Rails 7.1.x are required.**
 
 Time-box recommendations are in each section's instructions, and also included here for convenience.
 
