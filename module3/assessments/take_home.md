@@ -10,6 +10,8 @@ Your final project is a Take-Home Challenge meant to simulate a task that you mi
 
 Completion and passing the Take Home Presentation is a promotion requirement. When you present, you should speak as though your assessing instructor is your potential employer. **If you would not be passed on to the next stage of the interview process based on your code and presentation, you will not pass this challenge.**
 
+**Starter Repos are available for your use!**. You can use [this React repo](https://github.com/turingschool-examples/vite-react-starter) and [this Rails repo](https://github.com/turingschool-examples/rails-api-starter) to get started.
+
 ## Things we'll be looking for:
 
 ### Backend API
