@@ -7,7 +7,7 @@ type: project
 _[Back to Little Shop Home](./index)_
 
 ## Presentation
-For the project evaluation, each project team will meet with an instructor for a 30 minute session. Teams should prepare a presentation that covers the following:
+For the project evaluation, each project team will meet with an instructor for a 25 minute session. Teams should prepare a presentation that covers the following:
 
 * Demonstration of functionality via your FE application (and Postman Suites for functionality not covered in FE app)
   * Outlining at least 3 styling improvements you made, why you chose them and what your inspiration design was
