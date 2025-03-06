@@ -37,9 +37,7 @@ rails db:migrate
 
 Below is the expected JSON response for each request. We have also outlined a few examples of Sad Paths you may consider adding in. In your project, you should take time to implement at least 2 sad paths total, but you are not limited to the examples we provide.
 
-
-
-
+<section class="dropdown">
 ### 1. Merchant Coupon Show
 
 Returns a specific coupon and shows a count of how many times that coupon has been used.
