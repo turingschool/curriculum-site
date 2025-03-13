@@ -9,7 +9,8 @@ Mod 4 is focused on helping students develop good habits and processes for the j
 
 ## Instructors
 * Erin Pintozzi (Mod 4 Lead) - she/her
-* Heather Faerber (Supporting Instructor) - she/her
+* Mike Dao (Supporting Instructor) - he/him
+* Scott Ertmer (Supporting Instructor) - he/him
 
 ## Curriculum
 - [Intermission Pre-Work](./intermission_work)
