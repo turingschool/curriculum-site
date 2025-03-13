@@ -13,7 +13,7 @@ You can either use this provided [template](https://github.com/turingschool/port
 When you are finished, submit the URL to your portfolio using this [submission form](https://turingschool.notion.site/1300ef3570788015b235e18a411dfa66?pvs=105).
 
 <section class="note">
-  This is due by EOD Friday of week 4. You are welcome and encouraged to submit earlier for feedback.
+  This is due by EOD Friday of week 3. You are welcome and encouraged to submit earlier for feedback.
 </section>
 
 ## Required Content
