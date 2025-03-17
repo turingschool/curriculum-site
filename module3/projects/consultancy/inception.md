@@ -131,52 +131,57 @@ Conflict and tension tends to arise in groups when there are differing expectati
         * In order to effectively plan, teams often need to experiment and/or do some research about potential integrations, APIs, etc. 
         * Spikes are the *only time* during inception that teams are allowed to code
         * Spikes might look like trying out different API calls in order to verify the data is suitable, or doing some individual research about BE stretch techs in order to choose an option that matches the needs of your application.
+* **Workflow**
+    * Complete first part of User Flow Diagramming together, **then delegate tasks so that you are no longer working all together in one group**.
+    * Use your project board to create issues for each of these tasks: for example, one pair on story writing and one pair on wireframing. 
+    * Once a pair has completed their task, ask your other teammates to review the relevant artifacts and give feedback, much like you would with a code review. Your instructor will also view these artifacts when you submit them as your inception deliverables, or along the way if you'd like to get their opinion earlier.
 * **Relevant Activities**
+    * User Flow Diagrams
     * Wireframes
     * User Story Creation
     * [Database Schema Design](https://dbdiagram.io/home)
     * External API spikes
-    * Stretch Tech Research
     * JSON Contracts (what will your API responses look like?)
+    * Stretch Tech Research (optional)
 
 <section class="dropdown">
-### 2a. Wireframing (Solve)
+### 2a. Rough User Flow Planning (Decide)
 
 * **Objectives**
-    * Decide how users will interact with your application
+    * Outline a typical user's flow through your application using a diagram, and very low-fidelity wireframes (low fidelity = not very detailed yet).
+* **Instructions (recommended)**
+    * Read [this article](https://slickplan.com/blog/user-flow-diagram-examples) to familiarize yourselves with some example user flows.
+    * Many platforms like Miro and Figma have nice templates for this type of diagram. Feel free to use one or make it from scratch. Excalidraw is also a great option for making a diagram from scratch.
+    * List out (in text only first) the things a user sees and the actions they'll take in your app for common happy path scenarios - i.e. create a profile, search for something, favorite something, etc. 
+    * Once you've agreed on these user flows, one or two group mates can take over completing the diagram while others start on other tasks (i.e. external API spikes, developing JSON contract for BE API calls, writing user stories, etc)
+    * Before breaking into smaller teams, make a list of all of the pages required for your application along with what features will exist on each page. This will be helpful for whoever tackles wireframes for the application.
+
+</section>
+
+<section class="dropdown">
+### 2b. Wireframing (Solve)
+
+* **Objectives**
+    * Decide how users will interact with your application with more detail, and create some higher fidelity (more detailed) mock ups of what your application will look like.
 * **Instructions (required)**
-    * Create a high level [user flow diagram](https://bashooka.com/inspiration/33-excellent-user-flow-examples-for-inspiration/) that lists the steps a user will take when interacting with your application.
-    * Make a list of all of the pages required for your application along with what features will exist on each page.
-    * For each page, create a [wireframe](https://www.usability.gov/how-to-and-tools/methods/wireframing.html) by sketching out what that user will see when they navigate to that page. Include details such as header text, buttons, drop downs, forms with the specific fields, graphs etc.
-    * Do a few pages together as a group, then divide and conquer the remaining pages.
+    * Using the user flow diagram and the list of pages created by the team, start thinking about the layout of each page, using [this article](https://blog.hubspot.com/website/high-fidelity-wireframe#low-fidelity-wireframes) as a reference for low-fidelity mock ups.
+    * For each page, create a [wireframe](https://skillcrush.com/blog/website-wireframe/#lofi) by sketching out what that user will see when they navigate to that page. Include details such as header text, buttons, drop downs, forms with the specific fields, graphs etc. Keep in mind that you should start with lofi and then try to enhance them to mid-fidelity wireframes. You will likely not get to making high fidelity wireframes and that's okay!
     * [Figma](https://www.figma.com/wireframe-tool/?utm_source=google&utm_medium=cpc&utm_campaign=17340391121&utm_term=free%20wireframe%20tools&utm_content=600487515776&gclid=CjwKCAjw5P2aBhAlEiwAAdY7dLtWlIVK0NWWHUXbjj8KMAaBN8P1lO16khOpesJ63utNI5b-cF1e2xoClmoQAvD_BwE) is a great tool for wireframing
 
 </section>
 
 <section class="dropdown">
-### 2b. Story Writing (Solve)
+### 2c. Story Writing (Solve)
 
 * **Objectives**
     * Document technical requirements for the development team
 
 * **Instructions (required)**
-    * Create a project board using Github Projects or Trello.
-    * Translate each of the features that were written on sticky notes during the feature dump exercise into a [user story](https://www.atlassian.com/agile/project-management/user-stories) in your project management tool.
-    * Every user story should be written from the perspective of the end user and should follow this format:  
-        * `As a ___, when I visit ___, I want to ____ so that I can ____.`
-    * For every user story include a list of subtasks required to complete the user story. This includes developer chores such as database migrations to add tables and columns, exposing API endpoints, creating mock data and fixtures to stub out an API call etc.
-    * For every user story, include the wire frame(s) from the associate page(s)
-    * An example user story is:
-        - Feature: User can view their saved recipes
-        - User story: "As a user, when I visit my profile, I see a section for Saved Recipes, and each result includes the name, url and a thumbnail photo."
-        - Wireframe: `<link to wireframe>`
-        - Subtasks:
-            1. Create a section on the profile page for saved recipes.
-            2. Create API endpoint to retrieve saved recipes for a given user (assuming the functionality for saving recipes is already complete)
-            3. Display results with appropriate data in a grid according to wireframe
-            4. Build Cypress tests for the feature
-            5. If network call to the BE is unsuccessful, display friendly error message to user indicating that no recipes could be found.
-    * **Note:** Notice that this user story includes both BE and FE work. These are called "vertically-sliced" user stories, in that they they involve a full vertical slice of every layer of the web application (or, the cake!). Vertically-sliced user stories are a best practice in agile software development, and we highly recommend you use them as much as possible. However, for some stories, your team might decide that horizontal slicing (i.e. BE-only tasks and FE-only tasks) is preferred organization method, and that's okay!
+    * Create a project board using Github Projects or Trello. For Github projects, you are welcome to use two separate project boards (one for FE, one for BE), but if you're using a different platform, please just use one board for ease.
+    * Using [this guide and example](./user_stories) and your MVP functionality, populate your project board(s) with tickets.
+    * For any details you don't have yet, make a placeholder in the card and make a note to come back to that detail once other planning artifacts are complete (make a sub-task on your project board to refine the details of these cards!).
+    
+    * **Note**: Notice that these user stories include either BE or FE work. These are called "horizonally sliced" user stories, and they're probably what you're most used to at this point. If your team would like to explore working on full-stack stories, the creation of necessary endpoints could be part of feature cards. These are called "vertically-sliced stories". Your team is welcome to use either method - horizontal or vertical slicing. Just be mindful of making sure the boundaries of cards are explicitly defined and written in the story so that, in either case, there is no duplication of labor.
 </section>
 </section>
 
