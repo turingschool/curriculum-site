@@ -128,7 +128,11 @@ Days/times are subject to change due to holidays. Some check-ins may be async.
     * What have you been working on?
     * What are you going to be working on?
     * Is anything blocking you?
-* Every weekday you should send your PM a summary of the day's daily check-in.
+* It's a good idea to screenshare your project board during these meetings and use the in progress tickets as a guide for your check ins.
+* Team members should rotate facilitator and notetaker responsibilities during these meetings. 
+* All teams will be required to make a copy of [this stand-up log]() and pin it to your channel. Your PM will be occasionally checking your document view the status of your work. 
+* A facilitation guide is on the first tab of the linked document above, but you are welcome to follow any format that works for your team!
+* You will also have 2-3 stand-ups facilitated by your PM. Check your cohort calendar for more details. 
 
 #### Retros
 
