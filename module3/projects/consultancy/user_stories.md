@@ -84,6 +84,9 @@ It's also helpful to take a look at stories at the beginning of each sprint and 
 
 With your MVP defined (for now - changes are okay!) with user story language, we can now start to think about what back-end functionality will be necessary in order to make the CRUD operations possible. An extended user flow diagram like the one shown below can be used to determine exactly which endpoints you might need.
 
+![inline](./assets/user_flow_diagram_with_be_1.png)
+![inline](./assets/user_flow_diagram_with_be_2.png)
+
 These diagrams illustrate two different user flows. You can make as many diagrams as you'd like as long as they combine to cover all the funcionality in your MVP. If we isolate just the back-end portion of these diagrams, we see the following endpoints/issues for our project board. 
 
 1. POST to `api/v1/users` to create user
@@ -160,6 +163,7 @@ Just like FE user stories, BE user stories/tickets can be broken up as well. #4 
   - includes sad path considerations when not all project fields are included or valid
   - includes creating record in projects database table
   - response includes project fields, and NO timezone calculation
+  
 #4b: Enhance POST request to include overlapping time zone calculation in response
   - overlapping timezone window added to database table as a new column
   - model method retrieves time zone and work window for each user in project and calculates overlap
