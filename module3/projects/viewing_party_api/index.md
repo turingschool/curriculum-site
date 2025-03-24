@@ -22,7 +22,7 @@ Since this project has already been started by another developer, this is consid
 
 To become more familiar with the process of releasing code, deploying this project to the Internet is a requirement. You can use either Render or Heroku, and in both cases deployment can and should be totally free. If you appear to be, or are concerned about getting charged, please reach out to an instructor. 
 
-To use Heroku, follow [these instructions](https://devcenter.heroku.com/articles/getting-started-with-rails7) and don't forget to provision a database! If you're using Render, check out our guide [here](../../lessons/deployment_guide).
+Check out our guide [here](../../lessons/deployment_guide).
 
 We **highly suggest** you set up your deployment before completing any endpoints! Then, throughout the project, you can deploy changes and be able to more effectively troubleshoot deployment issues. 
 
