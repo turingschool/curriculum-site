@@ -133,11 +133,13 @@ We will be using [WebMock](https://github.com/bblimke/webmock) to mock our HTTP
 
 ## Install the Gem
 
-Looking at the "Installation" section of the docs, we can see we need to `gem install webmock`, but since we're using Bundler we can add it to our Gemfile which handles our gem installation. Add `gem "webmock`" to a `:test` block of your Gemfile. DO NOT add it to the `:development, :test` block (more on that in a second). Run `bundle install`.
+Looking at the "Installation" section of the docs, we can see we need to `gem install webmock`, but since we're using Bundler we can add it to our Gemfile which handles our gem installation. 
 
-Finally, we can see a section for "RSpec" in the Installation instructions. This tells us to add `require 'webmock/rspec'` to our `spec/spec_helper`. Do that now.
+1. Add `gem "webmock`" to a `:test` block of your Gemfile. DO NOT add it to the `:development, :test` block (Why? Discuss with your group). Run `bundle install`.
 
-Let’s run our Senator search test:
+2. We can see a section for "RSpec" in the Installation instructions. This tells us to add `require 'webmock/rspec'` to our `spec/spec_helper`. Do that now.
+
+Let’s run our Image search test:
 
 ```bash
 $ bundle exec rspec spec/requests/api/v1/images/image_request_spec.rb
@@ -171,7 +173,7 @@ This means it's working! WebMock not only allows us to mock real HTTP requests, 
 
 ## Stubbing the Request
 
-Looking at the docs, we can see some examples of how to stub requests. Let's add one to our test:
+Looking at the docs and our error message, we can see some examples of how to stub requests. Let's add one from our error message to our test:
 
 ********spec/requests/api/v1/images/image_request_spec.rb********
 
