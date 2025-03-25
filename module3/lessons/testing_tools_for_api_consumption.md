@@ -262,6 +262,11 @@ We're still returning an empty body because our file is empty, so let's add some
 
 If this is *really* working, we should be able to turn off our WiFi and see the test is still working.
 
+
+### Allowing Some Tests to Use Network Requests
+
+There might be times when you don't want to mock ALL network requests. Or, you might use multiple mocking tools so you want to disable WebMock and use a different option. In these cases, you can add `WebMock.allow_net_connect!` to the top of a test where you want to **allow real network requests**. 
+
 ## VCR
 
 Another handy tool for mocking these requests is [VCR](https://github.com/vcr/vcr). You can think of it as an extension of WebMock. We will still be stubbing requests, but now rather than manually creating the mock JSON response, VCR will allow us to make one real HTTP request the first time, record its response, and use that response as the stub for future requests. VCR refers to these recorded responses as `cassettes`. We are now going to implement VCR on this same test.
