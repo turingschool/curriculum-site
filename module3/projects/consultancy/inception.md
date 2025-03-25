@@ -15,16 +15,17 @@ Usually this process takes several days involving many stakeholders such as the 
 These items must be shared with your project manager before you can begin development. They will be reviewed in your first project check-in as well. Please pin or bookmark these in your Slack channel. The sections below will walk your team through developing these materials.
 
 1. Slack Channel Created
-2. DTR
-3. Miro Board or Planning Tool that includes:
+2. DTR created and pinned to channel
+3. Consultancy [Daily Stand-Up Log](https://docs.google.com/spreadsheets/d/1GryBf6PS2MJlXh5TvWXx7Y7vyvKfyiToAIkdAwcnEH8/edit?usp=sharing) copied and pinned to channel
+4. Miro Board or Planning Tool that includes:
     - MVP definition
     - Wireframes
     - Chosen external API
     - React Component Architecture Diagram
     - Database Schema
-4. User Stories in Project Board
-5. Equity Analysis
-6. Plan for sub-teams for first development sprint
+5. User Stories in Project Board with first few stories fully defined (skeletons for others)
+6. Equity Analysis
+7. Plan for sub-teams for first development sprint
     - Team is welcome to choose their preferred team breakdown, i.e. splitting by FE/BE, splitting by feature, etc. but we highly recommend organization that allows full-stack work
     - **It is essential that every student complete some work on both the FE and BE, but it does not need to be an even 50/50 split**
     - Remember that your final solo project will be full-stack. 

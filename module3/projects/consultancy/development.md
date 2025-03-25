@@ -130,7 +130,7 @@ Days/times are subject to change due to holidays. Some check-ins may be async.
     * Is anything blocking you?
 * It's a good idea to screenshare your project board during these meetings and use the in progress tickets as a guide for your check ins.
 * Team members should rotate facilitator and notetaker responsibilities during these meetings. 
-* All teams will be required to make a copy of [this stand-up log]() and pin it to your channel. Your PM will be occasionally checking your document view the status of your work. 
+* All teams will be required to make a copy of [this stand-up log](https://docs.google.com/spreadsheets/d/1GryBf6PS2MJlXh5TvWXx7Y7vyvKfyiToAIkdAwcnEH8/edit?usp=sharing) and pin it to your channel. Your PM will be occasionally checking your document view the status of your work. 
 * A facilitation guide is on the first tab of the linked document above, but you are welcome to follow any format that works for your team!
 * You will also have 2-3 stand-ups facilitated by your PM. Check your cohort calendar for more details. 
 
