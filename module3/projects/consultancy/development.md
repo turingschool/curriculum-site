@@ -98,13 +98,21 @@ Days/times are subject to change due to holidays. Some check-ins may be async.
 #### Git/GitHub
 
 * Commit Frequently
-* Decide on a [git workflow](https://www.atlassian.com/git/tutorials/comparing-workflows)
 * Make branches and submit Pull Requests for each new feature.
     * DO NOT commit directly to main
+    * As you work on a branch, it's generally a good idea to **occasionally pull in changes from the main branch as other work is completed** so that your branch doesn't get out of date (see Git commands below for a refresher on how to do that)
     * Keep your PRs as small as possible (one feature / user story per PR)
     * Use screenshots and screencasts to demonstrate functionality.
     * Your PR should be reviewed by at least one team member before it is merged.
     * Tag your Project Manager if you have questions. DM your Project Manager letting them know you have tagged them.
+* Prevent large merge conflicts!
+    * After a PR is approved, the author of the PR should, on their branch, merge changes from main. Resolve conflict and push up a merge commit to your branch. Then you'll be able to merge your PR. 
+        * `git checkout main`
+        * `git pull origin main` # to get most recent changes on main
+        * `git checkout <your_branch>`
+        * `git merge main`
+    * Once a PR is approved, get it back to main ASAP! Waiting and merging a bunch of PRs to main at once is generally a chaotic experience. 
+* * Want a refresher on setting up proper git workflow? Read [this](https://www.atlassian.com/git/tutorials/comparing-workflows)! **Note:** we don't recommend you use rebasing - just continue merging branches back to main as you have been doing. 
 
 
 #### Story Refinement
