@@ -141,14 +141,19 @@ end
 Given the following interaction pattern, I'll write a test file for this (not yet existent) class, `Car`.
 
 ```ruby
-> car = Car.new("Toyota", "Camry")
+#open pry session in project directory
+
+require './lib/car'
+=> true
+
+pry(main)> car = Car.new("Toyota", "Camry")
 => #<Car:0x007fa2e9acd738>
-car.make
+pry(main)> car.make
 => "Toyota"
-car.model
+pry(main)> car.model
 => "Camry"
 
-car.drive
+pry(main)> car.drive
 => "The Camry is driving"
 ```
 
@@ -181,18 +186,23 @@ From this example, we can see how the interaction pattern guides or test. We can
 Given the following interaction pattern, write a test file for this (not yet existent) class, Student.
 
 ```ruby
-> student = Student.new("Jesse", 1)
+require './lib/student'
+=> true
+
+pry(main)> student = Student.new("Jesse", 1)
 => #<Student:0x007fa2e9acd738>
-student.name
+
+pry(main)> student.name
 => "Jesse"
-student.mod
+
+pry(main)> student.mod
 => "1"
-student.skills
+
+pry(main)> student.skills
 => []
 
-student.say_mod
+pry(main)> student.say_mod
 => "I'm in Mod 1"
-
 ```
 
 ## Command vs. Query Methods
@@ -274,34 +284,37 @@ Notice the different in how we test Query vs Command Methods.
 Given the following interaction pattern, build on your test file for this class.
 
 ```ruby
-> student = Student.new("Sophocles", 1)
+require './lib/student'
+=> true
+
+pry(main)> student = Student.new("Sophocles", 1)
 => #<Student:0x007fa2e9acd738>
 
-student.name
+pry(main)> student.name
 => "Sophocles"
 
-student.mod
+pry(main)> student.mod
 => "1"
 
-student.skills
+pry(main)> student.skills
 => []
 
-student.say_mod
+pry(main)> student.say_mod
 => "I'm in Mod 1"
 
-student.learn("testing")
+pry(main)> student.learn("testing")
 
-student.skills
+pry(main)> student.skills
 => ["testing"]
 
-student.learn("mocks")
+pry(main)> student.learn("mocks")
 
-student.skills
+pry(main)> student.skills
 => ["testing", "mocks"]
 
-student.promote
+pry(main)> student.promote
 
-student.say_mod
+pry(main)> student.say_mod
 => "I'm in Mod 2"
 
 ```
@@ -309,22 +322,23 @@ student.say_mod
 Next, add to your code above by creating a Locker class that follows the following interaction pattern.
 
 ```ruby
+require './lib/student'
+require './lib/locker'
 
-> student1 = Student.new("Jerry", 1)
+pry(main)> student1 = Student.new("Jerry", 1)
 => #<Student:0x007fa2e9acd711>
 
-locker1 = Locker.new(233, student1)
+pry(main)> locker1 = Locker.new(233, student1)
 => #<Locker:0x007fa3e55a82372>
 
-locker1.number
+pry(main)> locker1.number
 => 233
 
-locker1.student
+pry(main)> locker1.student
 => #<Student:0x007fa2e9acd711>
 
-locker1.student_name
+pry(main)> locker1.student_name
 => "Jerry"
-
 ```
 
 
