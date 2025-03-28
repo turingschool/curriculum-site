@@ -13,6 +13,7 @@ Join  the following Slack communities:
 - `#employment-round-one`: A channel for folks looking for their first job out of Turing
 - `#employment-commons`: A channel for any alumni on the job search (could be their second, third, etc. job out of Turing)
 - `#employment-salaries`: A channel for alumni to share transparency around their job hunt and offers
+- `#events`: A channel for announcements around events in the Turing community, including opportunities to audit classes as alumni
 
 ### Events & Calendar
 The Graduate Services Events Calendar provides information for upcoming group check-ins, guest speakers, and any additional events for job seekers. 
@@ -26,7 +27,7 @@ The Graduate Services Events Calendar provides information for upcoming group ch
 </div>
 </div>
 
-Events may also appear in the Turing Community Calendar.
+Events may also appear in the Turing Community Calendar. Classes and events that are open to alumni are listed here. Please review the [auditing guidelines](./resources/auditing_guidelines) before attending a class.
 
 <div class="responsive-iframe-container">
 <div class='tablet'>
