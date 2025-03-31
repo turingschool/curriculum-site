@@ -68,7 +68,7 @@ bundle exec rails assets:clean
 ```
 2. Set the following properties:
    - Build Command: `./bin/render-build.sh`
-   - Start Command: `./buin/rails server`
+   - Start Command: `./bin/rails server`
 3.  Make sure your **Instance Type** is **Free**, then click the `Create Web Service` button. 
 4. On the next screen, you'll need to add 2 Environment Variables, so click **Environment**. 
    1. Key = `DATABASE_URL` , Value = your PostgreSQL service's Internal Database URL, from the previous step. 
