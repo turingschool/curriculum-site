@@ -144,7 +144,7 @@ Frontend applications often involve asynchronous operations (like waiting for da
 
 ## Cypress Walkthrough with Ideabox:
 
-We are going to use our **[IdeaBox repo](https://github.com/turingschool-examples/react-ideabox){:target='blank'}** to practice some Cypress testing. We will test the following user flows:
+We are going to use our **[IdeaBox repo](https://github.com/turingschool-examples/vite-ideabox){:target='blank'}** to practice some Cypress testing. We will test the following user flows:
 - As a user, I want to be able to see the title of the application. 
 - As a user, I want to be able to see the form to add a new idea. 
 - As a user, I want to be able to see the list of ideas on the dashboard when I load the page. 
@@ -152,7 +152,7 @@ We are going to use our **[IdeaBox repo](https://github.com/turingschool-example
 
 ### Step 0: Set Up
 
-Navigate to your **[IdeaBox repo](https://github.com/turingschool-examples/react-ideabox){:target='blank'}** directory (which you should have from other lessons).  
+Navigate to your **[IdeaBox repo](https://github.com/turingschool-examples/vite-ideabox){:target='blank'}** directory (which you should have from other lessons).  
   
 Switch to the correct branch:  
 
@@ -165,7 +165,7 @@ git checkout cypress-testing
 Run the app:  
 
 ```bash
-npm start
+npm run dev
 ```
 Get the **[Ideabox API](https://github.com/turingschool-examples/ideabox-api){:target='blank'}** up and running (again, you should already have this one cloned down):  
 
@@ -174,7 +174,7 @@ Get the **[Ideabox API](https://github.com/turingschool-examples/ideabox-api){:t
 
 node server.js
 ```
-Check that it's working by going to `localhost:3000` in your browswer. You should see your Ideabox app running, with 3 cards on the page. 
+Check that it's working by going to `localhost:5173` in your browswer (or whatever port Vite is running on). You should see your Ideabox app running, with 3 cards on the page. 
 
 ### Step 1: Installing Cypress
 
@@ -242,7 +242,7 @@ describe('template spec', () => {
 
 Ok now we have the file structure lets tweak the test to see how it works. 
 First, let's make sure that our application is running and we can navigate to it in the browser.
-Now let's go back to our test file and make sure that we can navigate to the dashboard. We need to change the `cy.visit` to navigate to `http://localhost:3000`.
+Now let's go back to our test file and make sure that we can navigate to the dashboard. We need to change the `cy.visit` to navigate to `http://localhost:5173`.
 
 Here is the Cypress UI running our test and opening the application inside the Cypress UI.
 
@@ -269,7 +269,7 @@ Let's add that to our test change that first test to include a `beforeEach`:
 ```js
 describe('Dashboard', () => {
   beforeEach(() => {
-    cy.visit('http://localhost:3000')
+    cy.visit('http://localhost:5173')
   })
 
   it('displays the application title', () => {
@@ -334,7 +334,7 @@ describe('dashboard', () => {
       fixture: "ideas" // here is where we are referencing the fixture file name
     })
 
-    cy.visit('http://localhost:3000')
+    cy.visit('http://localhost:5173')
   })
 })
 ```
@@ -397,7 +397,7 @@ it('adds a new idea to the list', () => {
 ```
 If you look at the Cypress testing UI, you'll notice that the green cirlce next to the POST is filled in - we're actually sending a POST request to our API.  
 
-You may also notice in your actual React App on `http://localhost:3000/`, that the tests are actually making new cards 😱 Uh oh! We need to intercept that POST.  
+You may also notice in your actual React App on `http://localhost:5173/`, that the tests are actually making new cards 😱 Uh oh! We need to intercept that POST.  
 
 The POST is happening when the user clicks the submit, so we don't need to have that intercept in the `beforeEach` block, since that doesn't need to happen for every test. We need to make sure that the intercept is written BEFORE the request is triggered (button click), so let's put that intercept at the top of that test block:  
 

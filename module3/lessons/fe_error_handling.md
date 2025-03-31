@@ -62,16 +62,16 @@ Let's spend 10 minutes in your project teams to brainstorm what error prevention
 ### Set Up
 We're going to use the same Ideabox FE and BE that we've used several times in previous lessons.
 
-1. Re-open **[this react-ideabox FE](https://github.com/turingschool-examples/react-ideabox)** repo.  
+1. Re-open **[this react-ideabox FE](https://github.com/turingschool-examples/vite-ideabox)** repo.  
   a. Navigate to that directory  
   b. Run `git fetch`  
   c. Run `git checkout error-handling`  
-  d. Run `npm start`  
+  d. Run `npm run dev`  
 2. You'll also need the **[ideabox-api BE Repo](https://github.com/turingschool-examples/ideabox-api)** up and running.  
   a. Navigate to that directory 
   b. Run `node server.js`
 3. Make a tab in Chrome for:  
-  a. `localhost:3000`: You should see the React app up and running here  
+  a. `localhost:5173`: You should see the React app up and running here unless Vite is telling you it's running at a different port
   b. `http://localhost:3001/api/v1/ideas`: You should see your list of ideas here
 
 <section class="call-to-action">
