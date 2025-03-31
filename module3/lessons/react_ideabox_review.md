@@ -21,7 +21,7 @@ module: 3
 <section class="note">
 ### Set Up
 
-This lesson is a review session for the [Ideabox Tutorial lesson](./react_ideabox). If you did not complete all of the steps on that tutorial, you can clone down a completed version here: [https://github.com/turingschool-examples/react-ideabox](https://github.com/turingschool-examples/react-ideabox)
+This lesson is a review session for the [Ideabox Tutorial lesson](./react_ideabox). If you did not complete all of the steps on that tutorial, you can clone down a completed version [here](https://github.com/turingschool-examples/vite-ideabox)
 
 Follow the instructions for cloning, installing, and running the app. **You do not need to follow any steps for a running server.**
 </section>
