@@ -13,7 +13,7 @@ The project specs will be linked below as each project is assigned.
 <!-- Week 1-2 (Solo): [War or Peace](./war_or_peace/) [Flash Cards](./flashcards/) -->
 Week 1-2 (Solo):  [War or Peace](./war_or_peace/)  
 <!-- Week 2-3 (Solo): [DMV](./dmv/)  -->
-Week 2-3 (Solo): TBA  
+Week 2-3 (Solo): [DMV](./dmv/)  
 <!-- Option to add more advanced option with Connect Four as other pair project -->
 <!-- Week 3-4 (Paired): [Battleship](./battleship/) -->
 Week 3-4 (Paired): TBA  
