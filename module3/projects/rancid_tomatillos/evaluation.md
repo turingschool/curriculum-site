@@ -36,7 +36,7 @@ Every team member is expected to fully participate, contribute, communicate, and
 
 We expect all teammates to:
 * Hold daily standups throughout project.
-* Make atomic and frequent commits, effectively documenting the evolution/progression of the application. There is no more than a 10% disparity in project contributions between teammates.
+* Make atomic and frequent commits, effectively documenting the evolution/progression of the application. There is no more than a 30% disparity in project contributions between teammates. If disparities do happen, they will never been the sole factor for evaluation, but we might reach out to get a better picture of the labor breakdown.
 * Use a project board (and update it throughout the project) with Github issues and labels.
 * Use branches/PRs and do consistent, thorough, meaningful code reviews of PRs, which prompt updates and changes made to that PR before merging.
 * Create a complete README that is formatted well and at minimum contains:

@@ -19,7 +19,7 @@ This is an essential expectation and in extenuating circumstances, individuals m
 * Teammates participate in check-ins, project check-ins, and Slack discussions
 * PRs demonstrate thoughtful code review
 * Project board is utilized and up-to-date in every check-in. Board is utilized as a tool for organization and transparency throughout the entire project. 
-* Commits are atomic and frequent, effectively documenting the evolution/progression of the application. There is no more than a 10% disparity in project contributions between teammates.
+* Commits are atomic and frequent, effectively documenting the evolution/progression of the application. There is no more than a 30% disparity in project contributions between teammates.
 * READMEs are formatted well and at a minimum contains:
   - Overview of project purpose and goals
   - Overview of technologies used
