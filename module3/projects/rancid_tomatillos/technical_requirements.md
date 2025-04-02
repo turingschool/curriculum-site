@@ -196,10 +196,14 @@ Implement the following routes:
 | Homepage | `/` |
 | Movie Details | `/:movieId`, where `movieId` is the `id` of the movie being displayed |
 
+**You should also implement a short error message for the case of a user visiting a non-existent route**
+
 **User Stories**  
 - As a user, when I click on a movie and the details page is rendered, the URL updates to reflect that movie's unique ID
 - As a user, when I go back to the main page, the URL changes back to `/`
-- I can click the browser forward & back arrows to navigate the application
+  - I can click the browser forward & back arrows to navigate the application
+- As a user, when I visit `/potatoes` or another invalid route, I see a friendly error message telling me this page doesn't exist
+
 
 💡 Hint - Can we remove the `onClick` event on your movie posters altogether now that we are using `Links` and `Routes`? Yes! Yes, we can!   
 
