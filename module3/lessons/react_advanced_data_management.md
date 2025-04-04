@@ -67,7 +67,7 @@ You'll need to use two repos for today:
   a. Navigate to that directory  
   b. Run `git fetch`  
   c. Run `git checkout network-requests`  
-  d. Run `npm start`  
+  d. Run `npm run dev`  
 2. You'll also need to get this **[ideabox-api BE Repo](https://github.com/turingschool-examples/ideabox-api)** up and running.  
   a. Open a new tab in your terminal and navigate OUT of the FE directory  
   b. Follow the instructions in the README to get the server running  
