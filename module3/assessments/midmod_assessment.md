@@ -11,7 +11,7 @@ For the midmod assessment, students will choose any project previously completed
 
 We will use the take-home project rubric to evaluate the midmod assessment in order to ensure that students are practicing towards meeting the expectations of a passing assessment.
 
-Midmod assessment presentations will be completed in small groups with an instructor. Observing the presentations of other students can be a great way to prepare for the final assessment by providing the opportunity to give and receive valuable feedback on how to improve the presentation.
+Midmod assessment presentations will be completed in small groups with an instructor. **Students should keep their presentations to 8-10 minutes**. Observing the presentations of other students can be a great way to prepare for the final assessment by providing the opportunity to give and receive valuable feedback on how to improve the presentation.
 
 ### Resources
 
