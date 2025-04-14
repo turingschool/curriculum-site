@@ -16,7 +16,7 @@ Week 1-2 (Solo):  [War or Peace](./war_or_peace/)
 Week 2-3 (Solo): [DMV](./dmv/)  
 <!-- Option to add more advanced option with Connect Four as other pair project -->
 <!-- Week 3-4 (Paired): [Battleship](./battleship/) -->
-Week 3-4 (Paired): TBA  
+Week 3-4 (Paired): [Battleship](./battleship/)    
 <!-- Week 4 Extra Time!: [Beat Box](./beat_box/)  -->
 <!-- Week 5-6 (Group Final): TBD -->
 Week 5-6 (Group Final): TBA  
