@@ -11,7 +11,7 @@ We will be using a (somewhat) Agile process during the development of this proje
 * Using GitHub
 * Using a project management tool such as Github Projects
 * Conducting Story Refinement meetings
-* Doing daily check-ins
+* Doing daily check-ins using [this log](https://docs.google.com/spreadsheets/d/1GryBf6PS2MJlXh5TvWXx7Y7vyvKfyiToAIkdAwcnEH8/edit?gid=0#gid=0)
 * Demoing your project to your Project Manager
 * Holding Team Retros
 
