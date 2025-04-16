@@ -11,6 +11,7 @@ In Module 1, students will learn programming fundamentals by building software i
 ## Curriculum
 - [Lessons](./lessons)
 - [Projects](./projects)
+- [Computer Science Exploration](./cs_explore)
 
 
 ## Other Resources

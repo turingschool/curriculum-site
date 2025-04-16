@@ -22,5 +22,5 @@ In addition to the functionality outlined in these iterations, we will expect th
 
 For more detailed information about what we expect, please review the [rubric](./rubric) before starting this project!
 
-## Submission
-You will submit this project using a Google Form linked in the Project Due calendar event on the Module 1 calendar.
+<!-- ## Submission
+You will submit this project using a Google Form linked in the Project Due calendar event on the Module 1 calendar. -->
