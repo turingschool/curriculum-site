@@ -75,7 +75,7 @@ This is an essential expectation and in extenuating circumstances, individuals m
   - Application includes client-side validation
   - Frontend state matches the backend data
   - Data and functions are passed as props (only as needed) to effectively organize the application
-  - Application is responsive across screen sizes, utilizing relative units were appropriate and breakpoints for layout changes as needed and avoiding any awkward styling as you change screen size
+  - Application is responsive across screen sizes with the use of flexbox and relative units where appropriate. Students attempt media queries and breakpoints for different screen sizes to avoid awkward styling, but full implementation of breakpoints is considered "exceeding expectations".
 
 **Exceeds Expectations:**
 
