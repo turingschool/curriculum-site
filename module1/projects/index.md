@@ -19,7 +19,7 @@ Week 2-3 (Solo): [DMV](./dmv/)
 Week 3-4 (Paired): [Battleship](./battleship/)    
 <!-- Week 4 Extra Time!: [Beat Box](./beat_box/)  -->
 <!-- Week 5-6 (Group Final): TBD -->
-Week 5-6 (Group Final): TBA  
+Week 5-6 (Group Final): [Futbol](./futbol_pd/)  
 
 ## Additional Projects and Resources
 
