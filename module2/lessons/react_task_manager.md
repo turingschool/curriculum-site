@@ -16,6 +16,10 @@ module: 3
 
 ## Before you get started...
 
+<section class="note">
+  This tutorial was repurposed from another Tutorial called IdeaBox, therefore, names have been updated for Task Manager. Provided images are there as reference.
+</section>
+
 You will complete this lesson on your own. Read each section carefully and completely. Moving quickly through this lesson is **not** the goal. You should move through the lesson at a pace that allows you to take solid notes and fully understand the code you are writing. We will provide lots of code blocks for you. Resist the temptation to copy and paste the code from those examples. Doing this will only hurt you in the end, as you'll be missing out on a lot, a lot, a lot of learning.
 
 As you are working through it, please write down any questions that pop up for you. If a blocker pops up, post your question in your codehelp slack channel. Work with your classmates to try to figure it out.
