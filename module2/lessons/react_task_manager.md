@@ -17,7 +17,7 @@ module: 3
 ## Before you get started...
 
 <section class="note">
-  This tutorial was repurposed from another Tutorial called IdeaBox, therefore, names have been updated for Task Manager. Provided images are there as reference.
+  This tutorial was repurposed from another tutorial called IdeaBox, therefore, names have been updated for Task Manager. Provided images are there as reference.
 </section>
 
 You will complete this lesson on your own. Read each section carefully and completely. Moving quickly through this lesson is **not** the goal. You should move through the lesson at a pace that allows you to take solid notes and fully understand the code you are writing. We will provide lots of code blocks for you. Resist the temptation to copy and paste the code from those examples. Doing this will only hurt you in the end, as you'll be missing out on a lot, a lot, a lot of learning.
@@ -118,6 +118,8 @@ You'll also notice an `main.jsx` file. What is going on in there?
 This is a great time to do some googling or ask chatGPT for help understanding.
 
 ```jsx
+// main.jsx
+
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <App />
@@ -188,6 +190,8 @@ We will use **_state_** to store data, like our list of tasks. You learned about
 In order to use component state, we need to import useState hook from React. So, let's import useState hook from React, and create our App component!
 
 ```jsx
+// App.jsx
+
 import { useState } from 'react';
 
 function App() {
@@ -209,6 +213,8 @@ The above code is defining the App functional component in React. App returns JS
 Let's keep writing our App component!
 
 ```jsx
+// App.jsx
+
 import { useState } from "react";
 
 function App() {
@@ -236,6 +242,8 @@ JSX is "JavaScript and XML" - it's a handy mashup language that allows us to wri
 Okay. Now try to add a paragraph tag after your `<h1>` tag. What happened?
 
 ```jsx
+// App.jsx
+
 import { useState } from "react";
 
 function App() {
@@ -281,6 +289,8 @@ If you're just looking for an unflavored container for your elements (aka they a
 We'll also import our App.css file. And give our <main> element a class of 'App' like so:
 
 ```jsx
+// App.jsx
+
 import { useState } from "react";
 import "./App.css";
 
@@ -303,6 +313,8 @@ You'll notice that instead of "`class`", we're using a "`className`" attribute o
 Okay. Let's come back to our App component and create _state_ - our "source of truth" for the data the app will be using.
 
 ```jsx
+// App.jsx
+
 import { useState } from "react";
 import "./App.css";
 
@@ -333,6 +345,8 @@ For our application, we want to create a list (aka an array) of tasks.
 Let's start out with a couple of default tasks, just so we can have something to look at when we begin building out the rest of our components.
 
 ```jsx
+// App.jsx
+
 import { useState } from "react";
 import "./App.css";
 
@@ -461,6 +475,7 @@ In our App component's return statement, let's get rid of our <p> tag and pass s
 
 ```jsx
 // App.jsx
+
 // ...
 return (
   <main className="App">
@@ -807,6 +822,8 @@ import Form from "../Form/Form";
 Then, render the Form in App's return.
 
 ```jsx
+// App.jsx
+
 return (
   <main className="App">
     <h1>Task Manager</h1>
@@ -1150,6 +1167,7 @@ Now, let's modify our `App.jsx` file to use these API calls instead of the hard-
 
 ```jsx
 // App.jsx
+
 import "./App.css";
 import Tasks from "../Tasks/Tasks";
 import Form from "../Form/Form";
@@ -1219,6 +1237,8 @@ Let's break down the changes we've made:
 The `useEffect` hook allows us to perform side effects in our components. In this case, we're using it to fetch data from our API when the component first renders.
 
 ```jsx
+// App.jsx
+
 useEffect(() => {
   const fetchTasks = async () => {
     try {
@@ -1307,6 +1327,8 @@ To test your API integration:
 2. In `app/config/initializers/cors.rb`, ensure you whitelist your React app as a trusted source:
 
 ```ruby
+# app/config/initializers/cors.rb
+
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
     origins "localhost:5173"
