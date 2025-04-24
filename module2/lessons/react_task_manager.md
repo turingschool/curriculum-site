@@ -137,15 +137,16 @@ One small example is to keep a modular file structure. Any and all files related
 
 Take a moment now to create a `components` directory within your `src` directory. Create a directory for `App` within that `components` directory. Move the 2 `App` files into the `App` directory. Create a directory for `Form`, `Tasks` and `Card` - we'll add files to them later.
 
+```plaintext
 src 📁
-
-- components 📁
-  - App 📁
-    - App.jsx
-    - App.css
-  - Card 📁
-  - Form 📁
-  - Tasks 📁
+├─ components 📁
+│  ├─ App 📁
+│  │  ├─ App.jsx
+│  │  └─ App.css
+│  ├─ Card 📁
+│  ├─ Form 📁
+│  └─ Tasks 📁
+```
 
 Uh-oh! Changing the file structure will impact our imports. VS Code will offer to update App imports. But we'll still need to update the reactLogo import in App.jsx. That import would now be `import reactLogo from '../../assets/react.svg'`
 
