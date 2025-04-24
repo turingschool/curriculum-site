@@ -62,3 +62,4 @@ title: Module 2 - Lessons
 
 - [Chrome Dev Tools](./chrome_dev_tools)
 - [JSON for API development](../resources/json_for_api_development)
+- [React: Task Manager](../lessons/react_task_manager.md)
