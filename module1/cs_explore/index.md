@@ -15,4 +15,4 @@ Having an introduction to some additional computer science topics can help you n
 
 Now that we have an understanding of what Computer Science refers to, we can start diving in to some specific topics.  Over the next few weeks are going to cover some of the data structures that Vaidehi introduced in the video above:
 - Linked Lists - [Beat Box](../projects/beat_box/)
-- Binary Trees - [Date Night](../projects/date_night/)
+- Binary Trees - [Date Night](../projects/date_night)
